@@ -19,7 +19,7 @@ You can fork the repo to your personal github account, or download it to you mac
 ruby -v
 ```
 
-You will need a minimum version of 2.6.3p62 to run this with no errors, if by default you have a Ruby vesrion lower than this, you can use a Ruby version manager such as [rvm](http://rvm.io/)
+You will need a minimum version of 2.7.5 to run this with no errors, if by default you have a Ruby vesrion lower than this, you can use a Ruby version manager such as [rvm](http://rvm.io/)
 
 - Check if you have bundler by running the following command on to a terminal:
 
