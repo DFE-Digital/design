@@ -1,4 +1,5 @@
 # DfE Design
+
 This site documents the Design principles, standards and guidance that we expect teams working
 within the [Department for Education (DfE)](https://www.gov.uk/government/organisations/department-for-education)
 to follow when designing services.
@@ -19,7 +20,7 @@ You can fork the repo to your personal github account, or download it to you mac
 ruby -v
 ```
 
-You will need a minimum version of 2.6.3p62 to run this with no errors, if by default you have a Ruby vesrion lower than this, you can use a Ruby version manager such as [rvm](http://rvm.io/)
+You will need a minimum version of 2.7.5 to run this with no errors, if by default you have a Ruby vesrion lower than this, you can use a Ruby version manager such as [rvm](http://rvm.io/)
 
 - Check if you have bundler by running the following command on to a terminal:
 
@@ -27,9 +28,9 @@ You will need a minimum version of 2.6.3p62 to run this with no errors, if by de
 bundler -v
 ```
 
-You will need the latest version that at the time of this being written is 2.2.24, if you don't have Bundler installed the terminal should prompt you to install one, via [homebrew](https://brew.sh/) 
+You will need the latest version that at the time of this being written is 2.2.24, if you don't have Bundler installed the terminal should prompt you to install one, via [homebrew](https://brew.sh/)
 
-##  Install locally
+## Install locally
 
 Once all the above have downloaded or are already on your machine simply run the following commands in the same folder where your project exists:
 
@@ -43,6 +44,6 @@ When that process is finished run:
 bundle exec jekyll serve
 ```
 
-This should build a _site subfolder onto you project and serve the site locally at: [LocalHost](http://127.0.0.1:4000/) for you to make changes before pushing to the repo.
+This should build a \_site subfolder onto you project and serve the site locally at: [LocalHost](http://127.0.0.1:4000/) for you to make changes before pushing to the repo.
 
-For contributing to this project please read the [contribude.md](/contribute.md) 
+For contributing to this project please read the [contribude.md](/contribute.md)
