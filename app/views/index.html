@@ -1,0 +1,169 @@
+{% extends "layouts/homepage.html" %}
+
+{% set selectedNav = "Home" %}
+{% set pageTitle = "Department for Education Design Manual" %}
+
+{% block hero %}
+  <section class="dfe-hero">
+    <div class="govuk-width-container ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-xl">Department for Education<br/>Design Manual</h1>
+          <p class="govuk-body-l">Principles, guidance, and standards to support people delivering joined-up, effective, user-centred outcomes for people who use Department for Education services.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}
+
+{% block content %}
+
+  <section class="govuk-!-margin-bottom-9">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="dfe-grid-container">
+          <div class="dfe-card">
+            <picture>
+              <source srcset="/assets/images/imgdes.webp" type="image/webp">
+              <img src="/assets/images/imgdes.png" alt="">
+            </picture>
+
+            <div class="dfe-card-container">
+              <h2 class="govuk-heading-m">
+                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/design-system">Design system</a>
+              </h2>
+              <p>We use a combination of the GOV.UK Design System and DfE Frontend to create consistent looking services.</p>
+            </div>
+          </div>
+
+          <div class="dfe-card">
+            <picture>
+              <source srcset="/assets/images/imgacc.webp" type="image/webp">
+              <img src="/assets/images/imgacc.png" alt="">
+            </picture>
+            <div class="dfe-card-container">
+              <h2 class="govuk-heading-m">
+                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/accessibility">Accessibility</a>
+              </h2>
+              <p>Use our templates, audit plans and WCAG guidelines to ensure we design with accessibility in mind.</p>
+            </div>
+          </div>
+
+          <div class="dfe-card">
+            <picture>
+              <source srcset="/assets/images/imgcon.webp" type="image/webp">
+              <img src="/assets/images/imgcon.png" alt="">
+            </picture>
+            <div class="dfe-card-container">
+              <h2 class="govuk-heading-m">
+                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/content-design">Content design</a>
+              </h2>
+              <p>Writing in plain language, to create clear and consistent content for the departments digital services.</p>
+            </div>
+          </div>
+
+          <div class="dfe-card">
+            <picture>
+              <source srcset="/assets/images/imgcop.webp" type="image/webp">
+              <img src="/assets/images/imgcop.png" alt="">
+            </picture>
+            <div class="dfe-card-container">
+              <h2 class="govuk-heading-m">
+                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/professions">Professions</a>
+              </h2>
+              <p>Find out what it's like to work in design at DfE and how our communities of practice develop the design professions.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="dfe-o-banner dfe-o-banner--mirrored govuk-!-margin-top-2">
+
+          <div class="dfe-o-banner__content-container dfe-light-blue-tint">
+            <div class="dfe-o-banner__inner-content-container">
+
+              <h2 class="govuk-heading-l">How to apply the Service Standard</h2>
+              <p>We’ve built a companion service to the Government Service Standard.</p>
+              <p>This service helps teams follow standards to build accessible, usable, safe, secure, and trusted services.</p>
+
+              <a href="https://apply-the-service-standard.education.gov.uk/" target="_blank" class="govuk-link govuk-body-l govuk-!-font-weight-bold">View the service</a>
+            </div>
+          </div>
+
+          <div class="dfe-o-banner__image-container">
+            <figure class="dfe-a-image dfe-a-image--cover">
+              <picture class="dfe-a-image__picture">
+                <source srcset="/assets/images/assidfe.webp" type="image/webp">
+                <img src="/assets/images/assidfe.png" alt="">
+              </picture>
+            </figure>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="dfe-section-break dfe-section-break--m"></div>
+    </div>
+  </div>
+
+  <section>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-l">Latest updates</h2>
+        <p><a href="/updates/#design-manual-refresh">Design Manual refresh</a><br/> 
+        <span class="govuk-body-s">On 3 May 2023 by Andy Jones, Head of Design</span>
+        <hr class="govuk-section-break govuk-section-break--visible"></p>         
+            
+      </div>
+
+      <div class="govuk-grid-column-one-half">
+
+        <h2 class="govuk-heading-l">Other resources and guidance</h2>
+
+        <ul class="govuk-list govuk-list--spaced">
+                <li>
+                  <a href="https://apply-the-service-standard.education.gov.uk/" target="_blank">Apply the Service Standard in DfE</a>
+                </li>
+                <li>
+                  <a href="https://user-research.education.gov.uk/" target="_blank">User Research in DfE</a>
+                </li>
+                <li>
+                  <a href="https://technical-guidance.education.gov.uk/" target="_blank">DfE Technical Guidance</a>
+                </li>
+                <li>
+                  <a href="https://dfe-digital.github.io/architecture/#dfe-architecture" target="_blank">DfE Architecture</a>
+                </li>
+                <li>
+                  <a href="https://design-system.service.gov.uk/" target="_blank">GOV.UK Design System</a>
+                </li>
+                <li>
+                  <a href="https://www.gov.uk/service-manual" target="_blank">GOV.UK Service Manual</a>
+                </li>
+                 <li>
+                  <a href="https://www.gov.uk/service-manual/communities/design-community" target="_blank">Cross government design community</a>
+                </li>
+                
+              </ul>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

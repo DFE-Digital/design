@@ -1,0 +1,37 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Patterns" %}
+{% set pageDescription = "Guidance for patterns used across Department for Education services." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Patterns"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "April 2023 "%}
+{% set backlog_issue_id = "" %}
+
+
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Patterns</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Pattern</th>
+      <th scope="col" class="govuk-table__header">Summary</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/design-system/patterns/select-a-school">Select a school</a></th>
+      <td class="govuk-table__cell">A pattern for selecting a school from the list of all schools in England.</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Published</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

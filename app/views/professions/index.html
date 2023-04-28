@@ -1,0 +1,60 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Design professions" %}
+{% set pageDescription = "Learn about the different design professions in the Department for Education." %}
+{% set selectedNav = "Professions" %}
+{% set lastUpdated = "April 2023 "%}
+{% set backlog_issue_id = "41" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+  <p>There are 3 design professions in the department:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a href="/professions/content-design">Content design</a>
+    </li>
+    <li>
+      <a href="/professions/interaction-design">Interaction design</a>
+    </li>
+    <li>
+      <a href="/professions/service-design">Service design</a>
+    </li>
+  </ul>
+
+  <h2 class="govuk-heading-m" id="team">Design leadership</h2>
+
+  <p>The professions are led by the heads of design.</p>
+
+  <div class="dfe-grid-container">
+    <div class="dfe-card">
+      <picture>
+        <source srcset="/assets/images/andyjones.webp" type="image/webp">
+        <img src="/assets/images/andyjones.png" alt="">
+      </picture>
+
+      <div class="dfe-card-container">
+        <h2 class="govuk-heading-l">
+          <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="mailto:andy.jones@education.gov.uk">Andy Jones</a>
+        </h2>
+        <p>Head of interaction and service design.</p>
+      </div>
+    </div>
+    <div class="dfe-card">
+      <picture>
+        <source srcset="/assets/images/profile.webp" type="image/webp">
+        <img src="/assets/images/profile.png" alt="">
+      </picture>
+
+      <div class="dfe-card-container">
+        <h2 class="govuk-heading-l">
+          <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="mailto:andy.jones@education.gov.uk">Vacant</a>
+        </h2>
+        <p>Head of content design - currently being covered by Andy Jones.</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

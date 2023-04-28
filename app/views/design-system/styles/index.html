@@ -1,0 +1,37 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Styles" %}
+{% set pageDescription = "Specific styles to ensure a consistent look and feel across Department for Education services." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Styles"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "April 2023 "%}
+{% set backlog_issue_id = "" %}
+
+
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Current styles</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Style</th>
+      <th scope="col" class="govuk-table__header">Summary</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/design-system/styles/colour">Colour</a></th>
+      <td class="govuk-table__cell">Colour palette for Department for Education services.</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Published</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

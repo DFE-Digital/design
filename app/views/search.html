@@ -1,0 +1,40 @@
+  {% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Search results" %}
+{% set selectedNav = "Home" %}
+{% set setSelectedSideNav = "" %}
+{% set backlog_issue_id = "" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+  <article>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        {% if results | length > 0 %}
+          <p class="govuk-u-margin-bottom-3">
+           {{ resultsLen }} result{%if results | length != 1%}s{%endif%}
+         </p>
+          <ul class="govuk-list govuk-list--border">
+            {% for item in results %}
+              <li>
+                <p class="govuk-!-margin-bottom-2"><a href="{{item.url}}" class="govuk-!-font-weight-bold govuk-link govuk-!-font-size-24">{{item.title}}</a></p>
+                <p class="govuk-body-s govuk-u-margin-top-1">{{item.description}}</p>
+              </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+            <p>Your search - <span class="govuk-!-font-weight-bold">{{query}}</span> - had no matching results.</p>
+            <p>Improve your search results by:</p>
+            <ul>
+              <li>double-checking your spelling</li>
+              <li>using fewer keywords</li>
+              <li>searching for something less specific</li>
+            </ul>
+        {% endif %}
+        </div>
+    </div>
+  </article>
+
+  {% endblock %}

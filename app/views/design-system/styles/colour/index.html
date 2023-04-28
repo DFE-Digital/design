@@ -1,0 +1,70 @@
+
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Colour" %}
+{% set pageDescription = "Department for Education colour styles for services." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Styles"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "April 2023 "%}
+{% set backlog_issue_id = "" %}
+
+
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+
+<p>Always use the <a href="https://design-system.service.gov.uk/styles/colour/" target="_blank">GOV.UK colour palette</a> first.</p>
+
+<p>Where you want to use Department for Education specific branding colours, you can use the following colour palette.</p>
+
+<div class="govuk-inset-text">
+    <h3 id="colour-contrast" class="govuk-heading-s">Colour contrast</h3>
+<p>You must make sure that the contrast ratio of text and interactive elements in<br>your service meets <a href="/accessibility/understanding-wcag/perceivable#1-4-3" target="_blank">1.4.3 - Contrast - level AA</a> of the Web Content Accessibility Guidelines (WCAG 2.1).</p>
+
+</div>
+
+
+<p>Do not use the hexadecimal (hex) codes directly, use the mixin name. For example, if you wanted to use the DfE department colour blue use: <code>$color_dfe-blue</code> instead of <code>#003a69</code>.</p>
+
+<table class="govuk-table app-reading-width">
+    <caption class="govuk-table__caption govuk-table__caption--m">Colours</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Colour and name</th>
+      <th scope="col" class="govuk-table__header">Hex</th>
+      <th scope="col" class="govuk-table__header">Notes</th>
+    </tr>
+  </thead>
+<tbody class="govuk-table__body">
+
+ <tr class="govuk-table__row">
+        <th class="govuk-table__header app-colour-list-column--name" scope="row">
+          <span class="app-swatch" style="background-color:#003a69"></span>
+          <code>$color_dfe-blue</code>
+        </th>
+        <td class="govuk-table__cell">
+          <code>#003a69</code>
+        </td>
+      <td class="govuk-table__cell">Primary brand colour
+        </td>
+      </tr>
+ <tr class="govuk-table__row">
+        <th class="govuk-table__header app-colour-list-column--name" scope="row">
+          <span class="app-swatch " style="background-color:#347ca9"></span>
+          <code>$color_dfe-secondary-blue</code>
+        </th>
+        <td class="govuk-table__cell">
+          <code>#347ca9</code>
+        </td>
+        <td class="govuk-table__cell">
+        </td>
+      </tr>
+
+  </tbody>
+</table>
+
+{% endblock %}

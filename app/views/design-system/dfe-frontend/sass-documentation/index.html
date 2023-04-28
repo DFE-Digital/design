@@ -1,0 +1,39 @@
+{% set pageName = "Sass documentation" %}
+{% set pageDescription = "Documentation for using the DfE Frontend sass variables in your services." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "" %}
+{% set backlog_issue_id = "24" %}
+
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block heroExtra %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-s">Version</h2>
+      <strong class="govuk-tag">{{version}}</strong>
+      <strong class="govuk-tag">Alpha</strong>
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-s">Last updated</h2>
+      <strong class="govuk-tag">{{lastUpdatedv | date('D MMM YYYY')}}</strong>
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-s">Package</h2>
+      <a href="https://www.npmjs.com/package/dfe-frontend-alpha" target="_blank"  class="govuk-!-font-weight-bold">NPM Package</a>
+    </div>
+
+  </div>
+
+  {% endblock%}
+
+  {% block content %}
+
+    <p>We're working on this documentation.</p>
+    <p>If you need help with the DfE Frontend package, speak to <a href="mailto:andy.jones@education.gov.uk">Andy Jones, Head of Design</a>.</p>
+
+  {% endblock %}

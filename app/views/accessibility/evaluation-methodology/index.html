@@ -1,0 +1,67 @@
+
+{% set pageName = "Evaluation methodology" %}
+{% set pageDescription = "Using the WCAG Evaluation Methodology (WCAG-EM) to define, scope and report accessibility compliance against WCAG Success Criteria." %}
+{% set selectedNav = "Accessibility" %}
+{% set lastUpdated = "January 2023" %}
+{% set backlog_issue_id = "52" %}
+
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% block content %}
+
+
+    <p>The conformance of your service is required to be stated in <a href="/accessibility/accessibility-statements">accessibility statements</a> so it's important that it's correct. You should use the WCAG evaluation methodology when auditing websites and services.</p>
+
+    
+    <p><a class="govuk-link" target="_blank" href="https://docs.google.com/document/d/1kk-pvLIqwMAvpgXdljE9PRuef3_9ZSX9rSCthebWckM/copy">WCAG-EM audit and reporting template</a></p>
+   
+
+    
+
+    <h2 class="govuk-heading-m">Evaluation methodology</h2>
+
+    <div class="dfe-timeline">
+        <ol>
+            <li>
+                <h3 class="govuk-heading-m">Scope of audit</h3>
+                <p>The name and areas of the website to be audited, for example:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>all pages in the user journey to apply for a bursary</li>
+                    <li>all pages under <i>service-name.education.gov.uk</i>.</li>
+                </ul>
+                <p>Scope also includes the WCAG version and conformance to be tested.</p>
+            </li>
+            <li>
+                <h3 class="govuk-heading-m">Understand the website</h3>
+                <p>Review pages in the website and identify any web technologies to test. Including:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>ARIA</li>
+                    <li>JavaScript</li>
+                    <li>SVG</li>
+                    <li>PDF</li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="govuk-heading-m">Define the sample</h3>
+                <p>List all the pages to be tested based on the scope.</p>
+                <p>In addition to the pages to be tested, also select a random sample of 5 pages that are not part of the main journey to test.</p>
+            </li>
+            <li>
+                <h3 class="govuk-heading-m">Audit the website</h3>
+                <p>Audit each page against each of the success criteria for the selected WCAG version and conformance level.</p>
+                <p>Record findings for pages tested</p>
+            </li>
+            <li>
+                <h3 class="govuk-heading-m">Report findings</h3>
+                <p>Generate and publish report identifying risks and opportunities.</p>
+                <p>Use the <a href="#audit-template">DfE audit report template</a> to conform to reporting standards.</p>
+            </li>
+        </ol>
+
+    </div>
+
+   
+
+{% endblock %}
