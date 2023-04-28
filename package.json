@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "gulp",
-    "start": "npm run watch & nodemon index.js",
-    "prod": "npm run watch & node index.js"
+    "gulp": "gulp",
+    "watch": "npm run watch & nodemon index.js",
+    "start": "npm run watch & node index.js"
   },
   "nodemonConfig": {
     "ext": "html"
