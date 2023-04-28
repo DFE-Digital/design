@@ -1,7 +1,7 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-       <loc>https://design.education.gov.uk/</loc>
+       <loc>https://design.education.gov.uk</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
@@ -49,7 +49,7 @@
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/updates/</loc>
+       <loc>https://design.education.gov.uk/update/</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
@@ -67,37 +67,31 @@
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/design-system/</loc>
-       <lastmod>2023-04-28T22:15:44+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://design.education.gov.uk/design-system/dfe-frontend</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/design-system/styles/</loc>
+       <loc>https://design.education.gov.uk/design-system/styles</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/design-system/components/</loc>
+       <loc>https://design.education.gov.uk/design-system/components</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/design-system/patterns/</loc>
+       <loc>https://design.education.gov.uk/design-system/patterns</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/design-system/contribute/</loc>
+       <loc>https://design.education.gov.uk/design-system/contribute</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
@@ -109,7 +103,7 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/design-ops/</loc>
+       <loc>https://design.education.gov.uk/design-ops</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
@@ -127,7 +121,7 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/accessibility/understanding-wcag/</loc>
+       <loc>https://design.education.gov.uk/accessibility/understanding-wcag</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
@@ -181,7 +175,7 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/accessibility/determine-conformance/</loc>
+       <loc>https://design.education.gov.uk/accessibility/determine-conformance</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
@@ -193,25 +187,25 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/content-design/</loc>
+       <loc>https://design.education.gov.uk/content-design</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/content-design/language-we-use/</loc>
+       <loc>https://design.education.gov.uk/content-design/language-we-use</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/content-design/types-of-content-we-publish/</loc>
+       <loc>https://design.education.gov.uk/content-design/types-of-content-we-publish</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/content-design/publishing-content-on-govuk/</loc>
+       <loc>https://design.education.gov.uk/content-design/publishing-content-on-govuk</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
@@ -235,25 +229,25 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/community/</loc>
+       <loc>https://design.education.gov.uk/community</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/community/meetups/</loc>
+       <loc>https://design.education.gov.uk/community/meetups</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/community/show-and-tells/</loc>
+       <loc>https://design.education.gov.uk/community/show-and-tells</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/community/themes/</loc>
+       <loc>https://design.education.gov.uk/community/themes</loc>
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
@@ -281,12 +275,6 @@
        <lastmod>2023-04-28T22:15:44+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://design.education.gov.uk/design-system/components/header/</loc>
-       <lastmod>2023-04-28T22:15:44+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.5120</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/styles/colour</loc>
