@@ -7,8 +7,8 @@ module.exports = {
   env: process.env.NODE_ENV || 'development',
 
   // Port to run local development server on
-  port: process.env.PORT || 3001,
-  githubrepo: 'https://github.com/DFE-Digital/ucd-manual',
+  port: process.env.PORT || 3066,
+  githubrepo: 'https://github.com/DFE-Digital/design',
   
   assetPath: process.env.assetPath
 };
