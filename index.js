@@ -217,6 +217,12 @@ matchRoutes = function (req, res, next) {
 }
 
 // Start the server
-app.listen(3066, function () {
-  console.log('Service is running on http://localhost:3066')
-})
+
+
+// Run application on configured port
+if (config.env === 'development') {
+  app.listen(config.port - 50, () => {
+  });
+} else {
+  app.listen(config.port);
+}
