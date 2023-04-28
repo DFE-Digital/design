@@ -6,7 +6,7 @@
   "scripts": {
     "gulp": "gulp",
     "watch": "npm run watch & nodemon index.js",
-    "start": "npm run watch & node index.js"
+    "start": "node index.js"
   },
   "nodemonConfig": {
     "ext": "html"
