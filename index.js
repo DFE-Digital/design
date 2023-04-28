@@ -29,7 +29,7 @@ const recaptcha = new Recaptcha(
 )
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 app.set('view engine', 'html')
 
@@ -83,9 +83,11 @@ app.get('/search', (req, res) => {
   })
 })
 
-setTimeout(() => {
-  pageIndex.init()
-}, 2000)
+if (config.env !== 'development') {
+  setTimeout(() => {
+    pageIndex.init()
+  }, 2000)
+}
 
 app.post('/submit-feedback', (req, res) => {
   const feedback = req.body.feedback_form_input
@@ -218,11 +220,12 @@ matchRoutes = function (req, res, next) {
 
 // Start the server
 
+// // Run application on configured port
+// if (config.env === 'development') {
+//   app.listen(config.port - 50, () => {
+//   });
+// } else {
+//   app.listen(config.port);
+// }
 
-// Run application on configured port
-if (config.env === 'development') {
-  app.listen(config.port - 50, () => {
-  });
-} else {
-  app.listen(config.port);
-}
+app.listen(config.port)
