@@ -55,6 +55,13 @@ markdown.register(nunjuckEnv, marked.parse)
 // Set up static file serving for the app's assets
 app.use('/assets', express.static('public/assets'))
 
+// Render sitemap.xml in XML format
+app.get('/sitemap.xml', (_, res) => {
+  res.set({ 'Content-Type': 'application/xml' });
+  res.render('sitemap.xml');
+});
+
+
 app.get('/search', (req, res) => {
   console.log(req.query['search-field'])
   const query = req.query['search-field'] || ''
