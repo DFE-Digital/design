@@ -1300,7 +1300,7 @@ tr {
   
   @media (max-width:63.99em) {
     .dfe-o-banner {
-      width: 91.6666666667%;
+      width: 100%;
       flex-direction: column-reverse;
     }
   
@@ -1312,8 +1312,6 @@ tr {
   
     .dfe-o-banner .dfe-a-image {
       overflow: hidden;
-      border-top-left-radius: .333rem;
-      border-top-right-radius: .333rem;
     }
   
     .dfe-o-banner .dfe-a-image img {
