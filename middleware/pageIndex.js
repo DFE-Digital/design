@@ -13,7 +13,7 @@ class PageIndex {
 
   async init() {
     const startTime = new Date().getTime();
-    const baseUrl = `http://dfe-design.herokuapp.com`;
+    const baseUrl = process.env.baseURL;
     const config = this.getConnectionConfig();
 
     // Set Lunr to only split searches on spaces rather than spaces and hyphens
