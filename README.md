@@ -13,11 +13,13 @@ Run `npm install`
 
 Add a .env file and add the following keys:
 
+```
 recaptchaPublic=x
 recaptchaSecret=x
 feedbackTemplateID=x
 notifyKey=preprod-x
 BASE_URL=http://localhost:3066
+```
 
 Contact Design Ops for the keys to use in your local environment.
 
