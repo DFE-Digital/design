@@ -13,6 +13,8 @@ const path = require('path')
 const cheerio = require('cheerio')
 const config = require('./app/config')
 
+const favicon = require('serve-favicon');
+
 const PageIndex = require('./middleware/pageIndex')
 const pageIndex = new PageIndex(config)
 
@@ -30,6 +32,7 @@ const recaptcha = new Recaptcha(
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(favicon(path.join(__dirname, 'public/assets/images', 'favicon.ico')));
 
 app.set('view engine', 'html')
 

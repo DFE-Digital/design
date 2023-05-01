@@ -14,7 +14,7 @@
       <div class="govuk-grid-column-two-thirds">
         {% if results | length > 0 %}
           <p class="govuk-u-margin-bottom-3">
-           {{ resultsLen }} result{%if results | length != 1%}s{%endif%}
+           {{ resultsLen }} Result{%if results | length != 1%}s{%endif%}
          </p>
           <ul class="govuk-list govuk-list--border">
             {% for item in results %}
