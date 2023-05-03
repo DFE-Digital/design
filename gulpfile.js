@@ -100,6 +100,7 @@ gulp.task('watch', function () {
   gulp.watch('app/**/*.*').on('change', browserSync.reload)
 })
 
+
 // Set up a default task to process assets and start the watch task
 gulp.task(
   'default',

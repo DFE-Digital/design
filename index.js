@@ -12,6 +12,11 @@ const fs = require('fs')
 const path = require('path')
 const cheerio = require('cheerio')
 const config = require('./app/config')
+const axe = require('axe-core');
+const puppeteer = require('puppeteer');
+const glob = require('glob');
+
+const helmet = require('helmet');
 
 const favicon = require('serve-favicon');
 
@@ -30,6 +35,8 @@ const recaptcha = new Recaptcha(
   { callback: 'cb' },
 )
 
+
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(favicon(path.join(__dirname, 'public/assets/images', 'favicon.ico')));
@@ -38,6 +45,8 @@ app.set('view engine', 'html')
 
 app.locals.serviceName = 'Design Manual'
 app.locals.recaptchaPublic = process.env.recaptchaPublic
+
+
 
 // Set up Nunjucks as the template engine
 var nunjuckEnv = nunjucks.configure(
