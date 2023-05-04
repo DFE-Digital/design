@@ -124,6 +124,16 @@
   }
 ] %}
 
+{% set ds_prototyping = [
+  {
+    title: "GOV.UK prototype kit",
+    url: "/design-system/prototype-kit/"
+  },
+  {
+    title: "GitHub and Heroku",
+    url: "/design-system/prototype-kit/github-and-heroku"
+  }
+] %}
 
 {% set list_styles = [
  {
@@ -280,6 +290,15 @@
   {%- if selectedNav == "Design system" and isChildSection !== "true"%}
     <ul class="dfe-vertical-nav__section">
       {% for item in ds_design %}
+        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <h2 class="dfe-vertical-nav--section-header">Prototyping</h2>
+    <ul class="dfe-vertical-nav__section">
+      {% for item in ds_prototyping %}
         <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
           <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
