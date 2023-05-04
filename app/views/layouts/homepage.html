@@ -64,20 +64,17 @@
       {% endblock %}
 
       {% block hero %}{% endblock %}
-
-      <div class="govuk-width-container">
-
+        <div class="dfe-width-container">
         {% block beforeContent%}{% endblock %}
 
         {% block main %}
-          <div class="govuk-width-container app-width-container">
             <main class="govuk-main-wrapper " id="main-content" role="main">
               {% block content %}{% endblock %}
             </main>
-          </div>
+     
         {% endblock %}
 
-      </div>
+     </div>
 
       {% block footer %}
         {% include 'layouts/_footer.html'%}

@@ -20,7 +20,7 @@
       <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
       <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
       <link href="/assets/css/app.min.css" rel="stylesheet">
-                  <meta property="og:url" content="https://design.education.gov.uk"/>
+      <meta property="og:url" content="https://design.education.gov.uk"/>
       <meta property="og:site_name" content="Department for Education Design Manual"/>
       <meta property="og:title" content="{{pageName}}"/>
       <meta property="og:description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}"/>
@@ -32,7 +32,7 @@
       <meta name="twitter:site" content="@dfe_digital">
       <meta name="twitter:creator" content="@dfe_digital">
       <meta name="twitter:image:alt" content="Department for Education Design Manual">
-      <meta name="twitter:image" content="https://design.education.gov.uk/assets/images/dm_og.png" />
+      <meta name="twitter:image" content="https://design.education.gov.uk/assets/images/dm_og.png"/>
       {% block head %}{% endblock %}
     </head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
@@ -44,37 +44,41 @@
           ? document.body.className + ' js-enabled'
           : 'js-enabled');
       </script>
-            {% include 'layouts/_cookiebanner.html'%}
+      {% include 'layouts/_cookiebanner.html'%}
       <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-
 
       {% include 'layouts/_topnav.html'%}
       {% include 'layouts/_feedback.html'%}
 
       {% block header %}
 
-         {% include 'layouts/_header.html'%}
+        {% include 'layouts/_header.html'%}
 
       {% endblock %}
 
       {% block main %}
 
         <div class="dfe-content-page--header">
-          <div class="govuk-width-container ">
+          <div class="dfe-width-container ">
 
-    
+            <div class="govuk-grid-row ">
+              <div class="govuk-grid-column-three-quarters">
+                {% block breadcrumb %}{% endblock %}
+              </div>
+            </div>
 
-            <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-0">
+            <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-0">
+
               <div class="govuk-grid-column-three-quarters">
 
                 <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
                 <p class="govuk-body-l">{{pageDescription}}</p>
 
-                 {% if lastUpdated %}
+                {% if dateUpdated %}
 
                   <p class="govuk-body-s govuk-!-margin-bottom-0">
                     <span class="govuk-!-font-weight-bold">Last updated: </span>
-                    {{lastUpdated}}</p>
+                    {{dateUpdated | date('D MMMM YYYY')}}</p>
 
                 {% endif %}
 
@@ -84,31 +88,27 @@
               <div class="govuk-grid-column-full">
                 {% block heroExtra %}{% endblock %}
 
-               
-
               </div>
             </div>
           </div>
         </div>
 
-        <div class="govuk-width-container app-width-container">
+        <div class="govuk-width-container dfe-width-container">
           <main class="govuk-main-wrapper " id="main-content" role="main">
 
             <div class="govuk-grid-row">
+
               <div class="govuk-grid-column-one-quarter">
                 {% include "includes/_side-nav.html"%}
               </div>
-
               <div class="govuk-grid-column-three-quarters">
                 {% block content %}{% endblock %}
-
                 {% if backlog_issue_id %}
 
-                  {# <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-                  <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank">Contribute to this page on GitHub</a> #}
+                  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+                  <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank">Contribute to this page on GitHub</a>
 
                 {% endif %}
-
               </div>
             </div>
 
@@ -118,22 +118,20 @@
 
     </div>
 
-      {% block footer %}
-       {% include 'layouts/_footer.html'%}
-      {% endblock %}
+    {% block footer %}
+      {% include 'layouts/_footer.html'%}
+    {% endblock %}
 
-
-
-      <script src="/assets/js/all.min.js"></script>
-      <script src="/assets/js/cookies.min.js"></script>
-      <script src="/assets/js/feedback.min.js"></script>
-      <script src="/assets/js/dfefrontend.min.js"></script>
+    <script src="/assets/js/all.min.js"></script>
+    <script src="/assets/js/cookies.min.js"></script>
+    <script src="/assets/js/feedback.min.js"></script>
+    <script src="/assets/js/dfefrontend.min.js"></script>
     {% block scripts %}{% endblock %}
-      <script>
-        window
-          .GOVUKFrontend
-          .initAll()
-      </script>
+    <script>
+      window
+        .GOVUKFrontend
+        .initAll()
+    </script>
   </body>
 
 </html>
