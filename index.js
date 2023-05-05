@@ -21,13 +21,13 @@ const favicon = require('serve-favicon');
 
 const PageIndex = require('./middleware/pageIndex')
 const pageIndex = new PageIndex(config)
-
+require('dotenv').config()
 var NotifyClient = require('notifications-node-client').NotifyClient
 
-require('dotenv').config()
+
 const app = express()
 
-const notify = new NotifyClient(process.env.notifyKey)
+const notify = new NotifyClient("x")
 const recaptcha = new Recaptcha(
   process.env.recaptchaPublic,
   process.env.recaptchaSecret,
