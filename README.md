@@ -6,9 +6,10 @@ This is the Department for Education Design Manual
 ## Prerequisites
 
 Node.JS LTS version
+
 GitHub
 
-Nodemon installed globally
+and Nodemon installed globally
 
 Run `npm i nodemon -g`
 
