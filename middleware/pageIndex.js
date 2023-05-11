@@ -94,7 +94,7 @@ class PageIndex {
   /**
    * Return indexed data from indexed pages for passed query
    *
-   * @param {string} query - Query from 'search-field' param
+   * @param {string} query - Query from 'searchterm' param
    * @return {object[]} - Array of indexed page objects
    */
   search(query) {

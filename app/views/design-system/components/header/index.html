@@ -86,8 +86,8 @@
                   </button>
                   <div class="dfe-header__search-wrap" id="wrap-search">
                     <form class="dfe-header__search-form" id="search" action="/search/" method="get" role="search">
-                      <label class="govuk-visually-hidden" for="search-field">Search this website</label>
-                      <input class="dfe-search__input" id="search-field" name="search-field" type="search" placeholder="Search" autocomplete="off">
+                      <label class="govuk-visually-hidden" for="searchterm">Search this website</label>
+                      <input class="dfe-search__input" id="searchterm" name="searchterm" type="search" placeholder="Search" autocomplete="off">
                       <button class="dfe-search__submit" type="submit">
                         <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
                           <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
@@ -176,8 +176,8 @@
             &lt;/button&gt;
             &lt;div class=&quot;dfe-header__search-wrap&quot; id=&quot;wrap-search&quot;&gt;
                &lt;form class=&quot;dfe-header__search-form&quot; id=&quot;search&quot; action=&quot;/search/&quot; method=&quot;get&quot; role=&quot;search&quot;&gt;
-                  &lt;label class=&quot;govuk-visually-hidden&quot; for=&quot;search-field&quot;&gt;Search this website&lt;/label&gt;
-                  &lt;input class=&quot;dfe-search__input&quot; id=&quot;search-field&quot; name=&quot;search-field&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; autocomplete=&quot;off&quot;&gt;
+                  &lt;label class=&quot;govuk-visually-hidden&quot; for=&quot;searchterm&quot;&gt;Search this website&lt;/label&gt;
+                  &lt;input class=&quot;dfe-search__input&quot; id=&quot;searchterm&quot; name=&quot;searchterm&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; autocomplete=&quot;off&quot;&gt;
                   &lt;button class=&quot;dfe-search__submit&quot; type=&quot;submit&quot;&gt;
                      &lt;svg class=&quot;dfe-icon dfe-icon__search&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
                         &lt;path d=&quot;M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z&quot;&gt;&lt;/path&gt;
@@ -393,7 +393,7 @@ The header Nunjucks macro takes the following arguments:
       <td class="govuk-table__cell"><strong>searchInputName</strong></td>
       <td class="govuk-table__cell">string</td>
       <td class="govuk-table__cell">No</td>
-      <td class="govuk-table__cell">The name for the search field. Defaults to "search-field".</td>
+      <td class="govuk-table__cell">The name for the search field. Defaults to "searchterm".</td>
     </tr>
   </tbody>
 </table>
@@ -545,8 +545,8 @@ The header Nunjucks macro takes the following arguments:
           </button>
           <div class="dfe-header__search-wrap" id="wrap-search">
             <form class="dfe-header__search-form" id="search" action="/search/" method="get" role="search">
-              <label class="govuk-visually-hidden" for="search-field">Search this website</label>
-              <input class="dfe-search__input" id="search-field" name="search-field" type="search" placeholder="Search" autocomplete="off">
+              <label class="govuk-visually-hidden" for="searchterm">Search this website</label>
+              <input class="dfe-search__input" id="searchterm" name="searchterm" type="search" placeholder="Search" autocomplete="off">
               <button class="dfe-search__submit" type="submit">
                 <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
                   <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
@@ -590,8 +590,8 @@ The header Nunjucks macro takes the following arguments:
             &lt;/button&gt;
             &lt;div class=&quot;dfe-header__search-wrap&quot; id=&quot;wrap-search&quot;&gt;
                &lt;form class=&quot;dfe-header__search-form&quot; id=&quot;search&quot; action=&quot;/search/&quot; method=&quot;get&quot; role=&quot;search&quot;&gt;
-                  &lt;label class=&quot;govuk-visually-hidden&quot; for=&quot;search-field&quot;&gt;Search this website&lt;/label&gt;
-                  &lt;input class=&quot;dfe-search__input&quot; id=&quot;search-field&quot; name=&quot;search-field&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; autocomplete=&quot;off&quot;&gt;
+                  &lt;label class=&quot;govuk-visually-hidden&quot; for=&quot;searchterm&quot;&gt;Search this website&lt;/label&gt;
+                  &lt;input class=&quot;dfe-search__input&quot; id=&quot;searchterm&quot; name=&quot;searchterm&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; autocomplete=&quot;off&quot;&gt;
                   &lt;button class=&quot;dfe-search__submit&quot; type=&quot;submit&quot;&gt;
                      &lt;svg class=&quot;dfe-icon dfe-icon__search&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
                         &lt;path d=&quot;M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z&quot;&gt;&lt;/path&gt;
@@ -623,7 +623,7 @@ The header Nunjucks macro takes the following arguments:
     "userNameURL": "",
     "logoPath": "assets",
     "searchAction": "/search/",
-    "searchInputName": "search-field",
+    "searchInputName": "searchterm",
     "service": {
       "name": "Service name"
     }

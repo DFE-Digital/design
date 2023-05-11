@@ -74,8 +74,8 @@ app.get('/sitemap.xml', (_, res) => {
 
 
 app.get('/search', (req, res) => {
-  console.log(req.query['search-field'])
-  const query = req.query['search-field'] || ''
+  console.log(req.query['searchterm'])
+  const query = req.query['searchterm'] || ''
   const resultsPerPage = 10
   let currentPage = parseInt(req.query.page, 10)
   const results = pageIndex.search(query)
