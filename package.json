@@ -20,7 +20,7 @@
     "body-parser": "^1.20.2",
     "cheerio": "^1.0.0-rc.12",
     "clipboard": "^2.0.11",
-    "dfe-frontend-alpha": "^0.1.7",
+    "dfe-frontend-alpha": "^0.1.8",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-recaptcha": "^5.1.0",

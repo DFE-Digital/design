@@ -243,15 +243,23 @@
 {{ header({
     "showNav": "true",
     "showSearch": "true",
-    "showUserName": "true",
-    "userName": "My account",
-    "userNameURL": "#",
+    "showHeaderActionLinks": "true",
     "logoPath": "assets",
     "searchAction": "/search/",
     "searchInputName": "q",
     "service": {
       "name": "Service name"
     },
+    "headerActionLinks": [
+      {
+        "url"  : "",
+        "label" : "Username"
+      },
+      {
+        "url"  : "#",
+        "label" : "Sign out"
+      }
+    ],
     "primaryLinks": [
         {
         "url"  : "#",
@@ -324,10 +332,10 @@ The header Nunjucks macro takes the following arguments:
       <td class="govuk-table__cell">Set to "true" to show the site search input form.</td>
     </tr>
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><strong>showUserName</strong></td>
+      <td class="govuk-table__cell"><strong>showHeaderActionLinks</strong></td>
       <td class="govuk-table__cell">boolean</td>
       <td class="govuk-table__cell">Yes</td>
-      <td class="govuk-table__cell">Set to "true" to show a username text or a link for sign out, account or other link in top right of page.</td>
+      <td class="govuk-table__cell">Set to "true" to show list if items in the top right of page.</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell"><strong>homeHref</strong></td>
@@ -353,6 +361,24 @@ The header Nunjucks macro takes the following arguments:
   <td class="govuk-table__cell">No</td>
   <td class="govuk-table__cell">Pass in a value from the view which matches the <code>primaryLinks.label</code> and it will add the class <code>dfe-header__navigation-item--current</code> to the corresponding nav item.</td>
 </tr>
+ <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><strong>headerActionLinks</strong></td>
+      <td class="govuk-table__cell">array</td>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">Array of links for use in the header on the top right.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><strong>headerActionLinks[].url</strong></td>
+      <td class="govuk-table__cell">string</td>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">The href of a navigation item in the header. If blank, it will just display the label</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><strong>headerActionLinks[].label</strong></td>
+      <td class="govuk-table__cell">string</td>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">The label of the item in the header.</td>
+    </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell"><strong>primaryLinks</strong></td>
       <td class="govuk-table__cell">array</td>
@@ -872,10 +898,15 @@ The header Nunjucks macro takes the following arguments:
          </span>
         </a>
       </div>
-      <div class="dfe-header__content" id="content-header">
-        <div class="dfeuk-header__username">
-          <a href="#" class="govuk-link govuk-link--inverse">My account</a>
-        </div>
+     <div class="dfe-header__content" id="content-header">
+         <ul class="dfe-header__action-links">
+            <li>
+               Name
+            </li>
+            <li>
+               <a href="/sign-out" class="govuk-link govuk-link--inverse">Sign out</a>
+            </li>
+         </ul>
       </div>
     </div>
   </header>
@@ -886,18 +917,23 @@ The header Nunjucks macro takes the following arguments:
           <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
    &lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
       &lt;div class=&quot;dfe-header__logo&quot;&gt;
-         &lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;#&quot; aria-label=&quot;DfE homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
+         &lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;/&quot; aria-label=&quot;DfE homepage&quot;&gt;
+         &lt;img src=&quot;/assets/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
+         &lt;img src=&quot;/assets/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
          &lt;span class=&quot;dfe-header__service-name&quot;&gt;
          Service name
          &lt;/span&gt;
          &lt;/a&gt;
       &lt;/div&gt;
       &lt;div class=&quot;dfe-header__content&quot; id=&quot;content-header&quot;&gt;
-         &lt;div class=&quot;dfeuk-header__username&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;govuk-link govuk-link--inverse&quot;&gt;My account&lt;/a&gt;
-         &lt;/div&gt;
+         &lt;ul class=&quot;dfe-header__action-links&quot;&gt;
+            &lt;li&gt;
+               Name
+            &lt;/li&gt;
+            &lt;li&gt;
+               &lt;a href=&quot;/sign-out&quot; class=&quot;govuk-link govuk-link--inverse&quot;&gt;Sign out&lt;/a&gt;
+            &lt;/li&gt;
+         &lt;/ul&gt;
       &lt;/div&gt;
    &lt;/div&gt;
 &lt;/header&gt;</code></pre>
@@ -909,13 +945,22 @@ The header Nunjucks macro takes the following arguments:
 {{ header({
     "showNav": "false",
     "showSearch": "false",
-    "showUserName": "true",
-    "userName": "My account",
+    "showHeaderActionLinks": "true",
     "userNameURL": "#",
     "logoPath": "assets",
     "service": {
       "name": "Service name"
-    }
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "",
+        "label" : "Username"
+      },
+      {
+        "url"  : "#",
+        "label" : "Sign out"
+      }
+    ]
   })
 }}</code></pre>
             {% endraw%}
