@@ -64,7 +64,7 @@
 
             <div class="govuk-grid-row ">
               <div class="govuk-grid-column-three-quarters">
-                        {% block breadcrumb %} {% if isbeta === "true" %}
+                {% block breadcrumb %} {% if isbeta === "true" %}
              <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -83,7 +83,7 @@
 
               <div class="govuk-grid-column-three-quarters">
 
-          
+    
                 <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
                 <p class="govuk-body-l">{{pageDescription}}</p>
 
@@ -111,9 +111,7 @@
 
             <div class="govuk-grid-row">
 
-              <div class="govuk-grid-column-one-quarter">
-                {% include "includes/_side-nav.html"%}
-              </div>
+            
               <div class="govuk-grid-column-three-quarters">
                 {% block content %}{% endblock %}
                 {% if backlog_issue_id %}
@@ -122,6 +120,10 @@
                   <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank">Contribute to this page on GitHub</a>
 
                 {% endif %}
+              </div>  
+              <div class="govuk-grid-column-one-quarter">
+              {% block related %}
+              {% endblock%}
               </div>
             </div>
 

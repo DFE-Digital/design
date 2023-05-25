@@ -1,0 +1,88 @@
+[
+    {
+        "measure": "Vision",
+        "percent": 77,
+        "source": "",
+        "summary": "This includes blindness, low or poor vision and other conditions like cataracts."
+    },
+    {
+        "measure": "Dyslexia",
+        "percent": 10,
+        "source": "https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles/simone-dyslexic-user"
+    },
+    {
+        "measure": "British Sign Language user",
+        "percent": 0.23,
+        "source": "https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles/saleem-profoundly-deaf-user"
+    },
+    {
+        "measure": "English not first language",
+        "percent": 9,
+        "source": "https://www.ons.gov.uk/peoplepopulationandcommunity/culturalidentity/language/bulletins/languageenglandandwales/census2021"
+    },
+    {
+        "measure": "Colour vision deficiency (Men)",
+        "percent": 8,
+        "source": "https://www.colourblindawareness.org/colour-blindness/"
+    },
+    {
+        "measure": "Colour vision deficiency (Women)",
+        "percent": 0.8,
+        "source": "https://www.colourblindawareness.org/colour-blindness/"
+    },
+    {
+        "measure": "Hearing loss",
+        "percent": 18,
+        "source": "https://rnid.org.uk/about-us/research-and-policy/facts-and-figures/#:~:text=In%20the%20UK%20there%20are,to%201%20in%205%20adults"
+    },
+    {
+        "measure": "Low literacy level",
+        "percent": 16.4,
+        "source": "https://literacytrust.org.uk/parents-and-families/adult-literacy/what-do-adult-literacy-levels-mean/"
+    },
+    {
+        "measure": "Any disability",
+        "percent": 22,
+        "source": "https://researchbriefings.files.parliament.uk/documents/CBP-9602/CBP-9602.pdf"
+    },
+    {
+        "measure": "Learning impairment",
+        "percent": 11,
+        "source": "https://researchbriefings.files.parliament.uk/documents/CBP-9602/CBP-9602.pdf"
+    },
+    {
+        "measure": "Memory impairment",
+        "percent": 11,
+        "source": "https://researchbriefings.files.parliament.uk/documents/CBP-9602/CBP-9602.pdf"
+    },
+    {
+        "measure": "Dexterity impairment",
+        "percent": 23,
+        "source": "https://researchbriefings.files.parliament.uk/documents/CBP-9602/CBP-9602.pdf"
+    },
+    {
+        "measure": "Mental health impairment",
+        "percent": 29,
+        "source": "https://researchbriefings.files.parliament.uk/documents/CBP-9602/CBP-9602.pdf"
+    },
+    {
+        "measure": "Mobility impairment",
+        "percent": 46,
+        "source": "https://researchbriefings.files.parliament.uk/documents/CBP-9602/CBP-9602.pdf"
+    },
+    {
+        "measure": "Autism",
+        "percent": 1.5,
+        "source": "https://www.autism.org.uk/advice-and-guidance/what-is-autism#:~:text=Autism%20is%20a%20lifelong%20developmental,and%20children%20in%20the%20UK."
+    },
+    {
+        "measure": "Anxiety disorder",
+        "percent": 15,
+        "source": "https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles/pawel-user-with-aspergers"
+    },
+    {
+        "measure": "Bipolar disorder",
+        "percent": 2,
+        "source": "https://www.bipolaruk.org/faqs"
+    }
+]

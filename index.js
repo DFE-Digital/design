@@ -63,6 +63,10 @@ var nunjuckEnv = nunjucks.configure(
 nunjuckEnv.addFilter('date', dateFilter)
 markdown.register(nunjuckEnv, marked.parse)
 
+nunjuckEnv.addFilter('formatNumber', function(number) {
+  return number.toLocaleString();
+});
+
 // Set up static file serving for the app's assets
 app.use('/assets', express.static('public/assets'))
 
@@ -170,6 +174,68 @@ app.get('/design-system/dfe-frontend/sass-documentation', function (
       console.error(error)
     })
 })
+
+app.get('/tools/inclusivity-calculator/:number', (req, res) => {
+
+  var number = parseInt(req.params.number | 0);
+
+  if (number) {
+    fs.readFile('./app/data/stats.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading data.json:', err);
+        res.sendStatus(500);
+        return;
+      }
+
+      try {
+        const jsonData = JSON.parse(data);
+        const calculatedData = calculateValues(jsonData, number);
+     
+
+        res.render('tools/inclusivity-calculator/index.html', {number,calculatedData})
+
+      } catch (err) {
+        console.error('Error parsing data.json:', err);
+        res.sendStatus(500);
+      }
+    });
+  } else {
+    res.sendStatus(400);
+  }
+})
+
+
+app.post('/tools/inclusivity-calculator', (req, res) => {
+  var number = req.body.numberOfUsers;
+
+  if (number) {
+   
+
+        res.redirect('/tools/inclusivity-calculator/'+number)
+
+    
+  } else {
+    res.redirect('/tools/inclusivity-calculator')
+  }
+});
+
+function calculateValues(data, number) {
+  const calculatedData = [];
+
+  data.forEach(item => {
+    const numberresult = Math.ceil((item.percent / 100) * number); // Round up to the nearest whole number so we can account for sub 1 %'s on low user numbers. 
+    calculatedData.push({
+      measure: item.measure,
+      number: numberresult,
+      source: item.source,
+      summary: item.summary
+    });
+  });
+
+  calculatedData.sort((a, b) => b.number - a.number);
+
+  return calculatedData;
+}
 
 app.get(/\.html?$/i, function (req, res) {
   var path = req.path
