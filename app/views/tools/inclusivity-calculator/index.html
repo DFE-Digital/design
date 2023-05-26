@@ -4,6 +4,7 @@
 {% set pageDescription = "Estimate how many people might have a disability, impairment or other characteristics which might affect how they use your service." %}
 {% set selectedNav = "Tools" %}
 {% set isbeta = "true" %}
+{% set backlog_issue_id = "62" %}
 
 
 {% block content %}
@@ -81,6 +82,21 @@
 
 {%block related%}
 <p>Share this data with this url <a href="https://design.education.gov.uk/tools/inclusivity-calculator/{{number}}">{{baseURL}}https://design.education.gov.uk/tools/inclusivity-calculator/{{number}}</a></p>
+
+<h2 class="govuk-heading-m">Future plans</h2>
+
+<p>This calculator is intended to be an inclusive calculator, not just focussed on disabilities or physical or mental impairments.</p>
+<p>We are looking to integrate:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="https://www.ethnicity-facts-figures.service.gov.uk/workforce-and-business/workforce-diversity/school-teacher-workforce/latest" target="_blank">Education workforce data</a></li>
+    <li>Digital inclusion, smartphone users, access to internet</li>
+    <li>Age, sex and gender identity</li>
+    <li>Links to design guidance for specific problems and applicable <a href="/accessibility/understanding-wcag/">WCAG criteria</a></li>
+  </ul>
+
+  <p>We'll also look at providing an export of data as well as improving the layout for expanding data sets.</p>
+
 
 {% endblock %}
 
