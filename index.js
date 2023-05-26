@@ -200,7 +200,7 @@ app.get('/tools/inclusivity-calculator/:number', (req, res) => {
       }
     });
   } else {
-    res.sendStatus(400);
+    res.redirect('/tools/inclusivity-calculator')
   }
 })
 
