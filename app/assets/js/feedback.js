@@ -1,5 +1,4 @@
 var feedbackTab = document.getElementById('feedback-tab');
-var feedbackLink= document.getElementById('feedback-trigger');
 var feedbackPanel = document.getElementById('feedback-panel');
 
 var feedbackForm = document.getElementById('feedback-form');
@@ -9,19 +8,6 @@ var submitButton = document.getElementById('submitbutton');
 var cancelButton = document.getElementById('cancelbutton');
 
 feedbackTab.addEventListener('click', function (event) {
-  event.preventDefault(); // prevent the default link behavior
-  if (feedbackPanel.style.display === 'none') {
-    feedbackPanel.style.display = 'block';
-    feedbackPanel.setAttribute('aria-hidden', 'false');
-    feedbackTab.setAttribute('aria-expanded', 'true');
-  } else {
-    feedbackPanel.style.display = 'none';
-    feedbackPanel.setAttribute('aria-hidden', 'true');
-    feedbackTab.setAttribute('aria-expanded', 'false');
-  }
-});
-
-feedbackLink.addEventListener('click', function (event) {
   event.preventDefault(); // prevent the default link behavior
   if (feedbackPanel.style.display === 'none') {
     feedbackPanel.style.display = 'block';
