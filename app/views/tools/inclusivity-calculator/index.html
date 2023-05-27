@@ -6,7 +6,6 @@
 
 {% set backlog_issue_id = "62" %}
 
-
 {% block content %}
 
   <form action="/tools/inclusivity-calculator" method="post">
@@ -19,84 +18,224 @@
       <input class="govuk-input govuk-!-width-one-third" id="numberOfUsers" name="numberOfUsers" type="text" value="{{number}}">
     </div>
 
-<div class="govuk-button-group">
-  <button class="govuk-button" data-module="govuk-button">
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
     Calculate
-  </button>  {% if number !== undefined %}
-  <a class="govuk-link" href="/tools/inclusivity-calculator">Clear results</a>{% endif%}
-</div>
-
-  </form>
-
-  {% if number === undefined %}
-  {% else %}
-
-    <h2 class="govuk-heading-m">Disabilites, conditions, and impairments for {{number | formatNumber}} people in the general population.</h2>
-
-    <p>These results use data from several sources, and people may fall into one or more criteria, therefore, the numbers won't add up to {{number | formatNumber}}.</p>
-
-    <div class="govuk-inset-text">1 in 5 people in the UK have some form of disability.
+  </button>
+      {% if number !== undefined %}
+        <a class="govuk-link" href="/tools/inclusivity-calculator">Clear results</a>{% endif%}
       </div>
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Impairment</th>
-      <th scope="col" class="govuk-table__header">Estimated people</th>
-      <th scope="col" class="govuk-table__header">Source</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
 
-    <dl class="govuk-summary-list">
+    </form>
 
-      {% for data in calculatedData %}  
-      <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"> {{data.measure}}<br/><span class="govuk-body-s">{{data.summary}}</span></th>
-      <td class="govuk-table__cell">  {% if data.number < 1 %}
-        1
+    {% if number === undefined %}
+    {% else %}
+
+      <h2 class="govuk-heading-m">Results for {{number | formatNumber}} people.</h2>
+
+      <p>These results use data from several sources, and people may fall into one or more criteria, therefore, the numbers won't add up to {{number | formatNumber}}.</p>
+
+     <h3 class="govuk-heading-m">Disabilities, impairments, and conditions</h3>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Measure</th>
+            <th scope="col" class="govuk-table__header">Estimated people</th>
+            <th scope="col" class="govuk-table__header">Source</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          {% for data in calculatedData %}
+            {% if data.type === "a" %}
+
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  {{ data.measure }}<br/>
+                  <span class="govuk-body-s">{{ data.summary }}</span>
+                </th>
+                <td class="govuk-table__cell">
+                  {% if data.number < 1 %}
+          1
         {% else %}
-              {{data.number | formatNumber}}
-            {% endif %}</td>
-      <td class="govuk-table__cell"> 
-        {% if data.source %}
-        <a class="govuk-link" target="_blank" href="{{data.source}}">
-        View data source<span class="govuk-visually-hidden"> for  {{data.measure}}</span>
-            </a>{% else%}Source missing{% endif %}</td>
-    </tr>
+                    {{ data.number | formatNumber }}
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  {% if data.source %}
+                    <a class="govuk-link" target="_blank" href="{{ data.source }}">
+            View data source<span class="govuk-visually-hidden"> for {{ data.measure }}</span>
+                    </a>
+                  {% else %}
+          Source missing
+        {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
 
-    
+        </tbody>
+      </table>
 
-      {% endfor %}
-  
+         <h3 class="govuk-heading-m govuk-!-margin-top-9">Teacher demographic data by gender</h3>
 
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Measure</th>
+            <th scope="col" class="govuk-table__header">Estimated people</th>
+            <th scope="col" class="govuk-table__header">Source</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
 
-  </tbody>
-</table>
+          {% for data in calculatedData %}
+            {% if data.type === "b" %}
 
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  {{ data.measure }}<br/>
+                  <span class="govuk-body-s">{{ data.summary }}</span>
+                </th>
+                <td class="govuk-table__cell">
+                  {% if data.number < 1 %}
+          1
+        {% else %}
+                    {{ data.number | formatNumber }}
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  {% if data.source %}
+                    <a class="govuk-link" target="_blank" href="{{ data.source }}">
+            View data source<span class="govuk-visually-hidden"> for {{ data.measure }}</span>
+                    </a>
+                  {% else %}
+          Source missing
+        {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
 
+        </tbody>
+      </table>
 
-  {% endif %}
+            <h3 class="govuk-heading-m govuk-!-margin-top-9">Teacher demographic data by ethnicity</h3>
 
-{% endblock %}
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Measure</th>
+            <th scope="col" class="govuk-table__header">Estimated people</th>
+            <th scope="col" class="govuk-table__header">Source</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
 
+          {% for data in calculatedData %}
+            {% if data.type === "c" %}
 
-{%block related%}
-<p>Share this data with this url <a href="https://design.education.gov.uk/tools/inclusivity-calculator/{{number}}">{{baseURL}}https://design.education.gov.uk/tools/inclusivity-calculator/{{number}}</a></p>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  {{ data.measure }}<br/>
+                  <span class="govuk-body-s">{{ data.summary }}</span>
+                </th>
+                <td class="govuk-table__cell">
+                  {% if data.number < 1 %}
+          1
+        {% else %}
+                    {{ data.number | formatNumber }}
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  {% if data.source %}
+                    <a class="govuk-link" target="_blank" href="{{ data.source }}">
+            View data source<span class="govuk-visually-hidden"> for {{ data.measure }}</span>
+                    </a>
+                  {% else %}
+          Source missing
+        {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
 
-<h2 class="govuk-heading-m">Future plans</h2>
+        </tbody>
+      </table>
 
-<p>This calculator is intended to be an inclusive calculator, not just focussed on disabilities or physical or mental impairments.</p>
-<p>We are looking to integrate:</p>
+              <h3 class="govuk-heading-m govuk-!-margin-top-9">General population digital inclusion</h3>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li><a href="https://www.ethnicity-facts-figures.service.gov.uk/workforce-and-business/workforce-diversity/school-teacher-workforce/latest" target="_blank">Education workforce data</a></li>
-    <li>Digital inclusion, smartphone users, access to internet</li>
-    <li>Age, sex and gender identity</li>
-    <li>Links to design guidance for specific problems and applicable <a href="/accessibility/understanding-wcag/">WCAG criteria</a></li>
-  </ul>
+              <p>The digital inclusion scale includes 5 metrics:</p>
 
-  <p>We'll also look at providing an export of data as well as improving the layout for expanding data sets.</p>
+              <ol class="govuk-list govuk-list--number">
+                <li>Manage information such as searching or downloading files</li>
+                <li>Communicating such as sending an email or message</li>
+                <li>Transacting such as buying something or installing an app</li>  
+                <li>Problem solving such as getting help or verifying information online</li>  
+                <li>Creating such as completing and submitting an application form</li>          
+                </ol>
 
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Measure</th>
+            <th scope="col" class="govuk-table__header">Estimated people</th>
+            <th scope="col" class="govuk-table__header">Source</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
 
-{% endblock %}
+          {% for data in calculatedData %}
+            {% if data.type === "d" %}
 
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  {{ data.measure }}<br/>
+                  <span class="govuk-body-s">{{ data.summary }}</span>
+                </th>
+                <td class="govuk-table__cell">
+                  {% if data.number < 1 %}
+          1
+        {% else %}
+                    {{ data.number | formatNumber }}
+                  {% endif %}
+                </td>
+                <td class="govuk-table__cell">
+                  {% if data.source %}
+                    <a class="govuk-link" target="_blank" href="{{ data.source }}">
+            View data source<span class="govuk-visually-hidden"> for {{ data.measure }}</span>
+                    </a>
+                  {% else %}
+          Source missing
+        {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+    {% endif %}
+
+  {% endblock %}
+
+  {%block related%}
+    <p>Share this data with this url <a href="https://design.education.gov.uk/tools/inclusivity-calculator/{{number}}">{{baseURL}}https://design.education.gov.uk/tools/inclusivity-calculator/{{number}}</a>
+    </p>
+
+    <h2 class="govuk-heading-m">Future plans</h2>
+
+    <p>This calculator is intended to be an inclusive calculator, not just focussed on disabilities or physical or mental impairments.</p>
+    <p>We are looking to integrate useful data wherever possible, including:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Age, sex and gender identity</li>
+      <li>Links to design guidance for specific problems and applicable <a href="/accessibility/understanding-wcag/">WCAG criteria</a>
+      </li>
+    </ul>
+
+    <p>We'll also look at providing an export of data as well as improving the layout for expanding data sets.</p>
+
+  {% endblock %}

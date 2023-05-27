@@ -229,7 +229,8 @@ function calculateValues(data, number) {
       measure: item.measure,
       number: numberresult,
       source: item.source,
-      summary: item.summary
+      summary: item.summary,
+      type: item.type
     });
   });
 
