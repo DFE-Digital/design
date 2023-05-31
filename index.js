@@ -71,7 +71,15 @@ app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml');
 });
-
+app.get('/downloads/:filename', (req, res) => {
+  const filename = req.params.filename;
+  const filePath = path.join(__dirname, "/app/assets/downloads/"+filename);
+  // Set appropriate headers
+  res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+  res.setHeader('Content-Disposition', `attachment; filename=${filename}`);
+  // Send the file
+  res.sendFile(filePath);
+});
 
 app.get('/search', (req, res) => {
   console.log(req.query['search-field'])
