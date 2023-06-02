@@ -86,6 +86,12 @@ app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml');
 });
+
+app.get('/robots.txt', (_, res) => {
+  res.set({ 'Content-Type': 'text/plain' });
+  res.render('robots.txt');
+});
+
 app.get('/downloads/:filename', (req, res) => {
   const filename = req.params.filename;
   const filePath = path.join(__dirname, "/app/assets/downloads/"+filename);
