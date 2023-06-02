@@ -14,6 +14,7 @@ const cheerio = require('cheerio')
 const config = require('./app/config')
 const puppeteer = require('puppeteer');
 const glob = require('glob');
+const forceHttps = require('express-force-https');
 
 const helmet = require('helmet');
 
@@ -66,6 +67,8 @@ markdown.register(nunjuckEnv, marked.parse)
 nunjuckEnv.addFilter('formatNumber', function(number) {
   return number.toLocaleString();
 });
+
+app.use(forceHttps);
 
 // Set up static file serving for the app's assets
 app.use('/assets', express.static('public/assets'))
