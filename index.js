@@ -15,6 +15,7 @@ const config = require('./app/config')
 const puppeteer = require('puppeteer');
 const glob = require('glob');
 const forceHttps = require('express-force-https');
+var compression = require('compression')
 
 const helmet = require('helmet');
 
@@ -27,6 +28,8 @@ var NotifyClient = require('notifications-node-client').NotifyClient
 
 
 const app = express()
+
+app.use(compression());
 
 const notify = new NotifyClient("x")
 const recaptcha = new Recaptcha(
