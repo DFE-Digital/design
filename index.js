@@ -70,6 +70,14 @@ nunjuckEnv.addFilter('formatNumber', function(number) {
 // Set up static file serving for the app's assets
 app.use('/assets', express.static('public/assets'))
 
+app.use((req, res, next) => {
+  if (req.url.endsWith('/') && req.url.length > 1) {
+    const canonicalUrl = req.url.slice(0, -1);
+    res.set('Link', `<${canonicalUrl}>; rel="canonical"`);
+  }
+  next();
+});
+
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
