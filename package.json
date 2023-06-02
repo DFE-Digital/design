@@ -46,6 +46,11 @@
   "devDependencies": {
     "axe-core": "^4.7.0",
     "browser-sync": "^2.29.1",
+    "eslint": "^8.41.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-copy": "^4.0.1",
@@ -54,6 +59,7 @@
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "prettier": "^2.8.8",
     "puppeteer": "^19.11.1"
   }
 }
