@@ -29,7 +29,7 @@ var NotifyClient = require('notifications-node-client').NotifyClient
 
 const app = express()
 
-const notify = new NotifyClient("x")
+const notify = new NotifyClient(process.env.notifyKey)
 const recaptcha = new Recaptcha(
   process.env.recaptchaPublic,
   process.env.recaptchaSecret,
