@@ -1,0 +1,29 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Components" %}
+{% set pageDescription = "Components for the National Careers Service website. " %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "ncs-design-system"%}
+{% set hasChildren = "true"%}
+{% set isChildSection = "true"%}
+
+{% set ncs_hide_parent_nav = "true" %}
+{% set ncs_components_nav = "true" %}
+{% set lastUpdated = "June 2023 "%}
+{% set backlog_issue_id = "" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+
+   
+<p>Components are reusable parts of the user interface that have been made to support a variety of applications.</p>
+<p>The components in this design system have been created by designers and developers at the National Careers Service.</p>
+<h2>How to use the components</h2>
+<p>To use the National Careers Service components, you can copy either the HTML code or the Nunjucks code.</p>
+<p>Each individual component includes a coded example so you can see what the component looks like. </p>
+<p>If you're using the <a href="https://prototype-kit.service.gov.uk/docs/">GOV.UK Prototype Kit</a> or have included <a href="https://frontend.design-system.service.gov.uk/">GOV.UK Frontend</a> in your build, the coded examples will appear the same as in the National Careers Service design system.</p>
+
+{% endblock%}
