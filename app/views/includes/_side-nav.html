@@ -114,12 +114,15 @@
   {
     title: "Contribute",
     url: "/design-system/contribute/"
-  },
-  {
-    title: "National Careers Service design system",
-    url: "/design-system/ncs-design-system/"
   }]
 %}
+
+{% set ds_services = [
+  {
+     title: "National Careers Service",
+     url: "/design-system/ncs-design-system/"
+   }]
+ %}
 
 {% set docs = [
  {
@@ -239,10 +242,11 @@
 
 {% set ncs_design_system = [
   {
-     title: "Components",
-     url: "/design-system/ncs-design-system/components"
-   },{
-     title: "Branding guidelines",
+    title: "Components",
+    url: "/design-system/ncs-design-system/components"
+  },
+{
+     title: "Branding styles",
      url: "/design-system/ncs-design-system/branding-guidelines"
    },{
     title: "Content style guide",
@@ -264,10 +268,6 @@
  ] %}
 
  {% set ncs_design_system_components = [
-  {
-    title: "Components",
-    url: "/design-system/ncs-design-system/components"
-  },
   {
      title: "Header",
      url: "/design-system/ncs-design-system/components/header"
@@ -387,6 +387,15 @@
       {% endfor %}
     </ul>
 
+    <h2 class="dfe-vertical-nav--section-header">Service design systems</h2>
+    <ul class="dfe-vertical-nav__section">
+      {% for item in ds_services %}
+        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    
     <h2 class="dfe-vertical-nav--section-header">Prototyping</h2>
     <ul class="dfe-vertical-nav__section">
       {% for item in ds_prototyping %}
@@ -455,7 +464,7 @@
   {%- if parentSection == "ncs-design-system" and isChildSection == "true" and ncs_hide_parent_nav !=="true" %}
 
   
-<a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Design system</a>
+<a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
   <h2 class="dfe-vertical-nav--section-header">How we work</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_guidance %}
@@ -478,7 +487,8 @@
 
   {%- if ncs_branding_nav == "true"%}
 
-  <a href="/design-system/ncs-design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service Design system</a>
+  <a href="/design-system/ncs-design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
+  <h2 class="dfe-vertical-nav--section-header">Brand styles</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_system_branding_guidelines %}
       <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
@@ -491,7 +501,7 @@
   {%- if ncs_components_nav == "true"%}
 
   
-<a href="/design-system/ncs-design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service Design system</a>
+<a href="/design-system/ncs-design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
   <h2 class="dfe-vertical-nav--section-header">Navigation</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_system_components %}

@@ -1,7 +1,7 @@
 {% extends "layouts/content-with-sidenav.html" %}
 
 {% set pageName = "Images" %}
-{% set pageDescription = "How to use images on the National Careers Service website. " %}
+{% set pageDescription = "Guidance for publishing images on the National Careers Service website. " %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
 {% set parentSection = "ncs-design-system"%}
@@ -20,6 +20,69 @@
 
 
    
-<p>Images content.</p>
+<div class="govuk-inset-text">
+<p>Our image guidance is constantly evolving. We'll update it when we receive new research and feedback on how users interact with images on the <a href="https://nationalcareers.service.gov.uk/">National Careers Service website</a>.</p>
+</div>
+<p>Having image guidance specific for the National Careers Service helps us:</p>
+<ul>
+    <li>create a consistent look and feel </li>
+    <li>articulate an image style that accurately reflects our values</li>
+    <li>focus on the accessibility of website images</li>
+    <li>represent as many of our user groups and personas as possible</li>
+</ul>
+<h2>GDS standards</h2>
+<p>You should always follow the <a href="https://www.gov.uk/guidance/content-design/images">Government Digital Service guidance on images</a>.</p>
+<h2>Header images</h2>
+<p>From user research, we know that our users would prefer to see header images that show:</p>
+<ul>
+    <li>more than one person</li>
+    <li>people looking towards the camera</li>
+    <li>someone doing a task or action</li>
+    <li>people who are happy in their work</li>
+    <li>a diverse range of careers and people</li>
+</ul>
+<h3>Homepage header</h3>
+<p>Images in the homepage header should be:</p>
+<ul>
+    <li>1,920px by 250px on desktop</li>
+    <li>486px by 282px on mobile</li>
+    <li>panoramic</li>
+</ul>
+<p>The National Careers Service logo needs to be placed on top of the images, located in the top right corner, on desktop only.</p>
+<div class="example example-images confirmation" style="margin-bottom:2em"><img src="/assets/images/example-homepage-desktop.png" alt=" " width="100%" height="250px"><figcaption>Desktop example of a National Careers Service homepage header image.</figcaption>
+    <br>
+    <img src="/assets/images/example-homepage-mobile.png" class="confirm-desktop" alt=" " width="50%" height="282px"><figcaption>Mobile example of a National Careers Service homepage header image.</figcaption>
+</div>
+<h3>Content page header</h3>
+<p>Images in content page headers other than the homepage should be:</p>
+<ul>
+    <li>1,920px by 210px on desktop</li>
+    <li>486px by 220px on mobile</li>
+    <li>panoramic</li>
+</ul>
+<p>The National Careers Service logo should not be used on content page headers.</p>
+<div class="example example-images confirmation" style="margin-bottom:2em"><img src="/assets/images/example-page-desktop.png" alt=" " width="100%" height="250px"><figcaption>Desktop example of a National Careers Service content page header image.</figcaption>
+    <br>
+    <img src="/assets/images/example-page-mobile.png" class="confirm-desktop" alt=" " width="50%" height="282px"><figcaption>Mobile example of a National Careers Service content page header image.</figcaption>
+</div>
+<h2>Diversity and representation</h2>
+<p>Images on the National Careers Service website should follow these general best practice guidelines.</p>
+<p><strong>Representation</strong>: images should represent a wide range of people of different ethnicities, genders, ages, abilities, body sizes and other characteristics.</p>
+<p><strong>Context</strong>: images should be appropriate and not inadvertently offend or misrepresent any group. This includes being conscious of the potential for images to enforce stereotypes of the types of people in roles, occupations and other activities displayed in the images.</p>
+<p><strong>Consultation</strong>: you should share images with stakeholders and colleagues to get their expert input and ensure accurate and respectful representation. Feedback from users should also always be considered.</p>
+<p><strong>Review</strong>: images should be regularly reviewed and updated so they continue to reflect diverse audiences and keep up with any changing societal norms and standards while also allowing more chances to show diversity in images.</p>
+<h2>Background of images</h2>
+<p>You should check images to ensure they do not show anything inappropriate or controversial, such as health or safety breaches or prominent logos of other organisations in the background.</p>
+<h2>Image sources</h2>
+<p>Ideally, you should aim to use photography commissioned by the National Careers Service so that images will be instantly recognised and create brand awareness.</p>
+<p>However, it will not always be possible to commission our own images due to constraints with budgets, locations and hiring models. Therefore, you can use stock images when needed, as long they meet our criteria.</p>
+<p>You should try to use stock images from libraries which require a subscription so that the images on the website are less likely to be seen on non-National Careers Service products. This will help us retain a certain level of brand awareness while using stock image websites.</p>
+<h2>Strategic communications and policy involvement</h2>
+<p>If you add images to represent or relate to policy offers, you should ensure images are checked by the relevant policy team.</p>
+<p>This is to confirm that images accurately illustrate what is on offer and do not mislead users on what they can achieve. For example, if you add an image to introduce Skills Bootcamps, it is important that this shows a role that is available through the scheme.</p>
+<p>Strategic communications can also help you assess the appropriateness of any images used that correlate with adult skills offerings.</p>
+<h2>Mobile optimisation</h2>
+<p>You should use 100% width for full size images, so they are optimised for mobile devices by adding <code style="color:#d13118; background-color: #f3f2f1">width="100%"</code> in the img tag.</p>
+<p>For example: <code style="color:#d13118; background-color: #f3f2f1">img src="/media/warehouse.png" alt="person in high visibility jacket. " width="100%"</code></p>
 
 {% endblock%}
