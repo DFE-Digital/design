@@ -103,6 +103,8 @@ app.get('/downloads/:filename', (req, res) => {
   res.sendFile(filePath);
 });
 
+
+
 app.get('/search', (req, res) => {
   console.log(req.query['searchterm']);
   const query = req.query['searchterm'] || '';

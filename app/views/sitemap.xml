@@ -2,247 +2,259 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
        <loc>https://design.education.gov.uk/</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/cookie-policy</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/content-design</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/tools</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/professions</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://design.education.gov.uk/community</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-ops</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility-statement</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-ops/contact</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/dfe-frontend</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/prototype-kit/github-and-heroku</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/dfe-frontend/sass-documentation</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/components/header</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/standards</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/roles-and-responsibilities</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/understanding-wcag/perceivable</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/understanding-wcag/operable</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/understanding-wcag/understandable</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/understanding-wcag/robust</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/understanding-wcag/draft-2-2</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/assurance</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/audits</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/evaluation-methodology</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/accessibility-statements</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/tools/inclusivity-calculator</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/content-design/design-histories-guidance</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/content-design/types-of-content-we-publish/reviewing-and-checking-content</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/professions/content-design</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/professions/interaction-design</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/professions/service-design</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://design.education.gov.uk/professions/meetups</loc>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://design.education.gov.uk/professions/show-and-tells</loc>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://design.education.gov.uk/professions/themes</loc>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-ops/vision-and-objectives</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-ops/services-weve-built</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-ops/tools</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-ops/design-maturity</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/styles/colour</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/patterns/select-a-school</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/accessibility-statements/full-statement</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/accessibility-statements/partial-statement</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/accessibility/accessibility-statements/notmet-statement</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>
@@ -254,13 +266,13 @@
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-system/prototype-kit</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>
   <url>
        <loc>https://design.education.gov.uk/design-ops/design-maturity/september-2022</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <lastmod>2023-06-22T07:53:17+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>

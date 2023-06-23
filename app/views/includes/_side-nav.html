@@ -77,18 +77,15 @@
 ] %}
 
 {% set communities = [
-  {
-    title: "Community overview",
-    url: "/community/"
-  },{
+ {
     title: "Meetups",
-    url: "/community/meetups/"
+    url: "/professions/meetups/"
   },{
     title: "Show and tells",
-    url: "/community/show-and-tells/"
+    url: "/professions/show-and-tells/"
   },{
     title: "Themes",
-    url: "/community/themes/"
+    url: "/professions/themes/"
   }
 ] %}
 
@@ -284,10 +281,9 @@
       {% endfor %}
     </ul>
 
-  {% endif %}
+     <h2 class="dfe-vertical-nav--section-header">Community</h2>
 
-  {%- if selectedNav == "Community" %}
-    <ul class="dfe-vertical-nav__section">
+     <ul class="dfe-vertical-nav__section">
       {% for item in communities %}
         <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
           <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
@@ -296,6 +292,7 @@
     </ul>
 
   {% endif %}
+
 
   {%- if selectedNav == "Design system" and isChildSection !== "true"%}
     <ul class="dfe-vertical-nav__section">
