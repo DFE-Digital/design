@@ -1,19 +1,154 @@
 {% extends "layouts/content-with-sidenav.html" %}
 
 {% set pageName = "Content style guide" %}
-{% set pageDescription = "Guidelines for writing for the National Careers Service website. " %}
+{% set pageDescription = "Guidance for publishing content on the National Careers Service website." %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
 {% set parentSection = "ncs-design-system"%}
 {% set isChildSection = "true"%}
-
+{% set dateUpdated = "June 2023 "%}
 
 {% block beforeContent %}{% endblock %}
 
 {% block content %}
 
 
-   
-<p>Style guide content.</p>
+<p>The National Careers Service style guide should be used in addition to the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">Government Digital Service style guide</a> and the other guidance in the <a href="https://design.education.gov.uk/">DfE design manual</a>.</p>
+<div class="govuk-inset-text">
+    <p>Our content style guide is constantly evolving. We'll update it when we receive new research and feedback on how users interact with the <a href="https://nationalcareers.service.gov.uk/">National Careers Service website</a>.</p>
+    </div>   
+<h2>Rationale</h2>
+<p>Our style guide covers elements specific to careers guidance and is therefore not covered in the GDS and DfE guides.</p> 
+<p>Having a style guide specific for the National Careers Service:</p>
+<ul>
+<li>makes better use of content designer time, providing quick answers to format, style and accuracy questions</li>
+<li>benefits users by being consistent as users are not slowed by the varying, personal stylistic choices of different content designers</li>
+<li>helps articulate a style that accurately reflects the values of the National Careers Service</li>
+<li>saves money as it reduces the time spent writing, reviewing and correcting content as well as onboarding new content designers</li>
+<li>helps justify decisions and conventions to those who are not familiar with them</li>
+<li>encourages a focus on accessibility and particular user groups by writing in an optimised way</li>
+</ul>
+<h2>Apprenticeships and courses</h2>
+<h3>Capitalisation</h3>
+<p>Use capitals for the names of specific courses and apprenticeships, including their level.</p>
+<p>When referring to a course or apprenticeship in general, use sentence case.</p>
+<p>For example:</p>
+<div class="govuk-inset-text">
+    <p>You could do the Finance Assistant Level 2 Intermediate Apprenticeship to become an accounting technician.</p>
+    <p>You could do a level 3 advanced apprenticeship in finance or accounting to become an accounting technician.</p>
+    </div> 
+<h3>Length</h3>
+<p>Write the length of apprenticeships and courses in years and months while following the convention for <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#n">numbers in the GDS style guide</a>.</p>
+<p>For example:</p>
+<div class="govuk-inset-text">
+    <p>This course takes approximately one year to complete.</p>
+    <p>This apprenticeship takes 2 years and 6 months to complete.</p>
+    </div>
+<h3>Levels</h3>
+<p>Use both the level and type of the course or apprenticeship on job profiles.</p>
+<p>For example: You could do a Business Administration Level 3 Advanced Apprenticeship.</p>
+<h3>Ordering</h3>
+<p>When listing more than one apprenticeship or course, list them in order from low to high. If there is more than one at the same level, order them alphabetically.</p>
+<p>For example:</p>
+<div class="govuk-inset-text">
+    <p>You could do a:</p>
+    <ul>
+        <li>Finance Assistant Level 2 Intermediate Apprenticeship</li>
+        <li> Assistant Accountant Level 3 Advanced Apprenticeship</li>
+        <li>Professional Accounting Level 4 Higher Apprenticeship</li>
+        <li>Taxation Accounting Level 4 Higher Apprenticeship</li>
+    </ul>
+</div>
+<h2>Relative links</h2>
+<p>Use relative links instead of absolute links when linking to internal pages.</p>
+<p>This will make it easier when copying content between environments and will also help the page load slightly faster.</p>
+<p><strong>Absolute URLs</strong>: an absolute URL contains the entire address of the webpage including the protocol and the domain name.</p>
+<p>For example: <code style="color:#d13118; background-color: #f3f2f1">a href=”https://www.nationalcareers.service.gov.uk/careers-advice”</code>.</p>
+<p><strong>Relative URLs</strong>: a relative link does not use the full web address and only contains the location following the domain name. It assumes that the link you add is on the same site and is part of the same root domain. The relative path starts with the forward slash after the domain name and leads the browser to stay within the current site.</p>
+<p>For example: <code style="color:#d13118; background-color: #f3f2f1">a href=”/careers-advice”</code>.</p>
+<h2>Salaries</h2>
+<h3>Hourly rates</h3>
+<p>Salary figures are listed as an annual figure so always change hourly rates to yearly rates.</p>
+<p>To do this, multiply the hourly rate by 37 then by 52 for an annual estimate. Do not forget to round up or down as required for public or private sector roles.</p>
+<p>Example:</p>
+<div class="govuk-inset-text">
+    <p>A job is advertised at £12.50 an hour.</p>
+    <p>£12.50 x 37 = £462.50</p>
+    <p>£462.50 x 52 = £24,050</p>
+    </div>
+<p>This will usually give a figure slightly higher than the actual rate so it's best to cross reference this figure with other sources.</p>
+<h3>National Minimum Wage considerations</h3>
+<p>Cross reference adverts with the <a href="https://www.gov.uk/national-minimum-wage-rates">National Minimum Wage rates</a> for 18 to 20, 21 to 22 and 23 and over, using the most appropriate level.</p>
+<p>For example, you need to be 21 or over for most driving jobs so you should make sure the salary on these profiles meets the 21 to 22 minimum wage.</p>
+<h3>Private sector</h3>
+<p>Round figures up or down to the nearest £1,000 for most private sector salaries.</p>
+<h3>Public sector</h3>
+<p>For public sector salaries, use the exact figures if available.</p>
+<p>Round figures up or down if there is no set pay scale or the pay scale is variable, for example further education teacher.</p>
+<h3>Roles to include</h3>
+<p>Aim to have the starting salary at the expected level once qualified or have completed apprenticeship or training. It should not include very senior level roles, such as consultants, if there are only a few of these roles available.</p>
+<p>There are some exceptions. For example, junior doctors as they remain in training for an extended period.</p>
+<h3>Trusted sources</h3>
+<p>Always cross reference salary data from more than one source wherever possible to try to get a rounded picture of national figures for starter and experienced levels. Salaries should be based on full time equivalent roles.</p>
+<p>Trusted primary sources for salary information are:</p>
+<ul>
+    <li><a href="https://getintoteaching.education.gov.uk/salaries-and-benefits">Get Into Teaching</a></li>
+    <li><a href="https://www.healthcareers.nhs.uk/working-health/working-nhs/nhs-pay-and-benefits/agenda-change-pay-rates/agenda-change-pay-rates">Health Careers</a></li>
+    <li><a href="https://www.polfed.org/resources/pay-scales/constable-pay-scales/">Police Federation</a></li>
+    <li><a href="http://www.armedforces.co.uk/armypayscales.php#.Y3SkYcfP1yy">Armed Forces</a></li>
+    <li><a href="https://www.macdonaldandcompany.com/">Macdonald and Company</a></li>
+    <li><a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/occupation4digitsoc2010ashetable14">ASHE survey</a></li>
+    <li><a href="http://api.lmiforall.org.uk/">LMI for All</a></li>
+</ul>
+<p>Trusted sources to triangulate or cross reference salary are:</p>
+<ul>
+    <li><a href="https://www.gov.uk/find-a-job">GOV.UK find a job</a></li>
+    <li><a href="https://www.civilservicejobs.service.gov.uk/csr/index.cgi">Civil Service Jobs</a></li>
+    <li><a href="https://www.adzuna.co.uk/jobs/salaries">Adzuna</a></li>
+    <li><a href="https://uk.indeed.com/">Indeed</a></li>
+    <li><a href="https://www.eurofound.europa.eu/observatories/emcc/erm/support-instrument/sector-skills-councils#:~:text=Sector%20Skills%20Councils%20%28SSCs%29%20are%20independent%2C%20employer-led%20organisations,employer%20demand.%20SSCs%20apply%20to%20specific%20economic%20sectors.">Sector Skills Councils</a></li>
+    <li><a href="https://www.gov.uk/government/publications/professional-bodies-approved-for-tax-relief-list-3/approved-professional-organisations-and-learned-societies">approved professional bodies</a></li>
+    <li><a href="https://www.ctpa.org.uk/tradepress">trade press</a></li>
+    <li>specialist job boards, such as <a href="https://www.countryside-jobs.com/">Countryside Jobs</a></li>
+</ul>
+<h3>Variable salary</h3>
+<p>Consider setting the salary to variable if:</p>
+<ul>
+    <li>the salary is difficult to source</li>
+    <li>it's a role with many self employed workers</li>
+    <li>it's often a freelance role</li>
+</ul>
+<h2>Third party links</h2>
+<p>Use the criteria to decide on adding links to third party websites.</p>
+<p>Consider linking if the website:</p>
+<ul>
+    <li> is a government organisation, public organisation, charity or other publicly known and trusted organisation</li>
+    <li>delivers a service the user can only access or complete using the third party website</li>
+    <li>is a trustworthy source that can support users better or at a similar level to the National Careers Service</li>
+    <li>is usable and accessible, including on mobiles, and is a safe place to send the user</li>
+    <li>is up to date, authoritative and free from 'under construction' messages</li>
+    <li>is free from offensive material, political bias and religious bias</li>
+    <li>is free for users to access without having to pay or register to see it, except for professional bodies</li>
+    <li>does not promote a product or service for commercial gain, except for professional bodies</li>
+    <li>is transparent with respect to its ownership, funding and purposes</li>
+</ul>
+<h2>Tone of voice</h2>
+<p>Use a consistent tone of voice across the website.</p>
+<p>The tone should be:</p>
+<ul>
+    <li><strong>clear</strong>: do not use technical terms or acronyms without an explanation, do not be ambiguous about products or processes</li>
+    <li><strong>simple</strong>: do not use long, complicated words and grammar, use common words, plain English and short sentences as much as possible</li>
+    <li><strong>direct</strong>: use active voice and be concise</li>
+    <li><strong>friendly</strong>: write with warmth, confidence and humanity, using first person as you're talking to a real person and be optimistic, if appropriate</li>
+    <li><strong>informal</strong>: research on writing for the web is clear that an informal, conversational style of writing helps users engage with the content</li>
+</ul>
+<h2>Words and phrases to avoid</h2>
+<p>On the National Careers Service website:</p>
+<ul>
+    <li>use adviser not advisor</li>
+    <li>never abbreviate National Careers Service to NCS</li>
+    <li>use students not pupils</li>
+</ul>
+
 
 {% endblock%}
