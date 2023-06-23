@@ -163,8 +163,26 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://design.education.gov.uk/content-design/design-histories-guidance</loc>
-       <lastmod>2023-06-02T12:13:17+00:00</lastmod>
+       <loc>https://design.education.gov.uk/content-design/writing-design-history-posts</loc>
+       <lastmod>2023-06-01T20:46:09+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://design.education.gov.uk/content-design/how-we-write-emails/</loc>
+       <lastmod>2023-06-01T20:46:09+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://design.education.gov.uk/content-design/types-of-content-we-publish/</loc>
+       <lastmod>2023-06-01T20:46:09+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://design.education.gov.uk/content-design/publishing-content-on-govuk/</loc>
+       <lastmod>2023-06-01T20:46:09+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
