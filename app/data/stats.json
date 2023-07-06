@@ -93,6 +93,18 @@
         "type": "a"
     },
     {
+        "measure": "ADHD - 0-19 years old",
+        "percent": 5,
+        "source": "https://adhduk.co.uk/adhd-incidence/",
+        "type": "a"
+    },
+    {
+        "measure": "ADHD - 20 years old and over",
+        "percent": 3.5,
+        "source": "https://adhduk.co.uk/adhd-incidence/",
+        "type": "a"
+    },
+    {
         "measure": "Bipolar disorder",
         "percent": 2,
         "source": "https://www.bipolaruk.org/faqs",
