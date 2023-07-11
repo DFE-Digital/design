@@ -71,6 +71,11 @@ nunjuckEnv.addFilter('formatNumber', function(number) {
   return number.toLocaleString();
 });
 
+nunjuckEnv.addFilter('hyphen', function(str) {
+  return str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
+});
+
+
 app.use(forceHttps);
 
 // Set up static file serving for the app's assets

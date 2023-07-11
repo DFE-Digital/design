@@ -8,203 +8,237 @@
 {% set childSection = "components"%}
 {% set ncs_components_nav = "true"%}
 {% set isChildSection = "true"%}
-
 {% set ncs_hide_parent_nav = "true" %}
 {% set isSubNavSection = "true" %}
 {% set lastUpdated = "June 2023 "%}
 {% set backlog_issue_id = "" %}
 
-{% block beforeContent %}{% endblock %}
+{% import "../code-frame.html" as sample %}
+
+{% set htmlCode_header = '<code class="hljs language-html">
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header "</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-header"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__container govuk-width-container ncs-header__container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__logo"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__link govuk-header__link--homepage"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__logotype"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!--[if gt IE 8]&gt;&lt;!--&gt;</span>
+  <span class="hljs-tag">
+      &lt;<span class="hljs-name">svg</span>
+      <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>
+      <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__logotype-crown"</span>
+      <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>
+      <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 132 97"</span>
+      <span class="hljs-attr">height</span>=<span class="hljs-string">"30"</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">"36"</span>&gt;
+  </span>
+  <span class="hljs-tag">
+      &lt;<span class="hljs-name">path</span>
+      <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">fill-rule</span>=<span class="hljs-string">"evenodd"</span>
+      <span class="hljs-attr">d</span>=<span class="hljs-string">"M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"</span>&gt;
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-comment">&lt;!--&lt;![endif]--&gt;</span>
+  <span class="hljs-comment">
+      &lt;!--[if IE 8]&gt;
+      &lt;img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"&gt;
+      &lt;![endif]--&gt;
+  </span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__logotype-text"</span>&gt;</span>
+  GOV.UK
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__content"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-header__link govuk-header__service-name"</span>&gt;</span>
+National Carrer Service
+  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+</code>' %}
+
+{% set htmlCode_homepage = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-hero homepage-hero"</span>&gt;</span>
+  <!---->
+      &lt;!-- Desktop image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/homepage-desktop-header.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Woman sat at a laptop and wearing a headset in an office."</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      &lt;!-- Mobile image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/homepage-mobile-header.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Woman sat at a laptop and wearing a headset in an office."</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content govuk-width-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-logo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block mb-5"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Welcome<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>to<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>the<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block ncs"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>National<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Careers<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Service<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sub-heading"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Get<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>information,<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>advice<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>and<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>guidance<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>to<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>help<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>you<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>make<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>decisions<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>at<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>all<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>stages<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>in<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>your<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>career.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Available<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>to<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>people<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>who<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>live<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>in<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>England.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!--closeing tag--> 
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!---->
+</code>' %}
+
+{% set htmlCode_page = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-hero page-hero"</span>&gt;</span>
+  <!---->
+      &lt;!-- Desktop image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/page-header.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      &lt;!-- Mobile image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/page-mobile-header.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content govuk-width-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span>
+              
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block ncs"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Skills<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>assessment<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sub-heading"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Find<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>out<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>about<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>careers<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>that<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>might<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>be<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>right<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>for<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>you<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>by<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>taking<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>one<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>of<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>our<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>accessments.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!--closeing tag--> 
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!---->
+</code>' %}
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+          Header
+      </h1>
+  </div>
+</div>
 
-   
-<div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
-    <h2 class="govuk-tabs__title">
-Contents
-</h2>
-    <ul class="govuk-tabs__list">
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#example6">
-Example
-</a>
-      </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#html6">
-HTML
-</a>
-      </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#nunjucks6">
-Nunjucks
-</a>
-      </li>
-    </ul>
-    <div class="govuk-tabs__panel" id="example6">
-      <p>
-        <a href="/design-system/components/header/nav/" target="_blank">Open example in a new window</a>
-      </p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h2>Top Header</h2>
+      <p>The top header shows users that they are on National Carrer Service .</p>
+      {{ sample.code('/design-system/ncs-design-system/components/header/top-header-example.html', 'Top header example', 'top-header', htmlCode_header) }}
+  </div>
+</div>
 
-      <header class="dfe-header" role="banner">
-        <div class="dfe-width-container dfe-header__container">
-          <div class="dfe-header__logo">
-            <a class="dfe-header__link dfe-header__link--service " href="#" aria-label="DfE homepage">
-              <img src="/assets/images/dfe-logo.png" class="dfe-logo" alt="DfE Homepage">
-              <img src="/assets/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="DfE Homepage">
-              <span class="dfe-header__service-name">
-Service name
-</span>
-            </a>
-          </div>
-          <div class="dfe-header__content" id="content-header">
-            <div class="dfe-header__menu">
-              <button class="dfe-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-expanded="false">Menu</button>
-            </div>
-          </div>
-        </div>
-        <nav class="dfe-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
-          <div class="dfe-width-container">
-            <p class="dfe-header__navigation-title">
-              <span id="label-navigation">Menu</span>
-              <button class="dfe-header__navigation-close" id="close-menu">
-                <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                  <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-                </svg>
-                <span class="govuk-visually-hidden">Close menu</span>
-              </button>
-            </p>
-            <ul class="dfe-header__navigation-list">
-              <li class="dfe-header__navigation-item dfe-header__navigation-item--current">
-                <a class="dfe-header__navigation-link" href="#">
-    Navigation link 1 
-    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="dfe-header__navigation-item ">
-                <a class="dfe-header__navigation-link" href="#">
-    Navigation link 2
-    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="dfe-header__navigation-item ">
-                <a class="dfe-header__navigation-link" href="#">
-    Navigation link 3
-    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2>Homepage header</h2>
+    <p>The homepage header should be used only at the top of the homepage. Images should be used with thought as to how the text and white text background covers the image.</p>
+    <p>Headers are all full width. The National Careers Service logo is only required on desktop views</p>
+    <p>H1 text is required but other text is optional.</p>
+    {{ sample.code('/design-system/ncs-design-system/components/header/homepage-header-example.html', 'Homepage header example', 'homepage-header-box', htmlCode_homepage) }}
+  </div>
+</div>
 
-    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2>Page header</h2>
+    <p>Unlike the homepage header, the page header can have multiple text elements. H1 text is required but other text is optional. Text should be confined to a two third column. Headers are all full width.</p>
+    {{ sample.code('/design-system/ncs-design-system/components/header/page-header-example.html', 'Page header example', 'page-header-box', htmlCode_page) }}
+  </div>
+</div>
 
-    <div class="govuk-tabs__panel" id="html6">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
-      <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
-&lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
-&lt;div class=&quot;dfe-header__logo&quot;&gt;
-&lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;#&quot; aria-label=&quot;DfE homepage&quot;&gt;
-&lt;img src=&quot;/assets/images/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
-&lt;img src=&quot;/assets/images/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
-&lt;span class=&quot;dfe-header__service-name&quot;&gt;
-Service name
-&lt;/span&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;dfe-header__content&quot; id=&quot;content-header&quot;&gt;
-&lt;div class=&quot;dfe-header__menu&quot;&gt;
-&lt;button class=&quot;dfe-header__menu-toggle&quot; id=&quot;toggle-menu&quot; aria-controls=&quot;header-navigation&quot; aria-expanded=&quot;false&quot;&gt;Menu&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;nav class=&quot;dfe-header__navigation&quot; id=&quot;header-navigation&quot; role=&quot;navigation&quot; aria-label=&quot;Primary navigation&quot; aria-labelledby=&quot;label-navigation&quot;&gt;
-&lt;div class=&quot;dfe-width-container&quot;&gt;
-&lt;p class=&quot;dfe-header__navigation-title&quot;&gt;
-&lt;span id=&quot;label-navigation&quot;&gt;Menu&lt;/span&gt;
-&lt;button class=&quot;dfe-header__navigation-close&quot; id=&quot;close-menu&quot;&gt;
- &lt;svg class=&quot;dfe-icon dfe-icon__close&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
-    &lt;path d=&quot;M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z&quot;&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;span class=&quot;govuk-visually-hidden&quot;&gt;Close menu&lt;/span&gt;
-&lt;/button&gt;
-&lt;/p&gt;
-&lt;ul class=&quot;dfe-header__navigation-list&quot;&gt;
-&lt;li class=&quot;dfe-header__navigation-item dfe-header__navigation-item--current&quot;&gt;
- &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-    Navigation link 1 
-    &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-       &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-    &lt;/svg&gt;
- &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;dfe-header__navigation-item &quot;&gt;
- &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-    Navigation link 2
-    &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-       &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-    &lt;/svg&gt;
- &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;dfe-header__navigation-item &quot;&gt;
- &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-    Navigation link 3
-    &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-       &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-    &lt;/svg&gt;
- &lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/nav&gt;
-&lt;/header&gt;</code></pre>
-    </div>
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks6">
-      {% raw %}
-        <pre><code>{% from 'node_modules/dfe-frontend-alpha/packages/components/header/macro.njk' import header %}
+      <div class="govuk-body">
+        <h2>When to use this component</h2>
+        <p>You must use the National Careers Service header at the top of every page if your service is being hosted on the nationalcareers.service.gov.uk domain.</p>
+        <p>The homepage header should be used only at the top of the homepage. Images should be used with thought as to how the text and white text background covers the image.</p>
+        <p>A page header should be used on pages other than the homepage and only at the top. Images should be used with thought as to how the text and white text background covers the image.</p>
 
-{{ header({
-"showNav": "true",
-"showSearch": "false",
-"showUserName": "false",
-"userName": "",
-"userNameURL": "",
-"logoPath": "assets",
-"service": {
-"name": "Service name"
-},
-"primaryLinks": [
-{
-"url"  : "#",
-"label" : "Navigation link 1"
-}, {
-"url"  : "#",
-"label" : "Navigation link 2"
-}, {
-"url"  : "#",
-"label" : "Navigation link 3"
-}
-]
-})
-}}</code></pre>
-        {% endraw%}
+        <h2>When not to use this component</h2>
+        <p>You must not use the National Careers Service header if your service is not hosted on the National Careers Service domain.</p>
+        
+        <h2>How to use this component</h2>
+        <p>If you use the page template, you'll get the header without having to add it as it's included by default. However, if you need to add this without using the page template, you can copy the HTML and paste it where you'd like to display the header on your page. </p>
+        <p>Once you've added the code, you can edit the navigation text and links to suit your needs.</p>
       </div>
-    </div>
-  </section>
-
-<h2>When to use this component</h2>
-<p>You must use the National Careers Service header at the top of every page if your service is being hosted on the nationalcareers.service.gov.uk domain.</p>
-<h2>When not to use this component</h2>
-<p>You must not use the National Careers Service header if your service is not hosted on the National Careers Service domain.</p>
-<h2>How to use this component</h2>
-<p>If you use the page template, you'll get the header without having to add it as it's included by default. </p>
-<p>However, if you need to add this without using the page template, you can either use HTML or, if you're using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> or the <a href="https://prototype-kit.service.gov.uk/docs/">GOV.UK Prototype Kit</a>, you can use the Nunjucks macro.</p>
+  </div>
+</div>
 
 {% endblock%}

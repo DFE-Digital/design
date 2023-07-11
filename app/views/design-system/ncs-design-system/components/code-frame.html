@@ -1,0 +1,28 @@
+{% macro code(href, title, id, htmlCode) %}
+
+<div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">Contents</h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#example-{{ id }}">Example</a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#html-code-example-{{ id }}">HTML</a>
+    </li>
+  </ul>
+
+  <div class="govuk-tabs__panel" id="example-{{ id }}">
+    <p>
+      <a href="{{ href }}" target="_blank">Open this example<span class="govuk-visually-hidden"> ({{title}})</span> in a new tab</a>
+    </p>
+    <iframe class="app-example__frame" data-module="app-iframe" src="{{ href }}" title="{{title}}" frameborder="0" loading="lazy"></iframe>
+  </div>
+
+  <div class="govuk-tabs__panel" id="html-code-example-{{ id }}">
+    <pre data-module="app-copy" tabindex="0">
+      {{ htmlCode | safe }}
+    </pre>
+  </div>
+
+{% endmacro %}
+

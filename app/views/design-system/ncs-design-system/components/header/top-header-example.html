@@ -1,0 +1,25 @@
+{% extends "./../example-layout.html" %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{% block pageTitle %}
+  Header component | NCS component library
+{% endblock %}
+
+{%- set componentId = 'header__body' -%}
+
+{% block sample %}
+  {% block header %}
+    {# Set serviceName in config.js. #}
+    {{
+      govukHeader({
+        serviceName: serviceName,
+        containerClasses: "govuk-width-container app-width-container ncs-header__container",
+        navigation: [
+          {
+          }
+        ]
+      })
+    }}
+  {% endblock %}
+{% endblock %}
+

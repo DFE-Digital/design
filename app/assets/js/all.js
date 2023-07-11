@@ -4735,6 +4735,16 @@
     nodeListForEach($tabs, function ($tabs) {
       new Tabs($tabs).init();
     });
+
+    // initialize the iFrame resizer
+    var $iframe = $scope.querySelectorAll('[data-module="app-iframe"]');
+    console.log($iframe)
+    nodeListForEach($iframe, function ($iframe) {
+      $iframe.onload = function() {
+        $iframe.style.height =
+        $iframe.contentWindow.document.body.scrollHeight + 'px';
+      }
+    }
   }
 
   /**

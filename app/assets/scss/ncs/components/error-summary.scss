@@ -1,0 +1,50 @@
+
+.ncs-error-summary {
+    color: $text_white;
+    border: 5px solid $bright_purple;
+    background-color: $bright_purple;
+
+    &:focus {
+        outline: 3px solid $focus_yellow;
+    }
+
+    &__list {
+        & a:focus {
+            outline: 3px solid rgba(0,0,0,0);
+            color: #0b0c0c;
+            background-color: #fd0;
+            -webkit-box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+            box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+            text-decoration: none;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone
+        }
+
+        & a:link,
+        & a:visited {
+            color: $text_white;
+            text-decoration-thickness: 3px;
+        }
+
+        & a:hover {
+            color: $text_white;
+        }
+
+        & a:active {
+            color: $text_white;
+        }
+
+        & a:focus {
+            color: #0b0c0c
+        }
+    }
+}
+
+@media print {
+  .govuk-error-summary {
+    color: $text_white;
+  }
+}
+
+
+

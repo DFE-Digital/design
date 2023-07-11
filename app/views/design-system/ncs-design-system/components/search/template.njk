@@ -1,0 +1,65 @@
+{% macro search_button() %}
+  <div class="input-search-item input-submit-wrapper">
+    <button data-module="govuk-button" type="submit" class="input-search-submit" id="search-button">Search</button>
+  </div>
+{% endmacro %}
+
+{% macro search_bar(fieldset) %}
+  <div class="govuk-form-group">
+    <label class="{{ fieldset.label.class }}" for="{{ fieldset.input.id }}">{{ fieldset.label.text }}</label>
+    <div class="input-wrapper">
+      <input {% for attr, val in fieldset.input %} {{attr|hyphen}}="{{val}}"  {% endfor%} />          
+      {{ search_button() }}
+    </div>
+  </div>
+{% endmacro %}
+
+
+
+<form action="{{ params.action }}" method="{{ params.method }}" id="{{ params.id }}" class="{{ params.class }}">
+
+    {%- if params.type == 'search_form' %}
+    <div class="search-wrapper">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-form-group">
+              <label class="{{ params.fieldset[0].label.class }}" for="{{ params.fieldset[0].input.id }}">{{ params.fieldset[0].label.text }}</label>
+              <div class="input-wrapper">
+                <input type="search" id="{{ params.fieldset[0].input.id }}" name="{{ params.fieldset[0].input.name }}" class="{{ params.fieldset[0].input.class }}" aria-label="{{ params.fieldset[0].hint.text }}" autocomplete="off" />
+              </div>
+              <span class="fac-visually-hidden" aria-hidden="true">
+                <input type="hidden" name="sideBarCoordinates" id="coordinates" value="">
+                <input type="hidden" name="sideBarSuggestedLocation" id="suggestedLocation-input" value="">
+              </span>
+            </div>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            {{ search_bar(params.fieldset[1]) }}    
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif -%}
+
+    {%- if params.type == 'search_bar' %}
+    <div class="search-wrapper">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            {{ search_bar(params.fieldset) }}    
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif -%}
+
+    {%- if params.type == 'search_box' %}
+      <div class="search-wrapper">
+        {{ search_bar(params.fieldset) }}    
+      </div>
+      <input id="JobProfileUrl" name="JobProfileUrl" type="hidden" value="" />
+      <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+    {% endif -%}
+  
+</form>
