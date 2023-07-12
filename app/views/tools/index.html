@@ -1,10 +1,8 @@
-{% extends "layouts/content-with-sidenav.html" %}
+{% extends "layouts/content-with-sidenav-right.html" %}
 
 {% set pageName = "Tools" %}
-{% set pageDescription = "A range of tools you can use to help understand users and build better services." %}
+{% set pageDescription = "Tools you can use to help understand users, build better services and get things done more easily." %}
 {% set selectedNav = "Tools" %}
-
-
 
 {% block content %}
 
@@ -12,7 +10,6 @@
 
         <div class="dfe-card">
             <div class="dfe-card-container">
-                <strong class="govuk-tag">Beta</strong>
                 <h2 class="govuk-heading-m">
                     <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/tools/inclusivity-calculator">Inclusivity calculator</a>
                 </h2>
@@ -20,8 +17,14 @@
             </div>
         </div>
 
-       
-
     </div>
 
 {% endblock %}
+
+{% block related %}
+
+    <h2 class="govuk-heading-m">Related content</h2>
+
+    <p>
+        <a href="/design-ops/tools">Tools you can and cannot use in DfE</a>.</p>
+    {% endblock%}

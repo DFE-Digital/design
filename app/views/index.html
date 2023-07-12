@@ -14,18 +14,25 @@
         </div>
       </div>
     </div>
-
   </section>
-
 {% endblock %}
-
 {% block content %}
-
+<div class="govuk-notification-banner" role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important - Changes to WCAG are coming
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading" style="max-width: 90%">Read the guidance for understanding and applying the <a href="/accessibility/understanding-wcag/draft-2-2">9 new criteria in WCAG 2.2</a>.</p>
+    <p  style="max-width: 90%">These are coming into force between June and September 2023 with compliance expected within 12 months.</p>
+  </div>
+</div>
   <section class="govuk-!-margin-bottom-9">
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-
         <div class="dfe-grid-container">
           <div class="dfe-card">
             <picture>
@@ -40,7 +47,6 @@
               <p>We use a combination of the GOV.UK Design System and DfE Frontend to create consistent looking services.</p>
             </div>
           </div>
-
           <div class="dfe-card">
             <picture>
               <source srcset="/assets/images/imgacc.webp" type="image/webp">
@@ -53,7 +59,6 @@
               <p>Use our templates, audit plans and WCAG guidelines to ensure we design with accessibility in mind.</p>
             </div>
           </div>
-
           <div class="dfe-card">
             <picture>
               <source srcset="/assets/images/imgcon.webp" type="image/webp">
@@ -66,7 +71,6 @@
               <p>Writing in plain language, to create clear and consistent content for the departments digital services.</p>
             </div>
           </div>
-
           <div class="dfe-card">
             <picture>
               <source srcset="/assets/images/imgcop.webp" type="image/webp">
@@ -79,31 +83,22 @@
               <p>Find out what it's like to work in design at DfE and how our communities of practice develop the design professions.</p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
   </section>
-
-
-
   <section>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <div class="dfe-o-banner dfe-o-banner--mirrored govuk-!-margin-top-2">
-
           <div class="dfe-o-banner__content-container dfe-light-blue-tint">
             <div class="dfe-o-banner__inner-content-container">
-
               <h2 class="govuk-heading-l">How to apply <br/>the Service Standard</h2>
               <p>We’ve built a companion service to the <br/>Government Service Standard.</p>
               <p>This service helps teams follow standards to build accessible, usable, safe, secure, and trusted services.</p>
-
-              <a href="https://apply-the-service-standard.education.gov.uk/" target="_blank" class="govuk-link govuk-body-l govuk-!-font-weight-bold">View the service</a>
+              <a href="https://apply-the-service-standard.education.gov.uk/" class="govuk-link govuk-body-l govuk-!-font-weight-bold">View the service</a>
             </div>
           </div>
-
           <div class="dfe-o-banner__image-container">
             <figure class="dfe-a-image dfe-a-image--cover">
               <picture class="dfe-a-image__picture">
@@ -111,60 +106,50 @@
                 <img src="/assets/images/assidfe.png" alt="">
               </picture>
             </figure>
-
           </div>
         </div>
       </div>
     </div>
-
   </section>
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <div class="dfe-section-break dfe-section-break--m"></div>
     </div>
   </div>
-
   <section>
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half"> 
         <h2 class="govuk-heading-l">Latest updates</h2>
-        <p><a href="/updates/#design-manual-refresh">Design Manual refresh</a><br/> 
+        <p><a class="govuk-link" href="/updates/#design-manual-refresh">Design Manual refresh</a><br/>
         <span class="govuk-body-s">On 28 April 2023 by Andy Jones, Head of Design</span>
         <hr class="govuk-section-break govuk-section-break--visible"></p>        
       </div>
-
       <div class="govuk-grid-column-one-half">
-
         <h2 class="govuk-heading-l">Other resources and guidance</h2>
-
         <ul class="govuk-list govuk-list--spaced">
-                <li>
-                  <a href="https://apply-the-service-standard.education.gov.uk/" target="_blank">Apply the Service Standard in DfE</a>
-                </li>
-                <li>
-                  <a href="https://user-research.education.gov.uk/" target="_blank">User Research in DfE</a>
-                </li>
-                <li>
-                  <a href="https://technical-guidance.education.gov.uk/" target="_blank">DfE Technical Guidance</a>
-                </li>
-                <li>
-                  <a href="https://dfe-digital.github.io/architecture/#dfe-architecture" target="_blank">DfE Architecture</a>
-                </li>
-                <li>
-                  <a href="https://design-system.service.gov.uk/" target="_blank">GOV.UK Design System</a>
-                </li>
-                <li>
-                  <a href="https://www.gov.uk/service-manual" target="_blank">GOV.UK Service Manual</a>
-                </li>
-                 <li>
-                  <a href="https://www.gov.uk/service-manual/communities/design-community" target="_blank">Cross government design community</a>
-                </li>
-                
-              </ul>
+          <li>
+            <a class="govuk-link" href="https://apply-the-service-standard.education.gov.uk/">Apply the Service Standard in DfE</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://user-research.education.gov.uk/">User Research in DfE</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://technical-guidance.education.gov.uk/">DfE Technical Guidance</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://dfe-digital.github.io/architecture/#dfe-architecture">DfE Architecture</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a>
+          </li>
+           <li>
+            <a class="govuk-link" href="https://www.gov.uk/service-manual/communities/design-community">Cross government design community</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
-
 {% endblock %}
