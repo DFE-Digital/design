@@ -1,4 +1,4 @@
-{% extends "layouts/content-with-sidenav.html" %}
+{% extends "layouts/content-with-sidenav-right.html" %}
 
 {% set pageName = "Tools" %}
 {% set pageDescription = "Tools you can use to help understand users, build better services and get things done more easily." %}
@@ -20,3 +20,11 @@
     </div>
 
 {% endblock %}
+
+{% block related %}
+
+    <h2 class="govuk-heading-m">Related content</h2>
+
+    <p>
+        <a href="/design-ops/tools">Tools you can and cannot use in DfE</a>.</p>
+    {% endblock%}

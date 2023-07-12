@@ -84,6 +84,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (_, res) => {
+  res.render('index.html');
+});
+
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
