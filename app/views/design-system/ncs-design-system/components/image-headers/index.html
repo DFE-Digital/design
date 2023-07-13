@@ -1,25 +1,210 @@
 {% extends "layouts/content-with-sidenav.html" %}
 
-{% set pageName = "Image headers" %}
-{% set pageDescription = "Image headers can be used to. " %}
+{% set pageName = "Header" %}
+{% set pageDescription = "The National Careers Service header shows the user they are on the National Careers Service website. " %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
 {% set parentSection = "ncs-design-system"%}
 {% set childSection = "components"%}
 {% set ncs_components_nav = "true"%}
 {% set isChildSection = "true"%}
-
 {% set ncs_hide_parent_nav = "true" %}
 {% set isSubNavSection = "true" %}
 {% set lastUpdated = "June 2023 "%}
 {% set backlog_issue_id = "" %}
 
-{% block beforeContent %}{% endblock %}
+{% import "../code-frame.html" as sample %}
+
+{% set htmlCode_homepage = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-hero homepage-hero"</span>&gt;</span>
+  <!---->
+      &lt;!-- Desktop image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/homepage-desktop-header.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Woman sat at a laptop and wearing a headset in an office."</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      &lt;!-- Mobile image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/homepage-mobile-header.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Woman sat at a laptop and wearing a headset in an office."</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content govuk-width-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-logo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block mb-5"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Welcome<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>to<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>the<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block ncs"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>National<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Careers<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Service<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sub-heading"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Get<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>information,<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>advice<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>and<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>guidance<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>to<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>help<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>you<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>make<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>decisions<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>at<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>all<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>stages<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>in<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>your<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>career.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Available<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>to<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>people<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>who<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>live<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>in<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>England.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!--closeing tag--> 
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!---->
+</code>' %}
+
+{% set htmlCode_page = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-hero page-hero"</span>&gt;</span>
+  <!---->
+      &lt;!-- Desktop image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/page-header.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      &lt;!-- Mobile image --&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-only"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://lab-cdn.nationalcareersservice.org.uk/media/headers/page-mobile-header.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content govuk-width-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span>
+              
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-heading-xl"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block ncs"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Skills<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>assessment<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sub-heading"</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Find<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>out<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>about<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>careers<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>that<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>might<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>be<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>right<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>for<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>you<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>                        
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>by<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>taking<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>one<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>of<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>our<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>accessments.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!--closeing tag--> 
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!---->
+</code>' %}
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Image header</h1>
+      <p>Image headers are visual introduction of the page and its content</p>
+  </div>
+</div>
 
-   
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-body">
 
+        <h2>Homepage header</h2>
+
+        {{ sample.code('/design-system/ncs-design-system/components/image-headers/homepage-header-example.html', 'Homepage header example', 'homepage-header-box', htmlCode_homepage) }}
+
+        <p>You must use the homepage header on the homepage of the <a href="https://nationalcareers.service.gov.uk">National Careers Service website</a> and only at the top. You cannot use the homepage header on any other pages.</p>
+        <p>You should use the homepage header to help create a National Careers Service look and feel and make the website more visually engaging. The homepage header should be full width.</p>
+        <p>Images on the homepage header should be:</p>
+        <ul>
+        <li>1,920px by 250px and in panoramic format on desktop</li>
+        <li>486px by 282px on mobile</li>
+        </ul>
+        <p>On the desktop image, you need to add the <a href="/design-system/ncs-design-system/branding-guidelines/logo">National Careers Service logo</a> in the top right corner. You should not add the logo to the mobile version of the homepage header image.</p> 
+
+        <br><br>
+
+        <h2>Page header</h2>
+
+        {{ sample.code('/design-system/ncs-design-system/components/image-headers/page-header-example.html', 'Page header example', 'page-header-box', htmlCode_page) }}
+
+        <p>You can choose to use a page header component on landing pages on the National Careers Service website. The page header should be full width and only ever used at the top of the page.</p>
+        <p>Images in the page headers other than the homepage should be:</p>
+        <ul>
+            <li>1,920px by 210px and in panoramic format on desktop</li>
+            <li>486px by 220px on mobile</li>
+        </ul>
+        <p>You should not use the National Careers Service logo with the page header component.</p>
+
+        <h3>When to use the page header component</h2>
+        <p>To help you decide if it's valuable to use the page header component on a landing page, you can think about:</p>
+    
+        <br><br>
+
+        <h2>Writing for these components</h2>
+        <p>You always need to add a h1 on the image header components. You have the option to add some paragraph text underneath the heading if you'd like to add a short description of the page.</p>
+        <p>The text should be confined to a two third column while the header is always full width. You need to choose images carefully, thinking about how the text and white background will cover the image.</p>
+        
+        <h2>Research on these components</h2>
+        <p>From user research, we know that our users would prefer to see header images that show:</p>
+        <ul>
+            <li>more than one person</li>
+            <li>people looking towards the camera</li>
+            <li>someone participating in a task or action</li>
+            <li>people who are happy in their work</li>
+            <li>a diverse range of careers and people</li>
+        </ul>
+        
+        <h2>Further guidance on images</h2>
+        <p>You can read more advice about using images in our <a href="/design-system/ncs-design-system/branding-guidelines/images">National Careers Service images guidance</a>.</p>
+    </div>
+  </div>
+</div>
 
 {% endblock%}

@@ -1,6 +1,6 @@
 {% macro code(href, title, id, htmlCode) %}
 
-<div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
+<div class="govuk-tabs govuk-!-margin-top-5 code-example" id="example-tabs-{{ id }}" data-module="govuk-tabs">
   <h2 class="govuk-tabs__title">Contents</h2>
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
@@ -11,7 +11,7 @@
     </li>
   </ul>
 
-  <div class="govuk-tabs__panel" id="example-{{ id }}">
+  <div class="govuk-tabs__panel" id="example-tabs__panel-{{ id }}">
     <p>
       <a href="{{ href }}" target="_blank">Open this example<span class="govuk-visually-hidden"> ({{title}})</span> in a new tab</a>
     </p>
