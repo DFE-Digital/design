@@ -1,6 +1,6 @@
 @import "node_modules/govuk-frontend/govuk/all";
 @import 'node_modules/dfe-frontend-alpha/packages/dfefrontend';
-@import 'ncs/index.scss';
+@import './ncs/index.scss';
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -17,6 +17,9 @@
   }
 }
 
+html {
+  overflow: auto;
+}
 
 body,
 p,

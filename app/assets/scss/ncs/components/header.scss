@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .homepage-header__body,
 .page-header__body{
     * {
@@ -53,11 +55,12 @@
         position: relative;
         z-index: 99;
         .block {
-            display: inline-block;
+            display: block;
                    
             span {
                 color: $primary_black; 
                 position: relative;
+                margin: 0 -2px;
                 &::after {
                     content: '';
                     position: absolute;

@@ -77,12 +77,12 @@ gulp.task('nunjucksRender', function () {
     .pipe(browserSync.stream())
 })
 
-// Set up a task to start the server and watch files for changes
+//Set up a task to start the server and watch files for changes
 gulp.task('watch', function () {
   browserSync.init({
-    proxy: 'http://localhost:3066',
-    files: ['app/views/**/*.*'],
-    reloadDelay: 2000,
+     proxy: 'http://localhost:3066',
+     files: ['app/views/**/*.*'],
+     reloadDelay: 2000,
   })
 
   gulp.watch('app/assets/scss/**/*.scss', gulp.series('process-scss'))
