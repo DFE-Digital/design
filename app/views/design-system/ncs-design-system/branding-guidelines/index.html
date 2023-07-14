@@ -11,8 +11,13 @@
 
 {% set ncs_hide_parent_nav = "true" %}
 {% set ncs_branding_nav = "true" %}
-{% set dateUpdated = "July 2023 "%}
+{% set dateUpdated = ""%}
 {% set backlog_issue_id = "" %}
+{% block heroExtra %}
+<p><strong class="govuk-tag">National Careers Service</strong></p>
+<span class="govuk-!-font-weight-bold">Last updated: </span>1 July 2023
+
+  {% endblock%}
 
 {% block beforeContent %}{% endblock %}
 

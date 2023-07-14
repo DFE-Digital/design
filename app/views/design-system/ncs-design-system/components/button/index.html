@@ -12,6 +12,10 @@
 {% set isSubNavSection = "true" %}
 {% set lastUpdated = "June 2023 "%}
 {% set backlog_issue_id = "" %}
+{% block heroExtra %}
+<p><strong class="govuk-tag">National Careers Service component</strong></p>
+
+  {% endblock%}
 
 {% import "../code-frame.html" as sample %}
 
@@ -23,7 +27,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button ncs-button__secondary"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>Explore careers<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code>' %}
 
-{% block content %}
+  {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
