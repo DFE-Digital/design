@@ -1,8 +1,17 @@
 {% set pageName = "Roles and responsibilities" %}
 {% set pageDescription = "It is the responsibility of everyone delivering Department for Education services, to ensure accessibility standards are being met." %}
 {% set selectedNav  = "Accessibility" %}
-{% set lastUpdated = "January 2023" %}
-{% set backlog_issue_id = "13" %}
+{% set lastUpdated = "18 July 2023" %}
+{% set backlog_issue_id = "55" %}
+
+{# Add changes with newest at the top #}
+{% set changeLog = [
+  {
+    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/55" target="_blank">GitHub issue #55</a>',
+    changeDate: '18 July 2023'
+  }
+]
+%}
 
 {% extends "layouts/content-with-sidenav.html" %}
 
