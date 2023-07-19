@@ -1,4 +1,5 @@
 {% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
 
 {% set pageName = "Button" %}
 {% set pageDescription = "The National Careers Service button should be used to start a process or navigate the site on a high level. " %}
@@ -14,7 +15,6 @@
 {% set lastUpdated = "June 2023 "%}
 {% set backlog_issue_id = "" %}
 
-{% import "../code-frame.html" as sample %}
 
 {% set htmlCode_primary = '<code class="hljs language-html">
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-button ncs-button__primary"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>Explore careers<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
