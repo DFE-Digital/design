@@ -1,4 +1,5 @@
 {% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
 
 {% set pageName = "Banner notification" %}
 {% set pageDescription = "The National Careers Service banner notification tells users about something they need to know that's not directly related to the page. " %}
@@ -15,198 +16,45 @@
 {% set lastUpdated = "June 2023 "%}
 {% set backlog_issue_id = "" %}
 
+{% set htmlCode = '<code class="hljs language-html">
+  <span class="hljs-tag"> &lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-notification-banner ncs-notification-banner&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;alert&quot;</span>
+      <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;govuk-notification-banner-title&quot;</span>
+      <span class="hljs-attr">data-module</span>=<span class="hljs-string">&quot;govuk-notification-banner&quot;</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-notification-banner__content&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-notification-banner__heading&quot;</span>&gt;</span> Save Your Progress:&lt;/<span class="hljs-name">p</span>&gt;
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;govuk-body&quot;</span>&gt;</span>Add the css or scss style to your stylesheet&lt;/<span class="hljs-name">p</span>&gt;
+                 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-list govuk-list--bullet"</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>return and continue<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>view report online<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>download and report anytime<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code>' %}
+
 {% block beforeContent %}{% endblock %}
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-body">
+      {{ sample.code('/design-system/ncs-design-system/components/banner-notification/example.html', 'banner notification example', 'banner-notification', htmlCode) }}
+      <br>
 
-<div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
-    <h2 class="govuk-tabs__title">
-Contents
-</h2>
-    <ul class="govuk-tabs__list">
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#example6">
-Example
-</a>
-      </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#html6">
-HTML
-</a>
-      </li>
-      <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#nunjucks6">
-Nunjucks
-</a>
-      </li>
-    </ul>
-    <div class="govuk-tabs__panel" id="example6">
-      <p>
-        <a href="/design-system/components/header/nav/" target="_blank">Open example in a new window</a>
-      </p>
+      <h2>When to use this component</h2>
+      <p>You can use the banner notification to keep content about something not directly related to the page content together, such as information about saving progress in a form and returning to it later.</p>
+      <p>Using the banner notification makes it easy for users to skip over the content after reading the heading if they do not want to take the action.</p>
 
-      <header class="dfe-header" role="banner">
-        <div class="dfe-width-container dfe-header__container">
-          <div class="dfe-header__logo">
-            <a class="dfe-header__link dfe-header__link--service " href="#" aria-label="DfE homepage">
-              <img src="/assets/images/dfe-logo.png" class="dfe-logo" alt="DfE Homepage">
-              <img src="/assets/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="DfE Homepage">
-              <span class="dfe-header__service-name">
-Service name
-</span>
-            </a>
-          </div>
-          <div class="dfe-header__content" id="content-header">
-            <div class="dfe-header__menu">
-              <button class="dfe-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-expanded="false">Menu</button>
-            </div>
-          </div>
-        </div>
-        <nav class="dfe-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
-          <div class="dfe-width-container">
-            <p class="dfe-header__navigation-title">
-              <span id="label-navigation">Menu</span>
-              <button class="dfe-header__navigation-close" id="close-menu">
-                <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                  <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-                </svg>
-                <span class="govuk-visually-hidden">Close menu</span>
-              </button>
-            </p>
-            <ul class="dfe-header__navigation-list">
-              <li class="dfe-header__navigation-item dfe-header__navigation-item--current">
-                <a class="dfe-header__navigation-link" href="#">
-    Navigation link 1 
-    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="dfe-header__navigation-item ">
-                <a class="dfe-header__navigation-link" href="#">
-    Navigation link 2
-    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                  </svg>
-                </a>
-              </li>
-              <li class="dfe-header__navigation-item ">
-                <a class="dfe-header__navigation-link" href="#">
-    Navigation link 3
-    <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                    <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <h2>When not to use this component</h2>
+      <p>Only use the banner notification component when you've identified a related task that only some users may want to take and be aware of.</p>
+
+      <h2>How to use this component</h2>
+      <p>You can copy the HTML and paste it where you'd like to display the banner notification on your page. </p>
+      <p>You can then edit the heading and paragraph elements to show the content you'd like.</p>
 
     </div>
-
-    <div class="govuk-tabs__panel" id="html6">
-
-      <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
-&lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
-&lt;div class=&quot;dfe-header__logo&quot;&gt;
-&lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;#&quot; aria-label=&quot;DfE homepage&quot;&gt;
-&lt;img src=&quot;/assets/images/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
-&lt;img src=&quot;/assets/images/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
-&lt;span class=&quot;dfe-header__service-name&quot;&gt;
-Service name
-&lt;/span&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;dfe-header__content&quot; id=&quot;content-header&quot;&gt;
-&lt;div class=&quot;dfe-header__menu&quot;&gt;
-&lt;button class=&quot;dfe-header__menu-toggle&quot; id=&quot;toggle-menu&quot; aria-controls=&quot;header-navigation&quot; aria-expanded=&quot;false&quot;&gt;Menu&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;nav class=&quot;dfe-header__navigation&quot; id=&quot;header-navigation&quot; role=&quot;navigation&quot; aria-label=&quot;Primary navigation&quot; aria-labelledby=&quot;label-navigation&quot;&gt;
-&lt;div class=&quot;dfe-width-container&quot;&gt;
-&lt;p class=&quot;dfe-header__navigation-title&quot;&gt;
-&lt;span id=&quot;label-navigation&quot;&gt;Menu&lt;/span&gt;
-&lt;button class=&quot;dfe-header__navigation-close&quot; id=&quot;close-menu&quot;&gt;
- &lt;svg class=&quot;dfe-icon dfe-icon__close&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
-    &lt;path d=&quot;M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z&quot;&gt;&lt;/path&gt;
- &lt;/svg&gt;
- &lt;span class=&quot;govuk-visually-hidden&quot;&gt;Close menu&lt;/span&gt;
-&lt;/button&gt;
-&lt;/p&gt;
-&lt;ul class=&quot;dfe-header__navigation-list&quot;&gt;
-&lt;li class=&quot;dfe-header__navigation-item dfe-header__navigation-item--current&quot;&gt;
- &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-    Navigation link 1 
-    &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-       &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-    &lt;/svg&gt;
- &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;dfe-header__navigation-item &quot;&gt;
- &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-    Navigation link 2
-    &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-       &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-    &lt;/svg&gt;
- &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;dfe-header__navigation-item &quot;&gt;
- &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-    Navigation link 3
-    &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-       &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-    &lt;/svg&gt;
- &lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/nav&gt;
-&lt;/header&gt;</code></pre>
-    </div>
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks6">
-      {% raw %}
-        <pre><code>{% from 'node_modules/dfe-frontend-alpha/packages/components/header/macro.njk' import header %}
-
-{{ header({
-"showNav": "true",
-"showSearch": "false",
-"showUserName": "false",
-"userName": "",
-"userNameURL": "",
-"logoPath": "assets",
-"service": {
-"name": "Service name"
-},
-"primaryLinks": [
-{
-"url"  : "#",
-"label" : "Navigation link 1"
-}, {
-"url"  : "#",
-"label" : "Navigation link 2"
-}, {
-"url"  : "#",
-"label" : "Navigation link 3"
-}
-]
-})
-}}</code></pre>
-        {% endraw%}
-      </div>
-    </div>
-  </section>
-  
-  <h2>When to use this component</h2>
-   <p>You can use the banner notification to keep content about something not directly related to the page content together, such as information about saving progress in a form and returning to it later.</p>
-   <p>Using the banner notification makes it easy for users to skip over the content after reading the heading if they do not want to take the action.</p>
-   <h2>When not to use this component</h2>
-   <p>Only use the banner notification component when you've identified a related task that only some users may want to take and be aware of.</p>
-   <h2>How to use this component</h2>
-   <p>You can copy the HTML and paste it where you'd like to display the banner notification on your page. </p>
-   <p>You can then edit the heading and paragraph elements to show the content you'd like.</p>
-
+  </div>
+</div>
 
 {% endblock%}

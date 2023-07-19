@@ -4,10 +4,10 @@
   <h2 class="govuk-tabs__title">Contents</h2>
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#example-{{ id }}">Example</a>
+      <a class="govuk-tabs__tab" href="#example-tabs__panel-{{ id }}">Example</a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#html-code-example-{{ id }}">HTML</a>
+      <a class="govuk-tabs__tab" href="#html-code-tabs__panel-{{ id }}">HTML</a>
     </li>
   </ul>
 
@@ -18,11 +18,11 @@
     <iframe class="app-example__frame" data-module="app-iframe" src="{{ href }}" title="{{title}}" frameborder="0" loading="lazy"></iframe>
   </div>
 
-  <div class="govuk-tabs__panel" id="html-code-example-{{ id }}">
+  <div class="govuk-tabs__panel" id="html-code-tabs__panel-{{ id }}">
     <pre data-module="app-copy" tabindex="0">
       {{ htmlCode | safe }}
     </pre>
   </div>
-
+</div>
 {% endmacro %}
 
