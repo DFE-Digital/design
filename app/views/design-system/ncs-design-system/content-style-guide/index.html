@@ -7,7 +7,11 @@
 {% set setSelectedSideNav = "" %}
 {% set parentSection = "ncs-design-system"%}
 {% set isChildSection = "true"%}
+
+{% set ncs_hide_parent_nav = "true" %}
+{% set ncs_sub_nav = "true" %}
 {% set dateUpdated = "July 2023"%}
+{% set backlog_issue_id = "" %}
 
 {% block beforeContent %}{% endblock %}
 
@@ -64,9 +68,9 @@
 <p>Use relative links instead of absolute links when linking to internal pages.</p>
 <p>This will make it easier when copying content between environments and will also help the page load slightly faster.</p>
 <p><strong>Absolute URLs</strong>: an absolute URL contains the entire address of the webpage including the protocol and the domain name.</p>
-<p>For example: <code style="color:#d13118; background-color: #f3f2f1">a href=”https://www.nationalcareers.service.gov.uk/careers-advice”</code>.</p>
+<p>For example: <code style="color:#d13118; background-color: #f3f2f1">a href="https://www.nationalcareers.service.gov.uk/careers-advice"</code>.</p>
 <p><strong>Relative URLs</strong>: a relative link does not use the full web address and only contains the location following the domain name. It assumes that the link you add is on the same site and is part of the same root domain. The relative path starts with the forward slash after the domain name and leads the browser to stay within the current site.</p>
-<p>For example: <code style="color:#d13118; background-color: #f3f2f1">a href=”/careers-advice”</code>.</p>
+<p>For example: <code style="color:#d13118; background-color: #f3f2f1">a href="/careers-advice"</code>.</p>
 <h2>Salaries</h2>
 <h3>Hourly rates</h3>
 <p>Salary figures are listed as an annual figure so always change hourly rates to yearly rates.</p>
