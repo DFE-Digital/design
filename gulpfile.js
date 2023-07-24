@@ -110,6 +110,6 @@ gulp.task(
     'process-js',
     'process-images-copy',
     'process-images',
-    //'watch',
+    'watch',
   ),
 )
