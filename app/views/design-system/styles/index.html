@@ -6,10 +6,21 @@
 {% set parentSection = "Styles"%}
 {% set isChildSection = "true"%}
 {% set isSubNavSection = "true" %}
-{% set dateUpdated = "April 2023 "%}
-{% set backlog_issue_id = "" %}
+{% set dateUpdated = "25 July 2023 "%}
+{% set backlog_issue_id = "89" %}
 
-
+{# Add changes with newest at the top #}
+{% set changeLog = [
+  {
+    change: 'Adding the style to links so the states work correctly.',
+    changeDate: '25 July 2023'
+  },
+  {
+    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/89" target="_blank">GitHub issue #89</a>',
+    changeDate: '25 July 2023'
+  }
+]
+%}
 
 {% block beforeContent %}{% endblock %}
 
@@ -27,7 +38,7 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/design-system/styles/colour">Colour</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/design-system/styles/colour" class="govuk-link">Colour</a></th>
       <td class="govuk-table__cell">Colour palette for Department for Education services.</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Published</strong></td>
     </tr>
