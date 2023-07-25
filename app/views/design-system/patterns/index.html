@@ -6,10 +6,21 @@
 {% set parentSection = "Patterns"%}
 {% set isChildSection = "true"%}
 {% set isSubNavSection = "true" %}
-{% set dateUpdated = "April 2023 "%}
-{% set backlog_issue_id = "" %}
+{% set dateUpdated = "25 July 2023 "%}
+{% set backlog_issue_id = "43" %}
 
-
+{# Add changes with newest at the top #}
+{% set changeLog = [
+ {
+    change: 'Fixed styles for links so hover and active states are correct.',
+    changeDate: '25 July 2023'
+  },
+  {
+    change: 'Fixed typo on page See <a href="https://github.com/DFE-Digital/design/issues/43" target="_blank">GitHub issue #43</a>',
+    changeDate: '25 July 2023'
+  }
+]
+%}
 
 {% block beforeContent %}{% endblock %}
 
@@ -27,7 +38,7 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/design-system/patterns/select-a-school">Select a school</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/design-system/patterns/select-a-school" class="govuk-link">Select a school</a></th>
       <td class="govuk-table__cell">A pattern for selecting a school from the list of all schools in England.</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Published</strong></td>
     </tr>
