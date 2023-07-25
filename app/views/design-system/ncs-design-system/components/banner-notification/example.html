@@ -1,0 +1,12 @@
+{% extends "./../example-layout.html" %}
+{%- from "./macro.njk" import  ncsBannernotification-%}
+
+{% block pageTitle %}
+  Banner notification Component | NCS component library
+{% endblock %}
+
+{%- set componentId = 'banner-notification__body' -%}
+
+{% block sample %}
+{{ ncsBannernotification() }}
+{% endblock %}

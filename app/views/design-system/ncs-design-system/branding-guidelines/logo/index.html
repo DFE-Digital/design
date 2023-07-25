@@ -1,0 +1,44 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set pageName = "Logo" %}
+{% set pageDescription = "The National Careers Service logo is one of our most important brand assets. " %}
+{% set pageCaption = "National Careers Service style" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "ncs-design-system"%}
+{% set childSection = "branding-guidelines"%}
+{% set ncs_branding_nav = "true"%}
+{% set isChildSection = "true"%}
+
+{% set ncs_hide_parent_nav = "true" %}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2023 "%}
+{% set backlog_issue_id = "98" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<img src="/assets/images/space-around-logo.png" alt="" width="300px">
+<h2>Rules for using our logo</h2>
+<p>To emphasise our logo, you should only use it:</p>
+<ul>
+    <li>online or in print where the audience is already familiar with our services</li>
+    <li>on a white background or on top of an image and never on a solid colour background</li>
+    <li>in pink and never changed to a different colour</li>
+    <li>in an area clear of other graphics with an exclusion zone that has a width equal to the height of the capital N in the logo</li>
+</ul>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third"><h3>Maximum height</h3><img src="/assets/images/maximum-size-logo.png" alt="" width="200px"><br><span class="image-caption" style="margin-top:1em">Use our logo with a maximum height of 25mm.</span></div>
+    <div class="govuk-grid-column-one-third"><h3>Minimum height</h3><img src="/assets/images/minimum-size-logo.png" alt="" width="200px"><br><span class="image-caption" style="margin-top:1em">Use our logo with a minimum height of 10mm or 35px.</span></div>
+</div>
+<br>
+<h2>Use with other logos</h2>
+<p>If you're working with a third party, such as for an event, it may be appropriate to use their logo as well as ours.</p>
+<p>Our logo should always appear in the top right or bottom right corner of the layout and must never be smaller than the other organisation's logo.</p>
+<p>If you produce any branded material with another organisation, you must send it to us to approve by emailing <a href="mailto:national.careersservice@education.gov.uk">national.careersservice@education.gov.uk</a>.</p>
+<h2>Download our logo</h2>
+<p>You can download and use our logo as long as you follow our guidelines.</p>
+<p><a class="govuk-link govuk-button" href="/assets/images/national-careers-service-logo.png" download>Download the National Careers Service logo</a></p>
+
+{% endblock%}

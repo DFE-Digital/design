@@ -1,0 +1,71 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "Ticket panel" %}
+{% set pageDescription = "The National Careers Service ticket panel draws attention to important information that a user will need. " %}
+{% set pageCaption = "National Careers Service component" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "ncs-design-system"%}
+{% set childSection = "components"%}
+{% set ncs_components_nav = "true"%}
+{% set isChildSection = "true"%}
+
+{% set ncs_hide_parent_nav = "true" %}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2023 "%}
+{% set backlog_issue_id = "105" %}
+
+{% set htmlCode = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"app-your-reference govuk-body"</span>&gt;</span>
+  <!---->
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"app-your-reference__code govuk-heading-xl"</span>&gt;</span>
+        8E7Z 9MK2 G46M 6K
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"app-your-reference__meta"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        2 March 2023
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  
+  <!--closeing tag-->
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!----> 
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-body">
+      {{ sample.code('/design-system/ncs-design-system/components/ticket-panel/example.html', 'Ticket Panel example', 'ticket-panel', htmlCode) }}
+      <br>
+
+      <h2>When to use this component</h2>
+      <p>You can use the ticket panel to highlight content that the user will need later in their journey.</p>
+      <p>It helps to break up the content so when the user scans the page, they cannot miss something they need, such as a reference number.</p>
+
+      <h2>When not to use this component</h2>
+      <p>Do not use the ticket panel to highlight all the important content on a page. You should limit this component to a maximum of one per page. This is because the ticket panel will no longer draw the user's attention if there are other visually prominent elements on the page.</p>
+      <p>Additionally, you should not use the ticket panel to warn users about something important. Instead, you should use the <a href="https://design-system.service.gov.uk/components/warning-text/" target="_blank" rel="noopener noreferrer">warning text component on the GOV.UK design system</a>.</p>
+      
+      <h2>How to use this component</h2>
+      <p>You can copy the HTML and paste it where you'd like to display the ticket panel on your page. </p>
+      <p>You can then edit the heading and paragraph elements to display the content you would like.</p>
+      
+      <h2>Writing for this component</h2>
+      <p>In most cases, a heading and a single line of paragraph text is enough information to display in the ticket panel.</p>
+      <p>However this component is flexible so it can contain other HTML elements, if required. </p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock%}

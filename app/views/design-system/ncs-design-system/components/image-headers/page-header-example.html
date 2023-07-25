@@ -1,0 +1,14 @@
+{% extends "./../example-layout.html" %}
+{%- from "./macro.njk" import ncsPageHeader -%}
+
+{% block pageTitle %}
+  Page header component | NCS component library
+{% endblock %}
+
+{%- set componentId = 'page-header__body' -%}
+
+{% block sample %}
+  {{
+    ncsPageHeader()
+  }}
+{% endblock %}

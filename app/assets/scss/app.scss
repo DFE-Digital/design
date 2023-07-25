@@ -1,6 +1,6 @@
 @import "node_modules/govuk-frontend/govuk/all";
 @import 'node_modules/dfe-frontend-alpha/packages/dfefrontend';
-
+@import './ncs/index.scss';
 
 
 
@@ -8,6 +8,9 @@
       max-width: 1200px;
 }
 
+html {
+  overflow: auto;
+}
 
 body,
 p,
