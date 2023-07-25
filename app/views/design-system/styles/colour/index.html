@@ -7,23 +7,34 @@
 {% set parentSection = "Styles"%}
 {% set isChildSection = "true"%}
 {% set isSubNavSection = "true" %}
-{% set dateUpdated = "April 2023 "%}
-{% set backlog_issue_id = "" %}
+{% set dateUpdated = "25 July 2023 "%}
+{% set backlog_issue_id = "88" %}
 
-
+{# Add changes with newest at the top #}
+{% set changeLog = [
+  {
+    change: 'Adding the style to links so the states work correctly.',
+    changeDate: '25 July 2023'
+  },
+  {
+    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/88" target="_blank">GitHub issue #88</a>',
+    changeDate: '25 July 2023'
+  }
+]
+%}
 
 {% block beforeContent %}{% endblock %}
 
 {% block content %}
 
 
-<p>Always use the <a href="https://design-system.service.gov.uk/styles/colour/" target="_blank">GOV.UK colour palette</a> first.</p>
+<p>Always use the <a href="https://design-system.service.gov.uk/styles/colour/" class="govuk-link" target="_blank" rel="noopener noreferrer">GOV.UK colour palette</a> first.</p>
 
 <p>Where you want to use Department for Education specific branding colours, you can use the following colour palette.</p>
 
 <div class="govuk-inset-text">
     <h3 id="colour-contrast" class="govuk-heading-s">Colour contrast</h3>
-<p>You must make sure that the contrast ratio of text and interactive elements in<br>your service meets <a href="/accessibility/understanding-wcag/perceivable#1-4-3" target="_blank">1.4.3 - Contrast - level AA</a> of the Web Content Accessibility Guidelines (WCAG 2.1).</p>
+<p>You must make sure that the contrast ratio of text and interactive elements in<br>your service meets <a href="/accessibility/understanding-wcag/perceivable#1-4-3" class="govuk-link" target="_blank" rel="noopener noreferrer">1.4.3 - Contrast - level AA</a> of the Web Content Accessibility Guidelines (WCAG 2.1).</p>
 
 </div>
 
