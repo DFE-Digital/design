@@ -1,0 +1,167 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "Search" %}
+{% set pageDescription = "The National Careers Service search helps users navigate through large collections of information or documents. " %}
+{% set pageCaption = "National Careers Service component" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "ncs-design-system"%}
+{% set childSection = "components"%}
+{% set ncs_components_nav = "true"%}
+{% set isChildSection = "true"%}
+
+{% set ncs_hide_parent_nav = "true" %}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2023 "%}
+{% set backlog_issue_id = "101" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% set htmlCode_searchForm = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"get"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-search ncs-search__bar site-search ui-front"</span>&gt;</span>
+  <!----> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-wrapper"</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-width-container"</span>&gt;</span> 
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span> 
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-one-third"</span>&gt;</span>                    
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+              
+              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-label govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"location-input"</span>&gt;</span>Town, city or postcode<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+              
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-wrapper"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"location-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"townOrPostcode"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input govuk-!-width-full ui-autocomplete-input"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Enter Town, city or postcode"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Enter a keyword"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> /&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              
+            
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fac-visually-hidden"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"coordinates"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sideBarCoordinates"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"suggestedLocation-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"sideBarSuggestedLocation"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> /&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+              
+              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-label govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"searchTerm"</span>&gt;</span>Course or keyword<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-wrapper"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"searchTerm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input search-input govuk-!-width-full"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Enter a keyword"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Enter a keyword"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> /&gt;</span>
+          
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-search-item input-submit-wrapper"</span>&gt;</span> 
+                  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search-button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-search-submit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!--closeing tag-->
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <!----> 
+</code>' %}
+
+
+{% set htmlCode_searchBar = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"get"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-search ncs-search__bar site-search ui-front"</span>&gt;</span>
+  <!----> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-wrapper"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-width-container"</span>&gt;</span> 
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-row"</span>&gt;</span>         
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-grid-column-two-thirds"</span>&gt;</span>   
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+            
+              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-label govuk-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"searchTerm"</span>&gt;</span>Course or keyword<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-wrapper"</span>&gt;</span>
+              
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"searchTerm"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"searchTerm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input search-input js-search-focus focus js-autocomplete ui-autocomplete-input"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Enter a keyword"</span> <span class="hljs-attr">data-autocomplete-maxlength</span>=<span class="hljs-string">"7"</span> <span class="hljs-attr">data-autocomplete-minlength</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">data-autocomplete-source</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> /&gt;</span>
+            
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-search-item input-submit-wrapper"</span>&gt;</span> 
+                  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search-button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-search-submit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <!--closeing tag-->
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <!----> 
+</code>' %}
+
+{% set htmlCode_searchBox = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"get"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"job-profile-search-box"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-search ncs-search__box js-live-search-form site-search ui-front"</span>&gt;</span>
+  <!----> 
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-wrapper"</span>&gt;</span> 
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-form-group"</span>&gt;</span>
+            
+              <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-label govuk-label js-search-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"search-main"</span>&gt;</span>Course or keyword<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-wrapper"</span>&gt;</span>
+              
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search-main"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"searchTerm"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-input search-input js-search-focus js-autocomplete ui-autocomplete-input"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Enter a keyword"</span> <span class="hljs-attr">data-autocomplete-maxlength</span>=<span class="hljs-string">"7"</span> <span class="hljs-attr">data-autocomplete-minlength</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">data-autocomplete-maxnumberdisplyed</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">data-autocomplete-Fuzzysearch</span>=<span class="hljs-string">"True"</span> <span class="hljs-attr">data-autocomplete-source</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> /&gt;</span>
+            
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-search-item input-submit-wrapper"</span>&gt;</span> 
+                  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search-button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-search-submit"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">data-module</span>=<span class="hljs-string">"govuk-button"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"JobProfileUrl"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"JobProfileUrl"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> /&gt;</span>       
+
+  <!--closeing tag-->
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <!----> 
+</code>' %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-body">
+      <h2>Search bar</h2>
+      <p>The search bar is used in the main body of a page to let users search by one option.</p>
+      {{ sample.code('/design-system/ncs-design-system/components/search/example-search-bar.html', 'Search bar example', 'search-bar', htmlCode_searchBar) }}
+    
+      <h2>Search form</h2>
+      <p>The search form is used in the main body of a page to let users search by more than one option, such as a postcode and a keyword.</p>
+      {{ sample.code('/design-system/ncs-design-system/components/search/example-search-form.html', 'Search form example', 'search-form', htmlCode_searchForm) }}
+
+      <h2>Search box</h2>
+      <p>The search box is used outside of the main body of a page, such as in the right hand column.</p>
+      {{ sample.code('/design-system/ncs-design-system/components/search/example-search-box.html', 'Search box example', 'search-box', htmlCode_searchBox) }}
+       
+      <h2>When to use search components</h2>
+      <p>Use the search components to let users search collections using words or phrases.</p>
+      <p>You should add a search box on all the job profiles on the National Careers Service website.</p>
+      
+      <h2>How to use these components</h2>
+      <p>You can copy the HTML and paste it where you'd like to display the search on your page.</p>
+      <p>You can then edit the text to show the content you'd like.</p>
+    
+    </div>
+  </div>
+</div>
+
+{% endblock%}

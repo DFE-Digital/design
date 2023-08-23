@@ -7,9 +7,20 @@
 {% set isChildSection = "true"%}
 {% set isSubNavSection = "true" %}
 {% set dateUpdated = "April 2023 "%}
-{% set backlog_issue_id = "" %}
+{% set backlog_issue_id = "42" %}
 
-
+{# Add changes with newest at the top #}
+{% set changeLog = [
+ {
+    change: 'Fixed styles for links so hover and active states are correct. </a>',
+    changeDate: '25 July 2023'
+  },
+  {
+    change: 'Fixed typo on page See <a href="https://github.com/DFE-Digital/design/issues/42" target="_blank">GitHub issue #42</a>',
+    changeDate: '25 July 2023'
+  }
+]
+%}
 
 {% block beforeContent %}{% endblock %}
 
@@ -43,7 +54,7 @@
 
 <h3 class="govuk-heading-m">Data source</h3>
 
-<p>You can get a list of all schools in England (around 50,000) from the <a href="https://www.get-information-schools.service.gov.uk" target="_blank">Get information about schools</a> service.</p>
+<p>You can get a list of all schools in England (around 50,000) from the <a href="https://www.get-information-schools.service.gov.uk" rel="noopener noreferrer" class="govuk-link" target="_blank">Get information about schools</a> service.</p>
 
 <p>You can either download this data periodically and update the list in your service, or use their API to fetch updated data as a daily task.</p>
 
@@ -52,8 +63,8 @@
 <p>There are many different unique references for schools, including:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-<li>Unique Reference Number (URN) – from the <a class="govuk-link" href="https://get-information-schools.service.gov.uk">Get information about schools service</a> (previously from Edubase)</li>
-<li>UK Provider Reference Number (UKPRN) - from the <a href="https://www.ukrlp.co.uk" target="_blank">UK register of learning providers</a></li>
+<li>Unique Reference Number (URN) – from the <a class="govuk-link" href="https://get-information-schools.service.gov.uk" rel="noopener noreferrer">Get information about schools service</a> (previously from Edubase)</li>
+<li>UK Provider Reference Number (UKPRN) - from the <a href="https://www.ukrlp.co.uk" class="govuk-link" rel="noopener noreferrer" target="_blank">UK register of learning providers</a></li>
 <li>LAESTAB number</li>
 <li>Postcode of the school address</li>
 </ul>
@@ -94,16 +105,16 @@
 <p>Lots of services from the Department for Education are using a variant of this pattern, including:</p>
 
 <ul class="govuk-list govuk-list--bullet">
-<li><a href="https://get-information-schools.service.gov.uk/Search?SelectedTab=Establishments" target="_blank">Get information about schools</a></li>
-<li><a href="https://schools-financial-benchmarking.service.gov.uk" target="_blank">Schools financial benchmarking</a></li>
-<li><a href="https://www.find-school-performance-data.service.gov.uk" target="_blank">Find school and college performance data in England</a></li>
-<li><a href="https://www.register-trainee-teachers.service.gov.uk" target="_blank">Register trainee teachers</a></li>
-<li><a href="https://www.get-help-buying-for-schools.service.gov.uk" target="_blank">Get help buying for schools</a></li>
+<li><a href="https://get-information-schools.service.gov.uk/Search?SelectedTab=Establishments" class="govuk-link" rel="noopener noreferrer" target="_blank">Get information about schools</a></li>
+<li><a href="https://schools-financial-benchmarking.service.gov.uk" class="govuk-link" rel="noopener noreferrer" target="_blank">Schools financial benchmarking</a></li>
+<li><a href="https://www.find-school-performance-data.service.gov.uk" class="govuk-link" rel="noopener noreferrer" target="_blank">Find school and college performance data in England</a></li>
+<li><a href="https://www.register-trainee-teachers.service.gov.uk" class="govuk-link" rel="noopener noreferrer"  target="_blank">Register trainee teachers</a></li>
+<li><a href="https://www.get-help-buying-for-schools.service.gov.uk" class="govuk-link" rel="noopener noreferrer" target="_blank">Get help buying for schools</a></li>
 </ul>
 
 <h2 class="govuk-heading-l">Help improve this pattern</h2>
 
-<p><a href="https://github.com/DFE-Digital/design-in-dfe/blob/master/source/design-system/patterns/select-a-school/index.html.md.erb" target="_blank">Contribute to this guidance</a> to help improve the pattern for others.</p>
+<p><a href="https://github.com/DFE-Digital/design-in-dfe/blob/master/source/design-system/patterns/select-a-school/index.html.md.erb" class="govuk-link" rel="noopener noreferrer" target="_blank">Contribute to this guidance</a> to help improve the pattern for others.</p>
 
 
 

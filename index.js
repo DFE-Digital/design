@@ -67,9 +67,14 @@ var nunjuckEnv = nunjucks.configure(
 nunjuckEnv.addFilter('date', dateFilter)
 markdown.register(nunjuckEnv, marked.parse)
 
-nunjuckEnv.addFilter('formatNumber', function(number) {
+nunjuckEnv.addFilter('formatNumber', function (number) {
   return number.toLocaleString();
 });
+
+nunjuckEnv.addFilter('hyphen', function(str) {
+  return str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
+});
+
 
 app.use(forceHttps);
 
@@ -82,6 +87,10 @@ app.use((req, res, next) => {
     res.set('Link', `<${canonicalUrl}>; rel="canonical"`);
   }
   next();
+});
+
+app.get('/', (_, res) => {
+  res.render('index.html');
 });
 
 // Render sitemap.xml in XML format
@@ -97,9 +106,9 @@ app.get('/robots.txt', (_, res) => {
 
 app.get('/downloads/:filename', (req, res) => {
   const filename = req.params.filename;
-  const filePath = path.join(__dirname, "/app/assets/downloads/"+filename);
+  const filePath = path.join(__dirname, "/app/assets/downloads/" + filename);
   // Set appropriate headers
-//  res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+  //  res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
   res.setHeader('Content-Disposition', `attachment; filename=${filename}`);
   // Send the file
   res.sendFile(filePath);
@@ -154,7 +163,7 @@ app.post('/submit-feedback', (req, res) => {
         service: "Design Manual"
       },
     })
-    .then((response) => {})
+    .then((response) => { })
     .catch((err) => console.log(err))
 
   return res.sendStatus(200)
@@ -219,9 +228,9 @@ app.get('/tools/inclusivity-calculator/:number', (req, res) => {
       try {
         const jsonData = JSON.parse(data);
         const calculatedData = calculateValues(jsonData, number);
-     
 
-        res.render('tools/inclusivity-calculator/index.html', {number,calculatedData})
+
+        res.render('tools/inclusivity-calculator/index.html', { number, calculatedData })
 
       } catch (err) {
         console.error('Error parsing data.json:', err);
@@ -238,15 +247,18 @@ app.post('/tools/inclusivity-calculator', (req, res) => {
   var number = req.body.numberOfUsers;
 
   if (number) {
-   
 
-        res.redirect('/tools/inclusivity-calculator/'+number)
+    res.redirect('/tools/inclusivity-calculator/' + number)
 
-    
   } else {
     res.redirect('/tools/inclusivity-calculator')
   }
 });
+
+app.get('/tools/jd-generator', (req, res) => {
+  res.render('tools/jd-generator/index.html')
+});
+
 
 function calculateValues(data, number) {
   const calculatedData = [];

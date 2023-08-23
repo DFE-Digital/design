@@ -1,8 +1,17 @@
 {% set pageName = "Standards and legislation" %}
 {% set pageDescription = "The Accessibility standards we expect everyone building digital services to follow in the Department for Education." %}
 {% set selectedNav  = "Accessibility" %}
-{% set lastUpdated = "March 2022" %}
-{% set backlog_issue_id = "12" %}
+{% set lastUpdated = "18 July 2022" %}
+{% set backlog_issue_id = "25" %}
+
+{# Add changes with newest at the top #}
+{% set changeLog = [
+  {
+    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/25" target="_blank">GitHub issue #25</a>',
+    changeDate: '18 July 2023'
+  }
+]
+%}
 
 {% extends "layouts/content-with-sidenav.html" %}
 

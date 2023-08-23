@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <title>
       {% if seoPageName %}{{seoPageName}}
-      {% elseif pageName %}{{pageName}}{%endif%} - Design Manual - Department for Education</title>
+      {% elseif pageName %}{{pageName}}{%endif%} - {% if parentSection === "ncs-design-system"%}National Careers Service {% endif%}Design Manual - Department for Education</title>
       <meta name="description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
       <meta name="theme-color" content="#0b0c0c">
@@ -85,6 +85,7 @@
 
               <div class="govuk-grid-column-three-quarters">
 
+                <span class="govuk-caption-xl">{{pageCaption}}</span>
                 <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
                 <p class="govuk-body-l">{{pageDescription}}</p>
 
@@ -123,7 +124,7 @@
                 {% if backlog_issue_id %}
 
                   <p>
-                    <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank">Contribute to this page on GitHub</a>
+                    <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank" class="govuk-link">Contribute to this page on GitHub</a>
                   </p>
 
                 {% endif %}
@@ -161,6 +162,7 @@
     <script src="/assets/js/cookies.min.js"></script>
     <script src="/assets/js/feedback.min.js"></script>
     <script src="/assets/js/dfefrontend.min.js"></script>
+    <script src="/assets/js/ncs.min.js"></script>
     {% block scripts %}{% endblock %}
     <script>
       window

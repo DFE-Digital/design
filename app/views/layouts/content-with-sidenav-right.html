@@ -80,7 +80,8 @@
 
               <div class="govuk-grid-column-three-quarters">
 
-                 <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
+                <span class="govuk-caption-xl">{{pageCaption}}</span>
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
                 <p class="govuk-body-l">{{pageDescription}}</p>
 
                 {% if dateUpdated %}
@@ -113,7 +114,7 @@
                 {% if backlog_issue_id %}
 
                   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-                  <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank">Contribute to this page on GitHub</a>
+                  <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank" class="govuk-link">Contribute to this page on GitHub</a>
 
                 {% endif %}
               </div>  
@@ -137,6 +138,7 @@
     <script src="/assets/js/cookies.min.js"></script>
     <script src="/assets/js/feedback.min.js"></script>
     <script src="/assets/js/dfefrontend.min.js"></script>
+    <script src="/assets/js/ncs.min.js"></script>
     {% block scripts %}{% endblock %}
     <script>
       window

@@ -9,6 +9,14 @@
 
 {# Add changes with newest at the top #}
 {% set changeLog = [
+ {
+    change: 'Fixed styles for links so hover and active states are correct. See <a href="https://github.com/DFE-Digital/design/issues/91" target="_blank">GitHub issue #91</a>',
+    changeDate: '25 July 2023'
+  },
+  {
+    change: 'Fixed typo on page See <a href="https://github.com/DFE-Digital/design/issues/75" target="_blank">GitHub issue #75</a>',
+    changeDate: '18 July 2023'
+  },
   {
     change: 'Added guidance for using phase banners with the header. See <a href="https://github.com/DFE-Digital/design/issues/67" target="_blank">GitHub issue #67</a>',
     changeDate: '13 June 2023'
@@ -28,7 +36,7 @@
 
     <div class="govuk-inset-text govuk-!-margin-top-0">
       <p>You <strong>must</strong> use this header if the service is hosted on education.gov.uk.</p>
-      <p>If you beleive your service should have a different header, <a href="/design-ops/#team">speak to Andy Jones (Head of Design)</a>.</p>
+      <p>If you beleive your service should have a different header, <a href="/design-ops/#team" class="govuk-link">speak to Andy Jones (Head of Design)</a>.</p>
     </div>
 
     <p>The blue Department for Education branded header shows users that they are on a DfE website and what service they are using.</p>
@@ -36,7 +44,7 @@
     <section class="custom-dfe-section">
       <h2 class="govuk-heading-l">All features</h2>
 
-      <p>An example of the header component with all features enabled. See other <a href="#variants">variants</a>.</p>
+      <p>An example of the header component with all features enabled. See other <a href="#variants" class="govuk-link">variants</a>.</p>
 
       <section id="all">
 
@@ -63,7 +71,7 @@
           </ul>
           <div class="govuk-tabs__panel" id="example">
             <p>
-              <a href="/design-system/components/header/full/" target="_blank">Open example in a new window</a>
+              <a href="/design-system/components/header/full/" target="_blank" class="govuk-link">Open example in a new window</a>
             </p>
             <header class="dfe-header" role="banner">
               <div class="dfe-width-container dfe-header__container">
@@ -297,7 +305,7 @@
 
         <h2 class="govuk-heading-l">When to use this component</h2>
 
-        <p>You must use thie blue DfE header at the top of every page, if your service is being hosted on education.gov.uk.</p>
+        <p>You must use this blue DfE header at the top of every page, if your service is being hosted on education.gov.uk.</p>
 
         <h2 class="govuk-heading-l">When not to use this component</h2>
 
@@ -309,12 +317,12 @@
               <li>blog.gov.uk</li>
             </ul>
 
-            <p>You should use the <a href="https://design-system.service.gov.uk/components/header/" target="_blank">GOV.UK header</a> instead.</p>
+            <p>You should use the <a href="https://design-system.service.gov.uk/components/header/" class="govuk-link" target="_blank">GOV.UK header</a> instead.</p>
 
             <h2 class="govuk-heading-l">How it works</h2>
 
             <div class="govuk-inset-text">
-    To use this component <a href="/design-system/dfe-frontend">install DfE Frontend into your project</a> using the <abbr title="Node Package Manager">NPM</abbr> package or compiled CSS and Javascript.
+    To use this component <a href="/design-system/dfe-frontend" class="govuk-link">install DfE Frontend into your project</a> using the <abbr title="Node Package Manager">NPM</abbr> package or compiled CSS and Javascript.
   </div>
 
             <h3 class="govuk-heading-m">Settings for the Nunjucks macro</h3>
@@ -505,7 +513,7 @@ The header Nunjucks macro takes the following arguments:
             </ul>
             <div class="govuk-tabs__panel" id="example2">
               <p>
-                <a href="/design-system/components/header/service/" target="_blank">Open example in a new window</a>
+                <a href="/design-system/components/header/service/" target="_blank" class="govuk-link">Open example in a new window</a>
               </p>
               <header class="dfe-header" role="banner">
                 <div class="dfe-width-container dfe-header__container">
@@ -590,7 +598,7 @@ The header Nunjucks macro takes the following arguments:
                 </ul>
                 <div class="govuk-tabs__panel" id="example3">
                   <p>
-                    <a href="/design-system/components/header/search/" target="_blank">Open example in a new window</a>
+                    <a href="/design-system/components/header/search/" class="govuk-link" target="_blank">Open example in a new window</a>
                   </p>
                   <header class="dfe-header" role="banner">
                     <div class="dfe-width-container dfe-header__container">
@@ -731,7 +739,7 @@ The header Nunjucks macro takes the following arguments:
                   </ul>
                   <div class="govuk-tabs__panel" id="example6">
                     <p>
-                      <a href="/design-system/components/header/nav/" target="_blank">Open example in a new window</a>
+                      <a href="/design-system/components/header/nav/" class="govuk-link" target="_blank">Open example in a new window</a>
                     </p>
 
                     <header class="dfe-header" role="banner">
@@ -915,7 +923,7 @@ The header Nunjucks macro takes the following arguments:
                     </ul>
                     <div class="govuk-tabs__panel" id="example4">
                       <p>
-                        <a href="/design-system/components/header/account/" target="_blank">Open example in a new window</a>
+                        <a href="/design-system/components/header/account/" class="govuk-link" target="_blank">Open example in a new window</a>
                       </p>
                       <header class="dfe-header" role="banner">
                         <div class="dfe-width-container dfe-header__container">
@@ -1000,21 +1008,21 @@ The header Nunjucks macro takes the following arguments:
 
                   <h2 class="govuk-heading-l">Using phase banners with the header</h2>
 
-                  <p>The <a href="https://design-system.service.gov.uk/components/phase-banner/" target="_blank">GOV.UK phase banner component</a> helps you tell users that the page they are on might be an alpha or beta page, and therefore, being tested. <p>
+                  <p>The <a href="https://design-system.service.gov.uk/components/phase-banner/" class="govuk-link" target="_blank">GOV.UK phase banner component</a> helps you tell users that the page they are on might be an alpha or beta page, and therefore, being tested. <p>
 
-                      <p>If you are using the GOV.UK page template, add phase banners in the <a href="https://design-system.service.gov.uk/styles/page-template/#options" target="_blank">
+                      <p>If you are using the GOV.UK page template, add phase banners in the <a class="govuk-link" href="https://design-system.service.gov.uk/styles/page-template/#options" target="_blank">
                           <code>beforeContent</code>
-                        </a> layout section in the same way as you would with the <a href="https://design-system.service.gov.uk/components/header/" target="_blank">GOV.UK header component</a>.</p>
+                        </a> layout section in the same way as you would with the <a href="https://design-system.service.gov.uk/components/header/" class="govuk-link" target="_blank">GOV.UK header component</a>.</p>
                       <p>This will ensure the phase banner is displayed immediately after the header and before any of the main content. </p>
 
 
                       <h2 class="govuk-heading-l">Things not to do</h2>
 
-                      <p>If you need to extend or make changes to the header component in your service, contribute and discuss the change with the <a href="/design-ops">Design Ops team</a> or the <a href="https://ukgovernmentdfe.slack.com/archives/C04JZ5YL8F7" target="_blank">Components and Patterns working group</a>.<p>
+                      <p>If you need to extend or make changes to the header component in your service, contribute and discuss the change with the <a href="/design-ops" class="govuk-link" class="govuk-link">Design Ops team</a> or the <a href="https://ukgovernmentdfe.slack.com/archives/C04JZ5YL8F7" class="govuk-link" target="_blank">Components and Patterns working group</a>.<p>
 
                           <p>Do not:</p>
                           <ul class="govuk-list govuk-list--bullet">
-                            <li>put tags or phase banners in the header - use the <a href="https://design-system.service.gov.uk/components/phase-banner/" target="_blank">phase banner</a> in the <code class="code">beforeContent</code> layout section</li>
+                            <li>put tags or phase banners in the header - use the <a href="https://design-system.service.gov.uk/components/phase-banner/" class="govuk-link" target="_blank">phase banner</a> in the <code class="code">beforeContent</code> layout section</li>
                             <li>change the colours - they are the department brand colours and meet accessibility requirements</li>
                             <li>change the placement or size of the logo - it meets Government Communication guidelines for logos and branding</li>
                             <li>change the position of the service name - this is styled to support different breakpoints and viewports and will move to below the logo when required to</li>
@@ -1026,13 +1034,13 @@ The header Nunjucks macro takes the following arguments:
 
                           <ul class="govuk-list govuk-list--bullet">
                             <li>
-                              <a href="https://dfe-standards-manual-prototype.herokuapp.com/" target="_blank">Apply the Service Standard in DfE (Beta)</a>
+                              <a href="https://dfe-standards-manual-prototype.herokuapp.com/" class="govuk-link" target="_blank">Apply the Service Standard in DfE (Beta)</a>
                             </li>
                             <li>
-                              <a href="https://design-histories-beta.herokuapp.com/" target="_blank">Design histories (Beta)</a>
+                              <a href="https://design-histories-beta.herokuapp.com/" class="govuk-link" target="_blank">Design histories (Beta)</a>
                             </li>
                             <li>
-                              <a href="/" target="_blank">User-centred design manual</a>
+                              <a href="/" class="govuk-link" target="_blank">User-centred design manual</a>
                             </li>
                           </ul>
 
@@ -1041,7 +1049,7 @@ The header Nunjucks macro takes the following arguments:
                           <p>To improve this component based on user needs and research, you can contribute in the following ways:</p>
 
                           <ul class="govuk-list govuk-list--bullet">
-                            <li>join the conversation on the <a href="https://github.com/DFE-Digital/design/issues/58" target="_blank">GitHub issue #58</a>
+                            <li>join the conversation on the <a href="https://github.com/DFE-Digital/design/issues/58" class="govuk-link" target="_blank">GitHub issue #58</a>
                             </li>
                           </ul>
                         {% endblock %}

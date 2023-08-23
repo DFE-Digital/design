@@ -1,0 +1,68 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "Progress bar" %}
+{% set pageDescription = "The National Careers Service progress bar is a visual representation of where a user is in their task. " %}
+{% set pageCaption = "National Careers Service component" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "ncs-design-system"%}
+{% set childSection = "components"%}
+{% set ncs_components_nav = "true"%}
+{% set isChildSection = "true"%}
+
+{% set ncs_hide_parent_nav = "true" %}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2023 "%}
+{% set backlog_issue_id = "104" %}
+
+{% set htmlCode = '<code class="hljs language-html">
+  <!--opening tag-->
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-progress"</span>&gt;</span>
+  <!----> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-progress__count govuk-body"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-!-font-size-36"</span>&gt;</span>
+        10% <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"govuk-visually-hidden"</span>&gt;</span>Complete<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-progress__bar"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ncs-progress__10"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!--closeing tag-->
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <!----> 
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+ 
+
+    {{ sample.code('/design-system/ncs-design-system/components/progress-bar/example.html', 'Progress bar example', 'progress-bar', htmlCode) }}
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-body">
+      <h2>When to use this component</h2>   
+      <p>You can use a progress bar on forms and assessments on the National Careers Service website. </p>
+      <p>This sets expectations for users, allowing them to understand where they are in the journey and how much longer they have until they've completed the task.</p>
+
+      <h2>When not to use this component</h2>
+      <p>You do not need a progress bar on forms that are simple and short.</p>
+      <p>Only add a progress bar if you can do so reliably with the number shown increasing as the user moves through the form.</p>
+
+      <h2>How to use this component</h2>
+      <p>You can copy the HTML and paste it where you'd like to display the progress bar on your page.</p>
+    </div>
+
+    
+  </div>
+</div>
+{% endblock%}

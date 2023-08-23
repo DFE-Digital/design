@@ -1,0 +1,22 @@
+@import '../variables.scss';
+
+.app-your-reference {
+  background-color: $light_grey;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-left: 10px solid $primary_pink;
+
+  &__code {
+    margin-top: 5px;
+    margin-bottom: 0
+  }
+
+  &__meta p {
+    margin-bottom: 0;
+    color: $primary_black;
+
+    &:last-child {
+      margin-top: 5px
+    }
+  }
+}

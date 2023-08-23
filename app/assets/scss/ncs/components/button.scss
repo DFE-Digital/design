@@ -1,0 +1,63 @@
+@import '../variables.scss';
+
+.ncs-button {
+  border-radius: 44px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  box-shadow: none;
+  color: $text_white;
+  align-items: center;
+  text-align: center;
+  vertical-align: baseline;
+  padding: 13px 44px;
+  
+  &:focus,
+  &:focus:not(:active):not(:hover) {
+    color: $text_white;
+    outline: 2px solid $focus_yellow;
+    border-color: $focus_yellow;
+    box-shadow: none;
+  }
+  .govuk-button__start-icon {
+    display: none;
+  }
+  
+  @media(min-width: 40.0625em) {
+    .ncs-button {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+.ncs-button__primary {
+  @extend .ncs-button;
+  background-color: $primary_pink;
+
+  &:hover {
+    background-color: $bright_purple;
+  }
+
+  &:focus, 
+  &:focus:not(:active):not(:hover) {
+    color: $text_white;
+    background-color: $primary_pink;
+  }
+}
+
+.ncs-button__secondary {
+  @extend .ncs-button;
+  background-color: $secondary_black;
+
+  &:hover {
+    background-color: $dark_grey;
+  }
+  
+  &:focus, 
+  &:focus:not(:active):not(:hover) {
+    color: $text_white;
+    background-color: $secondary_black;
+  }
+}

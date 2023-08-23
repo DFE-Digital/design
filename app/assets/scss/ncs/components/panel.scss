@@ -1,0 +1,21 @@
+@import '../variables.scss';
+
+.ncs-panel--confirmation {
+    color: $primary_black;
+    background-color: $light_blue_25 !important;
+
+    .ncs-progress--complete {
+        .ncs-progress__count {
+            color: $primary_black;
+        }
+
+        .ncs-progress__bar span {
+            color: $primary_black;
+            background-color: $primary_black;
+        }
+    }
+
+    .ncs-panel__title {
+        color: $primary_black !important;
+    }
+}
