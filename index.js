@@ -5,6 +5,7 @@ const axios = require('axios')
 var dateFilter = require('nunjucks-date-filter')
 var markdown = require('nunjucks-markdown')
 var marked = require('marked')
+const GovukHTMLRenderer = require('govuk-markdown')
 var Recaptcha = require('express-recaptcha').RecaptchaV3
 const bodyParser = require('body-parser')
 const lunr = require('lunr')
@@ -65,6 +66,9 @@ var nunjuckEnv = nunjucks.configure(
 )
 
 nunjuckEnv.addFilter('date', dateFilter)
+marked.setOptions({
+  renderer: new GovukHTMLRenderer()
+})
 markdown.register(nunjuckEnv, marked.parse)
 
 nunjuckEnv.addFilter('formatNumber', function (number) {
