@@ -1,0 +1,57 @@
+[
+    {
+        "type": "service-assessment",
+        "enabled": false,
+        "name": "Service assessment",
+        "criteria": "Service Standard",
+        "possibleOutcomes": "Met,Not Met",
+        "additionalCriteria": [
+            {
+                "criteria": "Accessibility Standard"
+            },
+            {
+                "criteria": "Design Standard"
+            }
+        ]
+    },
+    {
+        "type": "peer-review",
+        "enabled": true,
+        "name": "Peer review",
+        "possibleOutcomes": "Red,Amber,Green",
+        "criteria": "Basic",
+        "additionalCriteria": []
+    }
+]
+
+[
+    {
+        "criteria": "Service Standard",
+        "criterion": [
+            {
+                "reference": "1 - Understand users and their needs",
+                "guidance": "https://apply-the-service-standard.education.gov.uk/service-standard/1-understand-user-needs.html#things-to-consider",
+                "possibleOutcomes": "Met,Not Met"
+            },
+            {
+                "reference": "2 - Solve a whole problem for users",
+                "guidance": "https://apply-the-service-standard.education.gov.uk/service-standard/2-solve-a-whole-problem",
+                "possibleOutcomes": "Met,Not Met"
+            }
+        ]
+    },
+    {
+        "criteria": "Basic",
+        "criterion": [
+            {
+                "reference": "What the team has done well",
+                "guidance": "https://apply-the-service-standard.education.gov.uk/peer-reviews/",
+                "possibleOutcomes": []
+            }, {
+                "reference": "What the team needs to improve",
+                "guidance": "https://apply-the-service-standard.education.gov.uk/peer-reviews/",
+                "possibleOutcomes": []
+            }
+        ]
+    }
+]

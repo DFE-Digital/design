@@ -1,150 +1,175 @@
-{% extends "layouts/homepage.html" %}
-
+{% extends "layouts/content-full-width.html" %}
 {% set selectedNav = "Home" %}
-{% set pageName = "Homepage" %}
-{% set pageDescription = "Principles, guidance, and standards to support people delivering joined-up, effective, user-centred outcomes for people who use Department for Education services" %}
+{% set pageName = "Department for Education Design Manual" %}
+{% set pageDescription = "Principles, guidance, and standards to support people delivering joined-up, effective, user-centred outcomes for people who use Department for Education services." %}
 
-{% block hero %}
-  <section class="dfe-hero">
-    <div class="dfe-width-container ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+{% set zeroMainMargin = "true"%}
 
-          <h1 class="govuk-heading-xl">Department for Education<br/>Design Manual</h1>
-          <p class="govuk-body-l">{{pageDescription}}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-{% endblock %}
 {% block content %}
-  <div class="govuk-notification-banner" role="region"
-  aria-labelledby="govuk-notification-banner-title"
-  data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      WCAG 2.2 is due to be published in August
-    </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <p class="govuk-notification-banner__heading" style="max-width: 90%">Read the guidance for understanding and applying the <a href="/accessibility/understanding-wcag/draft-2-2"  class="govuk-link" >9 new criteria in WCAG 2.2</a>.</p>
-      <p  style="max-width: 90%">These are expected to be in place by the end of August with compliance expected within 12 months.</p>
-    </div>
-  </div>
-  <section class="govuk-!-margin-bottom-9">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <div class="dfe-grid-container">
-          <div class="dfe-card">
-            <picture>
-              <source srcset="/assets/images/imgdes.webp" type="image/webp">
-              <img src="/assets/images/imgdes.png" alt="">
-            </picture>
+   <section style="background: #f8bc5e;">
+      <div class="dfe-width-container" style="padding: 60px 0px;">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+               <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Design Manual</h1>
+               <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
+            </div>
+         </div>
+      </div>
+   </section>
 
-            <div class="dfe-card-container">
-              <h2 class="govuk-heading-m">
-                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/design-system">Design system</a>
-              </h2>
-              <p>We use a combination of the GOV.UK Design System and DfE Frontend to create consistent looking services.</p>
+   <section class="" style="background: #ffffff;">
+      <div class="dfe-width-container" style="padding: 80px 0px 80px 0px">
+
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+               <h2 class="govuk-heading-l">Inside Design</h2>
+               <p class="govuk-body-l">Learn about how we work together to develop standards, better ways of working, and design good solutions for our users.</p>
+               <p class="govuk-!-margin-top-9 govuk-!-margin-bottom-0">
+                  <a href="/inside-design" class="dfe-cta">Read more about our work</a>
+               </p>
             </div>
-          </div>
-          <div class="dfe-card">
-            <picture>
-              <source srcset="/assets/images/imgacc.webp" type="image/webp">
-              <img src="/assets/images/imgacc.png" alt="">
-            </picture>
-            <div class="dfe-card-container">
-              <h2 class="govuk-heading-m">
-                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/accessibility">Accessibility</a>
-              </h2>
-              <p>Use our templates, audit plans and WCAG guidelines to ensure we design with accessibility in mind.</p>
+            <div class="govuk-grid-column-two-thirds">
+               <ul class="dfemanual-cta-cards dfemanual-cta-cards--half">
+                  <li class="card">
+                     <h3>Our design goals</h3>
+                     <p>Our objectives for growing the design profession.</p>
+                  </li>
+                  <li class="card">
+                     <h3>Design maturity</h3>
+                     <p>How we measure how well we're doing.</p>
+                  </li>
+                  <li class="card">
+                     <h3>Professions</h3>
+                     <p>The people, skills, and capability to deliver good services.</p>
+                  </li>
+
+                  <li class="card">
+                     <h3>Working groups</h3>
+                     <p>Cross-profession groups to deliver initiatives.</p>
+                  </li>
+                  <li class="card">
+                     <h3>Communities of practice</h3>
+                     <p>Bringing people together to learn, grow, and develop skills and knowledge.</p>
+                  </li>
+               </ul>
+
             </div>
-          </div>
-          <div class="dfe-card">
-            <picture>
-              <source srcset="/assets/images/imgcon.webp" type="image/webp">
-              <img src="/assets/images/imgcon.png" alt="">
-            </picture>
-            <div class="dfe-card-container">
-              <h2 class="govuk-heading-m">
-                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/content-design">Content design</a>
-              </h2>
-              <p>Writing in plain language, to create clear and consistent content for the departments digital services.</p>
-            </div>
-          </div>
-          <div class="dfe-card">
-            <picture>
-              <source srcset="/assets/images/imgcop.webp" type="image/webp">
-              <img src="/assets/images/imgcop.png" alt="">
-            </picture>
-            <div class="dfe-card-container">
-              <h2 class="govuk-heading-m">
-                <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="/professions">Professions</a>
-              </h2>
-              <p>Find out what it's like to work in design at DfE and how our communities of practice develop the design professions.</p>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-  </section>
-  <section>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <div class="dfe-o-banner dfe-o-banner--mirrored govuk-!-margin-top-2">
-          <div class="dfe-o-banner__content-container dfe-light-blue-tint">
-            <div class="dfe-o-banner__inner-content-container">
-              <h2 class="govuk-heading-l">How to apply <br/>the Service Standard</h2>
-              <p>We’ve built a companion service to the <br/>Government Service Standard.</p>
-              <p>This service helps teams follow standards to build accessible, usable, safe, secure, and trusted services.</p>
-              <a href="https://apply-the-service-standard.education.gov.uk/" class="govuk-link govuk-body-l govuk-!-font-weight-bold">View the service</a>
+   </section>
+
+   <section class="dfemanual-color-bg" style="background: #c7eedf;">
+      <div class="dfe-width-container" style="padding: 80px 0px 80px 0px">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <h2 class="govuk-heading-l">Guidance for good design</h2>
+               <p class="govuk-body-l">The standards and guidelines by which we design products and services.</p>
+
             </div>
-          </div>
-          <div class="dfe-o-banner__image-container">
-            <figure class="dfe-a-image dfe-a-image--cover">
-              <picture class="dfe-a-image__picture">
-                <source srcset="/assets/images/assidfe.webp" type="image/webp">
-                <img src="/assets/images/assidfe.png" alt="">
-              </picture>
-            </figure>
-          </div>
-        </div>
+         </div>
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <ul class="dfemanual-cta-cards">
+                  <li class="card">
+                     <h3>Design</h3>
+                     <p>Create consistent products and services with the GOV.UK and DfE Design Systems.</p>
+                     <p>
+                        <a href="/design-system" class="govuk-link govuk-link--no-visited-state">Go to the design system</a>
+                     </p>
+                  </li>
+                  <li class="card">
+                     <h3>Accessibility</h3>
+                     <p>Guidance on accessibility standards, statement templates and understanding conformance.</p>
+                     <p>
+                        <a href="/accessibility" class="govuk-link govuk-link--no-visited-state">Understand accessibility</a>
+                     </p>
+                  </li>
+                  <li class="card">
+                     <h3>Content</h3>
+                     <p>Using plain language and a common style guide for creating easy to use content.</p>
+                     <p>
+                        <a href="/content-design" class="govuk-link govuk-link--no-visited-state">View content design guidance</a>
+                     </p>
+                  </li>
+               </ul>
+               <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+                     <div class="dfe-section-break dfe-section-break--light-dashed dfe-section-break--m"></div>
+                  </div>
+               </div>
+               <ul class="dfemanual-cta-cards dfemanual-cta-cards--full govuk-!-margin-top-3">
+                  <li class="card">
+                     <h3>Apply the Service Standard</h3>
+                     <p>Our companion to the Government Service Standard helps you embed standards and good ways of working throughout your agile delivery process.</p>
+                     <p>
+                        <a href="https://apply-the-service-standard.education.gov.uk/" class="govuk-link govuk-link--no-visited-state">Go to Apply the Service Standard</a>
+                     </p>
+                  </li>
+
+               </ul>
+            </div>
+         </div>
       </div>
-    </div>
-  </section>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <div class="dfe-section-break dfe-section-break--m"></div>
-    </div>
-  </div>
-  <section>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
-        <h2 class="govuk-heading-l">Job vacanices</h2>    <p>No design vacancies at the moment.</p>
+   </section>
+
+   <section class="dfe-width-container" style="padding: 0px 0px 0px 0px">
+
+
+       <div class="govuk-!-margin-top-9" style="background: #f8bc5e; border-radius: 8px;">
+         <div class="dfe-width-container" style="padding: 40px;">
+            <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+                  <h2 class="govuk-heading-l govuk-!-margin-bottom-6">How many users?</h2>
+                  <p class="govuk-body govuk-!-margin-bottom-5">Estimate how many people might have a disability, impairment or other characteristics which might affect how they use your service.</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0">
+                     <a href="/learn/how-many-users" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">Use the calculator</a>
+                  </p>
+               </div>
+                <div class="govuk-grid-column-one-third dfe-text-align--centre ">
+                  <img src="/assets/images/group.png" style="max-width: 50%;" alt="">
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="govuk-grid-column-one-half">
-        <h2 class="govuk-heading-l">Other resources and guidance</h2>
-        <ul class="govuk-list govuk-list--spaced">
-          <li>
-            <a class="govuk-link" href="https://apply-the-service-standard.education.gov.uk/">Apply the Service Standard in DfE</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="https://user-research.education.gov.uk/">User Research in DfE</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="https://standards.education.gov.uk/">All Standards and profession guidance</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="https://design-system.service.gov.uk/">GOV.UK Design System</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="https://www.gov.uk/service-manual">GOV.UK Service Manual</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="https://www.gov.uk/service-manual/communities/design-community">Cross government design community</a>
-          </li>
-        </ul>
+
+   </section>
+
+   <section class="dfe-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
+            <div class="dfe-section-break dfe-section-break--light-dashed dfe-section-break--m "></div>
+         </div>
       </div>
-    </div>
-  </section>
+   </section>
+
+   <section class="dfe-width-container" style="margin-bottom: 60px">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-one-quarter">
+            <h2 class="govuk-heading-l">Vacancies</h2>
+            <p class="govuk-body-l"></p>
+         </div>
+         <div class="govuk-grid-column-three-quarters">
+
+            <ul class="dfemanual-cta-cards">
+               <li class="card">
+                  <h3>Content designer</h3>
+                  <p>SEO / £39,483</p>
+                  <p>Apply by 11:55pm on Sunday 10 September 2023</p>
+                  <p>
+                     <a class="govuk-link govuk-link--no-visited-state" href="https://www.civilservicejobs.service.gov.uk/csr/index.cgi?SID=b3duZXI9NTA3MDAwMCZzZWFyY2hwYWdlPTEmcGFnZWFjdGlvbj12aWV3dmFjYnlqb2JsaXN0Jm93bmVydHlwZT1mYWlyJnNlYXJjaHNvcnQ9b3BlbmluZyZwYWdlY2xhc3M9Sm9icyZ1c2Vyc2VhcmNoY29udGV4dD00NzkyMTE1MCZqb2JsaXN0X3ZpZXdfdmFjPTE4NzQwODcmcmVxc2lnPTE2OTMzMTkxNTYtZDJhYTAzNDEzZGZjNzQ5MmY2YWY3MGM4OTFkZTgwMDJkZmM4MGI5Yg==">View and apply <span class="govuk-visually-hidden">for the content designer role on Civil Service Jobs</span></a>
+                  </p>
+               </li>
+               <li class="card">
+                  <h3>Interaction designer</h3>
+                  <p>SEO / £39,483</p>
+                  <p>Apply by 11:55pm on Friday 15 September 2023</p>
+                  <p>
+                     <a class="govuk-link govuk-link--no-visited-state" href="https://www.civilservicejobs.service.gov.uk/csr/index.cgi?SID=b3duZXI9NTA3MDAwMCZzZWFyY2hwYWdlPTEmam9ibGlzdF92aWV3X3ZhYz0xODczOTg3JnBhZ2VhY3Rpb249dmlld3ZhY2J5am9ibGlzdCZvd25lcnR5cGU9ZmFpciZwYWdlY2xhc3M9Sm9icyZ1c2Vyc2VhcmNoY29udGV4dD00Nzg2MzU0NCZzZWFyY2hzb3J0PXNjb3JlJnJlcXNpZz0xNjkzMzAyMzc5LTJiNDcwNDkwYzFiYTZiZWZhNzZhNjJkMmE0MzhiY2MzNTg2ZTRjMTE==">View and apply <span class="govuk-visually-hidden">for the interaction designer role on Civil Service Jobs</span></a>
+                  </p>
+               </li>
+            </ul>
+
+         </div>
+      </div>
+   </section>
 {% endblock %}

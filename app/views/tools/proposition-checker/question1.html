@@ -1,0 +1,56 @@
+{% extends "layouts/question-page.html" %}
+
+{% set pageName = "Is your product being built for the needs of people who live, work or are visiting the UK?" %}
+{% set pageDescription = "" %}
+{% set selectedNav = "Tools" %}
+{% set isBeta = "false" %}
+
+{% set backlog_issue_id = "" %}
+
+{% block backlink %}
+<a href="/tools/proposition-checker" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <form method="post" action="/tools/proposition-checker/question1">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Is your product being built for the needs of people who live, work or are visiting the UK?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="question1-1" name="question1" type="radio" value="Yes"
+                {% if data['question1'] === 'Yes' %}checked{% endif%}>
+              <label class="govuk-label govuk-radios__label" for="question1-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="question1-2" name="question1" type="radio" value="No"
+                 {% if data.question1 === 'No' %}checked{% endif%}>
+              <label class="govuk-label govuk-radios__label" for="question1-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Continue
+      </button>
+
+    </form>
+
+
+   
+
+    {% endblock %}

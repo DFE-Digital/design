@@ -1,0 +1,102 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Develop your prototype skills" %}
+{% set pageDescription = "We're working on a training programme for developing skills with prototyping." %}
+{% set selectedNav = "Learn" %}
+
+{% set zeroMainMargin = "true"%}
+
+{% block content %}
+
+    <section style="background: #f8bc5e;">
+        <div class="dfe-width-container">
+            <div class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-padding-top-4">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/learn">Learn</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="#">{{pageName}}</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="dfe-width-container" style="padding-top: 40px; padding-bottom: 80px;">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{pageName}}</h1>
+                    <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #ffffff;">
+        <div class="dfe-width-container" style="padding: 100px;">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-l">Learn at your own pace</h2>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <ul class="govuk-list">
+                        <li>Online modules which you can follow at your own pace.</li>
+                        <li>Suppport in a dedictaed community where you can share with other learners.</li>
+                        <li>Live module sessions where you can learn-along as a group.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="govuk-grid-row  govuk-!-margin-top-9">
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-l">What you'll learn</h2>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <ul class="govuk-list">
+                        <li>You'll learn from designers with years of experience.</li>
+                        <li>From the start you'll build a fully functional product.</li>
+                        <li>You'll learn using the latest version of the kit and frontend components.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-top-9">
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-l">Basic to advanced</h2>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <ul class="govuk-list">
+                        <li>Setting up your device and installing the kit.</li>
+                        <li>Complex routes, versioning, and working with the session.</li>
+                        <li>Using GitHub, hosting and automatic deployments.</li>
+                        <li>Integrating API's and databases.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #abcae5;">
+        <div class="dfe-width-container" style="padding: 100px;">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-l">Get involved
+                    </h2>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <p>We're looking for people to test the new service as a beta .</p>
+                    <p>As it's a beta, we'll be limiting access to a small number of people with .gov.uk email addresses.</p>
+
+                    <p class="govuk-!-margin-top-9 govuk-!-margin-bottom-0">
+                        <a href="/design-ops#contact" class="dfe-cta">Contact Design Ops</a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

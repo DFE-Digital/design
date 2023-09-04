@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Are you building a transactional service with additional guidance pages to support users?
+{% endblock %}
+
+{% block content %}
+<a href="question4.html" class="govuk-back-link">Back</a>
+
+            <form method="post">
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                       Are you building a transactional service with additional guidance pages to support users?
+                    </h1>
+                  </legend>
+            <p> (A transactional service is normally where we process a transaction e.g. paying, ordering, applying) </p>
+                  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="question-1" name="question-4" type="radio" value="Yes" {{checked('question-1', 'Yes')}}>
+                      <label class="govuk-label govuk-radios__label" for="question-1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="question-2" name="question-4" type="radio" value="No" {{checked('question-1', 'No')}}>
+                      <label class="govuk-label govuk-radios__label" for="question-2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+              <button class="govuk-button" data-module="govuk-button" type="submit">
+                Continue
+              </button>
+
+            </form>
+
+{% endblock %}

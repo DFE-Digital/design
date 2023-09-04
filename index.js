@@ -17,6 +17,7 @@ const glob = require('glob');
 const forceHttps = require('express-force-https');
 const compression = require('compression');
 
+const session = require('express-session');
 
 const helmet = require('helmet');
 
@@ -37,6 +38,13 @@ const recaptcha = new Recaptcha(
   process.env.recaptchaSecret,
   { callback: 'cb' },
 )
+
+app.use(session({
+  secret: process.env.sessionkey,
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // Note: `secure: true` in a production environment with HTTPS
+}));
 
 
 
@@ -71,7 +79,7 @@ nunjuckEnv.addFilter('formatNumber', function (number) {
   return number.toLocaleString();
 });
 
-nunjuckEnv.addFilter('hyphen', function(str) {
+nunjuckEnv.addFilter('hyphen', function (str) {
   return str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
 });
 
@@ -148,6 +156,35 @@ if (config.env !== 'development') {
   }, 2000)
 }
 
+
+// Your custom middleware to automatically save form data to session
+function saveFormDataToSession(req, res, next) {
+  if (req.method === 'POST') {
+    req.session.data = {
+      ...req.session.data, // Existing session data
+      ...req.body // New form data
+    };
+  }
+  next();
+}
+
+// Middleware to make formData globally available to all views
+function makeFormDataGlobal(req, res, next) {
+  // Perform a shallow merge of existing res.locals.data and session data
+  res.locals.data = {
+    ...res.locals.data, // Existing data
+    ...req.session.data // Data from the session
+  };
+  next();
+}
+
+
+// Register the middlewares globally
+app.use(saveFormDataToSession);
+app.use(makeFormDataGlobal);
+
+
+
 app.post('/submit-feedback', (req, res) => {
   const feedback = req.body.feedback_form_input
   const fullUrl = req.headers.referer || 'Unknown'
@@ -189,6 +226,14 @@ app.get('/design-system/dfe-frontend', function (req, res, next) {
     })
 })
 
+app.get('/tools/inclusivity-calculator', function(req,res){
+  res.redirect('/learn/how-many-users', 301)
+})
+
+app.get('/design-ops/design-maturity/september-2022', function(req,res){
+  res.redirect('/inside-design/maturity/results/september-2022', 301)
+})
+
 app.get('/design-system/dfe-frontend/sass-documentation', function (
   req,
   res,
@@ -213,7 +258,7 @@ app.get('/design-system/dfe-frontend/sass-documentation', function (
     })
 })
 
-app.get('/tools/inclusivity-calculator/:number', (req, res) => {
+app.get('/learn/how-many-users/:number', (req, res) => {
 
   var number = parseInt(req.params.number | 0);
 
@@ -230,7 +275,7 @@ app.get('/tools/inclusivity-calculator/:number', (req, res) => {
         const calculatedData = calculateValues(jsonData, number);
 
 
-        res.render('tools/inclusivity-calculator/index.html', { number, calculatedData })
+        res.render('learn/how-many-users/index.html', { number, calculatedData })
 
       } catch (err) {
         console.error('Error parsing data.json:', err);
@@ -238,25 +283,117 @@ app.get('/tools/inclusivity-calculator/:number', (req, res) => {
       }
     });
   } else {
-    res.redirect('/tools/inclusivity-calculator')
+    res.redirect('/learn/how-many-users')
   }
 })
 
 
-app.post('/tools/inclusivity-calculator', (req, res) => {
+app.post('/learn/how-many-users', (req, res) => {
   var number = req.body.numberOfUsers;
 
   if (number) {
 
-    res.redirect('/tools/inclusivity-calculator/' + number)
+    res.redirect('/learn/how-many-users/' + number)
 
   } else {
-    res.redirect('/tools/inclusivity-calculator')
+    res.redirect('/learn/how-many-users')
   }
 });
 
 app.get('/tools/jd-generator', (req, res) => {
   res.render('tools/jd-generator/index.html')
+});
+
+
+app.get('/tools/proposition-checker/question1', (req, res) => {
+
+  console.log(req.session.data)
+
+  res.render('tools/proposition-checker/question1')
+});
+
+app.post('/tools/proposition-checker/question1', (req, res) => {
+
+  console.log(req.session.data)
+
+  if (req.body.question1 === "No") {
+    res.redirect('/tools/proposition-checker/nongovuk')
+  }
+  else {
+    res.redirect('/tools/proposition-checker/question2')
+  }
+});
+
+app.post('/tools/proposition-checker/question2', (req, res) => {
+  if (req.body.question2 === "No") {
+    res.redirect('/tools/proposition-checker/nongovuk')
+  }
+  else {
+    res.redirect('/tools/proposition-checker/question3')
+  }
+});
+
+app.post('/tools/proposition-checker/question3', (req, res) => {
+
+  if(req.body.question3 === 'Yes'){
+    res.redirect('/tools/proposition-checker/mainstream')
+}
+else{
+  res.redirect('/tools/proposition-checker/question4')
+}
+});
+
+app.post('/tools/proposition-checker/question4', (req, res) => {
+  if(req.body.question4 === 'Yes'){
+    res.redirect('/tools/proposition-checker/question4a')
+}
+else{
+  res.redirect('/tools/proposition-checker/question6')
+}
+});
+
+app.post('/tools/proposition-checker/question4a', (req, res) => {
+
+if(req.session.data['question4'] === 'Yes'){
+  res.redirect('/tools/proposition-checker/question5')
+}
+else{
+
+  res.redirect('/tools/proposition-checker/question6')
+}
+
+});
+
+app.post('/tools/proposition-checker/question5', (req, res) => {
+  console.log(req.session.data)
+  res.redirect('/tools/proposition-checker/question6')
+});
+
+app.post('/tools/proposition-checker/question6', (req, res) => {
+  if(req.session.data['question6'] === 'Yes'){
+    res.redirect('/tools/proposition-checker/nongovuk')
+  }
+  else{
+  
+    res.redirect('/tools/proposition-checker/uncertain')
+  }
+});
+
+
+app.get('/tools/proposition-checker', (req, res) => {
+  req.session.data = {}
+
+  console.log('indexpage')
+
+  res.render('tools/proposition-checker/index')
+});
+
+
+app.get('/tools/proposition-checker/result', (req, res) => {
+  console.log(req.session.data)
+
+
+  res.render('tools/proposition-checker/result')
 });
 
 

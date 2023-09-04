@@ -1,0 +1,76 @@
+{% extends "layouts/content-full-width.html" %}
+{% set pageName = "User-centred design" %}
+{% set pageDescription = "Learn what user-centred design (UCD) is and how you can use it in your role." %}
+{% set selectedNav = "Learn" %}
+{% set zeroMainMargin = "true"%}
+{% block content %}
+<section style="background: #f8bc5e;">
+   <div class="dfe-width-container" style="padding-top: 5px;">
+      <a href="/learn" class="govuk-back-link">Back to learn</a>
+   </div>
+   <div class="dfe-width-container" style="padding-top: 20px; padding-bottom: 60px;">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">User-centred design</h1>
+            <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
+         </div>
+      </div>
+   </div>
+</section>
+<section style="background: #ffffff;">
+   <div class="dfe-width-container" style="padding-top: 40px; padding-bottom: 40px;">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-one-quarter">
+            <ul class="dfe-vertical-nav__section">
+               <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                  <a class="dfe-vertical-nav__link" href="/learn/user-centred-design">What UCD is</a>
+               </li>
+               <li class="dfe-vertical-nav__section-item">
+                  <a class="dfe-vertical-nav__link" href="/learn/user-centred-design/methods">Methods and tools</a>
+               </li>
+               <li class="dfe-vertical-nav__section-item">
+                  <a class="dfe-vertical-nav__link" href="/learn/user-centred-design/case-studies">Case studies</a>
+               </li>
+            </ul>
+         </div>
+         <div class="govuk-grid-column-three-quarters">
+            <h2 class="govuk-heading-l">What UCD is</h2>
+            <p>Put simply, user-centred design (UCD) is an iterative process that focuses on users and their needs at <a  class="govuk-link" href="https://www.gov.uk/service-manual/agile-delivery">every phase of a project</a>. This approach involves a multidisciplinary team working to better understand users and involving them in the design and decision-making process.</p>
+            <p>The ultimate aim is to create effective, efficient and good services and outcomes for people who use our services.</p>
+            <p>This guidance provides an overview of what UCD is and how it is utilised within the Department for Education.</p>
+            <h3 class="govuk-heading-m">It's Not a Straight Line</h3>
+            <p>When people think of design, they often imagine a linear process. For example, come up with an idea, create a prototype, test it, and then launch it.</p>
+            <h3 class="govuk-heading-m">The iterative process of UCD</h3>
+            <p>In reality, UCD is more like a treasure hunt. You might start off thinking you know what the 'treasure' is, but as you start to talk to users, understand their needs and problems, you might find yourself going off in different directions.</p>
+            <p>You will likely try options and solutions, test them with users, and keep learning. This is what we call an iteration.</p>
+            <section style="background: #e8f5ff; margin-bottom: 40px; margin-top: 50px;">
+               <div class="dfe-width-container" style="padding: 40px;">
+                  <div class="govuk-grid-row">
+                     <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Understand the user</h1>
+                        <p class="govuk-body govuk-!-margin-bottom-5">Gain in-depth insights into the needs, motivations, and behaviour of our users.</p>
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                           <a class="govuk-link" href="/learn/user-centred-design/understand-the-user">Learn more</a>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section style="background: #e8f5ff; margin-bottom: 40px;">
+               <div class="dfe-width-container" style="padding: 40px;">
+                  <div class="govuk-grid-row">
+                     <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Iterate and improve</h1>
+                        <p class="govuk-body govuk-!-margin-bottom-5">Rapidly test concepts and prototypes with users to improve them.</p>
+                        <p class="govuk-body govuk-!-margin-bottom-0">
+                           <a class="govuk-link" href="/learn/user-centred-design/iterate-and-improve">Learn more</a>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}

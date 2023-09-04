@@ -39,13 +39,26 @@
         "type": "a"
     },
     {
+        "measure": "Discalculia",
+        "percent": 6.0,
+        "source": "https://www.bdadyslexia.org.uk/dyscalculia/how-can-i-identify-dyscalculia",
+        "summary": "Dyscalculia affects a person's ability to understand, learn, and perform mathematical operations.",
+        "type": "a"
+    },
+    {
+        "measure": "Low numeracy",
+        "percent": 49.0,
+        "source": "https://www.nationalnumeracy.org.uk/research-and-resources/skills-life-survey-2011",
+        "type": "a"
+    },
+    {
         "measure": "Hearing loss",
         "percent": 18,
         "source": "https://rnid.org.uk/about-us/research-and-policy/facts-and-figures/#:~:text=In%20the%20UK%20there%20are,to%201%20in%205%20adults",
         "type": "a"
     },
     {
-        "measure": "Low literacy level",
+        "measure": "Low literacy",
         "percent": 16.4,
         "source": "https://literacytrust.org.uk/parents-and-families/adult-literacy/what-do-adult-literacy-levels-mean/",
         "type": "a"

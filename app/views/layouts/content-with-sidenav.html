@@ -9,166 +9,174 @@
     <title>
       {% if seoPageName %}{{seoPageName}}
       {% elseif pageName %}{{pageName}}{%endif%} - {% if parentSection === "ncs-design-system"%}National Careers Service {% endif%}Design Manual - Department for Education</title>
-      <meta name="description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="theme-color" content="#0b0c0c">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
-      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
-      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
-      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
-      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
-      <link href="/assets/css/app.min.css" rel="stylesheet">
-      <meta property="og:url" content="https://design.education.gov.uk"/>
-      <meta property="og:site_name" content="Department for Education Design Manual"/>
-      <meta property="og:title" content="{{pageName}}"/>
-      <meta property="og:description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}"/>
-      <meta property="og:type" content="website"/>
-      <meta property="og:locale" content="en_GB"/>
-      <meta property="og:image" content='https://design.education.gov.uk/assets/images/dm_og.png'/>
+        <meta name="description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="theme-color" content="#0b0c0c">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+        <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+        <link href="/assets/css/app.min.css" rel="stylesheet">
+        <meta property="og:url" content="https://design.education.gov.uk"/>
+        <meta property="og:site_name" content="Department for Education Design Manual"/>
+        <meta property="og:title" content="{{pageName}}"/>
+        <meta property="og:description" content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:locale" content="en_GB"/>
+        <meta property="og:image" content='https://design.education.gov.uk/assets/images/dm_og.png'/>
 
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:site" content="@dfe_digital">
-      <meta name="twitter:creator" content="@dfe_digital">
-      <meta name="twitter:image:alt" content="Department for Education Design Manual">
-      <meta name="twitter:image" content="https://design.education.gov.uk/assets/images/dm_og.png"/>
-      <meta name="google-site-verification" content="78BmMoejRsC4auIyTs5JLkClgxvWYGDAYMIikFxTNPA"/>
-      {% block head %}{% endblock %}
-    </head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@dfe_digital">
+        <meta name="twitter:creator" content="@dfe_digital">
+        <meta name="twitter:image:alt" content="Department for Education Design Manual">
+        <meta name="twitter:image" content="https://design.education.gov.uk/assets/images/dm_og.png"/>
+        <meta name="google-site-verification" content="78BmMoejRsC4auIyTs5JLkClgxvWYGDAYMIikFxTNPA"/>
+        {% block head %}{% endblock %}
+      </head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
 
-    <body class="govuk-template__body ">
-      <script>
-        document.body.className = (
-          (document.body.className)
-          ? document.body.className + ' js-enabled'
-          : 'js-enabled');
-      </script>
-      {% include 'layouts/_cookiebanner.html'%}
-      <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+      <body class="govuk-template__body ">
+        <script>
+          document.body.className = (
+            (document.body.className)
+            ? document.body.className + ' js-enabled'
+            : 'js-enabled');
+        </script>
+        {% include 'layouts/_cookiebanner.html'%}
+        <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
 
-      {% include 'layouts/_topnav.html'%}
-      {% include 'layouts/_feedback.html'%}
+        {% include 'layouts/_topnav.html'%}
+        {% include 'layouts/_feedback.html'%}
 
-      {% block header %}
+        {% block header %}
 
-        {% include 'layouts/_header.html'%}
+          {% include 'layouts/_header.html'%}
 
-      {% endblock %}
+        {% endblock %}
 
-      {% block main %}
+        {% block main %}
 
-        <div class="dfe-content-page--header">
-          <div class="dfe-width-container ">
+          <div class="dfe-content-page--header" style="background: #f8bc5e">
+            <div class="dfe-width-container ">
 
-            <div class="govuk-grid-row ">
-              <div class="govuk-grid-column-three-quarters">
-                {% block breadcrumb %}
-                  {% if isbeta === "true" %}
-                    <div class="govuk-phase-banner">
-                      <p class="govuk-phase-banner__content">
-                        <strong class="govuk-tag govuk-phase-banner__content__tag">
+              <div class="govuk-grid-row ">
+                <div class="govuk-grid-column-three-quarters">
+                  {% block breadcrumb %}
+                    {% if isbeta === "true" %}
+                      <div class="govuk-phase-banner">
+                        <p class="govuk-phase-banner__content">
+                          <strong class="govuk-tag govuk-phase-banner__content__tag">
       beta
     </strong>
-                        <span class="govuk-phase-banner__text">
+                          <span class="govuk-phase-banner__text">
       This is something we're trying <a class="govuk-link" href="#feedback" id="feedback-trigger">feedback</a> will help us to improve it.
     </span>
-                      </p>
-                    </div>
+                        </p>
+                      </div>
+                    {% endif %}
+                  {% endblock %}
+                </div>
+              </div>
+
+              <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-0">
+
+                <div class="govuk-grid-column-three-quarters">
+
+                  <span class="govuk-caption-xl">{{pageCaption}}</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
+                  <p class="govuk-body-l">{{pageDescription}}</p>
+
+                  {% if dateUpdated %}
+
+                    <p class="govuk-body-s govuk-!-margin-bottom-0">
+                      <span class="govuk-!-font-weight-bold">Last updated: </span>
+                      {{dateUpdated | date('D MMMM YYYY')}}</p>
+
                   {% endif %}
-                {% endblock %}
+
+                </div>
               </div>
-            </div>
+              <div class="govuk-grid-row govuk-!-padding-top-0 govuk-!-padding-bottom-7">
+                <div class="govuk-grid-column-full">
+                  {% block heroExtra %}{% endblock %}
 
-            <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-0">
-
-              <div class="govuk-grid-column-three-quarters">
-
-                <span class="govuk-caption-xl">{{pageCaption}}</span>
-                <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">{{pageName}}</h1>
-                <p class="govuk-body-l">{{pageDescription}}</p>
-
-                {% if dateUpdated %}
-
-                  <p class="govuk-body-s govuk-!-margin-bottom-0">
-                    <span class="govuk-!-font-weight-bold">Last updated: </span>
-                    {{dateUpdated | date('D MMMM YYYY')}}</p>
-
-                {% endif %}
-
-              </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-top-0 govuk-!-padding-bottom-7">
-              <div class="govuk-grid-column-full">
-                {% block heroExtra %}{% endblock %}
-
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="govuk-width-container dfe-width-container">
-          <main class="govuk-main-wrapper " id="main-content" role="main">
-
-            <div class="govuk-grid-row">
-
-              <div class="govuk-grid-column-one-quarter">
-                {% include "includes/_side-nav.html"%}
+          <div class="govuk-width-container dfe-width-container">      <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  {% block preContent %}{% endblock %}
+                </div>
               </div>
-              <div class="govuk-grid-column-three-quarters">
-                {% block content %}{% endblock %}
+            <main class="govuk-main-wrapper " id="main-content" role="main">
 
-                <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
 
-                {% if backlog_issue_id %}
+              <div class="govuk-grid-row">
 
-                  <p>
-                    <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank" class="govuk-link">Contribute to this page on GitHub</a>
-                  </p>
+                <div class="govuk-grid-column-one-quarter">
+                  {% include "includes/_side-nav.html"%}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+                  {% block content %}{% endblock %}
 
-                {% endif %}
-                {% if changeLog %}
+                  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-                  <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                      <span class="govuk-details__summary-text">Changes to this page</span>
-                    </summary>
-                    <div class="govuk-details__text">
-                      <ol class="govuk-list govuk-list--spaced">
+                  {% if backlog_issue_id %}
 
-                        {% for change in changeLog%}
-                          <li>{{change.change | safe}}<br/><span class="govuk-body govuk-body-s">{{change.changeDate}}</span>  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"></li>
+                    <p>
+                      <a href="https://github.com/DFE-Digital/design/issues/{{backlog_issue_id}}" target="_blank" class="govuk-link">Contribute to this page on GitHub</a>
+                    </p>
 
-                        {% endfor %}
-                      </ol>
-                    </div>
-                  </details>
-                {% endif %}
+                  {% endif %}
+                  {% if changeLog %}
+
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">Changes to this page</span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <ol class="govuk-list govuk-list--spaced">
+
+                          {% for change in changeLog%}
+                            <li>{{change.change | safe}}<br/>
+                              <span class="govuk-body govuk-body-s">{{change.changeDate}}</span>
+                              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"></li>
+
+                          {% endfor %}
+                        </ol>
+                      </div>
+                    </details>
+                  {% endif %}
+                </div>
               </div>
-            </div>
 
-          </main>
-        </div>
+            </main>
+          </div>
+        {% endblock %}
+
+      </div>
+
+      {% block footer %}
+        {% include 'layouts/_footer.html'%}
       {% endblock %}
 
-    </div>
+      <script src="/assets/js/all.min.js"></script>
+      <script src="/assets/js/cookies.min.js"></script>
+      <script src="/assets/js/feedback.min.js"></script>
+      <script src="/assets/js/dfefrontend.min.js"></script>
+      <script src="/assets/js/ncs.min.js"></script>
+      {% block scripts %}{% endblock %}
+      <script>
+        window
+          .GOVUKFrontend
+          .initAll()
+      </script>
+    </body>
 
-    {% block footer %}
-      {% include 'layouts/_footer.html'%}
-    {% endblock %}
-
-    <script src="/assets/js/all.min.js"></script>
-    <script src="/assets/js/cookies.min.js"></script>
-    <script src="/assets/js/feedback.min.js"></script>
-    <script src="/assets/js/dfefrontend.min.js"></script>
-    <script src="/assets/js/ncs.min.js"></script>
-    {% block scripts %}{% endblock %}
-    <script>
-      window
-        .GOVUKFrontend
-        .initAll()
-    </script>
-  </body>
-
-</html>
+  </html>

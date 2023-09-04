@@ -35,47 +35,26 @@
   {
     title: "Design Ops",
     url: "/design-ops/"
-  },
-  {
-    title: "Vision and objectives",
-    url: "/design-ops/vision-and-objectives"
-  },
-  {
-    title: "Services we've built",
-    url: "/design-ops/services-weve-built"
   }, {
-    title: "Tools",
+    title: "Tools we use",
     url: "/design-ops/tools"
   }
 ] %}
 
-{% set design_ops_contact = [
-  {
-    title: "Contact Design Ops",
-    url: "/design-ops/contact"
-  }
-] %}
 
-{% set design_ops_maturity = [
-  {
-    title: "Design maturity",
-    url: "/design-ops/design-maturity"
-  }
-] %}
+
+
 
 {% set professions = [{
-    title: "Design professions",
-    url: "/professions"
-  },{
     title: "Content design",
-    url: "/professions/content-design"
+    url: "/community/professions/content-design"
   },
   {
     title: "Interaction design",
-    url: "/professions/interaction-design"
+    url: "/community/professions/interaction-design"
   }, {
     title: "Service design",
-    url: "/professions/service-design"
+    url: "/community/professions/service-design"
   }
 ] %}
 
@@ -336,27 +315,11 @@
       {% endfor %}
     </ul>
 
-    <h2 class="dfe-vertical-nav--section-header">Design maturity</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in design_ops_maturity %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
 
-    <h2 class="dfe-vertical-nav--section-header">Get in touch</h2>
-
-    <ul class="dfe-vertical-nav__section">
-      {% for item in design_ops_contact %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
   {% endif %}
 
-  {%- if selectedNav == "Professions" %}
+  {%- if selectedNav == "Profession and Community" %}
+     <h2 class="govuk-heading-m">Profession and Community</h2>
     <ul class="dfe-vertical-nav__section">
       {% for item in professions %}
         <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
@@ -365,15 +328,7 @@
       {% endfor %}
     </ul>
 
-     <h2 class="dfe-vertical-nav--section-header">Community</h2>
-
-     <ul class="dfe-vertical-nav__section">
-      {% for item in communities %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    
 
   {% endif %}
 
