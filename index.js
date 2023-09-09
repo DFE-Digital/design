@@ -102,6 +102,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (_, res) => {
+
   res.render('index.html');
 });
 
