@@ -13,7 +13,6 @@ const fs = require('fs')
 const path = require('path')
 const cheerio = require('cheerio')
 const config = require('./app/config')
-const puppeteer = require('puppeteer');
 const glob = require('glob');
 const forceHttps = require('express-force-https');
 const compression = require('compression');
