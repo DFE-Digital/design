@@ -38,6 +38,38 @@
         </div>
     </section>
 
+        <section class="" style="background: #ffffff;">
+        <div class="dfe-width-container" style="padding: 80px 0px 40px 0px">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-full">
+                     <h2 class="govuk-heading-l">Summary results</h2>
+
+                    <ul class="dfemanual-cta-cards">
+                        <li class="card">
+                            <h3 class="govuk-heading-xl">76</h3>
+                            <p>Responses</p>
+
+                        </li>
+
+                        <li class="card">
+                            <div class="dfemanual-scores">
+                                <span class="dfemanual-score">1</span>
+                                <span class="dfemanual-score">2</span>
+                                <span class="dfemanual-score dfemanual-score--current">3</span>
+                                <span class="dfemanual-score">4</span>
+                                <span class="dfemanual-score">5</span>
+                                <span class="dfemanual-score">6</span></div>
+                            <p>Maturity score: 3 - Emergent</p>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 {% for section in data %}
@@ -48,12 +80,8 @@
                 <h2 class="govuk-heading-l">Question {{ loop.index }}</h2>
             </div>
 
-            <div class="govuk-grid-column-one-third">
-                <p class="govuk-body-l">{{ section.question }}</p>
-            </div>
-
             <div class="govuk-grid-column-two-thirds">
-                <p>{{ section.measure_description }}</p>
+                <p class="govuk-body-l">{{ section.question }}</p>
             </div>
 
             <div class="govuk-grid-column-full">

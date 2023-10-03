@@ -2100,3 +2100,28 @@ code {
     a{font-weight: 600;}
   }
 }
+
+/* Sets the background color of the container div to dark grey */
+.dfemanual-scores {
+ 
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Sets the style of each individual score */
+.dfemanual-score {
+  background-color: $color_dfe-grey-2;
+  color: $color_dfe-black; /* Sets the text color to white for contrast against the dark background */
+  margin: 0 5px; /* Adds gaps between each span */
+  padding: 10px 15px; /* Adds padding around the numbers */
+  border-radius: 4px; /* Rounds the corners for a softer look */  font-weight: 600;
+  font-size: 22px;
+}
+
+/* Sets the background color of the current score to blue */
+.dfemanual-score--current {
+  background-color: govuk-colour("orange");
+  color: $color_dfe-white;
+  font-weight: 600;
+}
