@@ -1,0 +1,108 @@
+{% extends "layouts/content-full-width.html" %}
+{% set pageName = "Design maturity results September 2023" %}
+{% set pageDescription = "The results of the design maturity survey carried out in the Department for Education in September 2023" %}
+{% set selectedNav = "Inside Design" %}
+{% set zeroMainMargin = "true"%}
+{% set customOGImage = 'https://design.education.gov.uk/assets/images/dm2023.png' %}
+
+
+{% block content %}
+    <section style="background: #ebf2f6;">
+        <div class="dfe-width-container">
+            <div class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-padding-top-4">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/inside-design">Inside Design</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/inside-design/maturity">Profession maturity</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="#">{{pageName}}</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="dfe-width-container" style="padding-top: 40px; padding-bottom: 80px;">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Design maturity results</span>
+                    <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">September 2023</h1>
+                    <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% for section in data %}
+<section class="" style="background: #ffffff;">
+    <div class="dfe-width-container" style="padding: 40px 0px 40px 0px">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Question {{ loop.index }}</h2>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <p class="govuk-body-l">{{ section.question }}</p>
+            </div>
+
+            <div class="govuk-grid-column-two-thirds">
+                <p>{{ section.measure_description }}</p>
+            </div>
+
+            <div class="govuk-grid-column-full">
+                <h3 class="govuk-heading-m">Result breakdown</h3>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Year</th>
+                            <th scope="col" colspan="2" class="govuk-table__header">2022</th>
+                            <th scope="col" colspan="3" class="govuk-table__header">2023</th>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header">Measure</th>
+                            <th class="govuk-table__header">Number of responses</th>
+                            <th class="govuk-table__header">% of responses</th>
+                            <th class="govuk-table__header">Number of responses</th>
+                            <th class="govuk-table__header">% of responses</th>
+                            <th class="govuk-table__header">% change </th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        {% for measure in section.measures %}
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">{{ measure.measure }}</td>
+                            <td class="govuk-table__cell">{{ measure.responses[0].number }}</td>
+                            <td class="govuk-table__cell">{{ measure.responses[0].percentage }}</td>
+                            <td class="govuk-table__cell">{{ measure.responses[1].number }}</td>
+                            <td class="govuk-table__cell">{{ measure.responses[1].percentage }}</td>
+                            <td class="govuk-table__cell">
+                                {% if  measure.percent_change > 0 %}
+                                    <strong class="govuk-tag govuk-tag--green">+{{ measure.percent_change }}%</strong>
+                                {% elif measure.percent_change < 0 %}
+                                    <strong class="govuk-tag govuk-tag--red">{{ measure.percent_change }}%</strong>
+                                {% else %}
+                                    <strong class="govuk-tag govuk-tag--grey">No change</strong>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+
+
+
+
+{% endblock %}
