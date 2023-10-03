@@ -239,6 +239,13 @@ app.get('/design-ops/design-maturity/september-2022', function(req,res){
   res.redirect('/inside-design/maturity/results/september-2022', 301)
 })
 
+app.get('/inside-design/maturity/results/september-2023', function(req,res){
+
+  var data = require('./app/data/dm_2023.json');
+
+  res.render('inside-design/maturity/results/september-2023', {data})
+})
+
 app.get('/design-system/dfe-frontend/sass-documentation', function (
   req,
   res,
