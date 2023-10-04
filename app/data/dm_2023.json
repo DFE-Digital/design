@@ -1,950 +1,1075 @@
 [
     {
-      "question": "Does DfE have any of the following types of design goals?",
-      "measures": [
-        {
-          "measure": "No goals",
-          "responses": [
+        "question": "Does DfE have any of the following types of design goals?",
+        "measures": [
             {
-              "number": 8,
-              "percentage": "17%"
+                "measure": "No goals",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 8,
+                        "percentage": "17%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 11,
+                        "percentage": "14%"
+                    }
+                ],
+                "percent_change": -3
             },
             {
-              "number": 11,
-              "percentage": "14%"
-            }
-          ],
-          "percent_change": -3
-        },
-        {
-          "measure": "General design-related goals describing what design should be or achieve",
-          "responses": [
-            {
-              "number": 28,
-              "percentage": "60%"
+                "measure": "General design-related goals describing what design should be or achieve",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 28,
+                        "percentage": "60%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 35,
+                        "percentage": "46%"
+                    }
+                ],
+                "percent_change": -14
             },
             {
-              "number": 35,
-              "percentage": "46%"
-            }
-          ],
-          "percent_change": -14
-        },
-        {
-          "measure": "Specific, well-documented goals",
-          "responses": [
-            {
-              "number": 8,
-              "percentage": "17%"
+                "measure": "Specific, well-documented goals",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 8,
+                        "percentage": "17%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 16,
+                        "percentage": "21%"
+                    }
+                ],
+                "percent_change": 4
             },
             {
-              "number": 16,
-              "percentage": "21%"
-            }
-          ],
-          "percent_change": 4
-        },
-        {
-          "measure": "Prioritized goals indicating which are the most important",
-          "responses": [
-            {
-              "number": 1,
-              "percentage": "2%"
+                "measure": "Prioritized goals indicating which are the most important",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 11,
+                        "percentage": "14%"
+                    }
+                ],
+                "percent_change": 12
             },
             {
-              "number": 11,
-              "percentage": "14%"
+                "measure": "A roadmap or plan for how to achieve organizational design goals",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 2,
+                        "percentage": "4%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 3,
+                        "percentage": "4%"
+                    }
+                ],
+                "percent_change": 0
             }
-          ],
-          "percent_change": 12
-        },
-        {
-          "measure": "A roadmap or plan for how to achieve organizational design goals",
-          "responses": [
-            {
-              "number": 2,
-              "percentage": "4%"
-            },
-            {
-              "number": 3,
-              "percentage": "4%"
-            }
-          ],
-          "percent_change": 0
-        }
-      ]
+        ]
     },
     {
-      "question": "When are design activities included in planning?",
-      "measures": [
-        {
-          "measure": "Design is not included in planning schedules",
-          "responses": [
+        "question": "When are design activities included in planning?",
+        "measures": [
             {
-              "number": 5,
-              "percentage": "9%"
+                "measure": "Design is not included in planning schedules",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 5,
+                        "percentage": "9%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 5,
+                        "percentage": "7%"
+                    }
+                ],
+                "percent_change": -2
             },
             {
-              "number": 5,
-              "percentage": "7%"
-            }
-          ],
-          "percent_change": -2
-        },
-        {
-          "measure": "This usually happens before a design is implemented",
-          "responses": [
-            {
-              "number": 8,
-              "percentage": "14%"
+                "measure": "This usually happens before a design is implemented",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 8,
+                        "percentage": "14%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 9,
+                        "percentage": "12%"
+                    }
+                ],
+                "percent_change": -2
             },
             {
-              "number": 9,
-              "percentage": "12%"
-            }
-          ],
-          "percent_change": -2
-        },
-        {
-          "measure": "This is usually included in planning",
-          "responses": [
-            {
-              "number": 21,
-              "percentage": "37%"
+                "measure": "This is usually included in planning",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 21,
+                        "percentage": "37%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 19,
+                        "percentage": "25%"
+                    }
+                ],
+                "percent_change": -12
             },
             {
-              "number": 19,
-              "percentage": "25%"
-            }
-          ],
-          "percent_change": -12
-        },
-        {
-          "measure": "This is included in planning and prioritized",
-          "responses": [
-            {
-              "number": 13,
-              "percentage": "23%"
+                "measure": "This is included in planning and prioritized",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 13,
+                        "percentage": "23%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 19,
+                        "percentage": "25%"
+                    }
+                ],
+                "percent_change": 2
             },
             {
-              "number": 19,
-              "percentage": "25%"
+                "measure": "This is always part of early project planning or to at least understand what’s required",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 10,
+                        "percentage": "18%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 24,
+                        "percentage": "32%"
+                    }
+                ],
+                "percent_change": 14
             }
-          ],
-          "percent_change": 2
-        },
-        {
-          "measure": "This is always part of early project planning or to at least understand what’s required",
-          "responses": [
-            {
-              "number": 10,
-              "percentage": "18%"
-            },
-            {
-              "number": 24,
-              "percentage": "32%"
-            }
-          ],
-          "percent_change": 14
-        }
-      ]
+        ]
     },
     {
-      "question": "How well is the design profession staffed?",
-      "measures": [
-        {
-          "measure": "No staff with specialized design skills or experience",
-          "responses": [
+        "question": "How well is the design profession staffed?",
+        "measures": [
             {
-              "number": 1,
-              "percentage": "2%"
+                "measure": "No staff with specialized design skills or experience",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 0,
+                        "percentage": "0%"
+                    }
+                ],
+                "percent_change": -2
             },
             {
-              "number": 0,
-              "percentage": "0%"
-            }
-          ],
-          "percent_change": -2
-        },
-        {
-          "measure": "Some people with design skills or experience but it's not their main job",
-          "responses": [
-            {
-              "number": 3,
-              "percentage": "7%"
+                "measure": "Some people with design skills or experience but it's not their main job",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 3,
+                        "percentage": "7%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 9,
+                        "percentage": "12%"
+                    }
+                ],
+                "percent_change": 5
             },
             {
-              "number": 9,
-              "percentage": "12%"
-            }
-          ],
-          "percent_change": 5
-        },
-        {
-          "measure": "Dedicated people in design roles, but not enough to do all the work that’s needed or external contractors hired occasionally",
-          "responses": [
-            {
-              "number": 37,
-              "percentage": "90%"
+                "measure": "Dedicated people in design roles, but not enough to do all the work that’s needed or external contractors hired occasionally",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 37,
+                        "percentage": "90%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 61,
+                        "percentage": "80%"
+                    }
+                ],
+                "percent_change": -10
             },
             {
-              "number": 61,
-              "percentage": "80%"
+                "measure": "Enough specialized people and skills to address current work",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 0,
+                        "percentage": "0%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 6,
+                        "percentage": "8%"
+                    }
+                ],
+                "percent_change": 8
             }
-          ],
-          "percent_change": -10
-        },
-        {
-          "measure": "Enough specialized people and skills to address current work",
-          "responses": [
-            {
-              "number": 0,
-              "percentage": "0%"
-            },
-            {
-              "number": 6,
-              "percentage": "8%"
-            }
-          ],
-          "percent_change": 8
-        }
-      ]
+        ]
     },
     {
-      "question": "How well is design funded?",
-      "measures": [
-        {
-          "measure": "No money is spent on internal design staff, external contractors, or other design resources",
-          "responses": [
+        "question": "How well is design funded?",
+        "measures": [
             {
-              "number": 3,
-              "percentage": "7%"
+                "measure": "No money is spent on internal design staff, external contractors, or other design resources",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 3,
+                        "percentage": "7%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 2,
+                        "percentage": "3%"
+                    }
+                ],
+                "percent_change": -5
             },
             {
-              "number": 2,
-              "percentage": "3%"
-            }
-          ],
-          "percent_change": -5
-        },
-        {
-          "measure": "Some design work is funded, but there is no dedicated design budget",
-          "responses": [
-            {
-              "number": 17,
-              "percentage": "41%"
+                "measure": "Some design work is funded, but there is no dedicated design budget",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 17,
+                        "percentage": "41%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 25,
+                        "percentage": "33%"
+                    }
+                ],
+                "percent_change": -9
             },
             {
-              "number": 25,
-              "percentage": "33%"
-            }
-          ],
-          "percent_change": -9
-        },
-        {
-          "measure": "There is some design budget, but it’s not enough",
-          "responses": [
-            {
-              "number": 17,
-              "percentage": "41%"
+                "measure": "There is some design budget, but it’s not enough",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 17,
+                        "percentage": "41%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 39,
+                        "percentage": "51%"
+                    }
+                ],
+                "percent_change": 10
             },
             {
-              "number": 39,
-              "percentage": "51%"
+                "measure": "There is adequate budget, nearly adequate, or even more than enough budget",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 4,
+                        "percentage": "10%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 10,
+                        "percentage": "13%"
+                    }
+                ],
+                "percent_change": 3
             }
-          ],
-          "percent_change": 10
-        },
-        {
-          "measure": "There is adequate budget, nearly adequate, or even more than enough budget",
-          "responses": [
-            {
-              "number": 4,
-              "percentage": "10%"
-            },
-            {
-              "number": 10,
-              "percentage": "13%"
-            }
-          ],
-          "percent_change": 3
-        }
-      ]
+        ]
     },
     {
-      "question": "Across DfE, what do people think design is?",
-      "measures": [
-        {
-          "measure": "People don't know or they have a toxic or problematic understanding of design",
-          "responses": [
+        "question": "Across DfE, what do people think design is?",
+        "measures": [
             {
-              "number": 3,
-              "percentage": "7%"
+                "measure": "People don't know or they have a toxic or problematic understanding of design",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 3,
+                        "percentage": "7%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 3,
+                        "percentage": "4%"
+                    }
+                ],
+                "percent_change": -3
             },
             {
-              "number": 3,
-              "percentage": "4%"
-            }
-          ],
-          "percent_change": -3
-        },
-        {
-          "measure": "There is an awareness of the concept of design but limited understanding of the benefits",
-          "responses": [
-            {
-              "number": 17,
-              "percentage": "41%"
+                "measure": "There is an awareness of the concept of design but limited understanding of the benefits",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 17,
+                        "percentage": "41%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 15,
+                        "percentage": "20%"
+                    }
+                ],
+                "percent_change": -22
             },
             {
-              "number": 15,
-              "percentage": "20%"
-            }
-          ],
-          "percent_change": -22
-        },
-        {
-          "measure": "Some people have a good understanding, but many others don't",
-          "responses": [
-            {
-              "number": 17,
-              "percentage": "41%"
+                "measure": "Some people have a good understanding, but many others don't",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 17,
+                        "percentage": "41%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 46,
+                        "percentage": "61%"
+                    }
+                ],
+                "percent_change": 19
             },
             {
-              "number": 46,
-              "percentage": "61%"
-            }
-          ],
-          "percent_change": 19
-        },
-        {
-          "measure": "There is a consistent definition of design and is understood across DfE",
-          "responses": [
-            {
-              "number": 4,
-              "percentage": "10%"
+                "measure": "There is a consistent definition of design and is understood across DfE",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 4,
+                        "percentage": "10%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 11,
+                        "percentage": "14%"
+                    }
+                ],
+                "percent_change": 5
             },
             {
-              "number": 11,
-              "percentage": "14%"
+                "measure": "The purpose of design is not only consistent across the organization, but is applied across departments, services, and processes",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 0,
+                        "percentage": "0%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 1,
+                        "percentage": "1%"
+                    }
+                ],
+                "percent_change": 1
             }
-          ],
-          "percent_change": 5
-        },
-        {
-          "measure": "The purpose of design is not only consistent across the organization, but is applied across departments, services, and processes",
-          "responses": [
-            {
-              "number": 0,
-              "percentage": "0%"
-            },
-            {
-              "number": 1,
-              "percentage": "1%"
-            }
-          ],
-          "percent_change": 1
-        }
-      ]
+        ]
     },
     {
-      "question": "How does leadership support design?",
-      "measures": [
-        {
-          "measure": "Leadership does not support design in any way",
-          "responses": [
+        "question": "How does leadership support design?",
+        "measures": [
             {
-              "number": 2,
-              "percentage": "5%"
+                "measure": "Leadership does not support design in any way",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 2,
+                        "percentage": "5%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 6,
+                        "percentage": "8%"
+                    }
+                ],
+                "percent_change": 3
             },
             {
-              "number": 6,
-              "percentage": "8%"
-            }
-          ],
-          "percent_change": 3
-        },
-        {
-          "measure": "Leaders are aware of design but are indifferent to it or even hostile",
-          "responses": [
-            {
-              "number": 9,
-              "percentage": "22%"
+                "measure": "Leaders are aware of design but are indifferent to it or even hostile",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 9,
+                        "percentage": "22%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 16,
+                        "percentage": "21%"
+                    }
+                ],
+                "percent_change": -1
             },
             {
-              "number": 16,
-              "percentage": "21%"
-            }
-          ],
-          "percent_change": -1
-        },
-        {
-          "measure": "Leadership accepts the need for design but there are some skeptical leaders who aren't convinced or don't provide enough or the right support",
-          "responses": [
-            {
-              "number": 25,
-              "percentage": "61%"
+                "measure": "Leadership accepts the need for design but there are some skeptical leaders who aren't convinced or don't provide enough or the right support",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 25,
+                        "percentage": "61%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 42,
+                        "percentage": "55%"
+                    }
+                ],
+                "percent_change": -6
             },
             {
-              "number": 42,
-              "percentage": "55%"
+                "measure": "There is design support at Deputy Director level upwards",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 5,
+                        "percentage": "12%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 12,
+                        "percentage": "16%"
+                    }
+                ],
+                "percent_change": 4
             }
-          ],
-          "percent_change": -6
-        },
-        {
-          "measure": "There is design support at Deputy Director level upwards",
-          "responses": [
-            {
-              "number": 5,
-              "percentage": "12%"
-            },
-            {
-              "number": 12,
-              "percentage": "16%"
-            }
-          ],
-          "percent_change": 4
-        }
-      ]
+        ]
     },
     {
-      "question": "How does DfE encourage people to develop their design career?",
-      "measures": [
-        {
-          "measure": "No formal design roles exist",
-          "responses": [
+        "question": "How does DfE encourage people to develop their design career?",
+        "measures": [
             {
-              "number": 2,
-              "percentage": "5%"
+                "measure": "No formal design roles exist",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 2,
+                        "percentage": "5%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 1,
+                        "percentage": "1%"
+                    }
+                ],
+                "percent_change": -4
             },
             {
-              "number": 1,
-              "percentage": "1%"
-            }
-          ],
-          "percent_change": -4
-        },
-        {
-          "measure": "Few or no design role but some people are self-motivated and prioritize design work in their normal roles",
-          "responses": [
-            {
-              "number": 4,
-              "percentage": "10%"
+                "measure": "Few or no design role but some people are self-motivated and prioritize design work in their normal roles",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 4,
+                        "percentage": "10%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 9,
+                        "percentage": "12%"
+                    }
+                ],
+                "percent_change": 2
             },
             {
-              "number": 9,
-              "percentage": "12%"
-            }
-          ],
-          "percent_change": 2
-        },
-        {
-          "measure": "There are some design roles but there are few design people in the organization",
-          "responses": [
-            {
-              "number": 11,
-              "percentage": "27%"
+                "measure": "There are some design roles but there are few design people in the organization",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 11,
+                        "percentage": "27%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 39,
+                        "percentage": "51%"
+                    }
+                ],
+                "percent_change": 24
             },
             {
-              "number": 39,
-              "percentage": "51%"
-            }
-          ],
-          "percent_change": 24
-        },
-        {
-          "measure": "Job profiles and career paths exist but personal growth and development isn't tracked or understood well",
-          "responses": [
-            {
-              "number": 17,
-              "percentage": "41%"
+                "measure": "Job profiles and career paths exist but personal growth and development isn't tracked or understood well",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 17,
+                        "percentage": "41%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 21,
+                        "percentage": "28%"
+                    }
+                ],
+                "percent_change": -13
             },
             {
-              "number": 21,
-              "percentage": "28%"
-            }
-          ],
-          "percent_change": -13
-        },
-        {
-          "measure": "Job profiles and career paths for some design roles are well defined and understood throughout DfE",
-          "responses": [
-            {
-              "number": 6,
-              "percentage": "15%"
+                "measure": "Job profiles and career paths for some design roles are well defined and understood throughout DfE",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 6,
+                        "percentage": "15%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 6,
+                        "percentage": "8%"
+                    }
+                ],
+                "percent_change": -7
             },
             {
-              "number": 6,
-              "percentage": "8%"
+                "measure": "Job profiles and career paths exist for all design roles (content, service, and Interaction design) but also for supporting roles in Design Ops or Research Ops",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 0,
+                        "percentage": "0%"
+                    }
+                ],
+                "percent_change": -2
             }
-          ],
-          "percent_change": -7
-        },
-        {
-          "measure": "Job profiles and career paths exist for all design roles (content, service, and Interaction design) but also for supporting roles in Design Ops or Research Ops",
-          "responses": [
-            {
-              "number": 1,
-              "percentage": "2%"
-            },
-            {
-              "number": 0,
-              "percentage": "0%"
-            }
-          ],
-          "percent_change": -2
-        }
-      ]
+        ]
     },
     {
-      "question": "How does DfE plan to continue to improve the design profession in future?",
-      "measures": [
-        {
-          "measure": "No design work is being done",
-          "responses": [
+        "question": "How does DfE plan to continue to improve the design profession in future?",
+        "measures": [
             {
-              "number": 1,
-              "percentage": "2%"
+                "measure": "No design work is being done",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 1,
+                        "percentage": "1%"
+                    }
+                ],
+                "percent_change": -1
             },
             {
-              "number": 1,
-              "percentage": "1%"
-            }
-          ],
-          "percent_change": -1
-        },
-        {
-          "measure": "Design work is done haphazardly, there is little to no effort to evaluate or improve how it's done",
-          "responses": [
-            {
-              "number": 4,
-              "percentage": "10%"
+                "measure": "Design work is done haphazardly, there is little to no effort to evaluate or improve how it's done",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 4,
+                        "percentage": "10%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 8,
+                        "percentage": "11%"
+                    }
+                ],
+                "percent_change": 1
             },
             {
-              "number": 8,
-              "percentage": "11%"
-            }
-          ],
-          "percent_change": 1
-        },
-        {
-          "measure": "Some teams are working towards improving their own work but not all teams are doing the same",
-          "responses": [
-            {
-              "number": 31,
-              "percentage": "76%"
+                "measure": "Some teams are working towards improving their own work but not all teams are doing the same",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 31,
+                        "percentage": "76%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 54,
+                        "percentage": "71%"
+                    }
+                ],
+                "percent_change": -5
             },
             {
-              "number": 54,
-              "percentage": "71%"
+                "measure": "Plans are in place to repeat and improve design work across DfE in all teams",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 5,
+                        "percentage": "12%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 13,
+                        "percentage": "17%"
+                    }
+                ],
+                "percent_change": 5
             }
-          ],
-          "percent_change": -5
-        },
-        {
-          "measure": "Plans are in place to repeat and improve design work across DfE in all teams",
-          "responses": [
-            {
-              "number": 5,
-              "percentage": "12%"
-            },
-            {
-              "number": 13,
-              "percentage": "17%"
-            }
-          ],
-          "percent_change": 5
-        }
-      ]
+        ]
     },
     {
-      "question": "How and when are design methods used in DfE?",
-      "measures": [
-        {
-          "measure": "No design or research methods are used",
-          "responses": [
+        "question": "How and when are design methods used in DfE?",
+        "measures": [
             {
-              "number": 2,
-              "percentage": "3%"
+                "measure": "No design or research methods are used",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 2,
+                        "percentage": "3%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 0,
+                        "percentage": "0%"
+                    }
+                ],
+                "percent_change": -3
             },
             {
-              "number": 0,
-              "percentage": "0%"
-            }
-          ],
-          "percent_change": -3
-        },
-        {
-          "measure": "A few are used but not consistently",
-          "responses": [
-            {
-              "number": 17,
-              "percentage": "24%"
+                "measure": "A few are used but not consistently",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 17,
+                        "percentage": "24%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 21,
+                        "percentage": "28%"
+                    }
+                ],
+                "percent_change": 4
             },
             {
-              "number": 21,
-              "percentage": "28%"
-            }
-          ],
-          "percent_change": 4
-        },
-        {
-          "measure": "Design methods are used throughout the delivery lifecycle not just at the end",
-          "responses": [
-            {
-              "number": 25,
-              "percentage": "36%"
+                "measure": "Design methods are used throughout the delivery lifecycle not just at the end",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 25,
+                        "percentage": "36%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 24,
+                        "percentage": "32%"
+                    }
+                ],
+                "percent_change": -4
             },
             {
-              "number": 24,
-              "percentage": "32%"
-            }
-          ],
-          "percent_change": -4
-        },
-        {
-          "measure": "Established and documented methods are used across teams",
-          "responses": [
-            {
-              "number": 9,
-              "percentage": "13%"
+                "measure": "Established and documented methods are used across teams",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 9,
+                        "percentage": "13%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 26,
+                        "percentage": "34%"
+                    }
+                ],
+                "percent_change": 21
             },
             {
-              "number": 26,
-              "percentage": "34%"
-            }
-          ],
-          "percent_change": 21
-        },
-        {
-          "measure": "A wide variety of methods are being used well",
-          "responses": [
-            {
-              "number": 13,
-              "percentage": "19%"
+                "measure": "A wide variety of methods are being used well",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 13,
+                        "percentage": "19%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 5,
+                        "percentage": "7%"
+                    }
+                ],
+                "percent_change": -12
             },
             {
-              "number": 5,
-              "percentage": "7%"
+                "measure": "Design methods are being used outside of traditional digital teams, for example, finance teams, strategy, policy, support teams, operational teams",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 4,
+                        "percentage": "6%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 0,
+                        "percentage": "0%"
+                    }
+                ],
+                "percent_change": -6
             }
-          ],
-          "percent_change": -12
-        },
-        {
-          "measure": "Design methods are being used outside of traditional digital teams, for example, finance teams, strategy, policy, support teams, operational teams",
-          "responses": [
-            {
-              "number": 4,
-              "percentage": "6%"
-            },
-            {
-              "number": 0,
-              "percentage": "0%"
-            }
-          ],
-          "percent_change": -6
-        }
-      ]
+        ]
     },
     {
-      "question": "How do non-design people perceive design?",
-      "measures": [
-        {
-          "measure": "No design work is done or it's not talked about",
-          "responses": [
+        "question": "How do non-design people perceive design?",
+        "measures": [
             {
-              "number": 3,
-              "percentage": "7%"
+                "measure": "No design work is done or it's not talked about",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 3,
+                        "percentage": "7%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 0,
+                        "percentage": "0%"
+                    }
+                ],
+                "percent_change": -7
             },
             {
-              "number": 0,
-              "percentage": "0%"
-            }
-          ],
-          "percent_change": -7
-        },
-        {
-          "measure": "Among non-design roles, design is noted but not accepted or supported",
-          "responses": [
-            {
-              "number": 5,
-              "percentage": "12%"
+                "measure": "Among non-design roles, design is noted but not accepted or supported",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 5,
+                        "percentage": "12%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 5,
+                        "percentage": "7%"
+                    }
+                ],
+                "percent_change": -5
             },
             {
-              "number": 5,
-              "percentage": "7%"
-            }
-          ],
-          "percent_change": -5
-        },
-        {
-          "measure": "Some people in non-design roles are curious and want to be involved but most don't support it",
-          "responses": [
-            {
-              "number": 14,
-              "percentage": "34%"
+                "measure": "Some people in non-design roles are curious and want to be involved but most don't support it",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 14,
+                        "percentage": "34%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 13,
+                        "percentage": "17%"
+                    }
+                ],
+                "percent_change": -17
             },
             {
-              "number": 13,
-              "percentage": "17%"
-            }
-          ],
-          "percent_change": -17
-        },
-        {
-          "measure": "Most non-design roles accept and support design but it varies across DfE",
-          "responses": [
-            {
-              "number": 16,
-              "percentage": "39%"
+                "measure": "Most non-design roles accept and support design but it varies across DfE",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 16,
+                        "percentage": "39%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 55,
+                        "percentage": "72%"
+                    }
+                ],
+                "percent_change": 33
             },
             {
-              "number": 55,
-              "percentage": "72%"
+                "measure": "Non-design roles have strong respect for design and work alongside design roles on various activities",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 3,
+                        "percentage": "7%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 3,
+                        "percentage": "4%"
+                    }
+                ],
+                "percent_change": -3
             }
-          ],
-          "percent_change": 33
-        },
-        {
-          "measure": "Non-design roles have strong respect for design and work alongside design roles on various activities",
-          "responses": [
-            {
-              "number": 3,
-              "percentage": "7%"
-            },
-            {
-              "number": 3,
-              "percentage": "4%"
-            }
-          ],
-          "percent_change": -3
-        }
-      ]
+        ]
     },
     {
-      "question": "How is design work kept consistent across teams and projects?",
-      "measures": [
-        {
-          "measure": "It isn't: The only common thread is not knowing or caring about it",
-          "responses": [
+        "question": "How is design work kept consistent across teams and projects?",
+        "measures": [
             {
-              "number": 2,
-              "percentage": "5%"
+                "measure": "It isn't: The only common thread is not knowing or caring about it",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 2,
+                        "percentage": "5%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 4,
+                        "percentage": "5%"
+                    }
+                ],
+                "percent_change": 0
             },
             {
-              "number": 4,
-              "percentage": "5%"
-            }
-          ],
-          "percent_change": 0
-        },
-        {
-          "measure": "Inconsistently: there are many inconsistencies across design within and across projects",
-          "responses": [
-            {
-              "number": 31,
-              "percentage": "76%"
+                "measure": "Inconsistently: there are many inconsistencies across design within and across projects",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 31,
+                        "percentage": "76%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 44,
+                        "percentage": "58%"
+                    }
+                ],
+                "percent_change": -18
             },
             {
-              "number": 44,
-              "percentage": "58%"
-            }
-          ],
-          "percent_change": -18
-        },
-        {
-          "measure": "Consistently: Design process is similar or consistent across teams and projects",
-          "responses": [
-            {
-              "number": 7,
-              "percentage": "17%"
+                "measure": "Consistently: Design process is similar or consistent across teams and projects",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 7,
+                        "percentage": "17%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 26,
+                        "percentage": "34%"
+                    }
+                ],
+                "percent_change": 17
             },
             {
-              "number": 26,
-              "percentage": "34%"
+                "measure": "Systematically: There are established, successful frameworks across DfE which are shared, maintained and improved by everyone",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 2,
+                        "percentage": "3%"
+                    }
+                ],
+                "percent_change": 1
             }
-          ],
-          "percent_change": 17
-        },
-        {
-          "measure": "Systematically: There are established, successful frameworks across DfE which are shared, maintained and improved by everyone",
-          "responses": [
-            {
-              "number": 1,
-              "percentage": "2%"
-            },
-            {
-              "number": 2,
-              "percentage": "3%"
-            }
-          ],
-          "percent_change": 1
-        }
-      ]
+        ]
     },
     {
-      "question": "How does design impact the final outcome?",
-      "measures": [
-        {
-          "measure": "Not at all, there is no design work being done so there is no impact",
-          "responses": [
+        "question": "How does design impact the final outcome?",
+        "measures": [
             {
-              "number": 1,
-              "percentage": "2%"
+                "measure": "Not at all, there is no design work being done so there is no impact",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 1,
+                        "percentage": "1%"
+                    }
+                ],
+                "percent_change": -1
             },
             {
-              "number": 1,
-              "percentage": "1%"
-            }
-          ],
-          "percent_change": -1
-        },
-        {
-          "measure": "Weak: Design does not have a strong impact or positive outcome on design quality due to politics, constraints or lack of experience",
-          "responses": [
-            {
-              "number": 10,
-              "percentage": "24%"
+                "measure": "Weak: Design does not have a strong impact or positive outcome on design quality due to politics, constraints or lack of experience",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 10,
+                        "percentage": "24%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 8,
+                        "percentage": "11%"
+                    }
+                ],
+                "percent_change": -13
             },
             {
-              "number": 8,
-              "percentage": "11%"
-            }
-          ],
-          "percent_change": -13
-        },
-        {
-          "measure": "Moderate: Teams are trying to produce high quality work and many are successful",
-          "responses": [
-            {
-              "number": 19,
-              "percentage": "46%"
+                "measure": "Moderate: Teams are trying to produce high quality work and many are successful",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 19,
+                        "percentage": "46%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 43,
+                        "percentage": "57%"
+                    }
+                ],
+                "percent_change": 11
             },
             {
-              "number": 43,
-              "percentage": "57%"
-            }
-          ],
-          "percent_change": 11
-        },
-        {
-          "measure": "Strong: Many or all of the design work produced is of high quality and meets required standards",
-          "responses": [
-            {
-              "number": 10,
-              "percentage": "24%"
+                "measure": "Strong: Many or all of the design work produced is of high quality and meets required standards",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 10,
+                        "percentage": "24%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 19,
+                        "percentage": "25%"
+                    }
+                ],
+                "percent_change": 1
             },
             {
-              "number": 19,
-              "percentage": "25%"
+                "measure": "Very strong: Designs are good, the lead industry and design community standards",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 5,
+                        "percentage": "7%"
+                    }
+                ],
+                "percent_change": 5
             }
-          ],
-          "percent_change": 1
-        },
-        {
-          "measure": "Very strong: Designs are good, the lead industry and design community standards",
-          "responses": [
-            {
-              "number": 1,
-              "percentage": "2%"
-            },
-            {
-              "number": 5,
-              "percentage": "7%"
-            }
-          ],
-          "percent_change": 5
-        }
-      ]
+        ]
     },
     {
-      "question": "How are quantitative metrics used to measure design quality?",
-      "measures": [
-        {
-          "measure": "No measurable indicators of design quality are defined",
-          "responses": [
+        "question": "How are quantitative metrics used to measure design quality?",
+        "measures": [
             {
-              "number": 17,
-              "percentage": "31%"
+                "measure": "No measurable indicators of design quality are defined",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 17,
+                        "percentage": "31%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 19,
+                        "percentage": "25%"
+                    }
+                ],
+                "percent_change": -6
             },
             {
-              "number": 19,
-              "percentage": "25%"
-            }
-          ],
-          "percent_change": -6
-        },
-        {
-          "measure": "At least a few design metrics are collected and discussed",
-          "responses": [
-            {
-              "number": 21,
-              "percentage": "38%"
+                "measure": "At least a few design metrics are collected and discussed",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 21,
+                        "percentage": "38%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 39,
+                        "percentage": "51%"
+                    }
+                ],
+                "percent_change": 13
             },
             {
-              "number": 39,
-              "percentage": "51%"
-            }
-          ],
-          "percent_change": 13
-        },
-        {
-          "measure": "Design metrics are collected regularly and tracked over time",
-          "responses": [
-            {
-              "number": 8,
-              "percentage": "15%"
+                "measure": "Design metrics are collected regularly and tracked over time",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 8,
+                        "percentage": "15%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 10,
+                        "percentage": "13%"
+                    }
+                ],
+                "percent_change": -2
             },
             {
-              "number": 10,
-              "percentage": "13%"
-            }
-          ],
-          "percent_change": -2
-        },
-        {
-          "measure": "Design metrics are shared throughout DfE",
-          "responses": [
-            {
-              "number": 1,
-              "percentage": "2%"
+                "measure": "Design metrics are shared throughout DfE",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 1,
+                        "percentage": "2%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 4,
+                        "percentage": "5%"
+                    }
+                ],
+                "percent_change": 3
             },
             {
-              "number": 4,
-              "percentage": "5%"
-            }
-          ],
-          "percent_change": 3
-        },
-        {
-          "measure": "Design metrics are shared with decision-makers",
-          "responses": [
-            {
-              "number": 4,
-              "percentage": "7%"
+                "measure": "Design metrics are shared with decision-makers",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 4,
+                        "percentage": "7%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 1,
+                        "percentage": "1%"
+                    }
+                ],
+                "percent_change": -6
             },
             {
-              "number": 1,
-              "percentage": "1%"
+                "measure": "Design metrics influence decisions",
+                "responses": [
+                    {
+                        "year": 2022,
+                        "number": 4,
+                        "percentage": "7%"
+                    },
+                    {
+                        "year": 2023,
+                        "number": 3,
+                        "percentage": "4%"
+                    }
+                ],
+                "percent_change": -3
             }
-          ],
-          "percent_change": -6
-        },
-        {
-          "measure": "Design metrics influence decisions",
-          "responses": [
-            {
-              "number": 4,
-              "percentage": "7%"
-            },
-            {
-              "number": 3,
-              "percentage": "4%"
-            }
-          ],
-          "percent_change": -3
-        }
-      ]
+        ]
     }
-  ]
-  
+]
