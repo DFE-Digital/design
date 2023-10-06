@@ -1,7 +1,7 @@
 {% extends "layouts/content-with-sidenav.html" %}
 
 {% set pageName = "Creating a content strategy" %}
-{% set pageDescription = " We create content strategies " %}
+{% set pageDescription = "We create content strategies " %}
 {% set selectedNav = "Content design" %}
 {% set lastUpdated = "October 2023 "%}
 {% set backlog_issue_id = "119" %}
@@ -10,13 +10,15 @@
 {% block beforeContent %}{% endblock %}
 
 {% block content %}
+{% markdown %}
+
 ## Writing a content strategy 
 
 A content strategy helps: 
 
 * create a consistent experience for users across your product or service 
 * plan the content design process and timescales with a roadmap 
-* you and your team explain the role content plays within your product 
+* you and your team explain the role contnent plays within your product 
 * others from outside the content design profession understand how you meet user needs 
 * helps subject matter experts, policy colleagues and stakeholders to contribute and work collaboratively with you  
 * bring organisational and team goals and user needs together 
@@ -69,7 +71,7 @@ Include how you will monitor the success of your strategy, typically through:
 * insights from usage data about journeys across content or through your service (this can come from Google Analytics, Clarity, HotJar, but also transactional data) 
 * feedback loops 
 
-Working with your business analysts, performance managers or similar, set benchmarks and measure against them. Your product team should publish service performance data (measuring success - https://www.gov.uk/service-manual/measuring-success), alongside your key performance indicators (KPIs). You should include a section on the performance of your content within this regular reporting.   
+Working with your business analysts, performance managers or similar, set benchmarks and measure against them. Your product team should publish service performance data ([measuring success](https://www.gov.uk/service-manual/measuring-success)), alongside your key performance indicators (KPIs). You should include a section on the performance of your content within this regular reporting.   
 
 ### Examples of measures 
 
@@ -100,7 +102,7 @@ Families and local authorities are satisfied with the product
 
 Include how you will quality assure your content. Reference how your products support the DfE’s vision and objectives, quoting any external standards it must also take into consideration.   
 
-You should include the cadence for how content needs are identified, developed and tested ahead of publishing. Include how you gain sign off and conduct reviews and 2is (https://design.education.gov.uk/content-design/types-of-content-we-publish/reviewing-and-checking-content).  
+You should include the cadence for how content needs are identified, developed and tested ahead of publishing. Include how you gain sign off and [conduct reviews and 2is](https://design.education.gov.uk/content-design/types-of-content-we-publish/reviewing-and-checking-content).  
 
 You should also consider who is best to review your strategy and how you share it with the team.  
 
@@ -131,4 +133,5 @@ Further reading:
 * [Everything you need to do a content strategy by Content Design London](https://www.contentdesign.london/blog/everything-you-need-to-do-content-strategy)
 * [The importance of end-to-end strategy by Content Design London](https://contentdesign.london/blog/the-importance-of-end-to-end-strategy)
 
+{% endmarkdown %}
 {% endblock %}
