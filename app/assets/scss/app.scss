@@ -1254,6 +1254,7 @@ input[type=submit].dfe-a-button {
   width: 100%;
   min-height: 10rem;
   margin: 0 auto;
+  background: #f3f2f1;
 
   &.dfe-o-banner--blog {
     a {
@@ -1853,11 +1854,10 @@ code {
 
 }
 
-.dfe-panel-section .govuk-heading-m,
-.dfe-panel-section p {
-  color: $color_dfe-white
-}
+.dfe-panel-section .govuk-heading-m, .dfe-panel-section .govuk-heading-l, .dfe-panel-section p {
+  color: $color_dfe-white;
 
+}
 
 .dfe-cta-panel {
   background: #F2AA66;
@@ -1925,7 +1925,6 @@ code {
 
 .dfe-cta {
   padding: 12px 30px;
-  border-radius: 8px;
   background-color: #c94922;
   text-decoration: none;
   font-weight: 600;
@@ -1953,7 +1952,6 @@ code {
 
   .dfe-cta {
     padding: 12px 30px;
-    border-radius: 8px;
     background-color: #c94922;
     text-decoration: none;
     font-weight: 600;
@@ -1986,9 +1984,8 @@ code {
     min-width: calc(80% - 30px);
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
     padding: 30px;
-    background: #ebf2f6;
+    background: #f3f2f1;
 
     a{font-weight: 600; margin: 5px 0px}
 
@@ -2037,20 +2034,17 @@ code {
     /* Space between cards */
     justify-content: space-between;
 
-
   }
 
   .dfemanual-cta-cards li {
     margin: 0px;
     padding: 0px;
     list-style-type: none;
-    flex: 1;
-    min-width: calc(25% - 30px);
+    max-width: 320px;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
     padding: 30px;
-    background: #ebf2f6;
+    background: #f3f2f1;
 
     a{font-weight: 600; }
 
@@ -2080,9 +2074,14 @@ code {
     }
 
   }
+  
+  .dfemanual-cta-cards--full li {
+    min-width: calc(100% - 60px);
+  }
 
+  
   .dfemanual-cta-cards--half li {
-    min-width: calc(40% - 30px);
+    min-width: calc(45% - 30px);
   }
 
   /* To make all <li> the same height as the tallest one */
@@ -2100,6 +2099,8 @@ code {
     a{font-weight: 600;}
   }
 }
+
+
 
 /* Sets the background color of the container div to dark grey */
 .dfemanual-scores {
