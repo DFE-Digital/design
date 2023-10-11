@@ -1849,7 +1849,7 @@ code {
 }
 
 .dfe-panel-section {
-  background: $color_dfe-secondary-blue;
+  background: map-get($govuk-colours-organisations, 'department-for-education', 'colour-websafe');
   padding: 40px;
 
 }
@@ -2126,3 +2126,6 @@ code {
   color: $color_dfe-white;
   font-weight: 600;
 }
+
+
+.dfe-manual-color-chip{display: block; height: 160px; width: 100%; border-radius: 8px 8px 0 0;}
