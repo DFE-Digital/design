@@ -7,9 +7,25 @@
 {% block content %}
 
     <section style="background: #ebf2f6;">
+          <div class="dfe-width-container">
+            <div class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-padding-top-4">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/inside-design">Inside Design</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="#">{{pageName}}</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
         <div class="dfe-width-container" style="padding-top: 60px; padding-bottom: 60px;">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
+
                     <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{pageName}}</h1>
                     <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
                 </div>
