@@ -102,9 +102,10 @@ app.use((req, res, next) => {
 
 app.get('/', (_, res) => {
 
-  const now = new Date().toISOString();
+  const now = new Date().toISOString()
+  let jobs = []
 
-  const jobs = {
+  const jobrequest = {
     method: 'get',
     url: `${process.env.cmsurl}api/design-manual-jobs?filters[Closes][$gt]=${now}`,
     headers: {
@@ -112,17 +113,17 @@ app.get('/', (_, res) => {
     }
   }
 
-  axios(jobs)
+  axios(jobrequest)
     .then(function (response) {
-      const jobs = response.data
+      jobs = response.data
 
-
-
-      res.render('index.html', { jobs })
+      return res.render('index.html', { jobs })
     })
     .catch(function (error) {
       console.log(error)
     })
+
+  return res.render('index.html', { jobs })
 })
 
 // Render sitemap.xml in XML format
