@@ -106,32 +106,32 @@
       </div>
    </section>
 
-    <section>
-        <div class="dfe-width-container" style="padding: 80px 0px 40px 0px">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <div class="dfe-o-banner dfe-o-banner--mirrored govuk-!-margin-top-2">
-                        <div class="dfe-o-banner__content-container">
-                            <div class="dfe-o-banner__inner-content-container">
-                                <strong class="govuk-tag">2023 results published</strong>
-                                <h2 class="govuk-heading-l govuk-!-margin-top-2">Design maturity</h2>
-                                <p>Understand how we are working to develop a mature design profession and how we measure this on an annual basis.</p>
-                                <a href="/inside-design/maturity" target="_blank" class="govuk-link govuk-body-l govuk-!-font-weight-bold">Read more and view maturity results</a>
-                            </div>
-                        </div>
-                        <div class="dfe-o-banner__image-container">
-                            <figure class="dfe-a-image dfe-a-image--cover">
-                                <picture class="dfe-a-image__picture">
-                                    <source srcset="/assets/images/objectives.webp" type="image/webp">
-                                    <img src="/assets/images/objectives.png" alt="">
-                                </picture>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
+   <section>
+      <div class="dfe-width-container" style="padding: 80px 0px 40px 0px">
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+               <div class="dfe-o-banner dfe-o-banner--mirrored govuk-!-margin-top-2">
+                  <div class="dfe-o-banner__content-container">
+                     <div class="dfe-o-banner__inner-content-container">
+                        <strong class="govuk-tag">2023 results published</strong>
+                        <h2 class="govuk-heading-l govuk-!-margin-top-2">Design maturity</h2>
+                        <p>Understand how we are working to develop a mature design profession and how we measure this on an annual basis.</p>
+                        <a href="/inside-design/maturity" target="_blank" class="govuk-link govuk-body-l govuk-!-font-weight-bold">Read more and view maturity results</a>
+                     </div>
+                  </div>
+                  <div class="dfe-o-banner__image-container">
+                     <figure class="dfe-a-image dfe-a-image--cover">
+                        <picture class="dfe-a-image__picture">
+                           <source srcset="/assets/images/objectives.webp" type="image/webp">
+                           <img src="/assets/images/objectives.png" alt="">
+                        </picture>
+                     </figure>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
+         </div>
+      </div>
+   </section>
 
    <section>
       <div class="dfe-width-container" style="padding: 40px 0px 80px 0px">
@@ -164,20 +164,25 @@
 
             <div class="govuk-grid-column-full">
                <h2 class="govuk-heading-l">Current design vacancies</h2>
-                <div class="dfe-grid-container">
-                  <div class="dfe-card">
-                     <div class="dfe-card-container">
-                        <h2 class="govuk-heading-m">
-                           <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="https://www.civilservicejobs.service.gov.uk/csr/index.cgi?SID=b3duZXJ0eXBlPWZhaXImc2VhcmNoc29ydD1zY29yZSZwYWdlY2xhc3M9Sm9icyZvd25lcj01MDcwMDAwJnBhZ2VhY3Rpb249dmlld3ZhY2J5am9ibGlzdCZqb2JsaXN0X3ZpZXdfdmFjPTE4OTAwMzYmdXNlcnNlYXJjaGNvbnRleHQ9NjA0MjMyODUmc2VhcmNocGFnZT0xJnJlcXNpZz0xNzAxNzc4MzE5LWRlMWFmZDk3OTIzYThlYjlhZTg1NGU1NjJlZjMzMzE5NTFiMzI3OTY=">2 Senior Service Designers</a>
-                        </h2>
-                        <p>£53,669</p>
-                        <p>Bristol, Coventry, Darlington, London (Westminster), Manchester, or Sheffield</p>
-                        <p>31 December, 11:55pm</p>
-                     </div>
-                  </div>
-               </div> 
 
-          {#   <p>We have no design vacancies at the moment.</p> #}
+               {% if jobs.data | length > 0%}
+                  {% for vacancy in jobs.data %}
+                     <div class="dfe-grid-container">
+                        <div class="dfe-card">
+                           <div class="dfe-card-container">
+                              <h2 class="govuk-heading-m">
+                                 <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="{{vacancy.attributes.CSJURL}}">{{vacancy.attributes.Role}}</a>
+                              </h2>
+                              <p>Roles: {{vacancy.attributes.RolesAdvertised}}</p>
+                              <p>Locations: {{vacancy.attributes.Locations}}</p>
+                              <p>Closes: {{vacancy.attributes.Closes | date('D MMM [at] HH:mm')}}</p>
+                           </div>
+                        </div>
+                     </div>
+                  {% endfor %}
+               {% else %}
+                  <p>There are currently no design vacancies.</p>
+               {% endif %}
 
             </div>
          </div>
