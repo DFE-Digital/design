@@ -1,0 +1,367 @@
+{% extends "layouts/content-full-width.html" %}
+{% set selectedNav = "Our work" %}
+{% set pageName = "Family hubs digital project" %}
+{% set pageDescription = "The Family hubs digital project is a cross-government project. It aims to improve outcomes for
+vulnerable and disadvantaged children, young people, and families." %}
+
+
+{% block hero %}
+<section class="dfe-page-header">
+    <div class="dfe-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/our-work">Our work</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">Project</li>
+            </ol>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-quarter">
+                        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Published</h2>
+                        <p class="govuk-!-margin-bottom-5">12 October 2023</p>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Author</h2>
+                        <p class="govuk-!-margin-bottom-5">Vulnerable Children and Families Team</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<section class="govuk-!-padding-bottom-9">
+    <div class="dfe-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <img src="/assets/images/familyhubs.webp" width="100%" alt=""
+                    class="govuk-!-margin-bottom-5 govuk-!-margin-top-1">
+
+
+                <h2 class="govuk-heading-l">Project overview</h2>
+                <p>We have developed several digital products to improve how professionals, young people and families
+                    engage
+                    with support services in their local family hub network. This part of the wider <a
+                        href="https://www.gov.uk/government/collections/family-hubs-and-start-for-life-programme">family
+                        hubs
+                        and start for life programme</a> led by DfE and DHSC, which is funding local authorities to
+                    implement
+                    family hubs.</p>
+
+                <h2 class="govuk-heading-l">Partnership working</h2>
+
+                <p>We are delivering the project through an iterative, agile process. We are working collaboratively
+                    with a
+                    small number of local authority partners who are helping to develop, test and iterate our digital
+                    products.
+                </p>
+                <p>We are working with:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Lancashire</li>
+                    <li>Redbridge</li>
+                    <li>Salford</li>
+                </ul>
+
+                <p>During the discovery phase we identified user needs and developed digital solutions. These digital
+                    solutions
+                    were then tested in the alpha phase. We are now in the private beta stage. This stage involves
+                    piloting the
+                    digital products within our partner local authority areas.</p>
+
+                <h2 class="govuk-heading-l">Gaining wider input</h2>
+                <p>Our partnership working is supplemented by our local authority co-design group.</p>
+                <p>We set up the co-design group in September 2022. The group is made up of representatives from local
+                    authorities across England who have an interest in supporting families and family hubs. Each local
+                    authority
+                    provides updates on family hub progress in their area and brings with them their own expertise and
+                    experience. This helps us to gain a deeper understanding of the local authorities' goals, challenges
+                    and
+                    preferences.</p>
+                <p>The group has taken part in several workshops which has supported the developemnt of the family hubs
+                    digital
+                    products, helping us identify:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>new features</li>
+                    <li>project risks</li>
+                    <li>communicaation needs</li>
+                </ul>
+                <h2 class="govuk-heading-l">Products in test stage</h2>
+
+                <p>We are currently building and testing two products which allow users to search and find support
+                    services. We
+                    are also building a third product that allows local authorities and voluntary and community sector
+                    (VCS)
+                    organisations to add and manage the details of services.</p>
+
+                <h3 class="govuk-heading-m govuk-!-margin-top-9">Find support for your family ('Find')</h3>
+                <p>Helps parents, guardians, young people and families find support services available within their
+                    local family
+                    hub network.</p>
+
+                <h3 class="govuk-heading-m govuk-!-margin-top-9">Connect families to support ('Connect')</h3>
+                <p>Local authority professionals (such as social workers) who work with families and young people can
+                    search for
+                    relevant support services and make requests on their behalf. This product allows professionals to
+                    share
+                    information about a family with a service provider more efficiently.</p>
+                <p>This service allows professionals to share information about families with service providers more
+                    efficiently.</p>
+
+                <h3 class="govuk-heading-m govuk-!-margin-top-9">Manage family support services and accounts ('Manage')
+                </h3>
+                <p>Helps local authorities and VCS organisations add and manage users and services on Find and Connect.
+                </p>
+                <p>Service providers can update their service information on the national directory that powers both
+                    Find and
+                    Connect.</p>
+
+                <h2 class="govuk-heading-l">Data and sustainability</h2>
+
+                <p>We know that many local authorities do not have robust, standardised data systems. This will act as a
+                    barrier
+                    to the wider adoption of our products.</p>
+                <p>Organisations will have the ability to manually enter data about their services into the directory
+                    through
+                    Manage. However, we know that having the option to automatically add services from existing
+                    databases will
+                    make things easier for everyone. The use of data standards could make this process easier.</p>
+                <p>We are now using a single data standard (<a href="https://openreferraluk.org/">Open Referral UK</a>).
+                    We are
+                    planning to create application programme interfaces (APIs) to allow the exchange of services data
+                    between
+                    local authority and DfE systems. We are also exploring the option of using these APIs to collect and
+                    share
+                    family services data across local authorities.</p>
+                <p>The benefits of this would include making it easier for local authorities to store and share data
+                    with us,
+                    central and local government, and VCS organisations. This would also allow better integration with
+                    existing
+                    systems including:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>council run Family Information Services (FIS) which provide advice on available support</li>
+                    <li>local internal systems</li>
+                    <li>borough and partnership special educational needs and disabilities (SEND) provision</li>
+                    <li>other regional and national directories</li>
+                </ul>
+                <p>All of this will help improve the quality and quantity of service data included in the family hubs
+                    digital
+                    products. </p>
+
+                <h2 class="govuk-heading-l">Digital pilot opportunities for new local authority partners</h2>
+
+                <p>To support the family hubs digital project, we are looking to recruit and provide funding to up to 5
+                    new
+                    local
+                    authorities for 2 digital pilot opportunities. You can apply if you are interested in either:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>implementing the family hubs digital products</li>
+                    <li>becoming compliant with the Open Referral UK data standard</li>
+                </ul>
+                <p>If you are from an interested local authority, you can <a
+                        href="https://find-government-grants.service.gov.uk/grants/family-hubs-digital-implementation-pilot--family-hubs-data-standard-pilot-1">find
+                        out more about the pilots and how to apply</a>. The closing date for applications is 23:59 on 19
+                    February
+                    2024.</p>
+                <p>Alternatively, if you want to contact us directly and obtain a copy of the application form and
+                    guidance,
+                    send an
+                    email to <a
+                        href="mailto:digital.familyhubs@education.gov.uk">digital.familyhubs@education.gov.uk</a>.
+                </p>
+
+
+                <h2 class="govuk-heading-l">Next steps</h2>
+
+
+                <p>We will continue refining and iterating the digital products and work towards them covering more
+                    local
+                    authority areas. We will then move into the live phase to continue improving the products in a
+                    sustainable
+                    way. </p>
+
+
+                <h2 class="govuk-heading-l">Notes for editors and readers</h2>
+
+                <p class="govuk-body">
+                    This page shares the ideas and thinking of the project team at DfE. Please be aware that we cannot
+                    respond to questions about the department, policy, or other services.
+                </p>
+
+                <p class="govuk-body">
+
+                    You can find out more about the <a
+                        href="https://www.gov.uk/government/organisations/department-for-education"
+                        class="govuk-link">DfE’s priorities and policies on GOV.UK</a>, along with how to raise
+                    enquiries with the department.
+                </p>
+
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+
+                <h2 class="govuk-heading-m">Design histories</h2>
+
+                <p><a href="https://design-histories.education.gov.uk/team/children-and-families">Read more in our design histories</a>.</p>
+
+
+
+                <h2 class="govuk-heading-m govuk-!-margin-top-9">Other projects</h2>
+
+                    <div class="grid-container">
+                        <div class="grid-item grid-item-1">
+                            <div class="card">
+                                <picture>
+                                    <source srcset="/assets/images/app.webp" type="image/webp">
+                                    <img src="/assets/images/app.png" alt="">
+                                </picture>
+                                <div class="content">
+                                    <h2 class="govuk-heading-s  govuk-!-font-size-16"><a
+                                            href="/our-work/projects/service-assessment-service"
+                                            class="card-link">Service assessment service</a></h2>
+
+                                    <p>DesignOps Team</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-item grid-item-3">
+                            <div class="card">
+                                <picture>
+                                    <source srcset="/assets/images/ehcp.webp" type="image/webp">
+                                    <img src="/assets/images/ehcp.png" alt="">
+                                </picture>
+                                <div class="content">
+                                    <h2 class="govuk-heading-s govuk-!-font-size-16"><a
+                                            href="/our-work/projects/education-health-care-plan"
+                                            class="card-link">Education
+                                            health and care plan digital project</a></h2>
+                                    <p>Vulnerable Children and Families Team</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+            
+
+                    
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+</div>
+</div>
+
+
+
+
+<style>
+    .grid-container {
+        display: grid;
+
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        width: 100%;
+        /* Adjust card width if necessary */
+        height: 100%;
+        /* Adjust card height to fill the container */
+        background-color: #efefef;
+        position: relative;
+
+        .content {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            font-size: 16px;
+
+            padding: 20px;
+
+            a {
+                text-decoration: none;
+            }
+
+            p:last-child {
+                margin-top: auto;
+                margin-bottom: 0px;
+                font-size: 16px;
+            }
+        }
+    }
+
+
+
+    .card-link:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /* This creates an invisible overlay on the .card-link element */
+    }
+
+
+
+    .card img {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            /* Auto-adjust the height based on content */
+        }
+
+        .grid-item-1 {
+            grid-row: auto;
+            /* Reset to default behavior for mobile */
+        }
+    }
+</style>
+
+
+
+
+{% endblock %}

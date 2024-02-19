@@ -1,0 +1,226 @@
+{% extends "layouts/content-full-width.html" %}
+{% set selectedNav = "Our work" %}
+{% set pageName = "Service assessment service" %}
+{% set pageDescription = "The service assessment service is a digital transformation of the end to end assessment
+process for services, from guidance, to booking, through to assessment and reporting." %}
+
+
+{% block hero %}
+<section class="dfe-page-header">
+    <div class="dfe-width-container">
+        <div class="govuk-breadcrumbs">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/our-work">Our work</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">Project</li>
+            </ol>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-quarter">
+                        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Published</h2>
+                        <p class="govuk-!-margin-bottom-5">24 February 2024</p>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                        <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Author</h2>
+                        <p class="govuk-!-margin-bottom-5">DesignOps Team</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<section class="govuk-!-padding-bottom-9">
+    <div class="dfe-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <picture>
+                    <source srcset="/assets/images/app.webp" type="image/webp">
+                    <img src="/assets/images/app.png" alt="" style="width: 100%;">
+                </picture>
+
+                <h2 class="govuk-heading-l govuk-!-margin-top-5">Project overview</h2>
+                <p></p>
+
+            
+              
+
+                <h2 class="govuk-heading-l">Next steps</h2>
+
+
+                <p> </p>
+
+
+                <h2 class="govuk-heading-l">More information</h2>
+
+                <p>If you are interested in contributing to, or using this service in your own organisation, <a href="/design-ops">contact the DesignOps team</a>.</p>
+
+             
+
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+
+                <h2 class="govuk-heading-m">Design histories</h2>
+
+                <p><a href="https://design-histories.education.gov.uk/service-assessment-plus">Read more in our
+                        design histories</a>.</p>
+
+
+
+                <h2 class="govuk-heading-m govuk-!-margin-top-9">Other projects</h2>
+
+                <div class="grid-container">
+                  
+                    <div class="grid-item grid-item-3">
+                        <div class="card">
+                            <picture>
+                                <source srcset="/assets/images/familyhubs.webp" type="image/webp">
+                                <img src="/assets/images/familyhubs.png" alt="">
+                            </picture>
+                            <div class="content">
+                                <h2 class="govuk-heading-s govuk-!-font-size-16"><a
+                                        href="/our-work/projects/family-hubs"
+                                        class="card-link">Family hubs
+                                        digital project</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item grid-item-3">
+                        <div class="card">
+                            <picture>
+                                <source srcset="/assets/images/ehcp.webp" type="image/webp">
+                                <img src="/assets/images/ehcp.png" alt="">
+                            </picture>
+                            <div class="content">
+                                <h2 class="govuk-heading-s govuk-!-font-size-16"><a
+                                        href="/our-work/projects/education-health-care-plan" class="card-link">Education
+                                        health and care plan digital project</a></h2>
+                                <p>Vulnerable Children and Families Team</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+</div>
+</div>
+
+
+
+
+<style>
+    .grid-container {
+        display: grid;
+
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        width: 100%;
+        /* Adjust card width if necessary */
+        height: 100%;
+        /* Adjust card height to fill the container */
+        background-color: #efefef;
+        position: relative;
+
+        .content {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            font-size: 16px;
+
+            padding: 20px;
+
+            a {
+                text-decoration: none;
+            }
+
+            p:last-child {
+                margin-top: auto;
+                margin-bottom: 0px;
+                font-size: 16px;
+            }
+        }
+    }
+
+
+
+    .card-link:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /* This creates an invisible overlay on the .card-link element */
+    }
+
+
+
+    .card img {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            /* Auto-adjust the height based on content */
+        }
+
+        .grid-item-1 {
+            grid-row: auto;
+            /* Reset to default behavior for mobile */
+        }
+    }
+</style>
+
+
+
+
+{% endblock %}

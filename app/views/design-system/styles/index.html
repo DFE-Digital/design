@@ -1,7 +1,8 @@
-{% extends "layouts/content-with-sidenav.html" %}
+{% extends "layouts/content-full-width.html" %}
 
 {% set pageName = "Styles" %}
-{% set pageDescription = "Specific styles to ensure a consistent look and feel across Department for Education services." %}
+{% set pageDescription = "Specific styles to ensure a consistent look and feel across Department for Education
+services." %}
 {% set selectedNav = "Design system" %}
 {% set parentSection = "Styles"%}
 {% set isChildSection = "true"%}
@@ -9,40 +10,77 @@
 {% set dateUpdated = "25 July 2023 "%}
 {% set backlog_issue_id = "89" %}
 
-{# Add changes with newest at the top #}
-{% set changeLog = [
-  {
-    change: 'Adding the style to links so the states work correctly.',
-    changeDate: '25 July 2023'
-  },
-  {
-    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/89" target="_blank">GitHub issue #89</a>',
-    changeDate: '25 July 2023'
-  }
-]
-%}
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
 
-{% block beforeContent %}{% endblock %}
+        <li class="govuk-breadcrumbs__list-item">
+          Styles
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/styles/">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
 
 {% block content %}
 
+<div class="dfe-width-container">
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Current styles</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Style</th>
-      <th scope="col" class="govuk-table__header">Summary</th>
-      <th scope="col" class="govuk-table__header">Status</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/design-system/styles/colour" class="govuk-link">Colour</a></th>
-      <td class="govuk-table__cell">Colour palette for Department for Education services.</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Published</strong></td>
-    </tr>
-  </tbody>
-</table>
+
+
+    <div class="dfe-grid-container">
+
+      <div class="dfe-card">
+        <div class="dfe-card-container">
+          <h2 class="govuk-heading-m">
+            <a href="/design-system/styles/colour"
+              class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Colour</a>
+          </h2>
+          <p>Colour palette for Department for Education services.</p>
+        </div>
+      </div>
+
+      <div class="dfe-card">
+        <div class="dfe-card-container">
+          <h2 class="govuk-heading-m">
+            <a href="/design-system/styles/typography"
+              class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Typography</a>
+          </h2>
+          <p>Font family and styles for Department for Education services.</p>
+        </div>
+      </div>
+    </div>
+
+
+</div>
 
 {% endblock %}

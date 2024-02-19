@@ -1,0 +1,54 @@
+{% from 'header/macro.njk' import header %}
+{% from 'govuk/components/footer/macro.njk' import govukFooter %}
+
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if seoPageName %}{{seoPageName}}
+    {% elseif pageName %}{{pageName}}{%endif%} - {% if parentSection === "ncs-design-system"%}National Careers Service
+    {% endif%}Design Manual - Department for Education</title>
+  <meta name="description"
+    content="{% if seoPageDescription %}{{seoPageDescription}}{% elseif pageName %}{{pageDescription}}{%endif%}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link href="/assets/css/app.min.css" rel="stylesheet">
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
+
+
+<body class="govuk-template__body ">
+  <script>
+    document.body.className = (
+      (document.body.className)
+        ? document.body.className + ' js-enabled'
+        : 'js-enabled');
+  </script>
+
+
+  {% block main %}
+
+  <main class="govuk-main-wrapper govuk-!-margin-0 govuk-!-padding-0"
+    id="main-content" role="main">
+
+    {% block content %}{% endblock %}
+
+  </main>
+  </div>
+  {% endblock %}
+
+  </div>
+
+
+  <script src="/assets/js/all.min.js"></script>
+  <script src="/assets/js/dfefrontend.min.js"></script>
+  {% block scripts %}{% endblock %}
+  <script>
+    window
+      .GOVUKFrontend
+      .initAll()
+  </script>
+</body>
+
+</html>

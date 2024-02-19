@@ -1,0 +1,228 @@
+{% extends "layouts/content-with-sidenav.html" %}
+
+{% set seoPageName = "Writing design history posts" %}
+{% set seoPageDescription = "We publish our design histories on the Department for Education Design History service using Strapi." %}
+{% set pageName = "Writing design history posts" %}
+{% set pageDescription = "We publish our design histories on the DfE Design History Service using Strapi." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Content"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2023 "%}
+{% set backlog_issue_id = "33" %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+{% markdown %}
+
+You can find out [how to start a design history](https://design-histories.education.gov.uk/start-design-history) by
+setting up a Strapi account and then post them to the DfE design manual.
+
+## Video about design histories
+
+This was recorded for the cross-government services week 2023 event. You can enable closed captions within the video.
+
+<iframe style="margin-bottom: 40px;" width="100%" height="515" src="https://www.youtube.com/embed/-JWoXCoYdc4"
+  title="YouTube video player" frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
+
+## Purpose
+
+Design histories capture the why and how we develop our services, they focus on the needs we are trying to address, our
+thought process and ideas and how we arrived at our decisions.
+
+For the team, working in the open allows us to keep everyone informed and gain wider input. It helps us keep our
+stakeholders informed and tell our story. It ensures we can demonstrate how we have developed our services in a
+user-centred way, joining up journeys and learning from others.
+
+They should not include sensitive or confidential information, such as live data screenshots. You can make post private.
+
+They should not be used for project or product updates (use week notes or other channels for this). They should tell the
+story of how you have addressed a need through design.
+
+## Setting up your design history
+
+You should have a ‘team’ this should be your portfolio or area of work within DfE, such as vulnerable children and
+families. You can then create your services with posts sitting under your service.
+
+As with everything you publish publicly, you need to have sign off at Deputy Director (DD) level to create a design
+history for your service. DDs can then delegate approval of individual posts to policy and product managers, this should
+be reviewed every 12 months. You should also consider whether to liaise with [central DfE communication
+colleagues](https://educationgovuk.sharepoint.com/sites/communications/SitePages/strategic-communications-planning.aspx),
+depending on the nature and sensitivity of the project.
+
+You should document your review and sign off process for your team's design history posts.
+
+## Structuring your design history posts
+
+The content of your posts will vary depending on the phase of your project and service.
+
+They should all follow a similar structure with a focus on the user and the task. You should include information about:
+* why we did this work - user insight, functionality required
+* how we approached it
+* what our ideas were
+* how we tested them
+* what we’ll do next
+
+Whilst we advise following this structure, we would not advise using the same heading across posts or a template. Your
+headings should be unique to give the reader an insight into what the post or each section is about and include key
+words.
+Writing your design history posts
+
+## Post titles
+
+The limit for post titles is 70 characters. The title should be helpful to people who come to your post with no context
+to assess whether it will be helpful to them.
+
+Titles should describe the problem you explored or solved, and should start with a verb unless the character limit makes
+this impossible. It might be helpful to consider both the <a
+  href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk" rel="noopener norferrer" target="_blank">style
+  for titles in the writing for GOV.UK guide</a> and <a
+  href="https://www.gov.uk/service-manual/design/naming-your-service" rel="noopener norferrer" target="_blank">guidance
+  on naming your service</a>.
+
+## Post description
+
+The limit for post descriptions is 250 characters. The description should further help people assess if the post will be
+helpful. You could include the design problem you were trying to solve, or the insight you were acting on.
+
+## Post content
+
+You should write your design history posts to include enough detail to make sense to someone who knows nothing about
+your service. Think about the audience, those wanting to understand the history of your designs and those wanting to
+learn from your designs to support the development of their own service. You do not need to document every change.
+
+Focus on the insight and the thinking that has led to significant design iterations.
+
+Start your post with an introduction which:
+* sets the context
+* explains who your users are
+* explains the problem you were trying to solve
+* includes the insight you were acting on
+
+Use subheadings to signpost users and help navigation. Consider adding anonymised quotes from users.
+
+## Link to the design system
+
+Include links to any components and patterns you have used from the GOV.UK Design System or DfE Design System. For
+example, the <a href="https://alphagov.github.io/accessible-autocomplete" target="_blank"
+  rel="noopener noreferrer">accessible autocomplete component (opens in new tab)</a>.
+
+## Links to prototypes
+
+Linking to a prototype, or a specific page in a prototype, might be the easiest and most accessible way of sharing
+information about the page, its content and functionality. You can link to a prototype, but you’ll need to include
+password information in the post.
+
+Only link to a prototype if it clearly says ‘prototype’ in the banner. Do not link to a prototype if there’s a chance
+someone might think it’s a live service they can use.
+
+Make sure you apply version control to your prototypes so you can look back at previous versions.
+
+## Images
+
+It’s tempting to include screenshots of service pages in design history posts. This means that images will include a lot
+of text which would create accessibility problems.
+
+Text in images is not automatically read out to screenreader users unless there’s alt text. They can also pixelate for
+magnification users, who do not have access to the alt text
+
+Instead of including a screenshot you can either include the text you changed when writing about what you changed or
+link to the specific page in a prototype.
+
+## Screenshots
+
+If you do need to include screenshots, you should write out the text from each image in the post so that it’s accessible
+to magnification users and screenreader users. It’s best to use the alt text field when you upload the screenshot to say
+where in the post you’ve described it and write out the full description in the body content. For example, an alt text
+field could say ‘screenshot described under image’. Include information in your description about the layout of the
+page, like which text is the title, what has radio buttons or checkboxes and what the button says. Any information
+that’s available to fully sighted users’ needs to be available as text.
+
+## Image use and alt text
+
+If the image you’ve included is not a screenshot of a service page, think about whether it needs to be there, or if it
+could be text within the post. You’ll need to write out text in your images for accessibility anyway, then use the alt
+text field to explain where to find the image description.
+
+255 is the alt text character limit in the Strapi content management system. There is <a
+  href="https://design-system.service.gov.uk/styles/images/#alt-text" rel="noopener norferrer" target="_blank">guidance
+  on how to write alt text in the service manual</a>.
+
+## Captions
+
+Captions give images titles. They are read out by assistive technology when there is alt text present. Do not duplicate
+your alt text in your caption. If you use captions correctly, you can write shorter alt text.
+
+For example:
+
+Caption – Screenshot of the new interruption page
+Alt text – Screenshot described under image
+
+You should then fully describe that image in your body text.
+
+## Content snippets
+
+When including snippets of content in the body text of your post, introduce them with a sentence like ‘The content is’
+and use the ‘inset text’ code to format the content snippet. This makes clear it is example content.
+
+You do not need to add quotation marks to content inside the inset text div. If any of the content in your snippet is a
+header, do not format it as a header. Formatting it as a header would confuse the structure and impact on accessibility
+Instead, you can format headers as bold. As it’s inside a div, you will need to use the `<strong></strong>` html to do
+this, rather than Markdown.
+
+The code for the div for a content snippet is:
+
+```
+<div class="govuk-inset-text">
+  content...
+</div>
+```
+
+## Tags
+
+There are currently tags relating to internal teams who own internal services, big programmes such as schools,
+apprenticeships and supporting families. There are also tags for user groups, types of service and UCD theme of post.
+Use them wisely and do not add any without consultation with DesignOps.
+
+
+## Making your design history post private
+
+
+You may need to publish a single post that should not be publicly accessible. For example, a post that explains why DfE
+intervenes in underperforming schools.
+
+DfE stakeholders may be concerned that:
+* there is information in your post about DfE processes that should not be known outside the civil service
+* content could impact how education, childcare or children’s social care providers are perceived
+* there could be an impact on suppliers or commercial assets
+
+### An entire private design history
+
+You may need to make all design history posts private for a service or product. For example, a design history explaining
+DfE’s process when intervening in academy trusts where there’s a financial concern.
+
+DfE stakeholders may be concerned that trusts would use this information to their advantage.
+
+To make your design history private:
+* find your design history in the Service section of Strapi
+* add a password to the Password field
+* follow password-setting good practice
+
+This removes your design history from the Services for your team’s page. For example, [Regional Services
+Division](https://design-histories.education.gov.uk/team/regional-services-division). The private design history will
+only be accessible with the URL and password.
+
+### Ask for advice
+
+If you’re not sure whether to make your design history post private, speak with your:
+* product manager
+* service owner
+* subject matter experts
+
+If you need further advice on design histories, [ask the DesignOps team](https://design.education.gov.uk/design-ops).
+
+{% endmarkdown %}
+{% endblock %}

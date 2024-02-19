@@ -1,5 +1,4 @@
-
-{% extends "layouts/content-with-sidenav.html" %}
+{% extends "layouts/content-full-width.html" %}
 
 {% set pageName = "Colour" %}
 {% set pageDescription = "Department for Education colour styles for services." %}
@@ -10,72 +9,168 @@
 {% set dateUpdated = "25 July 2023 "%}
 {% set backlog_issue_id = "88" %}
 
-{# Add changes with newest at the top #}
-{% set changeLog = [
-  {
-    change: 'Adding the style to links so the states work correctly.',
-    changeDate: '25 July 2023'
-  },
-  {
-    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/88" target="_blank">GitHub issue #88</a>',
-    changeDate: '25 July 2023'
-  }
-]
-%}
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
 
-{% block beforeContent %}{% endblock %}
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system/styles">Styles</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          Colour
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="/design-system/styles/colour">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/styles/colour/examples">Examples</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
 
 {% block content %}
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
 
 
-<p>Always use the <a href="https://design-system.service.gov.uk/styles/colour/" class="govuk-link" target="_blank" rel="noopener noreferrer">GOV.UK colour palette</a> first.</p>
+      <h2 class="govuk-heading-l">Colour palette</h2>
 
-<p>Where you want to use Department for Education specific branding colours, you can use the following colour palette.</p>
+      <p>Always use the <a href="https://design-system.service.gov.uk/styles/colour/" class="govuk-link" target="_blank"
+          rel="noopener noreferrer">GOV.UK colour palette</a> first.</p>
 
-<div class="govuk-inset-text">
-    <h3 id="colour-contrast" class="govuk-heading-s">Colour contrast</h3>
-<p>You must make sure that the contrast ratio of text and interactive elements in<br>your service meets <a href="/accessibility/understanding-wcag/perceivable#1-4-3" class="govuk-link" target="_blank" rel="noopener noreferrer">1.4.3 - Contrast - level AA</a> of the Web Content Accessibility Guidelines (WCAG 2.1).</p>
+      <p>Where you want to use an accent colour or departmental blue in your service, use this palette.</p>
 
+      <p>You must not change the colour of GOV Design System components to these colours, for example, buttons.</p>
+
+      <p>Do not use the hexadecimal (hex) codes directly, use the mixin name. For example, if you wanted to use the DfE
+        department colour blue use: <code>$color_dfe-blue</code> instead of <code>#003a69</code>.</p>
+
+
+      <div class="dfe-manual-flex">
+
+        <div class="dfe-manual-colour-chip">
+          <div class="dfe-manual-colour-chip--color-block dfe-blue">
+
+            <div><span class="dfe-manual-colour-chip--color-block-contrast--black">A</span>
+              <div class="dfe-manual-colour-chip--color-block-contrast--fail">Fail</div>
+            </div>
+            <div><span class="dfe-manual-colour-chip--color-block-contrast--white">A</span>
+              <div class="dfe-manual-colour-chip--color-block-contrast--pass">Pass</div>
+            </div>
+          </div>
+          <div class="dfe-manual-colour-chip--info">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <p class="govuk-heading-s">Variable name</p>
+                <p>$color_dfe-blue;</p>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-top-5">
+              <div class="govuk-grid-column-one-half">
+                <p class="govuk-heading-s">Hex</p>
+                <p>#003A69</p>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <p class="govuk-heading-s">RGB</p>
+                <p>0, 58, 105</p>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-top-5">
+              <div class="govuk-grid-column-full">
+                <p class="govuk-heading-s">Notes</p>
+                <p>This is the official government identity colour for the Department for Education.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="dfe-manual-colour-chip">
+          <div class="dfe-manual-colour-chip--color-block dfe-secondary-blue">
+
+            <div><span class="dfe-manual-colour-chip--color-block-contrast--black">A</span>
+              <div class="dfe-manual-colour-chip--color-block-contrast--fail">Fail</div>
+            </div>
+            <div><span class="dfe-manual-colour-chip--color-block-contrast--white">A</span>
+              <div class="dfe-manual-colour-chip--color-block-contrast--pass">Pass</div>
+            </div>
+          </div>
+          <div class="dfe-manual-colour-chip--info">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <p class="govuk-heading-s">Variable name</p>
+                <p>$color_dfe-secondary-blue;</p>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-top-5">
+              <div class="govuk-grid-column-one-half">
+                <p class="govuk-heading-s">Hex</p>
+                <p>#347CA9</p>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <p class="govuk-heading-s">RGB</p>
+                <p>52, 124, 169</p>
+              </div>
+            </div>
+            <div class="govuk-grid-row govuk-!-margin-top-5">
+              <div class="govuk-grid-column-full">
+                <p class="govuk-heading-s">Notes</p>
+                <p>This colour should be used as a secondary accent to the primary department colour.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <h2 class="govuk-heading-l">Tint and shade</h2>
+
+      <p>You can modify the colour palette by adding white or black to the colour.</p>
+      <p><a href="/design-manual/styles/colour">See examples of how to modify the tint and shades.</a></p>
+
+      <h2 class="govuk-heading-l">Future breaking change</h2>
+
+      <p>The scss variable names are going to change in the next incremental 1.x.x version of DfE Frontend to match the
+        naming convention
+        of <code>dfe-</code>.</p>
+
+      <p>Legacy names will be removed in Version 2.0.0 of DfE Frontend and will not be usable resulting in a breaking
+        change.</p>
+
+
+    </div>
+  </div>
 </div>
-
-
-<p>Do not use the hexadecimal (hex) codes directly, use the mixin name. For example, if you wanted to use the DfE department colour blue use: <code>$color_dfe-blue</code> instead of <code>#003a69</code>.</p>
-
-<table class="govuk-table app-reading-width">
-    <caption class="govuk-table__caption govuk-table__caption--m">Colours</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Colour and name</th>
-      <th scope="col" class="govuk-table__header">Hex</th>
-      <th scope="col" class="govuk-table__header">Notes</th>
-    </tr>
-  </thead>
-<tbody class="govuk-table__body">
-
- <tr class="govuk-table__row">
-        <th class="govuk-table__header app-colour-list-column--name" scope="row">
-          <span class="app-swatch" style="background-color:#003a69"></span>
-          <code>$color_dfe-blue</code>
-        </th>
-        <td class="govuk-table__cell">
-          <code>#003a69</code>
-        </td>
-      <td class="govuk-table__cell">Primary brand colour
-        </td>
-      </tr>
- <tr class="govuk-table__row">
-        <th class="govuk-table__header app-colour-list-column--name" scope="row">
-          <span class="app-swatch " style="background-color:#347ca9"></span>
-          <code>$color_dfe-secondary-blue</code>
-        </th>
-        <td class="govuk-table__cell">
-          <code>#347ca9</code>
-        </td>
-        <td class="govuk-table__cell">
-        </td>
-      </tr>
-
-  </tbody>
-</table>
 
 {% endblock %}

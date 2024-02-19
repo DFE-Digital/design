@@ -1,0 +1,152 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Install DfE Frontend" %}
+{% set pageDescription = "Learn how to quickly get started with DfE Frontend to build consistent Department for
+Education products and services." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "February 2024" %}
+{% set backlog_issue_id = "" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          Getting started
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="/design-system/getting-started">For
+                prototyping</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/getting-started/production">Production</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section>
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <p>This guidance will enable you to use <a href="/design-system/dfe-frontend">DfE Frontend</a> into the GOV
+          Prototype Kit. Itassumes you've got a working knowledge of using packages and working with code.</p>
+
+        <p>Follow the <a href="/design-system/prototype-kit">guidance for getting the prototype kit set up</a> on your
+          device before following these steps.</p>
+
+        <h2 class="govuk-heading-l">Install the package</h2>
+
+        <p>DfE Frontend is available in the npm registry. You can install it using the npm install command in your
+          terminal.</p>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">1. Install</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <code>npm install dfe-frontend-alpha</code>
+          </div>
+        </div>
+
+        <h3 class="govuk-heading-m">CSS, Javascript, and logo files</h3>
+
+        <p>Add the following to the top of your application.scss file after the line
+          <br>
+          <code>@import 'node_modules/govuk-frontend/dist/govuk/all';</code>
+        </p>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">2. application.scs</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <code>@import 'node_modules/dfe-frontend-alpha/packages/dfefrontend';</code>
+          </div>
+        </div>
+
+        <h3 class="govuk-heading-m">Javascript</h3>
+
+        <p>You need to include the javascript reference in your main layout. Find the scripts section and replace with
+          the following code.</p>
+
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">3. /views/layouts/main.html</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <pre><code>{%raw%}{% block scripts %}
+  {{ super() }}
+  &lt;script src=&quot;/node_modules/dfe-frontend-alpha/dist/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}{%endraw%}</code></pre>
+          </div>
+        </div>
+
+        <h3 class="govuk-heading-m">Copy the logo files</h3>
+
+        <p>There might not be an <strong>/app/assets/images</strong> folder, so create this first.</p>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">4. Copy image assets</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p class="govuk-!-margin-bottom-2">From</p>
+            <code>/node_modules/dfe-frontend-alpha/packages/assets/dfe-logo.png<br/>
+          /node_modules/dfe-frontend-alpha/packages/assets/dfe-logo-alt.png</code>
+            <p class="govuk-!-margin-bottom-2 govuk-!-margin-top-3">To</p>
+            <code>/app/assets/images</code>
+          </div>
+        </div>
+
+        <h2 class="govuk-heading-l">You're good to go</h2>
+
+        <p>You will now be able to use DfE styles and components in your product.</p>
+
+        <p>Used correctly, this package will not interfere with <code>govuk-</code> scoped styles and components. All
+          DfE Frontend styles are scoped to <code>dfe-</code>. </p>
+
+        <h2 class="govuk-heading-l">Making your service look like a DfE service</h2>
+
+        <p>There are strict rules on how your service should look, depending on where it's provided.</p>
+
+        <p>The following sections should be your next steps if you're providing your service on education.gov.uk.</p>
+
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a href="/design-system/styles/typography">Using the Inter font in your product</a></li>
+          <li><a href="/design-system/components/header">Use the DfE Header to brand your product correctly</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
