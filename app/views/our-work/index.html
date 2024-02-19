@@ -104,43 +104,29 @@ updates and design histories." %}
                 <h2 class="govuk-heading-l">From our design histories</h2>
 
 
+                {% for post in posts.data %}
+
                 <p class=" govuk-!-margin-bottom-2">
-                    <a href="/inside-design/projects/education-health-care-plan"
-                        class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-2 govuk-heading-m">Helping
-                        users to analyse their
-                        General annual grant (GAG) statements</a>
+                    <a href="https://design-histories.education.gov.uk/{{post.attributes.service.data.attributes.Slug}}/{{post.attributes.Slug}}"
+                        class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-2 govuk-heading-m">{{post.attributes.Title}}</a>
                 </p>
 
-                <p>ESFA Funding Service Delivery</p>
+                <p class="govuk-body govuk-body-s">For {{post.attributes.service.data.attributes.Title}} on {{post.attributes.Publication_date | date('D MMMM YYYY')}}</p>
                 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-                <p class=" govuk-!-margin-bottom-2">
-                    <a href="/inside-design/projects/education-health-care-plan"
-                        class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-2 govuk-heading-m">How
-                        assessors navigate
-                        completing a service assessment report</a>
-                </p>
 
-                <p>DesignOps</p>
-                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-                <p class=" govuk-!-margin-bottom-2">
-                    <a href="/inside-design/projects/education-health-care-plan"
-                        class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-2 govuk-heading-m">Defining
-                        patterns for
-                        tables</a>
-                </p>
-
-                <p>Regional Services Division</p>
-
-                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                {% endfor %}
 
                 <p><a href="https://design-histories.education.gov.uk" target="_blank" class="govuk-link">Read more posts on the design
                         history service</a></p>
+
+
+                      
             </div>
 
             <div class="govuk-grid-column-one-third">
 
-                <h3 class="govuk-heading-m">From the DfE Digtial, Data and Technology blog</h3>
+                <h3 class="govuk-heading-m">From the DfE Digital, Data and Technology blog</h3>
 
                 <ul class="govuk-list govuk-list--spaced">
                     <li>

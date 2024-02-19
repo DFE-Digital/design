@@ -14,11 +14,14 @@ const professionsController = require('./controllers/professionsController.js');
 
 
 
+
+
 router.get("/frontend", designSystemController.get_frontend);
 router.get("/design-system/dfe-frontend", designSystemController.get_frontend);
 router.get("/design-system", designSystemController.get_index);
 
 
+router.get("/our-work", designSystemController.get_our_work);
 
 // Professions
 router.get("/professions/content-design", professionsController.get_content_design);
