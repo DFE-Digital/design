@@ -37,12 +37,12 @@ exports.get_our_work = async function (req, res) {
 
     var posts = {
         method: 'get',
-        url: `${process.env.cmsurl}api/posts?publicationState=live&sort=Publication_date%3Adesc&pagination[limit]=5&populate=%2A`,
+        url: `${process.env.cmsurl}api/posts?publicationState=live&sort=Publication_date%3Adesc&pagination[limit]=4&populate=%2A`,
         headers: {
             Authorization: 'Bearer ' + process.env.apikey,
         },
     }
-    
+
 
     axios(posts)
         .then(function (response) {
