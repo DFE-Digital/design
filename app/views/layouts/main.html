@@ -27,12 +27,8 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
 
 <body class="govuk-template__body ">
-    <script>
-        document.body.className = (
-            (document.body.className)
-                ? document.body.className + ' js-enabled'
-                : 'js-enabled');
-    </script>
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
     <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
     {% include 'layouts/_topnav.html'%}
     {% include 'layouts/_services.html'%}
@@ -63,15 +59,15 @@
     {% include 'layouts/_footer.html'%}
     {% endblock %}
 
-    <script src="/assets/js/all.min.js"></script>
+
     <script src="/assets/js/cookies.min.js"></script>
     <script src="/assets/js/feedback.min.js"></script>
     <script src="/node_modules/dfe-frontend-alpha/dist/dfefrontend.min.js"></script>
 
-    <script>
-        window
-            .GOVUKFrontend
-            .initAll()
+    <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
+    <script type="module">
+        import { initAll } from '/assets/js/govuk-frontend.min.min.js'
+        initAll()
     </script>
 </body>
 
