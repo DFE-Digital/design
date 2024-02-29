@@ -14,14 +14,18 @@ const path = require('path');
 const config = require('./app/config');
 const forceHttps = require('express-force-https');
 const compression = require('compression');
-const routes = require('./app/routes'); 
+const routes = require('./app/routes');
 const session = require('express-session');
 const favicon = require('serve-favicon');
 
+const airtable = require('airtable');
 const PageIndex = require('./middleware/pageIndex');
 const pageIndex = new PageIndex(config);
 require('dotenv').config();
 var NotifyClient = require('notifications-node-client').NotifyClient;
+
+const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(process.env.airtableFeedbackBase);
+
 
 const app = express();
 app.use(compression());
@@ -150,6 +154,38 @@ if (config.env !== 'development') {
   }, 2000);
 }
 
+app.post('/form-response/helpful', (req, res) => {
+  const isAjaxRequest = req.headers['x-requested-with'] === 'XMLHttpRequest';
+  const { response } = req.body;
+
+  console.log(isAjaxRequest)
+
+  // Secure handling as before
+  const date = new Date().toISOString();
+  const service = "Design manual";
+  const pageURL = req.headers.referer || 'Unknown';
+
+  base('Data').create([{
+      "fields": {
+          "Response": response,
+          "Service": service,
+          "URL": pageURL
+      }
+  }], function(err) {
+      if (err) {
+          console.error(err);
+          return res.status(500).send('Error saving to Airtable');
+      }
+      if (isAjaxRequest) {
+          res.json({ success: true, message: 'Feedback submitted successfully' });
+      } else {
+          // Redirect or send a response for non-AJAX request
+          res.redirect('/feedback-submitted');
+      }
+  });
+});
+
+
 // Your custom middleware to automatically save form data to session
 function saveFormDataToSession(req, res, next) {
   if (req.method === 'POST') {
@@ -190,7 +226,7 @@ app.post('/submit-feedback', (req, res) => {
         service: 'Design Manual',
       },
     })
-    .then((response) => {})
+    .then((response) => { })
     .catch((err) => console.log(err));
 
   return res.sendStatus(200);

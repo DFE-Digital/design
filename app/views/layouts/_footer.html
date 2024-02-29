@@ -1,3 +1,74 @@
+<section>
+    <div class="dfe-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="dfe-feedback-banner">
+                    <div class="dfe-feedback-banner--content">
+                        <form id="feedbackForm" action="/form-response/helpful" method="post">
+                            <div class="dfe-feedback-banner--content-questions">
+                                <div class="dfe-feedback-banner--content-question" id="questionForm">
+
+                                    <h2 class="govuk-heading-s dfe-feedback-banner--content-question-text">Is this page
+                                        useful?</h2>
+                                    <div class="govuk-button-group">
+                                        <button type="button" class="govuk-button govuk-button--secondary" value="Yes"
+                                            data-module="govuk-button" onclick="submitFeedback('Yes')">Yes</button>
+                                        <button type="button" class="govuk-button govuk-button--secondary" value="No"
+                                            data-module="govuk-button" onclick="submitFeedback('No')">No</button>
+                                    </div>
+
+
+                                </div>
+                                <div class="dfe-feedback-banner--content-message" id="thanksMessage" role="alert"
+                                    hidden="">
+                                    Thank you for your feedback
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (document.body.classList.contains('js-enabled')) {
+            // Prevent the default form submission
+            document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // Determine which button was clicked
+                var response = event.submitter.value;
+                submitFeedback(response);
+            });
+        }
+    });
+
+    function submitFeedback(response) {
+        const data = { response: response };
+
+        fetch('/form-response/helpful', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                document.getElementById('questionForm').style.display = 'none';
+                document.getElementById('thanksMessage').hidden = false;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+
+
+
 {{ govukFooter({
 navigation: [
 {
