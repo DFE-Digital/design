@@ -5,6 +5,17 @@
     width: 100%;
 }
 
+.dfe-banner {
+    width: 100%;
+    min-height: govuk-spacing(8); // Example conversion to govuk-spacing
+    margin: 0 auto;
+    background: govuk-colour("light-grey");
+}
+.dfe-banner__content-container {
+    padding: govuk-spacing(3);
+}
+
+
 @include govuk-media-query($from: tablet) {
     .dfe-banner {
         display: flex;
@@ -66,3 +77,4 @@
         max-width: 100%;
     }
 }
+

@@ -2480,3 +2480,25 @@ ol {
   font-size: 0.9rem;
   /* Adjust font size as needed */
 }
+
+// DfE Frontend Overrides - until a future release
+
+.dfe-header__menu-toggle {
+  border-radius: 0px;
+}
+
+@include govuk-media-query($until: large-desktop) {
+  .dfe-header__navigation {
+    background: #ffffff;
+  }
+
+  .dfe-header__navigation-item--current {
+    a.dfe-header__navigation-link {
+      color: #003a69;
+    }
+  }
+
+  .dfe-header__logo {
+    max-width: 100%;
+  }
+}
