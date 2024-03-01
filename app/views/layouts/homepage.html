@@ -53,7 +53,6 @@
 
   {% include 'layouts/_topnav.html'%}
   {% include 'layouts/_services.html'%}
-  {% include 'layouts/_feedback.html'%}
 
   {% block header %}
 
@@ -79,20 +78,20 @@
   
 
   {% block footer %}
-
   {% include 'layouts/_footer.html'%}
   {% endblock %}
+
 
   <script src="/assets/js/cookies.min.js"></script>
   <script src="/assets/js/feedback.min.js"></script>
   <script src="/assets/js/dfefrontend.min.js"></script>
-
+  <script src="/assets/js/ncs.min.js"></script>
+  {% block scripts %}{% endblock %}
   <script type="module" src="/assets/js/govuk-frontend.min.min.js"></script>
   <script type="module">
     import { initAll } from '/assets/js/govuk-frontend.min.min.js'
     initAll()
   </script>
-
 </body>
 
 </html>
