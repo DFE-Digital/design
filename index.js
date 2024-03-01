@@ -18,12 +18,12 @@ const routes = require('./app/routes');
 const session = require('express-session');
 const favicon = require('serve-favicon');
 
-const airtable = require('airtable');
+
 const PageIndex = require('./middleware/pageIndex');
 const pageIndex = new PageIndex(config);
 require('dotenv').config();
 var NotifyClient = require('notifications-node-client').NotifyClient;
-
+const airtable = require('airtable');
 const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(process.env.airtableFeedbackBase);
 
 
