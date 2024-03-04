@@ -17,21 +17,7 @@ $govuk-global-styles: true;
 @import './_subnav.scss';
 @import './_feedback.scss';
 
-p {
-  font-size: 1rem;
-  line-height: 1.25;
 
-  @include govuk-media-query($from: desktop) {
-    p {
-      line-height: p {
-        font-size: 1.1875rem;
-        line-height: 1.25;
-      }
-
-    }
-
-  }
-}
 
 .govuk-width-container {
   @include govuk-width-container;
@@ -2499,3 +2485,4 @@ ol {
   }
 
 }
+

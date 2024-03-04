@@ -39,7 +39,7 @@
 
 <ul>
     <li>
-        <a href="/design-ops/contact" target="_blank">contact DesignOps</a>
+        <a href="/design-ops" target="_blank">contact DesignOps</a>
     </li>
 </ul>
 
@@ -52,7 +52,7 @@
 
 <ul>
     <li>
-        <a href="/design-ops/contact" target="_blank">contact DesignOps</a>
+        <a href="/design-ops" target="_blank">contact DesignOps</a>
     </li>
     <li>
         <a href="https://ukgovernmentdfe.slack.com/archives/C03LP9VRQSJ" target="_blank">internally, using our Slack
@@ -75,20 +75,41 @@
 
 <h2>Compliance status</h2>
 
-<p>This website is fully compliant with the <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> version 2.1
+<p>This website is partially compliant with the <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> version
+    2.2
     AA standard.</p>
+
+<h3>Non-accessible content</h3>
+
+<p>The content is non-accessible for the following reason(s):
+</p>
+
+<ul>
+    <li>
+        <p>1.3.1 – Info & Relationships </p>
+        <p>When submitting the feedback form a visual success message appears to notify users that the submission of the
+            feedback form was successful. This message is not made available to screen reader users, and they would
+            therefore be unaware if their submission was sent.
+        </p>
+    </li>
+    <li>
+        <p>1.4.4 – Resize Text</p>
+        <p>When attempting to resize text on the home page, some of the content does not react to the change to 200% of
+            the original size.</p>
+    </li>
+    <li>
+        <p>4.1.3 - Status Messages</p>
+        <p>When navigating to the feedback from using a screen reader, the visible label for the edit field is not announced. This is because the heading as well as the hint text below the field have not been associated with the text area. 
+        </p>
+    </li>
+</ul>
+
+<p>We are working to resolve the issues as a priority.</p>
 
 <h2>Preparation of this accessibility statement</h2>
 
-<p>This statement was prepared on 7 September 2022. It was last reviewed on 27 April 2023.</p>
+<p>This statement was prepared on 7 September 2022. It was last reviewed on 4 March 2024.</p>
 
-<p>This website was last tested on 19 April 2023. The test was carried out by the DesignOps team in line with WCAG-EM,
-    using:</p>
-
-<ul>
-    <li>Screen-reader software</li>
-    <li>Pa11y Automated testing of all pages</li>
-    <li>Manual testing</li>
-</ul>
+<p>This website was last tested in February 2024. The test was carried out by the DesignOps Accessibility Specialist.</p>
 
 {% endblock %}

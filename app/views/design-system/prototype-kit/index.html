@@ -1,4 +1,3 @@
-
 {% extends "layouts/content-full-width.html" %}
 
 {% set pageName = "GOV.UK prototype kit" %}
@@ -42,84 +41,90 @@ service." %}
 
 {% block content %}
 <div class="dfe-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-quarter">
-        {% include "includes/_side-nav.html"%}
-      </div>
-      <div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
 
-{% markdown %}
+      {% markdown %}
 
-## Why use the prototype kit
+      ## Why use the prototype kit
 
-The GOV.UK prototype kit is the easiest way to create realistic examples of services to test with users.
+      The GOV.UK prototype kit is the easiest way to create realistic examples of services to test with users.
 
-The current version of the kit is version 13, and is recommended you use this to build prototypes with.
+      The current version of the kit is version 13, and is recommended you use this to build prototypes with.
 
-You can <a href="https://prototype-kit.service.gov.uk/docs/create-new-prototype" class="govuk-link"
-    rel="noopener noreferrer" target="_blank">follow instructions to get the kit running on your device</a> as well as
-tutorials and support from the GDS team who built the kit.
+      You can <a href="https://prototype-kit.service.gov.uk/docs/create-new-prototype" class="govuk-link"
+        rel="noopener noreferrer" target="_blank">follow instructions to get the kit running on your device</a> as well
+      as
+      tutorials and support from the GDS team who built the kit.
 
-This helps you de-risk your service, without commiting to building the real thing in code, or needing a developer to
-build something for you.
+      This helps you de-risk your service, without commiting to building the real thing in code, or needing a developer
+      to
+      build something for you.
 
-<div class="govuk-inset-text">Prototypes should be throwaway code, not treated like production code. You should only be
-    building things in the kit to test assumptions or problems.</div>
+      <div class="govuk-inset-text">Prototypes should be throwaway code, not treated like production code. You should
+        only be
+        building things in the kit to test assumptions or problems.</div>
 
-## Installing the kit
+      ## Installing the kit
 
-Whether you use a Mac or Windows device, you can run the kit locally on your device. You'll need to install some
-software to do this.
+      Whether you use a Mac or Windows device, you can run the kit locally on your device. You'll need to install some
+      software to do this.
 
-### Macbook users
+      ### Macbook users
 
-If you're using a DfE-issued Macbook, you can install all the required software yourself.
+      If you're using a DfE-issued Macbook, you can install all the required software yourself.
 
-### Windows device users
+      ### Windows device users
 
-If you're a DfE-issued Windows device users, you'll need to submit a request to <a
-    href="https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=2f8ef25b1b76f450199d6397b04bcbc4"
-    target="_blank" class="govuk-link" rel="noopener noreferrer">Service Now - GDS Prototyping</a>
+      If you're a DfE-issued Windows device users, you'll need to submit a request to <a
+        href="https://dfe.service-now.com/serviceportal?id=sc_cat_item&sys_id=2f8ef25b1b76f450199d6397b04bcbc4"
+        target="_blank" class="govuk-link" rel="noopener noreferrer">Service Now - GDS Prototyping</a>
 
-When you install the kit, create a folder on the C:\ drive called "prototypes" and extract the kit to a folder within
-your prototypes folder.
+      When you install the kit, create a folder on the C:\ drive called "prototypes" and extract the kit to a folder
+      within
+      your prototypes folder.
 
-eg: `c:\prototypes\my-first-prototype\`
+      eg: `c:\prototypes\my-first-prototype\`
 
-Do not run them from your Documents or Desktop or any folder that syncs with OneDrive.
+      Do not run them from your Documents or Desktop or any folder that syncs with OneDrive.
 
-## Support with the kit.
+      ## Support with the kit.
 
-The kit is used across Government, is built by, managed and supported by a team in GDS.
+      The kit is used across Government, is built by, managed and supported by a team in GDS.
 
-- Cross-gov <a href="https://ukgovernmentdigital.slack.com/archives/C0647LW4R" target="_blank" class="govuk-link"
-    rel="noopener noreferrer"> #prototype-kit</a> Slack channel
-- DfE-specific <a href="https://ukgovernmentdfe.slack.com/archives/C03RS042ZB3" target="_blank" class="govuk-link"
-    rel="noopener noreferrer"> #prototyping-help</a> Slack channel
+      - Cross-gov <a href="https://ukgovernmentdigital.slack.com/archives/C0647LW4R" target="_blank" class="govuk-link"
+        rel="noopener noreferrer"> #prototype-kit</a> Slack channel
+      - DfE-specific <a href="https://ukgovernmentdfe.slack.com/archives/C03RS042ZB3" target="_blank" class="govuk-link"
+        rel="noopener noreferrer"> #prototyping-help</a> Slack channel
 
 
-## Branding your prototype
+      ## Branding your prototype
 
-You must use the correct branding for where a service is intended to be provided.
+      You must use the correct branding for where a service is intended to be provided.
 
-### Services intended for GOV.UK or service.gov.uk
+      ### Services intended for GOV.UK or service.gov.uk
 
-You can use the kit directly as-is on install for a service that looks like GOV.UK
+      You can use the kit directly as-is on install for a service that looks like GOV.UK
 
-### Services intended for education.gov.uk
+      ### Services intended for education.gov.uk
 
-You should follow the <a href="/design-system/dfe-frontend" class="govuk-link" rel="noopener noreferrer">DfE Frontend
-    guidance</a> so that your prototype is using the correct DfE branding and styles.
+      You should follow the <a href="/design-system/dfe-frontend" class="govuk-link" rel="noopener noreferrer">DfE
+        Frontend
+        guidance</a> so that your prototype is using the correct DfE branding and styles.
 
-If you are unsure, <a href="/design-ops/contact" class="govuk-link">contact DesignOps</a>.
+      If you are unsure, <a href="/design-ops" class="govuk-link">contact DesignOps</a>.
 
-## Hosting and securing your prototype
+      ## Hosting and securing your prototype
 
-<a href="/design-system/prototype-kit/github-and-heroku#secure-your-prototype-from-accidental-use" class="govuk-link"
-    rel="noopener noreferrer">Guidance for hosting and setting a password</a> to enable testing and prevent users from
-accidentally using your prototype.
+      <a href="/design-system/prototype-kit/github-and-heroku#secure-your-prototype-from-accidental-use"
+        class="govuk-link" rel="noopener noreferrer">Guidance for hosting and setting a password</a> to enable testing
+      and prevent users from
+      accidentally using your prototype.
 
-{% endmarkdown %}
-</div>
-</div>
-{% endblock %}
+      {% endmarkdown %}
+    </div>
+  </div>
+  {% endblock %}
