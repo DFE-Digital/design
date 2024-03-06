@@ -2,8 +2,9 @@
     <div class="dfe-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <div class="dfe-feedback-banner">
+                <div class="dfe-feedback-banner">  
                     <div class="dfe-feedback-banner--content">
+                    <h2 class="govuk-heading-s">We've made some changes, and we'd like your feedback to make this service better.</h2>
                         <form id="feedbackForm" action="/form-response/helpful" method="post">
                             <div class="dfe-feedback-banner--content-questions">
                                 <div class="dfe-feedback-banner--content-question" id="questionForm">
@@ -16,7 +17,7 @@
                                             data-module="govuk-button" onclick="submitFeedback('No')">No</button>
                                     </div>
                                 </div>
-                                <div class="dfe-feedback-banner--content-message" id="thanksMessage" hidden>Thank you
+                                <div class="dfe-feedback-banner--content-message" id="thanksMessage" aria-live="polite" hidden>Thank you
                                     for your feedback</div>
                                 <div class="dfe-feedback-banner--content-problem" id="problemButton">
                                     <button type="button" class="govuk-button govuk-button--secondary"
