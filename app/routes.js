@@ -11,6 +11,7 @@ const router = express.Router()
 // CONTROLLERS //
 const designSystemController = require('./controllers/designSystemController.js');
 const professionsController = require('./controllers/professionsController.js');
+const designOpsController = require('./controllers/designOpsController.js');
 
 
 
@@ -26,7 +27,7 @@ router.get("/our-work", designSystemController.get_our_work);
 // Professions
 router.get("/professions/content-design", professionsController.get_content_design);
 
-
+router.get("/design-ops/satisfaction-scores", designOpsController.get_sat_scores);
 
 
 

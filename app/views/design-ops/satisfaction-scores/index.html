@@ -1,7 +1,7 @@
 {% extends "layouts/content-full-width.html" %}
 
 {% set pageName = "Service satisfaction scores" %}
-{% set pageDescription = "Information about the satisfaction scores for our services" %}
+{% set pageDescription = "Data on the performance of Department for Education manuals and supporting services." %}
 {% set selectedNav = "DesignOps" %}
 {% set lastUpdated = "March 2024" %}
 {% set backlog_issue_id = "" %}
@@ -37,29 +37,25 @@
             <div class="govuk-grid-column-full">
                 <h2 class="govuk-heading-l">Our services</h2>
 
+                <p>Only services that use the "Is this page useful" feature at the bottom of pages, are captured in this data.</p>
+
                 <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
+
+                    {% for service in data %}
+
                     <div class="dfe-card">
                         <div class="dfe-card-container">
-                            <h3 class="govuk-heading-m govuk-!-font-size-80 ">100%</h3>
-                            <p>Design manual</p>
-                            <p class="govuk-!-margin-bottom-0 govuk-body-s">8 Responses</p>
+                            <h3 class="govuk-heading-m govuk-!-font-size-80 ">{{service.percentageYes}}%</h3>
+                            <p>{{service.service}}</p>
+                            <p class="govuk-!-margin-bottom-0 govuk-body-s">{{service.total}} Responses</p>
                         </div>
                     </div>
-                    <div class="dfe-card">
-                        <div class="dfe-card-container">
-                            <h3 class="govuk-heading-m govuk-!-font-size-80 ">50%</h3>
-                            <p>Design history</p>
-                            <p class="govuk-!-margin-bottom-0 govuk-body-s">6 Responses</p>
-                        </div>
-                    </div>
-                    <div class="dfe-card">
-                        <div class="dfe-card-container">
-                            <h3 class="govuk-heading-m govuk-!-font-size-80 ">100%</h3>
-                            <p>Find a job description</p>
-                            <p class="govuk-!-margin-bottom-0 govuk-body-s">1 Response</p>
-                        </div>
-                    </div>
+
+                    {% endfor %}
+
                 </div>
+
+
 
             </div>
         </div>
