@@ -1,0 +1,90 @@
+{% set pageName = "Community" %}
+{% set pageDescription = "Understand how our communities of practice come together to grow design maturity, share good
+practices across the Department for Education, and work together on common problems." %}
+{% set selectedNav = "Community" %}
+{% set lastUpdated = "February 2024" %}
+{% set backlog_issue_id = "32" %}
+
+{% extends "layouts/page.html" %}
+
+{% block hero %}
+<section class="dfe-page-hero">
+    <div class="dfe-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Our communities of practice</h2>
+
+
+        <p>Communities of practice help to drive the learning and development of the professions and their practice
+            through sharing ideas, skills and experience.</p>
+
+        <p>The design community meets every Thursday between 1pm and 4pm. This time is used to share cross-community
+            information and learnings, for example, checking in with the cross-design working groups progress, or
+            inviting cross-gov people to talk.</p>
+
+        <p>We crowd source the themes and topics on Slack and in meet-ups. People can suggest ideas, volunteer to help
+            facilitate or run a session on our <a href=https://trello.com/b/GsD7AGh9/communities-of-practice-meetups” target=”_blank”>Trello board</a>.
+
+            We also join up with other professions, such as user research or product to run multidisciplinary meet-ups.
+            We encourage designers to set up user-centred profession meet-ups with their portfolio or business area,
+            too.</p>
+
+        <p>To join the design community send a request to <a class="govuk-link govuk-link--no-visited-state"
+                href="https://ukgovernmentdfe.slack.com/archives/C0432A8JSV7" target="_blank">#design</a> in DfE Slack.
+        </p>
+
+        <h3>Profession time in DfE</a>
+
+        </h3>
+
+        <p>Every Thursday in DfE we have dedicated profession time. In practice, this means that between 2-4pm each
+            profession can use some – or all – of this time for professional development.</p>
+
+        <p class="govuk-body">This time can be used for:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+
+            <li>cross-design group objectives, for example, style guide or patterns</li>
+
+            <li>content, service and interaction design specific meet-ups </li>
+
+            <li>crits, either in profession or profession families</li>
+
+            <li>personal learning and development time</li>
+
+        </ul>
+
+        <h3>Current working groups</h3>
+
+        <p class="govuk-body">There are currently groups led by volunteers from within the design community working on:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+
+            <li><a href="/inside-design/working-group/people" class="govuk-link govuk-link--no-visited-state">community,
+                    people, and objectives</a></li>
+
+            <li><a href="/inside-design/working-group/patterns-and-components"
+                    class="govuk-link govuk-link--no-visited-state">patterns and components</a></li>
+
+            <li><a href="/inside-design/working-group/content-styles"
+                    class="govuk-link govuk-link--no-visited-state">content styles</a></li>
+        </ul>
+        <p>If you would like to get involved with one of the community groups, reach out on the DfE Slack channel <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="https://ukgovernmentdfe.slack.com/archives/C0432A8JSV7" target="_blank">#design</a>. </p>
+    </div>
+
+    {% endblock %}

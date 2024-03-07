@@ -1,0 +1,81 @@
+{% set pageName = "Professions" %}
+{% set pageDescription = "Understand more about the design professions of content, interaction and service design in the
+Department for Education." %}
+{% set selectedNav = "Professions" %}
+{% set lastUpdated = "February 2024" %}
+{% set backlog_issue_id = "23" %}
+
+{% extends "layouts/page.html" %}
+
+{% block hero %}
+<section class="dfe-page-hero">
+    <div class="dfe-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <h2 class="govuk-heading-l">Our design professions</h2>
+    <div class="dfe-manual-card-container">
+        <div class="dfe-manual-card dfe-manual-card--one-half dfe-manual-card--grey">
+            <h3>Content design</h3>
+            <p>Find out about the content design profession, and how designers use plain language to
+                help users get the outcomes they need.</p>
+            <p><a href="/professions/content-design" class="govuk-link">Find out about content design</a>
+            </p>
+        </div>
+        <div class="dfe-manual-card dfe-manual-card--one-half dfe-manual-card--grey">
+            <h3>Interaction design</h3>
+            <p>Interaction designers design the way people use a product and remove risk from user
+                interactions with our services.</p>
+            <p><a href="/professions/interaction-design" class="govuk-link">Find out about interaction
+                    design</a></p>
+        </div>
+        <div class="dfe-manual-card dfe-manual-card--one-half dfe-manual-card--grey">
+            <h3>Service design</h3>
+            <p>Learn how service designers design the end-to-end journey of a service. This helps a user
+                complete their goal and the department deliver a policy intent.</p>
+            <p><a href="/professions/service-design" class="govuk-link">Find out about service design</a>
+            </p>
+        </div>
+        <div class="dfe-manual-card dfe-manual-card--one-half dfe-manual-card--grey">
+            <h3>Head of profession</h3>
+            <p>The head of profession for design, enables and empowers designers across the department
+                with the tools, support, standards, and guidance for delivering good design outcomes.</p>
+            <p><a href="/professions/head-of-profession" class="govuk-link">The head of profession
+                    priorities</a></p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="dfe-banner dfe-banner--mirrored govuk-!-margin-top-5">
+        <div class="dfe-banner__content-container">
+            <div class="dfe-banner__inner-content-container">
+                <h2 class="govuk-heading-l govuk-!-margin-top-2">Design maturity</h2>
+                <p>Understand how we are working to develop a mature design profession and how we measure
+                    this on an annual basis.</p>
+                <a href="/professions/maturity" target="_blank"
+                    class="govuk-link govuk-body-l govuk-!-font-weight-bold">Read more and view maturity
+                    results</a>
+            </div>
+        </div>
+        <div class="dfe-banner__image-container">
+            <figure class="dfe-a-image dfe-a-image--cover">
+                <picture class="dfe-a-image__picture">
+                    <source srcset="/assets/images/objectives.webp" type="image/webp">
+                    <img src="/assets/images/objectives.png" alt="">
+                </picture>
+            </figure>
+        </div>
+    </div>
+</section>
+{% endblock %}

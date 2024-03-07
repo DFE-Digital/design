@@ -22,7 +22,7 @@ gulp.task('process-scss', function () {
 
 gulp.task('copy-govuk-js', function () {
   return gulp
-    .src('node_modules/govuk-frontend/govuk/all.js')
+    .src('node_modules/govuk-frontend/dist/govuk/all.bundle.js')
     .pipe(copy('app/assets/js', { prefix: 3 }))
 })
 

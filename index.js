@@ -11,22 +11,21 @@ const bodyParser = require('body-parser');
 const lunr = require('lunr');
 const fs = require('fs');
 const path = require('path');
-const cheerio = require('cheerio');
 const config = require('./app/config');
-const glob = require('glob');
 const forceHttps = require('express-force-https');
 const compression = require('compression');
-
+const routes = require('./app/routes');
 const session = require('express-session');
-
-const helmet = require('helmet');
-
 const favicon = require('serve-favicon');
+
 
 const PageIndex = require('./middleware/pageIndex');
 const pageIndex = new PageIndex(config);
 require('dotenv').config();
 var NotifyClient = require('notifications-node-client').NotifyClient;
+const airtable = require('airtable');
+const base = new airtable({ apiKey: process.env.airtableFeedbackKey }).base(process.env.airtableFeedbackBase);
+
 
 const app = express();
 app.use(compression());
@@ -53,14 +52,14 @@ app.use(favicon(path.join(__dirname, 'public/assets/images', 'favicon.ico')));
 
 app.set('view engine', 'html');
 
-app.locals.serviceName = 'Design Manual';
+app.locals.serviceName = 'Design manual';
 app.locals.recaptchaPublic = process.env.recaptchaPublic;
 
 // Set up Nunjucks as the template engine
 var nunjuckEnv = nunjucks.configure(
   [
     'app/views',
-    'node_modules/govuk-frontend',
+    'node_modules/govuk-frontend/dist/',
     'node_modules/dfe-frontend-alpha/packages/components',
   ],
   {
@@ -68,9 +67,6 @@ var nunjuckEnv = nunjucks.configure(
     express: app,
   },
 );
-
-
-
 
 
 nunjuckEnv.addFilter('date', dateFilter);
@@ -100,31 +96,8 @@ app.use((req, res, next) => {
   next()
 })
 
-app.get('/', (_, res) => {
+app.use('/', routes)
 
-  const now = new Date().toISOString()
-  let jobs = []
-
-  const jobrequest = {
-    method: 'get',
-    url: `${process.env.cmsurl}api/design-manual-jobs?filters[Closes][$gt]=${now}`,
-    headers: {
-      Authorization: 'Bearer ' + process.env.apikey
-    }
-  }
-
-  axios(jobrequest)
-    .then(function (response) {
-      jobs = response.data
-
-      return res.render('index.html', { jobs })
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
-
-  return res.render('index.html', { jobs })
-})
 
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
@@ -180,6 +153,55 @@ if (config.env !== 'development') {
     pageIndex.init();
   }, 2000);
 }
+// Route for handling Yes/No feedback submissions
+app.post('/form-response/helpful', (req, res) => {
+  const { response } = req.body;
+  const service = "Design manual";
+  const pageURL = req.headers.referer || 'Unknown';
+  const date = new Date().toISOString();
+
+  base('Data').create([
+      {
+          "fields": {
+              "Response": response,
+              "Service": service,
+              "URL": pageURL
+          }
+      }
+  ], function(err) {
+      if (err) {
+          console.error(err);
+          return res.status(500).send('Error saving to Airtable');
+      }
+      res.json({ success: true, message: 'Feedback submitted successfully' });
+  });
+});
+
+// New route for handling detailed feedback submissions
+app.post('/form-response/feedback', (req, res) => {
+  const { response } = req.body;
+  
+  const service = "Design manual"; // Example service name
+  const pageURL = req.headers.referer || 'Unknown'; // Attempt to capture the referrer URL
+  const date = new Date().toISOString();
+
+  base('Feedback').create([{
+      "fields": {
+          "Feedback": response,
+          "Service": service,
+          "URL": pageURL
+      }
+  }], function(err) {
+      if (err) {
+          console.error(err);
+          return res.status(500).send('Error saving to Airtable');
+      }
+      res.json({ success: true, message: 'Feedback submitted successfully' });
+  });
+});
+
+
+
 
 // Your custom middleware to automatically save form data to session
 function saveFormDataToSession(req, res, next) {
@@ -221,34 +243,21 @@ app.post('/submit-feedback', (req, res) => {
         service: 'Design Manual',
       },
     })
-    .then((response) => {})
+    .then((response) => { })
     .catch((err) => console.log(err));
 
   return res.sendStatus(200);
 });
 
-app.get('/design-system/dfe-frontend', function (req, res, next) {
-  const packageName = 'dfe-frontend-alpha';
-  let version = '-';
 
-  axios
-    .get(`https://registry.npmjs.org/${packageName}`)
-    .then((response) => {
-      const version = response.data['dist-tags'].latest;
-      const lastUpdatedv = new Date(response.data.time.modified).toISOString();
 
-      res.render('design-system/dfe-frontend/index.html', {
-        version,
-        lastUpdatedv,
-      });
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+app.get('/learn/how-many-users', function (req, res) {
+  res.redirect(301, '/tools/how-many-users');
 });
 
-app.get('/tools/inclusivity-calculator', function (req, res) {
-  res.redirect('/learn/how-many-users', 301);
+app.get('/learn/how-many-users/:number', function (req, res) {
+  const number = req.params.number;
+  res.redirect(301, '/tools/how-many-users/' + number);
 });
 
 app.get('/design-ops/design-maturity/september-2022', function (req, res) {
@@ -286,7 +295,7 @@ app.get(
   },
 );
 
-app.get('/learn/how-many-users/:number', (req, res) => {
+app.get('/tools/how-many-users/:number', (req, res) => {
   var number = parseInt(req.params.number | 0);
 
   if (number) {
@@ -301,7 +310,7 @@ app.get('/learn/how-many-users/:number', (req, res) => {
         const jsonData = JSON.parse(data);
         const calculatedData = calculateValues(jsonData, number);
 
-        res.render('learn/how-many-users/index.html', {
+        res.render('tools/how-many-users/index.html', {
           number,
           calculatedData,
         });
@@ -311,17 +320,17 @@ app.get('/learn/how-many-users/:number', (req, res) => {
       }
     });
   } else {
-    res.redirect('/learn/how-many-users');
+    res.redirect('/tools/how-many-users');
   }
 });
 
-app.post('/learn/how-many-users', (req, res) => {
+app.post('/tools/how-many-users', (req, res) => {
   var number = req.body.numberOfUsers;
 
   if (number) {
-    res.redirect('/learn/how-many-users/' + number);
+    res.redirect('/tools/how-many-users/' + number);
   } else {
-    res.redirect('/learn/how-many-users');
+    res.redirect('/tools/how-many-users');
   }
 });
 

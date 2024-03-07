@@ -1,0 +1,263 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Typography" %}
+{% set pageDescription = "Font family and styles for Department for Education services." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Styles"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "February 2024 "%}
+{% set backlog_issue_id = "" %}
+
+{# Add changes with newest at the top #}
+{% set changeLog = [
+{
+change: 'Page added to the design manual.',
+changeDate: '24 February 2024'
+}
+]
+%}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system/styles">Styles</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          Typography
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/styles/typography">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/styles/typography/examples">Examples</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <h2 class="govuk-heading-l">Typographic styles</h2>
+
+      <p>These styles are the same as the <a href="https://design-system.service.gov.uk/styles/typography/"
+          target="_blank">GOV.UK Design System typography</a> examples. They are here to demonstrate how the Inter typeface
+        is applied to core GOV typography styles.</p>
+
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Headings</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header  govuk-!-width-one-half">Sample</th>
+                <th scope="col" class="govuk-table__header">Class</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-heading-xl">XL heading</td>
+                <td class="govuk-table__cell">govuk-heading-xl</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-heading-l">Large heading</td>
+                <td class="govuk-table__cell">govuk-heading-l</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-heading-m">Medium heading</td>
+                <td class="govuk-table__cell">govuk-heading-m</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-heading-s">Small heading</td>
+                <td class="govuk-table__cell">govuk-heading-s</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card govuk-!-margin-top-9">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Headings with captions</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Sample</th>
+                <th scope="col" class="govuk-table__header">Class</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-caption-xl">XL caption</span><span
+                    class="govuk-heading-xl">XL heading</td>
+                <td class="govuk-table__cell">govuk-caption-xl</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-caption-l">Large caption</span><span
+                    class="govuk-heading-l">Large heading</td>
+                <td class="govuk-table__cell">govuk-caption-l</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-caption-m">Medium caption</span><span
+                    class="govuk-heading-m">Medium heading</td>
+                <td class="govuk-table__cell">govuk-caption-m</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-caption-s">Small caption</span><span
+                    class="govuk-heading-s">Small heading</td>
+                <td class="govuk-table__cell">govuk-caption-s</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card govuk-!-margin-top-9">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Body</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header  govuk-!-width-one-half">Sample</th>
+                <th scope="col" class="govuk-table__header">Class</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body">Body</td>
+                <td class="govuk-table__cell">govuk-body</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body-l">Large body</td>
+                <td class="govuk-table__cell">govuk-body-l</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body-s">Small body</td>
+                <td class="govuk-table__cell">govuk-body-s</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+
+
+      <div class="govuk-summary-card govuk-!-margin-top-9">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Text modifiers</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header  govuk-!-width-one-half">Sample</th>
+                <th scope="col" class="govuk-table__header">Class</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Bold</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-weight-bold</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card govuk-!-margin-top-9">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Font size modifiers</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header  govuk-!-width-one-half">Sample</th>
+                <th scope="col" class="govuk-table__header">Class</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-80">Size 80</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-80</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-48">Size 48</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-48</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-36">Size 36</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-36</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-27">Size 27</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-27</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-24">Size 24</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-24</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-19">Size 19</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-19</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-16">Size 16</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-16</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-size-14">Size 14</td>
+                <td class="govuk-table__cell">govuk-body govuk-!-font-size-14</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
