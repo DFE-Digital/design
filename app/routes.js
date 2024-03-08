@@ -34,6 +34,10 @@ router.get("/design-ops/satisfaction-scores", designOpsController.get_sat_scores
 // Redundant routes // 
 // These routes are no longer applicable, due to structure changes, but redirect them to the new pages //
 
+router.get("/tools/inclusivity-calculator",  (req, res) => {
+    return res.redirect(301, '/tools/how-many-users')
+});
+
 router.get("/inside-design/professions/content-design",  (req, res) => {
     return res.redirect(301, '/professions/content-design')
 });
