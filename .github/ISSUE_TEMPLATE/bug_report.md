@@ -7,6 +7,10 @@ assignees: ''
 
 ---
 
+**MUST DO**
+Assign the 'DfE Design' project to this issue
+Assign a label (Documentation, Bug, Enhancement etc)
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
