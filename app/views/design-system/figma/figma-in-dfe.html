@@ -1,0 +1,221 @@
+{% set pageName = "Figma in DfE" %} {% set pageDescription = "The interaction
+designers at DfE give their top tips for getting started with Figma." %} {% set
+selectedNav = "Design system" %} {% set lastUpdated = "April 2024" %} {% set
+backlog_issue_id = "" %} {% extends "layouts/page.html" %} {% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/design-system/figma">Figma</a>
+          </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+       
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+{%markdown%}
+
+These guidelines and strategies aim to help designers who are new to using Figma. They may also be useful to more experienced users. They have been created by designers within our DfE community of practice.  
+
+## Designing to the rules of your environment  
+
+By environment, we mean the website or application for which you are designing.  
+
+You need to understand the limitations and potential of the environment. This will reduce problems when handing over designs to developers and lead to less inconsistencies between the presented design and the final product. 
+
+Understanding the basic mechanics of HTML or CSS is useful.  
+
+You can use the web browsers inspect tool to help understand the nuances and dynamics of a web page and make sure that a design in Figma will look and behave the same as the finished product.  
+
+### Environment exercise 
+
+Open the browser inspector tool (via the right click menu) and start by examining a heading element (e.g. H1) on a page. Note down: 
+
+* the font being used 
+* the font size 
+* whether there is any letter spacing 
+* the line height  
+* the margin below the element before the next text element appears 
+
+Use this data to compare against the design in Figma, ensuring the element is using the same settings. Pay attention to these details for all the elements on a page to improve designs and ensure consistency with the live environment. 
+
+For beginner level users, a good exercise for practicing these skills is taking a screenshot of a web page and pasting it directly into Figma. Then, you can recreate a perfect copy of it, either alongside it or over the top using layers. 
+
+Grounding in the basic rules of webpage and app layout will make using Figma a more intuitive experience. 
+
+## Use the maths information provided 
+
+When you select an element in Figma, in the top right of the screen Figma displays an X and Y co-ordinate plotting where the element is in relation to its containing frame. A value for the element’s width and height is also provided.  
+
+These can be used to manipulate and fine tune the element.  
+
+>For example 
+>
+>If a group of elements should be placed 200 pixels from a left-hand border and when dragged on to the design it is found to be 198 pixels, you can click on the element and in the X field change 198 to 200. 
+>
+>You can use the same method to resize elements by making sure a square is a square or a horizontal rule is the full width of the content area and not 3 pixels short. 
+
+Paying attention to alignment, placing, and sizing will improve the accuracy of a design and make sure it will work when you move through development and into production. It will help improve handovers to other colleagues and remove any potential misunderstanding about element placement. 
+ 
+## Use grids 
+
+Grids allow products to behave in a predictable, responsive way and allow users to recognise patterns more easily, reducing the cognitive load.  
+
+When designing in Figma, you should use the built in grid tool to give a clear guideline when constructing screens. 
+
+If you use the GOV.UK Frontend Figma library, this includes the grid layout used in GOV services. You can access this through the assets tab within Figma. If you do not have the option, fill in a request on the [digital tools slack channel](https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL).   
+
+## Grid exercise 
+
+In the right-hand tool's column, use the Layout grid option to set-up and add a grid to a design as follows: 
+
+* create a pre-set frame using any of the desktop options Figma provides 
+* click the plus symbol next to the Layout grid option 
+* Figma by default adds a 10px grid but this is not what is required in this example 
+* change it by clicking on the 9 square grid icon and in the dropdown menu, changing the option from “grid” to “columns” 
+* GOV services use 4, 3, or 2 columns as a rule, so set the column count to 4. 
+* set the gutter (the distance between each column), GOV services use a 30px gutter so change the 20 to 30. 
+* change the type from ‘Stretch’ to ‘Center’ - this way the grid will be centred in the page no matter what screen size is in use 
+
+GOV services have a grid width of 1200 pixels, which includes 3 gutters of 30 pixels each between the columns. To get the column width subtract the three gutters (90) from 1200 and divide it by 4 (the number of columns) to give 277.5 pixels. (Figma will not handle the half pixel so it will round it up to 278. although 277.5 can be entered). The grid will now appear 
+
+The 4-column grid is now ready to aid the design. For future use it should be saved to a library of grid styles. To do this, click on the 4 dots icon to open the library and click on the plus icon to create a new style. You can then name the grid, for example ‘GDS 4 column for all desktop screens’.  
+
+## Use guides 
+
+Guides are another way to align elements easily.  
+
+When using a grid Figma will by default align things to the grid as they are moved around the screen.  
+
+If you do not use a grid or need an element on the page to align to a different point, guides will help regularly align those to a set point. You can also add horizontal guides to help mark a point on screens where the top or bottom edge of elements need to align. This can be useful to ensure the vertical distances between elements are consistent. 
+
+To add a guide: 
+
+* first switch on the ruler (short cut for this is SHIFT + R) 
+* click and hold the mouse button down when the pointer is inside the ruler and begin dragging a guide (a straight red line) on to the design
+* When the guide is in the correct position release the mouse button
+* To move a guide simply hover the mouse over it and click when the mouse pointer change to pick it back up again
+
+To remove a guide: 
+
+* click and drag the guide back to the rulers
+* select a guide, then press delete 
+* right-click on either the vertical or horizontal ruler, then select Remove all vertical guides or remove all horizontal guides 
+* right-click a guide, then select Remove guide
+
+Once guides are placed, elements dragged on to the canvas will helpfully snap to them speeding things up as the design is constructed. 
+
+## Label layers 
+
+Take the time to label and name elements as they are added.  
+
+Often at the initial stages of the design process it is difficult to recognise what elements will have a longer-term role as a component.  
+
+Duplicating screens of unlabelled elements can cause issues and before long it is easy to end up with an entire canvas of elements without labels. This becomes even more important when designing as part of a team or handing over a file to a colleague.  
+
+It is equally important to group and identify related elements together, because when you start to use functions such as auto-layout the order of layers becomes increasingly important. 
+
+To label a layer, frame or group double click on the name and add a short description, such as red error message. 
+
+## Use frames 
+
+Frames automatically group their contents making it easier to manipulate them. Nesting frames makes this even more powerful.  
+
+Using frames gives you extra functionality, such as: 
+
+* layout grids 
+* auto layout
+* constraints
+* prototyping
+
+Frames can also be styled so they are not simply invisible containers via applying: 
+
+* a fill (or background colour)
+* a stroke (a border or outline)
+* a border radius (to round the corners)
+* an effect such as a drop shadow 
+
+Start by creating a new screen by selecting the frame icon from the menu and then use the dropdown in the right sidebar to select a frame pre-set. 
+
+Pre-set options are listed for popular devices, and this will help when prototyping a design in the future and keep designs looking as close to the real-world environment. 
+
+Having added the main top-level frame try adding a few bespoke frames to it by selecting the frame icon from the menu and drawing them inside. For each one, add a fill colour so they are visible. Now drag the main container frame around on the canvas and note how all the smaller frames are contained within it and move as a part of it. 
+
+Try adding (nesting) further frames inside each of the bespoke frames. On the left-hand sidebar, note the relationship each of these frames has to each other like files inside folders. 
+
+Mastering frames early will make developing skills with Figma easier when progressing to a more advanced stage.  
+
+There's [a useful help article from Figma for more information on using frames](https://help.figma.com/hc/en-us/articles/360041539473-Frames-in-Figma%22%20%EF%B7%9FHYPERLINK%20%22https://help.figma.com/hc/en-us/articles/360041539473-Frames-in-Figma).
+
+## Duplicate it 
+
+Duplicate rather than copy and paste, because it is quicker to do
+
+* CMND + D on a Mac
+* CTRL + D on a PC
+
+versus 
+
+* CMND + C followed by CMND + V on a Mac
+* CTRL + C followed by CTRL + V on a PC to copy
+
+Figma is setup to work better with duplicate. Having duplicated the original element, the user then adjusts the position of that element in relation the original and duplicates again, the third copy will now automatically take that new positioning into account.  
+
+### Duplicate exercise 
+
+Try this: 
+
+* take a rectangle that needs to appear three times in a row (each one being 20px apart) 
+* select the rectangle and duplicate it
+* Figma adds a new one to the side but a different distance from the original
+* adjust the distance from the original to 20px
+* duplicate again 
+
+The third rectangle now appears on the end of the row perfectly set 20px from its neighbour. 
+ 
+Figma recognised the pattern and saved the user time. This would not be possible with copy and paste. 
+
+Users who start using the duplicate shortcut in Figma can find it becomes their most well used key combination. 
+
+
+## Auto-layout 
+
+Auto layout is a property that can be added to frames (it will only work on frames – although applying it to a group will convert it automatically into a frame). It lets users create designs that grow to fill or shrink to fit, and automatically adapt as their contents change.  
+
+This is extremely helpful when: 
+
+* adding new layers
+* accommodating longer text strings
+* maintaining alignment as designs evolve 
+
+It mimics perfectly how the finished product will behave and lets rules be set for things like margins, padding, and responsive behaviours.  
+
+The earlier you begin experimenting with auto-layouts the better for your development. In the longer-term you will become faster and more efficient when designing and prototyping.  
+
+There’s a helpful [introduction to auto-layout from Figma](https://help.figma.com/hc/en-us/articles/360040451373-Explore-auto-layout-properties) to get you started. 
+
+ 
+
+
+{%endmarkdown%}
+  </div>
+</div>
+
+{% endblock %}
