@@ -22,7 +22,7 @@
     "cheerio": "^1.0.0-rc.12",
     "clipboard": "^2.0.11",
     "compression": "^1.7.4",
-    "dfe-frontend-alpha": "^1.0.1",
+    "dfe-webfrontend": "^1.1.9",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-force-https": "^1.0.0",

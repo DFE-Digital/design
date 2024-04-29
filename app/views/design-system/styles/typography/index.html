@@ -70,13 +70,12 @@ changeDate: '24 February 2024'
       <h2 class="govuk-heading-l">Overview</h2>
 
       <p>By default, you must use the <a href="https://design-system.service.gov.uk/styles/typography/">GOV Frontend
-          typography</a> and GDS Transport typeface for sites on GOV.UK, <strong>except</strong> for the following
-        situations:</p>
+          typography</a> and GDS Transport typeface for sites on GOV.UK</p> 
+          
+          <p>If your site is on education.gov.uk, you must use the inter typeface.</p>
+          <p>The only exception to this is where you are using education.gov.uk to host a service in private beta and will eventually be on service.gov.uk domain. You're fine to use the GDS Transport and GOV.UK header in this instance.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>all internally-facing products for DfE staff</li>
-        <li>all products provided on the education.gov.uk domain</li>
-      </ul>
+          <p>If you're unsure, <a href="/design-ops">contact DesignOps</a>.</p>
 
       <p>To ensure your service meets the <a
           href="https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk">requirements
@@ -106,7 +105,7 @@ changeDate: '24 February 2024'
       </dl>
 
 
-      <h2 class="govuk-heading-l">Import the typeface</h2>
+      <h2 class="govuk-heading-l">Import the Inter typeface</h2>
 
       <p>We are migrating to use the web-font <a href="https://rsms.me/inter/" target="_blank">Inter</a> in our products
         and services that are not provided on GOV.UK.</p>
@@ -115,38 +114,30 @@ changeDate: '24 February 2024'
         adding the following imports to your SCSS/CSS files, otherwise you'll need to bundle the physical fonts in your
         build. Styles will drop to system fonts if the internet is not available.</p>
 
-      <div class="govuk-inset-text">
-        <p>Inter is automatically included in Figma in the font options within the text panel.</p>
-      </div>
 
-      <h3 class="govuk-heading-m">Configuration</h3>
+      <h3 class="govuk-heading-m">Create a settings.scss file</h3>
 
-      <p>Before all other imports, reference the Inter font.</p>
+      <div class="govuk-inset-text">This guidance is accurate up to and including version <strong>13.16.2</strong> of the GOV.UK Prototype kit.</div>
+
+      <p>If something doesn't work <a href="/design-ops">contact DesignOps</a> for help so we can understand the
+        problem and improve guidance where possible.</p>
+
+      <p>If it doesn't exist, create a settings.scss file in <strong>/app/assets/sass</strong> folder.</p>
+
 
       <div class="govuk-summary-card">
         <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">scss/css file</h2>
+          <h2 class="govuk-summary-card__title">settings.scss file</h2>
         </div>
         <div class="govuk-summary-card__content">
+          <p>Add the following code to the file.</p>
           <code>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');</code>
-        </div>
-      </div>
-
-      <p>On the next line, after importing Inter, but before the inclusion of GOV Frontend styles</p>
-
-      <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">scss/css file</h2>
-        </div>
-        <div class="govuk-summary-card__content">
           <code>$govuk-font-family: 'Inter', sans-serif;</code>
         </div>
       </div>
 
       <p>All styles which use the GDS Transport typeface will now be replaced with the Inter typeface.</p>
       <p>You do not need to use different classes.</p>
-
-
 
       <nav class="govuk-pagination govuk-pagination--block govuk-!-margin-top-9" role="navigation"
         aria-label="Pagination">

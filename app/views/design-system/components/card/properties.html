@@ -1,13 +1,13 @@
 {% extends "layouts/content-full-width.html" %}
 
-{% set pageName = "Header" %}
-{% set pageDescription = "Use the DfE header for services hosted on education.gov.uk" %}
+{% set pageName = "Card" %}
+{% set pageDescription = "Use the DfE card component when you need to group content in a visually appealing way." %}
 {% set selectedNav = "Design system" %}
 {% set parentSection = "Components"%}
 {% set isChildSection = "true"%}
 {% set isSubNavSection = "true" %}
 {% set lastUpdated = "" %}
-{% set backlog_issue_id = "6" %}
+{% set backlog_issue_id = "13" %}
 
 
 {% block hero %}
@@ -25,7 +25,7 @@
           <a class="govuk-breadcrumbs__link" href="/design-system/components">Components</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          Header
+          Card
         </li>
       </ol>
     </div>
@@ -36,14 +36,14 @@
         <nav class="app-sub-navigation" aria-label="Application menu">
           <ul class="app-sub-navigation__list">
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" href="/design-system/components/header">Guidance</a>
+              <a class="app-sub-navigation__link" href="/design-system/components/card">Guidance</a>
             </li>
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" href="/design-system/components/header/variants">Variants</a>
+              <a class="app-sub-navigation__link" href="/design-system/components/card/variants">Variants</a>
             </li>
             <li class="app-sub-navigation__item">
               <a class="app-sub-navigation__link" aria-current="page"
-                href="/design-system/components/header/properties">Properties</a>
+                href="/design-system/components/card/properties">Properties</a>
             </li>
           </ul>
         </nav>
@@ -141,7 +141,7 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">headerActionLinks</td>
             <td class="govuk-table__cell">Array</td>
-            <td class="govuk-table__cell">An array of objects where each object contains `url` and `label` for action
+            <td class="govuk-table__cell">An array of objects where each object may contain `url` and `label` for action
               links in the header.</td>
 
           </tr>

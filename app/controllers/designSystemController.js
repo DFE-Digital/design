@@ -13,7 +13,7 @@ exports.get_index = async function (req, res) {
 
 
 exports.get_frontend = async function (req, res) {
-    const packageName = 'dfe-frontend-alpha';
+    const packageName = 'dfe-webfrontend';
     axios
         .get(`https://registry.npmjs.org/${packageName}`)
         .then((response) => {
