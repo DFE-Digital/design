@@ -1,4 +1,3 @@
-
 {% include './_feedback.html' %}
 {{ govukFooter({
 navigation: [
@@ -8,6 +7,9 @@ width: "two-thirds",
 columns: 2,
 items: [
 {
+href: "https://github.com/DFE-Digital/design/issues/"+backlog_issue_id,
+text: "GitHub issue "+backlog_issue_id
+},{
 href: "/accessibility-statement",
 text: "Accessibility statement"
 },

@@ -8,11 +8,12 @@
   <meta charset="utf-8">
   <title>
     {% if seoPageName %}{{ seoPageName }}
-    {% elseif pageName %}{{ pageName }}{% endif %} - 
+    {% elseif pageName %}{{ pageName }}{% endif %} -
     {% if parentSection == "ncs-design-system" %}National Careers Service{% endif %}
     Design Manual - Department for Education
   </title>
-  <meta name="description" content="{% if seoPageDescription %}{{ seoPageDescription }}{% elseif pageDescription %}{{ pageDescription }}{% endif %}">
+  <meta name="description"
+    content="{% if seoPageDescription %}{{ seoPageDescription }}{% elseif pageDescription %}{{ pageDescription }}{% endif %}">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#00294a">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,48 +24,54 @@
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
   <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
   <link href="/assets/css/app.min.css" rel="stylesheet">
-  <meta property="og:url" content="https://design.education.gov.uk" />
+  <link rel="canonical" href="{{canonical}}" />
+  <meta property="og:url" content="{{canonical}}" />
   <meta property="og:site_name" content="Department for Education Design Manual" />
   <meta property="og:title" content="{{ pageName }}" />
-  <meta property="og:description" content="{% if seoPageDescription %}{{ seoPageDescription }}{% elseif pageDescription %}{{ pageDescription }}{% endif %}" />
+  <meta property="og:description"
+    content="{% if seoPageDescription %}{{ seoPageDescription }}{% elseif pageDescription %}{{ pageDescription }}{% endif %}" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
-  <meta property="og:image" content="{% if customOGImage %}{{ customOGImage }}{% else %}https://design.education.gov.uk/assets/images/dm_og.png{% endif %}" />
+  <meta property="og:image"
+    content="{% if customOGImage %}{{ customOGImage }}{% else %}https://design.education.gov.uk/assets/images/dm_og.png{% endif %}" />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@dfe_digital">
   <meta name="twitter:creator" content="@dfe_digital">
   <meta name="twitter:image:alt" content="Department for Education Design Manual">
-  <meta name="twitter:image" content="{% if customOGImage %}{{ customOGImage }}{% else %}https://design.education.gov.uk/assets/images/dm_og.png{% endif %}" />
+  <meta name="twitter:image"
+    content="{% if customOGImage %}{{ customOGImage }}{% else %}https://design.education.gov.uk/assets/images/dm_og.png{% endif %}" />
   <meta name="google-site-verification" content="78BmMoejRsC4auIyTs5JLkClgxvWYGDAYMIikFxTNPA" />
   <script src="https://kit.fontawesome.com/3015bc434a.js" crossorigin="anonymous"></script>
   {% block head %}{% endblock %}
 </head>
+
 <body class="govuk-template__body js-enabled">
   <script>if ('noModule' in HTMLScriptElement.prototype) { document.body.classList.add('govuk-frontend-supported'); }</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
-  
+
   {% include 'layouts/_cookiebanner.html' %}
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-  
+
   {% include 'layouts/_topnav.html' %}
   {% include 'layouts/_services.html' %}
-  
+
   {% block header %}
-    {% include 'layouts/_header.html' %}
+  {% include 'layouts/_header.html' %}
   {% endblock %}
-  
+
   {% block hero %}{% endblock %}
-  
+
   {% block main %}
-    <main class="govuk-main-wrapper {% if zeroMainMargin == 'true' %}govuk-!-margin-0 govuk-!-padding-0{% endif %}" id="main-content" role="main">
-      {% block content %}{% endblock %}
-    </main>
+  <main class="govuk-main-wrapper {% if zeroMainMargin == 'true' %}govuk-!-margin-0 govuk-!-padding-0{% endif %}"
+    id="main-content" role="main">
+    {% block content %}{% endblock %}
+  </main>
   {% endblock %}
-  
+
   {% block footer %}
-    {% include 'layouts/_footer.html' %}
+  {% include 'layouts/_footer.html' %}
   {% endblock %}
-  
+
   <script src="/assets/js/cookies.min.js"></script>
   <script src="/assets/js/feedback.min.js"></script>
   <script src="/assets/js/dfefrontend.min.js"></script>
@@ -76,4 +83,5 @@
     initAll();
   </script>
 </body>
+
 </html>
