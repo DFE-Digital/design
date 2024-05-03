@@ -18,12 +18,12 @@ Run `npm i nodemon -g`
 Add a .env file and add the following keys:
 
 ```
-recaptchaPublic=x
-recaptchaSecret=x
-feedbackTemplateID=x
-notifyKey=preprod-x
 BASE_URL=http://localhost:3066
-sessionkey=x
+sessionkey=xxx
+apikey=xxx
+cmsurl=xxx
+airtableFeedbackKey=xxx
+airtableFeedbackBase=xxx
 ```
 Contact DesignOps for the keys to use in your local environment. These must never be checked in to source code - the file is included in the .GITIGNORE file.
 

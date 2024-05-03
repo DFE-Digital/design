@@ -64,18 +64,6 @@ gulp.task('process-images', async function () {
     .pipe(gulp.dest('public/assets/images'))
 })
 
-gulp.task('nunjucksRender', function () {
-  return gulp
-    .src('app/views/**/*.html')
-    .pipe(
-      nunjucksRender({
-        path: ['app/views/'] // set the path to your templates here
-      })
-    )
-    .pipe(gulp.dest('public/'))
-    .pipe(browserSync.stream())
-})
-
 // Set up a task to start the server and watch files for changes
 gulp.task('watch', function () {
   browserSync.init({
