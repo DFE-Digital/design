@@ -10,10 +10,6 @@ exports.get_index = async function (req, res) {
   return res.render('design-system/index')
 }
 
-exports.get_frontend = async function (req, res) {
-  res.redirect('design-system/dfe-frontend', 301)
-}
-
 exports.get_our_work = async function (req, res) {
   console.log('our work')
 

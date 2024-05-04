@@ -15,7 +15,7 @@ const professionsController = require('./controllers/professionsController.js')
 const designOpsController = require('./controllers/designOpsController.js')
 const feedbackController = require('./controllers/feedbackController.js')
 
-router.get('/frontend', designSystemController.get_frontend)
+
 router.get('/design-system', designSystemController.get_index)
 
 router.get('/our-work', designSystemController.get_our_work)
