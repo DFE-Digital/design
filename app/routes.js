@@ -37,7 +37,7 @@ router.get('/tools/inclusivity-calculator', (req, res) => {
     return res.redirect(301, '/tools/how-many-users')
 })
 
-router.get('/inside-design/professions/content-design', (req, res) => {
+router.get('/professions/content-design', (req, res) => {
     return res.redirect(301, '/professions/content-design')
 })
 

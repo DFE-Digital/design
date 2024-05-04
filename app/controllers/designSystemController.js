@@ -11,21 +11,7 @@ exports.get_index = async function (req, res) {
 }
 
 exports.get_frontend = async function (req, res) {
-  const packageName = 'dfe-webfrontend'
-  axios
-    .get(`https://registry.npmjs.org/${packageName}`)
-    .then((response) => {
-      const version = response.data['dist-tags'].latest
-      const lastUpdatedv = new Date(response.data.time.modified).toISOString()
-
-      res.render('design-system/dfe-frontend/index.html', {
-        version,
-        lastUpdatedv
-      })
-    })
-    .catch((error) => {
-      console.error(error)
-    })
+  res.redirect('design-system/dfe-frontend/index.html', 301)
 }
 
 exports.get_our_work = async function (req, res) {
