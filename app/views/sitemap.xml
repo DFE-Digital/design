@@ -5,17 +5,12 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://design.education.gov.uk/</loc>
+  <loc>https://design.education.gov.uk</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://design.education.gov.uk/cookie-policy</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/frontend</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -155,7 +150,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/</loc>
+  <loc>https://design.education.gov.uk/design-system/ncs-design-system</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -220,7 +215,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/accessibility/understanding-wcag/</loc>
+  <loc>https://design.education.gov.uk/accessibility/understanding-wcag</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -270,7 +265,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/tools/inclusivity-calculator</loc>
+  <loc>https://design.education.gov.uk/tools/how-many-users</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -295,7 +290,7 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/styles/</loc>
+  <loc>https://design.education.gov.uk/design-system/styles</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -310,42 +305,42 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/</loc>
+  <loc>https://design.education.gov.uk/design-system</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/content-design/</loc>
+  <loc>https://design.education.gov.uk/design-system/content-design</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/language-we-use/</loc>
+  <loc>https://design.education.gov.uk/design-system/language-we-use</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/style-guide/</loc>
+  <loc>https://design.education.gov.uk/design-system/style-guide</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/content-strategies/</loc>
+  <loc>https://design.education.gov.uk/design-system/content-strategies</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/how-we-write-emails/</loc>
+  <loc>https://design.education.gov.uk/design-system/how-we-write-emails</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/types-of-content-we-publish/</loc>
+  <loc>https://design.education.gov.uk/design-system/types-of-content-we-publish</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/publishing-content-on-govuk/</loc>
+  <loc>https://design.education.gov.uk/design-system/publishing-content-on-govuk</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -360,7 +355,7 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/prototype-kit/</loc>
+  <loc>https://design.education.gov.uk/design-system/prototype-kit</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -390,7 +385,7 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/dfe-frontend/</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -415,7 +410,7 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-ops/</loc>
+  <loc>https://design.education.gov.uk/design-ops</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -435,11 +430,6 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/tools/inclusivity-calculator/</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
   <loc>https://design.education.gov.uk/design-system/styles/typography/examples</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
@@ -455,7 +445,7 @@
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/components/</loc>
+  <loc>https://design.education.gov.uk/design-system/components</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
@@ -465,7 +455,7 @@
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/patterns/</loc>
+  <loc>https://design.education.gov.uk/design-system/patterns</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
