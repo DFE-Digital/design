@@ -150,11 +150,6 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://design.education.gov.uk/professions/content-design</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
@@ -360,26 +355,6 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/our-approach</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/branding-guidelines</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/content-style-guide</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
   <loc>https://design.education.gov.uk/tools</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
@@ -460,135 +435,8 @@
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/header</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/search</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/banner-notification</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/panel</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/progress-bar</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/ticket-panel</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/button</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/highlight-box</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/image-headers</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/branding-guidelines/colour</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/branding-guidelines/images</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/branding-guidelines/logo</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
   <loc>https://design.education.gov.uk/design-system/components/header/examples/everything</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.33</priority>
 </url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/header/top-header-example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/search/example-search-bar</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/search/example-search-form</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/search/example-search-box</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/banner-notification/example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/panel/example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/progress-bar/example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/ticket-panel/example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/button/example-primary</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/highlight-box/example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/image-headers/homepage-header-example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/design-system/ncs-design-system/components/image-headers/page-header-example</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-
-
 </urlset>
