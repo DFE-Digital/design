@@ -11,7 +11,7 @@ exports.get_index = async function (req, res) {
 }
 
 exports.get_frontend = async function (req, res) {
-  res.redirect('design-system/dfe-frontend/index.html', 301)
+  res.redirect('design-system/dfe-frontend', 301)
 }
 
 exports.get_our_work = async function (req, res) {
