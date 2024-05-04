@@ -1,3 +1,6 @@
+{% extends "layouts/page.html" %}
+{% set canonical = "https://design.education.gov.uk/tools"%}
+
 {% set pageName = "Tools" %}
 {% set pageDescription = "Tools you can use to help understand users, build better services and get things done more
 easily." %}
@@ -6,7 +9,6 @@ easily." %}
 {% set lastUpdated = "February 2024" %}
 {% set backlog_issue_id = "173" %}
 
-{% extends "layouts/page.html" %}
 
 {% block hero %}
 <section class="dfe-page-hero">
@@ -27,7 +29,7 @@ easily." %}
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-     
+
 
         <h2 class="govuk-heading-l">Tools we use</h2>
 
@@ -43,7 +45,7 @@ easily." %}
                 </dt>
                 <dd class="govuk-summary-list__value">
                     Cloud platform hosting. See <a class="govuk-link govuk-link--no-visited-state"
-                        href="https://technical-guidance.education.gov.uk/infrastructure/hosting/azure-cip/"
+                        href="https://technical-guidance.education.gov.uk/infrastructure/hosting/azure-cip"
                         target="_blank">additional guidance for using Azure</a>.
                 </dd>
             </div>
@@ -60,7 +62,7 @@ easily." %}
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key" id="figma">
-                    <a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/"
+                    <a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com"
                         target="_blank">Figma and FigJam</a>
                 </dt>
                 <dd class="govuk-summary-list__value">
@@ -69,7 +71,7 @@ easily." %}
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    <a class="govuk-link govuk-link--no-visited-state" href="https://github.com/"
+                    <a class="govuk-link govuk-link--no-visited-state" href="https://github.com"
                         target="_blank">GitHub</a>
                 </dt>
                 <dd class="govuk-summary-list__value">
@@ -79,7 +81,7 @@ easily." %}
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key" id="hemingway">
-                    <a class="govuk-link govuk-link--no-visited-state" href="https://hemingwayapp.com/"
+                    <a class="govuk-link govuk-link--no-visited-state" href="https://hemingwayapp.com"
                         target="_blank">Hemingway</a>
                 </dt>
                 <dd class="govuk-summary-list__value">
@@ -99,7 +101,7 @@ easily." %}
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    <a class="govuk-link govuk-link--no-visited-state" href="https://logit.io/"
+                    <a class="govuk-link govuk-link--no-visited-state" href="https://logit.io"
                         target="_blank">logit.io</a>
                 </dt>
                 <dd class="govuk-summary-list__value">
@@ -119,16 +121,17 @@ easily." %}
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    <a class="govuk-link govuk-link--no-visited-state" href="https://www.smaply.com/"
+                    <a class="govuk-link govuk-link--no-visited-state" href="https://www.smaply.com"
                         target="_blank">Smaply</a>
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    Digital service for user journey mapping and service blueprints. Speak to <a href="/design-ops">DesignOps</a> for more information.
+                    Digital service for user journey mapping and service blueprints. Speak to <a
+                        href="/design-ops">DesignOps</a> for more information.
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    <a class="govuk-link govuk-link--no-visited-state" href="https://code.visualstudio.com/"
+                    <a class="govuk-link govuk-link--no-visited-state" href="https://code.visualstudio.com"
                         target="_blank">VS Code</a>
                 </dt>
                 <dd class="govuk-summary-list__value">
@@ -257,7 +260,8 @@ easily." %}
 
         <h2 class="govuk-heading-l">Tools that cannot be used</h2>
 
-        <p>These tools have not been approved in the Department for Education and must not be used by internal staff or contractors.</p>
+        <p>These tools have not been approved in the Department for Education and must not be used by internal staff or
+            contractors.</p>
 
         <p>Requests to use these services will not be considered.</p>
 
@@ -298,7 +302,7 @@ easily." %}
                         href="#figma">Figma</a>
                 </dd>
             </div>
-           
+
         </dl>
 
         <h2 class="govuk-heading-l" id="request-access">Requesting digital tools access</h2>
@@ -340,7 +344,7 @@ easily." %}
         <div class="govuk-summary-card">
             <div class="govuk-summary-card__title-wrapper">
                 <h2 class="govuk-summary-card__title">Should your product be on GOV.UK?</h2>
-                
+
             </div>
             <div class="govuk-summary-card__content">
                 <p>This tool will help you to determine whether your product should be on or connected to GOV.UK and
@@ -360,5 +364,5 @@ easily." %}
 
 {% block related %}
 <h2 class="govuk-heading-m">Related content</h2>
-<p><a href="/design-ops/tools">Tools you can and cannot use in DfE</a>.</p>
+<p><a href="/tools">Tools you can and cannot use in DfE</a>.</p>
 {% endblock%}

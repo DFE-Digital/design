@@ -13,19 +13,7 @@
 {% block hero %}
 <section class="dfe-page-header">
   <div class="dfe-width-container">
-    <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          Styles
-        </li>
-      </ol>
-    </div>
+   
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
@@ -33,13 +21,14 @@
         <nav class="app-sub-navigation" aria-label="Application menu">
           <ul class="app-sub-navigation__list">
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link"href="/design-system/components/header">Guidance</a>
+              <a class="app-sub-navigation__link" href="/design-system/components/header">Guidance</a>
             </li>
             <li class="app-sub-navigation__item">
               <a class="app-sub-navigation__link" href="/design-system/components/header/variants">Variants</a>
             </li>
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link"  aria-current="page" href="/design-system/components/header/properties">Properties</a>
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/components/header/properties">Properties</a>
             </li>
           </ul>
         </nav>
@@ -66,161 +55,118 @@
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Name</th>
-            <th scope="col" class="govuk-table__header">Type</th>
-            <th scope="col" class="govuk-table__header">Required</th>
-            <th scope="col" class="govuk-table__header">Description</th>
+            <th class="govuk-table__header">Parameter Name</th>
+            <th class="govuk-table__header">Type</th>
+            <th class="govuk-table__header">Description</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>showNav</strong>
-            </td>
-            <td class="govuk-table__cell">boolean</td>
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">Set to "true" to show the navigation links in the header.</td>
+            <td class="govuk-table__cell">showNav</td>
+            <td class="govuk-table__cell">Boolean</td>
+            <td class="govuk-table__cell">Controls whether the navigation menu is displayed.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>showSearch</strong>
-            </td>
-            <td class="govuk-table__cell">boolean</td>
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">Set to "true" to show the site search input form.</td>
+            <td class="govuk-table__cell">showSearch</td>
+            <td class="govuk-table__cell">Boolean</td>
+            <td class="govuk-table__cell">Controls whether the search functionality is displayed.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>showHeaderActionLinks</strong>
-            </td>
-            <td class="govuk-table__cell">boolean</td>
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">Set to "true" to show list if items in the top right of page.</td>
+            <td class="govuk-table__cell">showUserName</td>
+            <td class="govuk-table__cell">Boolean</td>
+            <td class="govuk-table__cell">Controls whether the username or user-related information is displayed.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>homeHref</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">The href of the link for the logo and mobile home link in the navigation
-              links. Defaults to "/".</td>
+            <td class="govuk-table__cell">showHeaderActionLinks</td>
+            <td class="govuk-table__cell">Boolean</td>
+            <td class="govuk-table__cell">Controls whether the header action links are displayed.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>ariaLabel</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">Aria label for the logo href. Defaults to "DfE homepage".</td>
+            <td class="govuk-table__cell">logoPath</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">Specifies the path to the logo images used in the header.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>logoPath</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">Yes</td>
-            <td class="govuk-table__cell">Set this to the local path for images. In version 13 of the prototype kit,
-              set this is 'public/images'.</td>
+            <td class="govuk-table__cell">logoAltText</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">Provides the alternative text for the logo images.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>selectedNav</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">Pass in a value from the view which matches the
-              <code>primaryLinks.label</code> and it will add the class
-              <code>dfe-header__navigation-item--current</code> to the corresponding nav item.
-            </td>
+            <td class="govuk-table__cell">classes</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">Additional CSS classes that might be added to the header element.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>headerActionLinks</strong>
-            </td>
-            <td class="govuk-table__cell">array</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">Array of links for use in the header on the top right.</td>
+            <td class="govuk-table__cell">attributes</td>
+            <td class="govuk-table__cell">Object</td>
+            <td class="govuk-table__cell">Additional HTML attributes for the header element, handled in a loop for each
+              attribute-value pair.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>headerActionLinks[].url</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">The href of a navigation item in the header. If blank, it will just display
-              the label</td>
+            <td class="govuk-table__cell">homeHref</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">Specifies the href for the homepage link associated with the logo.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>headerActionLinks[].label</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">The label of the item in the header.</td>
+            <td class="govuk-table__cell">ariaLabel</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">Accessibility label for the logo link, providing a text alternative for screen
+              readers if not set, defaults to "DfE homepage".</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>primaryLinks</strong>
-            </td>
-            <td class="govuk-table__cell">array</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">Array of navigation links for use in the header.</td>
+            <td class="govuk-table__cell">headerActionLinks</td>
+            <td class="govuk-table__cell">Array</td>
+            <td class="govuk-table__cell">An array of objects where each object contains `url` and `label` for action
+              links in the header.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>primaryLinks[].url</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">The href of a navigation item in the header.</td>
+            <td class="govuk-table__cell">searchAction</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">Specifies the URL for the POST action on the search form.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>primaryLinks[].label</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">The label of a navigation item in the header.</td>
+            <td class="govuk-table__cell">searchInputName</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">Specifies the name attribute for the search input, defaulting to
+              "search-field" if not provided.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>service</strong>
-            </td>
-            <td class="govuk-table__cell">object</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">Object containing the *name* of the service.</td>
+            <td class="govuk-table__cell">service</td>
+            <td class="govuk-table__cell">Object</td>
+            <td class="govuk-table__cell">An object containing `serviceUrl` and the `name` of the service.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>attributes</strong>
-            </td>
-            <td class="govuk-table__cell">object</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">Any extra HTML attributes (for example data attributes) to add to the header
-              container.</td>
+            <td class="govuk-table__cell">primaryLinks</td>
+            <td class="govuk-table__cell">Array</td>
+            <td class="govuk-table__cell">An array of objects for primary navigation links, where each object contains
+              `url` and `label`.</td>
+
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>searchAction</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">The search action endpoint. Defaults to "/search".</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <strong>searchInputName</strong>
-            </td>
-            <td class="govuk-table__cell">string</td>
-            <td class="govuk-table__cell">No</td>
-            <td class="govuk-table__cell">The name for the search field. Defaults to "searchterm".</td>
+            <td class="govuk-table__cell">selectedNav</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">A parameter used to mark the current navigation item as active. You can pass it an object set in a view, for example: {% set view = 'Home' %}</td>
+
           </tr>
         </tbody>
       </table>
 
 
-    
+
 
     </div>
   </div>

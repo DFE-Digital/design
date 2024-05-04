@@ -1,0 +1,90 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Card" %}
+{% set pageDescription = "Use the DfE card component when you need to group content in a visually appealing way." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Components"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "" %}
+{% set backlog_issue_id = "13" %}
+
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+   
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/components/card">Guidance</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/components/card/variants">Variants</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/components/card/properties">Properties</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <h2 class="govuk-heading-l">Guidance</h2>
+
+      <p>The card component is a versatile user interface element used to display grouped information in a visually appealing and organised way.</p>
+      <p>They can enhance user interaction and content presentation across various applications and devices.</p>
+
+  
+      <h3 class="govuk-heading-m">Test as plain content first</h3>
+      <p>Cards add additional load to the page, so before using them, test your content as plain content.</p>
+    
+
+      <h2 class="govuk-heading-l" id="services">Services using this component</h2>
+
+      <p>The following services are using this component:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+        <li>
+          <a href="https://design.education.gov.uk/" class="govuk-link" target="_blank">Design manual</a>
+        </li>
+        <li>
+          <a href="https://service-assessments.education.gov.uk" class="govuk-link" target="_blank">Service assessment service</a>
+        </li>
+        <li>
+          <a href="https://design-histories.education.gov.uk" class="govuk-link" target="_blank">Design histories</a>
+        </li>
+        <li>
+          <a href="https://user-research.education.gov.uk" class="govuk-link" target="_blank">User research manual</a>
+        </li>
+        <li>
+          <a href="https://standards.education.gov.uk" class="govuk-link" target="_blank">Standards manual</a>
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-l" id="improve">Help us improve this component</h2>
+
+      <p>To improve this component based on user needs and research, you can contribute  on the <a href="https://github.com/DFE-Digital/dfe-frontend/issues/13" class="govuk-link"
+            target="_blank">Card - Component #13</a> project issue.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

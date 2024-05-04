@@ -1,0 +1,128 @@
+{% set pageName = "When to use DfE Frontend" %}
+{% set canonical = "https://design.education.gov.uk/design-system/dfe-frontend" %}
+{% set pageDescription = "Using the frontend styles, components, and patterns in Department for Education services." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "May 2024" %}
+{% set backlog_issue_id = "82" %}
+
+
+{% extends "layouts/content-full-width.html" %}
+
+{% block hero %}
+<section class="dfe-page-header govuk-!-padding-bottom-5">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          DfE Frontend
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-s">Version</h2>
+        <strong class="govuk-tag">{{version}}</strong>
+        <strong class="govuk-tag">Alpha</strong>
+      </div>
+
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-s">Last release</h2>
+        <p class="govuk-!-margin-bottom-0">{{lastUpdatedv | date('D MMM YYYY')}}</p>
+      </div>
+
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-s">Package</h2>
+        <p class="govuk-!-margin-bottom-0"><a href="https://www.npmjs.com/package/dfe-webfrontend" target="_blank"
+            class="govuk-link">NPM Package</a></p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <h2 class="govuk-heading-l">Using DfE Frontend to extend GOV Frontend</h2>
+
+      <p>You cannot use DfE Frontend on it's own, it is not a replacement for <a
+          href="https://frontend.design-system.service.gov.uk/">GOV.UK Frontend</a>. </p>
+
+      <p>Follow the <a href="/design-system/getting-started">getting started</a> guidance for installing DfE Frontend
+      </p>
+
+      <p>Once installed, you can then make use of <a href="/design-system/styles">styles</a>, <a
+          href="/design-system/components">components</a>, and <a href="/design-system/patterns">patterns</a> in the
+        design system.</p>
+
+      <h2 class="govuk-heading-l">When to use DfE Frontend</h2>
+
+      <p>Use DfE Frontend when your product or service is:</p>
+
+      <ul>
+        <li>for internal staff</li>
+        <li>provided on the education.gov.uk domain</li>
+        <li>provided on service.gov.uk and you want to use components not in the GOV.UK Design System.</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Why you would use DfE Frontend</h2>
+
+      <p>There are instances where a component or pattern doesn't exist in the GOV.UK Design System, or, there is a
+        specific use-case scenario which means something specific to DfE is needed.</p>
+
+      <p>This is where DfE Frontend comes in. You can use components and patterns from DfE Frontend in your products and
+        services to meet these needs consistently.</p>
+      <p>If you build something custom, you should <a href="#contributions">contribute it back into the design
+          system</a> for others to use. You can do this by making it available in DfE Frontend.</p>
+      <p>Working in the open, contributing to common patterns and components, is a requirement of <a
+          href="https://apply-the-service-standard.education.gov.uk/service-standard/13-use-common-standards-components-patterns">point
+          13 of the Government Service Standard</a>.</p>
+
+
+      <h2 class="govuk-heading-l" id="contributions">Contributions</h2>
+
+      <p>DfE Frontend is managed by the <a href="/design-ops">DesignOps team</a> and accepts contributions from the
+        design community.</p>
+      <p>If you are building services and you create custom components or patterns which are not in the GOV.UK Design
+        System, you must contribute these to the DfE Design System.</p>
+
+      <p>You should also contribute back to the <a href="https://github.com/orgs/alphagov/projects/43/views/1"
+          target="_blank">GOV.UK Design System backlog</a>.</p>
+
+      <p>You can submit contributions in the following ways:</p>
+
+      <ul>
+        <li><a href="https://github.com/DFE-Digital/dfe-frontend/issues" target="_blank">create an issue</a> in the
+          repository</li>
+        <li>Make the change as a pull request on the <a href="https://github.com/DFE-Digital/dfe-frontend"
+            target="_blank">repository</a></li>
+        <li><a href="mailto:design.ops@education.gov.uk?subject=DfE Frontend suggestion">email DesignOps</a> with your
+          suggestion</li>
+      </ul>
+
+
+    </div>
+  </div>
+
+  {% endblock %}

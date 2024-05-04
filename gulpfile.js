@@ -2,7 +2,6 @@ const gulp = require('gulp')
 const copy = require('gulp-copy')
 const cleanCSS = require('gulp-clean-css')
 const rename = require('gulp-rename')
-const replace = require('gulp-replace')
 const sass = require('gulp-sass')(require('sass'))
 const uglify = require('gulp-uglify')
 const webp = require('gulp-webp')
@@ -28,7 +27,7 @@ gulp.task('copy-govuk-js', function () {
 
 gulp.task('copy-dfefrontend-js', function () {
   return gulp
-    .src('node_modules/dfe-frontend-alpha/dist/dfefrontend.js')
+    .src('node_modules/dfe-webfrontend/dist/dfefrontend.js')
     .pipe(copy('app/assets/js', { prefix: 3 }))
 })
 
@@ -42,13 +41,13 @@ gulp.task(
       .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest('public/assets/js'))
       .pipe(browserSync.stream())
-  }),
+  })
 )
 
 gulp.task('copy-assets', function () {
   return gulp
     .src(
-      'node_modules/dfe-frontend-alpha/packages/assets/**/*.{jpg,jpeg,png,gif,svg}',
+      'node_modules/dfe-webfrontend/packages/assets/**/*.{jpg,jpeg,png,gif,svg}'
     )
     .pipe(copy('app/assets/images', { prefix: 6 }))
 })
@@ -65,24 +64,12 @@ gulp.task('process-images', async function () {
     .pipe(gulp.dest('public/assets/images'))
 })
 
-gulp.task('nunjucksRender', function () {
-  return gulp
-    .src('app/views/**/*.html')
-    .pipe(
-      nunjucksRender({
-        path: ['app/views/'], // set the path to your templates here
-      }),
-    )
-    .pipe(gulp.dest('public/'))
-    .pipe(browserSync.stream())
-})
-
-//Set up a task to start the server and watch files for changes
+// Set up a task to start the server and watch files for changes
 gulp.task('watch', function () {
   browserSync.init({
-     proxy: 'http://localhost:3066',
-     files: ['app/views/**/*.*'],
-     reloadDelay: 2000,
+    proxy: 'http://localhost:3066',
+    files: ['app/views/**/*.*'],
+    reloadDelay: 2000
   })
 
   gulp.watch('app/assets/scss/**/*.scss', gulp.series('process-scss'))
@@ -90,16 +77,15 @@ gulp.task('watch', function () {
   gulp.watch('app/assets/images/**/*.png', gulp.series('process-images'))
   gulp.watch('app/assets/images/**/*', gulp.series('process-images-copy'))
   gulp.watch(
-    'node_modules/dfe-frontend-alpha/packages/assets/**/*.{jpg,jpeg,png,gif,svg}',
-    gulp.series('copy-assets'),
+    'node_modules/dfe-webfrontend/packages/assets/**/*.{jpg,jpeg,png,gif,svg}',
+    gulp.series('copy-assets')
   )
   gulp.watch(
-    'node_modules/dfe-frontend-alpha/dist/dfefrontend.js',
-    gulp.series('process-js'),
+    'node_modules/dfe-webfrontend/dist/dfefrontend.js',
+    gulp.series('process-js')
   )
   gulp.watch('app/**/*.*').on('change', browserSync.reload)
 })
-
 
 // Set up a default task to process assets and start the watch task
 gulp.task(
@@ -110,6 +96,6 @@ gulp.task(
     'process-js',
     'process-images-copy',
     'process-images',
-    'watch',
-  ),
+    'watch'
+  )
 )
