@@ -1,10 +1,13 @@
-{% extends "layouts/content-full-width.html" %}
+{% extends "layouts/content-with-sidenav.html" %}
 {% set canonical = "https://design.education.gov.uk/design-system/getting-started"%}
-{% set pageName = "Install DfE Frontend" %}
-{% set pageDescription = "Get started with DfE Frontend to build consistent services and products in the Department for Education." %}
+{% set pageName = "Getting started" %}
+{% set pageDescription = "Get started with DfE Frontend to build consistent services and products in the Department for
+Education." %}
 {% set selectedNav = "Design system" %}
 {% set lastUpdated = "February 2024" %}
 {% set backlog_issue_id = "197" %}
+{% set parentSection = "dfefrontend"%}
+{% set isChildSection = "true"%}
 
 {% block hero %}
 <section class="dfe-page-header">
@@ -27,7 +30,7 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
         <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
-       
+
       </div>
     </div>
   </div>
@@ -46,7 +49,8 @@
         <p>Follow the <a href="/design-system/prototype-kit">guidance for getting the prototype kit set up</a> on your
           device before following these steps.</p>
 
-          <div class="govuk-inset-text">This guidance is accurate up to and including version <strong>13.16.2</strong> of the GOV.UK Prototype kit.</div>
+        <div class="govuk-inset-text">This guidance is accurate up to and including version <strong>13.16.2</strong> of
+          the GOV.UK Prototype kit.</div>
 
         <p>If something doesn't work <a href="/design-ops">contact DesignOps</a> for help so we can understand the
           problem and improve guidance where possible.</p>
@@ -62,7 +66,7 @@
             <h2 class="govuk-summary-card__title">1. Install</h2>
           </div>
           <div class="govuk-summary-card__content">
-            <code>npm install dfe-webfrontend</code>
+            <code>npm install dfe-frontend</code>
           </div>
         </div>
 
@@ -77,7 +81,7 @@
           </div>
           <div class="govuk-summary-card__content">
             <p>Add this line to the top of the file. This needs to come before any other code you add to this file.</p>
-            <code>@import 'node_modules/dfe-webfrontend/packages/dfefrontend';</code>
+            <code>@import 'node_modules/dfe-frontend/packages/dfefrontend';</code>
           </div>
         </div>
 
@@ -86,7 +90,7 @@
         <p>You need to include the javascript reference in your main layout. Find the scripts section and replace with
           the following code.</p>
 
-          <p>Go to the app/views/layouts folder and open the main.html file</p>
+        <p>Go to the app/views/layouts folder and open the main.html file</p>
 
 
 
@@ -98,7 +102,7 @@
             <p>Add this code to the bottom of the file.</p>
             <pre><code>{%raw%}{% block scripts %}
   {{ super() }}
-  &lt;script src=&quot;/node_modules/dfe-webfrontend/dist/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/node_modules/dfe-frontend/dist/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
 {% endblock %}{%endraw%}</code></pre>
           </div>
         </div>
@@ -114,8 +118,8 @@
           </div>
           <div class="govuk-summary-card__content">
             <p class="govuk-!-margin-bottom-2">From</p>
-            <code>/node_modules/dfe-webfrontend/packages/assets/dfe-logo.png<br/>
-          /node_modules/dfe-webfrontend/packages/assets/dfe-logo-alt.png</code>
+            <code>/node_modules/dfe-frontend/packages/assets/dfe-logo.png<br/>
+          /node_modules/dfe-frontend/packages/assets/dfe-logo-alt.png</code>
             <p class="govuk-!-margin-bottom-2 govuk-!-margin-top-3">To</p>
             <code>/app/assets/images</code>
           </div>
@@ -123,7 +127,8 @@
 
         <h3 class="govuk-heading-m">Run your app</h3>
 
-        <p>This is assuming you're using the GOV.UK prototype kit. You'll need to do your own checks on your app depending on your code and build process.</p>
+        <p>This is assuming you're using the GOV.UK prototype kit. You'll need to do your own checks on your app
+          depending on your code and build process.</p>
 
 
         <div class="govuk-summary-card">
@@ -133,11 +138,12 @@
           <div class="govuk-summary-card__content">
             <p class="govuk-!-margin-bottom-2">In your terminal, run the command:</p>
             <code>npm run dev</code>
-            <p class="govuk-!-margin-bottom-2 govuk-!-margin-top-3">Your code should build, check for any messages, and your app should load at http://localhost:3000</p>
+            <p class="govuk-!-margin-bottom-2 govuk-!-margin-top-3">Your code should build, check for any messages, and
+              your app should load at http://localhost:3000</p>
           </div>
         </div>
 
-        
+
 
         <h2 class="govuk-heading-l">You're good to go</h2>
 

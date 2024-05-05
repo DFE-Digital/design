@@ -43,7 +43,7 @@ const nunjuckEnv = nunjucks.configure(
   [
     'app/views',
     'node_modules/govuk-frontend/dist/',
-    'node_modules/dfe-webfrontend/packages/components'
+    'node_modules/dfe-frontend/packages/components'
   ],
   {
     autoescape: true,
@@ -136,7 +136,7 @@ if (config.env !== 'development') {
 }
 
 // Your custom middleware to automatically save form data to session
-function saveFormDataToSession (req, res, next) {
+function saveFormDataToSession(req, res, next) {
   if (req.method === 'POST') {
     req.session.data = {
       ...req.session.data, // Existing session data
@@ -147,7 +147,7 @@ function saveFormDataToSession (req, res, next) {
 }
 
 // Middleware to make formData globally available to all views
-function makeFormDataGlobal (req, res, next) {
+function makeFormDataGlobal(req, res, next) {
   // Perform a shallow merge of existing res.locals.data and session data
   res.locals.data = {
     ...res.locals.data, // Existing data
@@ -182,7 +182,7 @@ app.get('/professions/maturity/results/september-2023', function (req, res) {
 app.get(
   '/design-system/dfe-frontend/sass-documentation',
   function (req, res, next) {
-    const packageName = 'dfe-webfrontend'
+    const packageName = 'dfe-frontend'
 
     axios
       .get(`https://registry.npmjs.org/${packageName}`)
@@ -321,7 +321,7 @@ app.get('/tools/proposition-checker/result', (req, res) => {
   res.render('tools/proposition-checker/result')
 })
 
-function calculateValues (data, number) {
+function calculateValues(data, number) {
   const calculatedData = []
 
   data.forEach((item) => {
@@ -367,7 +367,7 @@ app.use(function (err, req, res, next) {
 // would look for /app/views/test.html
 // and /app/views/test/index.html
 
-function renderPath (path, res, next) {
+function renderPath(path, res, next) {
   // Try to render the path
   res.render(path, function (error, html) {
     if (!error) {
@@ -391,7 +391,7 @@ function renderPath (path, res, next) {
   })
 }
 
-function matchRoutes (req, res, next) {
+function matchRoutes(req, res, next) {
   let path = req.path
   path = path.substr(1)
   if (path === '') {

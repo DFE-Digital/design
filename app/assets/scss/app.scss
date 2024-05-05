@@ -7,7 +7,7 @@ $govuk-global-styles: true;
 
 
 @import 'node_modules/govuk-frontend/dist/govuk/all';
-@import 'node_modules/dfe-webfrontend/packages/dfefrontend';
+@import 'node_modules/dfe-frontend/packages/dfefrontend';
 @import './ncs/index.scss';
 @import './_hero.scss';
 @import './_topnav.scss';

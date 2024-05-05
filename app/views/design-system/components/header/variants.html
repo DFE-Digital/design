@@ -13,7 +13,7 @@
 {% block hero %}
 <section class="dfe-page-header">
   <div class="dfe-width-container">
-   
+
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
@@ -84,104 +84,133 @@
 
               <header class="dfe-header" role="banner">
                 <div class="dfe-width-container dfe-header__container">
-                   <div class="dfe-header__logo">
-                      <a class="dfe-header__link" href="https://gov.uk" aria-label="DfE homepage">
+                  <div class="dfe-header__logo">
+                    <a class="dfe-header__link" href="https://gov.uk" aria-label="DfE homepage">
                       <img src="/assets/images/dfe-logo.png" class="dfe-logo" alt="Department for Education">
                       <img src="/assets/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="Department for Education">
-                      </a>
-                   </div>
-                   <div class="dfe-header__content" id="content-header">
-                      <ul class="dfe-header__action-links">
-                         <li>
-                            <a href="/" class="govuk-link govuk-link--inverse">My account</a>
-                         </li>
-                         <li>
-                            <a href="/" class="govuk-link govuk-link--inverse">Sign out</a>
-                         </li>
-                      </ul>
-                      <div class="dfe-header__menu">
-                         <button class="dfe-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-expanded="false">Menu</button>
-                         <div id="extwaiokist" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="1.083" s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe=" vn="9colr">
-                            <div id="extwaigglbit" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="1.083" s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe="></div>
-                         </div>
+                    </a>
+                  </div>
+                  <div class="dfe-header__content" id="content-header">
+                    <ul class="dfe-header__action-links">
+                      <li>
+                        <a href="/" class="govuk-link govuk-link--inverse">My account</a>
+                      </li>
+                      <li>
+                        <a href="/" class="govuk-link govuk-link--inverse">Sign out</a>
+                      </li>
+                    </ul>
+                    <div class="dfe-header__menu">
+                      <button class="dfe-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation"
+                        aria-expanded="false">Menu</button>
+                      <div id="extwaiokist" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="1.083"
+                        s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe="
+                        vn="9colr">
+                        <div id="extwaigglbit" style="display:none" v="bmmch" q="f0ae2e3d" c="594.5" i="601" u="1.083"
+                          s="04272401" sg="svr_09102316-ga_04272401-bai_04252415" d="1" w="false" e="}" a="2" m="BMe=">
+                        </div>
                       </div>
-                      <div class="dfe-header__search">
-                         <button class="dfe-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
-                            <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                               <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                    </div>
+                    <div class="dfe-header__search">
+                      <button class="dfe-header__search-toggle" id="toggle-search" aria-controls="search"
+                        aria-label="Open search">
+                        <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                          aria-hidden="true" focusable="false" width="27" height="27">
+                          <path
+                            d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+                          </path>
+                        </svg>
+                        <span class="govuk-visually-hidden">Search</span>
+                      </button>
+                      <div class="dfe-header__search-wrap" id="wrap-search">
+                        <form class="dfe-header__search-form" id="search" action="/search/" method="get" role="search">
+                          <label class="govuk-visually-hidden" for="search-field">Search this website</label>
+                          <input class="dfe-search__input" id="search-field" name="q" type="search" placeholder="Search"
+                            autocomplete="off" spellcheck="false" data-ms-editor="true">
+                          <button class="dfe-search__submit" type="submit">
+                            <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                              <path
+                                d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+                              </path>
                             </svg>
                             <span class="govuk-visually-hidden">Search</span>
-                         </button>
-                         <div class="dfe-header__search-wrap" id="wrap-search">
-                            <form class="dfe-header__search-form" id="search" action="/search/" method="get" role="search">
-                               <label class="govuk-visually-hidden" for="search-field">Search this website</label>
-                               <input class="dfe-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off" spellcheck="false" data-ms-editor="true">
-                               <button class="dfe-search__submit" type="submit">
-                                  <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                                     <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-                                  </svg>
-                                  <span class="govuk-visually-hidden">Search</span>
-                               </button>
-                               <button class="dfe-search__close" id="close-search">
-                                  <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                                     <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-                                  </svg>
-                                  <span class="govuk-visually-hidden">Close search</span>
-                               </button>
-                            </form>
-                         </div>
+                          </button>
+                          <button class="dfe-search__close" id="close-search">
+                            <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                              aria-hidden="true" focusable="false" width="27" height="27">
+                              <path
+                                d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z">
+                              </path>
+                            </svg>
+                            <span class="govuk-visually-hidden">Close search</span>
+                          </button>
+                        </form>
                       </div>
-                   </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="dfe-width-container dfe-header__service-name">
-                   <a href="/" class="dfe-header__link--service">Service name</a>
+                  <a href="/" class="dfe-header__link--service">Service name</a>
                 </div>
-                <nav class="dfe-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
-                   <div class="dfe-width-container">
-                      <p class="dfe-header__navigation-title">
-                         <span id="label-navigation">Menu</span>
-                         <button class="dfe-header__navigation-close" id="close-menu">
-                            <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                               <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-                            </svg>
-                            <span class="govuk-visually-hidden">Close menu</span>
-                         </button>
-                      </p>
-                      <ul class="dfe-header__navigation-list">
-                         <li class="dfe-header__navigation-item ">
-                            <a class="dfe-header__navigation-link" href="#">
-                               Home
-                               <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                               </svg>
-                            </a>
-                         </li>
-                         <li class="dfe-header__navigation-item ">
-                            <a class="dfe-header__navigation-link" href="#">
-                               About
-                               <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                               </svg>
-                            </a>
-                         </li>
-                         <li class="dfe-header__navigation-item ">
-                            <a class="dfe-header__navigation-link" href="#">
-                               News
-                               <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                               </svg>
-                            </a>
-                         </li>
-                      </ul>
-                   </div>
+                <nav class="dfe-header__navigation" id="header-navigation" role="navigation"
+                  aria-label="Primary navigation" aria-labelledby="label-navigation">
+                  <div class="dfe-width-container">
+                    <p class="dfe-header__navigation-title">
+                      <span id="label-navigation">Menu</span>
+                      <button class="dfe-header__navigation-close" id="close-menu">
+                        <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                          aria-hidden="true" focusable="false" width="27" height="27">
+                          <path
+                            d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z">
+                          </path>
+                        </svg>
+                        <span class="govuk-visually-hidden">Close menu</span>
+                      </button>
+                    </p>
+                    <ul class="dfe-header__navigation-list">
+                      <li class="dfe-header__navigation-item ">
+                        <a class="dfe-header__navigation-link" href="#">
+                          Home
+                          <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                            <path
+                              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                            </path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="dfe-header__navigation-item ">
+                        <a class="dfe-header__navigation-link" href="#">
+                          About
+                          <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                            <path
+                              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                            </path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="dfe-header__navigation-item ">
+                        <a class="dfe-header__navigation-link" href="#">
+                          News
+                          <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                            <path
+                              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+                            </path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </nav>
-             </header>
+              </header>
 
 
             </div>
             <div class="govuk-tabs__panel" id="html">
 
-<pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
+              <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
   &lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
      &lt;div class=&quot;dfe-header__logo&quot;&gt;
         &lt;a class=&quot;dfe-header__link&quot; href=&quot;/&quot; aria-label=&quot;DfE homepage&quot;&gt;
@@ -274,11 +303,11 @@
      &lt;/div&gt;
   &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
-              
+
             </div>
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks">
               {% raw %}
-              <pre><code>{% from 'node_modules/dfe-webfrontend/packages/components/header/macro.njk' import header %}
+              <pre><code>{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
 {% block header %}
 
 {{ header({
@@ -327,568 +356,6 @@
 
 
 
-
-        <h2 class="govuk-heading-l" id="variants">Variants</h2>
-
-        <h3 class="govuk-heading-m">Service name only</h3>
-
-        <p>Use this header for small services and sites which have fewer than 5 pages.</p>
-
-        <section id="service-only">
-
-          <div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
-            <h2 class="govuk-tabs__title">
-              Contents
-            </h2>
-            <ul class="govuk-tabs__list">
-              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                <a class="govuk-tabs__tab" href="#example2">
-                  Example
-                </a>
-              </li>
-              <li class="govuk-tabs__list-item">
-                <a class="govuk-tabs__tab" href="#html2">
-                  HTML
-                </a>
-              </li>
-              <li class="govuk-tabs__list-item">
-                <a class="govuk-tabs__tab" href="#nunjucks2">
-                  Nunjucks
-                </a>
-              </li>
-            </ul>
-            <div class="govuk-tabs__panel" id="example2">
-              <p>
-                <a href="/design-system/components/header/examples/name-only" target="_blank" class="govuk-link">Open
-                  example in a new window</a>
-              </p>
-
-              <header class="dfe-header" role="banner">
-                <div class="dfe-width-container dfe-header__container">
-                   <div class="dfe-header__logo">
-                      <a class="dfe-header__link dfe-header__link--service " href="#" aria-label="DfE homepage">
-                      <img src="/assets/images/dfe-logo.png" class="dfe-logo" alt="DfE Homepage">
-                      <img src="/assets/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="DfE Homepage">
-                      <span class="dfe-header__service-name">
-                      Service name
-                      </span>
-                      </a>
-                   </div>
-                </div>
-             </header>
-
-
-            </div>
-            <div class="govuk-tabs__panel" id="html2">
-
-              <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
-   &lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
-      &lt;div class=&quot;dfe-header__logo&quot;&gt;
-         &lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;#&quot; aria-label=&quot;DfE homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
-         &lt;span class=&quot;dfe-header__service-name&quot;&gt;
-         Service name
-         &lt;/span&gt;
-         &lt;/a&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/header&gt;</code></pre>
-            </div>
-            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks2">
-              {% raw %}
-              <pre><code>{% from 'node_modules/dfe-webfrontend/packages/components/header/macro.njk' import header %}
-
-{% block %}
-{{ header({
-    "showNav": "false",
-    "showSearch": "false",
-    "showUserName": "false",
-    "logoPath": "public/images", 
-    "logoAltText": "Department for Education",
-    "homeHref": "https://gov.uk",
-    "service": {
-      "name": "Service name",
-      "serviceUrl": "/"
-    }
-  })
-}}
-
-{% endblock %}
-</code></pre>
-              {% endraw%}
-            </div>
-          </div>
-        </section>
-
-        <section class="custom-dfe-section">
-          <h3 class="govuk-heading-m">With search</h3>
-
-          <p>Use this header if your service or website needs a search function.</p>
-
-          <p>You can specify the URL to post the search form to, by default it's <code class="code">/search</code>.</p>
-          <section id="service-only">
-
-            <div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
-              <h2 class="govuk-tabs__title">
-                Contents
-              </h2>
-              <ul class="govuk-tabs__list">
-                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                  <a class="govuk-tabs__tab" href="#example3">
-                    Example
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                  <a class="govuk-tabs__tab" href="#html3">
-                    HTML
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                  <a class="govuk-tabs__tab" href="#nunjucks3">
-                    Nunjucks
-                  </a>
-                </li>
-              </ul>
-              <div class="govuk-tabs__panel" id="example3">
-                <p>
-                  <a href="/design-system/components/header/search/" class="govuk-link" target="_blank">Open example in
-                    a new window</a>
-                </p>
-                <header class="dfe-header" role="banner">
-                  <div class="dfe-width-container dfe-header__container">
-                    <div class="dfe-header__logo">
-                      <a class="dfe-header__link dfe-header__link--service " href="#" aria-label="DfE homepage">
-                        <img src="/assets/images/dfe-logo.png" class="dfe-logo" alt="DfE Homepage">
-                        <img src="/assets/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="DfE Homepage">
-                        <span class="dfe-header__service-name">
-                          Service name
-                        </span>
-                      </a>
-                    </div>
-                    <div class="dfe-header__content" id="content-header">
-                      <div class="dfe-header__search">
-                        <button class="dfe-header__search-toggle" id="toggle-search" aria-controls="search"
-                          aria-label="Open search">
-                          <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            aria-hidden="true" focusable="false" width="27" height="27">
-                            <path
-                              d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
-                            </path>
-                          </svg>
-                          <span class="govuk-visually-hidden">Search</span>
-                        </button>
-                        <div class="dfe-header__search-wrap" id="wrap-search">
-                          <form class="dfe-header__search-form" id="search" action="/search/" method="get"
-                            role="search">
-                            <label class="govuk-visually-hidden" for="searchterm">Search this website</label>
-                            <input class="dfe-search__input" id="searchterm" name="searchterm" type="search"
-                              placeholder="Search" autocomplete="off">
-                            <button class="dfe-search__submit" type="submit">
-                              <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                                <path
-                                  d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
-                                </path>
-                              </svg>
-                              <span class="govuk-visually-hidden">Search</span>
-                            </button>
-                            <button class="dfe-search__close" id="close-search">
-                              <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
-                                <path
-                                  d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z">
-                                </path>
-                              </svg>
-                              <span class="govuk-visually-hidden">Close search</span>
-                            </button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </header>
-
-              </div>
-              <div class="govuk-tabs__panel" id="html3">
-
-                <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
-   &lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
-      &lt;div class=&quot;dfe-header__logo&quot;&gt;
-         &lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;#&quot; aria-label=&quot;DfE homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
-         &lt;span class=&quot;dfe-header__service-name&quot;&gt;
-         Service name
-         &lt;/span&gt;
-         &lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;dfe-header__content&quot; id=&quot;content-header&quot;&gt;
-         &lt;div class=&quot;dfe-header__search&quot;&gt;
-            &lt;button class=&quot;dfe-header__search-toggle&quot; id=&quot;toggle-search&quot; aria-controls=&quot;search&quot; aria-label=&quot;Open search&quot;&gt;
-               &lt;svg class=&quot;dfe-icon dfe-icon__search&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
-                  &lt;path d=&quot;M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z&quot;&gt;&lt;/path&gt;
-               &lt;/svg&gt;
-               &lt;span class=&quot;govuk-visually-hidden&quot;&gt;Search&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;div class=&quot;dfe-header__search-wrap&quot; id=&quot;wrap-search&quot;&gt;
-               &lt;form class=&quot;dfe-header__search-form&quot; id=&quot;search&quot; action=&quot;/search/&quot; method=&quot;get&quot; role=&quot;search&quot;&gt;
-                  &lt;label class=&quot;govuk-visually-hidden&quot; for=&quot;searchterm&quot;&gt;Search this website&lt;/label&gt;
-                  &lt;input class=&quot;dfe-search__input&quot; id=&quot;searchterm&quot; name=&quot;searchterm&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; autocomplete=&quot;off&quot;&gt;
-                  &lt;button class=&quot;dfe-search__submit&quot; type=&quot;submit&quot;&gt;
-                     &lt;svg class=&quot;dfe-icon dfe-icon__search&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
-                        &lt;path d=&quot;M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z&quot;&gt;&lt;/path&gt;
-                     &lt;/svg&gt;
-                     &lt;span class=&quot;govuk-visually-hidden&quot;&gt;Search&lt;/span&gt;
-                  &lt;/button&gt;
-                  &lt;button class=&quot;dfe-search__close&quot; id=&quot;close-search&quot;&gt;
-                     &lt;svg class=&quot;dfe-icon dfe-icon__close&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
-                        &lt;path d=&quot;M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z&quot;&gt;&lt;/path&gt;
-                     &lt;/svg&gt;
-                     &lt;span class=&quot;govuk-visually-hidden&quot;&gt;Close search&lt;/span&gt;
-                  &lt;/button&gt;
-               &lt;/form&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/header&gt;</code></pre>
-              </div>
-              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks3">
-                {% raw %}
-                <pre><code>{% from 'node_modules/dfe-webfrontend/packages/components/header/macro.njk' import header %}
-
-{{ header({
-    "showNav": "false",
-    "showSearch": "true",
-    "showUserName": "false",
-    "userName": "",
-    "userNameURL": "",
-    "logoPath": "public/images",
-    "searchAction": "/search/",
-    "searchInputName": "searchterm",
-    "service": {
-      "name": "Service name"
-    }
-  })
-}}</code></pre>
-                {% endraw%}
-              </div>
-            </div>
-          </section>
-
-          <section id="nav-only">
-
-            <h3 class="govuk-heading-m">With navigation</h3>
-
-            <p>Use this header if you have different sections you want users to be able to navigate.</p>
-
-            <div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
-              <h2 class="govuk-tabs__title">
-                Contents
-              </h2>
-              <ul class="govuk-tabs__list">
-                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                  <a class="govuk-tabs__tab" href="#example6">
-                    Example
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                  <a class="govuk-tabs__tab" href="#html6">
-                    HTML
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                  <a class="govuk-tabs__tab" href="#nunjucks6">
-                    Nunjucks
-                  </a>
-                </li>
-              </ul>
-              <div class="govuk-tabs__panel" id="example6">
-                <p>
-                  <a href="/design-system/components/header/nav/" class="govuk-link" target="_blank">Open example in a
-                    new window</a>
-                </p>
-
-                <header class="dfe-header" role="banner">
-                  <div class="dfe-width-container dfe-header__container">
-                    <div class="dfe-header__logo">
-                      <a class="dfe-header__link dfe-header__link--service " href="#" aria-label="DfE homepage">
-                        <img src="/assets/images/dfe-logo.png" class="dfe-logo" alt="DfE Homepage">
-                        <img src="/assets/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="DfE Homepage">
-                        <span class="dfe-header__service-name">
-                          Service name
-                        </span>
-                      </a>
-                    </div>
-                    <div class="dfe-header__content" id="content-header">
-                      <div class="dfe-header__menu">
-                        <button class="dfe-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation"
-                          aria-expanded="false">Menu</button>
-                      </div>
-                    </div>
-                  </div>
-                  <nav class="dfe-header__navigation" id="header-navigation" role="navigation"
-                    aria-label="Primary navigation" aria-labelledby="label-navigation">
-                    <div class="dfe-width-container">
-                      <p class="dfe-header__navigation-title">
-                        <span id="label-navigation">Menu</span>
-                        <button class="dfe-header__navigation-close" id="close-menu">
-                          <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            aria-hidden="true" focusable="false" width="27" height="27">
-                            <path
-                              d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z">
-                            </path>
-                          </svg>
-                          <span class="govuk-visually-hidden">Close menu</span>
-                        </button>
-                      </p>
-                      <ul class="dfe-header__navigation-list">
-                        <li class="dfe-header__navigation-item dfe-header__navigation-item--current">
-                          <a class="dfe-header__navigation-link" href="#">
-                            Navigation link 1
-                            <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                              <path
-                                d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-                              </path>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="dfe-header__navigation-item ">
-                          <a class="dfe-header__navigation-link" href="#">
-                            Navigation link 2
-                            <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                              <path
-                                d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-                              </path>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="dfe-header__navigation-item ">
-                          <a class="dfe-header__navigation-link" href="#">
-                            Navigation link 3
-                            <svg class="dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-                              <path
-                                d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-                              </path>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
-                </header>
-
-              </div>
-
-              <div class="govuk-tabs__panel" id="html6">
-
-                <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
-   &lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
-      &lt;div class=&quot;dfe-header__logo&quot;&gt;
-         &lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;#&quot; aria-label=&quot;DfE homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
-         &lt;img src=&quot;/assets/images/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
-         &lt;span class=&quot;dfe-header__service-name&quot;&gt;
-         Service name
-         &lt;/span&gt;
-         &lt;/a&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;dfe-header__content&quot; id=&quot;content-header&quot;&gt;
-         &lt;div class=&quot;dfe-header__menu&quot;&gt;
-            &lt;button class=&quot;dfe-header__menu-toggle&quot; id=&quot;toggle-menu&quot; aria-controls=&quot;header-navigation&quot; aria-expanded=&quot;false&quot;&gt;Menu&lt;/button&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;nav class=&quot;dfe-header__navigation&quot; id=&quot;header-navigation&quot; role=&quot;navigation&quot; aria-label=&quot;Primary navigation&quot; aria-labelledby=&quot;label-navigation&quot;&gt;
-      &lt;div class=&quot;dfe-width-container&quot;&gt;
-         &lt;p class=&quot;dfe-header__navigation-title&quot;&gt;
-            &lt;span id=&quot;label-navigation&quot;&gt;Menu&lt;/span&gt;
-            &lt;button class=&quot;dfe-header__navigation-close&quot; id=&quot;close-menu&quot;&gt;
-               &lt;svg class=&quot;dfe-icon dfe-icon__close&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width=&quot;27&quot; height=&quot;27&quot;&gt;
-                  &lt;path d=&quot;M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z&quot;&gt;&lt;/path&gt;
-               &lt;/svg&gt;
-               &lt;span class=&quot;govuk-visually-hidden&quot;&gt;Close menu&lt;/span&gt;
-            &lt;/button&gt;
-         &lt;/p&gt;
-         &lt;ul class=&quot;dfe-header__navigation-list&quot;&gt;
-            &lt;li class=&quot;dfe-header__navigation-item dfe-header__navigation-item--current&quot;&gt;
-               &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-                  Navigation link 1 
-                  &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-                     &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-                  &lt;/svg&gt;
-               &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;dfe-header__navigation-item &quot;&gt;
-               &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-                  Navigation link 2
-                  &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-                     &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-                  &lt;/svg&gt;
-               &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;dfe-header__navigation-item &quot;&gt;
-               &lt;a class=&quot;dfe-header__navigation-link&quot; href=&quot;#&quot;&gt;
-                  Navigation link 3
-                  &lt;svg class=&quot;dfe-icon dfe-icon__chevron-right&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot; width=&quot;34&quot; height=&quot;34&quot;&gt;
-                     &lt;path d=&quot;M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z&quot;&gt;&lt;/path&gt;
-                  &lt;/svg&gt;
-               &lt;/a&gt;
-            &lt;/li&gt;
-         &lt;/ul&gt;
-      &lt;/div&gt;
-   &lt;/nav&gt;
-&lt;/header&gt;</code></pre>
-              </div>
-              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks6">
-                {% raw %}
-                <pre><code>{% from 'node_modules/dfe-webfrontend/packages/components/header/macro.njk' import header %}
-
-{{ header({
-    "showNav": "true",
-    "showSearch": "false",
-    "showUserName": "false",
-    "userName": "",
-    "userNameURL": "",
-    "logoPath": "public/images",
-    "service": {
-      "name": "Service name"
-    },
-    "primaryLinks": [
-        {
-        "url"  : "#",
-        "label" : "Navigation link 1"
-      }, {
-        "url"  : "#",
-        "label" : "Navigation link 2"
-      }, {
-        "url"  : "#",
-        "label" : "Navigation link 3"
-      }
-    ]
-  })
-}}</code></pre>
-                {% endraw%}
-              </div>
-            </div>
-          </section>
-
-          <section class="custom-dfe-section">
-            <h3 class="govuk-heading-m govuk-!-margin-top-2">With account option</h3>
-
-            <p>Use this header if you want to have account options for accessing an account page or sign out of a
-              service.</p>
-
-            <div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
-              <h2 class="govuk-tabs__title">
-                Contents
-              </h2>
-              <ul class="govuk-tabs__list">
-                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                  <a class="govuk-tabs__tab" href="#example4">
-                    Example
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                  <a class="govuk-tabs__tab" href="#html4">
-                    HTML
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                  <a class="govuk-tabs__tab" href="#nunjucks4">
-                    Nunjucks
-                  </a>
-                </li>
-              </ul>
-              <div class="govuk-tabs__panel" id="example4">
-                <p>
-                  <a href="/design-system/components/header/account/" class="govuk-link" target="_blank">Open example in
-                    a new window</a>
-                </p>
-                <header class="dfe-header" role="banner">
-                  <div class="dfe-width-container dfe-header__container">
-                    <div class="dfe-header__logo">
-                      <a class="dfe-header__link dfe-header__link--service " href="#" aria-label="DfE homepage">
-                        <img src="/assets/images/dfe-logo.png" class="dfe-logo" alt="DfE Homepage">
-                        <img src="/assets/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="DfE Homepage">
-                        <span class="dfe-header__service-name">
-                          Service name
-                        </span>
-                      </a>
-                    </div>
-                    <div class="dfe-header__content" id="content-header">
-                      <ul class="dfe-header__action-links">
-                        <li>
-                          Name
-                        </li>
-                        <li>
-                          <a href="/sign-out" class="govuk-link govuk-link--inverse">Sign out</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </header>
-
-              </div>
-              <div class="govuk-tabs__panel" id="html4">
-
-                <pre><code>&lt;header class=&quot;dfe-header&quot; role=&quot;banner&quot;&gt;
-    &lt;div class=&quot;dfe-width-container dfe-header__container&quot;&gt;
-      &lt;div class=&quot;dfe-header__logo&quot;&gt;
-        &lt;a class=&quot;dfe-header__link dfe-header__link--service &quot; href=&quot;#&quot; aria-label=&quot;DfE homepage&quot;&gt;
-          &lt;img src=&quot;/assets/images/dfe-logo.png&quot; class=&quot;dfe-logo&quot; alt=&quot;DfE Homepage&quot;&gt;
-          &lt;img src=&quot;/assets/images/dfe-logo-alt.png&quot; class=&quot;dfe-logo-hover&quot; alt=&quot;DfE Homepage&quot;&gt;
-          &lt;span class=&quot;dfe-header__service-name&quot;&gt;
-         Service name
-         &lt;/span&gt;
-        &lt;/a&gt;
-      &lt;/div&gt;
-     &lt;div class=&quot;dfe-header__content&quot; id=&quot;content-header&quot;&gt;
-         &lt;ul class=&quot;dfe-header__action-links&quot;&gt;
-            &lt;li&gt;
-               Name
-            &lt;/li&gt;
-            &lt;li&gt;
-               &lt;a href=&quot;/sign-out&quot; class=&quot;govuk-link govuk-link--inverse&quot;&gt;Sign out&lt;/a&gt;
-            &lt;/li&gt;
-         &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/header&gt;</code></pre>
-              </div>
-              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks4">
-                {% raw %}
-                <pre><code>{% from 'node_modules/dfe-webfrontend/packages/components/header/macro.njk' import header %}
-
-{{ header({
-    "showNav": "false",
-    "showSearch": "false",
-    "showHeaderActionLinks": "true",
-    "userNameURL": "#",
-    "logoPath": "public/images",
-    "service": {
-      "name": "Service name"
-    },
-    "headerActionLinks": [
-      {
-        "url"  : "",
-        "label" : "Name"
-      },
-      {
-        "url"  : "#",
-        "label" : "Sign out"
-      }
-    ]
-  })
-}}</code></pre>
-                {% endraw%}
-              </div>
-            </div>
-          </section>
 
 
     </div>
