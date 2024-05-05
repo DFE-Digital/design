@@ -2,6 +2,9 @@
 
 This is the Department for Education Design Manual
 
+## Contributing
+Please see our [Contributing Guide](CONTRIBUTING.md) for details on how you can contribute to this project.
+
 
 ## Prerequisites
 
