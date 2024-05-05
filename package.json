@@ -24,7 +24,7 @@
     "compression": "^1.7.4",
     "dfe-webfrontend": "^1.1.11",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "express-force-https": "^1.0.0",
     "express-recaptcha": "^5.1.0",
     "express-session": "^1.17.3",
