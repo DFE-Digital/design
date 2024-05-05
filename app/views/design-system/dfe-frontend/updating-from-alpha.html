@@ -8,25 +8,25 @@
 {% set isChildSection = "true"%}
 
 
-{% block hero %}
-<section class="dfe-page-header govuk-!-padding-bottom-5">
-    <div class="dfe-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
-                <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
-            </div>
-        </div>
-    </div>
-</section>
-{% endblock %}
-
 
 {% block content %}
-
-<div class="govuk-width-container">
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+<table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">NPM package</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Name</th>
+        <th scope="col" class="govuk-table__header">Version</th>
+        <th scope="col" class="govuk-table__header">Last updated</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://www.npmjs.com/package/dfe-frontend" target="_blank">dfe-frontend</a></th>
+        <th scope="row" class="govuk-table__header">{{version}}</th>
+        <td class="govuk-table__cell">{{lastUpdatedv | date('D MMMM YYYY') }}</td>
+      </tr>
+    </tbody>
+  </table>
 
             <p>If you have previously installed <code>dfe-frontend-alpha</code> and are
                 migrating to now use <code>dfe-frontend</code> there are some changes you need to implement.</p>
@@ -148,8 +148,7 @@
 
             <p>You should always check the published <a href="/design-system/components/header/variants">examples in the header variants</a> for how to implement them correctly.</p>
 
-        </div>
-    </div>
-</div>
+ 
+
 
 {% endblock %}

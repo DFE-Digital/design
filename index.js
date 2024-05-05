@@ -180,7 +180,7 @@ app.get('/professions/maturity/results/september-2023', function (req, res) {
 })
 
 app.get(
-  '/design-system/dfe-frontend/sass-documentation',
+  '/design-system/dfe-frontend/updating-from-alpha',
   function (req, res, next) {
     const packageName = 'dfe-frontend'
 
@@ -192,7 +192,7 @@ app.get(
           response.data.time.modified
         ).toISOString()
 
-        res.render('design-system/dfe-frontend/sass-documentation/index.html', {
+        res.render('design-system/dfe-frontend/updating-from-alpha.html', {
           version,
           lastUpdatedv
         })

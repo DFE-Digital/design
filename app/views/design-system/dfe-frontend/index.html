@@ -8,61 +8,10 @@
 {% set isChildSection = "true"%}
 
 
-{% block hero %}
-<section class="dfe-page-header govuk-!-padding-bottom-5">
-  <div class="dfe-width-container">
-    <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
-        </li>
-
-        <li class="govuk-breadcrumbs__list-item">
-          DfE Frontend
-        </li>
-      </ol>
-    </div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
-        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
-      </div>
-    </div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-quarter">
-        <h2 class="govuk-heading-s">Version</h2>
-        <strong class="govuk-tag">{{version}}</strong>
-        <strong class="govuk-tag">Alpha</strong>
-      </div>
-
-      <div class="govuk-grid-column-one-quarter">
-        <h2 class="govuk-heading-s">Last release</h2>
-        <p class="govuk-!-margin-bottom-0">{{lastUpdatedv | date('D MMM YYYY')}}</p>
-      </div>
-
-      <div class="govuk-grid-column-one-quarter">
-        <h2 class="govuk-heading-s">Package</h2>
-        <p class="govuk-!-margin-bottom-0"><a href="https://www.npmjs.com/package/dfe-frontend" target="_blank"
-            class="govuk-link">NPM Package</a></p>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-{% endblock %}
 
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-quarter">
-    </div>
-    <div class="govuk-grid-column-three-quarters">
 
       <h2 class="govuk-heading-l">Using DfE Frontend to extend GOV Frontend</h2>
 
@@ -121,8 +70,5 @@
           suggestion</li>
       </ul>
 
-
-    </div>
-  </div>
 
   {% endblock %}
