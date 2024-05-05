@@ -4,7 +4,6 @@ const cleanCSS = require('gulp-clean-css')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')(require('sass'))
 const uglify = require('gulp-uglify')
-const webp = require('gulp-webp')
 const browserSync = require('browser-sync').create()
 
 // Set up a task to process SCSS files
@@ -57,12 +56,7 @@ gulp.task('process-images-copy', async function () {
     .src('app/assets/images/**/*')
     .pipe(gulp.dest('public/assets/images'))
 })
-gulp.task('process-images', async function () {
-  return gulp
-    .src('app/assets/images/**/*.png')
-    .pipe(webp())
-    .pipe(gulp.dest('public/assets/images'))
-})
+
 
 // Set up a task to start the server and watch files for changes
 gulp.task('watch', function () {
@@ -74,7 +68,6 @@ gulp.task('watch', function () {
 
   gulp.watch('app/assets/scss/**/*.scss', gulp.series('process-scss'))
   gulp.watch('app/assets/js/**/*.js', gulp.series('process-js'))
-  gulp.watch('app/assets/images/**/*.png', gulp.series('process-images'))
   gulp.watch('app/assets/images/**/*', gulp.series('process-images-copy'))
   gulp.watch(
     'node_modules/dfe-frontend/packages/assets/**/*.{jpg,jpeg,png,gif,svg}',
@@ -95,7 +88,6 @@ gulp.task(
     'copy-assets',
     'process-js',
     'process-images-copy',
-    'process-images',
     'watch'
   )
 )
