@@ -11,6 +11,23 @@
 
 
 {% block content %}
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">NPM package</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Name</th>
+      <th scope="col" class="govuk-table__header">Version</th>
+      <th scope="col" class="govuk-table__header">Last updated</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="https://www.npmjs.com/package/dfe-frontend" target="_blank">dfe-frontend</a></th>
+      <th scope="row" class="govuk-table__header">{{version}}</th>
+      <td class="govuk-table__cell">{{lastUpdatedv | date('D MMMM YYYY') }}</td>
+    </tr>
+  </tbody>
+</table>
 
 
       <h2 class="govuk-heading-l">Using DfE Frontend to extend GOV Frontend</h2>

@@ -203,6 +203,54 @@ app.get(
   }
 )
 
+app.get(
+  '/design-system/dfe-frontend',
+  function (req, res, next) {
+    const packageName = 'dfe-frontend'
+
+    axios
+      .get(`https://registry.npmjs.org/${packageName}`)
+      .then((response) => {
+        const version = response.data['dist-tags'].latest
+        const lastUpdatedv = new Date(
+          response.data.time.modified
+        ).toISOString()
+
+        res.render('design-system/dfe-frontend/index.html', {
+          version,
+          lastUpdatedv
+        })
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+)
+
+app.get(
+  '/design-system/getting-started',
+  function (req, res, next) {
+    const packageName = 'dfe-frontend'
+
+    axios
+      .get(`https://registry.npmjs.org/${packageName}`)
+      .then((response) => {
+        const version = response.data['dist-tags'].latest
+        const lastUpdatedv = new Date(
+          response.data.time.modified
+        ).toISOString()
+
+        res.render('design-system/getting-started/index.html', {
+          version,
+          lastUpdatedv
+        })
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+)
+
 app.get('/tools/how-many-users/:number', (req, res) => {
   const number = parseInt(req.params.number | 0)
 
