@@ -143,6 +143,25 @@ Education." %}
           </div>
         </div>
 
+
+        <h3 class="govuk-heading-m">Changing the page width</h3>
+
+        <p>DfE Frontend uses a 1200px page width vs the 960px of GOV.UK.</p>
+        <p>To take advantage of the 1200px width in your main, override the width in your .scss file.</p>
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">5. Set page width to 1200px</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p class="govuk-!-margin-bottom-2">After your scss imports, add:</p>
+            <code>.govuk-width-container {
+              @include govuk-width-container;
+            }</code>
+          </div>
+        </div>
+
+
         <h3 class="govuk-heading-m">Run your app</h3>
 
         <p>This is assuming you're using the GOV.UK prototype kit. You'll need to do your own checks on your app
@@ -151,7 +170,7 @@ Education." %}
 
         <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">5. Run your app</h2>
+            <h2 class="govuk-summary-card__title">6. Run your app</h2>
           </div>
           <div class="govuk-summary-card__content">
             <p class="govuk-!-margin-bottom-2">In your terminal, run the command:</p>
