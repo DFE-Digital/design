@@ -6,7 +6,7 @@
   "scripts": {
     "gulp": "gulp",
     "watch": "gulp & nodemon index.js",
-    "start": "node index.js",
+    "start": "node --trace-deprecation index.js",
     "dev": "npm run watch"
   },
   "nodemonConfig": {
@@ -49,6 +49,7 @@
     "gulp-copy": "^4.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "punycode": "^2.3.1"
   }
 }
