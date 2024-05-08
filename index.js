@@ -1,75 +1,54 @@
+require('dotenv').config()
+
 const express = require('express')
 const nunjucks = require('nunjucks')
-const https = require('https')
 const axios = require('axios')
-var dateFilter = require('nunjucks-date-filter')
-var markdown = require('nunjucks-markdown')
-var marked = require('marked')
+const dateFilter = require('nunjucks-date-filter')
+const markdown = require('nunjucks-markdown')
+const marked = require('marked')
 const GovukHTMLRenderer = require('govuk-markdown')
-var Recaptcha = require('express-recaptcha').RecaptchaV3
 const bodyParser = require('body-parser')
-const lunr = require('lunr')
 const fs = require('fs')
 const path = require('path')
-const cheerio = require('cheerio')
 const config = require('./app/config')
-const glob = require('glob');
-const forceHttps = require('express-force-https');
-const compression = require('compression');
-
-const session = require('express-session');
-
-const helmet = require('helmet');
-
-const favicon = require('serve-favicon');
-
+const forceHttps = require('express-force-https')
+const compression = require('compression')
+const routes = require('./app/routes')
+const session = require('express-session')
+const favicon = require('serve-favicon')
 const PageIndex = require('./middleware/pageIndex')
 const pageIndex = new PageIndex(config)
-require('dotenv').config()
-var NotifyClient = require('notifications-node-client').NotifyClient
-
 
 const app = express()
-app.use(compression());
+app.use(compression())
 
-const notify = new NotifyClient(process.env.notifyKey)
-const recaptcha = new Recaptcha(
-  process.env.recaptchaPublic,
-  process.env.recaptchaSecret,
-  { callback: 'cb' },
+app.use(
+  session({
+    secret: process.env.sessionkey,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Note: `secure: true` in a production environment with HTTPS
+  })
 )
-
-app.use(session({
-  secret: process.env.sessionkey,
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false } // Note: `secure: true` in a production environment with HTTPS
-}));
-
-
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(favicon(path.join(__dirname, 'public/assets/images', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public/assets/images', 'favicon.ico')))
 
 app.set('view engine', 'html')
-
-app.locals.serviceName = 'Design Manual'
-app.locals.recaptchaPublic = process.env.recaptchaPublic
-
-
+app.locals.serviceName = 'Design manual'
 
 // Set up Nunjucks as the template engine
-var nunjuckEnv = nunjucks.configure(
+const nunjuckEnv = nunjucks.configure(
   [
     'app/views',
-    'node_modules/govuk-frontend',
-    'node_modules/dfe-frontend-alpha/packages/components',
+    'node_modules/govuk-frontend/dist/',
+    'node_modules/dfe-frontend/packages/components'
   ],
   {
     autoescape: true,
-    express: app,
-  },
+    express: app
+  }
 )
 
 nunjuckEnv.addFilter('date', dateFilter)
@@ -79,56 +58,52 @@ marked.setOptions({
 markdown.register(nunjuckEnv, marked.parse)
 
 nunjuckEnv.addFilter('formatNumber', function (number) {
-  return number.toLocaleString();
-});
+  return number.toLocaleString()
+})
 
 nunjuckEnv.addFilter('hyphen', function (str) {
-  return str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
-});
+  return str.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`)
+})
 
-
-app.use(forceHttps);
+app.use(forceHttps)
 
 // Set up static file serving for the app's assets
 app.use('/assets', express.static('public/assets'))
 
 app.use((req, res, next) => {
   if (req.url.endsWith('/') && req.url.length > 1) {
-    const canonicalUrl = req.url.slice(0, -1);
-    res.set('Link', `<${canonicalUrl}>; rel="canonical"`);
+    const canonicalUrl = req.url.slice(0, -1)
+    res.set('Link', `<${canonicalUrl}>; rel="canonical"`)
   }
-  next();
-});
+  next()
+})
 
-app.get('/', (_, res) => {
-
-  res.render('index.html');
-});
+app.use('/', routes)
 
 // Render sitemap.xml in XML format
 app.get('/sitemap.xml', (_, res) => {
-  res.set({ 'Content-Type': 'application/xml' });
-  res.render('sitemap.xml');
-});
+  res.set({ 'Content-Type': 'application/xml' })
+  res.render('sitemap.xml')
+})
 
 app.get('/robots.txt', (_, res) => {
-  res.set({ 'Content-Type': 'text/plain' });
-  res.render('robots.txt');
-});
+  res.set({ 'Content-Type': 'text/plain' })
+  res.render('robots.txt')
+})
 
 app.get('/downloads/:filename', (req, res) => {
-  const filename = req.params.filename;
-  const filePath = path.join(__dirname, "/app/assets/downloads/" + filename);
+  const filename = req.params.filename
+  const filePath = path.join(__dirname, '/app/assets/downloads/' + filename)
   // Set appropriate headers
   //  res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-  res.setHeader('Content-Disposition', `attachment; filename=${filename}`);
+  res.setHeader('Content-Disposition', `attachment; filename=${filename}`)
   // Send the file
-  res.sendFile(filePath);
-});
+  res.sendFile(filePath)
+})
 
 app.get('/search', (req, res) => {
-  console.log(req.query['searchterm'])
-  const query = req.query['searchterm'] || ''
+  console.log(req.query.searchterm)
+  const query = req.query.searchterm || ''
   const resultsPerPage = 10
   let currentPage = parseInt(req.query.page, 10)
   const results = pageIndex.search(query)
@@ -150,7 +125,7 @@ app.get('/search', (req, res) => {
     maxPage,
     query,
     results: results.slice(startingIndex, endingIndex),
-    resultsLen: results.length,
+    resultsLen: results.length
   })
 })
 
@@ -160,16 +135,15 @@ if (config.env !== 'development') {
   }, 2000)
 }
 
-
 // Your custom middleware to automatically save form data to session
 function saveFormDataToSession(req, res, next) {
   if (req.method === 'POST') {
     req.session.data = {
       ...req.session.data, // Existing session data
       ...req.body // New form data
-    };
+    }
   }
-  next();
+  next()
 }
 
 // Middleware to make formData globally available to all views
@@ -178,218 +152,208 @@ function makeFormDataGlobal(req, res, next) {
   res.locals.data = {
     ...res.locals.data, // Existing data
     ...req.session.data // Data from the session
-  };
-  next();
+  }
+  next()
 }
 
-
 // Register the middlewares globally
-app.use(saveFormDataToSession);
-app.use(makeFormDataGlobal);
+app.use(saveFormDataToSession)
+app.use(makeFormDataGlobal)
 
-
-
-app.post('/submit-feedback', (req, res) => {
-  const feedback = req.body.feedback_form_input
-  const fullUrl = req.headers.referer || 'Unknown'
-
-  //Send to notify after validation with recaptcha first
-  //TODO: Implement recaptcha
-
-  notify
-    .sendEmail(process.env.feedbackTemplateID, 'design.ops@education.gov.uk', {
-      personalisation: {
-        feedback: feedback,
-        page: fullUrl,
-        service: "Design Manual"
-      },
-    })
-    .then((response) => { })
-    .catch((err) => console.log(err))
-
-  return res.sendStatus(200)
+app.get('/learn/how-many-users', function (req, res) {
+  res.redirect(301, '/tools/how-many-users')
 })
 
-app.get('/design-system/dfe-frontend', function (req, res, next) {
-  const packageName = 'dfe-frontend-alpha'
-  let version = '-'
-
-  axios
-    .get(`https://registry.npmjs.org/${packageName}`)
-    .then((response) => {
-      const version = response.data['dist-tags'].latest
-      const lastUpdatedv = new Date(response.data.time.modified).toISOString()
-
-      res.render('design-system/dfe-frontend/index.html', {
-        version,
-        lastUpdatedv,
-      })
-    })
-    .catch((error) => {
-      console.error(error)
-    })
+app.get('/learn/how-many-users/:number', function (req, res) {
+  const number = req.params.number
+  res.redirect(301, '/tools/how-many-users/' + number)
 })
 
-app.get('/tools/inclusivity-calculator', function(req,res){
-  res.redirect('/learn/how-many-users', 301)
-})
-
-app.get('/design-ops/design-maturity/september-2022', function(req,res){
+app.get('/design-ops/design-maturity/september-2022', function (req, res) {
   res.redirect('/inside-design/maturity/results/september-2022', 301)
 })
 
-app.get('/inside-design/maturity/results/september-2023', function(req,res){
+app.get('/professions/maturity/results/september-2023', function (req, res) {
+  const data = require('./app/data/dm_2023.json')
 
-  var data = require('./app/data/dm_2023.json');
-
-  res.render('inside-design/maturity/results/september-2023', {data})
+  res.render('professions/maturity/results/september-2023', { data })
 })
 
-app.get('/design-system/dfe-frontend/sass-documentation', function (
-  req,
-  res,
-  next,
-) {
-  const packageName = 'dfe-frontend-alpha'
-  let version = '-'
+app.get(
+  '/design-system/dfe-frontend/updating-from-alpha',
+  function (req, res, next) {
+    const packageName = 'dfe-frontend'
 
-  axios
-    .get(`https://registry.npmjs.org/${packageName}`)
-    .then((response) => {
-      const version = response.data['dist-tags'].latest
-      const lastUpdatedv = new Date(response.data.time.modified).toISOString()
+    axios
+      .get(`https://registry.npmjs.org/${packageName}`)
+      .then((response) => {
+        const version = response.data['dist-tags'].latest
+        const lastUpdatedv = new Date(
+          response.data.time.modified
+        ).toISOString()
 
-      res.render('design-system/dfe-frontend/sass-documentation/index.html', {
-        version,
-        lastUpdatedv,
+        res.render('design-system/dfe-frontend/updating-from-alpha.html', {
+          version,
+          lastUpdatedv
+        })
       })
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-})
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+)
 
-app.get('/learn/how-many-users/:number', (req, res) => {
+app.get(
+  '/design-system/dfe-frontend',
+  function (req, res, next) {
+    const packageName = 'dfe-frontend'
 
-  var number = parseInt(req.params.number | 0);
+    axios
+      .get(`https://registry.npmjs.org/${packageName}`)
+      .then((response) => {
+        const version = response.data['dist-tags'].latest
+        const lastUpdatedv = new Date(
+          response.data.time.modified
+        ).toISOString()
+
+        res.render('design-system/dfe-frontend/index.html', {
+          version,
+          lastUpdatedv
+        })
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+)
+
+app.get(
+  '/design-system/getting-started',
+  function (req, res, next) {
+    const packageName = 'dfe-frontend'
+
+    axios
+      .get(`https://registry.npmjs.org/${packageName}`)
+      .then((response) => {
+        const version = response.data['dist-tags'].latest
+        const lastUpdatedv = new Date(
+          response.data.time.modified
+        ).toISOString()
+
+        res.render('design-system/getting-started/index.html', {
+          version,
+          lastUpdatedv
+        })
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+)
+
+app.get('/tools/how-many-users/:number', (req, res) => {
+  const number = parseInt(req.params.number | 0)
 
   if (number) {
     fs.readFile('./app/data/stats.json', 'utf8', (err, data) => {
       if (err) {
-        console.error('Error reading data.json:', err);
-        res.sendStatus(500);
-        return;
+        console.error('Error reading data.json:', err)
+        res.sendStatus(500)
+        return
       }
 
       try {
-        const jsonData = JSON.parse(data);
-        const calculatedData = calculateValues(jsonData, number);
+        const jsonData = JSON.parse(data)
+        const calculatedData = calculateValues(jsonData, number)
 
-
-        res.render('learn/how-many-users/index.html', { number, calculatedData })
-
+        res.render('tools/how-many-users/index.html', {
+          number,
+          calculatedData
+        })
       } catch (err) {
-        console.error('Error parsing data.json:', err);
-        res.sendStatus(500);
+        console.error('Error parsing data.json:', err)
+        res.sendStatus(500)
       }
-    });
+    })
   } else {
-    res.redirect('/learn/how-many-users')
+    res.redirect('/tools/how-many-users')
   }
 })
 
-
-app.post('/learn/how-many-users', (req, res) => {
-  var number = req.body.numberOfUsers;
+app.post('/tools/how-many-users', (req, res) => {
+  const number = req.body.numberOfUsers
 
   if (number) {
-
-    res.redirect('/learn/how-many-users/' + number)
-
+    res.redirect('/tools/how-many-users/' + number)
   } else {
-    res.redirect('/learn/how-many-users')
+    res.redirect('/tools/how-many-users')
   }
-});
+})
 
 app.get('/tools/jd-generator', (req, res) => {
   res.render('tools/jd-generator/index.html')
-});
-
+})
 
 app.get('/tools/proposition-checker/question1', (req, res) => {
-
   console.log(req.session.data)
 
   res.render('tools/proposition-checker/question1')
-});
+})
 
 app.post('/tools/proposition-checker/question1', (req, res) => {
-
   console.log(req.session.data)
 
-  if (req.body.question1 === "No") {
+  if (req.body.question1 === 'No') {
     res.redirect('/tools/proposition-checker/nongovuk')
-  }
-  else {
+  } else {
     res.redirect('/tools/proposition-checker/question2')
   }
-});
+})
 
 app.post('/tools/proposition-checker/question2', (req, res) => {
-  if (req.body.question2 === "No") {
+  if (req.body.question2 === 'No') {
     res.redirect('/tools/proposition-checker/nongovuk')
-  }
-  else {
+  } else {
     res.redirect('/tools/proposition-checker/question3')
   }
-});
+})
 
 app.post('/tools/proposition-checker/question3', (req, res) => {
-
-  if(req.body.question3 === 'Yes'){
+  if (req.body.question3 === 'Yes') {
     res.redirect('/tools/proposition-checker/mainstream')
-}
-else{
-  res.redirect('/tools/proposition-checker/question4')
-}
-});
+  } else {
+    res.redirect('/tools/proposition-checker/question4')
+  }
+})
 
 app.post('/tools/proposition-checker/question4', (req, res) => {
-  if(req.body.question4 === 'Yes'){
+  if (req.body.question4 === 'Yes') {
     res.redirect('/tools/proposition-checker/question4a')
-}
-else{
-  res.redirect('/tools/proposition-checker/question6')
-}
-});
+  } else {
+    res.redirect('/tools/proposition-checker/question6')
+  }
+})
 
 app.post('/tools/proposition-checker/question4a', (req, res) => {
-
-if(req.session.data['question4'] === 'Yes'){
-  res.redirect('/tools/proposition-checker/question5')
-}
-else{
-
-  res.redirect('/tools/proposition-checker/question6')
-}
-
-});
+  if (req.session.data.question4 === 'Yes') {
+    res.redirect('/tools/proposition-checker/question5')
+  } else {
+    res.redirect('/tools/proposition-checker/question6')
+  }
+})
 
 app.post('/tools/proposition-checker/question5', (req, res) => {
   console.log(req.session.data)
   res.redirect('/tools/proposition-checker/question6')
-});
+})
 
 app.post('/tools/proposition-checker/question6', (req, res) => {
-  if(req.session.data['question6'] === 'Yes'){
+  if (req.session.data.question6 === 'Yes') {
     res.redirect('/tools/proposition-checker/nongovuk')
-  }
-  else{
-  
+  } else {
     res.redirect('/tools/proposition-checker/uncertain')
   }
-});
-
+})
 
 app.get('/tools/proposition-checker', (req, res) => {
   req.session.data = {}
@@ -397,39 +361,36 @@ app.get('/tools/proposition-checker', (req, res) => {
   console.log('indexpage')
 
   res.render('tools/proposition-checker/index')
-});
-
+})
 
 app.get('/tools/proposition-checker/result', (req, res) => {
   console.log(req.session.data)
 
-
   res.render('tools/proposition-checker/result')
-});
-
+})
 
 function calculateValues(data, number) {
-  const calculatedData = [];
+  const calculatedData = []
 
-  data.forEach(item => {
-    const numberresult = Math.ceil((item.percent / 100) * number); // Round up to the nearest whole number so we can account for sub 1 %'s on low user numbers. 
+  data.forEach((item) => {
+    const numberresult = Math.ceil((item.percent / 100) * number) // Round up to the nearest whole number so we can account for sub 1 %'s on low user numbers.
     calculatedData.push({
       measure: item.measure,
       number: numberresult,
       source: item.source,
       summary: item.summary,
       type: item.type
-    });
-  });
+    })
+  })
 
-  calculatedData.sort((a, b) => b.number - a.number);
+  calculatedData.sort((a, b) => b.number - a.number)
 
-  return calculatedData;
+  return calculatedData
 }
 
 app.get(/\.html?$/i, function (req, res) {
-  var path = req.path
-  var parts = path.split('.')
+  let path = req.path
+  const parts = path.split('.')
   parts.pop()
   path = parts.join('.')
   res.redirect(path)
@@ -478,28 +439,14 @@ function renderPath(path, res, next) {
   })
 }
 
-matchRoutes = function (req, res, next) {
-  var path = req.path
-
-  // Remove the first slash, render won't work with it
+function matchRoutes(req, res, next) {
+  let path = req.path
   path = path.substr(1)
-
-  // If it's blank, render the root index
   if (path === '') {
     path = 'index'
   }
 
   renderPath(path, res, next)
 }
-
-// Start the server
-
-// // Run application on configured port
-// if (config.env === 'development') {
-//   app.listen(config.port - 50, () => {
-//   });
-// } else {
-//   app.listen(config.port);
-// }
 
 app.listen(config.port)

@@ -1,19 +1,22 @@
 {% extends "layouts/content-with-sidenav.html" %}
+{% set canonical = "https://design.education.gov.uk/accessibility" %}
 
 {% set pageName = "Accessibility" %}
-{% set pageDescription = "Everyone who works on Department for Education services has a role to play in making services accessible and inclusive." %}
+{% set pageDescription = "Everyone who works on Department for Education services has a role to play in making services
+accessible and inclusive." %}
 
 {% set selectedNav = "Accessibility" %}
 {% set setSelectedSideNav = "" %}
-{% set lastUpdated = "18 July 2023 "%}
+{% set lastUpdated = "May 2024 "%}
 {% set backlog_issue_id = "56" %}
 
 {# Add changes with newest at the top #}
 {% set changeLog = [
-  {
-    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/56" target="_blank">GitHub issue #56</a>',
-    changeDate: '18 July 2023'
-  }
+{
+change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/56"
+  target="_blank">GitHub issue #56</a>',
+changeDate: '18 July 2023'
+}
 ]
 %}
 
@@ -21,31 +24,23 @@
 
 {% block content %}
 
-<div class="govuk-notification-banner govuk-notification-banner--success" role="region"
-  aria-labelledby="govuk-notification-banner-title"
-  data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      WCAG 2.2 published
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <p class="govuk-notification-banner__heading">All new standards are in core WCAG guidance</p>
-    <p>You must now be working to meet WCAG 2.2 in product and service delivery.</p>
-    <p>WCAG 2.2 is expected to be enforcable from October 2024.</p>
-    <p>Newly added standards can be identified with the <strong class="govuk-tag">new</strong> tag.</p>
-  </div>
-</div>
 
-    <div class="govuk-inset-text">Accessibility assurance should not be left until carrying out an evaluation. Manual and automated accessibility testing, testing with users with access needs and design reviews should be done throughout the service delivery lifecycle.</div>
+<p>Accessibility assurance should not be left until carrying out an evaluation. Manual and
+  automated accessibility testing, testing with users with access needs and design reviews should be done throughout the
+  service delivery lifecycle.</p>
 
 {% markdown %}
-[Estimate how many people using your website might be disabled](/tools/inclusivity-calculator). This will help you consider the types of people who may be using your service and who you should be testing with.
+[Estimate how many people using your website might be disabled](/tools/inclusivity-calculator). This will help you
+consider the types of people who may be using your service and who you should be testing with.
 
-We are [legally required](/accessibility/standards) to ensure all content available through a browser (websites, services, and apps) are accessible, regardless of whether they are for staff internal use, or external users.
+We are [legally required](/accessibility/standards) to ensure all content available through a browser (websites,
+services, and apps) are accessible, regardless of whether they are for staff internal use, or external users.
 
-When we talk about accessibility we must not think of it as just for disabled people, it also means supporting everyone with temporary, situational and permanent access needs who may be using assisitve technology.
+When we talk about accessibility we must not think of it as just for disabled people, it also means supporting everyone
+with temporary, situational and permanent access needs who may be using assisitve technology.
 
-In the UK, [one in five people have a disability](https://www.scope.org.uk/media/disability-facts-figures/) and around [15% of people are thought to be neurodivergent](https://adhdaware.org.uk/what-is-adhd/neurodiversity-and-other-conditions/).
+In the UK, [one in five people have a disability](https://www.scope.org.uk/media/disability-facts-figures/) and around
+[15% of people are thought to be
+neurodivergent](https://adhdaware.org.uk/what-is-adhd/neurodiversity-and-other-conditions/).
 {% endmarkdown %}
 {% endblock %}

@@ -250,12 +250,6 @@
         "type": "d"
     },
     {
-        "measure": "Households that only use mobile devices to access the internet",
-        "percent": 21,
-        "source": "https://www.ofcom.org.uk/__data/assets/pdf_file/0022/234364/digital-exclusion-review-2022.pdf",
-        "type": "d"
-    },
-    {
         "measure": "All age groups with zero digital skills",
         "percent": 8,
         "source": "https://www.ons.gov.uk/peoplepopulationandcommunity/householdcharacteristics/homeinternetandsocialmediausage/articles/exploringtheuksdigitaldivide/2019-03-04",

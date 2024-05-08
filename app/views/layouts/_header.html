@@ -1,44 +1,48 @@
- {{ header({
-    "showNav": "true",
-    "showSearch": "true",
-    "showUserName": "false",
-    "userName": "",
-    "userNameURL": "",
-    "selectedNav": selectedNav,
-    "logoPath": "assets/images",
-    "searchInputName": "searchterm",
-    "service": {
-      "name": serviceName
-    },
-    "primaryLinks": [
-      {
-        "url"  : "/",
-        "label" : "Home"
-      },
-       {
-        "url"  : "/design-system",
-        "label" : "Design system"
-      },
-       {
-        "url"  : "/accessibility",
-        "label" : "Accessibility"
-      },
-       {
-        "url"  : "/content-design",
-        "label" : "Content design"
-      },
-       {
-        "url"  : "/design-ops",
-        "label" : "Design Ops"
-      },
-       {
-        "url"  : "/inside-design",
-        "label" : "Inside design"
-      },
-       {
-        "url"  : "/learn",
-        "label" : "Learn"
-      }
-    ]
-  })
+{{ header({
+"showNav": "true",
+"showSearch": "true",
+"showUserName": "false",
+"userName": "",
+"userNameURL": "",
+"selectedNav": selectedNav,
+"logoPath": "assets/images",
+"searchInputName": "searchterm",
+"service": {
+"name": serviceName,
+"serviceUrl": "/"
+},
+"primaryLinks": [
+{
+"url" : "/",
+"label" : "Home"
+},
+{
+"url" : "/design-system",
+"label" : "Design system"
+},
+{
+"url" : "/professions",
+"label" : "Professions"
+},
+{
+"url" : "/community",
+"label" : "Community"
+},{
+"url" : "/our-work",
+"label" : "Our work"
+},
+{
+"url" : "/tools",
+"label" : "Tools"
+},
+{
+"url" : "/accessibility",
+"label" : "Accessibility"
+},
+{
+"url" : "/design-ops",
+"label" : "DesignOps"
+}
+]
+})
 }}
