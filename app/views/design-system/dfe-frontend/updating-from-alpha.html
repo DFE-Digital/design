@@ -1,0 +1,154 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% set pageName = "Updating to dfe-frontend" %}
+{% set pageDescription = "Guidance for updating your project to move from using dfe-frontend-alpha to dfe-frontend." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "5 May 2024" %}
+{% set backlog_issue_id = "238" %}
+{% set parentSection = "dfefrontend"%}
+{% set isChildSection = "true"%}
+
+
+
+{% block content %}
+<table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">NPM package</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Name</th>
+        <th scope="col" class="govuk-table__header">Version</th>
+        <th scope="col" class="govuk-table__header">Last updated</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://www.npmjs.com/package/dfe-frontend" target="_blank">dfe-frontend</a></th>
+        <th scope="row" class="govuk-table__header">{{version}}</th>
+        <td class="govuk-table__cell">{{lastUpdatedv | date('D MMMM YYYY') }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+            <p>If you have previously installed <code>dfe-frontend-alpha</code> and are
+                migrating to now use <code>dfe-frontend</code> there are some changes you need to implement.</p>
+
+            <h2 class="govuk-heading-l">Updating your project</h2>
+
+            <p>If you have <code>dfe-frontend-alpha</code> installed your project, remove it.</p>
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">1. Remove existing package</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <code>npm remove dfe-frontend-alpha</code>
+                </div>
+            </div>
+
+            <p>Install the new <code>dfe-frontend</code> package.</p>
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">2. Install dfe-frontend</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <code>npm i dfe-frontend</code>
+                </div>
+            </div>
+
+            <p>Update references to the new package.</p>
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">3. Update references for styles</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <p>If you're using a .scss file for styles, replace:</p>
+                    <pre><code>@import 'node_modules/dfe-frontend-alpha/packages/dfefrontend';</code></pre>
+                    <p>With:</p>
+                    <pre><code>@import 'node_modules/dfe-frontend/packages/dfefrontend';</code></pre>
+                </div>
+            </div>
+
+            <p>Update references to the scripts in your layouts.</p>
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">4. Update references for scripts</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <p>Replace:</p>
+<pre><code>{%raw%}{% block scripts %}
+{{ super() }}
+&lt;script src=&quot;/node_modules/dfe-frontend-alpha/dist/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}{%endraw%}</code></pre>
+                    <p>With:</p>
+<pre><code>{%raw%}{% block scripts %}
+{{ super() }}
+&lt;script src=&quot;/node_modules/dfe-frontend/dist/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}{%endraw%}</code></pre>
+                </div>
+            </div>
+
+            {% block scripts %}
+            {{ super() }}
+            <script src="/node_modules/dfe-frontend/dist/dfefrontend.min.js"></script>
+          {% endblock %}
+
+          <h3 class="govuk-heading-m">Header update</h3>
+          
+            <p>There are some changes to the header component in <code>dfe-frontend</code> that you need to be aware of.</p>
+
+            <p>The header contains the DfE logo and service name, in the previous version of the header, the logo and service name were the same link. This has been split out.</p>
+
+            <p>If using HTML you'll need to restucture your code using the <a href="/design-system/components/header/variants">examples in the header variants</a>.</p>
+
+            <p>If you're using nunjucks, you can amend your nunjucks code as follows:</p>
+
+            
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">5. Update node package reference</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <p>Replace:</p>
+                    <p>{% raw%}<code>{% from 'node_modules/dfe-frontend-alpha/packages/components/header/macro.njk' import header %}</code>{% endraw%}</p>
+                    <p>With:</p>
+                   <p>{%raw%}<pre><code>{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}</code></pre>{% endraw%}</p>
+                </div>
+            </div>
+
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">6. Header service link</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <p>To make the service name a link:</p>
+                    <p>Add <code>"serviceUrl": "/"</code> to the service node.</p>
+                   <p><pre><code>"service": {
+    "name": "Service name"
+    "serviceUrl": "/"
+}</code></pre></p>
+                </div>
+            </div>
+
+            <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                    <h2 class="govuk-summary-card__title">7. Header logo link</h2>
+                </div>
+                <div class="govuk-summary-card__content">
+                    <p>To make the DfE logo a link:</p>
+                    <p>Add <code>"homeHref": "https://gov.uk",</code> to the main list of nodes.</p>
+                    <p>You can also override the alt text for the logo, which fixes an accessibility issue. Add to the main list of nodes:</p>
+                    <p>Add <code>"logoAltText": "Department for Education",</code> to the main list of nodes.</p>
+                 
+                </div>
+            </div>
+
+            <p>You should always check the published <a href="/design-system/components/header/variants">examples in the header variants</a> for how to implement them correctly.</p>
+
+ 
+
+
+{% endblock %}

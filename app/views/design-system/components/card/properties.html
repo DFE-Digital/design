@@ -1,0 +1,133 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Card properties" %}
+{% set pageDescription = "Properties for customising the card component in Department for Education services." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Components"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "" %}
+{% set backlog_issue_id = "13" %}
+
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+   
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/components/card">Guidance</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/components/card/variants">Variants</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/components/card/properties">Properties</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <h2 class="govuk-heading-l">Properties</h2>
+
+      <p>Details of the properties that you can configure when using the nunjucks version of this component.</p>
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header">Parameter Name</th>
+            <th class="govuk-table__header">Type</th>
+            <th class="govuk-table__header">Description</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">imageCard</td>
+            <td class="govuk-table__cell">Boolean</td>
+            <td class="govuk-table__cell">Sets the image section ready for an image</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">imagePath</td>
+            <td class="govuk-table__cell">string</td>
+            <td class="govuk-table__cell">Path to your image file</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">altText</td>
+            <td class="govuk-table__cell">string</td>
+            <td class="govuk-table__cell">Alternative description of the image.</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">headingLevel</td>
+            <td class="govuk-table__cell">number</td>
+            <td class="govuk-table__cell">Should be a number between 2 and 4 indicating the heading level of the hard title</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">linkCard</td>
+            <td class="govuk-table__cell">Boolean</td>
+            <td class="govuk-table__cell">Sets whether the card header is a link and therefore the whole card clickable.</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">link</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">URL to link to.</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">openInNewTab</td>
+            <td class="govuk-table__cell">Boolean</td>
+            <td class="govuk-table__cell">Set to true if the link should open in a new tab. Default is false</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">heading</td>
+            <td class="govuk-table__cell">Object</td>
+            <td class="govuk-table__cell">The text for the card header.</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">description</td>
+            <td class="govuk-table__cell">String</td>
+            <td class="govuk-table__cell">The body text of the card under the header.</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">meta</td>
+            <td class="govuk-table__cell">string</td>
+            <td class="govuk-table__cell">If true, sets up a small body tag for containing meta text which is smaller than the card body and pushed to the bottom of the card.</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

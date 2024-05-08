@@ -1,199 +1,171 @@
 {% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-ops" %}
 
-{% set pageName = "Design Ops" %}
-{% set pageDescription = "The Design Ops team in the Department for Education support designers all across the department." %}
-{% set selectedNav = "Design Ops" %}
-{% set lastUpdated = "April 2023 "%}
-{% set backlog_issue_id = "41" %}{% extends "layouts/content-full-width.html" %}
-{% set zeroMainMargin = "true"%}
+{% set pageName = "DesignOps" %}
+{% set pageDescription = "The DesignOps team in the Department for Education support designers all across the
+department." %}
+{% set selectedNav = "DesignOps" %}
+{% set lastUpdated = "May 2024 "%}
+{% set backlog_issue_id = "28" %}
+
+
+{% block hero %}
+<section class="dfe-page-hero">
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
 {% block content %}
-  <section style="background: #ebf2f6;">
-    <div class="dfe-width-container" style="padding-top: 60px; padding-bottom: 60px;">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{pageName}}</h1>
-          <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
-        </div>
 
-      </div>
-    </div>
-  </section>
 
-  <section class="" style="background: #ffffff;">
-    <div class="dfe-width-container" style="padding: 80px 0px 80px 0px">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <h2 class="govuk-heading-l">Who we are</h2>
-          <p class="govuk-body-l">We're made up of a multidisciplinary team of design and research professionals.</p>
-        </div>
-      </div>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <div class="dfe-grid-container">
+<section>
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-            <div class="dfe-card">
-              <picture>
-                <source srcset="/assets/images/adam.webp" type="image/webp">
-                <img src="/assets/images/adam.png" alt="">
-              </picture>
-              <div class="dfe-card-container">
-                <h2 class="govuk-heading-m">
-          Adam Dumbell
-        </h2>
-                <p>User researcher</p>
-              </div>
-            </div>
+        <h2 class="govuk-heading-l">Who we are</h2>
 
-            <div class="dfe-card">
-              <picture>
-                <source srcset="/assets/images/andyjones.webp" type="image/webp">
-                <img src="/assets/images/andyjones.png" alt="">
-              </picture>
-              <div class="dfe-card-container">
-                <h2 class="govuk-heading-m">
-          Andy Jones
-        </h2>
-                <p>Head of Design</p>
-              </div>
-            </div>
+        <p>We are made up of professionals who lead on design and accessibility for the design professions across the
+          department.</p>
 
-            <div class="dfe-card">
-              <picture>
-                <source srcset="/assets/images/kerry.webp" type="image/webp">
-                <img src="/assets/images/kerry.png" alt="">
-              </picture>
-              <div class="dfe-card-container">
-                <h2 class="govuk-heading-m">
-         Kerry Lyons
-        </h2>
-                <p>Senior content designer</p>
-              </div>
-            </div>
+        <p>The team members are:</p>
 
-            <div class="dfe-card">
-              <picture>
-                <source srcset="/assets/images/profile.webp" type="image/webp">
-                <img src="/assets/images/profile.png" alt="">
-              </picture>
-              <div class="dfe-card-container">
-                <h2 class="govuk-heading-m">
-         Vacant
-        </h2>
-                <p>Senior accessibility specialist</p>
-              </div>
-            </div>
-
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Andy Jones
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Head of Profession for Design
+            </dd>
           </div>
-        </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Kerry Lyons
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Senior Content Designer
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Jake Lloyd
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Senior Accessibility Specialist
+            </dd>
+          </div>
+        </dl>
+
+
+        <h2 class="govuk-heading-l">What we do</h2>
+
+        <p>We support the following <a class="govuk-link govuk-link--no-visited-state"
+            href="https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework#user-centred-design-job-family"
+            target="_blank">user-centred design professions</a> across the department:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a class="govuk-link govuk-link--no-visited-state" href="/professions/content-design">Content
+              design</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--no-visited-state" href="/professions/interaction-design">Interaction
+              design</a>
+          </li>
+          <li>
+            <a class="govuk-link govuk-link--no-visited-state" href="/professions/service-design">Service
+              design</a>
+          </li>
+        </ul>
+
+        <p>The user resesarch profession is supported by the <a class="govuk-link govuk-link--no-visited-state"
+            href="https://user-research.education.gov.uk" target="_blank">Research Ops team</a>.</p>
+
+        <p>We support designers with:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>setting <a href="/standards">standards</a> and guidance for good design practices</li>
+          <li>working across services to identify and publish common components and patterns</li>
+          <li>creating tools and services to improve design processes</li>
+          <li>raising awareness and understanding of design and accessibility in DfE</li>
+        </ul>
+
+
+
+
+        <h2 class="govuk-heading-l">Get in touch</h2>
+
+        <p>You can contact us in the following ways:</p>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a class="govuk-link govuk-link--no-visited-state"
+                href="mailto:design.ops@education.gov.uk">design.ops@education.gov.uk</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              DfE slack
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a class="govuk-link govuk-link--no-visited-state"
+                href="https://ukgovernmentdfe.slack.com/archives/C0432A8JSV7" target="_blank">#designops</a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              X-GOV Slack
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a class="govuk-link govuk-link--no-visited-state"
+                href="https://ukgovernmentdigital.slack.com/archives/C04GXQ0320Z" target="_blank">#dfe-design-ops</a>
+            </dd>
+          </div>
+        </dl>
+
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <aside class="dfe-aside">
+          <h2 class="govuk-heading-m">More from DesignOps</h2>
+          <ul class="govuk-list govuk-list--spaced">
+            <li>
+              <a href="https://design-histories.education.gov.uk/team/design-ops" target="_blank">Read our design
+                histories</a>
+            </li>
+            <li>
+              <a href="https://trello.com/b/MUHTdo0w/head-of-design-work" target="_blank">See our Trello board of
+                work</a>
+            </li>
+
+            <li>
+              <a href="/design-ops/satisfaction-scores">Satisfaction scores</a>
+            </li>
+          </ul>
+
+          <div class="dfe-panel govuk-!-margin-top-9">
+            <h2 class="govuk-heading-m">Our design priorities</h2>
+            <p>Our priorities for design cut across all design professions and aim to raise design maturity, awareness
+              and
+              solve common and repeatable problems.</p>
+            <p class="govuk-!-margin-bottom-0"><a href="/design-ops/priorities" target="_blank" class="govuk-link">See
+                our
+                progress</a></p>
+          </div>
+        </aside>
       </div>
     </div>
-  </section>
-
-  <section class="" style="background: #ffffff;">
-    <div class="dfe-width-container" style="padding: 00px 0px 80px 0px">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <h2 class="govuk-heading-l">What we do</h2>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <p>We support the following <a class="govuk-link govuk-link--no-visited-state" href="https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework#user-centred-design-job-family" target="_blank">user-centred design professions</a> across the department:</p>
-
-          <ul class="govuk-list govuk-list--bullet">
-            <li>
-              <a class="govuk-link govuk-link--no-visited-state" href="/inside-design/professions/content-design">Content design</a>
-            </li>
-            <li>
-              <a class="govuk-link govuk-link--no-visited-state" href="/inside-design/professions/interaction-design">Interaction design</a>
-            </li>
-            <li>
-              <a class="govuk-link govuk-link--no-visited-state" href="/inside-design/professions/service-design">Service design</a>
-            </li>
-          </ul>
-
-          <p>The user resesarch profession is supported by the <a class="govuk-link govuk-link--no-visited-state" href="https://user-research.education.gov.uk/" target="_blank">Research Ops team</a>.</p>
-
-          <p>We support designers with:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>setting standards and guidance for good design practices</li>
-            <li>working across services to identify and publish common components and patterns</li>
-            <li>creating tools and services to improve design processes</li>
-            <li>raising awareness and understanding of design and accessibility in DfE</li>
-          </ul>
-
-           <p>We also aim to raise <a class="govuk-link govuk-link--no-visited-state" href="/inside-design/maturity" target="_blank">profession maturity</a> across the department.</p>
-
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <div class="dfe-section-break dfe-section-break--light-dashed dfe-section-break--m "></div>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <h2 class="govuk-heading-l">How we can help you</h2>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-
-          <ul class="dfemanual-cta-cards dfemanual-cta-cards--half ">
-            <li class="card">
-              <h3>Understand standards</h3>
-              <p>Standards are key to good delivery and we can help you understand <a class="govuk-link govuk-link--no-visited-state" href="https://apply-the-service-standard.education.gov.uk">how to apply then in your work</a>.</p>
-
-            </li>
-            <li class="card">
-              <h3>Recruitment and onboarding</h3>
-              <p>We can help with making sure you've got the right job specs and that people have the right tools and tech from day 1.</p>
-
-            </li>
-            <li class="card">
-              <h3>Tools</h3>
-              <p>Advice and guidance on <a class="govuk-link govuk-link--no-visited-state" href="/design-ops/tools">the tools you can, and cannot, use in DfE</a>, or support in getting new tools approved.</p>
-
-            </li>
-            <li class="card">
-              <h3>Be a critical friend</h3>
-              <p>We can help to de-risk your services and products by offering guidance, recommendations, or advice on design problems.</p>
-
-            </li>
-
-            <li class="card">
-              <h3 id="contact">Get in touch</h3>
-              <p>You can contact us in several ways:</p>
-              <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-      Email
-    </dt>
-                  <dd class="govuk-summary-list__value">
-                    <a class="govuk-link govuk-link--no-visited-state" href="mailto:design.ops@education.gov.uk">design.ops@education.gov.uk</a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-      DfE slack
-    </dt>
-                  <dd class="govuk-summary-list__value">
-                    <a class="govuk-link govuk-link--no-visited-state" href="https://ukgovernmentdfe.slack.com/archives/C0432A8JSV7" target="_blank">#design-ops</a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-      X-GOV Slack
-    </dt>
-                  <dd class="govuk-summary-list__value">
-                    <a  class="govuk-link govuk-link--no-visited-state" href="https://ukgovernmentdigital.slack.com/archives/C04GXQ0320Z" target="_blank">#dfe-design-ops</a>
-                  </dd>
-                </div>
-              </dl>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </section>
+</section>
 
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layouts/example.html" %}
+{% set selectedNav = "Navigation link 1"%}
+
+{% block content %}
+
+{{ header({
+    "showNav": "false",
+    "showSearch": "false",
+    "showUserName": "false",
+    "logoPath": "public/images", 
+    "logoAltText": "Department for Education",
+    "homeHref": "https://gov.uk",
+    "service": {
+      "name": "Service name",
+      "serviceUrl": "/"
+    }
+  })
+}}
+
+{% endblock %}

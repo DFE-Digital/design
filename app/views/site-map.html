@@ -1,200 +1,124 @@
 {% extends "layouts/content-with-sidenav.html" %}
 
 {% set pageName = "Site map" %}
-{% set pageDescription = "Site map for the user centred design manual in the Department for Education." %}
+{% set pageDescription = "Site map for the design manual in the Department for Education." %}
 {% set selectedNav = "" %}
-{% set lastUpdated = "June 2023 "%}
+{% set lastUpdated = "May 2024"%}
 
 {% block content %}
 
-  <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/accessibility/">Accessibility</a>
-      <ul class="dfeuk-u-nested-list">
-        <li>
-          <a href="/accessibility/standards">Accessibility standards</a>
-        </li>
-        <li>
-          <a href="/accessibility/understanding-wcag">Understanding WCAG</a>
-          <ul class="dfeuk-u-nested-list">
-            <li>
-              <a href="/accessibility/understanding-wcag/perceivable">Perceivable</a>
-            </li>
-            <li>
-              <a href="/accessibility/understanding-wcag/operable">Operable</a>
-            </li>
-            <li>
-              <a href="/accessibility/understanding-wcag/understandable">Understandable</a>
-            </li>
-            <li>
-              <a href="/accessibility/understanding-wcag/robust">Robust</a>
-            </li>
-            <li>
-              <a href="/accessibility/understanding-wcag/draft-2-2">Draft WCAG 2.2 changes</a>
-            </li>
-          </ul>
-        </li>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="/">Home</a></li>
+  <li><a href="/cookie-policy">Cookie Policy</a></li>
+  <li><a href="/design-system">Design System</a>
+    <ul>
+      <li><a href="/design-system/getting-started">Getting Started</a></li>
+      <li><a href="/design-system/dfe-frontend">DfE Frontend</a></li>
+      <li><a href="/design-system/dfe-frontend/updating-from-alpha">Updating from dfe-frontend-alpha</a></li>
+      <li><a href="/design-system/styles">Styles</a>
+        <ul>
+          <li><a href="/design-system/styles/typography">Typography</a></li>
+          <li><a href="/design-system/styles/colour">Colour</a></li>
+          <li><a href="/design-system/styles/typography/examples">Typography Examples</a></li>
+          <li><a href="/design-system/styles/colour/examples">Colour Examples</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/components">Components</a>
+        <ul>
+          <li><a href="/design-system/components/header">Header</a>
+            <ul>
+              <li><a href="/design-system/components/header/variants">Header Variants</a></li>
+              <li><a href="/design-system/components/header/properties">Header Properties</a></li>
+              <li><a href="/design-system/components/header/examples/everything">All Header Examples</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="/design-system/patterns">Patterns</a>
+        <ul>
+          <li><a href="/design-system/patterns/select-a-school">Select a School</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/content-design">Content Design</a>
+        <ul>
+          <li><a href="/design-system/language-we-use">Language We Use</a></li>
+          <li><a href="/design-system/how-we-write-emails">How We Write Emails</a></li>
+          <li><a href="/design-system/writing-project-page">Writing a project page</a></li>
+          <li><a href="/design-system/types-of-content-we-publish">Types of Content We Publish</a></li>
+          <li><a href="/design-system/publishing-content-on-govuk">Publishing Content on GOV.UK</a></li>
+          <li><a href="/design-system/reviewing-and-checking-content">Reviewing and Checking Content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/style-guide">Style Guide</a></li>
+      <li><a href="/design-system/content-strategies">Content Strategies</a></li>
+      <li><a href="/design-system/figma">Figma</a></li>
+      <li><a href="/design-system/prototype-kit">Prototype Kit</a></li>
+      <li><a href="/design-system/github-heroku">GitHub Heroku</a></li>
+    </ul>
+  </li>
+  <li><a href="/professions">Professions</a>
+    <ul>
+      <li><a href="/professions/content-design">Content Design</a></li>
+      <li><a href="/professions/interaction-design">Interaction Design</a></li>
+      <li><a href="/professions/service-design">Service Design</a></li>
+      <li><a href="/professions/head-of-profession">Head of Profession</a></li>
+      <li><a href="/professions/maturity">Maturity</a>
+        <ul>
+          <li><a href="/professions/maturity/results/september-2023">Results September 2023</a></li>
+          <li><a href="/professions/maturity/results/september-2022">Results September 2022</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="/community">Community</a></li>
+  <li><a href="/our-work">Our Work</a>
+    <ul>
+      <li><a href="/our-work/projects/family-hubs">Family Hubs</a></li>
+      <li><a href="/our-work/projects/education-health-care-plan">Education Health Care Plan</a></li>
+      <li><a href="/our-work/projects/service-assessment-service">Service Assessment Service</a></li>
+    </ul>
+  </li>
+  <li><a href="/tools">Tools</a>
+    <ul>
+      <li><a href="/tools/proposition-checker">Proposition Checker</a></li>
+      <li><a href="/tools/how-many-users">How Many Users</a></li>
+    </ul>
+  </li>
+  <li><a href="/accessibility">Accessibility</a>
+    <ul>
+      <li><a href="/accessibility/standards">Standards</a></li>
+      <li><a href="/accessibility/roles-and-responsibilities">Roles and Responsibilities</a></li>
+      <li><a href="/accessibility/understanding-wcag">Understanding WCAG</a>
+        <ul>
+          <li><a href="/accessibility/understanding-wcag/perceivable">Perceivable</a></li>
+          <li><a href="/accessibility/understanding-wcag/operable">Operable</a></li>
+          <li><a href="/accessibility/understanding-wcag/understandable">Understandable</a></li>
+          <li><a href="/accessibility/understanding-wcag/robust">Robust</a></li>
+        </ul>
+      </li>
+      <li><a href="/accessibility/assurance">Assurance</a></li>
+      <li><a href="/accessibility/audits">Audits</a></li>
+      <li><a href="/accessibility/evaluation-methodology">Evaluation Methodology</a></li>
+      <li><a href="/accessibility/determine-conformance">Determine Conformance</a></li>
+      <li><a href="/accessibility/accessibility-statements">Accessibility Statements</a>
+        <ul>
+          <li><a href="/accessibility/accessibility-statements/full-statement">Full Statement</a></li>
+          <li><a href="/accessibility/accessibility-statements/partial-statement">Partial Statement</a></li>
+          <li><a href="/accessibility/accessibility-statements/notmet-statement">Not Met Statement</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="/design-ops">Design Ops</a>
+    <ul>
+      <li><a href="/design-ops/priorities">Priorities</a></li>
+      <li><a href="/design-ops/satisfaction-scores">Satisfaction Scores</a></li>
+      <li><a href="/tools">Tools</a></li>
+    </ul>
+  </li>
+  <li><a href="/standards">Standards</a></li>
+</ul>
 
-        <li>
-          <a href="/accessibility/evaluation-methodology">Evaluation methodology</a>
-        </li>
 
-        <li>
-          <a href="/accessibility/determine-conformance/">Determine conformance</a>
-        </li>
-        <li>
-          <a href="/accessibility/roles-and-responsibilities">Roles and responsibilities</a>
-        </li>
-        <li>
-          <a href="/accessibility/assurance">Testing and assurance</a>
-        </li>
-        <li>
-          <a href="/accessibility/audits">Audits</a>
-        </li>
-        <li>
-          <a href="/accessibility/accessibility-statements">Accessibility statements</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="/design-system/">Design System</a>
-      <ul class="dfeuk-u-nested-list">
-        <li>
-          <a href="/design-system/dfe-frontend/">DfE Frontend</a>
-        </li>
-        <li>
-          <a href="/design-system/styles/">Styles</a>
-          <ul class="dfeuk-u-nested-list">
-            <li>
-              <a href="/design-system/styles/colour">Colour</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/design-system/components/">Components</a>
-          <ul class="dfeuk-u-nested-list">
-            <li>
-              <a href="/design-system/components/header">Header</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/design-system/patterns/">Patterns</a>
-          <ul class="dfeuk-u-nested-list">
-            <li>
-              <a href="/design-system/patterns/select-a-school">Select a school</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/design-system/contribute/">Contribute</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="/design-system/ncs-design-system">National Careers Service Design System</a>
-      <ul class="dfeuk-u-nested-list">
-        <li>
-          <a href="/design-system/styles/">Styles (NCS)</a>
-          <ul class="dfeuk-u-nested-list">
-            <li>
-              <a href="/design-system/ncs-design-system/branding-guidelines/colour">Colour (NCS)</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/design-system/ncs-design-system/components/">Components (NCS)</a>
-          <ul class="dfeuk-u-nested-list">
-            <li>
-              <a href="/design-system/ncs-design-system/components/header">Header (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/search">Search (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/banner-notification">Banner notifications (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/panel">Panel (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/progress-bar">Progress bar (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/ticket-panel">Ticket panel (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/button">Button (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/highlight-box">Highlight box (NCS)</a>
-            </li>
-            <li>
-              <a href="/design-system/ncs-design-system/components/image-headers">Image-headers (NCS)</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="/content-design/">Content design</a>
-      <ul class="dfeuk-u-nested-list">
-        <li>
-          <a href="/content-design/language-we-use">Language we use</a>
-        </li>
-        <li>
-          <a href="/content-design/writing-design-history-posts">Writing design history posts</a>
-        </li>
-        <li>
-          <a href="/content-design/how-we-write-emails/">How we write emails</a>
-        </li>
-        <li>
-          <a href="/content-design/types-of-content-we-publish/">Types of content we publish</a>
-        </li>
-        <li>
-          <a href="/content-design/publishing-content-on-govuk">Publishing content on GOV.UK</a>
-        </li>
-        <li>
-          <a href="/content-design/types-of-content-we-publish/reviewing-and-checking-content">Reviewing and checking content</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="/inside-design">Inside design</a>
-      <ul class="dfeuk-u-nested-list">
-        <li>
-          <a href="/inside-design/projects/family-hubs">Family hubs digital project</a>
-        </li>
-        <li>
-          <a href="/inside-design/goals">Design goals</a>
-        </li>
-
-        <li>
-          <a href="/inside-design/maturity">Design maturity</a>
-        </li>
-        <li>
-          <a href="/inside-design/maturity/results/september-2022">Design maturity results 2022</a>
-        </li>
-        <li>
-          <a href="/inside-design/maturity/results/september-2023">Design maturity results 2023</a>
-        </li>
-
-      </ul>
-    </li>
-    <li>
-      <a href="/design-ops/">Design Ops</a>
-      <ul class="dfeuk-u-nested-list">
-        <li>
-          <a href="/design-ops/tools">Tools</a>
-        </li>
-        <li>
-          <a href="/design-ops/contact">Contact Design Ops</a>
-        </li >
-      </ul>
-    </li>
-  </ul>
 
 {% endblock %}
