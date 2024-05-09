@@ -300,6 +300,27 @@ url: "/design-system/ncs-design-system/components/image-headers"
 ] %}
 
 
+{# RSD Specific pages #}
+
+{% set rsd_design_guidance= [
+  {
+  title: "Regional Services Division design system",
+  url: "/design-system/rsd-design-system"
+  }
+  ] %}
+  
+  {% set rsd_design_system = [
+  {
+  title: "Patterns",
+  url: "/design-system/rsd-design-system/patterns"
+  },
+  {
+    title: "Content strategy",
+    url: "/design-system/rsd-design-system/content-strategy"
+    }
+  ] %}
+
+
 <nav class="dfe-vertical-nav">
 
   {%- if selectedNav === "Content design" %}
@@ -684,5 +705,36 @@ url: "/design-system/ncs-design-system/components/image-headers"
   </ul>
 
   {% endif %}
+
+
+
+
+
+  {%- if parentSection == "rsd-design-system" and isChildSection == "true" and rsd_hide_parent_nav !=="true" %}
+
+
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
+  <h2 class="dfe-vertical-nav--section-header">How we work</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in rsd_design_guidance %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+  <h2 class="dfe-vertical-nav--section-header">Design</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in rsd_design_system %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
 
 </nav>
