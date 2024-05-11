@@ -1,5 +1,5 @@
 {% extends "layouts/content-full-width.html" %}
-{% set canonical = "https://design.education.gov.uk/design-system/dfe-frontend/updating-from-alpha"%}
+{% set canonical = "https://design.education.gov.uk/design-system/dfe-frontend/updating" %}
 {% set pageName = "Updating to dfe-frontend" %}
 {% set pageDescription = "Guidance for updating your project to move from using dfe-frontend-alpha to dfe-frontend." %}
 {% set selectedNav = "Design system" %}
@@ -49,7 +49,8 @@
             <div class="govuk-grid-column-three-quarters">
 
                 <p>This guidance will help you move your project from <code>dfe-frontend-alpha</code> to
-                    <code>dfe-frontend</code>.</p>
+                    <code>dfe-frontend</code>.
+                </p>
 
 
 
@@ -78,7 +79,7 @@
                     </div>
                 </div>
 
-                <p>Update references to the new package.</p>
+              <p>Update references to the new package.</p>
 
                 <div class="govuk-summary-card">
                     <div class="govuk-summary-card__title-wrapper">
@@ -112,10 +113,7 @@
                     </div>
                 </div>
 
-                {% block scripts %}
-                {{ super() }}
-                <script src="/node_modules/dfe-frontend/dist/dfefrontend.min.js"></script>
-                {% endblock %}
+  
 
                 <h3 class="govuk-heading-m">Header update</h3>
 
@@ -138,9 +136,7 @@
                     </div>
                     <div class="govuk-summary-card__content">
                         <p>Replace:</p>
-                        <p>{%
-                            raw%}<code>{% from 'node_modules/dfe-frontend-alpha/packages/components/header/macro.njk' import header %}</code>{%
-                            endraw%}</p>
+                        <p>{% raw%}<code>{% from 'node_modules/dfe-frontend-alpha/packages/components/header/macro.njk' import header %}</code>{%endraw%}</p>
                         <p>With:</p>
                         <p>{%raw%}
                         <pre><code>{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}</code></pre>
@@ -177,7 +173,7 @@
                         <p>Add <code>"logoAltText": "Department for Education",</code> to the main list of nodes.</p>
 
                     </div>
-                </div>
+                </div> 
 
                 <p>You should always check the published <a href="/design-system/components/header/variants">examples in
                         the header variants</a> for how to implement them correctly.</p>
@@ -186,5 +182,6 @@
             </div>
         </div>
     </div>
+</section>
 
-    {% endblock %}
+{% endblock %}

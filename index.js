@@ -180,30 +180,6 @@ app.get('/design-ops/maturity/results/september-2023', function (req, res) {
 })
 
 app.get(
-  '/design-system/dfe-frontend/updating-from-alpha',
-  function (req, res, next) {
-    const packageName = 'dfe-frontend'
-
-    axios
-      .get(`https://registry.npmjs.org/${packageName}`)
-      .then((response) => {
-        const version = response.data['dist-tags'].latest
-        const lastUpdatedv = new Date(
-          response.data.time.modified
-        ).toISOString()
-
-        res.render('design-system/dfe-frontend/updating-from-alpha.html', {
-          version,
-          lastUpdatedv
-        })
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-  }
-)
-
-app.get(
   '/design-system/dfe-frontend',
   function (req, res, next) {
     const packageName = 'dfe-frontend'
