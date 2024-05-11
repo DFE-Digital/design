@@ -3,16 +3,19 @@
 
 <!DOCTYPE html>
 <html lang="en" class="govuk-template">
+
 <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://rsms.me/">
     <title>
         {% if seoPageName %}
-            {{ seoPageName }}
+        {{ seoPageName }}
         {% elseif pageName %}
-            {{ pageName }}
+        {{ pageName }}
         {% endif %} - Design Manual - Department for Education
     </title>
-    <meta name="description" content="{% if seoPageDescription %}{{ seoPageDescription }}{% elseif pageDescription %}{{ pageDescription }}{% endif %}">
+    <meta name="description"
+        content="{% if seoPageDescription %}{{ seoPageDescription }}{% elseif pageDescription %}{{ pageDescription }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#00294a">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,26 +30,27 @@
     <meta name="google-site-verification" content="78BmMoejRsC4auIyTs5JLkClgxvWYGDAYMIikFxTNPA">
     {% block head %}{% endblock %}
 </head>
+
 <body class="govuk-template__body js-enabled">
     <script>if ('noModule' in HTMLScriptElement.prototype) { document.body.classList.add('govuk-frontend-supported'); }</script>
     <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
     {% include 'layouts/_topnav.html' %}
     {% include 'layouts/_services.html' %}
     {% block header %}
-        {% include 'layouts/_header.html' %}
+    {% include 'layouts/_header.html' %}
     {% endblock %}
     <div class="govuk-width-container">
         {% block beforeContent %}{% endblock %}
         {% block main %}
-            <div class="govuk-width-container app-width-container">
-                <main class="govuk-main-wrapper" id="main-content" role="main">
-                    {% block content %}{% endblock %}
-                </main>
-            </div>
+        <div class="govuk-width-container app-width-container">
+            <main class="govuk-main-wrapper" id="main-content" role="main">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
         {% endblock %}
     </div>
     {% block footer %}
-        {% include 'layouts/_footer.html' %}
+    {% include 'layouts/_footer.html' %}
     {% endblock %}
     <script src="/assets/js/cookies.min.js"></script>
     <script src="/assets/js/feedback.min.js"></script>
@@ -59,4 +63,5 @@
         initAll();
     </script>
 </body>
+
 </html>

@@ -6,6 +6,7 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://rsms.me/">
   <title>
     {% if seoPageName %}{{seoPageName}}
     {% elseif pageName %}{{pageName}}{%endif%} - {% if parentSection === "ncs-design-system"%}National Careers Service
@@ -64,7 +65,7 @@
 
 
 
-  <div class="govuk-width-container dfe-width-container">
+  <div class="govuk-width-container govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         {% block preContent %}{% endblock %}

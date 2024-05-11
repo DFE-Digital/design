@@ -1,0 +1,99 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-system/patterns" %}
+
+{% set pageName = "Patterns" %}
+{% set pageDescription = "Comon and repeatable patterns we use in the Department for Education." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Patterns"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "May 2024"%}
+{% set backlog_issue_id = "43" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l  govuk-!-margin-top-5">Design system</span>
+        <h1 class="govuk-heading-xl">{{pageName}}</h1>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles/">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/dfe-frontend/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <p>Patterns are a combination of styles and components which enable a user to complete something in a consistent,
+        repetitive way.</p>
+
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Backlog</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Pattern</th>
+            <th scope="col" class="govuk-table__header">Summary</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/12"
+                target="_blank">Ask users for feedback</a></th>
+            <td class="govuk-table__cell">Allows users to give feedback about a page, feature or overall service.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/8"
+                target="_blank">Search</a></th>
+            <td class="govuk-table__cell">Different types of search across a list, table, page, or product.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/13"
+                target="_blank">Show performance data</a></th>
+            <td class="govuk-table__cell">Displaying performance data about a product or service in a consistent way.
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/9"
+                target="_blank">Video</a></th>
+            <td class="govuk-table__cell">Presenting video along with transcripts ensuring they are accessible.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>If you have a pattern you want to see in the design system, <a
+          href="/design-system/dfe-frontend/contribute">follow the contribution guidelines</a>.</p>
+
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

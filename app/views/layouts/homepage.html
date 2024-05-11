@@ -7,6 +7,7 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://rsms.me/">
   <title>
     {% if seoPageName %}{{seoPageName}}
     {% elseif pageName %}{{pageName}}{%endif%} - Design Manual - Department for Education</title>
@@ -61,7 +62,7 @@
   {% endblock %}
 
   {% block hero %}{% endblock %}
-  <div class="dfe-width-container">
+  <div class="govuk-width-container">
     {% block beforeContent%}{% endblock %}
 
     {% block main %}

@@ -173,10 +173,10 @@ app.get('/design-ops/design-maturity/september-2022', function (req, res) {
   res.redirect('/inside-design/maturity/results/september-2022', 301)
 })
 
-app.get('/professions/maturity/results/september-2023', function (req, res) {
+app.get('/design-ops/maturity/results/september-2023', function (req, res) {
   const data = require('./app/data/dm_2023.json')
 
-  res.render('professions/maturity/results/september-2023', { data })
+  res.render('design-ops/maturity/results/september-2023', { data })
 })
 
 app.get(
@@ -228,7 +228,7 @@ app.get(
 )
 
 app.get(
-  '/design-system/getting-started',
+  '/design-system/installation',
   function (req, res, next) {
     const packageName = 'dfe-frontend'
 
@@ -240,9 +240,39 @@ app.get(
           response.data.time.modified
         ).toISOString()
 
-        res.render('design-system/getting-started/index.html', {
+        res.render('design-system/installation/index.html', {
           version,
           lastUpdatedv
+        })
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+)
+
+app.get(
+  '/design-system/dfe-frontend/whats-new',
+  function (req, res, next) {
+    const packageName = 'dfe-frontend'
+
+    axios
+      .get(`https://registry.npmjs.org/${packageName}`)
+      .then((response) => {
+        const version = response.data['dist-tags'].latest
+
+        const sortedFilteredVersions = Object.entries(response.data.time)
+          .filter(([version, _]) => version.includes('.') && version.startsWith('2'))
+          .sort(([versionA, _a], [versionB, _b]) => versionB.localeCompare(versionA))
+
+        const lastUpdatedv = new Date(
+          response.data.time.modified
+        ).toISOString()
+
+        res.render('design-system/dfe-frontend/whats-new.html', {
+          version,
+          lastUpdatedv,
+          sortedFilteredVersions
         })
       })
       .catch((error) => {

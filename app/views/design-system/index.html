@@ -8,12 +8,27 @@ Education, provide people with a consistent, accessible, and usable user experie
 {% set backlog_issue_id = "44" %}
 
 {% block hero %}
-<section class="dfe-page-hero">
-   <div class="dfe-width-container">
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+   <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl">{{pageName}}</h1>
-            <p class="govuk-body-l">{{pageDescription}}</p>
+            <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+            <nav class="app-sub-navigation" aria-label="Application menu">
+               <ul class="app-sub-navigation__list">
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" aria-current="page" href="/design-system">Overview</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles">Styles</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/components">Components</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+                  </li>
+               </ul>
+            </nav>
          </div>
       </div>
    </div>
@@ -24,55 +39,39 @@ Education, provide people with a consistent, accessible, and usable user experie
 <section>
    <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-         <h2 class="govuk-heading-l">DfE Frontend</h2>
+
+         <p>Use the DfE Design System to ensure products and services, built in the Department for Education, provide
+            people with a consistent, accessible, and usable user experience.</p>
+
+         <p>If you've never used the DfE design system before, read through the following guidance first:</p>
+
 
          <div class="dfe-grid-container">
             <div class="dfe-card">
                <div class="dfe-card-container">
                   <h3 class="govuk-heading-m">
-                     <a href="/design-system/styles"
-                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Styles</a>
-                     </h3>
-                  <p>User-interface styles for colour and typography in DfE services.</p>
+                     <a href="/design-system/dfe-frontend"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">When to use</a>
+                  </h3>
+                  <p>Understand when to use DfE Frontend in your products.</p>
                </div>
             </div>
             <div class="dfe-card">
                <div class="dfe-card-container">
                   <h3 class="govuk-heading-m">
-                     <a href="/design-system/components"
-                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Components</a>
-                     </h3>
-                  <p>The building blocks for pages, and DfE-specific user-interface elements.</p>
-               </div>
-            </div>
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="/design-system/patterns"
-                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Patterns</a>
-                     </h3>
-                  <p>Wider service patterns to enable DfE to deliver consistent ways of asking for information or
-                     completing a task.</p>
-               </div>
-            </div>
-         </div>
-         <div class="dfe-grid-container">
-            <div class="dfe-card">
-               <div class="dfe-card-container">
-                  <h3 class="govuk-heading-m">
-                     <a href="/design-system/getting-started"
+                     <a href="/design-system/dfe-frontend/installation"
                         class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Installation</a>
-                     </h3>
+                  </h3>
                   <p>How to install and use DfE Frontend in your product.</p>
                </div>
             </div>
             <div class="dfe-card">
                <div class="dfe-card-container">
                   <h3 class="govuk-heading-m">
-                     <a href="/design-system/dfe-frontend"
-                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">When to use</a>
-                     </h3>
-                  <p>Understand when to use DfE Frontend in your products.</p>
+                     <a href="/design-system/dfe-frontend/contribute"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Contribute</a>
+                  </h3>
+                  <p>How to contribute a style, component or pattern to the design system</p>
                </div>
             </div>
          </div>
@@ -92,7 +91,7 @@ Education, provide people with a consistent, accessible, and usable user experie
                   <h3 class="govuk-heading-m">
                      <a href="/design-system/content-design"
                         class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Content design in DfE</a>
-                     </h3>
+                  </h3>
                   <p>How we design good content in DfE for differnet channels and purposes.</p>
                </div>
             </div>
@@ -101,7 +100,7 @@ Education, provide people with a consistent, accessible, and usable user experie
                   <h3 class="govuk-heading-m">
                      <a href="/design-system/style-guide"
                         class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Content style guide</a>
-                     </h3>
+                  </h3>
                   <p>The style guide is for anyone creating content for DfE, to help make things clear and consistent
                      across
                      all of our services.
@@ -163,7 +162,7 @@ Education, provide people with a consistent, accessible, and usable user experie
                   <h3 class="govuk-heading-m">
                      <a href="/design-system/prototype-kit"
                         class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Prototype kit</a>
-                     </h3>
+                  </h3>
                   <p>Get started with the prototype kit and get it set up.</p>
                </div>
             </div>
@@ -172,7 +171,7 @@ Education, provide people with a consistent, accessible, and usable user experie
                   <h3 class="govuk-heading-m">
                      <a href="/design-system/github-heroku"
                         class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Hosting your prototype</a>
-                     </h3>
+                  </h3>
                   <p>How to set up your prototype and using Heroku.</p>
                </div>
             </div>

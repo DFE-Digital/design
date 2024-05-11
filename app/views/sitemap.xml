@@ -75,7 +75,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/getting-started</loc>
+  <loc>https://design.education.gov.uk/design-system/installation</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -275,7 +275,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/getting-started/production</loc>
+  <loc>https://design.education.gov.uk/design-system/installation/production</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>

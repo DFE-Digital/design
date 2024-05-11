@@ -1,0 +1,82 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-ops/priorities/build-capability" %}
+{% set selectedNav = "DesignOps" %}
+{% set subNav = "Priorities" %}
+{% set pageName = "Build capability" %}
+{% set pageDescription = "Enable designers to create consistent and accessible products and services for users." %}
+
+{% set backlog_issue_id = "244" %}
+
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-l  govuk-!-margin-top-5">DesignOps</span>
+            <h1 class="govuk-heading-xl">{{pageName}}</h1>
+            <p class="govuk-body-l govuk-!-margin-bottom-6">{{pageDescription}}</p>
+            <nav class="app-sub-navigation" aria-label="Application menu">
+               <ul class="app-sub-navigation__list">
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops">Overview</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops/professions">Professions</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" aria-current="page" href="/design-ops/priorities">Our
+                        priorities</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops/maturity">Design maturity</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<section>
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-one-quarter">
+            {% include "includes/_side-nav.html"%}
+         </div>
+         <div class="govuk-grid-column-three-quarters">
+
+            <h2 class="govuk-heading-l">Initiatives</h2>
+
+            <p>Some of the initiatives we're working on to support this priority.</p>
+
+            <h3 class="govuk-heading-m">Building capability</h3>
+            <p>Focus on enhancing the professional capabilities of designers by providing opportunities for skill
+               development and growth.</p>
+            <p>This involves creating an environment that supports continuous learning and the
+               sharing of knowledge across design professions.</p>
+            <p>Additionally, rolling out capability-based pay for service design profession.</p>
+
+            <h3 class="govuk-heading-m">Enabling designers to learn new skills</h3>
+            <p>Implement training programs and workshops that allow designers to acquire new skills and stay up-to-date
+               with the latest design trends and technologies.</p>
+            <p>This includes access to courses, seminars, and
+               hands-on projects that challenge and expand abilities.</p>
+
+            <h3 class="govuk-heading-m">Growing design maturity and awareness</h3>
+            <p>Work towards increasing the overall design maturity within the department by promoting a culture that
+               values and understands the importance of design.</p>
+            <p>This includes involving professions and areas of the department in community events and the
+               integration of design thinking into the department's strategic initiatives.</p>
+
+
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
