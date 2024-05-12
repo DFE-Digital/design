@@ -85,12 +85,12 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/components</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/components</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/patterns</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/patterns</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -280,12 +280,12 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/styles/typography</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/styles/typography</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/components/header</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/components/header</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -295,12 +295,12 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/styles/colour</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/styles/colour</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/patterns/select-a-school</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/patterns/select-a-school</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -410,37 +410,37 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/styles/typography/examples</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/styles/typography/examples</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/components/header/variants</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/components/header/variants</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/components/header/properties</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/components/header/properties</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/components</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/components</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/styles/colour/examples</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/styles/colour/examples</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/patterns</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/patterns</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/design-system/components/header/examples/everything</loc>
+  <loc>https://design.education.gov.uk/design-system/dfe-frontend/components/header/examples/everything</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.33</priority>
 </url>
