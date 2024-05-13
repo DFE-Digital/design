@@ -1,5 +1,5 @@
 {% extends "layouts/content-full-width.html" %}
-
+{% set canonical = "https://design.education.gov.uk/design-system/prototype-kit" %}
 {% set pageName = "GOV.UK prototype kit" %}
 {% set pageDescription = "Use the kit to build prototypes that look like a real GOV.UK or Department for Education
 service." %}
@@ -14,7 +14,7 @@ service." %}
 
 {% block hero %}
 <section class="dfe-page-header">
-  <div class="dfe-width-container">
+  <div class="govuk-width-container">
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
@@ -40,7 +40,7 @@ service." %}
 {% endblock %}
 
 {% block content %}
-<div class="dfe-width-container">
+<div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-quarter">
       {% include "includes/_side-nav.html"%}
@@ -119,8 +119,8 @@ service." %}
 
       ## Hosting and securing your prototype
 
-      <a href="/design-system/prototype-kit/github-and-heroku#secure-your-prototype-from-accidental-use"
-        class="govuk-link" rel="noopener noreferrer">Guidance for hosting and setting a password</a> to enable testing
+      <a href="/design-system/github-heroku#secure-your-prototype-from-accidental-use" class="govuk-link"
+        rel="noopener noreferrer">Guidance for hosting and setting a password</a> to enable testing
       and prevent users from
       accidentally using your prototype.
 

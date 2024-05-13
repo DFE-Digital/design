@@ -5,7 +5,5 @@
  */
 
 exports.get_content_design = async function (req, res) {
-    return res.render('professions/content-design')
+  return res.render('professions/content-design')
 }
-
-

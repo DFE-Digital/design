@@ -1,11 +1,14 @@
 {% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk"%}
 {% set selectedNav = "Home" %}
 {% set pageName = "Design" %}
 {% set pageDescription = "Standards, guidance, and principles for the design of digital services in the Department for
 Education." %}
+{% set backlog_issue_id = "195" %}
+
 {% block hero %}
 <section class="dfe-page-hero">
-   <div class="dfe-width-container">
+   <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl govuk-!-font-size-80">{{pageName}}</h1>
@@ -15,48 +18,72 @@ Education." %}
    </div>
 </section>
 {% endblock %}
-{% block content %}
-<section class="dfe-section govuk-!-margin-top-3">
-   <div class="dfe-width-container">
-      <div class="govuk-grid-row">
-         <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Design System</h2>
-            <div class="dfe-banner dfe-banner--mirrored govuk-!-margin-top-5">
-               <div class="dfe-banner__content-container">
-                  <div class="dfe-banner__inner-content-container">
-                     <h3 class="govuk-heading-m">DfE Frontend</h3>
-                     <p>A collection of styles, components and patterns specifically for DfE services, to extend the GOV
-                        Design System.
-                     </p>
-                     <a href="/design-system" class="govuk-link govuk-body-l">Use the design system</a>
-                  </div>
-               </div>
-               <div class="dfe-banner__image-container">
-                  <figure class="dfe-a-image dfe-a-image--cover">
-                     <picture class="dfe-a-image__picture">
-                        <source srcset="/assets/images/frontends.webp" type="image/webp">
-                        <img src="/assets/images/frontends.png" alt="">
-                     </picture>
-                  </figure>
-               </div>
-            </div>
 
-         </div>
+{% block content %}
+
+<div class="govuk-width-container">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+         <h2 class="govuk-heading-l">DfE Frontend V2 is now available</h2>
+         <p>The new frontend package contains additional styles, components and patterns for services specific to DfE.
+         </p>
+         <p>If you're using <code>dfe-frontend-alpha</code> we've created an update guide for you to move to version 2,
+            and the new <code>dfe-frontend</code> package.</p>
+
+         <ul class="govuk-list govuk-list--spaced">
+            <li><a href="/design-system/dfe-frontend/updating">Update to dfe-frontend from
+                  dfe-frontend-alpha</a></li>
+            <li><a href="/design-system/dfe-frontend/whats-new">What's new in dfe-frontend 2</a></li>
+         </ul>
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+
+         {{ card({
+         cards: [
+         {
+         "imageCard": true,
+         "imagePath": "/assets/images/frontends.webp",
+         "altText": "",
+         "headingLevel": "3",
+         "linkCard": true,
+         "link": "/design-system/dfe-frontend/installation",
+         "openInNewTab": false,
+         "heading": "DfE Frontend",
+         "description": "DfE-specific styles, components and patterns to extend the GOV.UK
+         Design System.",
+         "meta": ""
+         }
+         ]
+         }) }}
       </div>
    </div>
-</section>
+</div>
 
-<section class="dfe-section govuk-!-margin-top-9">
-   <div class="dfe-width-container">
-      <h2 class="govuk-heading-l">Standards and guidance</h2>
+
+
+
+<section class="dfe-section govuk-!-margin-top-5">
+   <div class="govuk-width-container">
+      <h2 class="govuk-heading-l">Standards, guidance, and support</h2>
       <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
          <div class="dfe-card">
             <div class="dfe-card-container">
                <h3 class="govuk-heading-m">
                   <a href="/standards" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Design
-                     Standard</a>
+                     Standards</a>
                </h3>
-               <p>Find out about the work we're doing to create a design standard for DfE products and services.</p>
+               <p>Find out about the work we're doing to create design standards for DfE products and services.</p>
+            </div>
+         </div>
+         <div class="dfe-card">
+            <div class="dfe-card-container">
+               <h3 class="govuk-heading-m">
+                  <a href="/design-ops"
+                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">DesignOps</a>
+               </h3>
+               <p>How the DesignOps team support teams across the department with standards, good practice and building
+                  common tools.</p>
             </div>
          </div>
          <div class="dfe-card">
@@ -70,144 +97,17 @@ Education." %}
                </p>
             </div>
          </div>
-         <div class="dfe-card">
-            <div class="dfe-card-container">
-               <h3 class="govuk-heading-m">
-                  <a href="/design-ops"
-                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">DesignOps</a>
-               </h3>
-               <p>How the DesignOps team support teams across the department with standards, good practice and building
-                  common tools.</p>
-            </div>
-         </div>
       </div>
    </div>
 </section>
+
+
 
 <section class="dfe-section govuk-!-margin-top-9">
-   <div class="dfe-width-container">
-      <h2 class="govuk-heading-l">Profession and community</h2>
-      <div class="dfe-grid-container dfe-grid-container--wider govuk-!-margin-top-5">
-         <div class="dfe-card">
-            <div class="dfe-card-container">
-               <h3 class="govuk-heading-m">
-                  <a href="/professions"
-                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Professions</a>
-               </h3>
-               <p>Find out more about our design professions of content, interaction and service design.</p>
-            </div>
-         </div>
-         <div class="dfe-card">
-            <div class="dfe-card-container">
-               <h3 class="govuk-heading-m">
-                  <a href="/community" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Community
-                     of Practice</a>
-               </h3>
-               <p>The community of practice delivers change through working group, skills development and enabled
-                  collaboration.</p>
-            </div>
-         </div>
-      </div>
-
-   </div>
-</section>
-<section class="dfe-section">
-   <div class="dfe-width-container">
-      <div class="govuk-grid-row">
-         <div class="govuk-grid-column-full">
-            <div class="dfe-banner  govuk-!-margin-top-2">
-               <div class="dfe-banner__content-container">
-                  <div class="dfe-banner__inner-content-container">
-                     <h3 class="govuk-heading-l govuk-!-margin-top-2">What it's like working in digital</h3>
-                     <p>We're not just designers in one part of government, we're part of the larger Government Digital
-                        &
-                        Data profession.
-                     </p>
-
-                     <a href="https://www.civil-service-careers.gov.uk/working-in-ddat/" target="_blank"
-                        class="govuk-link govuk-body-l">Learn about working in digital <span
-                           class="govuk-visually-hidden">Opens in a new tab</span></a>
-                  </div>
-               </div>
-               <div class="dfe-banner__image-container">
-                  <figure class="dfe-a-image ">
-                     <picture class="dfe-a-image__picture">
-                        <source srcset="/assets/images/part-of-gdd.webp" type="image/webp">
-                        <img src="/assets/images/part-of-gdd.png" alt="">
-                     </picture>
-                  </figure>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-<section class="dfe-section govuk-!-margin-top-9">
-   <div class="dfe-width-container">
-      <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Our work</h2>
-      <p><a class="govuk-link--no-visited-state" href="/our-work">Read more about our work</a></p>
-
-      <div class="dfe-grid-container govuk-!-margin-top-2">
-         {# <div class="dfe-card">
-            <picture>
-               <source srcset="/assets/images/app.jpeg" type="image/webp">
-               <img src="/assets/images/app.jpeg" alt="">
-            </picture>
-            <div class="dfe-card-container">
-               <h2 class="govuk-heading-m">
-                  <a href="/our-work/projects/service-assessment-service"
-                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Book, manage and assess a
-                     service</a>
-               </h2>
-               <p>Find out how we're transforming service assessments in the department, with a view to working across
-                  government for better outcomes for our teams and users of our services.
-               </p>
-               <p class="govuk-body-s">DesignOps Team</p>
-            </div>
-         </div> #}
-         <div class="dfe-card">
-            <picture>
-               <source srcset="/assets/images/familyhubs.webp" type="image/webp">
-               <img src="/assets/images/familyhubs.png" alt="">
-            </picture>
-            <div class="dfe-card-container">
-               <h3 class="govuk-heading-m">
-                  <a href="/our-work/projects/family-hubs"
-                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Family hubs digital
-                     project</a>
-               </h3>
-               <p>A cross-government project to improve outcomes for vulnerable and disadvantaged children, young
-                  people, and families.
-               </p>
-               <p class="govuk-body-s">Vulnerable Children and Families Team</p>
-            </div>
-         </div>
-         <div class="dfe-card">
-            <picture>
-               <source srcset="/assets/images/ehcp.webp" type="image/webp">
-               <img src="/assets/images/ehcp.png" alt="">
-            </picture>
-            <div class="dfe-card-container">
-               <h3 class="govuk-heading-m">
-                  <a href="/our-work/projects/education-health-care-plan"
-                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Education health and care
-                     plan digital project</a>
-               </h3>
-               <p>The Education, Health and Care Plan (EHCP) digital project aims to support local authorities to
-                  improve outcomes for children and young people with EHC plans.
-               </p>
-               <p class="govuk-body-s">Vulnerable Children and Families Team</p>
-            </div>
-         </div>
-
-      </div>
-   </div>
-</section>
-
-<section class="dfe-section govuk-!-margin-top-9">
-   <div class="dfe-width-container">
+   <div class="govuk-width-container">
       <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Design priorities</h2>
-      <p><a class="govuk-link--no-visited-state" href="/design-ops/priorities">Read more about our design priorities</a></p>
+      <p><a class="govuk-link--no-visited-state" href="/design-ops/priorities">Read more about our design priorities</a>
+      </p>
 
       <div class="dfe-grid-container govuk-!-margin-top-2">
 
@@ -215,7 +115,7 @@ Education." %}
          <div class="dfe-card">
             <div class="dfe-card-container">
                <h3 class="govuk-heading-m">
-                  <a href="/design-ops/priorities"
+                  <a href="/design-ops/priorities/build-capability"
                      class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Build capability across
                      the department</a>
                </h3>
@@ -226,7 +126,7 @@ Education." %}
          <div class="dfe-card">
             <div class="dfe-card-container">
                <h3 class="govuk-heading-m">
-                  <a href="/design-ops/priorities"
+                  <a href="/design-ops/priorities/raise-standards"
                      class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Raise standards across all
                      DfE services</a>
                </h3>
@@ -237,8 +137,9 @@ Education." %}
          <div class="dfe-card">
             <div class="dfe-card-container">
                <h3 class="govuk-heading-m">
-                  <a href="/design-ops/priorities"
-                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Increase productivity across delivery teams </a>
+                  <a href="/design-ops/priorities/increase-productivity"
+                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Increase productivity across
+                     delivery teams </a>
                </h3>
                <p>Components, patterns, and the DfE design system and DfE frontend.</p>
             </div>
@@ -251,7 +152,53 @@ Education." %}
 
 </section>
 
+<section>
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l">Quick tools</h2>
+         </div>
+         <div class="govuk-grid-column-one-half">
 
+            <div class="govuk-summary-card">
+               <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">How many people?</h2>
+                  <ul class="govuk-summary-card__actions">
+                     <li class="govuk-summary-card__action"> <a class="govuk-link" href="/learn/how-many-users">Full
+                           tool</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="govuk-summary-card__content">
+                  <p>This tool helps you estimate how many people might have a disability, impairment or
+                     other characteristics which might use your service.</p>
+                  <form action="/tools/how-many-users" method="post">
+                     <div class="govuk-form-group">
+                        <label class="govuk-label" for="numberOfUsers">Estimated number of users</label>
+                        <input class="govuk-input" id="numberOfUsers" name="numberOfUsers" type="text" value=""
+                           spellcheck="false" data-ms-editor="true">
+                     </div>
+                     <div class="govuk-button-group govuk-!-margin-bottom-0">
+                        <button class="govuk-button" data-module="govuk-button">See results</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="govuk-grid-column-one-half">
+
+            <h2 class="govuk-heading-m">Should your product be on GOV.UK?</h2>
+
+
+            <p>This tool will help you to determine whether your product should be on or connected to GOV.UK and
+               whether
+               it meets the GOV.UK proposition.</p>
+            <p><a href="/tools/proposition-checker" class="govuk-link">Check your product</a></p>
+
+         </div>
+      </div>
+   </div>
+</section>
 
 
 

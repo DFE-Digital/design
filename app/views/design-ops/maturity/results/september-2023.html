@@ -1,0 +1,122 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-ops/maturity/results/september-2023"%}
+{% set pageName = "2023 results" %}
+{% set pageDescription = "The results of the design maturity survey carried out in the Department for Education in
+September 2023" %}
+{% set selectedNav = "DesignOps" %}
+{% set subNav = "Design-maturity" %}
+{% set customOGImage = 'https://design.education.gov.uk/assets/images/dm2023.png' %}
+
+{% set backlog_issue_id = "218" %}
+
+
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <span class="govuk-caption-l  govuk-!-margin-top-5">DesignOps</span>
+                <h1 class="govuk-heading-xl">{{pageName}}</h1>
+                <p class="govuk-body-l govuk-!-margin-bottom-6">{{pageDescription}}</p>
+                <nav class="app-sub-navigation" aria-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/design-ops">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/design-ops/professions">Professions</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/design-ops/priorities">Our
+                                priorities</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/design-ops/maturity">Design
+                                maturity</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-quarter">
+            {% include "includes/_side-nav.html"%}
+        </div>
+
+        <div class="govuk-grid-column-three-quarters">
+
+            <h2 class="govuk-heading-l">Summary</h2>
+
+            <p>Overall, the results show improvements in several aspects of design maturity in DfE from 2022 to 2023,
+                including increased understanding and support for design, more inclusion in planning, and better
+                consistency across teams.</p>
+            <p>However, there are still areas where further progress is needed, such as defining and using design
+                metrics more effectively.</p>
+
+
+
+
+            <h2 class="govuk-heading-l">Results</h2>
+
+            <p>The average maturity score was 3.8 out of 6, an increase of 0.6 from 2022 on the scale.</p>
+
+            <h3 class="govuk-heading-m">Notes on results data</h3>
+            <p>The percentages in the table represent the proportion of respondents who selected each response category,
+                and the percentage change shows how these proportions have changed from 2022 to 2023 for each measure.
+            </p>
+
+
+
+
+            {% for section in data %}
+
+            <h3 class="govuk-heading-m">{{ loop.index }}. {{ section.question }}</h2>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Year</th>
+                            <th scope="col" class="govuk-table__header">2022</th>
+                            <th scope="col" colspan="2" class="govuk-table__header">2023</th>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header govuk-!-width-one-half">Measure</th>
+                            <th class="govuk-table__header">Responses</th>
+                            <th class="govuk-table__header">Responses</th>
+                            <th class="govuk-table__header">Change </th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        {% for measure in section.measures %}
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell tableNumbers">{{ measure.measure }}</td>
+                            <td class="govuk-table__cell tableNumbers">{{ measure.responses[0].number }} ({{
+                                measure.responses[0].percentage }})</td>
+                            <td class="govuk-table__cell tableNumbers">{{ measure.responses[1].number }} ({{
+                                measure.responses[1].percentage }})</td>
+                            <td class="govuk-table__cell tableNumbers">
+                                {% if measure.percent_change > 0 %}
+                                +{{ measure.percent_change }}%
+                                {% elif measure.percent_change < 0 %} {{ measure.percent_change }}% {% else %} - {%
+                                    endif %} </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

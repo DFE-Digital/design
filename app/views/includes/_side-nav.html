@@ -1,30 +1,26 @@
 {% set content_design = [
 {
 title: "Content design in DfE",
-url: "/design-system/content-design/"
+url: "/design-system/content-design"
 },{
 title: "Digital delivery terms",
-url: "/design-system/language-we-use/"
+url: "/design-system/language-we-use"
 },{
 title: "Content style guide",
-url: "/design-system/style-guide/"
+url: "/design-system/style-guide"
 },{title: "Creating a content strategy",
-url: "/design-system/content-strategies/"
+url: "/design-system/content-strategies"
 },{title: "Writing a project page",
 url: "/design-system/writing-project-page"
 },{title: "How we write emails",
-url: "/design-system/how-we-write-emails/"
+url: "/design-system/how-we-write-emails"
 },
 {
 title: "Types of content we publish",
-url: "/design-system/types-of-content-we-publish/"
+url: "/design-system/types-of-content-we-publish"
 },{
 title: "Publishing content on GOV.UK",
-url: "/design-system/publishing-content-on-govuk/"
-}
-,{
-title: "Writing page titles",
-url: "/design-system/page-titles"
+url: "/design-system/publishing-content-on-govuk"
 },
 {
 title: "Reviewing and checking content",
@@ -39,71 +35,129 @@ url: "/design-system/reviewing-and-checking-content"
 {% set design_ops = [
 {
 title: "DesignOps",
-url: "/design-ops/"
+url: "/design-ops"
 }, {
 title: "Tools we use",
-url: "/design-ops/tools"
+url: "/tools"
 }
 ] %}
 
 {% set professions = [{
+title: "Professions",
+url: "/design-ops/professions"
+},{
 title: "Content design",
-url: "/professions/content-design"
+url: "/design-ops/professions/content-design"
 },
 {
 title: "Interaction design",
-url: "/professions/interaction-design"
+url: "/design-ops/professions/interaction-design"
 }, {
 title: "Service design",
-url: "/professions/service-design"
+url: "/design-ops/professions/service-design"
 }, {
 title: "Head of profession",
-url: "/professions/head-of-profession"
+url: "/design-ops/professions/head-of-profession"
 }
 ] %}
+
+{% set priorities = [{
+title: "Our priorities",
+url: "/design-ops/priorities"
+},{
+title: "Build capability",
+url: "/design-ops/priorities/build-capability"
+},{
+title: "Raise standards",
+url: "/design-ops/priorities/raise-standards"
+},{
+title: "Increase productivity",
+url: "/design-ops/priorities/increase-productivity"
+}
+
+] %}
+
+{% set designmaturity = [{
+title: "Design maturity",
+url: "/design-ops/maturity"
+},{
+title: "2023 results",
+url: "/design-ops/maturity/results/september-2023"
+},{
+title: "2022 results",
+url: "/design-ops/maturity/results/september-2022"
+}
+
+] %}
+
 
 {% set communities = [
 {
 title: "Meetups",
-url: "/community/meetups/"
+url: "/community/meetups"
 },{
 title: "Show and tells",
-url: "/community/show-and-tells/"
+url: "/community/show-and-tells"
 },{
 title: "Themes",
-url: "/community/themes/"
+url: "/community/themes"
 }
 ] %}
+
+{% set dfefrontend = [
+{
+title: "Design system",
+url: "/design-system"
+},
+{
+title: "Using DfE Frontend",
+url: "/design-system/dfe-frontend"
+},
+{
+title: "Installation",
+url: "/design-system/dfe-frontend/installation"
+},{
+title: "Updating to dfe-frontend",
+url: "/design-system/dfe-frontend/updating"
+},{
+title: "Release history",
+url: "/design-system/dfe-frontend/whats-new"
+},{
+title: "Contribute",
+url: "/design-system/dfe-frontend/contribute"
+}
+] %}
+
 
 {% set ds_design = [
 {
 title: "Design system",
-url: "/design-system/"
+url: "/design-system"
 },{
 title: "DfE Frontend",
 url: "/design-system/dfe-frontend"
 },{
 title: "Styles",
-url: "/design-system/styles/"
+url: "/design-system/styles"
 },
 {
 title: "Components",
-url: "/design-system/components/"
+url: "/design-system/dfe-frontend/components"
 },
 {
 title: "Patterns",
-url: "/design-system/patterns/"
+url: "/design-system/dfe-frontend/patterns"
 },
 {
 title: "Contribute",
-url: "/design-system/contribute/"
+url: "/design-system/contribute"
 }]
 %}
 
 {% set ds_services = [
 {
 title: "National Careers Service",
-url: "/design-system/ncs-design-system/"
+url: "/design-system/ncs-design-system"
 }]
 %}
 
@@ -117,17 +171,20 @@ url: "/design-system/dfe-frontend/sass-documentation"
 {% set list_components = [
 {
 title: "Components",
-url: "/design-system/components/"
+url: "/design-system/dfe-frontend/components"
+},{
+title: "Card",
+url: "/design-system/dfe-frontend/components/card"
 },{
 title: "Header",
-url: "/design-system/components/header"
+url: "/design-system/dfe-frontend/components/header"
 }
 ] %}
 
 {% set ds_prototyping = [
 {
 title: "GOV.UK prototype kit",
-url: "/design-system/prototype-kit/"
+url: "/design-system/prototype-kit"
 },
 {
 title: "GitHub and Heroku",
@@ -138,13 +195,13 @@ url: "/design-system/github-heroku"
 {% set list_styles = [
 {
 title: "Styles",
-url: "/design-system/styles/"
+url: "/design-system/dfe-frontend/styles"
 },{
 title: "Colour",
-url: "/design-system/styles/colour"
+url: "/design-system/dfe-frontend/styles/colour"
 },{
 title: "Typography",
-url: "/design-system/styles/typography"
+url: "/design-system/dfe-frontend/styles/typography"
 }
 ] %}
 
@@ -152,10 +209,10 @@ url: "/design-system/styles/typography"
 {% set list_patterns = [
 {
 title: "Patterns",
-url: "/design-system/patterns/"
+url: "/design-system/dfe-frontend/patterns"
 },{
 title: "Select a school",
-url: "/design-system/patterns/select-a-school"
+url: "/design-system/dfe-frontend/patterns/select-a-school"
 }
 ] %}
 
@@ -176,7 +233,7 @@ url: "/accessibility/roles-and-responsibilities"
 {% set accessibility_wcag = [
 {
 title: "Overview",
-url: "/accessibility/understanding-wcag/"
+url: "/accessibility/understanding-wcag"
 }, {
 title: "Perceivable",
 url: "/accessibility/understanding-wcag/perceivable"
@@ -205,7 +262,7 @@ url: "/accessibility/evaluation-methodology"
 },
 {
 title: "Determine conformance",
-url: "/accessibility/determine-conformance/"
+url: "/accessibility/determine-conformance"
 },{
 title: "Accessibility statements",
 url: "/accessibility/accessibility-statements"
@@ -223,7 +280,7 @@ url: "/design-system/ncs-design-system/our-approach"
 {% set ncs_design_system = [
 {
 title: "Components",
-url: "/design-system/ncs-design-system/components"
+url: "/design-system/ncs-design-system/dfe-frontend/components"
 },
 {
 title: "Brand styles",
@@ -250,39 +307,39 @@ url: "/design-system/ncs-design-system/branding-guidelines/logo"
 {% set ncs_design_system_components = [
 {
 title: "Header",
-url: "/design-system/ncs-design-system/components/header"
+url: "/design-system/ncs-design-system/dfe-frontend/components/header"
 },{
 title: "Search",
-url: "/design-system/ncs-design-system/components/search"
+url: "/design-system/ncs-design-system/dfe-frontend/components/search"
 }
 ] %}
 
 {% set ncs_design_system_form_elements = [
 {
 title: "Banner notification",
-url: "/design-system/ncs-design-system/components/banner-notification"
+url: "/design-system/ncs-design-system/dfe-frontend/components/banner-notification"
 },{
 title: "Panel",
-url: "/design-system/ncs-design-system/components/panel"
+url: "/design-system/ncs-design-system/dfe-frontend/components/panel"
 },{
 title: "Progress bar",
-url: "/design-system/ncs-design-system/components/progress-bar"
+url: "/design-system/ncs-design-system/dfe-frontend/components/progress-bar"
 },{
 title: "Ticket panel",
-url: "/design-system/ncs-design-system/components/ticket-panel"
+url: "/design-system/ncs-design-system/dfe-frontend/components/ticket-panel"
 }
 ] %}
 
 {% set ncs_design_system_content_presentation = [
 {
 title: "Button",
-url: "/design-system/ncs-design-system/components/button"
+url: "/design-system/ncs-design-system/dfe-frontend/components/button"
 },{
 title: "Highlight box",
-url: "/design-system/ncs-design-system/components/highlight-box"
+url: "/design-system/ncs-design-system/dfe-frontend/components/highlight-box"
 },{
 title: "Image headers",
-url: "/design-system/ncs-design-system/components/image-headers"
+url: "/design-system/ncs-design-system/dfe-frontend/components/image-headers"
 }
 ] %}
 
@@ -312,9 +369,13 @@ url: "/design-system/ncs-design-system/components/image-headers"
   </ul>
   {% endif %}
 
-  {%- if selectedNav == "DesignOps" %}
+
+
+  {%- if subNav == "Priorities" and selectedNav == "DesignOps"%}
+
+
   <ul class="dfe-vertical-nav__section">
-    {% for item in design_ops %}
+    {% for item in priorities %}
     <li
       class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
       <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
@@ -322,11 +383,10 @@ url: "/design-system/ncs-design-system/components/image-headers"
     {% endfor %}
   </ul>
 
-
   {% endif %}
 
-  {%- if selectedNav == "Professions" %}
-  <h2 class="govuk-heading-m">Professions</h2>
+
+  {%- if subNav == "Professions" and selectedNav == "DesignOps"%}
   <ul class="dfe-vertical-nav__section">
     {% for item in professions %}
     <li
@@ -335,10 +395,21 @@ url: "/design-system/ncs-design-system/components/image-headers"
     </li>
     {% endfor %}
   </ul>
-
-
-
   {% endif %}
+
+  {%- if subNav == "Design-maturity" and selectedNav == "DesignOps"%}
+  <ul class="dfe-vertical-nav__section">
+    {% for item in designmaturity %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+
+
 
 
   {%- if selectedNav == "Design system" and isChildSection !== "true" %}
@@ -361,7 +432,7 @@ url: "/design-system/ncs-design-system/components/image-headers"
     {% endfor %}
   </ul>
 
- 
+
   <h2 class="dfe-vertical-nav--section-header">Documentation</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in docs %}
@@ -376,7 +447,7 @@ url: "/design-system/ncs-design-system/components/image-headers"
 
   {%- if parentSection == "Content" and isChildSection == "true"%}
 
-  <a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
     design system</a>
 
   <h2 class="dfe-vertical-nav--section-header">Content design</h2>
@@ -393,9 +464,9 @@ url: "/design-system/ncs-design-system/components/image-headers"
   {% endif %}
 
 
-  
 
-    {%- if parentSection == "Prototyping" and isChildSection == "true"%}
+
+  {%- if parentSection == "Prototyping" and isChildSection == "true"%}
 
   <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
     design system</a>
@@ -414,10 +485,7 @@ url: "/design-system/ncs-design-system/components/image-headers"
 
   {%- if parentSection == "Components" and isChildSection == "true"%}
 
-  <a href="/design-system/components" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
-    components</a>
 
-  <h2 class="dfe-vertical-nav--section-header">Components</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in list_components %}
     <li
@@ -431,10 +499,6 @@ url: "/design-system/ncs-design-system/components/image-headers"
 
   {%- if parentSection == "Styles" and isChildSection == "true"%}
 
-  <a href="/design-system/styles" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
-    styles</a>
-
-  <h2 class="dfe-vertical-nav--section-header">Styles</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in list_styles %}
     <li
@@ -448,10 +512,6 @@ url: "/design-system/ncs-design-system/components/image-headers"
 
   {%- if parentSection == "Patterns" and isChildSection == "true"%}
 
-  <a href="/design-system/patterns" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
-    patterns</a>
-
-  <h2 class="dfe-vertical-nav--section-header">Patterns</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in list_patterns %}
     <li
@@ -462,11 +522,24 @@ url: "/design-system/ncs-design-system/components/image-headers"
   </ul>
   {% endif %}
 
+  {%- if parentSection == "dfefrontend" and isChildSection == "true"%}
+
+  <ul class="dfe-vertical-nav__section">
+    {% for item in dfefrontend %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+
 
   {%- if parentSection == "ncs-design-system" and isChildSection == "true" and ncs_hide_parent_nav !=="true" %}
 
 
-  <a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
   <h2 class="dfe-vertical-nav--section-header">How we work</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_guidance %}
@@ -491,7 +564,7 @@ url: "/design-system/ncs-design-system/components/image-headers"
 
   {%- if ncs_sub_nav == "true"%}
 
-  <a href="/design-system/ncs-design-system/"
+  <a href="/design-system/ncs-design-system"
     class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
   <h2 class="dfe-vertical-nav--section-header">How we work</h2>
   <ul class="dfe-vertical-nav__section">
@@ -517,7 +590,7 @@ url: "/design-system/ncs-design-system/components/image-headers"
 
   {%- if ncs_branding_main_nav == "true"%}
 
-  <a href="/design-system/ncs-design-system/"
+  <a href="/design-system/ncs-design-system"
     class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
   <h2 class="dfe-vertical-nav--section-header">Brand styles</h2>
   <ul class="dfe-vertical-nav__section">
@@ -586,7 +659,7 @@ url: "/design-system/ncs-design-system/components/image-headers"
   {%- if ncs_components_nav == "true"%}
 
 
-  <a href="/design-system/ncs-design-system/components"
+  <a href="/design-system/ncs-design-system/dfe-frontend/components"
     class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Components</a>
   <h2 class="dfe-vertical-nav--section-header">Navigation</h2>
   <ul class="dfe-vertical-nav__section">

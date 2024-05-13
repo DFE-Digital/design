@@ -1,0 +1,197 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-system/dfe-frontend/installation"%}
+{% set pageName = "Installation" %}
+{% set pageDescription = "Get started with DfE Frontend to build consistent services and products in the Department for
+Education." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "February 2024" %}
+{% set backlog_issue_id = "197" %}
+{% set parentSection = "dfefrontend"%}
+{% set isChildSection = "true"%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="/design-system">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+
+<section>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+        {% include "includes/_side-nav.html"%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+
+        <p>This guidance will enable you to use <a href="/design-system/dfe-frontend">DfE Frontend</a> in your product.
+          It assumes you've got a working knowledge of using packages and working with code.</p>
+
+        <p>Follow the <a href="/design-system/prototype-kit">guidance for getting the prototype kit set up</a> on your
+          device before following these steps.</p>
+
+        <div class="govuk-inset-text">This guidance is accurate up to and including version <strong>13.16.2</strong> of
+          the GOV.UK Prototype kit.</div>
+
+        <p>If something doesn't work <a href="/design-ops">contact DesignOps</a> for help so we can understand the
+          problem and improve guidance where possible.</p>
+
+        <h2 class="govuk-heading-l">Install the package</h2>
+
+        <p>DfE Frontend is available in the npm (Node Package Manager) registry. You can install it using the npm
+          install command in your
+          terminal.</p>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">1. Install</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <code>npm install dfe-frontend</code>
+          </div>
+        </div>
+
+        <h3 class="govuk-heading-m">CSS, Javascript, and logo files</h3>
+
+        <p>Go to the app/assets/sass folder and open the application.scss file</p>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">2. application.scss</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p>Add this line to the top of the file. This needs to come before any other code you add to this file.</p>
+            <code>@import 'node_modules/dfe-frontend/packages/dfefrontend';</code>
+          </div>
+        </div>
+
+        <h3 class="govuk-heading-m">Javascript</h3>
+
+        <p>You need to include the javascript reference in your main layout. Find the scripts section and replace with
+          the following code.</p>
+
+        <p>Go to the app/views/layouts folder and open the main.html file</p>
+
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">3. main.html</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p>Add this code to the bottom of the file.</p>
+            <pre><code>{%raw%}{% block scripts %}
+  {{ super() }}
+  &lt;script src=&quot;/node_modules/dfe-frontend/dist/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}{%endraw%}</code></pre>
+          </div>
+        </div>
+
+        <h3 class="govuk-heading-m">Copy the logo files</h3>
+
+        <p>There might not be an <strong>/app/assets/images</strong> folder, so create this first.</p>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">4. Copy image assets</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p class="govuk-!-margin-bottom-2">From</p>
+            <code>/node_modules/dfe-frontend/packages/assets/dfe-logo.png<br/>
+          /node_modules/dfe-frontend/packages/assets/dfe-logo-alt.png</code>
+            <p class="govuk-!-margin-bottom-2 govuk-!-margin-top-3">To</p>
+            <code>/app/assets/images</code>
+          </div>
+        </div>
+
+
+        <h3 class="govuk-heading-m">Changing the page width</h3>
+
+        <p>DfE Frontend uses a 1200px page width vs the 960px of GOV.UK.</p>
+        <p>To take advantage of the 1200px width in your main, override the width in your .scss file.</p>
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">5. Set page width to 1200px</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p class="govuk-!-margin-bottom-2">After your scss imports, add:</p>
+            <code>.govuk-width-container {
+              @include govuk-width-container;
+            }</code>
+          </div>
+        </div>
+
+
+        <h3 class="govuk-heading-m">Run your app</h3>
+
+        <p>This is assuming you're using the GOV.UK prototype kit. You'll need to do your own checks on your app
+          depending on your code and build process.</p>
+
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">6. Run your app</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p class="govuk-!-margin-bottom-2">In your terminal, run the command:</p>
+            <code>npm run dev</code>
+            <p class="govuk-!-margin-bottom-2 govuk-!-margin-top-3">Your code should build, check for any messages, and
+              your app should load at http://localhost:3000</p>
+          </div>
+        </div>
+
+
+
+        <h2 class="govuk-heading-l">You're good to go</h2>
+
+        <p>You will now be able to use DfE styles and components in your product.</p>
+
+        <p>Used correctly, this package will not interfere with <code>govuk-</code> scoped styles and components. All
+          DfE Frontend styles are scoped to <code>dfe-</code>. </p>
+
+        <h2 class="govuk-heading-l">Making your service look like a DfE service</h2>
+
+        <p>There are strict rules on how your service should look, depending on where it's provided.</p>
+
+        <p>The following sections should be your next steps if you're providing your service on education.gov.uk.</p>
+
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a href="/design-system/dfe-frontend/styles/typography">Using the Inter font in your product</a></li>
+          <li><a href="/design-system/dfe-frontend/components/header">Use the DfE Header to brand your product
+              correctly</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

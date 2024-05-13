@@ -3,46 +3,40 @@
 {% set pageName = "Site map" %}
 {% set pageDescription = "Site map for the design manual in the Department for Education." %}
 {% set selectedNav = "" %}
-{% set lastUpdated = "March 2024"%}
+{% set lastUpdated = "May 2024"%}
 
 {% block content %}
 
-<ul>
+<ul class="govuk-list govuk-list--bullet">
   <li><a href="/">Home</a></li>
   <li><a href="/cookie-policy">Cookie Policy</a></li>
-  <li><a href="/frontend">Frontend</a></li>
   <li><a href="/design-system">Design System</a>
     <ul>
-      <li><a href="/design-system/getting-started">Getting Started</a></li>
-      <li><a href="/design-system/styles">Styles</a>
+      <li><a href="/design-system/installation">Getting Started</a></li>
+      <li><a href="/design-system/dfe-frontend">DfE Frontend</a></li>
+      <li><a href="/design-system/dfe-frontend/updating">Updating from dfe-frontend-alpha</a></li>
+      <li><a href="/design-system/dfe-frontend/styles">Styles</a>
         <ul>
-          <li><a href="/design-system/styles/typography">Typography</a></li>
-          <li><a href="/design-system/styles/colour">Colour</a></li>
-          <li><a href="/design-system/styles/typography/examples">Typography Examples</a></li>
-          <li><a href="/design-system/styles/colour/examples">Colour Examples</a></li>
+          <li><a href="/design-system/dfe-frontend/styles/typography">Typography</a></li>
+          <li><a href="/design-system/dfe-frontend/styles/colour">Colour</a></li>
         </ul>
       </li>
-      <li><a href="/design-system/components">Components</a>
+      <li><a href="/design-system/dfe-frontend/components">Components</a>
         <ul>
-          <li><a href="/design-system/components/header">Header</a>
-            <ul>
-              <li><a href="/design-system/components/header/variants">Header Variants</a></li>
-              <li><a href="/design-system/components/header/properties">Header Properties</a></li>
-              <li><a href="/design-system/components/header/examples/everything">All Header Examples</a></li>
-            </ul>
+          <li><a href="/design-system/dfe-frontend/components/header">Header</a>
           </li>
         </ul>
       </li>
-      <li><a href="/design-system/patterns">Patterns</a>
+      <li><a href="/design-system/dfe-frontend/patterns">Patterns</a>
         <ul>
-          <li><a href="/design-system/patterns/select-a-school">Select a School</a></li>
+          <li><a href="/design-system/dfe-frontend/patterns/select-a-school">Select a School</a></li>
         </ul>
       </li>
-      <li><a href="/design-system/dfe-frontend">DfE Frontend</a></li>
       <li><a href="/design-system/content-design">Content Design</a>
         <ul>
           <li><a href="/design-system/language-we-use">Language We Use</a></li>
           <li><a href="/design-system/how-we-write-emails">How We Write Emails</a></li>
+          <li><a href="/design-system/writing-project-page">Writing a project page</a></li>
           <li><a href="/design-system/types-of-content-we-publish">Types of Content We Publish</a></li>
           <li><a href="/design-system/publishing-content-on-govuk">Publishing Content on GOV.UK</a></li>
           <li><a href="/design-system/reviewing-and-checking-content">Reviewing and Checking Content</a></li>
@@ -53,97 +47,6 @@
       <li><a href="/design-system/figma">Figma</a></li>
       <li><a href="/design-system/prototype-kit">Prototype Kit</a></li>
       <li><a href="/design-system/github-heroku">GitHub Heroku</a></li>
-      <li><a href="/design-system/ncs-design-system">NCS Design System</a>
-        <ul>
-          <li><a href="/design-system/ncs-design-system/our-approach">Our Approach</a></li>
-          <li><a href="/design-system/ncs-design-system/components">Components</a>
-            <ul>
-              <li><a href="/design-system/ncs-design-system/components/header">Header</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/header/top-header-example">Top Header
-                      Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/search">Search</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/search/example-search-bar">Search Bar
-                      Example</a></li>
-                  <li><a href="/design-system/ncs-design-system/components/search/example-search-form">Search Form
-                      Example</a></li>
-                  <li><a href="/design-system/ncs-design-system/components/search/example-search-box">Search Box
-                      Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/banner-notification">Banner Notification</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/banner-notification/example">Banner
-                      Notification Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/panel">Panel</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/panel/example">Panel Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/progress-bar">Progress Bar</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/progress-bar/example">Progress Bar
-                      Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/ticket-panel">Ticket Panel</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/ticket-panel/example">Ticket Panel
-                      Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/button">Button</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/button/example-primary">Primary Button
-                      Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/highlight-box">Highlight Box</a>
-                <ul>
-                  <li><a href="/design-system/ncs-design-system/components/highlight-box/example">Highlight Box
-                      Example</a></li>
-                </ul>
-              </li>
-              <li><a href="/design-system/ncs-design-system/components/image-headers">Image Headers</a>
-                <ul>
-                  <li><a
-                      href="/design-system/ncs-design-system/components/image-headers/homepage-header-example">Homepage
-                      Header Example</a></li>
-                  <li><a href="/design-system/ncs-design-system/components/image-headers/page-header-example">Page
-                      Header Example</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="/design-system/ncs-design-system/branding-guidelines">Branding Guidelines</a>
-            <ul>
-              <li><a href="/design-system/ncs-design-system/branding-guidelines/colour">Colour</a></li>
-              <li><a href="/design-system/ncs-design-system/branding-guidelines/images">Images</a></li>
-              <li><a href="/design-system/ncs-design-system/branding-guidelines/logo">Logo</a></li>
-            </ul>
-          </li>
-          <li><a href="/design-system/ncs-design-system/content-style-guide">Content Style Guide</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><a href="/professions">Professions</a>
-    <ul>
-      <li><a href="/professions/content-design">Content Design</a></li>
-      <li><a href="/professions/interaction-design">Interaction Design</a></li>
-      <li><a href="/professions/service-design">Service Design</a></li>
-      <li><a href="/professions/head-of-profession">Head of Profession</a></li>
-      <li><a href="/professions/maturity">Maturity</a>
-        <ul>
-          <li><a href="/professions/maturity/results/september-2023">Results September 2023</a></li>
-          <li><a href="/professions/maturity/results/september-2022">Results September 2022</a></li>
-        </ul>
-      </li>
     </ul>
   </li>
   <li><a href="/community">Community</a></li>
@@ -158,7 +61,6 @@
     <ul>
       <li><a href="/tools/proposition-checker">Proposition Checker</a></li>
       <li><a href="/tools/how-many-users">How Many Users</a></li>
-      <li><a href="/tools/inclusivity-calculator">Inclusivity Calculator</a></li>
     </ul>
   </li>
   <li><a href="/accessibility">Accessibility</a>
@@ -188,13 +90,25 @@
   </li>
   <li><a href="/design-ops">Design Ops</a>
     <ul>
-      <li><a href="/design-ops/priorities">Priorities</a></li>
+      <li><a href="/design-ops/professions/priotirites">Priorities</a></li>
+      <li><a href="/design-ops/professions">Professions</a>
+        <ul>
+          <li><a href="/design-ops/professions/content-design">Content Design</a></li>
+          <li><a href="/design-ops/professions/interaction-design">Interaction Design</a></li>
+          <li><a href="/design-ops/professions/service-design">Service Design</a></li>
+          <li><a href="/design-ops/professions/head-of-profession">Head of Profession</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-ops/professions/maturity">Maturity</a>
+        <ul>
+          <li><a href="/design-ops/professions/maturity/results/september-2023">Results September 2023</a></li>
+          <li><a href="/design-ops/professions/maturity/results/september-2022">Results September 2022</a></li>
+        </ul>
+      </li>
       <li><a href="/design-ops/satisfaction-scores">Satisfaction Scores</a></li>
-      <li><a href="/design-ops/tools">Tools</a></li>
+      <li><a href="/tools">Tools</a></li>
     </ul>
   </li>
   <li><a href="/standards">Standards</a></li>
 </ul>
-
-
 {% endblock %}
