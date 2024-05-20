@@ -14,7 +14,7 @@ To begin contributing, make sure your development environment is set up accordin
 
 ### Reporting Bugs
 
-To report a bug, use the **Bug Issue Template** provided in the repository. Ensure you provide all the necessary details to help us understand and address the issue swiftly.
+To report a bug, use the [**bug report template**](https://github.com/DFE-Digital/design/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) provided in the repository. Ensure you provide all the necessary details to help us understand and address the issue swiftly.
 
 ### Suggesting Enhancements
 
