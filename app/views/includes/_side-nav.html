@@ -344,7 +344,47 @@ url: "/design-system/ncs-design-system/dfe-frontend/components/image-headers"
 ] %}
 
 
+{% set language_standard = [
+{
+title: "Overview",
+url: "/standards/plain-language/overview"
+},
+{
+title: "Readers get what they need",
+url: "/standards/plain-language/readers-get-what-they-need"
+}, {
+title: "Readers can easily find what they need",
+url: "/standards/plain-language/readers-find-what-they-need"
+}
+, {
+title: "Readers can easily understand what they find",
+url: "/standards/plain-language/readers-understand-what-they-need"
+}, {
+title: "Readers can easily use the information",
+url: "/standards/plain-language/readers-use-the-information"
+}
+] %}
+
+
 <nav class="dfe-vertical-nav">
+
+
+
+  {%- if standard === "language" %}
+
+  <a href="/standards" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to standards</a>
+
+  <ul class="dfe-vertical-nav__section">
+    {% for item in language_standard %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% endif %}
+
 
   {%- if selectedNav === "Content design" %}
 

@@ -1,0 +1,115 @@
+{% set pageName = "Use plain language" %}
+{% set canonical = "https://design.education.gov.uk/standards/plain-language"%}
+{% set pageDescription = "When writing content for any digital media, we use plain language." %}
+{% set selectedNav = "DesignOps" %}
+{% set lastUpdated = "February 2024" %}
+{% set backlog_issue_id = "231" %}
+{% set standard = "language" %}
+{% set setSelectedSideNav = "Overview" %}
+
+{% extends "layouts/content-full-width.html" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <span class="govuk-caption-l  govuk-!-margin-top-5">Design standards</span>
+        <h1 class="govuk-heading-xl">{{pageName}}</h1> 
+               
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav.html"%}
+                
+            </div>
+           
+            <div class="govuk-grid-column-three-quarters">
+
+                <h2 class="govuk-heading-l">The standard</h2>
+               
+                <p>When writing content for any digital media, content must meet the four principles of the plain language standard.</p>
+                
+            <p>The four principles are:</p>
+            
+                <ul>
+                    <li>readers can get what they need (relevant)</li>
+                    <li>readers can find what they need (findable)</li>
+                    <li>readers can understand what they find (understandable)</li>
+                    <li>readers can use the information (usable)</li>
+                </ul>
+
+                <p>You can work to meet this standard by following the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide</a> and <a href="/design-system/style-guide">DfE style guide</a> and guidance within the <a href="/design-system/content-design">content design</a> section of this manual.</p>
+
+                <h2 class="govuk-heading-l">How this standard is assured</h2>
+                <p>In addition to reporting compliance through the standards dashboard, this standard will also be assured through the service assessment process at Beta phase, through Service Standard Point 5 - <a href="">Make sure everyone can use the service</a>.</p>
+                    <p>You should provide a copy of your compliance report to the design assessor, you can do this by adding a link to it in the artefacts section of the Service assessment service when you are being assessed.</p>
+
+
+                <h2 class="govuk-heading-l">Declare your conformance</h2>
+                <p>You can reach different levels of conformance with this standard.</p>
+
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Not met</dt>
+                        <dd class="govuk-summary-list__value">You can evidence meeting less than half the guidelines</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Partially met</dt>
+                        <dd class="govuk-summary-list__value">You can evidence meeting more than half, but not all, guidelines</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Fully met</dt>
+                        <dd class="govuk-summary-list__value">You can evidence meeting all the guidelines</dd>
+                    </div>
+                </dl>
+
+                <h3 class="govuk-heading-m">Evidencing conformance</h3>
+
+                <p>When you declare your conformance to this standard on the service reporting dashboard, you must provide evidence of compliance using the conformance report template for this standard.</p>
+
+               <div class="govuk-inset-text">
+                    <p><a href="/standards/plain-language-report-template">Plain language conformance report template</a></p>
+                    <p>Word<br/>Version 1.2<br/>Published: 12 May 2024</p>
+               </div>
+
+                <p>Once you have completed your conformance report for a product or service, you must email a copy of your report to the DesignOps inbox in addition to reporting it on the standards dashboard.</p>
+
+                <p>You must do this when your product enters private beta, public beta or beta (whichever comes first).</p>
+
+                <p class="govuk-body govuk-!-margin-bottom-9">Your conformance report must also show any actions you are taking to meet any instances of non-compliance, and be reviewed on a regular basis, and at most, every 12 months.</p>
+
+       
+                
+                    {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+                    {{ govukPagination({
+                      previous: {
+                        labelText: "Design standards",
+                        href: "/standards"
+                      },
+                      next: {
+                        labelText: "Guidelines",
+                        href: "/standards/plain-language-guidelines"
+                      }
+                    }) }}
+        
+
+
+            </div>
+
+        
+        </div>
+    </div>
+</section>
+{% endblock %}
