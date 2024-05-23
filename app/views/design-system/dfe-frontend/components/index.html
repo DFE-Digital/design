@@ -1,0 +1,118 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-system/dfe-frontend/components" %}
+
+{% set pageName = "Components" %}
+{% set pageDescription = "Components are the building blocks for consistent looking, accessible, usable services in the
+Department for Education." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Components"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "25 July 2023 "%}
+{% set backlog_issue_id = "90" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l  govuk-!-margin-top-5">Design system</span>
+        <h1 class="govuk-heading-xl">{{pageName}}</h1>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles/">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/dfe-frontend/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+      <p>Components are reusable parts of a user interface. Using pre-built, core elements allows teams to build
+        consistent services.</p>
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">In progress</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Component</th>
+            <th scope="col" class="govuk-table__header">Summary</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/3"
+                target="_blank">Filter</a></th>
+            <td class="govuk-table__cell">Allow users to filter a list, table, or content, based on criteria.</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Backlog</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Component</th>
+            <th scope="col" class="govuk-table__header">Summary</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/4"
+                target="_blank">Charting</a></th>
+            <td class="govuk-table__cell">Consistent and accessible charting in products.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/10"
+                target="_blank">Interruption page</a></th>
+            <td class="govuk-table__cell">Component for making users stop in a journey and take notice of some guidance.
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/6"
+                target="_blank">Progress bar</a></th>
+            <td class="govuk-table__cell">A view which shows the steps or progress in a journey.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/5"
+                target="_blank">Vertical navigation</a></th>
+            <td class="govuk-table__cell">Let users navigate a series of pages with navigation aside the main content.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>If you have a component you want to see in the design system, <a
+          href="/design-system/dfe-frontend/contribute">follow the contribution guidelines</a>.</p>
+
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

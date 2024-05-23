@@ -6,6 +6,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://rsms.me/">
     <title>
         {% if seoPageName %}{{seoPageName}}
         {% elseif pageName %}{{pageName}}{% else%}Design Manual{%endif%}</title>
@@ -21,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
     <link href="/assets/css/app.min.css" rel="stylesheet">
-    <meta property="og:url" content="https://design.education.gov.uk" />
+    <meta property="og:url" content="{{canonical}}" />
     <meta property="og:site_name" content="Department for Education Design Manual" />
     <meta property="og:title" content="{{pageName}}" />
     <meta property="og:description"
@@ -29,7 +30,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:image" content='https://design.education.gov.uk/assets/images/dm_og.png' />
-
+    <link rel="canonical" href="{{canonical}}" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@dfe_digital">
     <meta name="twitter:creator" content="@dfe_digital">

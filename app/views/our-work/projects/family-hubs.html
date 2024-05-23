@@ -1,13 +1,16 @@
 {% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/our-work/projects/family-hubs"%}
+
 {% set selectedNav = "Our work" %}
 {% set pageName = "Family hubs digital project" %}
 {% set pageDescription = "The Family hubs digital project is a cross-government project. It aims to improve outcomes for
 vulnerable and disadvantaged children, young people, and families." %}
 
+{% set backlog_issue_id = "221" %}
 
 {% block hero %}
 <section class="dfe-page-header">
-    <div class="dfe-width-container">
+    <div class="govuk-width-container">
         <div class="govuk-breadcrumbs">
             <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
@@ -31,7 +34,7 @@ vulnerable and disadvantaged children, young people, and families." %}
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-quarter">
                         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Published</h2>
-                        <p class="govuk-!-margin-bottom-5">28 March 2024</p>
+                        <p class="govuk-!-margin-bottom-5">12 April 2024</p>
                     </div>
                     <div class="govuk-grid-column-one-half">
                         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Author</h2>
@@ -49,7 +52,7 @@ vulnerable and disadvantaged children, young people, and families." %}
 
 
 <section class="govuk-!-padding-bottom-9">
-    <div class="dfe-width-container">
+    <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
@@ -70,23 +73,27 @@ vulnerable and disadvantaged children, young people, and families." %}
                 <h2 class="govuk-heading-l">Partnership working</h2>
 
                 <p>We are delivering the project through an iterative, agile process. We are working collaboratively
-                    with a
-                    small number of local authority partners who are helping to develop, test and iterate our digital
+                    with a number of local authority partners who are helping to develop, test and iterate our digital
                     products.
                 </p>
-                <p>We are working with:</p>
-
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>Lancashire</li>
-                    <li>Redbridge</li>
-                    <li>Salford</li>
-                </ul>
 
                 <p>During the discovery phase we identified user needs and developed digital solutions. These digital
-                    solutions
-                    were then tested in the alpha phase. We are now in the private beta stage. This stage involves
-                    piloting the
-                    digital products within our partner local authority areas.</p>
+                    solutions were then tested in the alpha phase. We are now in the private beta stage. This stage
+                    involves
+                    piloting the digital products within our partner local authority areas.
+                </p>
+
+                <p>We are currently working with:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Lewisham</li>
+                    <li>North East Lincolnshire</li>
+                    <li>Redbridge</li>
+                    <li>Salford</li>
+                    <li>Sheffield</li>
+                    <li>Somerset</li>
+                    <li>Wolverhampton</li>
+                </ul>
 
                 <h2 class="govuk-heading-l">Gaining wider input</h2>
                 <p>Our partnership working is supplemented by our local authority co-design group.</p>
@@ -198,51 +205,51 @@ vulnerable and disadvantaged children, young people, and families." %}
 
                 <h2 class="govuk-heading-m">Design histories</h2>
 
-                <p><a href="https://design-histories.education.gov.uk/team/children-and-families">Read more in our design histories</a>.</p>
+                <p><a href="https://design-histories.education.gov.uk/connect-families-to-support">Read more in our
+                        design histories</a>.</p>
 
 
 
                 <h2 class="govuk-heading-m govuk-!-margin-top-9">Other projects</h2>
 
-                    <div class="grid-container">
-                        <div class="grid-item grid-item-1">
-                            <div class="card">
-                                <picture>
-                                    <source srcset="/assets/images/app.webp" type="image/webp">
-                                    <img src="/assets/images/app.png" alt="">
-                                </picture>
-                                <div class="content">
-                                    <h2 class="govuk-heading-s  govuk-!-font-size-16"><a
-                                            href="/our-work/projects/service-assessment-service"
-                                            class="card-link">Service assessment service</a></h2>
+                <div class="grid-container">
+                    <div class="grid-item grid-item-1">
+                        <div class="card">
+                            <picture>
+                                <source srcset="/assets/images/app.webp" type="image/webp">
+                                <img src="/assets/images/app.png" alt="">
+                            </picture>
+                            <div class="content">
+                                <h2 class="govuk-heading-s  govuk-!-font-size-16"><a
+                                        href="/our-work/projects/service-assessment-service" class="card-link">Service
+                                        assessment service</a></h2>
 
-                                    <p>DesignOps Team</p>
+                                <p>DesignOps Team</p>
 
-                                </div>
                             </div>
                         </div>
-
-                        <div class="grid-item grid-item-3">
-                            <div class="card">
-                                <picture>
-                                    <source srcset="/assets/images/ehcp.webp" type="image/webp">
-                                    <img src="/assets/images/ehcp.png" alt="">
-                                </picture>
-                                <div class="content">
-                                    <h2 class="govuk-heading-s govuk-!-font-size-16"><a
-                                            href="/our-work/projects/education-health-care-plan"
-                                            class="card-link">Education
-                                            health and care plan digital project</a></h2>
-                                    <p>Vulnerable Children and Families Team</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
-            
+                    <div class="grid-item grid-item-3">
+                        <div class="card">
+                            <picture>
+                                <source srcset="/assets/images/ehcp.webp" type="image/webp">
+                                <img src="/assets/images/ehcp.png" alt="">
+                            </picture>
+                            <div class="content">
+                                <h2 class="govuk-heading-s govuk-!-font-size-16"><a
+                                        href="/our-work/projects/education-health-care-plan" class="card-link">Education
+                                        health and care plan digital project</a></h2>
+                                <p>Vulnerable Children and Families Team</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    
+                </div>
+
+
+
+
 
 
             </div>

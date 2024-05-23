@@ -1,11 +1,15 @@
 {% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/our-work/projects/education-health-care-plan"%}
+
 {% set selectedNav = "Our work" %}
 {% set pageName = "Digital Education, Health and Care Plan (EHCP)" %}
-{% set pageDescription = "The education, health and care plan (EHCP) digital project is a cross-government project. It aims to support local authorities in improving outcomes for children and young people with EHC plans. " %}
+{% set pageDescription = "The education, health and care plan (EHCP) digital project is a cross-government project. It
+aims to support local authorities in improving outcomes for children and young people with EHC plans. " %}
 
+{% set backlog_issue_id = "222" %}
 {% block hero %}
 <section class="dfe-page-header">
-    <div class="dfe-width-container">
+    <div class="govuk-width-container">
         <div class="govuk-breadcrumbs">
             <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
@@ -29,7 +33,9 @@
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-quarter">
                         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Published</h2>
+
                         <p class="govuk-!-margin-bottom-5">23 May 2024</p>
+
                     </div>
                     <div class="govuk-grid-column-one-half">
                         <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Author</h2>
@@ -46,7 +52,7 @@
 {% block content %}
 
 <section class="govuk-!-padding-bottom-9">
-    <div class="dfe-width-container">
+    <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
@@ -188,51 +194,50 @@
 </div>
 
 
-
             <div class="govuk-grid-column-one-third">
 
                 <h2 class="govuk-heading-m">Design histories</h2>
 
-                <p><a href="https://design-histories.education.gov.uk/team/children-and-families">Read more in our design histories</a>.</p>
+                <p><a href="https://design-histories.education.gov.uk/education-health-and-care-plan-ehcp-digital-alpha">Read more in our
+                        design histories</a>.</p>
 
 
 
                 <h2 class="govuk-heading-m govuk-!-margin-top-9">Other projects</h2>
 
-                    <div class="grid-container">
-                        <div class="grid-item grid-item-1">
-                            <div class="card">
-                                <picture>
-                                    <source srcset="/assets/images/app.webp" type="image/webp">
-                                    <img src="/assets/images/app.png" alt="">
-                                </picture>
-                                <div class="content">
-                                    <h2 class="govuk-heading-s  govuk-!-font-size-16"><a
-                                            href="/our-work/projects/service-assessment-service"
-                                            class="card-link">Service assessment service</a></h2>
+                <div class="grid-container">
+                    <div class="grid-item grid-item-1">
+                        <div class="card">
+                            <picture>
+                                <source srcset="/assets/images/app.webp" type="image/webp">
+                                <img src="/assets/images/app.png" alt="">
+                            </picture>
+                            <div class="content">
+                                <h2 class="govuk-heading-s  govuk-!-font-size-16"><a
+                                        href="/our-work/projects/service-assessment-service" class="card-link">Service
+                                        assessment service</a></h2>
 
-                                    <p>DesignOps Team</p>
+                                <p>DesignOps Team</p>
 
-                                </div>
                             </div>
                         </div>
-
-                        <div class="grid-item grid-item-3">
-                            <div class="card">
-                                <picture>
-                                    <source srcset="/assets/images/familyhubs.webp" type="image/webp">
-                                    <img src="/assets/images/familyhubs.png" alt="">
-                                </picture>
-                                <div class="content">
-                                    <h2 class="govuk-heading-s govuk-!-font-size-16"><a
-                                            href="/our-work/projects/family-hubs"
-                                            class="card-link">Family hubs
-                                            digital project</a></h2>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <div class="grid-item grid-item-3">
+                        <div class="card">
+                            <picture>
+                                <source srcset="/assets/images/familyhubs.webp" type="image/webp">
+                                <img src="/assets/images/familyhubs.png" alt="">
+                            </picture>
+                            <div class="content">
+                                <h2 class="govuk-heading-s govuk-!-font-size-16"><a
+                                        href="/our-work/projects/family-hubs" class="card-link">Family hubs
+                                        digital project</a></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </div>
