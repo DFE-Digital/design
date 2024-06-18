@@ -343,6 +343,16 @@ url: "/design-system/ncs-design-system/components/image-headers"
 }
 ] %}
 
+{% set rsd_design_system = [
+  {
+  title: "Design Patterns",
+  url: "/design-system/rsd-design-system/design-patterns"
+  },{
+  title: "Footer",
+  url: "/design-system/rsd-design-system/design-patterns/footer"
+  }
+] %}
+
 
 <nav class="dfe-vertical-nav">
 
@@ -694,9 +704,31 @@ url: "/design-system/ncs-design-system/components/image-headers"
 
   {% endif %}
 
+  {%- if parentSection == "rsd-design-system" %}
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
 
+  <ul class="dfe-vertical-nav__section">
+    {% for item in rsd_design_system %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
+  {%- if parentSection == "rsd-design-system" and child == "true"%}
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
 
+  <ul class="dfe-vertical-nav__section">
+    {% for item in rsd_design_system %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
 
   {%- if selectedNav == "Accessibility" %}
