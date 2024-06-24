@@ -17,60 +17,73 @@
 Show contact details and allow certain users to edit them.
 
 {% set htmlCode = '<code class="hljs language-html">
-    &lt;footer class=&quot;govuk-footer&quot; role=&quot;contentinfo&quot;&gt;
-        &lt;div class=&quot;govuk-width-container&quot;&gt;
-          &lt;div class=&quot;govuk-footer__navigation&quot;&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-two-thirds&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Get help&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list govuk-footer__list--column-1&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;mailto:testEmail@education.gov.uk?subject=Service%20Name:%20support%20query&quot;&gt;
-                    Email Service Support for help with using this system
-                  &lt;/a&gt;
-                  &lt;p&gt;We aim to respond within 5 working days, or one working day for more urgent queries.&lt;/p&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    How to use this system (opens in a new tab)
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-third&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Give feedback&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Give feedback (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Suggest a change (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
+    &lt;div class=&quot;govuk-summary-card&quot;&gt;
+      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+          Project managed by
+        &lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+              Name
+            &lt;/dt&gt;
+            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+              Alex James
+            &lt;/dd&gt;
+            &lt;dd class=&quot;govuk-summary-list__actions&quot;&gt;
+              &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; name (Project managed by)&lt;/span&gt;&lt;/a&gt;
+            &lt;/dd&gt;
           &lt;/div&gt;
-          &lt;hr class=&quot;govuk-footer__section-break&quot;&gt;
-          &lt;div class=&quot;govuk-footer__meta&quot;&gt;
-            &lt;div class=&quot;govuk-footer__meta-item govuk-footer__meta-item--grow dfe-footer__meta-item--grow&quot;&gt;
-              &lt;h2 class=&quot;govuk-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__inline-list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Accessibility statement
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Cookies
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__meta-item&quot;&gt;
-              &lt;a class=&quot;govuk-footer__link govuk-footer__copyright-logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;© Crown copyright&lt;/a&gt;
-            &lt;/div&gt;
+          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+              Email address
+            &lt;/dt&gt;
+            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+              alex.james@education.gov.uk
+            &lt;/dd&gt;
+            &lt;dd class=&quot;govuk-summary-list__actions&quot;&gt;
+              &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; email address (Project managed by)&lt;/span&gt;&lt;/a&gt;
+            &lt;/dd&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/footer&gt;
+        &lt;/dl&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;govuk-summary-card&quot;&gt;
+      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+          Team lead
+        &lt;/h2&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+              Name
+            &lt;/dt&gt;
+            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+              
+            &lt;/dd&gt;
+            &lt;dd class=&quot;govuk-summary-list__actions&quot;&gt;
+              &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; name (team lead)&lt;/span&gt;&lt;/a&gt;
+            &lt;/dd&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+              Email address
+            &lt;/dt&gt;
+            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+              
+            &lt;/dd&gt;
+            &lt;dd class=&quot;govuk-summary-list__actions&quot;&gt;
+              &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; email address (team lead)&lt;/span&gt;&lt;/a&gt;
+            &lt;/dd&gt;
+          &lt;/div&gt;
+        &lt;/dl&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
 </code>' %}
 
 {% block beforeContent %}{% endblock %}
