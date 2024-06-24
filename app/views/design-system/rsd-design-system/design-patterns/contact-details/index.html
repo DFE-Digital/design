@@ -2,7 +2,7 @@
 {% import "../code-frame.html" as sample %}
 
 {% set pageName = "Contact details" %}
-{% set pageDescription = "A pattern of contact details for internal-facing RSD products." %}
+{% set pageDescription = "A Regional Services Division design pattern for showing contact details and allowing certain users to edit them." %}
 {% set pageCaption = "Regional Services Division design pattern" %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
@@ -89,59 +89,35 @@ Show contact details and allow certain users to edit them.
         <h2>When not to use this component</h2>
         <p>Do not use this pattern if your design only has one contact details field. For example, a person's name.</p>
 
-        <h2>How to use this component</h2>
+        <h2>How it works </h2>h2>
+
         <p>Display contact details using the <a href="https://design-system.service.gov.uk/components/summary-list/#summary-cards">summary card</a> component.</p>
-      
-        <h3>Get help</h3>
-        <p>It has a 'Get help' h2 with two links underneath it:</p>
-        <code>Email Service Support for help with using this system</code>
-        <p>This is a mail-to link with the subject header:</p>
-        <code>[Product name]: support query</code>
-        <p>For example, Prepare conversions and transfers: support query</p>
-        <p> It has this text underneath the link: "We aim to respond within 5 working days, or one working day for
-            more urgent queries." </p>
-        <code>How to use this system (opens in a new tab)</code>
-        <p> This links to the section of a product's SharePoint page with guidance on how to use the product. For
-            example, <a
-                href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx#guidance-for-using-prepare-conversions-and-transfers">Guidance
-                for using Prepare conversions and
-                transfers
-                example, </a>. </p>
-        <p>If you don't have SharePoint guidance about how to use your product, you do not need to include this
-            hyperlink.</p>
-        <h3>Give feedback</h3>
-        <p>It also has a 'Give feedback' h2 with two links underneath it:</p>
-        <p>Give feedback (opens in a new tab)</p>
-        <p>This links to a Microsoft Form where users can give feedback about the product. The same Microsoft Form
-            is used across all RSD products: <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-SZtRygfwTNOqcfRq-MXpv9UOTIyQlNYR0hJT1Q0TUFVSlJGVFhES01LVC4u">Give feedback about a Regions Group system - Microsoft Form</a>.
-        </p>
-        <p>Suggest a change</p>
-        <p>This links to a Microsoft Form, which is the same across all products: <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-fkHK2JGo_BIpVChpLMaBFpUNUFDSzhQN0FHVklTV0JWTzFZTjNKWTNJUi4u">Suggest a change to a Regions Group system - Microsoft Form</a>.
-        </p>
-        <h3>Other links</h3>
+
+        <p>Your contact details section or page in your product should:</p>
+        
         <ul>
-            <li>an 'Accessibility statement' link which goes to the product's accessibility statement</li>
-            <li>a 'Cookies' link which goes to the product's cookies page</li>
-            <li>a 'Privacy notice' link which goes to the product's privacy policy. If the product does not need a
-                privacy notice, you do not need to include this link</li>
-            <li>Crown copyright link, with the Crown logo</li>
+          <li>have more than one contact details field</li>
+          <li>provide a change link in the third column, if the fields are editable</li>
+          <li>(for internal products) point to one edit page, even if you have a change link for each field</li>
         </ul>
-        <h3>Research on this component</h3>
-        <p>
-            We have not done research on this component, but it is being used to meet these needs from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database</a>:
-        </p>
+
+        <p>It should <strong>not</strong>:</p>
+        
         <ul>
-            <li>
-                user need 65 - when something I need is missing from a product, I need to give feedback to the
-                digital team so that my need can be met
-            </li>
-            <li>
-                user need 72 - when I am having trouble using the service, I need to get help so that I can resolve
-                my issue and get back to work
-            </li>
+          <li>allow users to edit fields on the same page. For example, using AJAX-enabled forms. Take users to a separate edit page</li>
+          <li>provide a change link if users are not allowed to edit the information. This may be the case if a certain user group only needs to read it</li>
         </ul>
-        <h2>Help improve this component</h2>
-        <a href="https://ukgovernmentdfe.slack.com/archives/C04N7UJHRHU">Ask a question on the RSD UCD Slack channel</a>.
+        
+        <h2>Editing contact details</h2>
+        
+        <p>If users are allowed to edit the contact details, create an editing page and allow users to access it via the change link(s).</p>
+        
+        <p>After users have edited the contact details, direct them back to the page which displays the edited details.</p>
+        
+        <h2>Research on this pattern</h2>
+        <p>We have not done research on this design pattern, but the pattern is being used in <a href="https://design-histories.education.gov.uk/prepare-conversions-transfers">Prepare conversions and transfers</a> and <a href="https://design-histories.education.gov.uk/complete-conversions-transfers-and-changes">Complete conversions, transfers and changes</a> to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database</a>:</p>
+        
+        <p>User need 22: When I have a question about project data in MAP Complete and Prepare, I need the name and email address of the DO or RCS caseworker responsible for the project, so I can get in touch with them to address my query.</p>
 
     </div>
 </div>
