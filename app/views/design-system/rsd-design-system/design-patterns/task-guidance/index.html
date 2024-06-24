@@ -1,0 +1,133 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "Task guidance" %}
+{% set pageDescription = "Give internal product users guidance on how to complete a task, and hide the guidance from experienced colleagues who may not need it." %}
+{% set pageCaption = "Regional Services Division design pattern" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "rsd-design-system"%}
+{% set childSection = "design-patterns"%}
+{% set isChildSection = "true"%}
+
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2024 "%}
+{% set backlog_issue_id = "105" %}
+
+Give internal product users guidance on how to complete a task, and hide the guidance from experienced colleagues who may not need it.
+
+{% set htmlCode = '<code class="hljs language-html">
+    &lt;footer class=&quot;govuk-footer&quot; role=&quot;contentinfo&quot;&gt;
+        &lt;div class=&quot;govuk-width-container&quot;&gt;
+          &lt;div class=&quot;govuk-footer__navigation&quot;&gt;
+            &lt;div class=&quot;govuk-footer__section govuk-grid-column-two-thirds&quot;&gt;
+              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Get help&lt;/h2&gt;
+              &lt;ul class=&quot;govuk-footer__list govuk-footer__list--column-1&quot;&gt;
+                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;mailto:testEmail@education.gov.uk?subject=Service%20Name:%20support%20query&quot;&gt;
+                    Email Service Support for help with using this system
+                  &lt;/a&gt;
+                  &lt;p&gt;We aim to respond within 5 working days, or one working day for more urgent queries.&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+                    How to use this system (opens in a new tab)
+                  &lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-third&quot;&gt;
+              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Give feedback&lt;/h2&gt;
+              &lt;ul class=&quot;govuk-footer__list&quot;&gt;
+                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Give feedback (opens in a new tab)&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Suggest a change (opens in a new tab)&lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;hr class=&quot;govuk-footer__section-break&quot;&gt;
+          &lt;div class=&quot;govuk-footer__meta&quot;&gt;
+            &lt;div class=&quot;govuk-footer__meta-item govuk-footer__meta-item--grow dfe-footer__meta-item--grow&quot;&gt;
+              &lt;h2 class=&quot;govuk-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
+              &lt;ul class=&quot;govuk-footer__inline-list&quot;&gt;
+                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+                    Accessibility statement
+                  &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+                    Cookies
+                  &lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;govuk-footer__meta-item&quot;&gt;
+              &lt;a class=&quot;govuk-footer__link govuk-footer__copyright-logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;© Crown copyright&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/footer&gt;
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example.html', 'Contact details', 'contact-details',
+        htmlCode) }}
+        <br>
+
+        <h2>When to use this component</h2>
+        <p>Use this pattern if you need to present guidance that:</p>
+        <ol>
+          <li>Will sit in an internal product.</li>
+          <li>Experienced users are likely to skip.</li>
+        </ol>
+
+        <h2>When not to use this component</h2>
+        <p>Do not use this pattern for:</p>
+        <ul>
+          <li>external products or services</li>
+          <li>tasks that most users will only see once</li>
+        </ul>
+
+        <h2>How it works </h2>
+
+        <p>Display contact details using the <a href="https://design-system.service.gov.uk/components/summary-list/#summary-cards">summary card</a> component.</p>
+
+        <p>Your contact details section or page in your product should:</p>
+        
+        <ul>
+          <li>have more than one contact details field</li>
+          <li>provide a change link in the third column, if the fields are editable</li>
+          <li>(for internal products) point to one edit page, even if you have a change link for each field</li>
+        </ul>
+
+        <p>It should <strong>not</strong>:</p>
+        
+        <ul>
+          <li>allow users to edit fields on the same page. For example, using AJAX-enabled forms. Take users to a separate edit page</li>
+          <li>provide a change link if users are not allowed to edit the information. This may be the case if a certain user group only needs to read it</li>
+        </ul>
+        
+        <h2>Editing contact details</h2>
+        
+        <p>If users are allowed to edit the contact details, create an editing page and allow users to access it via the change link(s).</p>
+        
+        <p>After users have edited the contact details, direct them back to the page which displays the edited details.</p>
+        
+        <h2>Research on this pattern</h2>
+        <p>We have not done research on this design pattern, but the pattern is being used in <a href="https://design-histories.education.gov.uk/prepare-conversions-transfers">Prepare conversions and transfers</a> and <a href="https://design-histories.education.gov.uk/complete-conversions-transfers-and-changes">Complete conversions, transfers and changes</a> to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database</a>:</p>
+        
+        <p>User need 22: When I have a question about project data in MAP Complete and Prepare, I need the name and email address of the DO or RCS caseworker responsible for the project, so I can get in touch with them to address my query.</p>
+
+    </div>
+</div>
+
+{% endblock%}
