@@ -14,63 +14,68 @@
 {% set lastUpdated = "June 2024 "%}
 {% set backlog_issue_id = "105" %}
 
-Give internal product users guidance on how to complete a task, and hide the guidance from experienced colleagues who may not need it.
+{% set htmlCodeTaskGuidance = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-form-group&quot;&gt;
+  &lt;fieldset class=&quot;govuk-fieldset&quot; aria-describedby=&quot;your-checkboxes-hint&quot;&gt;
+    &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6&quot;&gt;
+      &lt;h1 class=&quot;govuk-fieldset__heading&quot;&gt;
+        Handover with regional delivery officer
+      &lt;/h1&gt;
+    &lt;/legend&gt;
 
-{% set htmlCode = '<code class="hljs language-html">
-    &lt;footer class=&quot;govuk-footer&quot; role=&quot;contentinfo&quot;&gt;
-        &lt;div class=&quot;govuk-width-container&quot;&gt;
-          &lt;div class=&quot;govuk-footer__navigation&quot;&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-two-thirds&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Get help&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list govuk-footer__list--column-1&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;mailto:testEmail@education.gov.uk?subject=Service%20Name:%20support%20query&quot;&gt;
-                    Email Service Support for help with using this system
-                  &lt;/a&gt;
-                  &lt;p&gt;We aim to respond within 5 working days, or one working day for more urgent queries.&lt;/p&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    How to use this system (opens in a new tab)
-                  &lt;/a&gt;
-                &lt;/li&gt;
+    &lt;div class=&quot;govuk-checkboxes&quot; data-module=&quot;govuk-checkboxes&quot;&gt;
+      &lt;div class=&quot;govuk-checkboxes__item&quot;&gt;
+        &lt;input class=&quot;govuk-checkboxes__input&quot; id=&quot;your-checkboxes&quot; name=&quot;your-checkboxes&quot; type=&quot;checkbox&quot; value=&quot;british&quot; aria-describedby=&quot;your-checkboxes-item-hint&quot;&gt;
+        &lt;label class=&quot;govuk-label govuk-checkboxes__label&quot; for=&quot;your-checkboxes&quot;&gt;
+          Review the project information, check the documents and carry out research
+        &lt;/label&gt;
+        &lt;div id=&quot;your-checkboxes-item-hint&quot; class=&quot;govuk-hint govuk-checkboxes__hint&quot;&gt;
+          Check that no information is missing from the existing project documents and there are no errors.
+          &lt;details class=&quot;govuk-details govuk-!-margin-top-3&quot;&gt;
+            &lt;summary class=&quot;govuk-details__summary&quot;&gt;
+              &lt;span class=&quot;govuk-details__summary-text&quot;&gt;
+                What to check for
+              &lt;/span&gt;
+            &lt;/summary&gt;
+            &lt;div class=&quot;govuk-details__text&quot;&gt;
+              &lt;p&gt;You should check existing project documents, including:&lt;/p&gt;
+              &lt;ul&gt;
+                &lt;li&gt;academy order&lt;/li&gt;
+                &lt;li&gt;application to convert&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;p&gt;Check that no information is missing and there are no errors. You should also research the background of the project before you meet with the regional delivery officer.&lt;/p&gt;
+              &lt;p&gt;Things to check during your background research include:&lt;/p&gt;
+              &lt;ul&gt;
+                &lt;li&gt;project information, such as advisory board conditions&lt;/li&gt;
+                &lt;li&gt;school or trust website for more information about the school&lt;/li&gt;
+                &lt;li&gt;Google Maps for potential land issues&lt;/li&gt;
               &lt;/ul&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-third&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Give feedback&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Give feedback (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Suggest a change (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;hr class=&quot;govuk-footer__section-break&quot;&gt;
-          &lt;div class=&quot;govuk-footer__meta&quot;&gt;
-            &lt;div class=&quot;govuk-footer__meta-item govuk-footer__meta-item--grow dfe-footer__meta-item--grow&quot;&gt;
-              &lt;h2 class=&quot;govuk-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__inline-list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Accessibility statement
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Cookies
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__meta-item&quot;&gt;
-              &lt;a class=&quot;govuk-footer__link govuk-footer__copyright-logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;© Crown copyright&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
+          &lt;/details&gt;
         &lt;/div&gt;
-      &lt;/footer&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-checkboxes__item&quot;&gt;
+        &lt;input class=&quot;govuk-checkboxes__input&quot; id=&quot;your-checkboxes-2&quot; name=&quot;your-checkboxes&quot; type=&quot;checkbox&quot; value=&quot;british&quot; aria-describedby=&quot;your-checkboxes-item-hint&quot;&gt;
+        &lt;label class=&quot;govuk-label govuk-checkboxes__label&quot; for=&quot;your-checkboxes-2&quot;&gt;
+          Make notes and write questions to ask the regional delivery officer
+        &lt;/label&gt;
+        &lt;div id=&quot;your-checkboxes-item-hint&quot; class=&quot;govuk-hint govuk-checkboxes__hint&quot;&gt;
+          &lt;details class=&quot;govuk-details govuk-!-margin-top-3&quot;&gt;
+            &lt;summary class=&quot;govuk-details__summary&quot;&gt;
+              &lt;span class=&quot;govuk-details__summary-text&quot;&gt;
+                What to make notes about
+              &lt;/span&gt;
+            &lt;/summary&gt;
+            &lt;div class=&quot;govuk-details__text&quot;&gt;
+              &lt;p&gt;Note down things you want to ask and talk about with the regional delivery officer at the handover meeting.&lt;/p&gt;
+              &lt;p&gt;This is an opportunity to clarify anything that you&lsquo;re unsure about after reviewing the project and doing your background research.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/details&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/div&gt;
 </code>' %}
 
 {% block beforeContent %}{% endblock %}
@@ -79,13 +84,13 @@ Give internal product users guidance on how to complete a task, and hide the gui
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example.html', 'Contact details', 'contact-details',
-        htmlCode) }}
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/task-guidance/example.html', 'Task guidance', 'task-guidance',
+        htmlCodeTaskGuidance) }}
         <br>
 
         <h2>When to use this component</h2>
         <p>Use this pattern if you need to present guidance that:</p>
-        <ol>
+        <ol class="govuk-list govuk-list--number">
           <li>Will sit in an internal product.</li>
           <li>Experienced users are likely to skip.</li>
         </ol>
@@ -110,9 +115,7 @@ Give internal product users guidance on how to complete a task, and hide the gui
       <li>links to more guidance</li>
     </ul>
 
-     <img src="public/assets/images/task-guidance-details-component-hidden.png" alt class="A checkbox, hint text, and a details component that is not expanded.">
-
-     <img src="public/assets/images/task-guidance-details-component-expanded.png" alt class="A checkbox, hint text, and a details component that is expanded with guidance.">
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/task-guidance/example.html', 'Task guidance', 'task-guidance', htmlCodeTaskGuidance) }}
     
     <h3>Hint text</h2>
     
