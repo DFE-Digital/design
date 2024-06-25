@@ -1,0 +1,22 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Contact details design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-form-group">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-heading-m" for="projectManagedByName">
+      Name
+    </label>
+    <input class="govuk-input" id="projectManagedByName" name="projectManagedByName" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-heading-m" for="projectManagedByEmailAddress">
+      Email address
+    </label>
+    <input class="govuk-input" id="projectManagedByEmailAddress" name="projectManagedByEmailAddress" type="text">
+  </div>
+</div>
+{% endblock %}
