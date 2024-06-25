@@ -73,6 +73,23 @@ Show contact details and allow certain users to edit them.
       &lt;/footer&gt;
 </code>' %}
 
+{% set htmlCodeContactDetailsEdit = '<code class="hljs language-html">
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;div class=&quot;govuk-form-group&quot;&gt;
+      &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;projectManagedByName&quot;&gt;
+        Name
+      &lt;/label&gt;
+      &lt;input class=&quot;govuk-input&quot; id=&quot;projectManagedByName&quot; name=&quot;projectManagedByName&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;govuk-form-group&quot;&gt;
+      &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;projectManagedByEmailAddress&quot;&gt;
+        Email address
+      &lt;/label&gt;
+      &lt;input class=&quot;govuk-input&quot; id=&quot;projectManagedByEmailAddress&quot; name=&quot;projectManagedByEmailAddress&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>' %}
+
 {% block beforeContent %}{% endblock %}
 
 {% block content %}
@@ -113,6 +130,9 @@ Show contact details and allow certain users to edit them.
         <h2>Editing contact details</h2>
         
         <p>If users are allowed to edit the contact details, create an editing page and allow users to access it via the change link(s).</p>
+
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-details-edit.html', 'Edit contact details', 'contact-details-edit',
+        htmlCodeContactDetailsEdit) }}
 
         <img src="public/assets/images/edit-contact.png" alt class="An edit page for someone's contact details.">
         
