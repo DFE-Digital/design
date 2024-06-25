@@ -14,80 +14,348 @@
 {% set lastUpdated = "June 2024 "%}
 {% set backlog_issue_id = "105" %}
 
-Show contact details and allow certain users to edit them.
+{% set htmlCodeContactPerCardReadOnly = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Project managed by
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-{% set htmlCode = '<code class="hljs language-html">
-    &lt;footer class=&quot;govuk-footer&quot; role=&quot;contentinfo&quot;&gt;
-        &lt;div class=&quot;govuk-width-container&quot;&gt;
-          &lt;div class=&quot;govuk-footer__navigation&quot;&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-two-thirds&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Get help&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list govuk-footer__list--column-1&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;mailto:testEmail@education.gov.uk?subject=Service%20Name:%20support%20query&quot;&gt;
-                    Email Service Support for help with using this system
-                  &lt;/a&gt;
-                  &lt;p&gt;We aim to respond within 5 working days, or one working day for more urgent queries.&lt;/p&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    How to use this system (opens in a new tab)
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-third&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Give feedback&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Give feedback (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Suggest a change (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;hr class=&quot;govuk-footer__section-break&quot;&gt;
-          &lt;div class=&quot;govuk-footer__meta&quot;&gt;
-            &lt;div class=&quot;govuk-footer__meta-item govuk-footer__meta-item--grow dfe-footer__meta-item--grow&quot;&gt;
-              &lt;h2 class=&quot;govuk-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__inline-list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Accessibility statement
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Cookies
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__meta-item&quot;&gt;
-              &lt;a class=&quot;govuk-footer__link govuk-footer__copyright-logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;© Crown copyright&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/footer&gt;
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Team lead
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code>' %}
 
-{% set htmlCodeContactDetailsEdit = '<code class="hljs language-html">
-  &lt;div class=&quot;govuk-form-group&quot;&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;projectManagedByName&quot;&gt;
-        Name
-      &lt;/label&gt;
-      &lt;input class=&quot;govuk-input&quot; id=&quot;projectManagedByName&quot; name=&quot;projectManagedByName&quot; type=&quot;text&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;projectManagedByEmailAddress&quot;&gt;
-        Email address
-      &lt;/label&gt;
-      &lt;input class=&quot;govuk-input&quot; id=&quot;projectManagedByEmailAddress&quot; name=&quot;projectManagedByEmailAddress&quot; type=&quot;text&quot;&gt;
-    &lt;/div&gt;
+{% set htmlCodeContactPerRowReadOnly = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      DfE contacts
+    &lt;/h2&gt;
   &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Trust contacts
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 3 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set htmlCodeContactPerCardEditable = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Project managed by
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; project managed by&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Team lead
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; team lead&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set htmlCodeContactPerRowEditable = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      DfE contacts
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; DfE contacts&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Trust contacts
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; trust contacts&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 3 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set htmlCodeContactPerCardEdit = '<code class="hljs language-html">
+&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
+  &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
+  Edit Team lead
+&lt;/h1&gt;
+&lt;div class=&quot;govuk-form-group&quot;&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;teamLeadName&quot;&gt;
+      Name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;teamLeadName&quot; name=&quot;teamLeadName&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;teamLeadEmailAddress&quot;&gt;
+      Email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;teamLeadEmailAddress&quot; name=&quot;teamLeadEmailAddress&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set htmlCodeContactPerRowEdit = '<code class="hljs language-html">
+&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
+  &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
+  Edit Trust contacts
+&lt;/h1&gt;
+&lt;div class=&quot;govuk-form-group&quot;&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson1Name&quot;&gt;
+      Contact person 1 name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson1Name&quot; name=&quot;trustContactsPerson1Name&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson1EmailAddress&quot;&gt;
+      Contact person 1 email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson1EmailAddress&quot; name=&quot;trustContactsPerson1EmailAddress&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson2Name&quot;&gt;
+      Contact person 2 name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson2Name&quot; name=&quot;trustContactsPerson2Name&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson2EmailAddress&quot;&gt;
+      Contact person 2 email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson2EmailAddress&quot; name=&quot;trustContactsPerson2EmailAddress&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson3Name&quot;&gt;
+      Contact person 3 name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson3Name&quot; name=&quot;trustContactsPerson3Name&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson3EmailAddress&quot;&gt;
+      Contact person 3 email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson3EmailAddress&quot; name=&quot;trustContactsPerson3EmailAddress&quot; type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code>' %}
 
 {% block beforeContent %}{% endblock %}
@@ -96,9 +364,17 @@ Show contact details and allow certain users to edit them.
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example.html', 'Contact details', 'contact-details',
-        htmlCode) }}
+
+        <p>Show contact details and allow certain users to edit them.</p>
+
+        <h3>Contact per card (read only)</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-card-read-only.html', 'Contact details - contact per card (read-only)', 'contact-per-card-read-only',
+        htmlCodeContactPerCardReadOnly) }}
         <br>
+
+        <h3>Contact per row (read only)</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-row-read-only.html', 'Contact details - contact per row (read-only)', 'contact-per-row-read-only',
+        htmlCodeContactPerRowReadOnly) }}
 
         <h2>When to use this component</h2>
         <p>Use this pattern to display read-only contact details. Provide another page to let users edit the contact details when required.</p>
@@ -131,10 +407,21 @@ Show contact details and allow certain users to edit them.
         
         <p>If users are allowed to edit the contact details, create an editing page and allow users to access it via the change link(s).</p>
 
-        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-details-edit.html', 'Edit contact details', 'contact-details-edit',
-        htmlCodeContactDetailsEdit) }}
+        <h3>Contact per card with a change link</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-card-editable.html', 'Contact details - contact per card (editable)', 'contact-per-card-editable',
+        htmlCodeContactPerCardEditable) }}
 
-        <img src="public/assets/images/edit-contact.png" alt class="An edit page for someone's contact details.">
+        <h3>Edit page for contact per card design</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-card-edit.html', 'Edit contact details (contact per card)', 'contact-per-card-edit',
+        htmlCodeContactPerCardEdit) }}
+
+        <h3>Contact per row with a change link</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-row-editable.html', 'Contact details - contact per row (editable)', 'contact-per-row-editable',
+        htmlCodeContactPerRowEditable) }}
+
+        <h3>Edit page for contact per row design</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-row-edit.html', 'Edit contact details (contact per row)', 'contact-per-row-edit',
+        htmlCodeContactPerRowEdit) }}
         
         <p>After users have edited the contact details, direct them back to the page which displays the edited details.</p>
         
