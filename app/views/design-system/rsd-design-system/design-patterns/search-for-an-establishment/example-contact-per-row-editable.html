@@ -1,0 +1,86 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Contact details design pattern - contact per row (editable) | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      DfE contacts
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> DfE contacts</span></a>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 1 job title 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Alex James<br/>
+          alex.james@education.gov.uk
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 2 job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Name<br/>
+          email address here
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Trust contacts
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> trust contacts</span></a>
+      </li>
+    </ul>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 1 job title 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Alex James<br/>
+          alex.james@education.gov.uk
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 2 job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Name<br/>
+          email address here
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 3 job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Name<br/>
+          email address here
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+{% endblock %}
