@@ -1,0 +1,121 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "Page not found pages" %}
+{% set pageDescription = "A page not found tells someone we cannot find the page they were trying to view. They are also known as 404 pages." %}
+{% set pageCaption = "Regional Services Division design pattern" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "rsd-design-system"%}
+{% set childSection = "design-patterns"%}
+{% set isChildSection = "true"%}
+
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2024 "%}
+{% set backlog_issue_id = "105" %}
+
+{% set htmlCode = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-width-container&quot;&gt;
+  &lt;main class=&quot;govuk-main-wrapper govuk-main-wrapper--l&quot; id=&quot;main-content&quot; role=&quot;main&quot;&gt;
+    &lt;div class=&quot;govuk-grid-row&quot;&gt;
+      &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
+        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you typed the web address, check it is correct.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you pasted the web address, check you copied the entire address.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;contact the Tax Credits Helpline&lt;/a&gt; if you need to speak to someone about your tax credits.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set nunjucksCode = '<code class="hljs language-html">
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/page-not-found/example.html', 'Page not found', 'page-not-found',
+    htmlCode, nunjucksCode) }}
+    <br>
+
+    <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
+    <p>Use a page not found if someone is trying to view a page that does not exist. This happens if someone:</p>
+    <ul>
+      <li>selects a link or button that takes them to a page that does not exist</li>
+      <li>types or copies a web address for a page that does not exist</li>
+      <li>types or copies a web address incorrectly</li>
+    </ul>
+    <p>Test all links and buttons to make sure they work. Remember to <a
+        href="https://www.gov.uk/guidance/government-design-principles#do-the-hard-work-to-make-it-simple">do the hard work
+        to make it simple</a>.</p>
+    <p>Make sure any web addresses in your service, letters, forms and on GOV.UK are for pages that exist or redirect to
+      pages that exist.</p>
+      
+    <h2 id="how-it-works">How it works</h2>
+    <p>The page should have:</p>
+    <ul>
+      <li>‘Page not found – service name – GOV.UK’ as the page title</li>
+      <li>‘Page not found’ as the H1</li>
+      <li>contact information, if it exists and helps meet a user need</li>
+    </ul>
+    <p>Contact information should either:</p>
+    <ul>
+      <li>be a link to a specific page that includes numbers and opening times</li>
+      <li>include all numbers and opening times</li>
+    </ul>
+    <p>The content should be clear and concise, not blame the user.</p>
+    <div class="app-wcag-22" id="wcag-consistent-content-page-not-found" role="note">
+      <strong class="govuk-tag" style="margin-bottom: 10px">
+        WCAG 2.2
+      </strong>
+    
+      <p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service
+        error pages. This relates to WCAG 2.2 success criterion <a
+          href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+    </div>
+    
+    <p>Do not use:</p>
+    <ul>
+      <li>breadcrumbs</li>
+      <li>technical jargon like 404 or bad request</li>
+      <li>informal or humorous words like oops</li>
+      <li>red text to warn people</li>
+    </ul>
+    
+
+
+
+    <h3>Research on this pattern</h3>
+    <p>
+      We have not done research on this pattern, but it is being used to meet these needs from our <a
+        href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user
+        needs database</a>:
+    </p>
+    <ul>
+      <li>
+        user need ...
+      </li>
+      <li>
+        user need ...
+      </li>
+    </ul>
+
+    <h2>Help improve this component</h2>
+    <a href="https://ukgovernmentdfe.slack.com/archives/C04N7UJHRHU">Ask a question on the RSD UCD Slack channel</a>.
+
+  </div>
+</div>
+
+
+{% endblock%}
