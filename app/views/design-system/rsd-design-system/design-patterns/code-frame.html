@@ -1,4 +1,4 @@
-{% macro code(href, title, id, htmlCode) %}
+{% macro code(href, title, id, htmlCode, nunjucksCode) %}
 
 <div class="govuk-tabs govuk-!-margin-top-5 code-example" id="example-tabs-{{ id }}" data-module="govuk-tabs">
   <h2 class="govuk-tabs__title">Contents</h2>
@@ -9,6 +9,11 @@
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#html-code-tabs__panel-{{ id }}">HTML</a>
     </li>
+    {% if nunjucksCode %}
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#nunjucks-code-tabs__panel-{{ id }}">Nunjucks</a>
+    </li>
+    {% endif %}
   </ul>
 
   <div class="govuk-tabs__panel" id="example-tabs__panel-{{ id }}">
@@ -21,6 +26,12 @@
   <div class="govuk-tabs__panel" id="html-code-tabs__panel-{{ id }}">
     <pre data-module="app-copy" tabindex="0">
       {{ htmlCode | safe }}
+    </pre>
+  </div>
+
+  <div class="govuk-tabs__panel" id="nunjucks-code-tabs__panel-{{ id }}">
+    <pre data-module="app-copy" tabindex="0">
+      {{ nunjucksCode | safe }}
     </pre>
   </div>
 </div>
