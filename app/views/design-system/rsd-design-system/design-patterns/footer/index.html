@@ -15,65 +15,133 @@
 {% set backlog_issue_id = "105" %}
 
 {% set htmlCode = '<code class="hljs language-html">
-    &lt;footer class=&quot;govuk-footer&quot; role=&quot;contentinfo&quot;&gt;
-        &lt;div class=&quot;govuk-width-container&quot;&gt;
-          &lt;div class=&quot;govuk-footer__navigation&quot;&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-two-thirds&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Get help&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list govuk-footer__list--column-1&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;mailto:testEmail@education.gov.uk?subject=Service%20Name:%20support%20query&quot;&gt;
-                    Email Service Support for help with using this system
-                  &lt;/a&gt;
-                  &lt;p&gt;We aim to respond within 5 working days, or one working day for more urgent queries.&lt;/p&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    How to use this system (opens in a new tab)
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-third&quot;&gt;
-              &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Give feedback&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Give feedback (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Suggest a change (opens in a new tab)&lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;hr class=&quot;govuk-footer__section-break&quot;&gt;
-          &lt;div class=&quot;govuk-footer__meta&quot;&gt;
-            &lt;div class=&quot;govuk-footer__meta-item govuk-footer__meta-item--grow dfe-footer__meta-item--grow&quot;&gt;
-              &lt;h2 class=&quot;govuk-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
-              &lt;ul class=&quot;govuk-footer__inline-list&quot;&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Accessibility statement
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Cookies
-                  &lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
-                  &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
-                    Privacy notice
-                  &lt;/a&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;govuk-footer__meta-item&quot;&gt;
-              &lt;a class=&quot;govuk-footer__link govuk-footer__copyright-logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;© Crown copyright&lt;/a&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/footer&gt;
+&lt;footer class=&quot;govuk-footer&quot; role=&quot;contentinfo&quot;&gt;
+  &lt;div class=&quot;govuk-width-container&quot;&gt;
+    &lt;div class=&quot;govuk-footer__navigation&quot;&gt;
+      &lt;div class=&quot;govuk-footer__section govuk-grid-column-two-thirds&quot;&gt;
+        &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Get help&lt;/h2&gt;
+        &lt;ul class=&quot;govuk-footer__list govuk-footer__list--column-1&quot;&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;mailto:testEmail@education.gov.uk?subject=Service%20Name:%20support%20query&quot;&gt;
+              Email Service Support for help with using this system
+            &lt;/a&gt;
+            &lt;p&gt;We aim to respond within 5 working days, or one working day for more urgent queries.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+              How to use this system (opens in a new tab)
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-third&quot;&gt;
+        &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Give feedback&lt;/h2&gt;
+        &lt;ul class=&quot;govuk-footer__list&quot;&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Give feedback (opens in a new tab)&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;Suggest a change (opens in a new tab)&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;hr class=&quot;govuk-footer__section-break&quot;&gt;
+    &lt;div class=&quot;govuk-footer__meta&quot;&gt;
+      &lt;div class=&quot;govuk-footer__meta-item govuk-footer__meta-item--grow dfe-footer__meta-item--grow&quot;&gt;
+        &lt;h2 class=&quot;govuk-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
+        &lt;ul class=&quot;govuk-footer__inline-list&quot;&gt;
+          &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+              Accessibility statement
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+              Cookies
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+              Privacy notice
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-footer__meta-item&quot;&gt;
+        &lt;a class=&quot;govuk-footer__link govuk-footer__copyright-logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;© Crown copyright&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code>' %}
+
+{% set nunjucksCode = '<code class="hljs language-html">
+  {% from &quot;govuk/components/footer/macro.njk&quot; import govukFooter %}
+
+  {{ govukFooter({
+    navigation: [
+      {
+        title: &quot;Get Help&quot;,
+        width: &quot;two-thirds&quot;,
+        columns: 1,
+        items: [
+          {
+            href: &quot;mailto:testEmail@education.gov.uk?subject=Service%20Name:%20support%20query&quot;,
+            text: &quot;Email Service Support for help with using this system. We aim to respond within 5 working days, or one working day for more urgent queries.&quot;
+          },
+          {
+            href: &quot;#&quot;,
+            text: &quot;How to use this system (opens in a new tab)&quot;,
+            attributes: {
+              target: &quot;_blank&quot;
+            }
+          }
+        ]
+      },
+      {
+        title: &quot;Give feedback&quot;,
+        width: &quot;one-third&quot;,
+        items: [
+          {
+            href: &quot;#&quot;,
+            text: &quot;Give feedback (opens in a new tab)&quot;,
+            attributes: {
+              target: &quot;_blank&quot;
+            }
+          },
+          {
+            href: &quot;#&quot;,
+            text: &quot;Suggest a change (opens in a new tab)&quot;,
+            attributes: {
+              target: &quot;_blank&quot;
+            }
+          }
+        ]
+      }
+    ],
+    meta: {
+      items: [
+        {
+          href: &quot;#&quot;,
+          text: &quot;Accessibility statement&quot;
+        },
+        {
+          href: &quot;#&quot;,
+          text: &quot;Cookies&quot;
+        },
+        {
+          href: &quot;#&quot;,
+          text: &quot;Contact&quot;
+        },
+        {
+          href: &quot;#&quot;,
+          text: &quot;Privacy notice&quot;
+        }
+      ]
+    }
+  }) }}
+  
 </code>' %}
 
 {% block beforeContent %}{% endblock %}
@@ -81,84 +149,92 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        
-        {{ sample.code('/design-system/rsd-design-system/design-patterns/footer/example.html', 'Footer', 'footer',
-        htmlCode) }}
-        <br>
-        
-        <h2>When to use this component</h2>
-        <p>Use this pattern to create a product footer that is consistent with other RSD products.</p>
+  <div class="govuk-grid-column-full">
 
-        <h2>When not to use this component</h2>
-        <p>On
-        <ul>
-            <li>external-facing sites, like <a href="https://apply-convert-academy.service.gov.uk/">Apply to become
-                    an academy (A2B)</a> This site is for external users and the Microsoft links in this pattern
-                won't work for them</li>
-            <li>SharePoint guidance pages, like <a
-                    href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx">Prepare
-                    conversions and transfers - SharePoint</a></li>
-        </ul>
-        </p>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/footer/example.html', 'Footer', 'footer',
+    htmlCode, nunjucksCode) }}
+    <br>
 
-        <h2>How to use this component</h2>
-                <p>You can copy the HTML above and paste it where you'd like to display the footer.</p>
-        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-          <img src="/assets/images/rsd-pattern-library-footer-screencapture-primary.png" alt="A footer with Regional Services Division links." width="100%">
-          <figcaption>Screen capture of the footer</figcaption>
-        </figure>
-        <h3>Get help</h3>
-        <p>It has a 'Get help' h2 with two links underneath it:</p>
-        <h4>Email Service Support for help with using this system</h4>
-        <p>This is a mail-to link with the subject header:</p>
-        <code>[Product name]: support query</code>
-        <p>For example, Prepare conversions and transfers: support query</p>
-        <p> It has this text underneath the link: "We aim to respond within 5 working days, or one working day for
-            more urgent queries." </p>
-        <h4>How to use this system (opens in a new tab)</h4>
-        <p> This links to the section of a product's SharePoint page with guidance on how to use the product. For
-            example, <a
-                href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx#guidance-for-using-prepare-conversions-and-transfers">Guidance
-                for using Prepare conversions and
-                transfers</a>. </p>
-        <p>If you don't have SharePoint guidance about how to use your product, you do not need to include this
-            hyperlink.</p>
-        <h3>Give feedback</h3>
-        <p>It also has a 'Give feedback' h2 with two links underneath it:</p>
-        <h4>Give feedback (opens in a new tab)</h4>
-        <p>This links to a Microsoft Form where users can give feedback about the product. The same Microsoft Form
-            is used across all RSD products: <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-SZtRygfwTNOqcfRq-MXpv9UOTIyQlNYR0hJT1Q0TUFVSlJGVFhES01LVC4u">Give feedback about a Regions Group system - Microsoft Form</a>.
-        </p>
-        </h4>Suggest a change (opens in a new tab)</h4>
-        <p>This links to a Microsoft Form, which is the same across all products: <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-fkHK2JGo_BIpVChpLMaBFpUNUFDSzhQN0FHVklTV0JWTzFZTjNKWTNJUi4u">Suggest a change to a Regions Group system - Microsoft Form</a>.
-        </p>
-        <h3>Other links</h3>
-        <ul>
-            <li>an 'Accessibility statement' link which goes to the product's accessibility statement</li>
-            <li>a 'Cookies' link which goes to the product's cookies page</li>
-            <li>a 'Privacy notice' link which goes to the product's privacy policy. If the product does not need a
-                privacy notice, you do not need to include this link</li>
-            <li>Crown copyright link, with the Crown logo</li>
-        </ul>
-        <h3>Research on this component</h3>
-        <p>
-            We have not done research on this component, but it is being used to meet these needs from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database</a>:
-        </p>
-        <ul>
-            <li>
-                user need 65 - when something I need is missing from a product, I need to give feedback to the
-                digital team so that my need can be met
-            </li>
-            <li>
-                user need 72 - when I am having trouble using the service, I need to get help so that I can resolve
-                my issue and get back to work
-            </li>
-        </ul>
-        <h2>Help improve this component</h2>
-        <a href="https://ukgovernmentdfe.slack.com/archives/C04N7UJHRHU">Ask a question on the RSD UCD Slack channel</a>.
+    <h2>When to use this component</h2>
+    <p>Use this pattern to create a product footer that is consistent with other RSD products.</p>
 
-    </div>
+    <h2>When not to use this component</h2>
+    <p>On
+    <ul>
+      <li>external-facing sites, like <a href="https://apply-convert-academy.service.gov.uk/">Apply to become
+          an academy (A2B)</a> This site is for external users and the Microsoft links in this pattern
+        won't work for them</li>
+      <li>SharePoint guidance pages, like <a
+          href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx">Prepare
+          conversions and transfers - SharePoint</a></li>
+    </ul>
+    </p>
+
+    <h2>How to use this component</h2>
+    <p>You can copy the HTML above and paste it where you'd like to display the footer.</p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img src="/assets/images/rsd-pattern-library-footer-screencapture-primary.png"
+        alt="A footer with Regional Services Division links." width="100%">
+      <figcaption>Screen capture of the footer</figcaption>
+    </figure>
+    <h3>Get help</h3>
+    <p>It has a 'Get help' h2 with two links underneath it:</p>
+    <h4>Email Service Support for help with using this system</h4>
+    <p>This is a mail-to link with the subject header:</p>
+    <code>[Product name]: support query</code>
+    <p>For example, Prepare conversions and transfers: support query</p>
+    <p> It has this text underneath the link: "We aim to respond within 5 working days, or one working day for
+      more urgent queries." </p>
+    <h4>How to use this system (opens in a new tab)</h4>
+    <p> This links to the section of a product's SharePoint page with guidance on how to use the product. For
+      example, <a
+        href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx#guidance-for-using-prepare-conversions-and-transfers">Guidance
+        for using Prepare conversions and
+        transfers</a>. </p>
+    <p>If you don't have SharePoint guidance about how to use your product, you do not need to include this
+      hyperlink.</p>
+    <h3>Give feedback</h3>
+    <p>It also has a 'Give feedback' h2 with two links underneath it:</p>
+    <h4>Give feedback (opens in a new tab)</h4>
+    <p>This links to a Microsoft Form where users can give feedback about the product. The same Microsoft Form
+      is used across all RSD products: <a
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-SZtRygfwTNOqcfRq-MXpv9UOTIyQlNYR0hJT1Q0TUFVSlJGVFhES01LVC4u">Give
+        feedback about a Regions Group system - Microsoft Form</a>.
+    </p>
+    </h4>Suggest a change (opens in a new tab)</h4>
+    <p>This links to a Microsoft Form, which is the same across all products: <a
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-fkHK2JGo_BIpVChpLMaBFpUNUFDSzhQN0FHVklTV0JWTzFZTjNKWTNJUi4u">Suggest
+        a change to a Regions Group system - Microsoft Form</a>.
+    </p>
+    <h3>Other links</h3>
+    <ul>
+      <li>an 'Accessibility statement' link which goes to the product's accessibility statement</li>
+      <li>a 'Cookies' link which goes to the product's cookies page</li>
+      <li>a 'Privacy notice' link which goes to the product's privacy policy. If the product does not need a
+        privacy notice, you do not need to include this link</li>
+      <li>Crown copyright link, with the Crown logo</li>
+    </ul>
+    <h3>Research on this component</h3>
+    <p>
+      We have not done research on this component, but it is being used to meet these needs from our <a
+        href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user
+        needs database</a>:
+    </p>
+    <ul>
+      <li>
+        user need 65 - when something I need is missing from a product, I need to give feedback to the
+        digital team so that my need can be met
+      </li>
+      <li>
+        user need 72 - when I am having trouble using the service, I need to get help so that I can resolve
+        my issue and get back to work
+      </li>
+    </ul>
+    <h2>Help improve this component</h2>
+    <a href="https://ukgovernmentdfe.slack.com/archives/C04N7UJHRHU">Ask a question on the RSD UCD Slack channel</a>.
+
+  </div>
 </div>
+
 
 {% endblock%}
