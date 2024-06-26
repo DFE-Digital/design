@@ -1,0 +1,211 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "Search for an establishment" %}
+{% set pageDescription = "Show information of an establishment and allow certain users to select the one they want." %}
+{% set pageCaption = "Regional Services Division design pattern" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "rsd-design-system"%}
+{% set childSection = "design-patterns"%}
+{% set isChildSection = "true"%}
+
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2024 "%}
+{% set backlog_issue_id = "105" %}
+
+{% set htmlCodeContactPerCardReadOnly = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Project managed by
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Team lead
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set htmlCodeContactPerRowReadOnly = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      DfE contacts
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Trust contacts
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 3 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <p>Show contact details and allow certain users to edit them.</p>
+
+        <h3>Contact per card (read only)</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-card-read-only.html', 'Contact details - contact per card (read-only)', 'contact-per-card-read-only',
+        htmlCodeContactPerCardReadOnly) }}
+        <br>
+
+        <h3>Contact per row (read only)</h3>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/contact-details/example-contact-per-row-read-only.html', 'Contact details - contact per row (read-only)', 'contact-per-row-read-only',
+        htmlCodeContactPerRowReadOnly) }}
+
+        <h2>When to use this component</h2>
+        <p>When users need to search for information about an establishment (e.g. academy trust), or provide details about the establishment.</p>
+
+        <h2>How it works </h2>
+
+        <p>There are many different unique references for trusts, including:</p>
+
+        <ul>
+          <li>Unique Reference Number (URN) – from Get information about schools  (previously from Edubase)</li>
+          <li>UK Provider Reference Number (UKPRN) - from the UK register of learning providers</li>
+          <li>Group Identifier (Group ID). Also known as Trust Reference Number (TRN)</li>
+          <li>Companies House number - from Find and update company information</li>
+        </ul>
+          
+        <p>You should research with the users of your service to see which references they may be familiar with. If one or more reference is commonly used, you can support this within your autocomplete to save users time and help avoid errors.</p>
+
+        <img src="public/assets/images/contacts-st-georges-primary-school" alt class="Summary cards of contacts for St George's Primary School.">
+
+        <p>Your contact details section or page in your product should:</p>
+        
+        <ul>
+          <li>have more than one contact details field</li>
+          <li>provide a change link in the third column, if the fields are editable</li>
+          <li>(for internal products) point to one edit page, even if you have a change link for each field</li>
+        </ul>
+
+        <p>It should <strong>not</strong>:</p>
+        
+        <ul>
+          <li>allow users to edit fields on the same page. For example, using AJAX-enabled forms. Take users to a separate edit page</li>
+          <li>provide a change link if users are not allowed to edit the information. This may be the case if a certain user group only needs to read it</li>
+        </ul>
+        
+        <h2>Editing contact details</h2>
+        
+        <p>If users are allowed to edit the contact details, create an editing page and allow users to access it via the change link(s).</p>
+
+        <p>After users have edited the contact details, direct them back to the page which displays the edited details.</p>
+        
+        <h2>Research on this pattern</h2>
+        <p>We have not done research on this design pattern, but the pattern is being used in <a href="https://design-histories.education.gov.uk/prepare-conversions-transfers">Prepare conversions and transfers</a> and <a href="https://design-histories.education.gov.uk/complete-conversions-transfers-and-changes">Complete conversions, transfers and changes</a> to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database</a>:</p>
+        
+        <p>User need 22: When I have a question about project data in MAP Complete and Prepare, I need the name and email address of the DO or RCS caseworker responsible for the project, so I can get in touch with them to address my query.</p>
+
+    </div>
+</div>
+
+{% endblock%}
