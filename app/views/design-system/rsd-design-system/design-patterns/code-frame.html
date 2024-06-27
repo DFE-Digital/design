@@ -29,11 +29,14 @@
     </pre>
   </div>
 
+  {% if nunjucksCode %}
   <div class="govuk-tabs__panel" id="nunjucks-code-tabs__panel-{{ id }}">
     <pre data-module="app-copy" tabindex="0">
       {{ nunjucksCode | safe }}
     </pre>
   </div>
+  {% endif %}
+
 </div>
 {% endmacro %}
 
