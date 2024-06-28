@@ -509,8 +509,39 @@
     </code>' %}
     
     {% set nunjucksCodeContactPerCardEdit = '
-    <code class="hljs language-html">
-    
+<code class="hljs language-html">
+{% from &quot;govuk/components/fieldset/macro.njk&quot; import govukFieldset %}
+
+{% call govukFieldset({
+  legend: {
+    html: &#39;&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
+      &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
+      Edit Project managed by
+    &lt;/h1&gt;&#39;,
+    classes: &quot;govuk-fieldset__legend--l&quot;,
+    isPageHeading: true
+  }
+}) %}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Name&quot;
+    },
+    id: &quot;teamLeadName&quot;,
+    name: &quot;teamLeadName&quot;,
+    value: &quot;Alex James&quot;
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Email address&quot;
+    },
+    id: &quot;teamLeadEmailAddress&quot;,
+    name: &quot;teamLeadEmailAddress&quot;,
+    value: &quot;alex.james@education.gov.uk&quot;
+  }) }}
+
+{% endcall %}
     </code>
     ' %}
     
@@ -561,6 +592,73 @@
     
     {% set nunjucksCodeContactPerRowEdit = '
     <code class="hljs language-html">
-    
+{% from &quot;govuk/components/fieldset/macro.njk&quot; import govukFieldset %}
+
+{% call govukFieldset({
+  legend: {
+    html: &#39;&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
+      &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
+      Edit Trust contacts
+    &lt;/h1&gt;&#39;,
+    classes: &quot;govuk-fieldset__legend--l&quot;,
+    isPageHeading: true
+  }
+}) %}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Accounting officer name&quot;
+    },
+    id: &quot;trustContactsPerson1Name&quot;,
+    name: &quot;trustContactsPerson1Name&quot;,
+    value: &quot;Steph Park&quot;
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Accounting officer email address&quot;
+    },
+    id: &quot;trustContactsPerson1EmailAddress&quot;,
+    name: &quot;trustContactsPerson1EmailAddress&quot;,
+    value: &quot;steph@trustname.org.uk&quot;
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Chair of trustees name&quot;
+    },
+    id: &quot;trustContactsPerson2Name&quot;,
+    name: &quot;trustContactsPerson2Name&quot;,
+    value: &quot;Ren Kinley&quot;
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Chair of trustees email address&quot;
+    },
+    id: &quot;trustContactsPerson2EmailAddress&quot;,
+    name: &quot;trustContactsPerson2EmailAddress&quot;,
+    value: &quot;ren@trustname.org.uk&quot;
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Cheif financial officer name&quot;
+    },
+    id: &quot;trustContactsPerson3Name&quot;,
+    name: &quot;trustContactsPerson3Name&quot;,
+    value: &quot;Amar Vincent&quot;
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: &quot;Chief financial officer email address&quot;
+    },
+    id: &quot;trustContactsPerson3EmailAddress&quot;,
+    name: &quot;trustContactsPerson3EmailAddress&quot;,
+    value: &quot;amar@trustname.org.uk&quot;
+  }) }}
+
+{% endcall %}   
     </code>
     ' %}
