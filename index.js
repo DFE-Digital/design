@@ -91,14 +91,37 @@ app.get('/robots.txt', (_, res) => {
   res.render('robots.txt')
 })
 
+// app.get('/downloads/:filename', (req, res) => {
+//   const filename = req.params.filename
+//   const filePath = path.join(__dirname, '/app/assets/downloads/' + filename)
+//   // Set appropriate headers
+//   //  res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+//   res.setHeader('Content-Disposition', `attachment; filename=${filename}`)
+//   // Send the file
+//   res.sendFile(filePath)
+// })
+
 app.get('/downloads/:filename', (req, res) => {
   const filename = req.params.filename
-  const filePath = path.join(__dirname, '/app/assets/downloads/' + filename)
-  // Set appropriate headers
-  //  res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+
+  if (!/^[a-zA-Z0-9-_]+\.(docx|pdf|xlsx)$/.test(filename)) {
+    return res.status(400).send('Invalid file name')
+  }
+
+  const filePath = path.join(__dirname, 'app/assets/downloads', filename)
+
+  if (!filePath.startsWith(path.join(__dirname, 'app/assets/downloads'))) {
+    return res.status(400).send('Invalid file path')
+  }
   res.setHeader('Content-Disposition', `attachment; filename=${filename}`)
+
   // Send the file
-  res.sendFile(filePath)
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      console.error('File send error:', err)
+      res.status(500).send('Server error')
+    }
+  })
 })
 
 app.get('/search', (req, res) => {
@@ -136,7 +159,7 @@ if (config.env !== 'development') {
 }
 
 // Your custom middleware to automatically save form data to session
-function saveFormDataToSession(req, res, next) {
+function saveFormDataToSession (req, res, next) {
   if (req.method === 'POST') {
     req.session.data = {
       ...req.session.data, // Existing session data
@@ -147,7 +170,7 @@ function saveFormDataToSession(req, res, next) {
 }
 
 // Middleware to make formData globally available to all views
-function makeFormDataGlobal(req, res, next) {
+function makeFormDataGlobal (req, res, next) {
   // Perform a shallow merge of existing res.locals.data and session data
   res.locals.data = {
     ...res.locals.data, // Existing data
@@ -375,7 +398,7 @@ app.get('/tools/proposition-checker/result', (req, res) => {
   res.render('tools/proposition-checker/result')
 })
 
-function calculateValues(data, number) {
+function calculateValues (data, number) {
   const calculatedData = []
 
   data.forEach((item) => {
@@ -421,7 +444,7 @@ app.use(function (err, req, res, next) {
 // would look for /app/views/test.html
 // and /app/views/test/index.html
 
-function renderPath(path, res, next) {
+function renderPath (path, res, next) {
   // Try to render the path
   res.render(path, function (error, html) {
     if (!error) {
@@ -445,7 +468,7 @@ function renderPath(path, res, next) {
   })
 }
 
-function matchRoutes(req, res, next) {
+function matchRoutes (req, res, next) {
   let path = req.path
   path = path.substr(1)
   if (path === '') {
