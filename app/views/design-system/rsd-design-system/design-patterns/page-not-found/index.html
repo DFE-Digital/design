@@ -36,6 +36,24 @@
 </code>' %}
 
 {% set nunjucksCode = '<code class="hljs language-html">
+{% set mainClasses = &quot;govuk-main-wrapper--l&quot; %}
+
+{% block content %}
+  &lt;div class=&quot;govuk-grid-row&quot;&gt;
+    &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
+        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you typed the web address, check it is correct.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you pasted the web address, check you copied the entire address.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;email Service Support for help with using this system&lt;/a&gt;.
+        &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+{% endblock %}
 </code>' %}
 
 {% block beforeContent %}{% endblock %}
