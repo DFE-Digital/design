@@ -1,514 +1,591 @@
 {% set htmlCodeContactPerCardReadOnly = '<code class="hljs language-html">
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          Project managed by
-        &lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Name
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Alex James
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Email address
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              alex.james@education.gov.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          Team lead
-        &lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Name
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Zara Laney
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            zara.laney@education.gov.uk
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    </code>' %}
-    
-    {% set nunjucksCodeContactPerCardReadOnly = '
-    <code class="hljs language-html">
-    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-    {{ govukSummaryList({
-      card: {
-        title: {
-          text: &quot;Project managed by&quot;
-        }
-      },
-      rows: [
-        {
-          key: {
-            text: &quot;Name&quot;
-          },
-          value: {
-            html: &quot;Alex James&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Email address&quot;
-          },
-          value: {
-            html: &quot;alex.james@education.gov.uk&quot;
-          }
-        }
-      ]
-    }) }}
-    
-    {{ govukSummaryList({
-      card: {
-        title: {
-          text: &quot;Team lead&quot;
-        }
-      },
-      rows: [
-        {
-          key: {
-            text: &quot;Name&quot;
-          },
-          value: {
-            html: &quot;Zara Laney&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Email address&quot;
-          },
-          value: {
-            html: &quot;zara.laney@education.gov.uk&quot;
-          }
-        }
-      ]
-    }) }}
-    </code>
-    ' %}
-    
-    {% set htmlCodeContactPerRowReadOnly = '<code class="hljs language-html">
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          DfE contacts
-        &lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            Trust relationship manager 
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Alex James&lt;br/&gt;
-              alex.james@education.gov.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            SFSO (Schools financial support and oversight) lead
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Zara Laney&lt;br/&gt;
-              zara.laney@education.gov.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          Trust contacts
-        &lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Accounting officer
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Steph Park&lt;br/&gt;
-              steph@trustname.org.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Chair of trustees
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Ren Kinley&lt;br/&gt;
-              ren@trustname.org.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Chief financial officer
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Amar Vincent&lt;br/&gt;
-              amar@trustname.org.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    </code>' %}
-    
-    {% set nunjucksCodeContactRowReadOnly = '
-    <code class="hljs language-html">
-    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-    {{ govukSummaryList({
-      card: {
-        title: {
-          text: &quot;DfE contacts&quot;
-        }
-      },
-      rows: [
-        {
-          key: {
-            text: &quot;Contact person 1 job title&quot;
-          },
-          value: {
-            html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Contact person 2 job title&quot;
-          },
-          value: {
-            html: &quot;Name&lt;br/&gt;email address here&quot;
-          }
-        }
-      ]
-    }) }}
-    
-    {{ govukSummaryList({
-      card: {
-        title: {
-          text: &quot;Trust contacts&quot;
-        }
-      },
-      rows: [
-        {
-          key: {
-            text: &quot;Contact person 1 job title&quot;
-          },
-          value: {
-            html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Contact person 2 job title&quot;
-          },
-          value: {
-            html: &quot;Name&lt;br/&gt;email address here&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Contact person 3 job title&quot;
-          },
-          value: {
-            html: &quot;Name&lt;br/&gt;email address here&quot;
-          }
-        }
-      ]
-    }) }}
-    </code>
-    ' %}
-    
-    {% set htmlCodeContactPerCardEditable = '<code class="hljs language-html">
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          Project managed by
-        &lt;/h2&gt;
-        &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
-          &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
-            &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; project managed by&lt;/span&gt;&lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Name
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Alex James
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Email address
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              alex.james@education.gov.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          Team lead
-        &lt;/h2&gt;
-        &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
-          &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
-            &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; team lead&lt;/span&gt;&lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Name
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Email address
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    </code>' %}
-    
-    {% set nunjucksCodeContactPerCardEditable = '
-    <code class="hljs language-html">
-    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-    {{ govukSummaryList({
-      card: {
-        title: {
-          text: &quot;DfE contacts&quot;
-        },
-        actions: {
-          items: [
-            {
-              href: &quot;#&quot;,
-              text: &quot;Change&quot;,
-              visuallyHiddenText: &quot;dfe contacts&quot;
-            }
-          ]
-        }
-      },
-      rows: [
-        {
-          key: {
-            text: &quot;Contact person 1 job title&quot;
-          },
-          value: {
-            html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Contact person 2 job title&quot;
-          },
-          value: {
-            html: &quot;Name&lt;br/&gt;email address here&quot;
-          }
-        }
-      ]
-    }) }}
-    
-    {{ govukSummaryList({
-      card: {
-        title: {
-          text: &quot;Trust contacts&quot;
-        },
-        actions: {
-          items: [
-            {
-              href: &quot;#&quot;,
-              text: &quot;Change&quot;,
-              visuallyHiddenText: &quot;trust contacts&quot;
-            }
-          ]
-        }
-      },
-      rows: [
-        {
-          key: {
-            text: &quot;Contact person 1 job title&quot;
-          },
-          value: {
-            html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Contact person 2 job title&quot;
-          },
-          value: {
-            html: &quot;Name&lt;br/&gt;email address here&quot;
-          }
-        },
-        {
-          key: {
-            text: &quot;Contact person 3 job title&quot;
-          },
-          value: {
-            html: &quot;Name&lt;br/&gt;email address here&quot;
-          }
-        }
-      ]
-    }) }}
-    </code>
-    ' %}
-    
-    {% set htmlCodeContactPerRowEditable = '<code class="hljs language-html">
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          DfE contacts
-        &lt;/h2&gt;
-        &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
-          &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
-            &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; DfE contacts&lt;/span&gt;&lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Contact person 1 job title 
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Alex James&lt;br/&gt;
-              alex.james@education.gov.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Contact person 2 job title
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Name&lt;br/&gt;
-              email address here
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;govuk-summary-card&quot;&gt;
-      &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-        &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-          Trust contacts
-        &lt;/h2&gt;
-        &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
-          &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
-            &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; trust contacts&lt;/span&gt;&lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-        &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Contact person 1 job title 
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Alex James&lt;br/&gt;
-              alex.james@education.gov.uk
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Contact person 2 job title
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Name&lt;br/&gt;
-              email address here
-            &lt;/dd&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-            &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-              Contact person 3 job title
-            &lt;/dt&gt;
-            &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-              Name&lt;br/&gt;
-              email address here
-            &lt;/dd&gt;
-          &lt;/div&gt;
-        &lt;/dl&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    </code>' %}
-    
-    {% set nunjucksCodeContactPerRowEditable = '
-    <code class="hljs language-html">
-    
-    </code>
-    ' %}
-    
-    {% set htmlCodeContactPerCardEdit = '<code class="hljs language-html">
-    &lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
-      &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
-      Edit Project managed by
-    &lt;/h1&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;teamLeadName&quot;&gt;
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Project managed by
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
           Name
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;teamLeadName&quot; name=&quot;teamLeadName&quot; type=&quot;text&quot; value=&quot;Alex James&quot;&gt;
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James
+        &lt;/dd&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;teamLeadEmailAddress&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
           Email address
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;teamLeadEmailAddress&quot; name=&quot;teamLeadEmailAddress&quot; type=&quot;text&quot; value=&quot;alex.james@education.gov.uk&quot;&gt;
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
       &lt;/div&gt;
-    &lt;/div&gt;
-    </code>' %}
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Team lead
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Zara Laney
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+        zara.laney@education.gov.uk
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
     
-    {% set nunjucksCodeContactPerCardEdit = '
+{% set nunjucksCodeContactPerCardReadOnly = '
+<code class="hljs language-html">
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;Project managed by&quot;
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Name&quot;
+      },
+      value: {
+        html: &quot;Alex James&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Email address&quot;
+      },
+      value: {
+        html: &quot;alex.james@education.gov.uk&quot;
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;Team lead&quot;
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Name&quot;
+      },
+      value: {
+        html: &quot;Zara Laney&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Email address&quot;
+      },
+      value: {
+        html: &quot;zara.laney@education.gov.uk&quot;
+      }
+    }
+  ]
+}) }}
+</code>
+' %}
+    
+{% set htmlCodeContactPerRowReadOnly = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      DfE contacts
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+        Trust relationship manager 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+        SFSO (Schools financial support and oversight) lead
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Zara Laney&lt;br/&gt;
+          zara.laney@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Trust contacts
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Accounting officer
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Steph Park&lt;br/&gt;
+          steph@trustname.org.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Chair of trustees
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Ren Kinley&lt;br/&gt;
+          ren@trustname.org.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Chief financial officer
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Amar Vincent&lt;br/&gt;
+          amar@trustname.org.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+    
+{% set nunjucksCodeContactRowReadOnly = '
+<code class="hljs language-html">
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;DfE contacts&quot;
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Trust relationship manager&quot;
+      },
+      value: {
+        html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;SFSO (Schools financial support and oversight) lead&quot;
+      },
+      value: {
+        html: &quot;Zara Laney&lt;br/&gt;zara.laney@education.gov.uk&quot;
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;Trust contacts&quot;
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Accounting officer&quot;
+      },
+      value: {
+        html: &quot;Steph Park&lt;br/&gt;steph@trustname.org.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Chair of trustees&quot;
+      },
+      value: {
+        html: &quot;Ren Kinley&lt;br/&gt;ren@trustname.org.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Chief financial officer&quot;
+      },
+      value: {
+        html: &quot;Amar Vincent&lt;br/&gt;amar@trustname.org.uk&quot;
+      }
+    }
+  ]
+}) }}
+</code>
+' %}
+    
+{% set htmlCodeContactPerCardEditable = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Project managed by
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; project managed by&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Team lead
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; team lead&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Name
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Email address
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+    
+{% set nunjucksCodeContactPerCardEditable = '
+<code class="hljs language-html">
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;DfE contacts&quot;
+    },
+    actions: {
+      items: [
+        {
+          href: &quot;#&quot;,
+          text: &quot;Change&quot;,
+          visuallyHiddenText: &quot;dfe contacts&quot;
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Contact person 1 job title&quot;
+      },
+      value: {
+        html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Contact person 2 job title&quot;
+      },
+      value: {
+        html: &quot;Name&lt;br/&gt;email address here&quot;
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;Trust contacts&quot;
+    },
+    actions: {
+      items: [
+        {
+          href: &quot;#&quot;,
+          text: &quot;Change&quot;,
+          visuallyHiddenText: &quot;trust contacts&quot;
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Contact person 1 job title&quot;
+      },
+      value: {
+        html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Contact person 2 job title&quot;
+      },
+      value: {
+        html: &quot;Name&lt;br/&gt;email address here&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Contact person 3 job title&quot;
+      },
+      value: {
+        html: &quot;Name&lt;br/&gt;email address here&quot;
+      }
+    }
+  ]
+}) }}
+</code>
+' %}
+    
+{% set htmlCodeContactPerRowEditable = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      DfE contacts
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; DfE contacts&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;govuk-summary-card&quot;&gt;
+  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
+    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
+      Trust contacts
+    &lt;/h2&gt;
+    &lt;ul class=&quot;govuk-summary-card__actions&quot;&gt;
+      &lt;li class=&quot;govuk-summary-card__action&quot;&gt;
+        &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Change&lt;span class=&quot;govuk-visually-hidden&quot;&gt; trust contacts&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
+    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 1 job title 
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Alex James&lt;br/&gt;
+          alex.james@education.gov.uk
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 2 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
+        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
+          Contact person 3 job title
+        &lt;/dt&gt;
+        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
+          Name&lt;br/&gt;
+          email address here
+        &lt;/dd&gt;
+      &lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+    
+{% set nunjucksCodeContactPerRowEditable = '
+<code class="hljs language-html">
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;DfE contacts&quot;
+    },
+    actions: {
+      items: [
+        {
+          href: &quot;#&quot;,
+          text: &quot;Change&quot;,
+          visuallyHiddenText: &quot;dfe contacts&quot;
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Trust relationship manager&quot;
+      },
+      value: {
+        html: &quot;Alex James&lt;br/&gt;alex.james@education.gov.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;SFSO (Schools financial support and oversight) lead&quot;
+      },
+      value: {
+        html: &quot;Zara Laney&lt;br/&gt;zara.laney@education.gov.uk&quot;
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: &quot;Trust contacts&quot;
+    },
+    actions: {
+      items: [
+        {
+          href: &quot;#&quot;,
+          text: &quot;Change&quot;,
+          visuallyHiddenText: &quot;trust contacts&quot;
+        }
+      ]
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: &quot;Accounting officer&quot;
+      },
+      value: {
+        html: &quot;Steph Park&lt;br/&gt;steph@trustname.org.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Chair of trustees&quot;
+      },
+      value: {
+        html: &quot;Ren Kinley&lt;br/&gt;ren@trustname.org.uk&quot;
+      }
+    },
+    {
+      key: {
+        text: &quot;Chief financial officer&quot;
+      },
+      value: {
+        html: &quot;Amar Vincent&lt;br/&gt;amar@trustname.org.uk&quot;
+      }
+    }
+  ]
+}) }}
+</code>
+' %}
+    
+{% set htmlCodeContactPerCardEdit = '<code class="hljs language-html">
+&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
+  &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
+  Edit Project managed by
+&lt;/h1&gt;
+&lt;div class=&quot;govuk-form-group&quot;&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;teamLeadName&quot;&gt;
+      Name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;teamLeadName&quot; name=&quot;teamLeadName&quot; type=&quot;text&quot; value=&quot;Alex James&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;teamLeadEmailAddress&quot;&gt;
+      Email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;teamLeadEmailAddress&quot; name=&quot;teamLeadEmailAddress&quot; type=&quot;text&quot; value=&quot;alex.james@education.gov.uk&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
+    
+{% set nunjucksCodeContactPerCardEdit = '
 <code class="hljs language-html">
 {% from &quot;govuk/components/fieldset/macro.njk&quot; import govukFieldset %}
 
@@ -523,75 +600,75 @@
   }
 }) %}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Name&quot;
-    },
-    id: &quot;teamLeadName&quot;,
-    name: &quot;teamLeadName&quot;,
-    value: &quot;Alex James&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Name&quot;
+  },
+  id: &quot;teamLeadName&quot;,
+  name: &quot;teamLeadName&quot;,
+  value: &quot;Alex James&quot;
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Email address&quot;
-    },
-    id: &quot;teamLeadEmailAddress&quot;,
-    name: &quot;teamLeadEmailAddress&quot;,
-    value: &quot;alex.james@education.gov.uk&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Email address&quot;
+  },
+  id: &quot;teamLeadEmailAddress&quot;,
+  name: &quot;teamLeadEmailAddress&quot;,
+  value: &quot;alex.james@education.gov.uk&quot;
+}) }}
 
 {% endcall %}
-    </code>
-    ' %}
+</code>
+' %}
     
-    {% set htmlCodeContactPerRowEdit = '<code class="hljs language-html">
-    &lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
-      &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
-      Edit Trust contacts
-    &lt;/h1&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson1Name&quot;&gt;
-          Accounting officer name
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson1Name&quot; name=&quot;trustContactsPerson1Name&quot; type=&quot;text&quot; value=&quot;Steph Park&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson1EmailAddress&quot;&gt;
-          Accounting officer email address
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson1EmailAddress&quot; name=&quot;trustContactsPerson1EmailAddress&quot; type=&quot;text&quot; value=&quot;steph@trustname.org.uk&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson2Name&quot;&gt;
-          Chair of trustees name
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson2Name&quot; name=&quot;trustContactsPerson2Name&quot; type=&quot;text&quot; value=&quot;Ren Kinley&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson2EmailAddress&quot;&gt;
-          Chair of trustees email address
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson2EmailAddress&quot; name=&quot;trustContactsPerson2EmailAddress&quot; type=&quot;text&quot; value=&quot;ren@trustname.org.uk&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson3Name&quot;&gt;
-          Cheif financial officer name
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson3Name&quot; name=&quot;trustContactsPerson3Name&quot; type=&quot;text&quot; value=&quot;Amar Vincent&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-form-group&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson3EmailAddress&quot;&gt;
-          Chief financial officer email address
-        &lt;/label&gt;
-        &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson3EmailAddress&quot; name=&quot;trustContactsPerson3EmailAddress&quot; type=&quot;text&quot; value=&quot;amar@trustname.org.uk&quot;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    </code>' %}
+{% set htmlCodeContactPerRowEdit = '<code class="hljs language-html">
+&lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
+  &lt;span class=&quot;govuk-caption-l&quot;&gt;Secondary title here&lt;/span&gt;
+  Edit Trust contacts
+&lt;/h1&gt;
+&lt;div class=&quot;govuk-form-group&quot;&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson1Name&quot;&gt;
+      Accounting officer name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson1Name&quot; name=&quot;trustContactsPerson1Name&quot; type=&quot;text&quot; value=&quot;Steph Park&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson1EmailAddress&quot;&gt;
+      Accounting officer email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson1EmailAddress&quot; name=&quot;trustContactsPerson1EmailAddress&quot; type=&quot;text&quot; value=&quot;steph@trustname.org.uk&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson2Name&quot;&gt;
+      Chair of trustees name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson2Name&quot; name=&quot;trustContactsPerson2Name&quot; type=&quot;text&quot; value=&quot;Ren Kinley&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson2EmailAddress&quot;&gt;
+      Chair of trustees email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson2EmailAddress&quot; name=&quot;trustContactsPerson2EmailAddress&quot; type=&quot;text&quot; value=&quot;ren@trustname.org.uk&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson3Name&quot;&gt;
+      Cheif financial officer name
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson3Name&quot; name=&quot;trustContactsPerson3Name&quot; type=&quot;text&quot; value=&quot;Amar Vincent&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-heading-m&quot; for=&quot;trustContactsPerson3EmailAddress&quot;&gt;
+      Chief financial officer email address
+    &lt;/label&gt;
+    &lt;input class=&quot;govuk-input&quot; id=&quot;trustContactsPerson3EmailAddress&quot; name=&quot;trustContactsPerson3EmailAddress&quot; type=&quot;text&quot; value=&quot;amar@trustname.org.uk&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>' %}
     
-    {% set nunjucksCodeContactPerRowEdit = '
-    <code class="hljs language-html">
+{% set nunjucksCodeContactPerRowEdit = '
+<code class="hljs language-html">
 {% from &quot;govuk/components/fieldset/macro.njk&quot; import govukFieldset %}
 
 {% call govukFieldset({
@@ -605,60 +682,60 @@
   }
 }) %}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Accounting officer name&quot;
-    },
-    id: &quot;trustContactsPerson1Name&quot;,
-    name: &quot;trustContactsPerson1Name&quot;,
-    value: &quot;Steph Park&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Accounting officer name&quot;
+  },
+  id: &quot;trustContactsPerson1Name&quot;,
+  name: &quot;trustContactsPerson1Name&quot;,
+  value: &quot;Steph Park&quot;
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Accounting officer email address&quot;
-    },
-    id: &quot;trustContactsPerson1EmailAddress&quot;,
-    name: &quot;trustContactsPerson1EmailAddress&quot;,
-    value: &quot;steph@trustname.org.uk&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Accounting officer email address&quot;
+  },
+  id: &quot;trustContactsPerson1EmailAddress&quot;,
+  name: &quot;trustContactsPerson1EmailAddress&quot;,
+  value: &quot;steph@trustname.org.uk&quot;
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Chair of trustees name&quot;
-    },
-    id: &quot;trustContactsPerson2Name&quot;,
-    name: &quot;trustContactsPerson2Name&quot;,
-    value: &quot;Ren Kinley&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Chair of trustees name&quot;
+  },
+  id: &quot;trustContactsPerson2Name&quot;,
+  name: &quot;trustContactsPerson2Name&quot;,
+  value: &quot;Ren Kinley&quot;
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Chair of trustees email address&quot;
-    },
-    id: &quot;trustContactsPerson2EmailAddress&quot;,
-    name: &quot;trustContactsPerson2EmailAddress&quot;,
-    value: &quot;ren@trustname.org.uk&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Chair of trustees email address&quot;
+  },
+  id: &quot;trustContactsPerson2EmailAddress&quot;,
+  name: &quot;trustContactsPerson2EmailAddress&quot;,
+  value: &quot;ren@trustname.org.uk&quot;
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Cheif financial officer name&quot;
-    },
-    id: &quot;trustContactsPerson3Name&quot;,
-    name: &quot;trustContactsPerson3Name&quot;,
-    value: &quot;Amar Vincent&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Cheif financial officer name&quot;
+  },
+  id: &quot;trustContactsPerson3Name&quot;,
+  name: &quot;trustContactsPerson3Name&quot;,
+  value: &quot;Amar Vincent&quot;
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: &quot;Chief financial officer email address&quot;
-    },
-    id: &quot;trustContactsPerson3EmailAddress&quot;,
-    name: &quot;trustContactsPerson3EmailAddress&quot;,
-    value: &quot;amar@trustname.org.uk&quot;
-  }) }}
+{{ govukInput({
+  label: {
+    text: &quot;Chief financial officer email address&quot;
+  },
+  id: &quot;trustContactsPerson3EmailAddress&quot;,
+  name: &quot;trustContactsPerson3EmailAddress&quot;,
+  value: &quot;amar@trustname.org.uk&quot;
+}) }}
 
 {% endcall %}   
-    </code>
-    ' %}
+</code>
+' %}
