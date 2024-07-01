@@ -483,6 +483,7 @@
     
 {% set nunjucksCodeContactPerRowEditable = '
 <code class="hljs language-html">
+{% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {{ govukSummaryList({
   card: {
@@ -587,6 +588,7 @@
     
 {% set nunjucksCodeContactPerCardEdit = '
 <code class="hljs language-html">
+{% from "govuk/components/input/macro.njk" import govukInput %}
 {% from &quot;govuk/components/fieldset/macro.njk&quot; import govukFieldset %}
 
 {% call govukFieldset({
