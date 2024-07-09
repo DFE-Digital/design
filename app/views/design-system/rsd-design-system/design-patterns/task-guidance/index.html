@@ -17,20 +17,23 @@ experienced colleagues who may not need it." %}
 
 {% set htmlCodeTaskGuidance = '<code class="hljs language-html">
 &lt;div class=&quot;govuk-form-group&quot;&gt;
-  &lt;fieldset class=&quot;govuk-fieldset&quot; aria-describedby=&quot;your-checkboxes-hint&quot;&gt;
-    &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6&quot;&gt;
+  &lt;fieldset class=&quot;govuk-fieldset&quot; aria-describedby=&quot;handover-hint&quot;&gt;
+    &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--l&quot;&gt;
       &lt;h1 class=&quot;govuk-fieldset__heading&quot;&gt;
         Handover with regional delivery officer
       &lt;/h1&gt;
     &lt;/legend&gt;
-
+    &lt;div id=&quot;handover-hint&quot; class=&quot;govuk-hint&quot;&gt;
+      Select all that apply.
+    &lt;/div&gt;
     &lt;div class=&quot;govuk-checkboxes&quot; data-module=&quot;govuk-checkboxes&quot;&gt;
       &lt;div class=&quot;govuk-checkboxes__item&quot;&gt;
-        &lt;input class=&quot;govuk-checkboxes__input&quot; id=&quot;your-checkboxes&quot; name=&quot;your-checkboxes&quot; type=&quot;checkbox&quot; value=&quot;british&quot; aria-describedby=&quot;your-checkboxes-item-hint&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-checkboxes__label&quot; for=&quot;your-checkboxes&quot;&gt;
+        &lt;input class=&quot;govuk-checkboxes__input&quot; id=&quot;handover&quot; name=&quot;handover&quot; type=&quot;checkbox&quot; value=&quot;project-info&quot;
+          aria-describedby=&quot;handover-item-hint&quot;&gt;
+        &lt;label class=&quot;govuk-label govuk-checkboxes__label&quot; for=&quot;handover&quot;&gt;
           Review the project information, check the documents and carry out research
         &lt;/label&gt;
-        &lt;div id=&quot;your-checkboxes-item-hint&quot; class=&quot;govuk-hint govuk-checkboxes__hint&quot;&gt;
+        &lt;div id=&quot;handover-item-hint&quot; class=&quot;govuk-hint govuk-checkboxes__hint&quot;&gt;
           Check that no information is missing from the existing project documents and there are no errors.
           &lt;details class=&quot;govuk-details govuk-!-margin-top-3&quot;&gt;
             &lt;summary class=&quot;govuk-details__summary&quot;&gt;
@@ -39,13 +42,19 @@ experienced colleagues who may not need it." %}
               &lt;/span&gt;
             &lt;/summary&gt;
             &lt;div class=&quot;govuk-details__text&quot;&gt;
-              &lt;p&gt;You should check existing project documents, including:&lt;/p&gt;
+              &lt;p&gt;
+                You should check existing project documents, including:
+              &lt;/p&gt;
               &lt;ul&gt;
                 &lt;li&gt;academy order&lt;/li&gt;
                 &lt;li&gt;application to convert&lt;/li&gt;
               &lt;/ul&gt;
-              &lt;p&gt;Check that no information is missing and there are no errors. You should also research the background of the project before you meet with the regional delivery officer.&lt;/p&gt;
-              &lt;p&gt;Things to check during your background research include:&lt;/p&gt;
+              &lt;p&gt;
+                Check that no information is missing and there are no errors. You should also research the background of the project before you meet with the regional delivery officer.
+              &lt;/p&gt;
+              &lt;p&gt;
+                Things to check during your background research include:
+              &lt;/p&gt;
               &lt;ul&gt;
                 &lt;li&gt;project information, such as advisory board conditions&lt;/li&gt;
                 &lt;li&gt;school or trust website for more information about the school&lt;/li&gt;
@@ -56,23 +65,29 @@ experienced colleagues who may not need it." %}
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class=&quot;govuk-checkboxes__item&quot;&gt;
-        &lt;input class=&quot;govuk-checkboxes__input&quot; id=&quot;your-checkboxes-2&quot; name=&quot;your-checkboxes&quot; type=&quot;checkbox&quot; value=&quot;british&quot; aria-describedby=&quot;your-checkboxes-item-hint&quot;&gt;
-        &lt;label class=&quot;govuk-label govuk-checkboxes__label&quot; for=&quot;your-checkboxes-2&quot;&gt;
-          Make notes and write questions to ask the regional delivery officer
+        &lt;input class=&quot;govuk-checkboxes__input&quot; id=&quot;handover-2&quot; name=&quot;handover&quot; type=&quot;checkbox&quot; value=&quot;make-notes&quot;&gt;
+        &lt;label class=&quot;govuk-label govuk-checkboxes__label&quot; for=&quot;handover-2&quot;&gt;
+          &lt;p&gt;
+            Make notes and write questions to ask the regional delivery officer
+          &lt;/p&gt;
+          &lt;div class=&quot;govuk-hint&quot;&gt;
+            &lt;details class=&quot;govuk-details govuk-!-margin-top-3&quot;&gt;
+              &lt;summary class=&quot;govuk-details__summary&quot;&gt;
+                &lt;span class=&quot;govuk-details__summary-text&quot;&gt;
+                  What to make notes about
+                &lt;/span&gt;
+              &lt;/summary&gt;
+              &lt;div class=&quot;govuk-details__text&quot;&gt;
+                &lt;p&gt;
+                  Note down things you want to ask and talk about with the regional delivery officer at the handover meeting.
+                &lt;/p&gt;
+                &lt;p&gt;
+                  This is an opportunity to clarify anything that you&lsquo;re unsure about after reviewing the project and doing your background research.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/details&gt;
+          &lt;/div&gt;
         &lt;/label&gt;
-        &lt;div id=&quot;your-checkboxes-item-hint&quot; class=&quot;govuk-hint govuk-checkboxes__hint&quot;&gt;
-          &lt;details class=&quot;govuk-details govuk-!-margin-top-3&quot;&gt;
-            &lt;summary class=&quot;govuk-details__summary&quot;&gt;
-              &lt;span class=&quot;govuk-details__summary-text&quot;&gt;
-                What to make notes about
-              &lt;/span&gt;
-            &lt;/summary&gt;
-            &lt;div class=&quot;govuk-details__text&quot;&gt;
-              &lt;p&gt;Note down things you want to ask and talk about with the regional delivery officer at the handover meeting.&lt;/p&gt;
-              &lt;p&gt;This is an opportunity to clarify anything that you&lsquo;re unsure about after reviewing the project and doing your background research.&lt;/p&gt;
-            &lt;/div&gt;
-          &lt;/details&gt;
-        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
@@ -210,7 +225,6 @@ experienced colleagues who may not need it." %}
           guidance I need to complete my task, so that I don't waste time reading things I already know and I am using
           tools correctly to support a school converting to an academy, and academy transferring from one trust to
           another or a new free school opening.</p>
-
   </div>
 </div>
 

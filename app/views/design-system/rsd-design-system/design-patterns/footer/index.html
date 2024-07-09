@@ -76,13 +76,6 @@
 &lt;/footer&gt;
 </code>' %}
 
-{% set nunjucksCode = '<code class="hljs language-html">
-  We have not been able to create Nunjucks for this footer pattern.
-
-  If you have any problems implementing this pattern, ask in the #rsd-ucd-community-public Slack channel.   
-  
-</code>' %}
-
 {% block beforeContent %}{% endblock %}
 
 {% block content %}
@@ -91,7 +84,7 @@
   <div class="govuk-grid-column-full">
 
     {{ sample.code('/design-system/rsd-design-system/design-patterns/footer/example.html', 'Footer', 'footer',
-    htmlCode, nunjucksCode) }}
+    htmlCode) }}
     <br>
 
     <h2>When to use this component</h2>
