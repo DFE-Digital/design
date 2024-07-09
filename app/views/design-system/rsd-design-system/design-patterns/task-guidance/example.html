@@ -7,20 +7,23 @@ Task guidance design pattern | RSD component library
 {% block sample %}
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="your-checkboxes-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6">
+  <fieldset class="govuk-fieldset" aria-describedby="handover-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
         Handover with regional delivery officer
       </h1>
     </legend>
-
+    <div id="handover-hint" class="govuk-hint">
+      Select all that apply.
+    </div>
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="your-checkboxes" name="your-checkboxes" type="checkbox" value="british" aria-describedby="your-checkboxes-item-hint">
-        <label class="govuk-label govuk-checkboxes__label" for="your-checkboxes">
+        <input class="govuk-checkboxes__input" id="handover" name="handover" type="checkbox" value="project-info"
+          aria-describedby="handover-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="handover">
           Review the project information, check the documents and carry out research
         </label>
-        <div id="your-checkboxes-item-hint" class="govuk-hint govuk-checkboxes__hint">
+        <div id="handover-item-hint" class="govuk-hint govuk-checkboxes__hint">
           Check that no information is missing from the existing project documents and there are no errors.
           <details class="govuk-details govuk-!-margin-top-3">
             <summary class="govuk-details__summary">
@@ -29,13 +32,19 @@ Task guidance design pattern | RSD component library
               </span>
             </summary>
             <div class="govuk-details__text">
-              <p>You should check existing project documents, including:</p>
+              <p>
+                You should check existing project documents, including:
+              </p>
               <ul>
                 <li>academy order</li>
                 <li>application to convert</li>
               </ul>
-              <p>Check that no information is missing and there are no errors. You should also research the background of the project before you meet with the regional delivery officer.</p>
-              <p>Things to check during your background research include:</p>
+              <p>
+                Check that no information is missing and there are no errors. You should also research the background of the project before you meet with the regional delivery officer.
+              </p>
+              <p>
+                Things to check during your background research include:
+              </p>
               <ul>
                 <li>project information, such as advisory board conditions</li>
                 <li>school or trust website for more information about the school</li>
@@ -46,24 +55,29 @@ Task guidance design pattern | RSD component library
         </div>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="your-checkboxes-2" name="your-checkboxes" type="checkbox" value="british" aria-describedby="your-checkboxes-item-hint">
-        <label class="govuk-label govuk-checkboxes__label" for="your-checkboxes-2">
-          Make notes and write questions to ask the regional delivery officer
+        <input class="govuk-checkboxes__input" id="handover-2" name="handover" type="checkbox" value="make-notes">
+        <label class="govuk-label govuk-checkboxes__label" for="handover-2">
+          <p>
+            Make notes and write questions to ask the regional delivery officer
+          </p>
+          <div class="govuk-hint">
+            <details class="govuk-details govuk-!-margin-top-3">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What to make notes about
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>
+                  Note down things you want to ask and talk about with the regional delivery officer at the handover meeting.
+                </p>
+                <p>
+                  This is an opportunity to clarify anything that you‘re unsure about after reviewing the project and doing your background research.
+                </p>
+              </div>
+            </details>
+          </div>
         </label>
-        <div id="your-checkboxes-item-hint" class="govuk-hint govuk-checkboxes__hint">
-          
-          <details class="govuk-details govuk-!-margin-top-3">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                What to make notes about
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>Note down things you want to ask and talk about with the regional delivery officer at the handover meeting.</p>
-              <p>This is an opportunity to clarify anything that you're unsure about after reviewing the project and doing your background research.</p>
-            </div>
-          </details>
-        </div>
       </div>
     </div>
   </fieldset>
