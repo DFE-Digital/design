@@ -15,10 +15,10 @@ const professionsController = require('./controllers/professionsController.js')
 const designOpsController = require('./controllers/designOpsController.js')
 const feedbackController = require('./controllers/feedbackController.js')
 
-
 router.get('/design-system', designSystemController.get_index)
 
 router.get('/our-work', designSystemController.get_our_work)
+router.get('/our-work/project/:slug', designSystemController.get_project)
 
 // Professions
 router.get('/professions/content-design', professionsController.get_content_design)

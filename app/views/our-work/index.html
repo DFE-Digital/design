@@ -29,25 +29,24 @@ updates and design histories." %}
         <h2 class="govuk-heading-l">Current projects</h2>
 
         <div class="dfe-grid-container govuk-!-margin-top-5">
+
+            {% for project in work%}
+
             <div class="dfe-card">
-                <picture>
-                    <source srcset="/assets/images/app.jpeg" type="image/webp">
-                    <img src="/assets/images/app.jpeg" alt="">
-                </picture>
+               
+                    <img src="{{project.attributes.FeaturedImage.data.attributes.url}}" alt="">
+            
                 <div class="dfe-card-container">
                     <h2 class="govuk-heading-m">
-                        <a href="/our-work/projects/service-assessment-service"
-                            class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Book, manage and
-                            assess a
-                            service</a>
+                        <a href="/our-work/project/{{project.attributes.Slug}}"
+                            class="govuk-link govuk-link--no-visited-state dfe-card-link--header">{{project.attributes.Title}}</a>
                     </h2>
-                    <p>Find out how we're transforming service assessments in the department, with a view to working
-                        across
-                        government for better outcomes for our teams and users of our services.
+                    <p>{{project.attributes.Description}}</p>
                     </p>
-                    <p class="govuk-body-s">DesignOps Team</p>
+                    <p class="govuk-body-s">{{project.attributes.Team}}</p>
                 </div>
             </div>
+            {% endfor %}
             <div class="dfe-card">
                 <picture>
                     <source srcset="/assets/images/familyhubs.webp" type="image/webp">
