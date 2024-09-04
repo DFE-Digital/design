@@ -1,0 +1,127 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "There is a problem with the service" %}
+{% set pageDescription = "Content for 'There is a problem with the service' pages." %}
+{% set pageCaption = "Regional Services Division design pattern" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "rsd-design-system"%}
+{% set childSection = "design-patterns"%}
+{% set isChildSection = "true"%}
+
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2024 "%}
+{% set backlog_issue_id = "105" %}
+
+{% set htmlCode = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-width-container&quot;&gt;
+  &lt;main class=&quot;govuk-main-wrapper govuk-main-wrapper--l&quot; id=&quot;main-content&quot; role=&quot;main&quot;&gt;
+    &lt;div class=&quot;govuk-grid-row&quot;&gt;
+      &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
+        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you typed the web address, check it is correct.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you pasted the web address, check you copied the entire address.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;email Service Support for help with using this system&lt;/a&gt;.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set nunjucksCode = '<code class="hljs language-html">
+{% set mainClasses = &quot;govuk-main-wrapper--l&quot; %}
+
+{% block content %}
+  &lt;div class=&quot;govuk-grid-row&quot;&gt;
+    &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
+        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you typed the web address, check it is correct.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you pasted the web address, check you copied the entire address.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;email Service Support for help with using this system&lt;/a&gt;.
+        &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+{% endblock %}
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/there-is-a-problem/example.html', 'There is a problem with the service', 'there-is-a-problem',
+    htmlCode, nunjucksCode) }}
+    <br>
+
+    <h2 id="when-to-use-this-pattern">When to use this pattern</h2>
+    <p>Use a page not found if someone is trying to view a page that does not exist. This happens if someone:</p>
+    <ul>
+      <li>selects a link or button that takes them to a page that does not exist</li>
+      <li>types or copies a web address for a page that does not exist</li>
+      <li>types or copies a web address incorrectly</li>
+    </ul>
+    <p>Test all links and buttons to make sure they work. Remember to <a
+        href="https://www.gov.uk/guidance/government-design-principles#do-the-hard-work-to-make-it-simple">do the hard work
+        to make it simple</a>.</p>
+    <p>Make sure any web addresses in your service, letters, forms and on GOV.UK are for pages that exist or redirect to
+      pages that exist.</p>
+      
+    <h2 id="how-it-works">How it works</h2>
+    <p>The page should have:</p>
+    <ul>
+      <li>‘Page not found – System name’ as the page title. For example, Page not found - Manage free school projects</li>
+      <li>‘Page not found’ as the H1</li>
+      <li>'email Service Support for help with using this system' as the link text</li>
+      <li>'System name: support query' as the pre-filled email subject. For example, Manage free school projects: support query</li>
+    </ul>
+    <p>The content should be clear and concise, not blame the user.</p>
+    <div class="app-wcag-22" id="wcag-consistent-content-there-is-a-problem" role="note">
+      <strong class="govuk-tag" style="margin-bottom: 10px">
+        WCAG 2.2
+      </strong>
+    
+      <p>You must always write contact information in a clear and consistent way across ‘There is a problem with the service’ and similar service
+        error pages. This relates to WCAG 2.2 success criterion <a
+          href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
+    </div>
+    
+    <p>Do not use:</p>
+    <ul>
+      <li>breadcrumbs</li>
+      <li>technical jargon like 404 or bad request</li>
+      <li>informal or humorous words like oops</li>
+      <li>red text to warn people</li>
+    </ul>
+    
+
+
+
+    <h2>Research on this pattern</h2>
+    <p>
+      We have not done research on this pattern, but it is being used in <a
+      href="https://design-histories.education.gov.uk/manage-free-school-projects">Manage free school projects</a> to meet this need from our <a
+        href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user
+        needs database (opens in DfE Microsoft List)</a>:
+    </p>
+    
+    <p>user need 72: when I am having trouble using the system, I need to get help so that I can resolve my issue and get back to work.</p>
+
+  </div>
+</div>
+
+
+{% endblock%}
