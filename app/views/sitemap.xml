@@ -40,11 +40,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/accessibility</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://design.education.gov.uk/design-ops</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.80</priority>
@@ -66,11 +61,6 @@
 </url>
 <url>
   <loc>https://design.education.gov.uk/design-ops/priorities</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility-statement</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -205,66 +195,6 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/accessibility/standards</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/roles-and-responsibilities</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/understanding-wcag</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/understanding-wcag/perceivable</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/understanding-wcag/operable</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/understanding-wcag/understandable</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/understanding-wcag/robust</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/assurance</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/audits</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/evaluation-methodology</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/determine-conformance</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/accessibility-statements</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://design.education.gov.uk/tools/how-many-users</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.64</priority>
@@ -385,27 +315,7 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://design.education.gov.uk/accessibility/understanding-wcag/draft-2-2</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
   <loc>https://design.education.gov.uk/design-ops</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/accessibility-statements/full-statement</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/accessibility-statements/partial-statement</loc>
-  <lastmod>2024-03-07T20:29:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://design.education.gov.uk/accessibility/accessibility-statements/notmet-statement</loc>
   <lastmod>2024-03-07T20:29:10+00:00</lastmod>
   <priority>0.51</priority>
 </url>
