@@ -1,7 +1,7 @@
 {% extends "layouts/content-full-width.html" %}
 {% set canonical = "https://design.education.gov.uk"%}
 {% set selectedNav = "Home" %}
-{% set pageName = "Design" %}
+{% set pageName = "Design manual" %}
 {% set pageDescription = "Standards, guidance, and principles for the design of digital services in the Department for
 Education." %}
 {% set backlog_issue_id = "195" %}
@@ -12,7 +12,7 @@ Education." %}
    <div class="govuk-width-container">
       <div class="govuk-grid-row">
          <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl govuk-!-font-size-80">{{pageName}}</h1>
+            <h1 class="govuk-heading-xl">{{pageName}}</h1>
             <p class="govuk-body-l">{{pageDescription}}</p>
          </div>
       </div>
@@ -22,44 +22,6 @@ Education." %}
 
 {% block content %}
 
-<div class="govuk-width-container">
-   <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-         <h2 class="govuk-heading-l">DfE Frontend V2 is now available</h2>
-         <p>The new frontend package contains additional styles, components and patterns for services specific to DfE.
-         </p>
-         <p>If you're using <code>dfe-frontend-alpha</code> we've created an update guide for you to move to version 2,
-            and the new <code>dfe-frontend</code> package.</p>
-
-         <ul class="govuk-list govuk-list--spaced">
-            <li><a href="/design-system/dfe-frontend/updating">Update to dfe-frontend from
-                  dfe-frontend-alpha</a></li>
-            <li><a href="/design-system/dfe-frontend/whats-new">What's new in dfe-frontend 2</a></li>
-         </ul>
-
-      </div>
-      <div class="govuk-grid-column-one-third">
-
-         {{ card({
-         cards: [
-         {
-         "imageCard": true,
-         "imagePath": "/assets/images/frontends.webp",
-         "altText": "",
-         "headingLevel": "3",
-         "linkCard": true,
-         "link": "/design-system/dfe-frontend/installation",
-         "openInNewTab": false,
-         "heading": "DfE Frontend",
-         "description": "DfE-specific styles, components and patterns to extend the GOV.UK
-         Design System.",
-         "meta": ""
-         }
-         ]
-         }) }}
-      </div>
-   </div>
-</div>
 
 
 
@@ -89,9 +51,10 @@ Education." %}
          </div>
          <div class="dfe-card">
             <div class="dfe-card-container">
-               <h3 class="govuk-heading-m">
-                  <a href="/accessibility"
-                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility</a>
+              
+               <h3 class="govuk-heading-m"><strong class="govuk-tag govuk-tag--blue">New</strong><br/>
+                  <a href="https://accessibility.education.gov.uk" target="_blank"
+                     class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Accessibility manual</a>
                </h3>
                <p>Design plays a key role in ensuring services are usable and accessible by everyone who needs to use
                   them.

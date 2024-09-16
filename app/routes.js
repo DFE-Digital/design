@@ -15,6 +15,15 @@ const professionsController = require('./controllers/professionsController.js')
 const designOpsController = require('./controllers/designOpsController.js')
 const feedbackController = require('./controllers/feedbackController.js')
 
+// Redirect any /accessibility routes to the new moved route
+router.get('/accessibility', (req, res) => {
+    return res.redirect(301, '/moved')
+})
+
+router.get('/moved', (req, res) => {
+    return res.render('moved')
+})
+
 router.get('/design-system', designSystemController.get_index)
 
 router.get('/our-work', designSystemController.get_our_work)
