@@ -93,6 +93,10 @@ Education." %}
 
         <h3 class="govuk-heading-m">Javascript</h3>
 
+        <p>Copy the dfefrontend.js file from the <code>/node_modules/dfe-frontend/dist/</code> folder and put into your <code>/assets/js</code> folder.</p>
+
+        <p>Your paths might be different for your local javascript files, for example, a public folder or static files folder.</p>
+
         <p>You need to include the javascript reference in your main layout. Find the scripts section and replace with
           the following code.</p>
 
@@ -108,7 +112,7 @@ Education." %}
             <p>Add this code to the bottom of the file.</p>
             <pre><code>{%raw%}{% block scripts %}
   {{ super() }}
-  &lt;script src=&quot;/node_modules/dfe-frontend/dist/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/assets/js/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
 {% endblock %}{%endraw%}</code></pre>
           </div>
         </div>
