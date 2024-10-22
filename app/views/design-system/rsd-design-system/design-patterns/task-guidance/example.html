@@ -1,0 +1,85 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Task guidance design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="handover-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Handover with regional delivery officer
+      </h1>
+    </legend>
+    <div id="handover-hint" class="govuk-hint">
+      Select all that apply.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="handover" name="handover" type="checkbox" value="project-info"
+          aria-describedby="handover-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="handover">
+          Review the project information, check the documents and carry out research
+        </label>
+        <div id="handover-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          Check that no information is missing from the existing project documents and there are no errors.
+          <details class="govuk-details govuk-!-margin-top-3">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What to check for
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>
+                You should check existing project documents, including:
+              </p>
+              <ul>
+                <li>academy order</li>
+                <li>application to convert</li>
+              </ul>
+              <p>
+                Check that no information is missing and there are no errors. You should also research the background of the project before you meet with the regional delivery officer.
+              </p>
+              <p>
+                Things to check during your background research include:
+              </p>
+              <ul>
+                <li>project information, such as advisory board conditions</li>
+                <li>school or trust website for more information about the school</li>
+                <li>Google Maps for potential land issues</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="handover-2" name="handover" type="checkbox" value="make-notes">
+        <label class="govuk-label govuk-checkboxes__label" for="handover-2">
+          <p>
+            Make notes and write questions to ask the regional delivery officer
+          </p>
+          <div class="govuk-hint">
+            <details class="govuk-details govuk-!-margin-top-3">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What to make notes about
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>
+                  Note down things you want to ask and talk about with the regional delivery officer at the handover meeting.
+                </p>
+                <p>
+                  This is an opportunity to clarify anything that you‘re unsure about after reviewing the project and doing your background research.
+                </p>
+              </div>
+            </details>
+          </div>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+{% endblock %}
