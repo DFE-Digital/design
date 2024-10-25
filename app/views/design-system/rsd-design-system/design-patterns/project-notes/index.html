@@ -2,7 +2,7 @@
 {% import "../code-frame.html" as sample %}
 
 {% set pageName = "Project notes" %}
-{% set pageDescription = "Project notes design pattern." %}
+{% set pageDescription = "Help users add notes to projects and tasks." %}
 {% set pageCaption = "Regional Services Division design pattern" %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
@@ -66,36 +66,79 @@
     {{ sample.code('/design-system/rsd-design-system/design-patterns/page-not-found/example.html', 'Project notes', 'page-not-found',
     htmlCode, nunjucksCode) }}
     <br>
-      
-    <h2 id="how-it-works">How it works</h2>
-    <p>This is based on the <a
-      href="https://design-system.service.gov.uk/patterns/page-not-found-pages/">page not found pattern in the GOV.UK Design System</a>, but with specific wording for Regional Services Division products.</p>
-    <p>The page should have:</p>
-    <ul>
-      <li>‘Page not found – System name’ as the page title. For example, Page not found - Manage free school projects</li>
-      <li>‘Page not found’ as the H1</li>
-      <li>'get help with a Regions Group system (opens in a new tab)' as the link text. This links to a <a
-        href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-X7F89QcWu5CjlJXwF0TVktUMTFEUVRCVVg4WlMyS1AzUEJSUDAySlhQTCQlQCN0PWcu">Microsoft Form</a> where users can request help</li>
-    </ul>
-    <div class="app-wcag-22" id="wcag-consistent-content-page-not-found" role="note">
-      <strong class="govuk-tag" style="margin-bottom: 10px">
-        WCAG 2.2
-      </strong>
-    
-      <p>You must always write contact information in a clear and consistent way across ‘Page not found’ and similar service
-        error pages. This relates to WCAG 2.2 success criterion <a
-          href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html">3.2.6 Consistent Help</a>.</p>
-    </div>
 
-    <h2>Research on this pattern</h2>
-    <p>
-      We have not done research on this pattern, but it is being used in <a
-      href="https://design-histories.education.gov.uk/manage-free-school-projects">Manage free school projects</a> to meet this need from our <a
-        href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user
-        needs database (opens in DfE Microsoft List)</a>:
-    </p>
+    <h2>When to use this pattern</h2>
+    <p>Allow users to add notes when users infrequently view a project and would benefit from additional context. For example, if the project passes to another team member when someone is ill.</p>
     
-    <p>user need 72: when I am having trouble using the system, I need to get help so that I can resolve my issue and get back to work.</p>
+    <h2>When not to use this pattern</h2>
+    <p>Do not use notes if:</p>
+    <ul>
+        <li>notes are wanted but not necessary to meet a user need</li>
+        <li>as a way to confirm a task has been done, or an answer given by the user is still correct</li>
+    </ul>
+    
+    <h2 id="how-it-works">How it works</h2>
+    <p>If a user needs to add notes as part of your service:</p>
+    <ul>
+        <li>let them add notes that are as long or as short as they need</li>
+        <li>avoid asking for titles for notes - the important information is the note itself</li>
+        <li>show notes in the relevant place. For example, next to the task where it was created</li>
+        <li>let anyone with access to the project view all associated notes</li>
+        <li>only let the person who added the note to edit or delete it</li>
+        <li>show the most recent note at the top of the list</li>
+    </ul>
+    <p>Notes should:</p>
+    <ul>
+        <li>be visually distinct</li>
+        <li>indicate who made them and when</li>
+        <li>be ordered most recent first</li>
+    </ul>
+    <p>Have project-level notes on their own page, unless you identify a user need to include them at a task level.</p>
+    <p>We recommend naming notes pages 'Notes', rather than Project notes or Case notes. It is implied what the notes refer to, because they sit in a project or case.</p>
+    <p>If you include notes at a task level, make sure to populate these notes into the project-level notes tab.</p>
+    
+    <h3>Add notes</h3>
+    <p>Use a button to allow users to add notes.</p>
+    <p>When adding notes:</p>
+    <ul>
+        <li>the button should be the green default button if there are no other things to do on the page, or adding a note is the only/main purpose of the page</li>
+        <li>if adding a note is not the only/main purpose of the page, then use a secondary button</li>
+        <li>we recommend the button text reads "Add a note"</li>
+    </ul>
+    <p>Clicking the button will take users to a new page where they can enter a note.</p>
+    <p>We recommend:</p>
+    <ul>
+        <li>no character limits on notes</li>
+        <li>there is a green button on this page that lets users save the note</li>
+        <li>there is a cancel option, to allow the user to leave the text box page without saving a note</li>
+    </ul>
+    <p>When a note is added, return the user to the page where they added the note from. The note should appear on that page.</p>
+    <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/index.html">success banner</a> to confirm the note has been added.</p>
+    
+    <h3>Editing notes</h3>
+    <p>Editing notes allows users to make notes work for them in different ways. Some users may want to document a problem then edit the note to add in how they resolved it. Others may want to add a separate note.</p>
+    <p>Users should be able to view any notes but only edit the notes they have made.</p>
+    <p>When editing notes:</p>
+    <ul>
+        <li>each note should have its own edit link</li>
+        <li>an edit link should be under the note</li>
+    </ul>
+    <p>Clicking on the edit link should take a user to the enter note screen with the current note pre-populated.</p>
+    <p>When the change is saved, the user should be returned to the page where they added the note. The note should be updated.</p>
+    <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/index.html">success banner</a> to confirm the note has been successfully edited.</p>
+    
+    <h3>Deleting notes</h3>
+    <p>Do not include a delete note link when showing all the notes. Instead, allow users to edit and then delete a note.</p>
+    <p>Use a 'Delete' <a href="https://design-system.service.gov.uk/components/button/#:~:text=buttons%20together.-,Warning%20buttons,-Warning%20buttons%20are">warning button</a> to confirm that a user wants to delete the note. This is a 'destructive' action that cannot be undone.</p>
+    <p>If the user selects the Delete button, take them back to where the note was originally. Display a success banner to tell them the note has been deleted.</p>
+    
+    <h3>Error message</h3>
+    <p>If the note textarea is empty, show an <a href="https://design-system.service.gov.uk/components/error-summary/">error summary</a> and <a href="https://design-system.service.gov.uk/components/error-message/">error message</a> with the text "Enter a note".</p>
+    
+    <h2>Research on this pattern</h2>
+    <p>This pattern is based on insights from user research with users of <a href="https://design-histories.education.gov.uk/complete-conversions-transfers-and-changes">Complete conversions, transfers and changes</a>.</p>
+    <p>It is being used to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database (opens a DfE Microsoft List)</a>:</p>
+    <p><strong>User need 114:</strong> when I'm trying to understand the details and context of a project I haven't managed directly, I need to understand the context of the project and key details about its history, such as issues that have needed resolving or reasons why the project has slipped, so that I can easily take on managing the project (delivery officers and caseworkers), advising on it, or reporting on it to others.</p>
 
   </div>
 </div>
