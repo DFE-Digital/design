@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8">
-       <title>
+    <title>
       {%- if seoPageName %}{{seoPageName}}
       {% elseif pageName %}{{pageName}}{%endif%} - {{serviceName}}</title>
       <meta name="description"
@@ -81,10 +81,12 @@
             </section>
           {% endblock %}
 
+  {% include 'layouts/_promo.html' %}
+
           {% block main %}
 
             <main class="govuk-main-wrapper  {{mainClasses}}" id="main-content" role="main">
-           
+
               {% block content %}{% endblock %}
             </main>
 
