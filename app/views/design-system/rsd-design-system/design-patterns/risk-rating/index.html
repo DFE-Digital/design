@@ -1,0 +1,276 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
+{% import "./code-snippets.html" as codeSnippet %}
+
+{% set pageName = "Risk rating" %}
+{% set pageDescription = "Show risk rating." %}
+{% set pageCaption = "Regional Services Division design pattern" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "rsd-design-system"%}
+{% set childSection = "design-patterns"%}
+{% set isChildSection = "true"%}
+
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "October 2024 "%}
+{% set backlog_issue_id = "105" %}
+
+{% set htmlCode = '<code class="hljs language-html">
+&lt;div class=&quot;govuk-width-container&quot;&gt;
+  &lt;main class=&quot;govuk-main-wrapper govuk-main-wrapper--l&quot; id=&quot;main-content&quot; role=&quot;main&quot;&gt;
+    &lt;div class=&quot;govuk-grid-row&quot;&gt;
+      &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
+        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you typed the web address, check it is correct.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you pasted the web address, check you copied the entire address.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;get help with a Regions Group system (opens in a new tab)&lt;/a&gt;.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+</code>' %}
+
+{% set nunjucksCode = '<code class="hljs language-html">
+{% set mainClasses = &quot;govuk-main-wrapper--l&quot; %}
+
+{% block content %}
+  &lt;div class=&quot;govuk-grid-row&quot;&gt;
+    &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
+        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you typed the web address, check it is correct.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If you pasted the web address, check you copied the entire address.
+        &lt;/p&gt;
+        &lt;p class=&quot;govuk-body&quot;&gt;
+          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;get help with a Regions Group system (opens in a new tab)&lt;/a&gt;.
+        &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+{% endblock %}
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/reading-project-notes-edit-notes.png"
+        alt="A notes tab in a project. It has an 'Add a note' button and a note with an 'Edit note' link." width="100%">
+      <figcaption>A notes tab in a project. It has an 'Add a note' button and a note with an 'Edit note' link.</figcaption>
+    </figure>
+
+    <h2>When to use this pattern</h2>
+    <p>Allow users to add notes when users infrequently view a project and would benefit from additional context. For example, if the project passes to another team member when someone is ill.</p>
+    
+    <h2>When not to use this pattern</h2>
+    <p>Do not use notes if:</p>
+    <ul>
+        <li>notes are wanted but not necessary to meet a user need</li>
+        <li>as a way to confirm a task has been done, or an answer given by the user is still correct</li>
+    </ul>
+    
+    <h2 id="how-it-works">How it works</h2>
+    <p>If a user needs to add notes as part of your service:</p>
+    <ul>
+        <li>let them add notes that are as long or as short as they need</li>
+        <li>avoid asking for titles for notes - the important information is the note itself</li>
+        <li>show notes in the relevant place. For example, next to the task where it was created</li>
+        <li>let anyone with access to the project view all associated notes</li>
+        <li>only let the person who added the note to edit or delete it</li>
+        <li>show the most recent note at the top of the list</li>
+    </ul>
+    <h3>Reading notes</h3>
+    <p>Notes should:</p>
+    <ul>
+        <li>be visually distinct</li>
+        <li>indicate who made them and when</li>
+        <li>be ordered most recent first</li>
+    </ul>
+    <h4>Reading project notes</h4>
+    <p>Show project-level notes on their own page.</p>  
+    
+    <p>We recommend naming the page 'Notes', rather than Project notes or Case notes. It is implied what the notes refer to, because they sit in a project or case.</p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/reading-project-notes-edit-notes.png"
+        alt="A notes tab in a project. It has an 'Add a note' button and a note with an 'Edit note' link." width="100%">
+      <figcaption>A notes tab in a project. It has an 'Add a note' button and a note with an 'Edit note' link.</figcaption>
+    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-reading-project-notes.html', 'Reading project notes', 'reading-project-notes',
+          codeSnippet.htmlCodeReadingProjectNotes) }}
+    
+    <h4>Reading task notes</h4>
+    <p>Show notes at a task level, if you identify a user need to do this.</p>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-task-notes-permissions.png"
+        alt="A task notes section in a 'Handover with regional delivery officer' task. It has an 'Add a task note' button and some existing notes." width="100%">
+      <figcaption>A task notes section in a 'Handover with regional delivery officer' task. It has an 'Add a task note' button and some existing notes.</figcaption>
+    </figure>
+
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-reading-task-notes.html', 'Reading task notes', 'reading-task-notes',
+          codeSnippet.htmlCodeReadingTaskNotes) }}
+    
+    <h3>Adding notes</h3>
+    <p>Use a button to allow users to add notes.
+
+    <p>For project notes, use the green default button if there are no other things to do on the page. We recommend the button label is "Add a note".</p>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/reading-project-notes-edit-notes.png"
+        alt="A notes tab. It has an 'Add a note' button and a note with an 'Edit note' link." width="100%">
+      <figcaption>A notes tab. It has an 'Add a note' button and a note with an 'Edit note' link.</figcaption>
+    </figure>
+
+    <p>For task notes, use the secondary button if adding a note is not the main purpose of the page. We recommend the button label is "Add a task note".</p>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/reading-task-notes-edit-notes.png"
+        alt="A task notes section. It has an 'Add a task note' button and an existing note." width="100%">
+      <figcaption>A task notes section. It has an 'Add a task note' button and an existing note.</figcaption>
+    </figure>
+
+    <p>Clicking the 'Add a note' button will take users to a new page where they can enter a note.</p>
+
+    <p>We recommend:</p>
+    <ul>
+        <li>no character limits on notes</li>
+        <li>there is a green button on the 'Note' page that lets users save the note</li>
+        <li>there is a cancel option, to allow the user to leave the text box page without saving a note</li>
+    </ul>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/adding-project-notes-text-area.png"
+        alt="A notes page with some hint text, a text area, a Save and continue button, and a Cancel link." width="100%">
+      <figcaption>A notes page with some hint text, a text area, a Save and continue button, and a Cancel link.</figcaption>
+    </figure>
+
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-adding-a-note.html', 'Adding a note', 'adding-a-note',
+          codeSnippet.htmlCodeAddingANote) }}
+
+    <p>Once the note has been added, return the user back to the:
+      <ul>
+          <li>notes page, for project-level notes</li>
+          <li>task page, for task-level notes</li>
+      </ul>
+
+    <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/index.html">success banner</a> to confirm the note has been added.</p>
+    
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/adding-project-notes-success-banner.png"
+        alt="A project page with a notes tab. A success banner titled 'Your note has been added' appears at the top of the page." width="100%">
+      <figcaption>A project page with a notes tab. A success banner titled 'Your note has been added' appears at the top of the page.</figcaption>
+    </figure>
+
+    <h3>Editing notes</h3>
+    <p>Users should be able to view any notes, but only edit the notes they have made.</p>
+
+    <p>When editing notes:</p>
+    <ul>
+        <li>each note should have its own 'Edit note' link</li>
+        <li>the 'Edit note' link should be under the note</li>
+    </ul>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/reading-project-notes-edit-notes.png"
+        alt="A notes tab. It has an 'Add a note' button, a note with an 'Edit note' link, and a note without an 'Edit note' link." width="100%">
+      <figcaption>A notes tab. It has an 'Add a note' button, a note with an 'Edit note' link, and a note without an 'Edit note' link.</figcaption>
+    </figure>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-task-notes-permissions.png"
+        alt="A task notes section in a 'Handover with regional delivery officer' task. It has an 'Add a task note' button, a note that can not be edited, and 2 notes that can." width="100%">
+      <figcaption>A task notes section in a 'Handover with regional delivery officer' task. It has an 'Add a task note' button, a note that can not be edited, and 2 notes that can.</figcaption>
+    </figure>
+
+    <p>Clicking on the 'Edit note' link should take a user to the enter note screen with the current note pre-populated.</p>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-notes-text-area.png"
+        alt="A note page with a text area, hint text, a Save and continue primary button, a Delete warning button, and a Cancel link." width="100%">
+      <figcaption>A note page with a text area, hint text, a Save and continue primary button, a Delete warning button, and a Cancel link.</figcaption>
+    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-editing-notes.html', 'Editing notes', 'editing-notes',
+          codeSnippet.htmlCodeEditingNotes) }}
+
+    <p>Once the note has been edited, return the user back to the:
+      <ul>
+          <li>notes page, for project-level notes</li>
+          <li>task page, for task-level notes</li>
+      </ul>
+    <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/index.html">success banner</a> to confirm the note has been successfully edited.</p>
+   
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-notes-success-banner.png"
+        alt="A project with a notes tab. A success banner titled 'Your note has been edited' appears at the top of the project page." width="100%">
+      <figcaption>A project with a notes tab. A success banner titled 'Your note has been edited' appears at the top of the project page.</figcaption>
+    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-editing-notes-success-banner.html', 'Editing notes success banner', 'editing-notes-success-banner',
+          codeSnippet.htmlCodeEditingNotesSuccessBanner) }}
+
+    <h3>Deleting notes</h3>
+    <p>Do not include a delete note link when showing all the notes. Instead, allow users to edit and then delete a note.</p>
+    
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-notes-text-area.png"
+        alt="A note page with a text area, hint text, a Save and continue primary button, a Delete warning button, and a Cancel link." width="100%">
+      <figcaption>A note page with a text area, hint text, a Save and continue primary button, a Delete warning button, and a Cancel link.</figcaption>
+    </figure>
+
+    <p>Use a 'Delete' <a href="https://design-system.service.gov.uk/components/button/#:~:text=buttons%20together.-,Warning%20buttons,-Warning%20buttons%20are">warning button</a> that takes users to an 'Are you sure?' page. Deleting a note is a 'destructive' action that cannot be undone.</p>
+    
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/deleting-notes-are-you-sure.png"
+        alt="A page with the h1 'Are you sure you want to delete this note?', some paragraph text, a Delete warning button and a Cancel link." width="100%">
+      <figcaption>A page with the h1 'Are you sure you want to delete this note?', some paragraph text, a Delete warning button and a Cancel link.</figcaption>
+    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-deleting-notes-are-you-sure.html', 'Deleting notes are you sure', 'deleting-notes-are-you-sure',
+          codeSnippet.htmlCodeDeletingNotesAreYouSure) }}
+
+    <p>If the user selects the Delete button, return the user back to the:
+    <ul>
+        <li>notes page, for project-level notes</li>
+        <li>task page, for task-level notes</li>
+    </ul>
+  
+    <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/index.html">success banner</a> to confirm the note has been successfully deleted.</p>
+
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/deleting-notes-success-banner.png"
+        alt="A project page. A success banner titled 'Your note has been deleted' appears at the top of the page." width="100%">
+      <figcaption>A project page. A success banner titled 'Your note has been deleted' appears at the top of the page.</figcaption>
+    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-deleting-notes-success-banner.html', 'Deleting notes success banner', 'deleting-notes-success-banner',
+        codeSnippet.htmlCodeDeletingNotesSuccessBanner) }}
+   
+    <h3>Error message</h3>
+    <p>If the note textarea is empty, show an <a href="https://design-system.service.gov.uk/components/error-summary/">error summary</a> and <a href="https://design-system.service.gov.uk/components/error-message/">error message</a> with the text "Enter a note".</p>
+    
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/notes-error-message.png"
+        alt="A note page with a text area for entering the note, and the error summary and message 'Enter a note'." width="100%">
+      <figcaption>A note page with a text area for entering the note, and the error summary and message 'Enter a note'.</figcaption>
+    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-notes-error-message.html', 'Error message', 'notes-error-message',
+          codeSnippet.htmlCodeNotesErrorMessage) }}
+
+    <h2>Research on this pattern</h2>
+    <p>This pattern is based on insights from user research with users of <a href="https://design-histories.education.gov.uk/complete-conversions-transfers-and-changes">Complete conversions, transfers and changes</a>.</p>
+    <p>It is being used to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database (opens a DfE Microsoft List)</a>:</p>
+    <p><strong>User need 114:</strong> when I'm trying to understand the details and context of a project I haven't managed directly, I need to understand the context of the project and key details about its history, such as issues that have needed resolving or reasons why the project has slipped, so that I can easily take on managing the project (delivery officers and caseworkers), advising on it, or reporting on it to others.</p>
+
+  </div>
+</div>
+
+
+{% endblock%}
