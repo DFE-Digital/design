@@ -99,7 +99,7 @@
     
     <p>We recommend naming the page 'Notes', rather than Project notes or Case notes. It is implied what the notes refer to, because they sit in a project or case.</p>
     <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-      <img src="/assets/images/reading-project-notes-edit-notes.png"
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/reading-project-notes-edit-notes.png"
         alt="Reading project notes - edit notes" width="100%">
       <figcaption>Projects notes section- no notes</figcaption>
     </figure>
@@ -108,7 +108,14 @@
     <p>Show notes at a task level, if you identify a user need to do this.</p>
     <p>If you include notes at a task level, consider populating them into the project-level notes tab.</p>
 
-    <p><strong> Screenshot - reading-task-notes-edit-notes</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/reading-task-notes-edit-notes.png"
+        alt="Reading task notes - edit notes" width="100%">
+      <figcaption>Task notes</figcaption>
+    </figure>
+
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-reading-task-notes.html', 'Reading task notes', 'reading-task-notes',
+          codeSnippet.htmlCodeReadingTaskNotes) }}
     
     <h3>Adding notes</h3>
     <p>Use a button to allow users to add notes. We recommend the button text reads "Add a note".</p>
@@ -119,7 +126,11 @@
 
     <p>Clicking the 'Add a note' button will take users to a new page where they can enter a note.</p>
 
-    <p><strong>Screenshot - adding-project-notes-text-area</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/adding-project-notes-text-area.png"
+        alt="Adding project notes" width="100%">
+      <figcaption>Adding notes</figcaption>
+    </figure>
 
     <p>We recommend:</p>
     <ul>
@@ -136,23 +147,39 @@
 
     <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/index.html">success banner</a> to confirm the note has been added.</p>
     
-    <p><strong>Screenshot - adding-project-notes-success-banner</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/adding-project-notes-success-banner.png"
+        alt="Success banner" width="100%">
+      <figcaption>Success banner</figcaption>
+    </figure>
 
     <h3>Editing notes</h3>
     <p>Users should be able to view any notes, but only edit the notes they have made.</p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-notes-permissions.png"
+        alt="Editing notes permissions" width="100%">
+      <figcaption>Editing notes permissions</figcaption>
+    </figure>
+
     <p>When editing notes:</p>
     <ul>
         <li>each note should have its own edit link</li>
         <li>an edit link should be under the note</li>
     </ul>
 
-    <p><strong>Project notes page screenshot, with multiple notes and Edit links</strong></p>
-
-    <p><strong>Task notes page screenshot, with multiple notes and Edit links</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-task-notes-permissions.png"
+        alt="Editing task notes permissions" width="100%">
+      <figcaption>Editing task notes permissions</figcaption>
+    </figure>
 
     <p>Clicking on the edit link should take a user to the enter note screen with the current note pre-populated.</p>
 
-    <p><strong>Screenshot - editing-notes-text-area</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-notes-text-area.png"
+        alt="Edit notes text area" width="100%">
+      <figcaption>Edit notes text area</figcaption>
+    </figure>
 
     <p>Once the note has been edited, return the user back to the:
       <ul>
@@ -161,13 +188,21 @@
       </ul>
     <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/index.html">success banner</a> to confirm the note has been successfully edited.</p>
    
-   <p><strong>Screenshot - editing-project-notes-success-banner</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-project-notes-success-banner.png"
+        alt="Success banner" width="100%">
+      <figcaption>Success banner</figcaption>
+    </figure>
 
     <h3>Deleting notes</h3>
     <p>Do not include a delete note link when showing all the notes. Instead, allow users to edit and then delete a note.</p>
     <p>Use a 'Delete' <a href="https://design-system.service.gov.uk/components/button/#:~:text=buttons%20together.-,Warning%20buttons,-Warning%20buttons%20are">warning button</a> that takes users to an 'Are you sure?' page. Deleting a note is a 'destructive' action that cannot be undone.</p>
     
-    <p><strong>Screenshot - deleting-notes-are-you-sure</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/deleting-notes-are-you-sure.png"
+        alt="Deleting notes" width="100%">
+      <figcaption>Deleting notes</figcaption>
+    </figure>
 
     <p>If the user selects the Delete button, return the user back to the:
       <ul>
@@ -178,7 +213,11 @@
     <h3>Error message</h3>
     <p>If the note textarea is empty, show an <a href="https://design-system.service.gov.uk/components/error-summary/">error summary</a> and <a href="https://design-system.service.gov.uk/components/error-message/">error message</a> with the text "Enter a note".</p>
     
-   <p><strong>Screenshot - notes-error-message</strong></p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/notes-error-message.png"
+        alt="Error message" width="100%">
+      <figcaption>Error message</figcaption>
+    </figure>
 
     <h2>Research on this pattern</h2>
     <p>This pattern is based on insights from user research with users of <a href="https://design-histories.education.gov.uk/complete-conversions-transfers-and-changes">Complete conversions, transfers and changes</a>.</p>
