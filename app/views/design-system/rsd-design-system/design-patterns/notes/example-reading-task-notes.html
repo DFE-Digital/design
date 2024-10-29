@@ -5,22 +5,39 @@ Reading task notes design pattern | RSD component library
 {% endblock %}
 
 {% block sample %}
-<h1 class="govuk-heading-xl">
-  <span class="govuk-caption-l">Secondary title here</span>
-  Edit Project managed by
-</h1>
-<div class="govuk-form-group">
-  <div class="govuk-form-group">
-    <label class="govuk-label govuk-heading-m" for="teamLeadName">
-      Name
-    </label>
-    <input class="govuk-input" id="teamLeadName" name="teamLeadName" type="text" value="Alex James">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">The left hand side is the main content area. Please put task notes into the sidebar.</p>
   </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label govuk-heading-m" for="teamLeadEmailAddress">
-      Email address
-    </label>
-    <input class="govuk-input" id="teamLeadEmailAddress" name="teamLeadEmailAddress" type="text" value="alex.james@example.com">
+  <div class="govuk-grid-column-one-third">
+    <aside>
+      <h2 class="govuk-heading-m">Task notes</h2>
+    
+      <a data-module="govuk-button" draggable="false" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-6" href="#">Add a new task note</a>
+      <ul class="govuk-list">
+          <li>
+            <p class="govuk-body govuk-!-margin-bottom-0">29 October 2024</p>
+            <h3 class="govuk-heading-s govuk-!-padding-top-0">Ady Horan</h3>
+            <p class="govuk-body-m">Test note</p>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          </li>
+          <li>
+            <p class="govuk-body govuk-!-margin-bottom-0">29 October 2024</p>
+            <h3 class="govuk-heading-s govuk-!-padding-top-0">Ming Chan</h3>
+            <p class="govuk-body-m">Testing again </p>
+            <a class="govuk-link" href="#">Edit note</a>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          </li>
+          <li>
+            <p class="govuk-body govuk-!-margin-bottom-0">29 October 2024</p>
+            <h3 class="govuk-heading-s govuk-!-padding-top-0">Ming Chan</h3>
+            <p class="govuk-body-m">Testing testing testing</p>
+            <a class="govuk-link" href="#">Edit note</a>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          </li>
+      </ul>
+    </aside>
   </div>
 </div>
+
 {% endblock %}
