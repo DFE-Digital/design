@@ -1,0 +1,34 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Reading project notes design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Notes</h2>
+
+    <div class="govuk-!-margin-bottom-5">
+      <a data-module="govuk-button" draggable="false" role="button" class="govuk-button" href="#">Add note</a>
+    </div>
+
+    <span class="govuk-caption-m">29 October 2024</span>
+    <h3 class="govuk-heading-m">Ady Horan</h3>
+    <p class="govuk-body-m">Test edited</p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <span class="govuk-caption-m">29 October 2024</span>
+    <h3 class="govuk-heading-m">Ming Chan</h3>
+    <p class="govuk-body-m">This is a project note</p>
+    <p class="govuk-body govuk-!-font-size-16"><a class="govuk-link" href="#">Edit</a></p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <span class="govuk-caption-m">15 March 2023</span>
+    <h3 class="govuk-heading-m">Meyric Rawlings</h3>
+    <p class="govuk-body-m">Conversion date confirmed as part of external stakeholder kick off task.</p>
+
+  </div>
+  <div class="govuk-grid-column-one-third"></div>
+</div>
+{% endblock %}
