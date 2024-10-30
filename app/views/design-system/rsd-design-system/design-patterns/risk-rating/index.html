@@ -15,47 +15,6 @@
 {% set lastUpdated = "October 2024 "%}
 {% set backlog_issue_id = "105" %}
 
-{% set htmlCode = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-width-container&quot;&gt;
-  &lt;main class=&quot;govuk-main-wrapper govuk-main-wrapper--l&quot; id=&quot;main-content&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;govuk-grid-row&quot;&gt;
-      &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
-        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
-        &lt;p class=&quot;govuk-body&quot;&gt;
-          If you typed the web address, check it is correct.
-        &lt;/p&gt;
-        &lt;p class=&quot;govuk-body&quot;&gt;
-          If you pasted the web address, check you copied the entire address.
-        &lt;/p&gt;
-        &lt;p class=&quot;govuk-body&quot;&gt;
-          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;get help with a Regions Group system (opens in a new tab)&lt;/a&gt;.
-        &lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/main&gt;
-&lt;/div&gt;
-</code>' %}
-
-{% set nunjucksCode = '<code class="hljs language-html">
-{% set mainClasses = &quot;govuk-main-wrapper--l&quot; %}
-
-{% block content %}
-  &lt;div class=&quot;govuk-grid-row&quot;&gt;
-    &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
-        &lt;h1 class=&quot;govuk-heading-l&quot;&gt;Page not found&lt;/h1&gt;
-        &lt;p class=&quot;govuk-body&quot;&gt;
-          If you typed the web address, check it is correct.
-        &lt;/p&gt;
-        &lt;p class=&quot;govuk-body&quot;&gt;
-          If you pasted the web address, check you copied the entire address.
-        &lt;/p&gt;
-        &lt;p class=&quot;govuk-body&quot;&gt;
-          If the web address is correct or you selected a link or button, &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;get help with a Regions Group system (opens in a new tab)&lt;/a&gt;.
-        &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-{% endblock %}
-</code>' %}
 
 {% block beforeContent %}{% endblock %}
 
@@ -64,11 +23,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/risk-rating-radios-text-area-button.png"
-        alt="A notes tab in a project. It has an 'Add a note' button and a note with an 'Edit note' link." width="100%">
-      <figcaption>A notes tab in a project. It has an 'Add a note' button and a note with an 'Edit note' link.</figcaption>
-    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/risk-rating/example-risk-rating.html', 'Risk rating', 'risk-rating', codeSnippet.htmlCodeRiskRating) }}
 
     <h2>When to use this pattern</h2>
     <p>Use this pattern to record and display red, amber and green (RAG) risk ratings.</p>
@@ -83,9 +38,19 @@
     <h3>Tag classes</h3>
     <p>Use these classes for the tags:</p>
     <ul>
-      <li>govuk-tag--green</li>
-      <li>govuk-tag govuk-tag--amber. This is a <a href="link">custom amber-coloured tag</a></li>
-      <li>govuk-tag--red</li>
+      <li><code>govuk-tag--green</code></li>
+      <li>At the moment, the amber colour tag is not available on the GOV.UK Design System. Therefore, we recommend to add the custom CSS class <code>dfe-tag--amber</code>. to your service:
+        <div class="code-example">
+          <pre style="background: #f3f2f1; padding: 10px; overflow: hidden;">
+  &lt;style&gt;
+  .dfe-tag--amber {
+    color: #66420d;
+    background: #ffe4bc;
+  }
+  &lt;/style&gt;</pre>    
+        </div>
+      </li>
+      <li><code>govuk-tag--red</code></li>
     </ul>
     
     <h3>Textarea height</h3>
