@@ -23,13 +23,6 @@
             &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Edit note&lt;/a&gt;
             &lt;hr class=&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;&gt;
           &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p class=&quot;govuk-body govuk-!-margin-bottom-0&quot;&gt;29 October 2024&lt;/p&gt;
-            &lt;h3 class=&quot;govuk-heading-s govuk-!-padding-top-0&quot;&gt;Ming Chan&lt;/h3&gt;
-            &lt;p class=&quot;govuk-body-m&quot;&gt;Testing testing testing&lt;/p&gt;
-            &lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Edit note&lt;/a&gt;
-            &lt;hr class=&quot;govuk-section-break govuk-section-break--m govuk-section-break--visible&quot;&gt;
-          &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/aside&gt;
   &lt;/div&gt;
@@ -54,11 +47,6 @@
     &lt;h3 class=&quot;govuk-heading-m&quot;&gt;Ming Chan&lt;/h3&gt;
     &lt;p class=&quot;govuk-body-m&quot;&gt;This is a project note&lt;/p&gt;
     &lt;p class=&quot;govuk-body govuk-!-font-size-16&quot;&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Edit note&lt;/a&gt;&lt;/p&gt;
-    &lt;hr class=&quot;govuk-section-break govuk-section-break--xl govuk-section-break--visible&quot;&gt;
-
-    &lt;span class=&quot;govuk-caption-m&quot;&gt;15 March 2023&lt;/span&gt;
-    &lt;h3 class=&quot;govuk-heading-m&quot;&gt;Meyric Rawlings&lt;/h3&gt;
-    &lt;p class=&quot;govuk-body-m&quot;&gt;Conversion date confirmed as part of external stakeholder kick off task.&lt;/p&gt;
 
   &lt;/div&gt;
   &lt;div class=&quot;govuk-grid-column-one-third&quot;&gt;&lt;/div&gt;
@@ -115,6 +103,21 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code>' %}
+
+{% set htmlCodeAddingNotesSuccessBanner = '<code class="hljs language-html">
+  &lt;div class=&quot;govuk-notification-banner govuk-notification-banner--success&quot; role=&quot;alert&quot; aria-labelledby=&quot;govuk-notification-banner-title&quot; data-module=&quot;govuk-notification-banner&quot;&gt;
+    &lt;div class=&quot;govuk-notification-banner__header&quot;&gt;
+      &lt;h2 class=&quot;govuk-notification-banner__title&quot; id=&quot;govuk-notification-banner-title&quot;&gt;
+        Success
+      &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;govuk-notification-banner__content&quot;&gt;
+      &lt;h3 class=&quot;govuk-notification-banner__heading&quot;&gt;
+        Your note has been added
+      &lt;/h3&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  </code>' %}
 
 {% set htmlCodeEditingNotesSuccessBanner = '<code class="hljs language-html">
 &lt;div class=&quot;govuk-notification-banner govuk-notification-banner--success&quot; role=&quot;alert&quot; aria-labelledby=&quot;govuk-notification-banner-title&quot; data-module=&quot;govuk-notification-banner&quot;&gt;
