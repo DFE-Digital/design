@@ -207,11 +207,7 @@
     <h3>Deleting notes</h3>
     <p>Do not include a delete note link when showing all the notes. Instead, allow users to edit and then delete a note.</p>
     
-    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/editing-notes-text-area.png"
-        alt="A note page with a text area, hint text, a Save and continue primary button, a Delete warning button, and a Cancel link." width="100%">
-      <figcaption>A note page with a text area, hint text, a Save and continue primary button, a Delete warning button, and a Cancel link.</figcaption>
-    </figure>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-editing-notes.html', 'Editing notes', 'editing-notes', codeSnippet.htmlCodeEditingNotes) }}
 
     <p>Use a 'Delete' <a href="https://design-system.service.gov.uk/components/button/#:~:text=buttons%20together.-,Warning%20buttons,-Warning%20buttons%20are">warning button</a> that takes users to an 'Are you sure?' page. Deleting a note is a 'destructive' action that cannot be undone.</p>
 
