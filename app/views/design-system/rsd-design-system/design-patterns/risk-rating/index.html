@@ -29,17 +29,31 @@
     <p>Use this pattern to record and display red, amber and green (RAG) risk ratings.</p>
     
     <h2>How it works</h2>
-    <p>The pattern is a <a href="https://design-system.service.gov.uk/components/radios/">radios</a> list, with each item displaying one or more <a href="https://design-system.service.gov.uk/components/tag/">tag</a> components to indicate the risk rating.</p>
-    <p>It also includes a <a href="https://design-system.service.gov.uk/components/textarea/">textarea</a> for users to explain why they chose a particular risk rating.</p>
-    
-    <h3>Radios list name</h3>
-    <p>Call the list something like 'risk rating'. This is more inclusive than 'RAG rating'.</p>
-    
-    <h3>Tag classes</h3>
-    <p>Use these classes for the tags:</p>
+
+    <p>There are 2 parts to this pattern:</p>
+    <ol>
+        <li>Reading risk ratings.</li>
+        <li>Updating risk ratings.</li>
+    </ol>
+
+    <h3>Reading risk ratings</h3>
+
+    <p>When users need to read a risk rating and summary, use a <a href="https://design-system.service.gov.uk/components/summary-list/#summary-cards">summary card</a> to present this information.</p>
+
+    <p>The 'risk rating and summary' card includes:</p>
+
+    <ul>
+      <li>the date the risk rating was provided</li>
+      <li> <a href="https://design-system.service.gov.uk/components/tag/">tags</a> that show the risk rating. The CSS classes are mentioned below</li>
+      <li>a summary of the risk rating. Show the summary in paragraphs, if the user entered them</li>
+      <li>a 'View details' link, if there are more details about the risk rating that users need to see</li>
+    </ul>
+
+    <h4>Tag CSS classes</h4>
+    <p>Use these CSS classes for the tags:</p>
     <ul>
       <li><code>govuk-tag--green</code></li>
-      <li><code>dfe-tag--amber</code>. This is a custom tag because there isn't an amber tag in the GOV.UK Design System:
+      <li><code>dfe-tag--amber</code>. This is a custom CSS class because there isn't an amber tag in the GOV.UK Design System:
         <div class="code-example">
           <pre style="background: #f3f2f1; padding: 10px; overflow: hidden;">
   &lt;style&gt;
@@ -52,9 +66,49 @@
       </li>
       <li><code>govuk-tag--red</code></li>
     </ul>
+
+    <h4>View details</h4>
+
+    <p>Clicking the 'View details' link should take users to a separate page.<p>
+      
+    <p>On this 'View details' page, you could include:</p>
     
-    <h3>Textarea height</h3>
-    <p>Make the height of the textarea proportional to the amount of text you expect users to enter.</p>
+    <ul>
+    <li>any other risk information in a summary list</li>
+    <li>a primary button, if users should be able to update the information</li>
+    <li>a table to show any previous risk ratings and summaries</li>
+    </ul>
+    
+    <h3>Updating risk ratings</h3>
+    
+    <p>When users click the 'Update risk rating and summary' primary button, take them to a separate page.</p>
+      
+    <p>This 'Update' page has a:</p>
+      
+      <ul>
+        <li>check answers pattern, with each row having its own 'Change' link</li>
+        <li>checkbox, so users can confirm they have reviewed the risk rating and summary - even if it have not changed since the last review</li>
+        <li>primary button, so users can save the risk rating and summary once they have reviewed it</li>
+      </ul>
+
+      <h4>Change links to separate pages</h4>
+
+    <p>When users click a change link, take them to a separate page. You may want to group related fields on the same page.<p>
+      
+    <p>For example, the change links for 'overall risk rating' and 'overall risk summary' could go to a single page that updates both pieces of information.</p>
+    
+    <p>To update the risk rating, use a <a href="https://design-system.service.gov.uk/components/radios/">radios</a> list, with each item displaying one or more <a href="https://design-system.service.gov.uk/components/tag/">tags</a> to indicate the risk rating.</p>
+    <p>To update the risk summary, use a <a href="https://design-system.service.gov.uk/components/textarea/">textarea</a> so users can explain why they chose a particular risk rating. Make the height of the textarea proportional to the amount of text you expect users to enter.</p>
+    
+    <p>When users have updated the information, use a primary button to take them back to the 'Update' page.</p>
+    
+    <h4>Success banner</h4>
+
+    When users select the primary button to save the risk rating and summary, show a success banner to confirm the rating and summary have been updated.
+
+    You may want to include a link back to the 'View details' page, so they can check themselves that the changes have been made.
+
+    If there is another page you think users will need to visit after updating the rating and summary, you can link to that page as well.
     
     <h3>Error messages</h3>
     <p>Make sure errors follow the <a href="https://design-system.service.gov.uk/components/error-message/">error message</a> guidance, with specific error messages for specific error states.</p>
