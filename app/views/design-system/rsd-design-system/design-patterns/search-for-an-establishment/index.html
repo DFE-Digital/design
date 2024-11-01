@@ -3,7 +3,7 @@
 {% import "./code-snippets.html" as codeSnippet %}
 
 {% set pageName = "Search for an establishment" %}
-{% set pageDescription = "Search for and select an establishment, like a academy trust or school." %}
+{% set pageDescription = "Search for and select an establishment, like an academy trust or school." %}
 {% set pageCaption = "Regional Services Division design pattern" %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
@@ -32,90 +32,83 @@
         <p>Use this pattern to help users:
           <ul>
             <li>find information about an establishment, like an academy trust or a school</li>
-            <li>provide details about an establishment. For example, in a case management system</li>
+            <li>store details about an establishment. For example, in a case management system</li>
           </ul>
         <h2>How it works </h2>
 
-        <p>There are 2 parts to this pattern.</p>
+        <p>This pattern includes a:</p>
+        <ul>
+          <li>search page, with a search box for basic keyword searching</li>
+          <li>search results page, showing the most important information about each establishment. Allow users to choose which option they want to see detailed information about.</li>
+        </ul>
+
+        <p><strong>Search page snippet?</strong></p>
+
+        <p><strong>Search results page snippet?</strong></p>
+
+        <p>After these pages, there are 2 variations depending on the context.</p>
 
         <ol>
-          <li>Searching for read-only information about an establishment.</li>
-          <li>Searching for an establishment to store information about it.</li>
+          <li>Read information about an establishment.</li>
+          <li>Select an establishment to store information about it.</li>
         </ol>
         
-        <h3>Searching for read-only information about an establishment</h3>
+        <h3>Read information about an establishment</h3>
 
-        <p>If users need information about an establishment, without needing to add that information somewhere else.</p>
-
-        <h4>Disabled Javascript</h4>
-
-        <p>If JavaScript is disabled, the journey should include a:</p>
-        <ul>
-          <li>search box for basic keyword searching</li>
-          <li>separate page with a list of results, showing the most important information about each establishment. Allow users to choose which option they want to see detailed information</li>
-          <li>separate page with the selected result, showing detailed information about the establishment</li>
-        </ul>
+        <p>When users have selected an establishment from the search results page, take them to a separate page which has more information about the establishment.</p>
 
         <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
           <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-basic.png"
             alt="Search an establishment for read-only purpose (basic)" width="100%">
-          <figcaption>Searching for read-only information about an establishment - Disabled Javascript</figcaption>
+          <figcaption>Read information about an establishment - basic version</figcaption>
         </figure>
         
-        <h4>Enabled Javascript</h4>
+        <h3>Select an establishment to store information about it</h3>
 
-        <p>For the progressive enhancement when JavaScript is enabled, the journey should:</p>
-        <ul>
-          <li>include a text input with autocomplete enabled for keyword search
-          <li>dynamically show the list of results under the text input</li>
-          <li>a separate page with the selected result, showing detailed information about the establishment</li>
-        </ul>
+        <p>When users have selected an establishment from the search results page, take them to a separate page that shows detailed information about the establishment.</p>
 
-        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-          <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-progressive-enhancement.png"
-            alt="Search an establishment for read-only purpose (progressive enhancement)" width="100%">
-          <figcaption>Searching for read-only information about an establishment - Enabled Javascript</figcaption>
-        </figure>
+        <p>Allow users to confirm if this is the establishment they were looking for. If it is, let them select it so they can store information about it somewhere.</p>
 
-        <h3>Searching for an establishment to store information about it</h3>
-
-        <p>If users need to find an establishment and save it somewhere. For example, adding an academy trust to a school.</p>
-
-        <h4>Disabled Javascript</h4>
-
-        <p>If JavaScript is disabled, the journey should include:</p>
-        <ul>
-          <li>search box for basic keyword searching</li>
-          <li>separate page with a list of results, showing the most important information about each establishment. Allow users to choose which option they want to see detailed information</li>
-          <li>separate page with detailed information about the selected result. Allow users to confirm if this is the establishment they were looking for. If it's not, send them back to the search results page</li>
-        </ul>
+        <p>If it's not the establishment they are looking for, send them back to the search page.</p>
 
         <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
           <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-journey-basic.png"
             alt="Searching for an establishment as part of a longer journey (basic)" width="100%">
-          <figcaption>Searching for an establishment to store information about it - Disabled Jabascript</figcaption>
+          <figcaption>Select an establishment to store information about it - basic version</figcaption>
         </figure>
         
-        <h4>Enabled Javascript</h4>
+        <h3>Autocomplete</h3>
 
-        <p>For the progressive enhancement when JavaScript is enabled, the journey should:</p>
-        <ul>
-          <li>include a text input with autocomplete enabled for keyword search
-          <li>dynamically show the list of results under the text input</li>
-          <li>a separate page with the selected result, showing detailed information about the establishment</li>
-          <li>Provide the detailed information of the result selected. Allow users to confirm if this is the establishment they were looking for. If it is not, send them back to the search results page</li>
-        </ul>
+        <p>You can add autocomplete to the search page in both variations, so the list of results appears dynamically under the text input.</p>
+          
+        <h4>'Read information about an establishment' autocomplete</h4>
+        
+        <p>When users select a result from the dynamic list and then Continue, show detailed information about the establishment on a separate page.</p>
+
+        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+          <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-progressive-enhancement.png"
+            alt="Search an establishment for read-only purpose (progressive enhancement)" width="100%">
+          <figcaption>Searching for read-only information about an establishment - autocomplete</figcaption>
+        </figure>
+
+        <h4>'Select an establishment' autocomplete</h4>
+
+        <p>When users select a result from the dynamic list and then Continue, show detailed information about the establishment on a separate page.</p>
+
+        <p>If users found the establishment they were looking for, let them carry on with their journey.</p>
+
+        <p>If it's not the establishment they were looking for, send them back to the search page.</p>
 
         <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
           <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-journey-progressive-enhancement.png"
             alt="Searching for an establishment as part of a longer journey (progressive enhancement)" width="100%">
-          <figcaption>Searching for an establishment to store information about it - Enabled Jabascript</figcaption>
+          <figcaption>Searching for an establishment to store information about it - autocomplete</figcaption>
         </figure>
 
         <h2>Research on this pattern</h2>
         <p>We have not done research on this design pattern, but parts of the pattern are being used in <a href="https://design-histories.education.gov.uk/find-information-about-academies-trusts">Find information about academies and trusts</a> and <a href="https://design-histories.education.gov.uk/manage-free-school-projects">Manage free school projects</a> to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database (opens a DfE Microsoft List)</a>:</p>
         
-        <p><strong>User need 96:</strong> When I need to find information about an establishment, I need flexibility in what I can search by, so that I can easily find the school/trust I am looking for</p>
+        <p><strong>User need 96:</strong> When I need to find information about an establishment, I need flexibility in what I can search by, so that I can easily find the school/trust I am looking for.</p>
 
     </div>
 </div>
