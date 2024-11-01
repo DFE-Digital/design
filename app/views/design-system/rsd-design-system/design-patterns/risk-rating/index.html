@@ -40,11 +40,11 @@
       <li><a href="https://design-system.service.gov.uk/components/tag/">tags</a> that show the risk rating. The CSS classes are mentioned below</li>
       <li>a summary of the risk rating. Show the summary in paragraphs, if paragraphs were entered by a user</li>
 
-      <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-        <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/risk-rating-summary-card.png"
-          alt="A project with a notes tab. A success banner titled 'Your note has been edited' appears at the top of the project page." width="100%">
-        <figcaption>Risk rating summary card</figcaption>
-      </figure>
+<p></p>
+
+      <p><strong>Risk rating summary card, with a Change link</strong></p>
+
+<p><strong>Risk rating summary card, without a Change link</strong></p>
 
     <h3>Tag CSS classes</h3>
     <p>Use these CSS classes for the tags:</p>
@@ -66,22 +66,24 @@
 
     <h3>Update risk rating and summary</h3>
 
-    <p>Clicking the 'Change' link takes users to a separate page.<p>
+    <p>Clicking the 'Change' link in the summary card takes users to a separate page.<p>
 
     <p>The page has a:</p>
 
     <ul>
-      <li><a href="https://design-system.service.gov.uk/components/radios/">radios</a> list for the risk rating. Each list item has one or more <a href="https://design-system.service.gov.uk/components/tag/">tags</a> to indicate the risk rating</li>
+      <li><a href="https://design-system.service.gov.uk/components/radios/">radios</a> list for the risk rating. Each list item has one or more <a href="https://design-system.service.gov.uk/components/tag/">tags</a> to indicate the rating</li>
       <li><a href="https://design-system.service.gov.uk/components/textarea/">textarea</a> for the risk summary. Make the height of the textarea proportional to the amount of text you expect users to enter</li>
-      <li>primary button, to save the updated risk rating and summary</li>
+      <li><a href="https://design-system.service.gov.uk/components/button/">button</a> to save the updated rating and summary</li>
     </ul>
 
-    <p>Once users click the priamary button, show a success banner to confirm the rating and summary have been updated.</p>
+    <p>When users update the information and click the button, take them back to the summary card page. Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/">success banner</a> to assure users that the rating and summary have been updated.</p>
     
-    <p>You may want to include a link back to the summary card page, so they can check themselves that the changes have been made.</p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/risk-rating-success-banner.png"
+        alt="Success banner - risk rating and summary updated" width="100%">
+      <figcaption>Success banner - risk rating and summary updated</figcaption>
+    </figure>
 
-    <p>If there is another page you think users will need to visit after updating the rating and summary, you can link to that page as well.</p>
-    
     <h3>Error messages</h3>
     <p>Make sure errors follow the <a href="https://design-system.service.gov.uk/components/error-message/">error message</a> guidance, with specific error messages for specific error states.</p>
     
