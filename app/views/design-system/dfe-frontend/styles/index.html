@@ -1,0 +1,62 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set canonical = "https://design.education.gov.uk/design-system/dfe-frontend/styles" %}
+{% set pageName = "Styles" %}
+{% set pageDescription = "Specific styles to ensure a consistent look and feel across Department for Education
+services." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Styles"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "25 July 2023 "%}
+{% set backlog_issue_id = "89" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l  govuk-!-margin-top-5">Design system</span>
+        <h1 class="govuk-heading-xl">{{pageName}}</h1>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/dfe-frontend/styles/">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+      <p>Styles set what the user interface looks like. They include typography and colour.</p>
+
+      <p>You should observe the GOV Frontend conventions when it comes to styles.</p>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

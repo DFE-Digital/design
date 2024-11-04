@@ -1,48 +1,234 @@
-
+{% extends "layouts/page.html" %}
+{% set canonical = "https://design.education.gov.uk/design-system" %}
 {% set pageName = "Design system" %}
-{% set pageDescription = "Understand how to ensure we design consistent services for Department for Education users." %}
+{% set pageDescription = "Use the DfE Design System to ensure products and services, built in the Department for
+Education, provide people with a consistent, accessible, and usable user experience." %}
 {% set selectedNav = "Design system" %}
-{% set lastUpdated = "April 2023" %}
+{% set lastUpdated = "May 2024" %}
 {% set backlog_issue_id = "44" %}
 
-{% extends "layouts/content-with-sidenav.html" %}
-
-{% block beforeContent %}{% endblock %}
-
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+            <nav class="app-sub-navigation" aria-label="Application menu">
+               <ul class="app-sub-navigation__list">
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" aria-current="page" href="/design-system">Overview</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles">Styles</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/components">Components</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+{% block beforeContent%}{% endblock %}
 {% block content %}
+<section>
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+         <p>Use the DfE Design System to ensure products and services, built in the Department for Education, provide
+            people with a consistent, accessible, and usable user experience.</p>
+
+         <p>If you've never used the DfE design system before, read through the following guidance first:</p>
 
 
-  <h2 class="govuk-heading-l" id="start-with-govuk-design-system">Start with the GOV.UK Design System</h2>
+         <div class="dfe-grid-container">
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/dfe-frontend"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">When to use</a>
+                  </h3>
+                  <p>Understand when to use DfE Frontend in your products.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/dfe-frontend/installation"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Installation</a>
+                  </h3>
+                  <p>How to install and use DfE Frontend in your product.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/dfe-frontend/contribute"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Contribute</a>
+                  </h3>
+                  <p>How to contribute a style, component or pattern to the design system</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="govuk-!-margin-top-5">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l">Content design</h2>
+         <p>Our content standards and guidance for tone of voice, the words we use, and writing content strategies for
+            services.
+         </p>
+         <div class="dfe-grid-container">
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/content-design"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Content design in DfE</a>
+                  </h3>
+                  <p>How we design good content in DfE for differnet channels and purposes.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/style-guide"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Content style guide</a>
+                  </h3>
+                  <p>The style guide is for anyone creating content for DfE, to help make things clear and consistent
+                     across
+                     all of our services.
+                  </p>
+               </div>
+            </div>
+            <div class="dfe-card  dfe-card--full">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/content-strategies"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Content strategies</a>
+                  </h3>
+                  <p>How to create a content strategy to ensure a seamless user experience, efficient content planning,
+                     and
+                     effective collaboration.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <h2 class="govuk-heading-m govuk-!-margin-top-5">Additional guidance</h2>
+         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+               <p>Guidance for writing content in other services or products.</p>
+               <ul class="govuk-list govuk-list--spaced">
+                  <li><a href="/design-system/how-we-write-emails">How we write emails</a></li>
+                  <li><a href="/design-system/publishing-content-on-govuk">Publishing content on GOV.UK</a></li>
+                  <li><a href="/design-system/writing-project-page">Writing about our work and case studies</a></li>
+               </ul>
+            </div>
+            <div class="govuk-grid-column-one-half">
+               <div class="dfe-panel govuk-!-margin-top-2">
+                  <h3 class="govuk-heading-s">Should your content go on GOV.UK?</h3>
+                  <p>Use the quick tool to understand where your content should be published and your next steps.</p>
+                  <p class="govuk-!-margin-bottom-0"><a href="/tools/proposition-checker" class="govuk-link">Use the
+                        tool </a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="govuk-!-margin-top-5">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <h2 class="govuk-heading-l govuk-!-margin-top-7">Prototyping</h2>
+         <p>Guides to help you get started with the design system and to design, build, and test your products.</p>
+         <div class="dfe-grid-container">
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/figma"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Figma</a>
+                  </h3>
+                  <p>Use the DfE Frontend library in your Figma designs.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/prototype-kit"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Prototype kit</a>
+                  </h3>
+                  <p>Get started with the prototype kit and get it set up.</p>
+               </div>
+            </div>
+            <div class="dfe-card">
+               <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                     <a href="/design-system/github-heroku"
+                        class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Hosting your prototype</a>
+                  </h3>
+                  <p>How to set up your prototype and using Heroku.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 
-  <p>If you are building a digital service, you must use the <a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer" class="govuk-link">GOV.UK Design System</a> as a starting point for all DfE digital services.</p>
+<section class="govuk-!-margin-top-5">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </div>
+   </div>
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+         <h2 class="govuk-heading-l">Other DfE design systems</h2>
+         <p>These design systems are specific to certain services and products within DfE.
+         </p>
+         <p><a href="/design-system/ncs-design-system" target="_blank">National Careers Service</a></p>
+         <p><a href="/design-system/rsd-design-system" target="_blank">Regional Services Division</a></p>
+      </div>
 
-  <p>If something isn't in the Design System, check the <a href="https://github.com/orgs/alphagov/projects/43/views/1" target="_blank" rel="noopener noreferrer" class="govuk-link">Design System backlog</a> to see what others have done before.</p>
 
-  <p>Before starting to build anything custom or new, ask what others have done in the following Slack channels:</p>
-
-  <ul class="govuk-list">
-    <li>
-      <a href="https://ukgovernmentdfe.slack.com/archives/C7JG0399S" target="_blank" rel="noopener noreferrer" class="govuk-link">#design channel in DfE Slack</a>
-    </li>
-    <li>
-      <a href="https://ukgovernmentdigital.slack.com/archives/C062GAGLW" target="_blank" rel="noopener noreferrer" class="govuk-link">#design channel in cross-government Slack</a>
-    </li>
-  </ul>
-
-  <p>You can also <a href="/design-ops/" class="govuk-link">contact the design ops team</a> for advice and guidance.</p>
-
-  <h3 class="govuk-heading-s" id="contributing-back-to-the-govuk-design-system">Contributing back to the GOV.UK Design System</h3>
-
-  <p>If you create or amend an existing GOV.UK frontend component, you must also <a class="govuk-link" href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank">contribute</a> the change back, along with evidence and research to support the change. </p>
-
-    <h3 class="govuk-heading-s" id="check-xgovuk-projects">Check X-GOVUK projects</h3>
-
-<p>You can also find community built tools, components, and patterns in the <a href="https://x-govuk.github.io/#shared-projects" target="_blank" rel="noopener noreferrer" class="govuk-link">X-GOVUK project site</a></p>
-
-  <h2 class="govuk-heading-l" id="start-with-govuk-design-system">Using the DfE Frontend</h2>
-
-  <p>If you are designing a service which is being provided on the education.gov.uk domain, you also need to use the <a href="/design-system/dfe-frontend" class="govuk-link">DfE Frontend</a> to implement the DfE <a class="govuk-link" href="/design-system/components/header">header</a> and font styles.</p>
-
-  <p>You can also use DfE Frontend alongside GOV.UK Frontend styles. For example, using <a class="govuk-link" href="/design-system/components/" class="govuk-link">DfE Frontend components</a> provided on a GOV.UK or service.gov.uk domain.</p>
-
+   </div>
+</section>
+<section class="govuk-!-margin-top-5">
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </div>
+   </div>
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+         <h2 class="govuk-heading-m">We're open source</h2>
+         <p>DfE Frontend is available open-source on GitHub. You're welcome to contribute, provide feedback, or pick up
+            helping us with our backlog.
+         </p>
+         <p><a href="https://github.com/orgs/DFE-Digital/projects/22" target="_blank">Contribute on GitHub</a></p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+         <h2 class="govuk-heading-m">Keep up to date</h2>
+         <p>We write about, and share as much as we can, in the open. You can find out more about what we're doing on
+            the
+            following channels:
+         </p>
+         <ul class="govuk-list govuk-list--spaced">
+            <li><a href="" target="_blank">Read our design histories</a></li>
+            <li><a href="" target="_blank">Read the latest on our blogs</a></li>
+         </ul>
+      </div>
+      <div class="govuk-grid-column-full govuk-!-margin-top-5">
+         <h3 class="govuk-heading-m">Found a problem?</h3>
+         <p>If you've found something wrong, or found a bug, <a
+               href="https://github.com/DFE-Digital/design/issues/new?assignees=&labels=&projects=&template=bug_report.md&title="
+               target="_blank">raise an issue</a> and we'll look into it.</p>
+      </div>
+   </div>
+</section>
 {% endblock %}

@@ -1,105 +1,112 @@
 {% extends "layouts/content-full-width.html" %}
 {% set pageName = "Patterns and components" %}
-{% set pageDescription = "Developing consistent design components and patterns for digital services in the Department for Education." %}
-{% set selectedNav = "Inside Design" %}
+{% set pageDescription = "Developing consistent design components and patterns for digital services in the Department
+for Education." %}
+{% set selectedNav = "Inside design" %}
 {% set zeroMainMargin = "true"%}
 {% block content %}
-    <section style="background: #ebf2f6;">
-        <div class="dfe-width-container">
-            <div class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-padding-top-4">
-                <ol class="govuk-breadcrumbs__list">
-                    <li class="govuk-breadcrumbs__list-item">
-                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
-                    </li>
-                    <li class="govuk-breadcrumbs__list-item">
-                        <a class="govuk-breadcrumbs__link" href="/inside-design">Inside Design</a>
-                    </li>
-                    <li class="govuk-breadcrumbs__list-item">
-                        <a class="govuk-breadcrumbs__link" href="#">{{pageName}}</a>
-                    </li>
-                </ol>
+<section style="background: #ebf2f6;">
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-padding-top-4">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/inside-design">Inside design</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="#">{{pageName}}</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="govuk-width-container" style="padding-top: 40px; padding-bottom: 80px;">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{pageName}}</h1>
+                <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
+            </div>
+            <div class="govuk-grid-column-one-third dfe-text-align--centre"></div>
+        </div>
+    </div>
+</section>
+<section class="" style="background: #ffffff;">
+    <div class="govuk-width-container" style="padding: 80px 0px 0px 0px">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <h2 class="govuk-heading-l">Objective</h2>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body">A consistent approach to recruitment and onboarding for design professionals with
+                    clear objectives for professions and community.</p>
             </div>
         </div>
-        <div class="dfe-width-container" style="padding-top: 40px; padding-bottom: 80px;">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{pageName}}</h1>
-                    <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
-                </div>
-                <div class="govuk-grid-column-one-third dfe-text-align--centre"></div>
-            </div>
-        </div>
-    </section>
-    <section class="" style="background: #ffffff;">
-        <div class="dfe-width-container" style="padding: 80px 0px 0px 0px">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-third">
-                    <h2 class="govuk-heading-l">Objective</h2>
-                </div>
-                <div class="govuk-grid-column-two-thirds">
-                    <p class="govuk-body">A consistent approach to recruitment and onboarding for design professionals with clear objectives for professions and community.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <section class="" style="background: #ffffff;">
-        <div class="dfe-width-container" style="padding: 40px 0px 0px 0px">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-third">
-                    <h2 class="govuk-heading-l">Purpose</h2>
-                </div>
-                <div class="govuk-grid-column-two-thirds">
-                    <p class="govuk-body">This working group helps to deliver on our <a href="/inside-design/goals">design goal</a> around developing and raising standards.</p>
+<section class="" style="background: #ffffff;">
+    <div class="govuk-width-container" style="padding: 40px 0px 0px 0px">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <h2 class="govuk-heading-l">Purpose</h2>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body">This working group helps to deliver on our <a href="/design-ops/priorities">design
+                        goal</a> around developing and raising standards.</p>
 
-                </div>
             </div>
         </div>
-    </section>
-    <section class="" style="background: #ffffff;">
-        <div class="dfe-width-container" style="padding: 40px 0px 40px 0px">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-third">
-                    <h2 class="govuk-heading-l">Our initiatives</h2>
-                </div>
-                <div class="govuk-grid-column-two-thirds">
-                    <table class="govuk-table">
-                        <caption class="govuk-table__caption govuk-table__caption--m"></caption>
-                        <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Initiative</th>
-                                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Progress</th>
-                            </tr>
-                        </thead>
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">Establish a working group to manage submissions and requests for patterns and components</th>
-                                <td class="govuk-table__cell">
-                                    <strong class="govuk-tag govuk-tag--green">Complete</strong>
-                                </td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">Publish guidance and criteria for submiting a pattern or component request from individuals</th>
-                                <td class="govuk-table__cell">
-                                    <strong class="govuk-tag govuk-tag--green">Complete</strong>
-                                </td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">Publish a frontend package for including components in digital products</th>
-                                <td class="govuk-table__cell">
-                                    <strong class="govuk-tag govuk-tag--blue">In progress</strong>
-                                </td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header">Publish a roadmap of patterns and componenets being worked on</th>
-                                <td class="govuk-table__cell">
-                                    <strong class="govuk-tag govuk-tag--grey">Not started</strong>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    </div>
+</section>
+<section class="" style="background: #ffffff;">
+    <div class="govuk-width-container" style="padding: 40px 0px 40px 0px">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <h2 class="govuk-heading-l">Our initiatives</h2>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Initiative</th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Establish a working group to manage submissions
+                                and requests for patterns and components</th>
+                            <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--green">Complete</strong>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Publish guidance and criteria for submiting a
+                                pattern or component request from individuals</th>
+                            <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--green">Complete</strong>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Publish a frontend package for including
+                                components in digital products</th>
+                            <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Publish a roadmap of patterns and componenets
+                                being worked on</th>
+                            <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {% endblock %}

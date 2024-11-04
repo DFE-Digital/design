@@ -1,591 +1,773 @@
 {% set content_design = [
-  {
-    title: "Content design in DfE",
-    url: "/content-design/"
-  },{
-    title: "Digital delivery terms",
-    url: "/content-design/language-we-use/"
-  },{
-    title: "Style guide",
-    url: "/content-design/style-guide/"
-  },{
-    title: "Writing design history posts",
-    url: "/content-design/writing-design-history-posts/"
-  },{
-    title: "Creating a content strategy",
-    url: "/content-design/content-strategies/"
-  },{
-  title: "How we write emails",
-    url: "/content-design/how-we-write-emails/"
-  }
+{
+title: "Content design in DfE",
+url: "/design-system/content-design"
+},{
+title: "Digital delivery terms",
+url: "/design-system/language-we-use"
+},{
+title: "Content style guide",
+url: "/design-system/style-guide"
+},{title: "Creating a content strategy",
+url: "/design-system/content-strategies"
+},{title: "Writing a project page",
+url: "/design-system/writing-project-page"
+},{title: "How we write emails",
+url: "/design-system/how-we-write-emails"
+},
+{
+title: "Types of content we publish",
+url: "/design-system/types-of-content-we-publish"
+},{
+title: "Publishing content on GOV.UK",
+url: "/design-system/publishing-content-on-govuk"
+},
+{
+title: "Reviewing and checking content",
+url: "/design-system/reviewing-and-checking-content"
+}
 ] %}
 
 {% set publishing_content = [
-  {
-    title: "Types of content we publish",
-    url: "/content-design/types-of-content-we-publish/"
-  },{
-    title: "Publishing content on GOV.UK",
-    url: "/content-design/publishing-content-on-govuk/"
-  }
-  ,{
-    title: "Reviewing and checking content",
-    url: "/content-design/types-of-content-we-publish/reviewing-and-checking-content"
-  }
+
 ] %}
 
 {% set design_ops = [
-  {
-    title: "Design Ops",
-    url: "/design-ops/"
-  }, {
-    title: "Tools we use",
-    url: "/design-ops/tools"
-  }
+{
+title: "DesignOps",
+url: "/design-ops"
+}, {
+title: "Tools we use",
+url: "/tools"
+}
 ] %}
-
-
-
-
 
 {% set professions = [{
-    title: "Content design",
-    url: "/community/professions/content-design"
-  },
-  {
-    title: "Interaction design",
-    url: "/community/professions/interaction-design"
-  }, {
-    title: "Service design",
-    url: "/community/professions/service-design"
-  }
+title: "Professions",
+url: "/design-ops/professions"
+},{
+title: "Content design",
+url: "/design-ops/professions/content-design"
+},
+{
+title: "Interaction design",
+url: "/design-ops/professions/interaction-design"
+}, {
+title: "Service design",
+url: "/design-ops/professions/service-design"
+}, {
+title: "Head of profession",
+url: "/design-ops/professions/head-of-profession"
+}
 ] %}
+
+{% set priorities = [{
+title: "Our priorities",
+url: "/design-ops/priorities"
+},{
+title: "Build capability",
+url: "/design-ops/priorities/build-capability"
+},{
+title: "Raise standards",
+url: "/design-ops/priorities/raise-standards"
+},{
+title: "Increase productivity",
+url: "/design-ops/priorities/increase-productivity"
+}
+
+] %}
+
+{% set designmaturity = [{
+title: "Design maturity",
+url: "/design-ops/maturity"
+},{
+title: "2023 results",
+url: "/design-ops/maturity/results/september-2023"
+},{
+title: "2022 results",
+url: "/design-ops/maturity/results/september-2022"
+}
+
+] %}
+
 
 {% set communities = [
- {
-    title: "Meetups",
-    url: "/professions/meetups/"
-  },{
-    title: "Show and tells",
-    url: "/professions/show-and-tells/"
-  },{
-    title: "Themes",
-    url: "/professions/themes/"
-  }
+{
+title: "Meetups",
+url: "/community/meetups"
+},{
+title: "Show and tells",
+url: "/community/show-and-tells"
+},{
+title: "Themes",
+url: "/community/themes"
+}
 ] %}
 
+{% set dfefrontend = [
+{
+title: "Design system",
+url: "/design-system"
+},
+{
+title: "Using DfE Frontend",
+url: "/design-system/dfe-frontend"
+},
+{
+title: "Installation",
+url: "/design-system/dfe-frontend/installation"
+},{
+title: "Updating to dfe-frontend",
+url: "/design-system/dfe-frontend/updating"
+},{
+title: "Release history",
+url: "/design-system/dfe-frontend/whats-new"
+},{
+title: "Contribute",
+url: "/design-system/dfe-frontend/contribute"
+}
+] %}
+
+
 {% set ds_design = [
- {
-    title: "Design system",
-    url: "/design-system/"
-  },{
-    title: "DfE Frontend",
-    url: "/design-system/dfe-frontend"
-  },{
-    title: "Styles",
-    url: "/design-system/styles/"
-  },
 {
-    title: "Components",
-    url: "/design-system/components/"
-  },
+title: "Design system",
+url: "/design-system"
+},{
+title: "DfE Frontend",
+url: "/design-system/dfe-frontend"
+},{
+title: "Styles",
+url: "/design-system/styles"
+},
 {
-    title: "Patterns",
-    url: "/design-system/patterns/"
-  },
-  {
-    title: "Contribute",
-    url: "/design-system/contribute/"
-  }]
+title: "Components",
+url: "/design-system/dfe-frontend/components"
+},
+{
+title: "Patterns",
+url: "/design-system/dfe-frontend/patterns"
+},
+{
+title: "Contribute",
+url: "/design-system/contribute"
+}]
 %}
 
 {% set ds_services = [
-  {
-     title: "National Careers Service",
-     url: "/design-system/ncs-design-system/"
-   }]
- %}
+{
+title: "National Careers Service",
+url: "/design-system/ncs-design-system"
+}]
+%}
 
 {% set docs = [
- {
-    title: "Sass documentation",
-    url: "/design-system/dfe-frontend/sass-documentation"
-  }
+{
+title: "Sass documentation",
+url: "/design-system/dfe-frontend/sass-documentation"
+}
 ] %}
 
 {% set list_components = [
- {
-    title: "Components",
-    url: "/design-system/components/"
-  },{
-    title: "Header",
-    url: "/design-system/components/header"
-  }
+{
+title: "Components",
+url: "/design-system/dfe-frontend/components"
+},{
+title: "Card",
+url: "/design-system/dfe-frontend/components/card"
+},{
+title: "Header",
+url: "/design-system/dfe-frontend/components/header"
+}
 ] %}
 
 {% set ds_prototyping = [
-  {
-    title: "GOV.UK prototype kit",
-    url: "/design-system/prototype-kit/"
-  },
-  {
-    title: "GitHub and Heroku",
-    url: "/design-system/prototype-kit/github-and-heroku"
-  }
+{
+title: "GOV.UK prototype kit",
+url: "/design-system/prototype-kit"
+},
+{
+title: "GitHub and Heroku",
+url: "/design-system/github-heroku"
+}
 ] %}
 
 {% set list_styles = [
- {
-    title: "Styles",
-    url: "/design-system/styles/"
-  },{
-    title: "Colour",
-    url: "/design-system/styles/colour"
-  }
+{
+title: "Styles",
+url: "/design-system/dfe-frontend/styles"
+},{
+title: "Colour",
+url: "/design-system/dfe-frontend/styles/colour"
+},{
+title: "Typography",
+url: "/design-system/dfe-frontend/styles/typography"
+}
 ] %}
 
 
 {% set list_patterns = [
- {
-    title: "Patterns",
-    url: "/design-system/patterns/"
-  },{
-    title: "Select a school",
-    url: "/design-system/patterns/select-a-school"
-  }
+{
+title: "Patterns",
+url: "/design-system/dfe-frontend/patterns"
+},{
+title: "Select a school",
+url: "/design-system/dfe-frontend/patterns/select-a-school"
+}
 ] %}
 
 {% set accessibility = [
- {
-    title: "Accessibility",
-    url: "/accessibility"
-  },{
-    title: "Standards and legislation",
-    url: "/accessibility/standards"
-  },
-  {
-    title: "Roles and responsibilities",
-    url: "/accessibility/roles-and-responsibilities"
-  }
+{
+title: "Accessibility",
+url: "/accessibility"
+},{
+title: "Standards and legislation",
+url: "/accessibility/standards"
+},
+{
+title: "Roles and responsibilities",
+url: "/accessibility/roles-and-responsibilities"
+}
 ] %}
 
 {% set accessibility_wcag = [
-  {
-    title: "Overview",
-    url: "/accessibility/understanding-wcag/"
-  }, {
-    title: "Perceivable",
-    url: "/accessibility/understanding-wcag/perceivable"
-  }, {
-    title: "Operable",
-    url: "/accessibility/understanding-wcag/operable"
-  }, {
-    title: "Understandable",
-    url: "/accessibility/understanding-wcag/understandable"
-  }, {
-    title: "Robust",
-    url: "/accessibility/understanding-wcag/robust"
-  }
+{
+title: "Overview",
+url: "/accessibility/understanding-wcag"
+}, {
+title: "Perceivable",
+url: "/accessibility/understanding-wcag/perceivable"
+}, {
+title: "Operable",
+url: "/accessibility/understanding-wcag/operable"
+}, {
+title: "Understandable",
+url: "/accessibility/understanding-wcag/understandable"
+}, {
+title: "Robust",
+url: "/accessibility/understanding-wcag/robust"
+}
 ] %}
 
 {% set accessibility_assurance_top_level = [
-   {
-    title: "Testing and assurance",
-    url: "/accessibility/assurance"
-  },{
-    title: "Audits",
-    url: "/accessibility/audits"
-  },{
-    title: "Evaluation methodology",
-    url: "/accessibility/evaluation-methodology"
-  },
-  {
-    title: "Determine conformance",
-    url: "/accessibility/determine-conformance/"
-  },{
-    title: "Accessibility statements",
-    url: "/accessibility/accessibility-statements"
-  }
+{
+title: "Testing and assurance",
+url: "/accessibility/assurance"
+},{
+title: "Audits",
+url: "/accessibility/audits"
+},{
+title: "Evaluation methodology",
+url: "/accessibility/evaluation-methodology"
+},
+{
+title: "Determine conformance",
+url: "/accessibility/determine-conformance"
+},{
+title: "Accessibility statements",
+url: "/accessibility/accessibility-statements"
+}
 ] %}
 
 
 {% set ncs_design_guidance= [
-  {
-     title: "Our approach",
-     url: "/design-system/ncs-design-system/our-approach"
-   }
- ] %}
+{
+title: "Our approach",
+url: "/design-system/ncs-design-system/our-approach"
+}
+] %}
 
 {% set ncs_design_system = [
-  {
-    title: "Components",
-    url: "/design-system/ncs-design-system/components"
-  },
 {
-     title: "Brand styles",
-     url: "/design-system/ncs-design-system/branding-guidelines"
-   },{
-    title: "Content style guide",
-    url: "/design-system/ncs-design-system/content-style-guide"
-  }
- ] %}
+title: "Components",
+url: "/design-system/ncs-design-system/components"
+},
+{
+title: "Brand styles",
+url: "/design-system/ncs-design-system/branding-guidelines"
+},{
+title: "Content style guide",
+url: "/design-system/ncs-design-system/content-style-guide"
+}
+] %}
 
- {% set ncs_design_system_branding_guidelines = [
+{% set ncs_design_system_branding_guidelines = [
+{
+title: "Colour",
+url: "/design-system/ncs-design-system/branding-guidelines/colour"
+},{
+title: "Images",
+url: "/design-system/ncs-design-system/branding-guidelines/images"
+},{
+title: "Logo",
+url: "/design-system/ncs-design-system/branding-guidelines/logo"
+}
+] %}
+
+{% set ncs_design_system_components = [
+{
+title: "Header",
+url: "/design-system/ncs-design-system/components/header"
+},{
+title: "Search",
+url: "/design-system/ncs-design-system/components/search"
+}
+] %}
+
+{% set ncs_design_system_form_elements = [
+{
+title: "Banner notification",
+url: "/design-system/ncs-design-system/components/banner-notification"
+},{
+title: "Panel",
+url: "/design-system/ncs-design-system/components/panel"
+},{
+title: "Progress bar",
+url: "/design-system/ncs-design-system/components/progress-bar"
+},{
+title: "Ticket panel",
+url: "/design-system/ncs-design-system/components/ticket-panel"
+}
+] %}
+
+{% set ncs_design_system_content_presentation = [
+{
+title: "Button",
+url: "/design-system/ncs-design-system/components/button"
+},{
+title: "Highlight box",
+url: "/design-system/ncs-design-system/components/highlight-box"
+},{
+title: "Image headers",
+url: "/design-system/ncs-design-system/components/image-headers"
+}
+] %}
+
+{% set rsd_design_approach = [
   {
-     title: "Colour",
-     url: "/design-system/ncs-design-system/branding-guidelines/colour"
-   },{
-     title: "Images",
-     url: "/design-system/ncs-design-system/branding-guidelines/images"
-   },{
-    title: "Logo",
-    url: "/design-system/ncs-design-system/branding-guidelines/logo"
+    title: "Our approach",
+    url: "/design-system/rsd-design-system/design-patterns"
   }
- ] %}
+] %}
 
- {% set ncs_design_system_components = [
+{% set rsd_design_patterns = [
   {
-     title: "Header",
-     url: "/design-system/ncs-design-system/components/header"
-   },{
-    title: "Search",
-    url: "/design-system/ncs-design-system/components/search"
+    title: "Footer",
+    url: "/design-system/rsd-design-system/design-patterns/footer"
+  },{
+    title: "Contact details",
+    url: "/design-system/rsd-design-system/design-patterns/contact-details"
+  },{
+    title: "Task guidance",
+    url: "/design-system/rsd-design-system/design-patterns/task-guidance"
+  },{
+    title: "Page not found",
+    url: "/design-system/rsd-design-system/design-patterns/page-not-found"
   }
- ] %}
-
- {% set ncs_design_system_form_elements = [
-  {
-    title: "Banner notification",
-    url: "/design-system/ncs-design-system/components/banner-notification"
-  },{
-    title: "Panel",
-    url: "/design-system/ncs-design-system/components/panel"
-  },{
-    title: "Progress bar",
-    url: "/design-system/ncs-design-system/components/progress-bar"
-  },{
-    title: "Ticket panel",
-    url: "/design-system/ncs-design-system/components/ticket-panel"
-  }
- ] %}
-
- {% set ncs_design_system_content_presentation = [
- {
-    title: "Button",
-    url: "/design-system/ncs-design-system/components/button"
-  },{
-    title: "Highlight box",
-    url: "/design-system/ncs-design-system/components/highlight-box"
-  },{
-    title: "Image headers",
-    url: "/design-system/ncs-design-system/components/image-headers"
-  }
- ] %}
+] %}
 
 
 <nav class="dfe-vertical-nav">
 
   {%- if selectedNav === "Content design" %}
 
-    <ul class="dfe-vertical-nav__section">
-      {% for item in content_design %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in content_design %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 
-    <h2 class="dfe-vertical-nav--section-header">Publishing</h2>
+  <h2 class="dfe-vertical-nav--section-header">Publishing</h2>
 
-    <ul class="dfe-vertical-nav__section">
-      {% for item in publishing_content %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in publishing_content %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
-  {%- if selectedNav == "Design Ops" %}
-    <ul class="dfe-vertical-nav__section">
-      {% for item in design_ops %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
 
 
-  {% endif %}
+  {%- if subNav == "Priorities" and selectedNav == "DesignOps"%}
 
-  {%- if selectedNav == "Profession and Community" %}
-     <h2 class="govuk-heading-m">Profession and Community</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in professions %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
 
-    
+  <ul class="dfe-vertical-nav__section">
+    {% for item in priorities %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 
   {% endif %}
 
 
-  {%- if selectedNav == "Design system" and isChildSection !== "true"%}
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ds_design %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  {%- if subNav == "Professions" and selectedNav == "DesignOps"%}
+  <ul class="dfe-vertical-nav__section">
+    {% for item in professions %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
-    <h2 class="dfe-vertical-nav--section-header">Other design systems</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ds_services %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    
-    <h2 class="dfe-vertical-nav--section-header">Prototyping</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ds_prototyping %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    <h2 class="dfe-vertical-nav--section-header">Documentation</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in docs %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  {%- if subNav == "Design-maturity" and selectedNav == "DesignOps"%}
+  <ul class="dfe-vertical-nav__section">
+    {% for item in designmaturity %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
+
+
+
+
+  {%- if selectedNav == "Design system" and isChildSection !== "true" %}
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ds_design %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="dfe-vertical-nav--section-header">Other design systems</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ds_services %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+  <h2 class="dfe-vertical-nav--section-header">Documentation</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in docs %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% endif %}
+
+  {%- if parentSection == "Content" and isChildSection == "true"%}
+
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+    design system</a>
+
+  <h2 class="dfe-vertical-nav--section-header">Content design</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in content_design %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+  {% endif %}
+
+
+
+
+  {%- if parentSection == "Prototyping" and isChildSection == "true"%}
+
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+    design system</a>
+
+  <h2 class="dfe-vertical-nav--section-header">Prototyping</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ds_prototyping %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
 
   {%- if parentSection == "Components" and isChildSection == "true"%}
 
-  <a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Design system</a>
 
- <h2 class="dfe-vertical-nav--section-header">Components</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in list_components %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in list_components %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
 
-   {%- if parentSection == "Styles" and isChildSection == "true"%}
+  {%- if parentSection == "Styles" and isChildSection == "true"%}
 
-  <a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Design system</a>
-
- <h2 class="dfe-vertical-nav--section-header">Styles</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in list_styles %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in list_styles %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
 
-   {%- if parentSection == "Patterns" and isChildSection == "true"%}
+  {%- if parentSection == "Patterns" and isChildSection == "true"%}
 
-  <a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Design system</a>
-
- <h2 class="dfe-vertical-nav--section-header">Patterns</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in list_patterns %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in list_patterns %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
+
+  {%- if parentSection == "dfefrontend" and isChildSection == "true"%}
+
+  <ul class="dfe-vertical-nav__section">
+    {% for item in dfefrontend %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
 
 
   {%- if parentSection == "ncs-design-system" and isChildSection == "true" and ncs_hide_parent_nav !=="true" %}
 
-  
-<a href="/design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
+
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
   <h2 class="dfe-vertical-nav--section-header">How we work</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_guidance %}
-      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-      </li>
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
     {% endfor %}
   </ul>
 
-  
- <h2 class="dfe-vertical-nav--section-header">Design</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ncs_design_system %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+
+  <h2 class="dfe-vertical-nav--section-header">Design</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ncs_design_system %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
   {%- if ncs_sub_nav == "true"%}
 
-  <a href="/design-system/ncs-design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
+  <a href="/design-system/ncs-design-system"
+    class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
   <h2 class="dfe-vertical-nav--section-header">How we work</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_guidance %}
-      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-      </li>
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
     {% endfor %}
   </ul>
 
-  
- <h2 class="dfe-vertical-nav--section-header">Design</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ncs_design_system %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+
+  <h2 class="dfe-vertical-nav--section-header">Design</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ncs_design_system %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
   {%- if ncs_branding_main_nav == "true"%}
 
-  <a href="/design-system/ncs-design-system/" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
+  <a href="/design-system/ncs-design-system"
+    class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
   <h2 class="dfe-vertical-nav--section-header">Brand styles</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_system_branding_guidelines %}
-      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-      </li>
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
     {% endfor %}
   </ul>
   {% endif %}
-  
+
   {%- if ncs_branding_nav == "true"%}
 
-  <a href="/design-system/ncs-design-system/branding-guidelines" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Brand styles</a>
+  <a href="/design-system/ncs-design-system/branding-guidelines"
+    class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Brand styles</a>
   <h2 class="dfe-vertical-nav--section-header">Brand styles</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_system_branding_guidelines %}
-      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-      </li>
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
     {% endfor %}
   </ul>
   {% endif %}
 
   {%- if ncs_components_main_nav == "true"%}
 
-  
-  <a href="/design-system/ncs-design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
-    <h2 class="dfe-vertical-nav--section-header">Navigation</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ncs_design_system_components %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  
-    <h2 class="dfe-vertical-nav--section-header">Form elements</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ncs_design_system_form_elements %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  
-    <h2 class="dfe-vertical-nav--section-header">Content presentation</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in ncs_design_system_content_presentation %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  
-    
-    {% endif %}
 
-  {%- if ncs_components_nav == "true"%}
-
-  
-<a href="/design-system/ncs-design-system/components" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Components</a>
+  <a href="/design-system/ncs-design-system"
+    class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">National Careers Service design system</a>
   <h2 class="dfe-vertical-nav--section-header">Navigation</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_system_components %}
-      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-      </li>
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
     {% endfor %}
   </ul>
 
   <h2 class="dfe-vertical-nav--section-header">Form elements</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_system_form_elements %}
-      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-      </li>
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
     {% endfor %}
   </ul>
 
   <h2 class="dfe-vertical-nav--section-header">Content presentation</h2>
   <ul class="dfe-vertical-nav__section">
     {% for item in ncs_design_system_content_presentation %}
-      <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-        <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-      </li>
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
     {% endfor %}
   </ul>
 
+
+  {% endif %}
+
+  {%- if ncs_components_nav == "true"%}
+
+
+  <a href="/design-system/ncs-design-system/components"
+    class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Components</a>
+  <h2 class="dfe-vertical-nav--section-header">Navigation</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ncs_design_system_components %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="dfe-vertical-nav--section-header">Form elements</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ncs_design_system_form_elements %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="dfe-vertical-nav--section-header">Content presentation</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in ncs_design_system_content_presentation %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+  {% endif %}
+
+  {%- if parentSection == "rsd-design-system" %}
+  <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">DfE design system</a>
   
+  <h2 class="dfe-vertical-nav--section-header">How we work</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in rsd_design_approach %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <h2 class="dfe-vertical-nav--section-header">Design patterns</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in rsd_design_patterns %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 
 
-  
-
-
-
-    {%- if selectedNav == "Accessibility" %}
-    <ul class="dfe-vertical-nav__section">
-      {% for item in accessibility %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-     <h2 class="dfe-vertical-nav--section-header">Understanding WCAG</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in accessibility_wcag %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    <h2 class="dfe-vertical-nav--section-header">Audits and assurance</h2>
-    <ul class="dfe-vertical-nav__section">
-      {% for item in accessibility_assurance_top_level %}
-        <li class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
-          <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  {%- if selectedNav == "Accessibility" %}
+  <ul class="dfe-vertical-nav__section">
+    {% for item in accessibility %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <h2 class="dfe-vertical-nav--section-header">Understanding WCAG</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in accessibility_wcag %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <h2 class="dfe-vertical-nav--section-header">Audits and assurance</h2>
+  <ul class="dfe-vertical-nav__section">
+    {% for item in accessibility_assurance_top_level %}
+    <li
+      class="dfe-vertical-nav__section-item {% if item.title === pageName  or setSelectedSideNav === item.title %}dfe-vertical-nav__section-item--current{% endif %}">
+      <a class="dfe-vertical-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 
   {% endif %}
 

@@ -2,6 +2,9 @@
 
 This is the Department for Education Design Manual
 
+## Contributing
+Please see our [Contributing Guide](CONTRIBUTING.md) for details on how you can contribute to this project.
+
 
 ## Prerequisites
 
@@ -18,13 +21,14 @@ Run `npm i nodemon -g`
 Add a .env file and add the following keys:
 
 ```
-recaptchaPublic=x
-recaptchaSecret=x
-feedbackTemplateID=x
-notifyKey=preprod-x
 BASE_URL=http://localhost:3066
+sessionkey=xxx
+apikey=xxx
+cmsurl=xxx
+airtableFeedbackKey=xxx
+airtableFeedbackBase=xxx
 ```
-Contact Design Ops for the keys to use in your local environment. These must never be checked in to source code - the file is included in the .GITIGNORE file.
+Contact DesignOps for the keys to use in your local environment. These must never be checked in to source code - the file is included in the .GITIGNORE file.
 
 Run `npm install`
 

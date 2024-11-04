@@ -1,7 +1,8 @@
 {% extends "layouts/content-with-sidenav.html" %}
 
 {% set pageName = "Header" %}
-{% set pageDescription = "The National Careers Service header shows the user they are on the National Careers Service website. " %}
+{% set pageDescription = "The National Careers Service header shows the user they are on the National Careers Service
+website. " %}
 {% set pageCaption = "National Careers Service component" %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
@@ -64,20 +65,25 @@ National Careers Service
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-      
-      {{ sample.code('/design-system/ncs-design-system/components/header/top-header-example.html', 'Top header example', 'top-header', htmlCode_header) }}
-      
-      <div class="govuk-body">
-        <h2>When to use this component</h2>
-        <p>You must use the National Careers Service header at the top of every page if your service is being hosted on the nationalcareers.service.gov.uk domain.</p>
 
-        <h2>When not to use this component</h2>
-        <p>You must not use the National Careers Service header if your service is not hosted on the National Careers Service domain.</p>
-        
-        <h2>How to use this component</h2>
-        <p>If you use the page template, you'll get the header without having to add it as it's included by default. However, if you need to add this without using the page template, you can copy the HTML and paste it where you'd like to display the header on your page.</p>
-        <p>Once you've added the code, you can edit the navigation text and links to suit your needs.</p>
-      </div>
+    {{ sample.code('/design-system/ncs-design-system/components/header/top-header-example.html', 'Top
+    header example', 'top-header', htmlCode_header) }}
+
+    <div class="govuk-body">
+      <h2>When to use this component</h2>
+      <p>You must use the National Careers Service header at the top of every page if your service is being hosted on
+        the nationalcareers.service.gov.uk domain.</p>
+
+      <h2>When not to use this component</h2>
+      <p>You must not use the National Careers Service header if your service is not hosted on the National Careers
+        Service domain.</p>
+
+      <h2>How to use this component</h2>
+      <p>If you use the page template, you'll get the header without having to add it as it's included by default.
+        However, if you need to add this without using the page template, you can copy the HTML and paste it where you'd
+        like to display the header on your page.</p>
+      <p>Once you've added the code, you can edit the navigation text and links to suit your needs.</p>
+    </div>
   </div>
 </div>
 

@@ -1,0 +1,174 @@
+{% extends "layouts/content-with-sidenav.html" %}
+{% import "../code-frame.html" as sample %}
+
+{% set pageName = "Footer" %}
+{% set pageDescription = "A footer for internal-facing RSD products." %}
+{% set pageCaption = "Regional Services Division design pattern" %}
+{% set selectedNav = "Design system" %}
+{% set setSelectedSideNav = "" %}
+{% set parentSection = "rsd-design-system"%}
+{% set childSection = "design-patterns"%}
+{% set isChildSection = "true"%}
+
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "June 2024 "%}
+{% set backlog_issue_id = "105" %}
+
+{% set htmlCode = '<code class="hljs language-html">
+&lt;footer class=&quot;govuk-footer&quot; role=&quot;contentinfo&quot;&gt;
+  &lt;div class=&quot;govuk-width-container&quot;&gt;
+    &lt;div class=&quot;govuk-footer__navigation&quot;&gt;
+      &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-half&quot;&gt;
+        &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Get help&lt;/h2&gt;
+        &lt;ul class=&quot;govuk-footer__list govuk-footer__list--column-1&quot;&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+              Get help with a Regions Group system (opens in a new tab)
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+              How to use this system (opens in a new tab)
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-footer__section govuk-grid-column-one-half&quot;&gt;
+        &lt;h2 class=&quot;govuk-footer__heading govuk-heading-m&quot;&gt;Give feedback&lt;/h2&gt;
+        &lt;ul class=&quot;govuk-footer__list&quot;&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;Give feedback about a Regions Group system (opens in a new tab)&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;Suggest a change to a Regions Group system (opens in a new tab)&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;govuk-footer__meta&quot;&gt;
+      &lt;div class=&quot;govuk-footer__meta-item govuk-footer__meta-item--grow&quot;&gt;
+        &lt;h2 class=&quot;govuk-visually-hidden&quot;&gt;Support links&lt;/h2&gt;
+        &lt;ul class=&quot;govuk-footer__inline-list&quot;&gt;
+          &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+              Accessibility statement
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+              Cookies
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;govuk-footer__inline-list-item&quot;&gt;
+            &lt;a class=&quot;govuk-footer__link&quot; href=&quot;#&quot;&gt;
+              Privacy notice
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; class=&quot;govuk-footer__licence-logo&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 483.2 195.7&quot; height=&quot;17&quot; width=&quot;41&quot;&gt;
+          &lt;path fill=&quot;currentColor&quot; d=&quot;M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145&quot;&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;govuk-footer__licence-description&quot;&gt;
+          All content is available under the
+          &lt;a class=&quot;govuk-footer__link&quot; href=&quot;https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/&quot; rel=&quot;license&quot;&gt;Open
+            Government Licence v3.0&lt;/a&gt;, except where otherwise stated
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;govuk-footer__meta-item&quot;&gt;
+        &lt;a class=&quot;govuk-footer__link govuk-footer__copyright-logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;
+          &copy; Crown copyright
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code>' %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/footer/example.html', 'Footer', 'footer',
+    htmlCode) }}
+    <br>
+
+    <h2>When to use this component</h2>
+    <p>Use this pattern to create a product footer that is consistent with other RSD products.</p>
+    <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+      <img src="/assets/images/rsd-pattern-library-footer-screencapture-primary.png"
+        alt="A footer with Regional Services Division links." width="100%">
+      <figcaption>Screenshot of the RSD footer design pattern</figcaption>
+    </figure>
+
+    <h2>When not to use this component</h2>
+    <p>On</p>
+    <ul>
+      <li>external-facing sites, like <a href="https://apply-convert-academy.service.gov.uk/">Apply to become
+          an academy (A2B)</a> This site is for external users and the Microsoft links in this pattern
+        won't work for them</li>
+      <li>SharePoint guidance pages, like <a
+          href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx">Prepare
+          conversions and transfers (opens on DfE intranet)</a></li>
+    </ul>
+
+    <h2>Links</h2>
+    <p>The RSD footer includes several links. We include (opens in a new tab) in the link text where users are likely to have the new page open alongside the system.
+    </p>
+    <h3>Get help with a Regions Group system (opens in a new tab)</h3>
+    <p>This links to a Microsoft Form where users can request help with using the system. The same Microsoft Form
+      is used across all RSD products: <a
+      href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-X7F89QcWu5CjlJXwF0TVktUMTFEUVRCVVg4WlMyS1AzUEJSUDAySlhQTCQlQCN0PWcu">Get help with a Regions Group system - Microsoft Form</a>.</p>
+    <h3>How to use this system (opens in a new tab)</h3>
+    <p> This links to the section of a product's SharePoint page with guidance on how to use the product. For
+      example, <a
+        href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx#guidance-for-using-prepare-conversions-and-transfers">Guidance
+        for using Prepare conversions and
+        transfers (opens on DfE intranet)</a>. </p>
+    <p>If you don't have SharePoint guidance that helps users learn how to use your product, you do not need to include this
+      hyperlink.</p>
+    <h3>Give feedback about a Regions Group system (opens in a new tab)</h3>
+    <p>This links to a Microsoft Form where users can give feedback about the product. The same Microsoft Form
+      is used across all RSD products: <a
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-SZtRygfwTNOqcfRq-MXpv9UOTIyQlNYR0hJT1Q0TUFVSlJGVFhES01LVC4u">Give
+        feedback about a Regions Group system - Microsoft Form</a>.
+    </p>
+    <h3>Suggest a change to a Regions Group system (opens in a new tab)</h3>
+    <p>This links to a Microsoft Form, which is the same across all products: <a
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-fkHK2JGo_BIpVChpLMaBFpUNUFDSzhQN0FHVklTV0JWTzFZTjNKWTNJUi4u">Suggest
+        a change to a Regions Group system - Microsoft Form</a>.
+    </p>
+    <h3>Accessibility statement</h3>
+    <p>This links to the product's accessibility statement.</p>
+    <h3>Cookies</h3>
+    <p>This links to the product's cookies page.</p>
+    <h3>Privacy notice</h3>
+    <p>This links to the product's privacy notice.</p> 
+    <p>If the product does not need a privacy notice, you do not need to include this link.</p>
+    <h3>Crown copyright</h3>
+    <p>This links to <a
+      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">Crown copyright - Re-using PSI</a>.
+    <h2>Research on this component</h2>
+    <p>
+      We have not done research on this component, but it is being used to meet these needs from our <a
+        href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user
+        needs database (opens in DfE Microsoft List)</a>:
+    </p>
+    <ul>
+      <li>
+        user need 65 - when something I need is missing from a product, I need to give feedback to the
+        digital team so that my need can be met
+      </li>
+      <li>
+        user need 72 - when I am having trouble using the service, I need to get help so that I can resolve
+        my issue and get back to work
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+
+{% endblock%}

@@ -1,0 +1,361 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-system/figma"%}
+{% set pageName = "Figma" %}
+{% set pageDescription = "Resources, training, and guides for using Figma to design high-fidelity prototypes in the
+Department for Education." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "October 2023" %}
+{% set backlog_issue_id = "214" %}
+
+
+{% block hero %}
+
+<section class="dfe-page-header">
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-padding-top-4">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                    Figma
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="govuk-width-container" style="padding: 30px 0px 60px 0;">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{pageName}}</h1>
+                <p class="govuk-body-l govuk-!-margin-bottom-0">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="dfe-banner dfe-banner--mirrored govuk-!-margin-top-2">
+                    <div class="dfe-banner__content-container">
+                        <div class="dfe-banner__inner-content-container">
+                            <h2 class="govuk-heading-l govuk-!-margin-top-2">Figma for beginners</h2>
+                            <p>Figma have a set of videos on YouTube to help you understand the basics of Figma and some
+                                of it's features.</p>
+                            <a href="https://www.youtube.com/watch?v=Cx2dkpBxst8&list=PLXDU_eVOJTx7QHLShNqIXL1Cgbxj7HlN4"
+                                target="_blank" class="govuk-link govuk-body-l govuk-!-font-weight-bold">YouTube
+                                playlist</a>
+                        </div>
+                    </div>
+                    <div class="dfe-banner__image-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube-nocookie.com/embed/Cx2dkpBxst8?si=_4dBspeyALX-cQXO"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+
+    <div class="govuk-width-container govuk-!-margin-top-9">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <h2 class="govuk-heading-l">Get started</h2>
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-full">
+                <div class="dfe-grid-container dfe-grid-container--wider">
+
+                    <div class="dfe-card">
+                        <div class="dfe-card-container">
+                            <h2 class="govuk-heading-m">
+                                <a href="https://help.figma.com/hc/en-us/categories/360002051613-Getting-Started"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Figma and
+                                    FigJam</a>
+                            </h2>
+                            <p>Getting familiar with the deisgn and whiteboarding tools.</p>
+                        </div>
+                    </div>
+
+                    <div class="dfe-card">
+                        <div class="dfe-card-container">
+                            <h2 class="govuk-heading-m">
+                                <a href="https://www.figma.com/resource-library/design-basics/"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Design
+                                    basics</a>
+                            </h2>
+                            <p>The basics of product design, mockups, and design ethics.</p>
+                        </div>
+                    </div>
+
+                    <div class="dfe-card">
+                        <div class="dfe-card-container">
+                            <h2 class="govuk-heading-m">
+                                <a href="/design-system/figma/figma-in-dfe"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Working with
+                                    Figma in DfE</a>
+                            </h2>
+                            <p>The interaction designers at DfE give their top tips for getting started with Figma.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section style="background: #ffffff;">
+
+    <div class="govuk-width-container" style="padding: 0px 0 40px 0">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <h2 class="govuk-heading-l govuk-!-margin-top-2">Core design features</h2>
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-full">
+
+                <div class="dfe-panel">
+
+                    <div class="govuk-grid-row">
+
+                        <div class="govuk-grid-column-one-third">
+                            <h3 class="govuk-heading-m">Containers</h3>
+
+                            <ul class="govuk-list govuk-list--spaced">
+                                <li>
+                                    <a href="https://www.figma.com/best-practices/groups-versus-frames/"
+                                        class="govuk-link govuk-!-font-size-24">Groups vs frames</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=LHY9cm_2zwU&list=PLXDU_eVOJTx6zk5MDarIs0asNoZqlRG23&index=4"
+                                        class="govuk-link govuk-!-font-size-24">Constraints</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=QvLGRrQKsfQ&list=PLXDU_eVOJTx53btRMBES-ASBBm03-bUCJ&index=3"
+                                        class="govuk-link govuk-!-font-size-24">Frames and pages</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.figma.com/best-practices/everything-you-need-to-know-about-layout-grids/"
+                                        class="govuk-link govuk-!-font-size-24">Layout grids</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <h3 class="govuk-heading-m">Styles</h3>
+                            <ul class="govuk-list govuk-list--spaced">
+                                <li>
+                                    <a href="https://www.figma.com/best-practices/components-styles-and-shared-libraries/styles-and-style-tips/"
+                                        class="govuk-link govuk-!-font-size-24">Styles and style tips</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=gtQ_A3imzsg&list=PLXDU_eVOJTx6zk5MDarIs0asNoZqlRG23&index=8"
+                                        class="govuk-link govuk-!-font-size-24">Creating styles</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.figma.com/best-practices/typography-systems-in-figma/"
+                                        class="govuk-link govuk-!-font-size-24">Typography systems</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=9FuKfFBC4TU&list=PLXDU_eVOJTx53btRMBES-ASBBm03-bUCJ&index=1"
+                                        class="govuk-link govuk-!-font-size-24">CSS colour names</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <h3 class="govuk-heading-m">Auto layout</h3>
+                            <ul class="govuk-list govuk-list--spaced">
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360040451373-Create-dynamic-designs-with-Auto-layout"
+                                        class="govuk-link govuk-!-font-size-24">Create dynamic designs with auto
+                                        layout</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/playlist?list=PLXDU_eVOJTx55HFubfbTL3ellJjBM2QE2"
+                                        class="govuk-link govuk-!-font-size-24">Auto layout youtube playlist</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.figma.com/community/file/784448220678228461"
+                                        class="govuk-link govuk-!-font-size-24">Figma auto layout playground</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section style="background: #ffffff;">
+
+    <div class="govuk-width-container" style="padding: 0px 0 60px 0">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <h2 class="govuk-heading-l govuk-!-margin-top-2">Prototyping</h2>
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-full">
+
+                <div class="dfe-panel">
+
+                    <div class="govuk-grid-row">
+
+                        <div class="govuk-grid-column-one-third">
+                            <h3 class="govuk-heading-m">Interactions</h3>
+
+                            <ul class="govuk-list govuk-list--spaced">
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360040315773"
+                                        class="govuk-link govuk-!-font-size-24">Interactions and animations</a>
+                                </li>
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360040035874"
+                                        class="govuk-link govuk-!-font-size-24">Prototype actions</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360040035834"
+                                        class="govuk-link govuk-!-font-size-24">Prototype triggers</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <h3 class="govuk-heading-m">Animations</h3>
+                            <ul class="govuk-list govuk-list--spaced">
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360039818874-Create-advanced-animations-with-Smart-Animate"
+                                        class="govuk-link govuk-!-font-size-24">Smart animate</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=crPzZ8lK7KM&feature=youtu.be"
+                                        class="govuk-link govuk-!-font-size-24">Animating actions</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360051748654/"
+                                        class="govuk-link govuk-!-font-size-24">Easing curves</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <h3 class="govuk-heading-m">Presentation</h3>
+                            <ul class="govuk-list govuk-list--spaced">
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360040318013"
+                                        class="govuk-link govuk-!-font-size-24">Preview a prototype</a>
+                                </li>
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360039823894"
+                                        class="govuk-link govuk-!-font-size-24">Prototype devices</a>
+                                </li>
+
+                                <li>
+                                    <a href="https://help.figma.com/hc/en-us/articles/360040531773"
+                                        class="govuk-link govuk-!-font-size-24">Sharing your prototypes</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+    <div class="govuk-width-container" style="padding: 0px 0px 60px 0px">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="dfe-banner dfe-banner--mirrored govuk-!-margin-top-5">
+                    <div class="dfe-banner__content-container">
+                        <div class="dfe-banner__inner-content-container">
+                            <h2 class="govuk-heading-l govuk-!-margin-top-2">Figma Library</h2>
+                            <p>You can now use the DfE Frontend Figma library to create DfE branded services more
+                                easily.</p>
+                            <a href="https://www.figma.com/community/file/1301933989342986606/dfe-frontend-library"
+                                target="_blank" class="govuk-link govuk-body-l">Get the figma library</a>
+                        </div>
+                    </div>
+                    <div class="dfe-banner__image-container">
+                        <figure class="dfe-a-image dfe-a-image--cover">
+                            <picture class="dfe-a-image__picture">
+                                <source srcset="/assets/images/proto.webp" type="image/webp">
+                                <img src="/assets/images/proto.png" alt="">
+                            </picture>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="dfemanual-color-bg" style="background: #ffffff;">
+    <div class="govuk-width-container" style="padding: 0px 0px 80px 0px">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Support</h2>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <p class="govuk-body">Where to get help and support with Figma if you need it.</p>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <h3>
+                    DfE community channels
+                </h3>
+                <p><a href="https://ukgovernmentdfe.slack.com/archives/C06169P51D2" target="_blank" class="govuk-link"
+                        rel="noopener noreferrer">#figma</a> or <a
+                        href="https://ukgovernmentdfe.slack.com/archives/C7JG0399S" target="_blank" class="govuk-link"
+                        rel="noopener noreferrer">#design</a></p>
+
+                <h3>
+                    For access and licences
+                </h3>
+                <p><a href="https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL" target="_blank" class="govuk-link"
+                        rel="noopener noreferrer">#digital-tools-support</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

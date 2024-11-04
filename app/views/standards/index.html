@@ -1,0 +1,149 @@
+{% set pageName = "Standards" %}
+{% set canonical = "https://design.education.gov.uk/standards"%}
+{% set pageDescription = "Our work to create a set of design standards that are created with purpose, sustainable,
+proportionate and appropriate for design in the Department for Education." %}
+{% set selectedNav = "Standards" %}
+{% set lastUpdated = "February 2024" %}
+{% set backlog_issue_id = "231" %}
+
+{% extends "layouts/page.html" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+                <p class="govuk-body-l">{{pageDescription}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-l">Why have a design standard?</h2>
+
+
+                <p>Design standards are important for establishing a unified and effective approach to creating digital
+                    products and
+                    services. They ensure that every element of a user's interaction is considered, from initial ideas
+                    in discovery,
+                    through to the live running of a service.</p>
+
+
+                <p>Having a design standard enables us to:</p>
+
+                <ul>
+                    <li>ensure consistency across all digital products and services, providing users with a familiar and
+                        intuitive
+                        experience</li>
+                    <li>enhance usability by focusing on user needs and goals, we make our services more intuitive and
+                        easier to
+                        use</li>
+                    <li>promote accessibility and inclusive design practices, guaranteeing that our services are
+                        accessible to all
+                        users, including those with
+                        disabilities</li>
+                    <li>support sustainability by encouraging designs that consider environmental and technical impacts
+                    </li>
+                    <li>improve performance through continuous monitoring and iteration based on user feedback and data
+                    </li>
+                    <li>encourage openness and collaboration by sharing our designs and findings openly to improve
+                        through
+                        collective
+                        knowledge</li>
+                </ul>
+
+                <p>These will ensure as a department, we create user-experiences that are accessible, sustainable, and
+                    user-centric.
+                </p>
+
+                <h2 class="govuk-heading-l">Proposed standards</h2>
+
+                <p>The scope of the design standards encompasses all aspects of digital product and service delivery
+                    within the department.</p>
+
+                <h3>1. Establish and define the user experience</h3>
+                <p>User goals, needs, and processes in the design of the product or service must be explicitly defined,
+                    mapped, and evaluated.</p>
+
+                <h3>2. Design for sustainability</h3>
+                <p>Services must be designed to be efficient, and you must consider the environmental and technical
+                    impact of what you design.</p>
+
+                <h3>3. Monitor performance of the design</h3>
+                <p>Analyse and improve the user experience of digital products and services through the qualitative and
+                    quantitative collection of usage data.</p>
+
+                <h3>4. Use the plain language standard</h3>
+                <p>Use the plain language standard, plain English, the DfE style guide to ensure users get a
+                    consistent experience, tone of voice and simple language when using our products and services.</p>
+
+                <h3>5. Design consistently</h3>
+                <p>Develop and adhere to the GOV.UK and DfE design systems. Iterate guidelines for usability, design
+                    patterns and components.</p>
+
+                <h3>6. Track user satisfaction</h3>
+                <p>Collect feedback through surveys, research interviews and usability testing to determine user
+                    satisfaction. Set targets for improvement, publish data, and iterate regularly using evidence and
+                    data.</p>
+
+                <h3>7. Design and build for accessible and inclusive design</h3>
+                <p>Ensure that your products and services meet WCAG 2.2 Level AA or higher. Use a combination of
+                    user-testing, manual and automated testing, alongside design reviews and crits to ensure cognitive
+                    biases are not introduced into design.</p>
+
+                <h3>8. Work openly</h3>
+                <p>Share your prototypes in the open (where they are not subject to confidentiality restrictions),
+                    publishing all prototypes into GitHub, maintaining the prototype list and regularly publishing
+                    design history posts detailing evidence for changes and findings from research and usability
+                    testing.</p>
+
+                <h2 class="govuk-heading-l">Want to discuss these standards?</h2>
+
+                <p>You can <a href="/design-ops">get in touch with the DesignOps team</a> to discuss our work on
+                    standards.</p>
+
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+
+                <h2 class="govuk-heading-m">Timeline</h2>
+
+
+                <div class="dfe-timeline">
+                    <ol>
+                        <li class="active">
+                            <h3 class="govuk-heading-s">Drafting</h3>
+                            <p>Started January 2024.</p>
+                        </li>
+                        <li class="inactive">
+                            <h3 class="govuk-heading-s">Profession review</h3>
+                            <p>Not started</p>
+                        </li>
+                        <li class="inactive">
+                            <h3 class="govuk-heading-s">Approval</h3>
+                            <p>Not started</p>
+                        </li>
+                        <li class="inactive">
+                            <h3 class="govuk-heading-s">Publication</h3>
+                            <p>Not started</p>
+                        </li>
+                        <li class="inactive">
+                            <h3 class="govuk-heading-s">Maintenance</h3>
+                            <p>Not started</p>
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
