@@ -55,14 +55,53 @@
         
         <h3>Read information about an establishment</h3>
 
-        <p>When users have selected an establishment from the search results page, take them to a separate page which has more information about the establishment.</p>
+        <p>This variation has 3 pages:</p>
+
+        <ol>
+          <li>Page with a search box, for basic keyword searching.</li>
+          <li>Establishment results list, showing the most important information about each establishment. Allow users to choose which option they want to see detailed information about.</li>
+          <li>Establishment details, showing detailed information about the selected establishment.</li>
+        </ol>
 
         <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
           <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-basic.png"
             alt="Search an establishment for read-only purpose (basic)" width="100%">
           <figcaption>Read information about an establishment - basic version</figcaption>
         </figure>
+
+        <p><strong>Page with a search box</strong></p>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-reading-project-notes.html', 'Reading project notes', 'reading-project-notes',
+          codeSnippet.htmlCodeReadingProjectNotes) }}
+
+        <p><strong>Establishment results list</strong></p>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-reading-project-notes.html', 'Reading project notes', 'reading-project-notes',
+          codeSnippet.htmlCodeReadingProjectNotes) }}
+
+        <p><strong>Establishment details</strong></p>
+          {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-reading-project-notes.html', 'Reading project notes', 'reading-project-notes',
+            codeSnippet.htmlCodeReadingProjectNotes) }}
         
+        <h4>Progressive enhancement</h4>
+
+        <p>You can use <a href="https://github.com/alphagov/accessible-autocomplete">autocomplete component on GitHub</a> as a progressive enhancement to the search box.</p>
+        
+        <p>This will reduce the number of pages in the journey to 2:</p>
+
+        <ol>
+          <li>Page with a search box. Present a list of results under the text input, as users type. When users select a result from the dynamic search list and then Continue, take them to the next page.</li>
+          <li>Establishment details, showing detailed information about the selected establishment.</li>
+        </ol>
+
+        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+          <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-progressive-enhancement.png"
+            alt="Search an establishment for read-only purpose (progressive enhancement)" width="100%">
+          <figcaption>Read information about an establishment - progressive enhancement</figcaption>
+        </figure>
+
+        <p><strong>Page with a search box (progressive enhancement)</strong></p>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/notes/example-reading-project-notes.html', 'Reading project notes', 'reading-project-notes',
+        codeSnippet.htmlCodeReadingProjectNotes) }}
+
         <h3>Select an establishment to store information about it</h3>
 
         <p>When users have selected an establishment from the search results page, take them to a separate page that shows detailed information about the establishment.</p>
@@ -77,6 +116,8 @@
           <figcaption>Select an establishment to store information about it - basic version</figcaption>
         </figure>
         
+
+        <!-- BEFORE -->
         <h3>Autocomplete</h3>
 
         <p>You can use <a href="https://github.com/alphagov/accessible-autocomplete">autocomplete</a> as a progressive enhancement to the search page. This will present a list of results under the text input, as users type.</p>
