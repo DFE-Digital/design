@@ -1,0 +1,76 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Contact details design pattern - contact per row (read only) | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      DfE contacts
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 1 job title 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Alex James<br/>
+          alex.james@example.com
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 2 job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Name<br/>
+          email address here
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Trust contacts
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 1 job title 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Alex James<br/>
+          alex.james@example.com
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 2 job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Name<br/>
+          email address here
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact person 3 job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Name<br/>
+          email address here
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+{% endblock %}
