@@ -2,7 +2,7 @@
 {% import "../code-frame.html" as sample %}
 {% import "./code-snippets.html" as codeSnippet %}
 
-{% set pageName = "Risk ratings" %}
+{% set pageName = "Risk rating" %}
 {% set pageDescription = "Reading and updating a risk rating and summary." %}
 {% set pageCaption = "Regional Services Division design pattern" %}
 {% set selectedNav = "Design system" %}
@@ -77,7 +77,11 @@
       <li><a href="https://design-system.service.gov.uk/components/button/">button</a> to save the updated rating and summary</li>
     </ul>
 
-    <p>When users update the information and click the button, take them back to the summary card page. Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/">success banner</a> to assure users that the rating and summary have been updated.</p>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/risk-rating/example-risk-rating.html', 'Risk rating', 'risk-rating', codeSnippet.htmlCodeRiskRating) }}
+
+    <p>When users update the information and click the button, take them back to the summary card page.</p> 
+      
+    <p>Show a <a href="https://design-system.service.gov.uk/components/notification-banner/success/">success banner</a> to assure users that the rating and summary have been updated.</p>
     
     {{ sample.code('/design-system/rsd-design-system/design-patterns/risk-rating/example-updating-risk-rating-success-banner.html', 'Updating risk rating success banner', 'updating-risk-rating-success-banner', codeSnippet.htmlCodeUpdatingRiskRatingSuccessBanner) }}
 
