@@ -1,0 +1,41 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Risk rating summary card (read-only) design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<style>
+  .dfe-tag--amber {
+    color: #66420d;
+    background: #ffe4bc;
+  }
+</style>
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+    Overall risk
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Risk rating
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag dfe-tag--amber">Amber</strong>&nbsp;<strong class="govuk-tag govuk-tag--green">Green</strong>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Risk summary
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis et ex ac egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+{% endblock %}
