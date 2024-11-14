@@ -27,7 +27,7 @@
     "express": "^4.19.2",
     "express-force-https": "^1.0.0",
     "express-session": "^1.17.3",
-    "govuk-frontend": "^5.1.0",
+    "govuk-frontend": "^5.7.1",
     "govuk-markdown": "^0.4.0",
     "lunr": "^2.3.9",
     "marked": "^4.3.0",

@@ -85,7 +85,7 @@ gulp.task(
   'default',
   gulp.series(
     'process-scss',
-    'copy-assets',
+    // 'copy-assets',
     'process-js',
     'process-images-copy',
     'watch'
