@@ -1,8 +1,9 @@
 {% extends "layouts/content-with-sidenav.html" %}
 {% import "../code-frame.html" as sample %}
+{% import "./code-snippets.html" as codeSnippet %}
 
 {% set pageName = "Search for an establishment" %}
-{% set pageDescription = "Show information of an establishment and allow certain users to select the one they want." %}
+{% set pageDescription = "Search for and select an establishment, like an academy trust or school." %}
 {% set pageCaption = "Regional Services Division design pattern" %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
@@ -11,137 +12,8 @@
 {% set isChildSection = "true"%}
 
 {% set isSubNavSection = "true" %}
-{% set lastUpdated = "June 2024 "%}
-{% set backlog_issue_id = "105" %}
-
-{% set htmlCodeContactPerCardReadOnly = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-summary-card&quot;&gt;
-  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-      Project managed by
-    &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Name
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          Alex James
-        &lt;/dd&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Email address
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          alex.james@example.com
-        &lt;/dd&gt;
-      &lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;govuk-summary-card&quot;&gt;
-  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-      Team lead
-    &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Name
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          
-        &lt;/dd&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Email address
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          
-        &lt;/dd&gt;
-      &lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code>' %}
-
-{% set htmlCodeContactPerRowReadOnly = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-summary-card&quot;&gt;
-  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-      DfE contacts
-    &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Contact person 1 job title 
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          Alex James&lt;br/&gt;
-          alex.james@example.com
-        &lt;/dd&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Contact person 2 job title
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          Name&lt;br/&gt;
-          email address here
-        &lt;/dd&gt;
-      &lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;govuk-summary-card&quot;&gt;
-  &lt;div class=&quot;govuk-summary-card__title-wrapper&quot;&gt;
-    &lt;h2 class=&quot;govuk-summary-card__title&quot;&gt;
-      Trust contacts
-    &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-summary-card__content&quot;&gt;
-    &lt;dl class=&quot;govuk-summary-list&quot;&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Contact person 1 job title 
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          Alex James&lt;br/&gt;
-          alex.james@example.com
-        &lt;/dd&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Contact person 2 job title
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          Name&lt;br/&gt;
-          email address here
-        &lt;/dd&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-        &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-          Contact person 3 job title
-        &lt;/dt&gt;
-        &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-          Name&lt;br/&gt;
-          email address here
-        &lt;/dd&gt;
-      &lt;/div&gt;
-    &lt;/dl&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code>' %}
+{% set lastUpdated = "October 2024 "%}
+{% set backlog_issue_id = "287" %}
 
 {% block beforeContent %}{% endblock %}
 
@@ -150,87 +22,140 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-        <p>Show contact details and allow certain users to edit them.</p>
-
-        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-          <img src="https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/check-a-service-is-suitable-new.svg"
-            alt="The flow of searching of an establishment" width="100%" style="border: 1px solid #b1b4b6;">
-          <figcaption>The flow of searching of an establishment</figcaption>
-        </figure>
-
+      <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+        <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-basic.png"
+          alt="A 'search for an establishment' journey. It has a page with a search box, an establishments results page with list items, and an establishment details page." width="100%">
+      </figure>
 
         <h2>When to use this pattern</h2>
-        <p>When users need to search for information about an establishment (e.g. academy trust), or provide details about the establishment.</p>
 
-        <h2>How it works </h2>
+        <p>There are 2 variations you can use, depending on the context:</p>
 
-        <p>There could be a few different scenarios:</p>
+        <ol>
+          <li>Read information about an establishment. Use this variation to help users find detailed information about an establishment, like an academy trust or a school.</li>
+          <li>Select an establishment. Use this one to help users store details about an establishment. For example, in a project on a case management system.</li>
+        </ol>
+        
+        <h2>Read information about an establishment</h2>
 
+        <p>The variation has 3 pages:</p>
+
+        <ol>
+          <li>Page with a search box, for basic keyword searching.</li>
+          <li>Establishment results list, showing the most important information about each establishment. Allow users to choose which option they want to see detailed information about.</li>
+          <li>Establishment details, showing detailed information about the selected establishment.</li>
+        </ol>
+
+        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+          <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-basic.png"
+            alt="A 'search for an establishment' journey. It has a page with a search box, an establishments results page with list items, and an establishment details page." width="100%">
+          <figcaption>A 'search for an establishment' journey. It has a page with a search box, an establishments results page with list items, and an establishment details page.</figcaption>
+        </figure>
+
+        <h4>Page with a search box</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-search-box-page-basic.html', 'Page with a search box (basic)', 'search-box-page-basic-1',
+          codeSnippet.htmlCodeSearchBoxPageBasic) }}
+
+        <h4>Establishment results list</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-establishment-results-list-read-only.html', 'Establishment results list', 'establishment-results-list-read-only',
+          codeSnippet.htmlCodeEstablishmentResultsListReadOnly) }}
+
+        <h4>Establishment details</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-establishment-details-read-only.html', 'Establishment details (read only)', 'establishment-details-read-only',
+            codeSnippet.htmlCodeEstablishmentDetailsReadOnly) }}
+        
+        <h3>Progressive enhancement</h3>
+
+        <p>You can use the <a href="https://github.com/alphagov/accessible-autocomplete">autocomplete component on GitHub</a> as a progressive enhancement to the search box.</p>
+        
+        <p>This will reduce the number of pages in the journey to 2:</p>
+
+        <ol>
+          <li>Page with a search box. Present a list of results under the text input, as users type. When users select a result from the dynamic search list and then Continue, take them to the next page.</li>
+          <li>Establishment details, showing detailed information about the selected establishment.</li>
+        </ol>
+
+        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+          <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-read-only-progressive-enhancement.png"
+            alt="A 'search for an establishment' journey. It has a page with a search box and autocomplete as a progressive enhancement. It also has an establishment details page." width="100%">
+          <figcaption>A 'search for an establishment' journey. It has a page with a search box and autocomplete as a progressive enhancement. It also has an establishment details page.</figcaption>
+        </figure>
+
+        <h4>Page with a search box (autocomplete)</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-search-box-page-progressive-enhancement.html', 'Page with a search box (progressive enhancement)', 'search-box-page-progressive-enhancement-1',
+          codeSnippet.htmlCodeSearchBoxPageProgressiveEnhancement) }}
+
+        <h2>Select an establishment</h2>
+
+        <p>This variation has 3 pages:</p>
+
+        <ol>
+          <li>Page with a search box, for basic keyword searching.</li>
+          <li>Establishment results list, showing the most important information about each establishment. Allow users to select an option from the list.</li>
+          <li>Establishment details, showing detailed information about the selected establishment. Allow users to confirm if this is the establishment they were looking for. If it is, let them select it so they can store information about it somewhere. If it's not, take them back to the establishment results list.</li>
+        </ol>
+
+        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+          <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-journey-basic.png"
+            alt="A 'search for an establishment' journey. It has a page with a search box, an establishments results page with radio items, and an establishment details page with an 'Is this the correct establishment?' radio button." width="100%">
+          <figcaption>A 'search for an establishment' journey. It has a page with a search box, an establishments results page with radio items, and an establishment details page with an 'Is this the correct establishment?' radio button.</figcaption>
+        </figure>
+
+        <h4>Page with a search box</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-search-box-page-basic.html', 'Page with a search box (basic)', 'search-box-page-basic-2',
+          codeSnippet.htmlCodeSearchBoxPageBasic) }}
+
+        <h4>Establishment results list</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-establishment-results-list-select-establishment.html', 'Establishment results list (select establishment)', 'establishment-results-list-select-establishment',
+            codeSnippet.htmlCodeEstablishmentResultsListSelectEstablishment) }}
+
+        <h4>Establishment details</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-establishment-details-select-establishment.html', 'Establishment details (select establishment)', 'establishment-details-select-establishment',
+            codeSnippet.htmlCodeEstablishmentDetailsSelectEstablishment) }}
+        
+        <h3>Progressive enhancement</h3>
+
+        <p>You can use the <a href="https://github.com/alphagov/accessible-autocomplete">autocomplete component on GitHub</a> as a progressive enhancement to the search box.</p>
+        
+        <p>This will reduce the number of pages in the journey to 2:</p>
+
+        <ol>
+          <li>Page with a search box. Present a list of results under the text input, as users type. When users select a result from the dynamic search list and then Continue, take them to the next page.</li>
+          <li>Establishment details, showing detailed information about the selected establishment. Allow users to confirm if this is the establishment they were looking for. If it's not, take them back to the page with a search box.</li>
+        </ol>
+
+        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
+          <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/search-for-an-establishment-journey-progressive-enhancement.png"
+            alt="A 'search for an establishment' journey. It has a page with a search box and autocomplete as a progressive enhancement. It also has an establishment details page with an 'Is this the correct establishment?' radio button." width="100%">
+          <figcaption>A 'search for an establishment' journey. It has a page with a search box and autocomplete as a progressive enhancement. It also has an establishment details page with an 'Is this the correct establishment?' radio button.</figcaption>
+        </figure>
+
+        <h4>Page with a search box (autocomplete)</h4>
+        {{ sample.code('/design-system/rsd-design-system/design-patterns/search-for-an-establishment/example-search-box-page-progressive-enhancement.html', 'Page with a search box (progressive enhancement)', 'search-box-page-progressive-enhancement-2',
+          codeSnippet.htmlCodeSearchBoxPageProgressiveEnhancement) }}
+
+        <h2>Reference numbers</h2>
+
+        <p>There are many different unique references for establishments, including:</p>
         <ul>
-          <li>searching for an establishment as read-only information</li>
-          <li>searching for an establishment and add the retrieved result to a one-off journey</li>
-          <li>searching for an establishment and store the retrieved result into your service</li>
+          <li>Unique Reference Number (URN) – from <a href="https://get-information-schools.service.gov.uk">Get Information about Schools</a></li>
+          <li>UK Provider Reference Number (UKPRN) - from <a href="https://www.ukrlp.co.uk">UK Register of Learning Providers</a></li>
+          <li>Group Identifier (Group ID) - also known as Trust Reference Number (TRN)</li>
+          <li>Companies House number - from <a href="https://find-and-update.company-information.service.gov.uk">Find and update company information</a></li>
         </ul>
+        <p>You should research with your users to see which references they are familiar with.</p>
+        <p>If they are familiar with one or more references, design for them on the search box page. This will save users' time and help avoid errors.</p>
+
+        <h2>Error messages</h2>
+        <p>Make sure errors follow the <a href="https://design-system.service.gov.uk/components/error-message/">error message</a> guidance. Show specific error messages for specific error states.</p>
         
-        <h3>Searching for an establishment as read-only information</h3>
-
-        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-          <img src="https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/check-a-service-is-suitable-new.svg"
-            alt="Searching for an establishment as read-only information" width="100%" style="border: 1px solid #b1b4b6;">
-          <figcaption>The flow of searching for an establishment as read-only information</figcaption>
-        </figure>
-
-        <h4>Basic Design</h4>
-
-        <p>input page (simple input box)</p>
-        <p>results page to confirm a single result (card per result)</p>
-        
-        <h4>Progressive enhancement</h4>
-
-        <p>input page (autocomplete)</p>
-        <p>result page (single result)</p>
-
-        <h3>Searching for an establishment and add the retrieved result to a one-off journey</h3>
-        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-          <img src="https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/check-a-service-is-suitable-new.svg"
-            alt="Searching for an establishment and add the retrieved result to a one-off journey" width="100%" style="border: 1px solid #b1b4b6;">
-          <figcaption>searching for an establishment and add the retrieved result to a one-off journey</figcaption>
-        </figure>
-
-        <p>input page (simple input box)</p>
-        <p>results page to confirm a single result (card per result)</p>
-        
-        <h4>Progressive enhancement</h4>
-
-        <p>input page (autocomplete)</p>
-        <p>result page (single result)</p>
-
-
-        <h3>Searching for an establishment and store the retrieved result into your service</h3>
-        <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
-          <img src="https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/check-a-service-is-suitable-new.svg"
-            alt="Searching for an establishment and store the retrieved result into your service" width="100%" style="border: 1px solid #b1b4b6;">
-          <figcaption>searching for an establishment and store the retrieved result into your service</figcaption>
-        </figure>
-
-        <h4>Basic Design</h4>
-
-        <p>read-only start page with a change link (could be empty)</p>
-        <p>input page (simple input box)</p>
-        <p>results page to confirm a single result (card per result)</p>
-        <p>read-only start page with the updated result</p>
-        
-        <h4>Progressive enhancement</h4>
-
-        <p>read-only start page with a change link (could be empty)</p>
-        <p>input page (autocomplete)</p>
-        <p>results page to confirm a single result (card per result)</p>
-        <p>read-only start page with the updated result</p>
+        <h3>If the search box is empty</h3>
+        <p>Say 'Enter a trust name or reference number'.</p>
 
         <h2>Research on this pattern</h2>
-        <p>We have not done research on this design pattern, but the pattern is being used in <a href="https://design-histories.education.gov.uk/prepare-conversions-transfers">Prepare conversions and transfers</a> and <a href="https://design-histories.education.gov.uk/complete-conversions-transfers-and-changes">Complete conversions, transfers and changes</a> to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database (opens in DfE Microsoft List)</a>:</p>
+        <p>We have not done research on this design pattern, but parts of the pattern are being used in <a href="https://design-histories.education.gov.uk/find-information-about-academies-trusts">Find information about academies and trusts</a> and <a href="https://design-histories.education.gov.uk/manage-free-school-projects">Manage free school projects</a> to meet this need from our <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user needs database (opens a DfE Microsoft List)</a>:</p>
         
-        <p>User need 22: When I have a question about project data in MAP Complete and Prepare, I need the name and email address of the DO or RCS caseworker responsible for the project, so I can get in touch with them to address my query.</p>
+        <p><strong>User need 96:</strong> When I need to find information about an establishment, I need flexibility in what I can search by, so that I can easily find the school/trust I am looking for.</p>
 
     </div>
 </div>
