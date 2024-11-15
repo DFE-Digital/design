@@ -1,0 +1,17 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Deleting notes - are you sure message design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<h1 class="govuk-heading-l">Are you sure you want to delete this note?</h1>
+<p class="govuk-body">This will remove the note from the project.</p>
+<p class="govuk-body">If this note contains outdated information, it may be better to leave a new note with an update instead.</p>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Delete
+  </button>
+  <a class="govuk-link" href="#">Cancel</a>
+</div>
+{% endblock %}
