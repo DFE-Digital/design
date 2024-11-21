@@ -1,0 +1,155 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Content design" %}
+{% set pageDescription = "Content designers write content that is easy to understand, in plain English and help people
+get the outcomes they need using our services." %}
+{% set selectedNav = "Professions" %}
+{% set setSelectedSideNav = "SideNav Text" %}
+{% set lastUpdated = "February 2024"%}
+{% set backlog_issue_id = "22" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/professions">Professions</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">{{pageName}}</li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l">{{pageDescription}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-quarter">
+        {% include "includes/_side-nav.html"%}
+      </div>
+      <div class="govuk-grid-column-three-quarters">
+
+        <h2 class="govuk-heading-l">What a content designer does</h2>
+        <p>Content designers are responsible for:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>ensuring content is easy to understand, using plain English</li>
+          <li>working on single pieces of content or across the user journey of a service</li>
+          <li>making sure content is presented in the right place in the best format</li>
+          <li>getting involved with projects from discovery and work throughout the delivery lifecycle</li>
+          <li>contribute into, and support, other disciplines and help to shape direction</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Expectations of content designers</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>work to <a class="govuk-link" href="/content-design/">DfE content design guidelines</a>
+          </li>
+          <li>ensure that the <a class="govuk-link"
+              href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style" target="_blank">GOV.UK style
+              guide</a> is followed for writing content on GOV.UK</li>
+          <li>ensure that design is done in line with <a class="govuk-link"
+              href="/accessibility/understanding-wcag/">accessibility guidelines</a>
+          </li>
+          <li>collaborate and share work with other content designers across DfE, not just within your portfolio</li>
+          <li>collaborate and work alongside other professions, including <a class="govuk-link"
+              href="https://dfedigital.blog.gov.uk/2017/12/21/using-pair-writing-to-improve-internal-guidance/"
+              target="_blank">pair writing</a>
+          </li>
+          <li>contribute and write <a class="govuk-link" href="https://design-histories.education.gov.uk">design
+              histories</a> detailing decisions to change a service</li>
+          <li>take part in design reviews, design crits, and 2i (2 eye) peer reviews</li>
+          <li>use our agreed <a href="/design-ops/tools">design tools</a>, Lucid, Hemingway, and Figma</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Retraining to become a content designer</h2>
+        <p class="govuk-body">If you're interested in retraining to become a content designer, here are some steps you
+          can take:</p>
+
+        <h3 class="govuk-heading-m">Learn about content design</h3>
+        <p class="govuk-body">Before starting your training, it's important to have a good understanding of what content
+          design is and what it entails.</p>
+
+        <p class="govuk-body">Research online, read books, attend events, and talk to professionals in the profession to
+          get an idea of what content design involves.</p>
+
+        <p class="govuk-body"> <a class="govuk-link" href="https://contentdesign.london/" target="_blank">Content Design
+            London</a> has some great books to read and courses to attend.</p>
+
+        <h3 class="govuk-heading-m">Develop relevant skills</h3>
+        <p class="govuk-body">Content design requires a combination of skills, including writing, editing, user
+          research, UX/UI design, and project management. Consider taking courses or workshops that can help you develop
+          these skills.</p>
+
+        <h2 class="govuk-heading-l">Build a portfolio</h2>
+
+        <p class="govuk-body">A portfolio is an essential tool for showcasing your skills and experience. Develop a
+          portfolio that showcases your content design skills and includes examples of your work.</p>
+
+        <h2 class="govuk-heading-l">Get experience</h2>
+
+        <p class="govuk-body">Look for opportunities to gain experience in content design. This can include
+          volunteering, internships, or entry-level positions in writing, editing, or related professions.</p>
+
+        <p class="govuk-body">As you gain skills and experience, look for opportunities to work on design projects. This
+          can help you gain practical experience and make connections in the profession. You can ask to shadow designers
+          across the department who are working on services. If you want to find out more, <a
+            href="mailto:andy.jones@education.gov.uk?Subject=Career progression - Shadowing design"
+            class="govuk-link">get in contact with the Head of Design Profession, Andy Jones</a>.</p>
+
+        <p class="govuk-body">You can read our <a
+            href="https://dfe-digital.github.io/dfe-job-descriptions/content_design/index.html" target="_blank"
+            rel="noopener noreferrer" class="govuk-link">content design job descriptions</a> for more information about
+          skills and responsibilities.</p>
+
+        <h2 class="govuk-heading-l">Consider further education</h2>
+
+        <p class="govuk-body">There are many courses and programs available that offer training in content design,
+          including master's degrees, postgraduate certificates, and short courses.</p>
+
+        <h2 class="govuk-heading-l">Network</h2>
+
+        <p class="govuk-body">Attend events and conferences to meet other content designers and learn about the latest
+          trends and best practices in the profession. Consider joining a professional association, such as <a
+            href="https://contentdesign.london/content-club" target="_blank" rel="noopener noreferrer"
+            class="govuk-link">Content Club</a>, to connect with other designers and access resources and training
+          opportunities.</p>
+
+        <p class="govuk-body">Other training and networks include:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <a href="https://www.gov.uk/service-manual/design/user-centred-design-training-and-events" target="_blank"
+              rel="noopener noreferrer" class="govuk-link">User-centred design training and events</a>
+          </li>
+          <li>
+            <a href="https://agilecommshandbook.com/" target="_blank" rel="noopener noreferrer" class="govuk-link">Agile
+              comms handbook</a>
+          </li>
+          <li>
+            <a href="https://trello.com/b/p76V0s1F/content-design-toolkit" target="_blank" rel="noopener noreferrer"
+              class="govuk-link">Content design toolkit - Trello</a>
+          </li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Keep learning</h2>
+
+        <p class="govuk-body">Content design is a constantly evolving profession, so it's important to keep learning and
+          staying up-to-date on the latest trends and best practices. Consider taking courses, attending events, or
+          joining professional associations to stay informed and connected to others in the profession.</p>
+
+      </div>
+</section>
+{% endblock %}

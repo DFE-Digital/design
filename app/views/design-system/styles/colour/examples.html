@@ -1,0 +1,242 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Colour" %}
+{% set pageDescription = "Department for Education colour styles for services." %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Styles"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set dateUpdated = "25 July 2023 "%}
+{% set backlog_issue_id = "88" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system/styles">Styles</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          Colour
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/styles/colour">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/styles/colour/examples">Examples</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+
+      <h2 class="govuk-heading-l">Colour modifiers and tools</h2>
+
+      <p>You can use tint and shades of the colour palette to introduce different ways of using the colours.</p>
+
+      <h3 class="govuk-heading-m">Tint</h3>
+      <p>Make a colour lighter by mixing it with white.</p>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            $colour
+          </dt>
+          <dd class="govuk-summary-list__value">
+            The colour to tint
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            $percentage
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Percentage of white to mix with $colour
+          </dd>
+        </div>
+      </dl>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Tint usage</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p>Adds 50% white to the primary dfe blue color.</p>
+          <code>$govuk-tint($color_dfe-blue, 50);</code>
+        </div>
+      </div>
+
+
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">dfe-blue tints</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+
+          <div class="dfe-manual-shade-grid">
+            <div class="dfe-manual-shade-grid--chip blue-0">0</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-10">10</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-20">20</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-30">30</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-40">40</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-50">50</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-60">60</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-70">70</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-80">80</div>
+
+            <div class="dfe-manual-shade-grid--chip blue-90">90</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">dfe-seconday-blue tints</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+
+          <div class="dfe-manual-shade-grid">
+            <div class="dfe-manual-shade-grid--chip sec-blue-0">0</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-10">10</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-20">20</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-30">30</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-40">40</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-50">50</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-60">60</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-70">70</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-80">80</div>
+            <div class="dfe-manual-shade-grid--chip sec-blue-90">90</div>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 class="govuk-heading-m">Shade</h3>
+      <p>Make a colour darker by mixing it with black.</p>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            $colour
+          </dt>
+          <dd class="govuk-summary-list__value">
+            The colour to shade
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            $percentage
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Percentage of black to mix with $colour
+          </dd>
+        </div>
+      </dl>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Shade usage</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p>Adds 50% black to the primary dfe blue color.</p>
+          <code>$govuk-shade($color_dfe-blue, 50);</code>
+        </div>
+      </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">dfe-blue shade</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+
+      <div class="dfe-manual-shade-grid">
+        <div class="dfe-manual-shade-grid--chip blue-shade-0">0</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-10">10</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-20">20</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-30">30</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-40">40</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-50">50</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-60">60</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-70">70</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-80">80</div>
+
+        <div class="dfe-manual-shade-grid--chip blue-shade-90">90</div>
+      </div>
+    </div>
+  </div>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">dfe-seconday-blue shade</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+
+      <div class="dfe-manual-shade-grid">
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-0">0</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-10">10</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-20">20</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-30">30</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-40">40</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-50">50</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-60">60</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-70">70</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-80">80</div>
+        <div class="dfe-manual-shade-grid--chip sec-blue-shade-90">90</div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

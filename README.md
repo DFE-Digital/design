@@ -23,8 +23,9 @@ recaptchaSecret=x
 feedbackTemplateID=x
 notifyKey=preprod-x
 BASE_URL=http://localhost:3066
+sessionkey=x
 ```
-Contact Design Ops for the keys to use in your local environment. These must never be checked in to source code - the file is included in the .GITIGNORE file.
+Contact DesignOps for the keys to use in your local environment. These must never be checked in to source code - the file is included in the .GITIGNORE file.
 
 Run `npm install`
 

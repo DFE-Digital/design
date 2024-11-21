@@ -1,0 +1,57 @@
+{% extends "layouts/content-full-width.html" %}
+{% set selectedNav = "DesignOps" %}
+{% set pageName = "Our design priorities" %}
+{% set pageDescription = "Our design priorities are central to our commitment to designing inclusive, accessible, usable
+services, and maturing the DfE design profession." %}
+
+{% block hero %}
+<section class="dfe-page-header">
+   <div class="dfe-width-container">
+      <div class="govuk-breadcrumbs">
+         <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+               <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+               <a class="govuk-breadcrumbs__link" href="/design-ops">DesignOps</a>
+            </li>
+
+            <li class="govuk-breadcrumbs__list-item">
+               {{pageName}}
+            </li>
+         </ol>
+      </div>
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+            <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+
+
+<section>
+   <div class="dfe-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+
+            <h2 class="govuk-heading-l">1. Build DDT capability across the department</h2>
+            <p>We will do this through a combination of how we do recruitment, help develop skills and professoins and implement capability based pay.</p>
+
+            <h2 class="govuk-heading-l">2. Raise standards across all DfE services</h2>
+            <p>We will do this by developing accessibility and design standards, alongside a supporting set of frameworks, guidance, and principles.</p>
+
+            <h2 class="govuk-heading-l">3. Increase productivity across delivery teams</h2>
+            <p>We will do this by enabling centralised components and patterns to be developed and shared while ensuring the DfE design system and DfE frontend support designers and developers.</p>
+
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}

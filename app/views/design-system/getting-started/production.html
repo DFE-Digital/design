@@ -1,0 +1,63 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Install DfE Frontend" %}
+{% set pageDescription = "Learn how to quickly get started with DfE Frontend to build consistent Department for
+Education products and services." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "February 2024" %}
+{% set backlog_issue_id = "" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item">
+          Getting started
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+              <li class="app-sub-navigation__item">
+                  <a class="app-sub-navigation__link"  href="/design-system/getting-started">For prototyping</a>
+              </li>
+              <li class="app-sub-navigation__item">
+                <a class="app-sub-navigation__link"   aria-current="page" href="/design-system/getting-started/production">Production</a>
+            </li>
+          </ul>
+      </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section>
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">Using DfE Frontend in production</h2>
+
+<p>We're working on this guidance.</p>
+
+       
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

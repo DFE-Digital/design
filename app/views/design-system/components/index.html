@@ -1,7 +1,9 @@
-{% extends "layouts/content-with-sidenav.html" %}
+{% extends "layouts/content-full-width.html" %}
+
 
 {% set pageName = "Components" %}
-{% set pageDescription = "Components are the building blocks for consistent looking, accessible, usable services in the Department for Education." %}
+{% set pageDescription = "Components are the building blocks for consistent looking, accessible, usable services in the
+Department for Education." %}
 {% set selectedNav = "Design system" %}
 {% set parentSection = "Components"%}
 {% set isChildSection = "true"%}
@@ -9,67 +11,134 @@
 {% set dateUpdated = "25 July 2023 "%}
 {% set backlog_issue_id = "90" %}
 
-{# Add changes with newest at the top #}
-{% set changeLog = [
-  {
-    change: 'Adding the style to links so the states work correctly.',
-    changeDate: '25 July 2023'
-  },
-  {
-    change: 'Linking to correct issue number. See <a href="https://github.com/DFE-Digital/design/issues/90" target="_blank">GitHub issue #90</a>',
-    changeDate: '25 July 2023'
-  }
-]
-%}
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="dfe-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
+        </li>
 
-
-{% block beforeContent %}{% endblock %}
+        <li class="govuk-breadcrumbs__list-item">
+          Styles
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
+        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/styles/">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="/design-system/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
 
 {% block content %}
 
+<div class="dfe-width-container">
 
+  <h2 class="govuk-header-l">Published components</h2>
 
-  <p>The components in this section have been designed, built, tested, and implemented across several Department for Education services.</p>
+  <div class="dfe-grid-container">
 
-  <div class="govuk-inset-text">
-    To use these component <a href="/design-system/dfe-frontend" class="govuk-link">install DfE Frontend into your project</a> using the <abbr title="Node Package Manager">NPM</abbr> package or compiled CSS and Javascript.
+    <div class="dfe-card">
+      <div class="dfe-card-container">
+        <h3 class="govuk-heading-m">
+          <a href="/design-system/components/header"
+            class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Header</a>
+        </h3>
+        <p>Use the DfE header on internal services or those hosted on education.gov.uk</p>
+      </div>
+    </div>
+
   </div>
 
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Current components</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Component</th>
-      <th scope="col" class="govuk-table__header">Summary</th>
-      <th scope="col" class="govuk-table__header">Status</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/design-system/components/header" class="govuk-link">Header</a></th>
-      <td class="govuk-table__cell">Component for the blue DfE header for websites and services on education.gov.uk domains.</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Published</strong></td>
-    </tr>
-  </tbody>
-</table>
+  <h2 class="govuk-header-l govuk-!-margin-top-5">On our backlog</h2>
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Components being developed</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Component</th>
-      <th scope="col" class="govuk-table__header">Summary</th>
-      <th scope="col" class="govuk-table__header">Status</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Cards</th>
-      <td class="govuk-table__cell">Card component for grouping similar pieces of content together.</td>
-      <td class="govuk-table__cell"><a href="https://github.com/DFE-Digital/design/issues/75" class="govuk-link" rel="noopener noreferrer" target="_blank">Discuss on GitHub</a></td>
-    </tr>
-  </tbody>
-</table>
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter ">Component</th>
+        <th scope="col" class="govuk-table__header">Description</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric">Status</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/13"
+            target="_blank">Cards</a></th>
+        <td class="govuk-table__cell">A card component is a box-like container used to display information neatly,
+          featuring sections for text, images, and actions.</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--green">In
+            progress</strong></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/12"
+            target="_blank">Charts</a></th>
+        <td class="govuk-table__cell">Using charts in services to present data in an accessible way.</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">Not
+            started</strong></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/9"
+            target="_blank">Interruption page</a></th>
+        <td class="govuk-table__cell">A page which forces the user to read or take notice of important information
+          before continuing.</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">Not
+            started</strong></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/4"
+            target="_blank">Vertical navigation</a></th>
+        <td class="govuk-table__cell">A navigation component for multi-page products.</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">Not
+            started</strong></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/5"
+            target="_blank">Progress bar</a></th>
+        <td class="govuk-table__cell">A navigation component for helping a user understand where they are in a fixed journey or process.</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">Not
+            started</strong></td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/6"
+            target="_blank">Timeline</a></th>
+        <td class="govuk-table__cell">A vertical styled list of steps which can be numbered or blank to indicate a history or steps in a process.</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">Not
+            started</strong></td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/7"
+            target="_blank">Maintenance banner</a></th>
+        <td class="govuk-table__cell">A component which indicates product or service downtime which is temporary.</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">Not
+            started</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
 
 {% endblock %}
