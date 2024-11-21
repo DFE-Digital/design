@@ -1,54 +1,36 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-system/dfe-frontend"%}
 {% set pageName = "Using DfE Frontend" %}
 {% set pageDescription = "Using the frontend styles, components, and patterns in Department for Education services." %}
 {% set selectedNav = "Design system" %}
 {% set lastUpdated = "18 July 2023" %}
-{% set backlog_issue_id = "82" %}
-
-
-{% extends "layouts/content-full-width.html" %}
+{% set backlog_issue_id = "198" %}
+{% set parentSection = "dfefrontend"%}
+{% set isChildSection = "true"%}
 
 {% block hero %}
-<section class="dfe-page-header govuk-!-padding-bottom-5">
-  <div class="dfe-width-container">
-    <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/design-system">Design system</a>
-        </li>
-
-        <li class="govuk-breadcrumbs__list-item">
-          DfE Frontend
-        </li>
-      </ol>
-    </div>
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+  <div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{pageName}}</h1>
-        <p class="govuk-body-l govuk-!-margin-bottom-8">{{pageDescription}}</p>
+        <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="/design-system">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-quarter">
-        <h2 class="govuk-heading-s">Version</h2>
-        <strong class="govuk-tag">{{version}}</strong>
-        <strong class="govuk-tag">Alpha</strong>
-      </div>
-
-      <div class="govuk-grid-column-one-quarter">
-        <h2 class="govuk-heading-s">Last release</h2>
-        <p class="govuk-!-margin-bottom-0">{{lastUpdatedv | date('D MMM YYYY')}}</p>
-      </div>
-
-      <div class="govuk-grid-column-one-quarter">
-        <h2 class="govuk-heading-s">Package</h2>
-        <p class="govuk-!-margin-bottom-0"><a href="https://www.npmjs.com/package/dfe-frontend-alpha" target="_blank"
-            class="govuk-link">NPM Package</a></p>
-      </div>
-
-
     </div>
   </div>
 </section>
@@ -56,34 +38,61 @@
 
 
 {% block content %}
-
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
     </div>
     <div class="govuk-grid-column-three-quarters">
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Latest NPM package version</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Version</th>
+            <th scope="col" class="govuk-table__header">Last updated</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="https://www.npmjs.com/package/dfe-frontend"
+                target="_blank">dfe-frontend</a></th>
+            <th scope="row" class="govuk-table__header">{{version}}</th>
+            <td class="govuk-table__cell">{{lastUpdatedv | date('D MMMM YYYY') }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p>Use DfE Frontend when your product or service is:</p>
+
+      <ul>
+        <li>for internal staff</li>
+        <li>provided on the <>.education.gov.uk domain</li>
+        <li>provided on <>.service.gov.uk and you want to use components not in the GOV.UK Design System.</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        <p>If you're in a private beta, and hosting on <>.education.gov.uk, but your public beta and live service will
+            be on
+            <>.service.gov.uk, you do not need to use the DfE header.</p>
+      </div>
 
       <h2 class="govuk-heading-l">Using DfE Frontend to extend GOV Frontend</h2>
 
       <p>You cannot use DfE Frontend on it's own, it is not a replacement for <a
           href="https://frontend.design-system.service.gov.uk/">GOV.UK Frontend</a>. </p>
 
-      <p>Follow the <a href="/design-system/getting-started">getting started</a> guidance for installing DfE Frontend
+      <p>Follow the <a href="/design-system/installation">installation instructions</a> for installing DfE Frontend.
       </p>
 
       <p>Once installed, you can then make use of <a href="/design-system/styles">styles</a>, <a
-          href="/design-system/components">components</a>, and <a href="/design-system/patterns">patterns</a> in the
+          href="/design-system/dfe-frontend/components">components</a>, and <a
+          href="/design-system/dfe-frontend/patterns">patterns</a> in the
         design system.</p>
 
-      <h2 class="govuk-heading-l">When to use DfE Frontend</h2>
 
-      <p>Use DfE Frontend when your product or service is:</p>
-
-      <ul>
-        <li>for internal staff</li>
-        <li>provided on the education.gov.uk domain</li>
-        <li>provided on service.gov.uk and you want to use components not in the GOV.UK Design System.</li>
-      </ul>
 
       <h2 class="govuk-heading-l">Why you would use DfE Frontend</h2>
 
@@ -103,24 +112,18 @@
 
       <p>DfE Frontend is managed by the <a href="/design-ops">DesignOps team</a> and accepts contributions from the
         design community.</p>
-      <p>If you are building services and you create custom components or patterns which are not in the GOV.UK Design System, you must contribute these to the DfE Design System.</p>
+      <p>If you are building services and you create custom components or patterns which are not in the GOV.UK Design
+        System, you must contribute these to the DfE Design System in addition you must also contribute back to the <a
+          href="https://github.com/orgs/alphagov/projects/43/views/1" target="_blank">GOV.UK Design System backlog</a>
+        as per
+        Service Standard 13 - <a
+          href="https://apply-the-service-standard.education.gov.uk/service-standard/13-use-common-standards-components-patterns">Use
+          and contribute to open standards, common components and patterns</a>.</p>
 
-      <p>You should also contribute back to the <a href="https://github.com/orgs/alphagov/projects/43/views/1"
-          target="_blank">GOV.UK Design System backlog</a>.</p>
-
-      <p>You can submit contributions in the following ways:</p>
-
-      <ul>
-        <li><a href="https://github.com/DFE-Digital/dfe-frontend/issues" target="_blank">create an issue</a> in the
-          repository</li>
-        <li>Make the change as a pull request on the <a href="https://github.com/DFE-Digital/dfe-frontend"
-            target="_blank">repository</a></li>
-        <li><a href="mailto:design.ops@education.gov.uk?subject=DfE Frontend suggestion">email DesignOps</a> with your
-          suggestion</li>
-      </ul>
-
+      <p>You can find <a href="/design-system/dfe-frontend/contribute">guidance for making contributions to DfE
+          Frontend</a>.</p>
 
     </div>
   </div>
-
-  {% endblock %}
+</div>
+{% endblock %}

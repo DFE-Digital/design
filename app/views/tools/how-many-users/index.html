@@ -1,31 +1,18 @@
 {% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/tools/how-many-users"%}
 
 {% set pageName = " How many people?" %}
 {% set pageDescription = "Estimate how many people might have a disability, impairment or other characteristics which
 might affect how they use your service." %}
 {% set selectedNav = "Tools" %}
 
-{% set backlog_issue_id = "62" %}
+{% set backlog_issue_id = "225" %}
 
 
 {% block hero %}
 <section style="background: #ebf2f6;">
-  <div class="dfe-width-container">
-    <div class="govuk-breadcrumbs govuk-!-margin-top-0 govuk-!-padding-top-4">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/tools">Tools</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="#">{{pageName}}</a>
-        </li>
-      </ol>
-    </div>
-  </div>
-  <div class="dfe-width-container" style="padding-top: 40px; padding-bottom: 20px;">
+  <div class="govuk-width-container" style="padding-top: 0px; padding-bottom: 20px;">
+    <a href="/tools" class="govuk-back-link">Back</a>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">{{pageName}}</h1>
@@ -57,7 +44,7 @@ might affect how they use your service." %}
 
 {% block content %}
 
-<div class="dfe-width-container">
+<div class="govuk-width-container">
   <div class="govuk-grid-row">
 
     {% if number === undefined %}

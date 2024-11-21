@@ -1,0 +1,80 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/our-work/projects/family-hubs"%}
+
+{% set selectedNav = "Our work" %}
+{% set pageName = post.attributes.Title %}
+{% set pageDescription = post.attributes.Description %}
+
+{% set backlog_issue_id = "" %}
+
+{% block hero %}
+    <section class="dfe-page-header">
+        <div class="govuk-width-container">
+            <div class="govuk-breadcrumbs">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                        <a class="govuk-breadcrumbs__link" href="/our-work">Our work</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">Project</li>
+                </ol>
+            </div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl govuk-!-margin-top-6">{{post.attributes.Title}}</h1>
+                    <p class="govuk-body-l">{{post.attributes.Description}}</p>
+                </div>
+            </div>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Published</h2>
+                            <p class="govuk-!-margin-bottom-5">{{post.attributes.publishedAt | date('D MMMM YYYY')}}</p>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Author</h2>
+                            <p class="govuk-!-margin-bottom-5">{{post.attributes.Team}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+
+    <section class="govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-two-thirds">
+                    {% if post.attributes.FeaturedImage.data !== null%}
+                        <img src="{{post.attributes.FeaturedImage.data.attributes.url}}" style="border: 1px solid #dedede;" width="100%" alt="{{post.attributes.FeaturedImage.data.attributes.alternativeText}}" class="govuk-!-margin-bottom-5 govuk-!-margin-top-1">
+                    {% endif %}
+                    
+                    {% markdown %}
+                    {{post.attributes.Body | safe}}
+                    {% endmarkdown %}
+
+   
+
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    {% if post.attributes.RelatedContent %}
+                        {% markdown %}
+                        {{post.attributes.RelatedContent | safe}}
+                        {% endmarkdown %}
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,5 +1,4 @@
 {% include './_feedback.html' %}
-
 {{ govukFooter({
 navigation: [
 {
@@ -8,6 +7,9 @@ width: "two-thirds",
 columns: 2,
 items: [
 {
+href: "https://github.com/DFE-Digital/design/issues/"+backlog_issue_id,
+text: "GitHub issue "+backlog_issue_id
+},{
 href: "/accessibility-statement",
 text: "Accessibility statement"
 },
@@ -22,32 +24,6 @@ text: "Cookie policy"
 {
 href: "https://github.com/DFE-Digital/design",
 text: "GitHub source code"
-}
-]
-},
-{
-title: "Other services",
-width: "one-third",
-items: [
-{
-href: "https://design-histories.education.gov.uk/",
-text: "Design Histories"
-},
-{
-href: "https://apply-the-service-standard.education.gov.uk/",
-text: "Apply the Service Standard"
-},
-{
-href: "https://user-research.education.gov.uk/",
-text: "User Research Manual"
-},
-{
-href: "https://technical-guidance.education.gov.uk/",
-text: "Technical Manual"
-},
-{
-href: "https://dfe-digital.github.io/architecture/#dfe-architecture",
-text: "Architecture Manual"
 }
 ]
 }

@@ -1,5 +1,54 @@
 [
     {
+        "measure": "Low literacy (Adult) - England",
+        "percent": 16.4,
+        "source": "https://cdn.literacytrust.org.uk/media/documents/Adult_Literacy_2022_report_FINAL.pdf",
+        "summary": "Difficulty in ability to read, write, and understand information.",
+        "type": "a"
+    },
+    {
+        "measure": "Low literacy (Adult) - Scotland",
+        "percent": 26.7,
+        "source": "https://cdn.literacytrust.org.uk/media/documents/Adult_Literacy_2022_report_FINAL.pdf",
+        "summary": "Difficulty in ability to read, write, and understand information.",
+        "type": "a"
+    },
+    {
+        "measure": "Low literacy (Adult) - Wales",
+        "percent": 12,
+        "source": "https://cdn.literacytrust.org.uk/media/documents/Adult_Literacy_2022_report_FINAL.pdf",
+        "summary": "Difficulty in ability to read, write, and understand information.",
+        "type": "a"
+    },
+    {
+        "measure": "Low literacy (Adult) - Northern Ireland",
+        "percent": 17.4,
+        "source": "https://cdn.literacytrust.org.uk/media/documents/Adult_Literacy_2022_report_FINAL.pdf",
+        "summary": "Difficulty in ability to read, write, and understand information.",
+        "type": "a"
+    },
+    {
+        "measure": "MS (Multiple Sclerosis)",
+        "percent": 0.2,
+        "source": "https://www.mssociety.org.uk/what-we-do/our-work/our-evidence/ms-in-the-uk",
+        "summary": "Multiple Sclerosis (MS) is a chronic neurological condition that affects the central nervous system, specifically the brain and spinal cord.",
+        "type": "a"
+    },
+    {
+        "measure": "Parkinsons",
+        "percent": 0.3,
+        "source": "https://cks.nice.org.uk/topics/parkinsons-disease/background-information/prevalence/",
+        "summary": "Parkinson's disease (PD) is a progressive neurological disorder that primarily affects movement.",
+        "type": "a"
+    },
+    {
+        "measure": "Cerebral Palsy",
+        "percent": 0.16,
+        "source": "https://www.scope.org.uk/advice-and-support/cerebral-palsy-introduction",
+        "summary": "Cerebral palsy (CP) is a group of disorders that affect a person's ability to move and maintain balance and posture. It is the most common motor disability in childhood.",
+        "type": "a"
+    },
+    {
         "measure": "Vision",
         "percent": 77,
         "source": "",
@@ -39,7 +88,7 @@
         "type": "a"
     },
     {
-        "measure": "dyscalculia",
+        "measure": "Dyscalculia",
         "percent": 6.0,
         "source": "https://www.bdadyslexia.org.uk/dyscalculia/how-can-i-identify-dyscalculia",
         "summary": "Dyscalculia affects a person's ability to understand, learn, and perform mathematical operations.",
@@ -250,12 +299,6 @@
         "type": "d"
     },
     {
-        "measure": "Households that only use mobile devices to access the internet",
-        "percent": 21,
-        "source": "https://www.ofcom.org.uk/__data/assets/pdf_file/0022/234364/digital-exclusion-review-2022.pdf",
-        "type": "d"
-    },
-    {
         "measure": "All age groups with zero digital skills",
         "percent": 8,
         "source": "https://www.ons.gov.uk/peoplepopulationandcommunity/householdcharacteristics/homeinternetandsocialmediausage/articles/exploringtheuksdigitaldivide/2019-03-04",
@@ -269,5 +312,4 @@
         "type": "d",
         "summary": "Where people are missing at least one of the 5 digital skills."
     }
-    
 ]

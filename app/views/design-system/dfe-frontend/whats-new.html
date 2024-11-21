@@ -1,0 +1,102 @@
+{% extends "layouts/content-full-width.html" %}
+{% set pageName = "Release history" %}
+{% set pageDescription = "Find out about the changes to DfE Frontend and whats in the latest versions." %}
+{% set selectedNav = "Design system" %}
+{% set lastUpdated = "11 May 2024" %}
+{% set backlog_issue_id = "243" %}
+{% set parentSection = "dfefrontend"%}
+{% set isChildSection = "true"%}
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-5">{{pageName}}</h1>
+                <nav class="app-sub-navigation" aria-label="Application menu">
+                    <ul class="app-sub-navigation__list">
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" aria-current="page" href="/design-system">Overview</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles">Styles</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link"
+                                href="/design-system/dfe-frontend/components">Components</a>
+                        </li>
+                        <li class="app-sub-navigation__item">
+                            <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-quarter">
+                {% include "includes/_side-nav.html"%}
+            </div>
+
+            <div class="govuk-grid-column-three-quarters">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--m">Latest NPM package version</caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Name</th>
+                            <th scope="col" class="govuk-table__header">Version</th>
+                            <th scope="col" class="govuk-table__header">Last updated</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header"><a
+                                    href="https://www.npmjs.com/package/dfe-frontend" target="_blank">dfe-frontend</a>
+                            </th>
+                            <th scope="row" class="govuk-table__header">{{version}}</th>
+                            <td class="govuk-table__cell">{{lastUpdatedv | date('D MMMM YYYY') }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="govuk-heading-l">History</h2>
+
+                <h3 class="govuk-heading-m">Version 2.0.1</h3>
+
+                <p>Released 5 May 2024</p>
+
+                <p>Changes:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Updated readme</li>
+                </ul>
+
+
+                <h3 class="govuk-heading-m">Version 2.0.0</h3>
+
+                <p>Released 5 May 2024</p>
+
+                <p>This was a major update which is intended to replace <code>dfe-frontend-alpha</code>.</p>
+
+                <p>Changes:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Moved all dependencies to devdependnecies</li>
+                    <li>Updated header code to split the logo and service name into separate linkable elements</li>
+                    <li>Added the card component</li>
+                </ul>
+
+                <p><a href="/design-system/dfe-frontend/updating">Guidance for updating to dfe-frontend</a>
+                    from <code>dfe-frontend-alpha</code>.</p>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

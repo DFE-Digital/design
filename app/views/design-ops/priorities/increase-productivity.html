@@ -1,0 +1,93 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-ops/priorities/increase-productivity" %}
+{% set selectedNav = "DesignOps" %}
+{% set subNav = "Priorities" %}
+{% set pageName = "Increase productivity" %}
+{% set pageDescription = "Support designers with tools and technology and to make use of common components and
+patterns." %}
+
+{% set backlog_issue_id = "246" %}
+
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-l  govuk-!-margin-top-5">DesignOps</span>
+            <h1 class="govuk-heading-xl">{{pageName}}</h1>
+            <p class="govuk-body-l govuk-!-margin-bottom-6">{{pageDescription}}</p>
+            <nav class="app-sub-navigation" aria-label="Application menu">
+               <ul class="app-sub-navigation__list">
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops">Overview</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops/professions">Professions</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" aria-current="page" href="/design-ops/priorities">Our
+                        priorities</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops/maturity">Design maturity</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<section>
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-one-quarter">
+            {% include "includes/_side-nav.html"%}
+         </div>
+         <div class="govuk-grid-column-three-quarters">
+
+            <h2 class="govuk-heading-l">Initiatives</h2>
+
+            <p>Some of the initiatives we're working on to support this priority.</p>
+
+            <h3 class="govuk-heading-m">Maintain a DfE design system</h3>
+            <p>Develop and maintain a centralised design system that includes common UI components, design patterns, and
+               templates.</p>
+            <p>Ensure these are easily accessible and well-documented to reduce design redundancy and maintain
+               consistency across products and services.</p>
+
+            <h3 class="govuk-heading-m">Tool standardisation</h3>
+            <p>Equip designers with standardised tools and software that integrate well with the design system, for
+               example Figma library and templates.</p>
+            <p>Procure a tool for service and user experience mapping to build knowledge, visibility, and awareness of
+               product and service lines.</p>
+
+            <h3 class="govuk-heading-m">Training and personal development</h3>
+            <p>Provide training to keep design teams up-to-date with the latest tools, technologies, and
+               practices.
+            <p>Ensure that designers are proficient in using the design system and aware of any updates to components
+               or patterns as they are introduced or updated.</p>
+
+            <h3 class="govuk-heading-m">Feedback loops and iteration</h3>
+            <p>Establish clear feedback loops and channels for continuous improvement of the profession, priorities, tooling, and design system.</p>
+            <p>Carrying out regular design reviews, usability testing, and feedback sessions for refining components
+               and adapting the design system to user needs and technical changes.</p>
+
+
+            <h3 class="govuk-heading-m">Documentation and guidelines</h3>
+            <p>Maintain documentation and clear guidelines in the design system.</p>
+            <p>This covers design principles, standards, accessibility guidelines, and best practices to ensure
+               consistency and ease of use for new designers.</p>
+
+
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}

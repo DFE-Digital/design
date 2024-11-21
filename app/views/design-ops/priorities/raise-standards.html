@@ -1,0 +1,80 @@
+{% extends "layouts/content-full-width.html" %}
+{% set canonical = "https://design.education.gov.uk/design-ops/priorities/raise-standards" %}
+{% set selectedNav = "DesignOps" %}
+{% set subNav = "Priorities" %}
+{% set pageName = "Raise standards" %}
+{% set pageDescription = "Enable designers to create consistent and accessible products and services for users." %}
+
+{% set backlog_issue_id = "245" %}
+
+
+{% block hero %}
+<section class="dfe-page-header dfe-page-header--with-sub-nav">
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-l  govuk-!-margin-top-5">DesignOps</span>
+            <h1 class="govuk-heading-xl">{{pageName}}</h1>
+            <p class="govuk-body-l govuk-!-margin-bottom-6">{{pageDescription}}</p>
+            <nav class="app-sub-navigation" aria-label="Application menu">
+               <ul class="app-sub-navigation__list">
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops">Overview</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops/professions">Professions</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" aria-current="page" href="/design-ops/priorities">Our
+                        priorities</a>
+                  </li>
+                  <li class="app-sub-navigation__item">
+                     <a class="app-sub-navigation__link" href="/design-ops/maturity">Design maturity</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<section>
+   <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+         <div class="govuk-grid-column-one-quarter">
+            {% include "includes/_side-nav.html"%}
+         </div>
+         <div class="govuk-grid-column-three-quarters">
+
+            <h2 class="govuk-heading-l">Initiatives</h2>
+
+            <p>Some of the initiatives we're working on to support this priority.</p>
+
+            <h3 class="govuk-heading-m">Raising standards across all DfE services</h3>
+            <p>Focus on enhancing the quality and consistency of all services provided by the Department for Education.
+            </p>
+            <p>This involves setting standards for design and delivery to ensure that each product and service
+               meets the department's goals and user expectations.</p>
+
+            <h3 class="govuk-heading-m">Enabling designers to create consistent and accessible products</h3>
+            <p>Provide designers with the tools, resources, and guidance needed to design products and services that are
+               both consistent and accessible.</p>
+
+            <h3 class="govuk-heading-m">Creating accessible services for users</h3>
+            <p>Ensure that all products and services designed are accessible to all users, including those with
+               disabilities.</p>
+            <p>We are committed to embedding accessibility in every stage of the design and
+               development process, from policy through to delivery and beyond.</p>
+
+
+
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
