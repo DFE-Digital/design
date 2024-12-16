@@ -1,0 +1,26 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Search box page design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Search for a trust by name or reference number
+    </h1>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <div id="trustID-hint" class="govuk-hint">
+        For example, a TRN (trust reference number) or UKPRN (UK provider reference number)
+      </div>
+      <input class="govuk-input govuk-!-margin-bottom-6" id="trustID" name="trustID" type="text" aria-describedby="trustID-hint">
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Establishment details (select an establishment) design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Test Academy Trust
+    </h1>
+  </div>
+  <div class="govuk-grid-column-full">
+    <p>You can show the academy trust details on this page in any format. For example:</p>
+    <div class="govuk-form-group">
+      <dl class="govuk-summary-list govuk-summary-list--no-border">        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            TRN (trust reference number) 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            TRN00011
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Trust type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Multi-academy trust
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Testwood School Testwood Lane, Totton, Southampton, SO40 3ZW
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6">
+          Is this the correct trust?
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="confirm-trust-result" name="confirm-trust-result" type="radio" value="Yes">
+            <label class="govuk-label govuk-radios__label" for="confirm-trust-result">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="confirm-trust-result-2" name="confirm-trust-result" type="radio" value="No">
+            <label class="govuk-label govuk-radios__label" for="confirm-trust-result-2">
+              No, search again
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+  </div>
+</div>
+{% endblock %}
