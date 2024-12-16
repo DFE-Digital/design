@@ -71,44 +71,67 @@
 
     <!-- When to use this pattern -->
     <h2 id="when-to-use">When to use this pattern</h2>
-    <p>Write some bits here</p>
+    <p>
+      This pattern should be used when:
+    </p>
     <ul>
-      <li>A point here</li>
+      <li>information is <strong>automatically taken</strong> from an external service or product and displayed on a page</li>
       <li>Maybe a point here</li>
     </ul>
 
     <!-- When not to use this pattern -->
     <h2 id="when-not-to-use">When not to use this pattern</h2>
-    <p>Write some bits here</p>
+    <p>
+      This pattern should not be used when:
+    </p>
     <ul>
-      <li>A point here</li>
+      <li>information is <strong>automatically taken</strong> from a different page within the same service or product</li>
       <li>Maybe a point here</li>
     </ul>
       
     <!-- How it works -->
     <h2 id="how-it-works">How it works</h2>
-    <p>Write some bits here</p>
+    <p>
+      Generally follows a rule of declaring how much information is being references (e.g. "all" or a specific part), then declaring where it has come from (i.e. external source or internal) and the date of when it was taken.
+    </p>
+    <p>
+      Follow the same groupings as how the information is being presented on the page
+    </p>
 
-    <h3 id="basic-pattern">When blocks of information come from multiple sources</h3>
-    <p>Write some bits here</p>
+    <h3 id="basic-pattern">When information comes from the same source</h3>
+    <p>
+      When all of the information on the page comes from the same source.
+    </p>
 
-    <p>ADD EXAMPLE HERE</p>
+    {{ sample.code('/design-system/rsd-design-system/design-patterns/data-sources/example-data-sources-basic.html', 'Page not found', 'page-not-found',
+    htmlCode, nunjucksCode) }}
+
+    <h3 id="complex-pattern">When information comes from different sources</h3>
+    <p>
+      When information comes from different sources and is displayed on the same page, even in the same component.
+    </p>
+
     {{ sample.code('/design-system/rsd-design-system/design-patterns/data-sources/example-data-sources.html', 'Page not found', 'page-not-found',
     htmlCode, nunjucksCode) }}
 
-    <h3 id="basic-pattern">When smaller pieces of information come from multiple sources</h3>
-    <p>Write some bits here</p>
+    <h3 id="edited-pattern">When the source becomes a person</h3>
+    <p>
+      When the information being displayed has been changed by a person within the service or product.
+    </p>
 
-    <p>ADD EXAMPLE HERE</p>
     {{ sample.code('/design-system/rsd-design-system/design-patterns/data-sources/example-data-sources.html', 'Page not found', 'page-not-found',
     htmlCode, nunjucksCode) }}
 
     <!-- Upcoming iterations -->
-    <h2 id="how-it-works">Upcoming iterations</h2>
-    <p>Write some bits here</p>
+    <h2 id="upcoming-iterations">Upcoming iterations</h2>
+    <p>
+      Write some bits here about our upcoming "seperate page" talking about the how and why information is taken and when
+    </p>
 
+    <!-- Research on this pattern -->
     <h2>Research on this pattern</h2>
     <p>
+      [need to reword this specific to fiat - go back to David's slack message. also, ask Rachel about most applicable UN to reference]
       We have not done research on this pattern, but it is being used in <a
       href="https://design-histories.education.gov.uk/manage-free-school-projects">Manage free school projects</a> to meet this need from our <a
         href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">user

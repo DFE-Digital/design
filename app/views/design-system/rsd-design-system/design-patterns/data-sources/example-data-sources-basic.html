@@ -1,0 +1,205 @@
+{% extends "./../example-layout.html" %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Pre advisory board:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 31 October 2023.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Post advisory board:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 31 October 2023.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Free schools:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li class="">
+        All information was taken from Get information about schools on 31 October 2023.
+    </li>
+    </ul>
+
+{% endset %}
+
+{% block pageTitle %}
+Data sources | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Pipeline academies
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+      <h2 class="govuk-heading-m">
+        Pre advisory board (7)
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">School name</th>
+            <th scope="col" class="govuk-table__header">URN</th>
+            <th scope="col" class="govuk-table__header">Local authority</th>
+            <th scope="col" class="govuk-table__header">Project type</th>
+            <th scope="col" class="govuk-table__header">Proposed conversion or transfer date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Fruity academy</td>
+            <td class="govuk-table__cell">86546</td>
+            <td class="govuk-table__cell">Sheffield</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">Unconfirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Biscuit academy</td>
+            <td class="govuk-table__cell">37472</td>
+            <td class="govuk-table__cell">Manchester</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">Unconfirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Chocolate academy</td>
+            <td class="govuk-table__cell">37834</td>
+            <td class="govuk-table__cell">Birmingham</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">12 Sep 2020</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Fruity academy</td>
+            <td class="govuk-table__cell">86546</td>
+            <td class="govuk-table__cell">Sheffield</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">Unconfirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Grunge academy</td>
+            <td class="govuk-table__cell">74636</td>
+            <td class="govuk-table__cell">Leeds</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">18 Mar 2019</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Baking academy</td>
+            <td class="govuk-table__cell">12453</td>
+            <td class="govuk-table__cell">Sheffield</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">12 Aug 2011</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Drinking academy</td>
+            <td class="govuk-table__cell">47835</td>
+            <td class="govuk-table__cell">Bristol</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">12 Aug 2011</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">
+        Post advisory board (3)
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">School name</th>
+            <th scope="col" class="govuk-table__header">URN</th>
+            <th scope="col" class="govuk-table__header">Local authority</th>
+            <th scope="col" class="govuk-table__header">Project type</th>
+            <th scope="col" class="govuk-table__header">Proposed conversion or transfer date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Academy of croissant</td>
+            <td class="govuk-table__cell">86546</td>
+            <td class="govuk-table__cell">Sheffield</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">12 Aug 2011</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Coffee school</td>
+            <td class="govuk-table__cell">37472</td>
+            <td class="govuk-table__cell">Manchester</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">Unconfirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Another chocolate academy</td>
+            <td class="govuk-table__cell">37834</td>
+            <td class="govuk-table__cell">Birmingham</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">12 Sep 2020</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">
+        Free schools (3)
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">School name</th>
+            <th scope="col" class="govuk-table__header">URN</th>
+            <th scope="col" class="govuk-table__header">Local authority</th>
+            <th scope="col" class="govuk-table__header">Project type</th>
+            <th scope="col" class="govuk-table__header">Provisional opening date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Academy of croissant</td>
+            <td class="govuk-table__cell">86546</td>
+            <td class="govuk-table__cell">Sheffield</td>
+            <td class="govuk-table__cell">Presumption</td>
+            <td class="govuk-table__cell">12 Aug 2011</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Coffee school</td>
+            <td class="govuk-table__cell">37472</td>
+            <td class="govuk-table__cell">Bristol</td>
+            <td class="govuk-table__cell">Presumption</td>
+            <td class="govuk-table__cell">Unconfirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Another chocolate academy</td>
+            <td class="govuk-table__cell">37834</td>
+            <td class="govuk-table__cell">Birmingham</td>
+            <td class="govuk-table__cell">Central</td>
+            <td class="govuk-table__cell">12 Sep 2020</td>
+          </tr>
+        </tbody>
+      </table>
+
+  {% from "govuk/components/details/macro.njk" import govukDetails %}
+  {# Display it all in a details component #}
+  {{ govukDetails({
+    summaryText: "Where this information came from",
+    html: sourceUpdatesContent
+  }) }}
+    
+  </div>
+</div>
+{% endblock %}
