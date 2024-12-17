@@ -143,7 +143,7 @@
             All information was taken from Get information about schools on 31 October 2023.
         &lt;/li&gt;
     &lt;/ul&gt;
-    
+
   {% endset %}
 
   {% from &quot;govuk/components/details/macro.njk&quot; import govukDetails %}
@@ -156,9 +156,66 @@
 
 <!-- data-sources-complex NUNJUCKS -->
 {% set nunjucksCodeDataSourceComplex = '<code class="hljs language-html">
+
+  {% set sourcesContentHTML %}
+
+    &lt;p class=&quot;govuk-body&quot;&gt;
+        &lt;strong&gt;Free school meals:&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+        &lt;li&gt;
+            Pupils eligibile for free school meals was taken from Get information about schools on 31 October 2023.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Local authority average 2023/24 was taken from Explore education statistics on 6 August 2024.
+        &lt;/li&gt;
+            National average 2023/24 was taken from Explore education statistics on 6 August 2024.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    
+  {% endset %}
+
+  {% from &quot;govuk/components/details/macro.njk&quot; import govukDetails %}
+  {{ govukDetails({
+    summaryText: &quot;Where this information came from&quot;,
+    html: sourcesContentHTML
+  }) }}
+
 </code>' %}
 
 <!-- data-sources-edited NUNJUCKS -->
 {% set nunjucksCodeDataSourceEdited = '<code class="hljs language-html">
+
+  {% set sourcesContentHTML %}
+
+    &lt;p class=&quot;govuk-body&quot;&gt;
+        &lt;strong&gt;Trust relationship manager:&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+        &lt;li&gt;
+            The Trust relationship manager was last updated by Joe.Bloggs@education.gov.uk on 10 December 2024.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p class=&quot;govuk-body&quot;&gt;
+        &lt;strong&gt;SFSO (Schools financial support and oversight) lead:&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;ul class=&quot;govuk-list govuk-list--bullet&quot;&gt;
+        &lt;li&gt;
+            The SFSO lead was last updated by Joe.Bloggs@education.gov.uk on 12 December 2024.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    
+  {% endset %}
+
+  {% from &quot;govuk/components/details/macro.njk&quot; import govukDetails %}
+  {{ govukDetails({
+    summaryText: &quot;Where this information came from&quot;,
+    html: sourcesContentHTML
+  }) }}
+
 </code>' %}
 
