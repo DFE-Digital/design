@@ -1,0 +1,87 @@
+{% extends "./../example-layout.html" %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Free school meals:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li class="">
+        Pupils eligibile for free school meals was taken from Get information about schools on 31 October 2023.
+      </li>
+      <li class="">
+        Local authority average 2023/24 was taken from Explore education statistics on 6 August 2024.
+      </li>
+      <li class="">
+        National average 2023/24 was taken from Explore education statistics on 6 August 2024.
+      </li>
+    </ul>
+
+{% endset %}
+
+{% block pageTitle %}
+Data sources | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Academies
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+      <h2 class="govuk-heading-m">
+        Free school meals (3)
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">School name</th>
+            <th scope="col" class="govuk-table__header">URN</th>
+            <th scope="col" class="govuk-table__header">Pupils eligible for free school meals</th>
+            <th scope="col" class="govuk-table__header">Local authority average 2023/24</th>
+            <th scope="col" class="govuk-table__header">National average 2023/24</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Fruity academy</td>
+            <td class="govuk-table__cell">86546</td>
+            <td class="govuk-table__cell">24.4%</td>
+            <td class="govuk-table__cell">28.4%</td>
+            <td class="govuk-table__cell">24.9%</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Biscuit academy</td>
+            <td class="govuk-table__cell">37472</td>
+            <td class="govuk-table__cell">17.0%</td>
+            <td class="govuk-table__cell">28.4%</td>
+            <td class="govuk-table__cell">24.9%</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Chocolate academy</td>
+            <td class="govuk-table__cell">37834</td>
+            <td class="govuk-table__cell">17.3%</td>
+            <td class="govuk-table__cell">28.4%</td>
+            <td class="govuk-table__cell">24.9%</td>
+          </tr>
+        </tbody>
+      </table>
+
+  {% from "govuk/components/details/macro.njk" import govukDetails %}
+  {# Display it all in a details component #}
+  {{ govukDetails({
+    summaryText: "Where this information came from",
+    html: sourceUpdatesContent
+  }) }}
+    
+  </div>
+</div>
+{% endblock %}
