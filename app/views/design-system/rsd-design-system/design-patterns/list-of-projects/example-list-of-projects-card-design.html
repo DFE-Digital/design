@@ -1,0 +1,103 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+List of projects (card design) design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<h2 class="govuk-heading-l" test-id="projectCount" data-cy="select-projectlist-filter-count">2489 projects found</h2>
+
+<div class="sort-component">
+    <nav class="govuk-body sort-component__nav" aria-label="sort-by">
+        <span class="govuk-!-font-weight-bold">Sorted by:</span> Project created date
+    </nav>
+</div>
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Projects (10)</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+        <th class="govuk-table__header app-!-width-three-fifths">Application information</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row join-a-mat" data-cy="select-projectlist-filter-row">
+      <td class="govuk-table__cell">
+        <div class="govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+          <strong>
+            <a id="school-name-0" class="govuk-link" aria-label="Plymstock School, U R N is 113537" data-cy="trust-name-Plymstock School-0" href="#">Plymstock School</a>
+          </strong>
+        </div>
+        <div class="govuk-!-margin-top-1">
+          <span id="urn-0"><strong>URN:</strong> 113537</span>
+        </div>
+        <div id="local-authority-0" class="govuk-!-margin-top-1">
+          <strong>Local authority:</strong> 
+          Plymouth
+        </div>
+        <div id="region-0" class="govuk-!-margin-top-1">
+          <strong>Region:</strong>
+          <span>South West</span>
+        </div>
+        <div id="incoming-trust-0" class="govuk-!-margin-top-1">
+          <strong>Incoming trust:</strong>
+          <span>Plymouth Cast</span>
+        </div>
+        <div id="advisory-board-date-0" class="govuk-!-margin-top-1">
+          <strong>Advisory board date:</strong>
+          <span class="empty">Unconfirmed</span>
+        </div>
+        <div id="type-and-route-0" class="govuk-!-margin-top-1">
+          <strong>Route:</strong>
+          <span>Voluntary conversion</span>
+        </div>
+        <div id="assigned-to-0" class="do govuk-!-margin-top-1">
+          <strong>Assigned to:</strong>
+          <span class="empty">Unassigned</span>
+        </div>
+        <div class="govuk-!-margin-top-2 govuk-!-margin-bottom-3">
+          <strong class="govuk-tag govuk-tag--yellow" id="project-status-31291">PRE ADVISORY BOARD</strong>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row join-a-mat" data-cy="select-projectlist-filter-row">
+      <td class="govuk-table__cell">
+        <div class="govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+          <strong>
+            <a id="school-name-5" class="govuk-link" aria-label="Davenant Foundation School, U R N is 136625" data-cy="trust-name-Davenant Foundation School-5" href="#">Davenant Foundation School</a>
+          </strong>
+        </div>
+        <div class="govuk-!-margin-top-1">
+          <span id="urn-5"><strong>URN:</strong> 136625</span>
+        </div>   
+        <div id="local-authority-5" class="govuk-!-margin-top-1">
+          <strong>Local authority:</strong> 
+            Essex
+        </div>
+        <div id="region-5" class="govuk-!-margin-top-1">
+          <strong>Region:</strong>
+          <span>East of England</span>
+        </div>
+        <div id="incoming-trust-5" class="govuk-!-margin-top-1">
+          <strong>Incoming trust:</strong>
+          <span>Davenant Foundation School</span>
+        </div>
+        <div id="advisory-board-date-5" class="govuk-!-margin-top-1">
+          <strong>Advisory board date:</strong>
+          <span class="empty">Unconfirmed</span>  
+        </div>
+        <div id="type-and-route-5" class="govuk-!-margin-top-1">
+          <strong>Route:</strong>
+          <span>Voluntary conversion</span>
+        </div>
+        <div id="assigned-to-5" class="do govuk-!-margin-top-1">
+          <strong>Assigned to:</strong>
+          <span class="empty">Unassigned</span>
+        </div>
+        <div class="govuk-!-margin-top-2 govuk-!-margin-bottom-3">
+          <strong class="govuk-tag govuk-tag--yellow" id="project-status-31266">PRE ADVISORY BOARD</strong>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

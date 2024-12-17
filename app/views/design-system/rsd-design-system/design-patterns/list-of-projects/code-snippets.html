@@ -1,202 +1,162 @@
-{% set htmlCodeSearchBoxPageBasic = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-grid-row&quot;&gt;
-  &lt;div class=&quot;govuk-grid-column-full&quot;&gt;
-    &lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
-      Search for a trust by name or reference number
-    &lt;/h1&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;div id=&quot;trustID-hint&quot; class=&quot;govuk-hint&quot;&gt;
-        For example, a TRN (trust reference number) or UKPRN (UK provider reference number)
-      &lt;/div&gt;
-      &lt;input class=&quot;govuk-input govuk-!-margin-bottom-6&quot; id=&quot;trustID&quot; name=&quot;trustID&quot; type=&quot;text&quot; aria-describedby=&quot;trustID-hint&quot;&gt;
-    &lt;/div&gt;
-    &lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt;
-      Continue
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+{% set htmlCodeListofProjectsTabularDesign = '<code class="hljs language-html">
+  &lt;table class=&quot;govuk-table&quot;&gt;
+  &lt;thead class=&quot;govuk-table__head&quot;&gt;
+    &lt;tr class=&quot;govuk-table__row&quot;&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-1&quot;&gt;Project title&lt;/th&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-2&quot;&gt;Project ID&lt;/th&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-3&quot;&gt;Trust&lt;/th&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-4&quot;&gt;Region&lt;/th&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-7&quot;&gt;Provisional opening date&lt;/th&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-8&quot;&gt;Status&lt;/th&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-9&quot;&gt;Last updated&lt;/th&gt;
+      &lt;th scope=&quot;col&quot; class=&quot;govuk-table__header mfsp-dashboard-table__col-10&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&quot;govuk-table__body&quot;&gt;
+    &lt;tr class=&quot;govuk-table__row&quot;&gt;
+      &lt;th scope=&quot;row&quot; class=&quot;govuk-table__header&quot;&gt;St George&apos;s Primary School&lt;/th&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;W3323&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;North West&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+          &lt;span class=&quot;empty&quot;&gt;Empty&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;strong class=&quot;govuk-tag govuk-tag--grey&quot;&gt;Not started&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;August 29, 2023&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;View&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;govuk-table__row&quot;&gt;
+      &lt;th scope=&quot;row&quot; class=&quot;govuk-table__header&quot;&gt;Bolton Spa Primary&lt;/th&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;W3456&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;Oak Hill Trust&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;Bolton&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;September 1, 2023&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;strong class=&quot;govuk-tag govuk-tag--blue&quot;&gt;In progress&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;July 24, 2023&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;View&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;govuk-table__row&quot;&gt;
+      &lt;th scope=&quot;row&quot; class=&quot;govuk-table__header&quot;&gt;St. Wilfrid&apos;s Primary School&lt;/th&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;102062&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;Dynamics Trust&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;Warrington&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+          &lt;span class=&quot;empty&quot;&gt;Empty&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;strong class=&quot;govuk-tag govuk-tag--green&quot;&gt;Completed&lt;/strong&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;July 1, 2023&lt;/td&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;View&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </code>' %}
 
-{% set htmlCodeEstablishmentResultsListReadOnly = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-grid-row&quot;&gt;
-  &lt;div class=&quot;govuk-grid-column-full&quot;&gt;
-    &lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
-      3 results for &quot;trust&quot;
-    &lt;/h1&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
-    &lt;div&gt;
-      &lt;h2 class=&quot;govuk-heading-m&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;Test Academy Trust&lt;/a&gt;&lt;/h2&gt;
-      &lt;p&gt;Enough information about the establishment, to help users select one from the list&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;h2 class=&quot;govuk-heading-m&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;Testwood Trust&lt;/a&gt;&lt;/h2&gt;
-      &lt;p&gt;Enough information about the establishment, to help users select one from the list&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;h2 class=&quot;govuk-heading-m&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;govuk-link&quot;&gt;Testing Patience Trust&lt;/a&gt;&lt;/h2&gt;
-      &lt;p&gt;Enough information about the establishment, to help users select one from the list&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+{% set htmlCodeListofProjectsCardDesign = '<code class="hljs language-html">
+&lt;h2 class=&quot;govuk-heading-l&quot; test-id=&quot;projectCount&quot; data-cy=&quot;select-projectlist-filter-count&quot;&gt;2489 projects found&lt;/h2&gt;
+
+&lt;div class=&quot;sort-component&quot;&gt;
+    &lt;nav class=&quot;govuk-body sort-component__nav&quot; aria-label=&quot;sort-by&quot;&gt;
+        &lt;span class=&quot;govuk-!-font-weight-bold&quot;&gt;Sorted by:&lt;/span&gt; Project created date
+    &lt;/nav&gt;
 &lt;/div&gt;
-</code>' %}
-
-{% set htmlCodeEstablishmentDetailsReadOnly = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-grid-row&quot;&gt;
-  &lt;div class=&quot;govuk-grid-column-full&quot;&gt;
-    &lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
-      Test Academy Trust
-    &lt;/h1&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-grid-column-full&quot;&gt;
-    &lt;p&gt;You can show the academy trust details on this page in any format. For example:&lt;/p&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;dl class=&quot;govuk-summary-list govuk-summary-list--no-border&quot;&gt;        
-        &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-          &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            TRN (trust reference number) 
-          &lt;/dt&gt;
-          &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-            TRN00011
-          &lt;/dd&gt;
+&lt;table class=&quot;govuk-table&quot;&gt;
+  &lt;caption class=&quot;govuk-table__caption govuk-table__caption--m govuk-visually-hidden&quot;&gt;Projects (10)&lt;/caption&gt;
+  &lt;thead class=&quot;govuk-table__head&quot;&gt;
+    &lt;tr class=&quot;govuk-table__row&quot;&gt;
+        &lt;th class=&quot;govuk-table__header app-!-width-three-fifths&quot;&gt;Application information&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&quot;govuk-table__body&quot;&gt;
+    &lt;tr class=&quot;govuk-table__row join-a-mat&quot; data-cy=&quot;select-projectlist-filter-row&quot;&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;div class=&quot;govuk-!-margin-top-1 govuk-!-margin-bottom-2&quot;&gt;
+          &lt;strong&gt;
+            &lt;a id=&quot;school-name-0&quot; class=&quot;govuk-link&quot; aria-label=&quot;Plymstock School, U R N is 113537&quot; data-cy=&quot;trust-name-Plymstock School-0&quot; href=&quot;#&quot;&gt;Plymstock School&lt;/a&gt;
+          &lt;/strong&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-          &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            Trust type
-          &lt;/dt&gt;
-          &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-            Multi-academy trust
-          &lt;/dd&gt;
+        &lt;div class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;span id=&quot;urn-0&quot;&gt;&lt;strong&gt;URN:&lt;/strong&gt; 113537&lt;/span&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-          &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            Address
-          &lt;/dt&gt;
-          &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-            Testwood School Testwood Lane, Totton, Southampton, SO40 3ZW
-          &lt;/dd&gt;
+        &lt;div id=&quot;local-authority-0&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Local authority:&lt;/strong&gt; 
+          Plymouth
         &lt;/div&gt;
-      &lt;/dl&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code>' %}
-
-{% set htmlCodeSearchBoxPageProgressiveEnhancement = '<code class="hljs language-html">
-
-</code>' %}
-
-{% set htmlCodeEstablishmentResultsListSelectEstablishment = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-grid-row&quot;&gt;
-  &lt;div class=&quot;govuk-grid-column-two-thirds&quot;&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;fieldset class=&quot;govuk-fieldset&quot; aria-describedby=&quot;searchResult-hint&quot;&gt;
-        &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--xl&quot;&gt;
-          &lt;h1 class=&quot;govuk-fieldset__heading&quot;&gt;
-            3 results for &quot;trust&quot;
-          &lt;/h1&gt;
-        &lt;/legend&gt;
-        &lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt;
-          &lt;div class=&quot;govuk-radios__item&quot;&gt;
-            &lt;input class=&quot;govuk-radios__input&quot; id=&quot;searchResult&quot; name=&quot;searchResult&quot; type=&quot;radio&quot; value=&quot;Test Academy Trust&quot; aria-describedby=&quot;searchResult-item-hint&quot;&gt;
-            &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;searchResult&quot;&gt;
-              Test Academy Trust
-            &lt;/label&gt;
-            &lt;div id=&quot;searchResult-item-hint&quot; class=&quot;govuk-hint govuk-radios__hint&quot;&gt;
-              Enough information about the establishment, to help users select one from the list
-            &lt;/div&gt;
+        &lt;div id=&quot;region-0&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Region:&lt;/strong&gt;
+          &lt;span&gt;South West&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;incoming-trust-0&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Incoming trust:&lt;/strong&gt;
+          &lt;span&gt;Plymouth Cast&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;advisory-board-date-0&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Advisory board date:&lt;/strong&gt;
+          &lt;span class=&quot;empty&quot;&gt;Unconfirmed&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;type-and-route-0&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Route:&lt;/strong&gt;
+          &lt;span&gt;Voluntary conversion&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;assigned-to-0&quot; class=&quot;do govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Assigned to:&lt;/strong&gt;
+          &lt;span class=&quot;empty&quot;&gt;Unassigned&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;govuk-!-margin-top-2 govuk-!-margin-bottom-3&quot;&gt;
+          &lt;strong class=&quot;govuk-tag govuk-tag--yellow&quot; id=&quot;project-status-31291&quot;&gt;PRE ADVISORY BOARD&lt;/strong&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;govuk-table__row join-a-mat&quot; data-cy=&quot;select-projectlist-filter-row&quot;&gt;
+      &lt;td class=&quot;govuk-table__cell&quot;&gt;
+        &lt;div class=&quot;govuk-!-margin-top-1 govuk-!-margin-bottom-2&quot;&gt;
+          &lt;strong&gt;
+            &lt;a id=&quot;school-name-5&quot; class=&quot;govuk-link&quot; aria-label=&quot;Davenant Foundation School, U R N is 136625&quot; data-cy=&quot;trust-name-Davenant Foundation School-5&quot; href=&quot;#&quot;&gt;Davenant Foundation School&lt;/a&gt;
+          &lt;/strong&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;span id=&quot;urn-5&quot;&gt;&lt;strong&gt;URN:&lt;/strong&gt; 136625&lt;/span&gt;
+        &lt;/div&gt;   
+        &lt;div id=&quot;local-authority-5&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Local authority:&lt;/strong&gt; 
+            Essex
+        &lt;/div&gt;
+        &lt;div id=&quot;region-5&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Region:&lt;/strong&gt;
+          &lt;span&gt;East of England&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;incoming-trust-5&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Incoming trust:&lt;/strong&gt;
+          &lt;span&gt;Davenant Foundation School&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;advisory-board-date-5&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+          &lt;strong&gt;Advisory board date:&lt;/strong&gt;
+          &lt;span class=&quot;empty&quot;&gt;Unconfirmed&lt;/span&gt;  
+        &lt;/div&gt;
+        &lt;div id=&quot;type-and-route-5&quot; class=&quot;govuk-!-margin-top-1&quot;&gt;
+            &lt;strong&gt;Route:&lt;/strong&gt;
+            &lt;span&gt;Voluntary conversion&lt;/span&gt;
           &lt;/div&gt;
-          &lt;div class=&quot;govuk-radios__item&quot;&gt;
-            &lt;input class=&quot;govuk-radios__input&quot; id=&quot;searchResult-2&quot; name=&quot;searchResult&quot; type=&quot;radio&quot; value=&quot;Testwood Trust&quot; aria-describedby=&quot;searchResult-2-item-hint&quot;&gt;
-            &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;searchResult-2&quot;&gt;
-              Testwood Trust
-            &lt;/label&gt;
-            &lt;div id=&quot;searchResult-2-item-hint&quot; class=&quot;govuk-hint govuk-radios__hint&quot;&gt;
-              Enough information about the establishment, to help users select one from the list
-            &lt;/div&gt;
+          &lt;div id=&quot;assigned-to-5&quot; class=&quot;do govuk-!-margin-top-1&quot;&gt;
+            &lt;strong&gt;Assigned to:&lt;/strong&gt;
+            &lt;span class=&quot;empty&quot;&gt;Unassigned&lt;/span&gt;
           &lt;/div&gt;
-          &lt;div class=&quot;govuk-radios__item&quot;&gt;
-            &lt;input class=&quot;govuk-radios__input&quot; id=&quot;searchResult-3&quot; name=&quot;searchResult&quot; type=&quot;radio&quot; value=&quot;Testing Patience Trust&quot; aria-describedby=&quot;searchResult-3-item-hint&quot;&gt;
-            &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;searchResult-3&quot;&gt;
-              Testing Patience Trust
-            &lt;/label&gt;
-            &lt;div id=&quot;searchResult-3-item-hint&quot; class=&quot;govuk-hint govuk-radios__hint&quot;&gt;
-              Enough information about the establishment, to help users select one from the list
-            &lt;/div&gt;
+          &lt;div class=&quot;govuk-!-margin-top-2 govuk-!-margin-bottom-3&quot;&gt;
+            &lt;strong class=&quot;govuk-tag govuk-tag--yellow&quot; id=&quot;project-status-31266&quot;&gt;PRE ADVISORY BOARD&lt;/strong&gt;
           &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/div&gt;
-    &lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt;
-      Continue
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code>' %}
-
-{% set htmlCodeEstablishmentDetailsSelectEstablishment = '<code class="hljs language-html">
-&lt;div class=&quot;govuk-grid-row&quot;&gt;
-  &lt;div class=&quot;govuk-grid-column-full&quot;&gt;
-    &lt;h1 class=&quot;govuk-heading-xl&quot;&gt;
-      Test Academy Trust
-    &lt;/h1&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;govuk-grid-column-full&quot;&gt;
-    &lt;p&gt;You can show the academy trust details on this page in any format. For example:&lt;/p&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;dl class=&quot;govuk-summary-list govuk-summary-list--no-border&quot;&gt;        
-        &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-          &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            TRN (trust reference number) 
-          &lt;/dt&gt;
-          &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-            TRN00011
-          &lt;/dd&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-          &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            Trust type
-          &lt;/dt&gt;
-          &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-            Multi-academy trust
-          &lt;/dd&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;govuk-summary-list__row&quot;&gt;
-          &lt;dt class=&quot;govuk-summary-list__key&quot;&gt;
-            Address
-          &lt;/dt&gt;
-          &lt;dd class=&quot;govuk-summary-list__value&quot;&gt;
-            Testwood School Testwood Lane, Totton, Southampton, SO40 3ZW
-          &lt;/dd&gt;
-        &lt;/div&gt;
-      &lt;/dl&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;govuk-form-group&quot;&gt;
-      &lt;fieldset class=&quot;govuk-fieldset&quot;&gt;
-        &lt;legend class=&quot;govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-6&quot;&gt;
-          Is this the correct trust?
-        &lt;/legend&gt;
-        &lt;div class=&quot;govuk-radios&quot; data-module=&quot;govuk-radios&quot;&gt;
-          &lt;div class=&quot;govuk-radios__item&quot;&gt;
-            &lt;input class=&quot;govuk-radios__input&quot; id=&quot;confirm-trust-result&quot; name=&quot;confirm-trust-result&quot; type=&quot;radio&quot; value=&quot;Yes&quot;&gt;
-            &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;confirm-trust-result&quot;&gt;
-              Yes
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;govuk-radios__item&quot;&gt;
-            &lt;input class=&quot;govuk-radios__input&quot; id=&quot;confirm-trust-result-2&quot; name=&quot;confirm-trust-result&quot; type=&quot;radio&quot; value=&quot;No&quot;&gt;
-            &lt;label class=&quot;govuk-label govuk-radios__label&quot; for=&quot;confirm-trust-result-2&quot;&gt;
-              No, search again
-            &lt;/label&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/div&gt;
-    &lt;button type=&quot;submit&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;&gt;
-      Continue
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
 </code>' %}

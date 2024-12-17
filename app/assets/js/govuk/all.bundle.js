@@ -4,7 +4,7 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.GOVUKFrontend = {}));
 })(this, (function (exports) { 'use strict';
 
-  const version = '5.7.1';
+  const version = '5.3.1';
 
   function normaliseString(value, property) {
     const trimmedValue = value ? value.trim() : '';
@@ -114,19 +114,6 @@
     (_options$onBeforeFocu = options.onBeforeFocus) == null || _options$onBeforeFocu.call($element);
     $element.focus();
   }
-  function isInitialised($root, moduleName) {
-    return $root instanceof HTMLElement && $root.hasAttribute(`data-${moduleName}-init`);
-  }
-
-  /**
-   * Checks if GOV.UK Frontend is supported on this page
-   *
-   * Some browsers will load and run our JavaScript but GOV.UK Frontend
-   * won't be supported.
-   *
-   * @param {HTMLElement | null} [$scope] - (internal) `<body>` HTML element checked for browser support
-   * @returns {boolean} Whether GOV.UK Frontend is supported on this page
-   */
   function isSupported($scope = document.body) {
     if (!$scope) {
       return false;
@@ -159,9 +146,6 @@
   function isObject(option) {
     return !!option && typeof option === 'object' && !isArray(option);
   }
-  function formatErrorMessage(Component, message) {
-    return `${Component.moduleName}: ${message}`;
-  }
 
   /**
    * Schema for component config
@@ -184,10 +168,6 @@
    * @typedef {object} SchemaCondition
    * @property {string[]} required - List of required config fields
    * @property {string} errorMessage - Error message when required config fields not provided
-   */
-  /**
-   * @typedef ComponentWithModuleName
-   * @property {string} moduleName - Name of the component
    */
 
   function normaliseDataset(Component, dataset) {
@@ -232,84 +212,29 @@
       let message = typeof messageOrOptions === 'string' ? messageOrOptions : '';
       if (typeof messageOrOptions === 'object') {
         const {
-          component,
+          componentName,
           identifier,
           element,
           expectedType
         } = messageOrOptions;
-        message = identifier;
+        message = `${componentName}: ${identifier}`;
         message += element ? ` is not of type ${expectedType != null ? expectedType : 'HTMLElement'}` : ' not found';
-        message = formatErrorMessage(component, message);
       }
       super(message);
       this.name = 'ElementError';
     }
   }
-  class InitError extends GOVUKFrontendError {
-    constructor(componentOrMessage) {
-      const message = typeof componentOrMessage === 'string' ? componentOrMessage : formatErrorMessage(componentOrMessage, `Root element (\`$root\`) already initialised`);
-      super(message);
-      this.name = 'InitError';
-    }
-  }
-  /**
-   * @typedef {import('../common/index.mjs').ComponentWithModuleName} ComponentWithModuleName
-   */
 
   class GOVUKFrontendComponent {
-    /**
-     * Returns the root element of the component
-     *
-     * @protected
-     * @returns {RootElementType} - the root element of component
-     */
-    get $root() {
-      return this._$root;
+    constructor() {
+      this.checkSupport();
     }
-    constructor($root) {
-      this._$root = void 0;
-      const childConstructor = this.constructor;
-      if (typeof childConstructor.moduleName !== 'string') {
-        throw new InitError(`\`moduleName\` not defined in component`);
-      }
-      if (!($root instanceof childConstructor.elementType)) {
-        throw new ElementError({
-          element: $root,
-          component: childConstructor,
-          identifier: 'Root element (`$root`)',
-          expectedType: childConstructor.elementType.name
-        });
-      } else {
-        this._$root = $root;
-      }
-      childConstructor.checkSupport();
-      this.checkInitialised();
-      const moduleName = childConstructor.moduleName;
-      this.$root.setAttribute(`data-${moduleName}-init`, '');
-    }
-    checkInitialised() {
-      const constructor = this.constructor;
-      const moduleName = constructor.moduleName;
-      if (moduleName && isInitialised(this.$root, moduleName)) {
-        throw new InitError(constructor);
-      }
-    }
-    static checkSupport() {
+    checkSupport() {
       if (!isSupported()) {
         throw new SupportError();
       }
     }
   }
-
-  /**
-   * @typedef ChildClass
-   * @property {string} moduleName - The module name that'll be looked for in the DOM when initialising the component
-   */
-
-  /**
-   * @typedef {typeof GOVUKFrontendComponent & ChildClass} ChildClassConstructor
-   */
-  GOVUKFrontendComponent.elementType = HTMLElement;
 
   class I18n {
     constructor(translations = {}, config = {}) {
@@ -520,11 +445,12 @@
    */
   class Accordion extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for accordion
+     * @param {Element | null} $module - HTML element to use for accordion
      * @param {AccordionConfig} [config] - Accordion config
      */
-    constructor($root, config = {}) {
-      super($root);
+    constructor($module, config = {}) {
+      super();
+      this.$module = void 0;
       this.config = void 0;
       this.i18n = void 0;
       this.controlsClass = 'govuk-accordion__controls';
@@ -547,22 +473,33 @@
       this.sectionSummaryFocusClass = 'govuk-accordion__section-summary-focus';
       this.sectionContentClass = 'govuk-accordion__section-content';
       this.$sections = void 0;
+      this.browserSupportsSessionStorage = false;
       this.$showAllButton = null;
       this.$showAllIcon = null;
       this.$showAllText = null;
-      this.config = mergeConfigs(Accordion.defaults, config, normaliseDataset(Accordion, this.$root.dataset));
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Accordion',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      this.$module = $module;
+      this.config = mergeConfigs(Accordion.defaults, config, normaliseDataset(Accordion, $module.dataset));
       this.i18n = new I18n(this.config.i18n);
-      const $sections = this.$root.querySelectorAll(`.${this.sectionClass}`);
+      const $sections = this.$module.querySelectorAll(`.${this.sectionClass}`);
       if (!$sections.length) {
         throw new ElementError({
-          component: Accordion,
+          componentName: 'Accordion',
           identifier: `Sections (\`<div class="${this.sectionClass}">\`)`
         });
       }
       this.$sections = $sections;
+      this.browserSupportsSessionStorage = helper.checkForSessionStorage();
       this.initControls();
       this.initSectionHeaders();
-      this.updateShowAllButton(this.areAllSectionsOpen());
+      const areAllSectionsOpen = this.checkIfAllSectionsOpen();
+      this.updateShowAllButton(areAllSectionsOpen);
     }
     initControls() {
       this.$showAllButton = document.createElement('button');
@@ -575,7 +512,7 @@
       const $accordionControls = document.createElement('div');
       $accordionControls.setAttribute('class', this.controlsClass);
       $accordionControls.appendChild(this.$showAllButton);
-      this.$root.insertBefore($accordionControls, this.$root.firstChild);
+      this.$module.insertBefore($accordionControls, this.$module.firstChild);
       this.$showAllText = document.createElement('span');
       this.$showAllText.classList.add(this.showAllTextClass);
       this.$showAllButton.appendChild(this.$showAllText);
@@ -589,7 +526,7 @@
         const $header = $section.querySelector(`.${this.sectionHeaderClass}`);
         if (!$header) {
           throw new ElementError({
-            component: Accordion,
+            componentName: 'Accordion',
             identifier: `Section headers (\`<div class="${this.sectionHeaderClass}">\`)`
           });
         }
@@ -605,22 +542,22 @@
       const $summary = $header.querySelector(`.${this.sectionSummaryClass}`);
       if (!$heading) {
         throw new ElementError({
-          component: Accordion,
+          componentName: 'Accordion',
           identifier: `Section heading (\`.${this.sectionHeadingClass}\`)`
         });
       }
       if (!$span) {
         throw new ElementError({
-          component: Accordion,
+          componentName: 'Accordion',
           identifier: `Section button placeholder (\`<span class="${this.sectionButtonClass}">\`)`
         });
       }
       const $button = document.createElement('button');
       $button.setAttribute('type', 'button');
-      $button.setAttribute('aria-controls', `${this.$root.id}-content-${index + 1}`);
+      $button.setAttribute('aria-controls', `${this.$module.id}-content-${index + 1}`);
       for (const attr of Array.from($span.attributes)) {
-        if (attr.name !== 'id') {
-          $button.setAttribute(attr.name, attr.value);
+        if (attr.nodeName !== 'id') {
+          $button.setAttribute(attr.nodeName, `${attr.nodeValue}`);
         }
       }
       const $headingText = document.createElement('span');
@@ -629,7 +566,7 @@
       const $headingTextFocus = document.createElement('span');
       $headingTextFocus.classList.add(this.sectionHeadingTextFocusClass);
       $headingText.appendChild($headingTextFocus);
-      Array.from($span.childNodes).forEach($child => $headingTextFocus.appendChild($child));
+      $headingTextFocus.innerHTML = $span.innerHTML;
       const $showHideToggle = document.createElement('span');
       $showHideToggle.classList.add(this.sectionShowHideToggleClass);
       $showHideToggle.setAttribute('data-nosnippet', '');
@@ -644,16 +581,16 @@
       $showHideToggleFocus.appendChild($showHideText);
       $button.appendChild($headingText);
       $button.appendChild(this.getButtonPunctuationEl());
-      if ($summary) {
+      if ($summary != null && $summary.parentNode) {
         const $summarySpan = document.createElement('span');
         const $summarySpanFocus = document.createElement('span');
         $summarySpanFocus.classList.add(this.sectionSummaryFocusClass);
         $summarySpan.appendChild($summarySpanFocus);
         for (const attr of Array.from($summary.attributes)) {
-          $summarySpan.setAttribute(attr.name, attr.value);
+          $summarySpan.setAttribute(attr.nodeName, `${attr.nodeValue}`);
         }
-        Array.from($summary.childNodes).forEach($child => $summarySpanFocus.appendChild($child));
-        $summary.remove();
+        $summarySpanFocus.innerHTML = $summary.innerHTML;
+        $summary.parentNode.replaceChild($summarySpan, $summary);
         $button.appendChild($summarySpan);
         $button.appendChild(this.getButtonPunctuationEl());
       }
@@ -672,15 +609,15 @@
       }
     }
     onSectionToggle($section) {
-      const nowExpanded = !this.isExpanded($section);
-      this.setExpanded(nowExpanded, $section);
-      this.storeState($section, nowExpanded);
+      const expanded = this.isExpanded($section);
+      this.setExpanded(!expanded, $section);
+      this.storeState($section);
     }
     onShowOrHideAllToggle() {
-      const nowExpanded = !this.areAllSectionsOpen();
+      const nowExpanded = !this.checkIfAllSectionsOpen();
       this.$sections.forEach($section => {
         this.setExpanded(nowExpanded, $section);
-        this.storeState($section, nowExpanded);
+        this.storeState($section);
       });
       this.updateShowAllButton(nowExpanded);
     }
@@ -691,7 +628,7 @@
       const $content = $section.querySelector(`.${this.sectionContentClass}`);
       if (!$content) {
         throw new ElementError({
-          component: Accordion,
+          componentName: 'Accordion',
           identifier: `Section content (\`<div class="${this.sectionContentClass}">\`)`
         });
       }
@@ -722,13 +659,17 @@
         $section.classList.remove(this.sectionExpandedClass);
         $showHideIcon.classList.add(this.downChevronIconClass);
       }
-      this.updateShowAllButton(this.areAllSectionsOpen());
+      const areAllSectionsOpen = this.checkIfAllSectionsOpen();
+      this.updateShowAllButton(areAllSectionsOpen);
     }
     isExpanded($section) {
       return $section.classList.contains(this.sectionExpandedClass);
     }
-    areAllSectionsOpen() {
-      return Array.from(this.$sections).every($section => this.isExpanded($section));
+    checkIfAllSectionsOpen() {
+      const sectionsCount = this.$sections.length;
+      const expandedSectionCount = this.$module.querySelectorAll(`.${this.sectionExpandedClass}`).length;
+      const areAllSectionsOpen = sectionsCount === expandedSectionCount;
+      return areAllSectionsOpen;
     }
     updateShowAllButton(expanded) {
       if (!this.$showAllButton || !this.$showAllText || !this.$showAllIcon) {
@@ -738,53 +679,78 @@
       this.$showAllText.textContent = expanded ? this.i18n.t('hideAllSections') : this.i18n.t('showAllSections');
       this.$showAllIcon.classList.toggle(this.downChevronIconClass, !expanded);
     }
-
-    /**
-     * Get the identifier for a section
-     *
-     * We need a unique way of identifying each content in the Accordion.
-     * Since an `#id` should be unique and an `id` is required for `aria-`
-     * attributes `id` can be safely used.
-     *
-     * @param {Element} $section - Section element
-     * @returns {string | undefined | null} Identifier for section
-     */
-    getIdentifier($section) {
-      const $button = $section.querySelector(`.${this.sectionButtonClass}`);
-      return $button == null ? void 0 : $button.getAttribute('aria-controls');
-    }
-    storeState($section, isExpanded) {
-      if (!this.config.rememberExpanded) {
-        return;
-      }
-      const id = this.getIdentifier($section);
-      if (id) {
-        try {
-          window.sessionStorage.setItem(id, isExpanded.toString());
-        } catch (exception) {}
+    storeState($section) {
+      if (this.browserSupportsSessionStorage && this.config.rememberExpanded) {
+        const $button = $section.querySelector(`.${this.sectionButtonClass}`);
+        if ($button) {
+          const contentId = $button.getAttribute('aria-controls');
+          const contentState = $button.getAttribute('aria-expanded');
+          if (contentId && contentState) {
+            window.sessionStorage.setItem(contentId, contentState);
+          }
+        }
       }
     }
     setInitialState($section) {
-      if (!this.config.rememberExpanded) {
-        return;
-      }
-      const id = this.getIdentifier($section);
-      if (id) {
-        try {
-          const state = window.sessionStorage.getItem(id);
-          if (state !== null) {
-            this.setExpanded(state === 'true', $section);
+      if (this.browserSupportsSessionStorage && this.config.rememberExpanded) {
+        const $button = $section.querySelector(`.${this.sectionButtonClass}`);
+        if ($button) {
+          const contentId = $button.getAttribute('aria-controls');
+          const contentState = contentId ? window.sessionStorage.getItem(contentId) : null;
+          if (contentState !== null) {
+            this.setExpanded(contentState === 'true', $section);
           }
-        } catch (exception) {}
+        }
       }
     }
     getButtonPunctuationEl() {
       const $punctuationEl = document.createElement('span');
       $punctuationEl.classList.add('govuk-visually-hidden', this.sectionHeadingDividerClass);
-      $punctuationEl.textContent = ', ';
+      $punctuationEl.innerHTML = ', ';
       return $punctuationEl;
     }
   }
+  Accordion.moduleName = 'govuk-accordion';
+  Accordion.defaults = Object.freeze({
+    i18n: {
+      hideAllSections: 'Hide all sections',
+      hideSection: 'Hide',
+      hideSectionAriaLabel: 'Hide this section',
+      showAllSections: 'Show all sections',
+      showSection: 'Show',
+      showSectionAriaLabel: 'Show this section'
+    },
+    rememberExpanded: true
+  });
+  Accordion.schema = Object.freeze({
+    properties: {
+      i18n: {
+        type: 'object'
+      },
+      rememberExpanded: {
+        type: 'boolean'
+      }
+    }
+  });
+  const helper = {
+    /**
+     * Check for `window.sessionStorage`, and that it actually works.
+     *
+     * @returns {boolean} True if session storage is available
+     */
+    checkForSessionStorage: function () {
+      const testString = 'this is the test string';
+      let result;
+      try {
+        window.sessionStorage.setItem(testString, testString);
+        result = window.sessionStorage.getItem(testString) === testString.toString();
+        window.sessionStorage.removeItem(testString);
+        return result;
+      } catch (exception) {
+        return false;
+      }
+    }
+  };
 
   /**
    * Accordion config
@@ -822,28 +788,6 @@
   /**
    * @typedef {import('../../common/index.mjs').Schema} Schema
    */
-  Accordion.moduleName = 'govuk-accordion';
-  Accordion.defaults = Object.freeze({
-    i18n: {
-      hideAllSections: 'Hide all sections',
-      hideSection: 'Hide',
-      hideSectionAriaLabel: 'Hide this section',
-      showAllSections: 'Show all sections',
-      showSection: 'Show',
-      showSectionAriaLabel: 'Show this section'
-    },
-    rememberExpanded: true
-  });
-  Accordion.schema = Object.freeze({
-    properties: {
-      i18n: {
-        type: 'object'
-      },
-      rememberExpanded: {
-        type: 'boolean'
-      }
-    }
-  });
 
   const DEBOUNCE_TIMEOUT_IN_SECONDS = 1;
 
@@ -854,16 +798,25 @@
    */
   class Button extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for button
+     * @param {Element | null} $module - HTML element to use for button
      * @param {ButtonConfig} [config] - Button config
      */
-    constructor($root, config = {}) {
-      super($root);
+    constructor($module, config = {}) {
+      super();
+      this.$module = void 0;
       this.config = void 0;
       this.debounceFormSubmitTimer = null;
-      this.config = mergeConfigs(Button.defaults, config, normaliseDataset(Button, this.$root.dataset));
-      this.$root.addEventListener('keydown', event => this.handleKeyDown(event));
-      this.$root.addEventListener('click', event => this.debounce(event));
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Button',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      this.$module = $module;
+      this.config = mergeConfigs(Button.defaults, config, normaliseDataset(Button, $module.dataset));
+      this.$module.addEventListener('keydown', event => this.handleKeyDown(event));
+      this.$module.addEventListener('click', event => this.debounce(event));
     }
     handleKeyDown(event) {
       const $target = event.target;
@@ -931,12 +884,13 @@
    */
   class CharacterCount extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for character count
+     * @param {Element | null} $module - HTML element to use for character count
      * @param {CharacterCountConfig} [config] - Character count config
      */
-    constructor($root, config = {}) {
+    constructor($module, config = {}) {
       var _ref, _this$config$maxwords;
-      super($root);
+      super();
+      this.$module = void 0;
       this.$textarea = void 0;
       this.$visibleCountMessage = void 0;
       this.$screenReaderCountMessage = void 0;
@@ -946,16 +900,23 @@
       this.config = void 0;
       this.i18n = void 0;
       this.maxLength = void 0;
-      const $textarea = this.$root.querySelector('.govuk-js-character-count');
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Character count',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      const $textarea = $module.querySelector('.govuk-js-character-count');
       if (!($textarea instanceof HTMLTextAreaElement || $textarea instanceof HTMLInputElement)) {
         throw new ElementError({
-          component: CharacterCount,
+          componentName: 'Character count',
           element: $textarea,
           expectedType: 'HTMLTextareaElement or HTMLInputElement',
           identifier: 'Form field (`.govuk-js-character-count`)'
         });
       }
-      const datasetConfig = normaliseDataset(CharacterCount, this.$root.dataset);
+      const datasetConfig = normaliseDataset(CharacterCount, $module.dataset);
       let configOverrides = {};
       if ('maxwords' in datasetConfig || 'maxlength' in datasetConfig) {
         configOverrides = {
@@ -966,18 +927,19 @@
       this.config = mergeConfigs(CharacterCount.defaults, config, configOverrides, datasetConfig);
       const errors = validateConfig(CharacterCount.schema, this.config);
       if (errors[0]) {
-        throw new ConfigError(formatErrorMessage(CharacterCount, errors[0]));
+        throw new ConfigError(`Character count: ${errors[0]}`);
       }
       this.i18n = new I18n(this.config.i18n, {
-        locale: closestAttributeValue(this.$root, 'lang')
+        locale: closestAttributeValue($module, 'lang')
       });
       this.maxLength = (_ref = (_this$config$maxwords = this.config.maxwords) != null ? _this$config$maxwords : this.config.maxlength) != null ? _ref : Infinity;
+      this.$module = $module;
       this.$textarea = $textarea;
       const textareaDescriptionId = `${this.$textarea.id}-info`;
       const $textareaDescription = document.getElementById(textareaDescriptionId);
       if (!$textareaDescription) {
         throw new ElementError({
-          component: CharacterCount,
+          componentName: 'Character count',
           element: $textareaDescription,
           identifier: `Count message (\`id="${textareaDescriptionId}"\`)`
         });
@@ -1221,18 +1183,27 @@
      * (for example if the user has navigated back), and set up event handlers to
      * keep the reveal in sync with the checkbox state.
      *
-     * @param {Element | null} $root - HTML element to use for checkboxes
+     * @param {Element | null} $module - HTML element to use for checkboxes
      */
-    constructor($root) {
-      super($root);
+    constructor($module) {
+      super();
+      this.$module = void 0;
       this.$inputs = void 0;
-      const $inputs = this.$root.querySelectorAll('input[type="checkbox"]');
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Checkboxes',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      const $inputs = $module.querySelectorAll('input[type="checkbox"]');
       if (!$inputs.length) {
         throw new ElementError({
-          component: Checkboxes,
+          componentName: 'Checkboxes',
           identifier: 'Form inputs (`<input type="checkbox">`)'
         });
       }
+      this.$module = $module;
       this.$inputs = $inputs;
       this.$inputs.forEach($input => {
         const targetId = $input.getAttribute('data-aria-controls');
@@ -1241,7 +1212,7 @@
         }
         if (!document.getElementById(targetId)) {
           throw new ElementError({
-            component: Checkboxes,
+            componentName: 'Checkboxes',
             identifier: `Conditional reveal (\`id="${targetId}"\`)`
           });
         }
@@ -1250,7 +1221,7 @@
       });
       window.addEventListener('pageshow', () => this.syncAllConditionalReveals());
       this.syncAllConditionalReveals();
-      this.$root.addEventListener('click', event => this.handleClick(event));
+      this.$module.addEventListener('click', event => this.handleClick(event));
     }
     syncAllConditionalReveals() {
       this.$inputs.forEach($input => this.syncConditionalRevealWithInputState($input));
@@ -1319,17 +1290,26 @@
    */
   class ErrorSummary extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for error summary
+     * @param {Element | null} $module - HTML element to use for error summary
      * @param {ErrorSummaryConfig} [config] - Error summary config
      */
-    constructor($root, config = {}) {
-      super($root);
+    constructor($module, config = {}) {
+      super();
+      this.$module = void 0;
       this.config = void 0;
-      this.config = mergeConfigs(ErrorSummary.defaults, config, normaliseDataset(ErrorSummary, this.$root.dataset));
-      if (!this.config.disableAutoFocus) {
-        setFocus(this.$root);
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Error summary',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
       }
-      this.$root.addEventListener('click', event => this.handleClick(event));
+      this.$module = $module;
+      this.config = mergeConfigs(ErrorSummary.defaults, config, normaliseDataset(ErrorSummary, $module.dataset));
+      if (!this.config.disableAutoFocus) {
+        setFocus(this.$module);
+      }
+      this.$module.addEventListener('click', event => this.handleClick(event));
     }
     handleClick(event) {
       const $target = event.target;
@@ -1413,11 +1393,12 @@
    */
   class ExitThisPage extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element that wraps the Exit This Page button
+     * @param {Element | null} $module - HTML element that wraps the Exit This Page button
      * @param {ExitThisPageConfig} [config] - Exit This Page config
      */
-    constructor($root, config = {}) {
-      super($root);
+    constructor($module, config = {}) {
+      super();
+      this.$module = void 0;
       this.config = void 0;
       this.i18n = void 0;
       this.$button = void 0;
@@ -1430,17 +1411,25 @@
       this.timeoutTime = 5000;
       this.keypressTimeoutId = null;
       this.timeoutMessageId = null;
-      const $button = this.$root.querySelector('.govuk-exit-this-page__button');
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Exit this page',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      const $button = $module.querySelector('.govuk-exit-this-page__button');
       if (!($button instanceof HTMLAnchorElement)) {
         throw new ElementError({
-          component: ExitThisPage,
+          componentName: 'Exit this page',
           element: $button,
           expectedType: 'HTMLAnchorElement',
           identifier: 'Button (`.govuk-exit-this-page__button`)'
         });
       }
-      this.config = mergeConfigs(ExitThisPage.defaults, config, normaliseDataset(ExitThisPage, this.$root.dataset));
+      this.config = mergeConfigs(ExitThisPage.defaults, config, normaliseDataset(ExitThisPage, $module.dataset));
       this.i18n = new I18n(this.config.i18n);
+      this.$module = $module;
       this.$button = $button;
       const $skiplinkButton = document.querySelector('.govuk-js-exit-this-page-skiplink');
       if ($skiplinkButton instanceof HTMLAnchorElement) {
@@ -1459,7 +1448,7 @@
       this.$updateSpan = document.createElement('span');
       this.$updateSpan.setAttribute('role', 'status');
       this.$updateSpan.className = 'govuk-visually-hidden';
-      this.$root.appendChild(this.$updateSpan);
+      this.$module.appendChild(this.$updateSpan);
     }
     initButtonClickHandler() {
       this.$button.addEventListener('click', this.handleClick.bind(this));
@@ -1634,29 +1623,38 @@
      * Apply a matchMedia for desktop which will trigger a state sync if the
      * browser viewport moves between states.
      *
-     * @param {Element | null} $root - HTML element to use for header
+     * @param {Element | null} $module - HTML element to use for header
      */
-    constructor($root) {
-      super($root);
+    constructor($module) {
+      super();
+      this.$module = void 0;
       this.$menuButton = void 0;
       this.$menu = void 0;
       this.menuIsOpen = false;
       this.mql = null;
-      const $menuButton = this.$root.querySelector('.govuk-js-header-toggle');
+      if (!$module) {
+        throw new ElementError({
+          componentName: 'Header',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      this.$module = $module;
+      const $menuButton = $module.querySelector('.govuk-js-header-toggle');
       if (!$menuButton) {
         return this;
       }
       const menuId = $menuButton.getAttribute('aria-controls');
       if (!menuId) {
         throw new ElementError({
-          component: Header,
+          componentName: 'Header',
           identifier: 'Navigation button (`<button class="govuk-js-header-toggle">`) attribute (`aria-controls`)'
         });
       }
       const $menu = document.getElementById(menuId);
       if (!$menu) {
         throw new ElementError({
-          component: Header,
+          componentName: 'Header',
           element: $menu,
           identifier: `Navigation (\`<ul id="${menuId}">\`)`
         });
@@ -1670,7 +1668,7 @@
       const breakpoint = getBreakpoint('desktop');
       if (!breakpoint.value) {
         throw new ElementError({
-          component: Header,
+          componentName: 'Header',
           identifier: `CSS custom property (\`${breakpoint.property}\`) on pseudo-class \`:root\``
         });
       }
@@ -1713,15 +1711,24 @@
    */
   class NotificationBanner extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for notification banner
+     * @param {Element | null} $module - HTML element to use for notification banner
      * @param {NotificationBannerConfig} [config] - Notification banner config
      */
-    constructor($root, config = {}) {
-      super($root);
+    constructor($module, config = {}) {
+      super();
+      this.$module = void 0;
       this.config = void 0;
-      this.config = mergeConfigs(NotificationBanner.defaults, config, normaliseDataset(NotificationBanner, this.$root.dataset));
-      if (this.$root.getAttribute('role') === 'alert' && !this.config.disableAutoFocus) {
-        setFocus(this.$root);
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Notification banner',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      this.$module = $module;
+      this.config = mergeConfigs(NotificationBanner.defaults, config, normaliseDataset(NotificationBanner, $module.dataset));
+      if (this.$module.getAttribute('role') === 'alert' && !this.config.disableAutoFocus) {
+        setFocus(this.$module);
       }
     }
   }
@@ -1758,20 +1765,28 @@
    */
   class PasswordInput extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for password input
+     * @param {Element | null} $module - HTML element to use for password input
      * @param {PasswordInputConfig} [config] - Password input config
      */
-    constructor($root, config = {}) {
-      super($root);
+    constructor($module, config = {}) {
+      super();
+      this.$module = void 0;
       this.config = void 0;
       this.i18n = void 0;
       this.$input = void 0;
       this.$showHideButton = void 0;
       this.$screenReaderStatusMessage = void 0;
-      const $input = this.$root.querySelector('.govuk-js-password-input-input');
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Password input',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      const $input = $module.querySelector('.govuk-js-password-input-input');
       if (!($input instanceof HTMLInputElement)) {
         throw new ElementError({
-          component: PasswordInput,
+          componentName: 'Password input',
           element: $input,
           expectedType: 'HTMLInputElement',
           identifier: 'Form field (`.govuk-js-password-input-input`)'
@@ -1780,10 +1795,10 @@
       if ($input.type !== 'password') {
         throw new ElementError('Password input: Form field (`.govuk-js-password-input-input`) must be of type `password`.');
       }
-      const $showHideButton = this.$root.querySelector('.govuk-js-password-input-toggle');
+      const $showHideButton = $module.querySelector('.govuk-js-password-input-toggle');
       if (!($showHideButton instanceof HTMLButtonElement)) {
         throw new ElementError({
-          component: PasswordInput,
+          componentName: 'Password input',
           element: $showHideButton,
           expectedType: 'HTMLButtonElement',
           identifier: 'Button (`.govuk-js-password-input-toggle`)'
@@ -1792,11 +1807,12 @@
       if ($showHideButton.type !== 'button') {
         throw new ElementError('Password input: Button (`.govuk-js-password-input-toggle`) must be of type `button`.');
       }
+      this.$module = $module;
       this.$input = $input;
       this.$showHideButton = $showHideButton;
-      this.config = mergeConfigs(PasswordInput.defaults, config, normaliseDataset(PasswordInput, this.$root.dataset));
+      this.config = mergeConfigs(PasswordInput.defaults, config, normaliseDataset(PasswordInput, $module.dataset));
       this.i18n = new I18n(this.config.i18n, {
-        locale: closestAttributeValue(this.$root, 'lang')
+        locale: closestAttributeValue($module, 'lang')
       });
       this.$showHideButton.removeAttribute('hidden');
       const $screenReaderStatusMessage = document.createElement('div');
@@ -1914,18 +1930,27 @@
      * (for example if the user has navigated back), and set up event handlers to
      * keep the reveal in sync with the radio state.
      *
-     * @param {Element | null} $root - HTML element to use for radios
+     * @param {Element | null} $module - HTML element to use for radios
      */
-    constructor($root) {
-      super($root);
+    constructor($module) {
+      super();
+      this.$module = void 0;
       this.$inputs = void 0;
-      const $inputs = this.$root.querySelectorAll('input[type="radio"]');
+      if (!($module instanceof HTMLElement)) {
+        throw new ElementError({
+          componentName: 'Radios',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      const $inputs = $module.querySelectorAll('input[type="radio"]');
       if (!$inputs.length) {
         throw new ElementError({
-          component: Radios,
+          componentName: 'Radios',
           identifier: 'Form inputs (`<input type="radio">`)'
         });
       }
+      this.$module = $module;
       this.$inputs = $inputs;
       this.$inputs.forEach($input => {
         const targetId = $input.getAttribute('data-aria-controls');
@@ -1934,7 +1959,7 @@
         }
         if (!document.getElementById(targetId)) {
           throw new ElementError({
-            component: Radios,
+            componentName: 'Radios',
             identifier: `Conditional reveal (\`id="${targetId}"\`)`
           });
         }
@@ -1943,7 +1968,7 @@
       });
       window.addEventListener('pageshow', () => this.syncAllConditionalReveals());
       this.syncAllConditionalReveals();
-      this.$root.addEventListener('click', event => this.handleClick(event));
+      this.$module.addEventListener('click', event => this.handleClick(event));
     }
     syncAllConditionalReveals() {
       this.$inputs.forEach($input => this.syncConditionalRevealWithInputState($input));
@@ -1980,105 +2005,35 @@
   Radios.moduleName = 'govuk-radios';
 
   /**
-   * Service Navigation component
-   *
-   * @preserve
-   */
-  class ServiceNavigation extends GOVUKFrontendComponent {
-    /**
-     * @param {Element | null} $root - HTML element to use for header
-     */
-    constructor($root) {
-      super($root);
-      this.$menuButton = void 0;
-      this.$menu = void 0;
-      this.menuIsOpen = false;
-      this.mql = null;
-      const $menuButton = this.$root.querySelector('.govuk-js-service-navigation-toggle');
-      if (!$menuButton) {
-        return this;
-      }
-      const menuId = $menuButton.getAttribute('aria-controls');
-      if (!menuId) {
-        throw new ElementError({
-          component: ServiceNavigation,
-          identifier: 'Navigation button (`<button class="govuk-js-service-navigation-toggle">`) attribute (`aria-controls`)'
-        });
-      }
-      const $menu = document.getElementById(menuId);
-      if (!$menu) {
-        throw new ElementError({
-          component: ServiceNavigation,
-          element: $menu,
-          identifier: `Navigation (\`<ul id="${menuId}">\`)`
-        });
-      }
-      this.$menu = $menu;
-      this.$menuButton = $menuButton;
-      this.setupResponsiveChecks();
-      this.$menuButton.addEventListener('click', () => this.handleMenuButtonClick());
-    }
-    setupResponsiveChecks() {
-      const breakpoint = getBreakpoint('tablet');
-      if (!breakpoint.value) {
-        throw new ElementError({
-          component: ServiceNavigation,
-          identifier: `CSS custom property (\`${breakpoint.property}\`) on pseudo-class \`:root\``
-        });
-      }
-      this.mql = window.matchMedia(`(min-width: ${breakpoint.value})`);
-      if ('addEventListener' in this.mql) {
-        this.mql.addEventListener('change', () => this.checkMode());
-      } else {
-        this.mql.addListener(() => this.checkMode());
-      }
-      this.checkMode();
-    }
-    checkMode() {
-      if (!this.mql || !this.$menu || !this.$menuButton) {
-        return;
-      }
-      if (this.mql.matches) {
-        this.$menu.removeAttribute('hidden');
-        this.$menuButton.setAttribute('hidden', '');
-      } else {
-        this.$menuButton.removeAttribute('hidden');
-        this.$menuButton.setAttribute('aria-expanded', this.menuIsOpen.toString());
-        if (this.menuIsOpen) {
-          this.$menu.removeAttribute('hidden');
-        } else {
-          this.$menu.setAttribute('hidden', '');
-        }
-      }
-    }
-    handleMenuButtonClick() {
-      this.menuIsOpen = !this.menuIsOpen;
-      this.checkMode();
-    }
-  }
-  ServiceNavigation.moduleName = 'govuk-service-navigation';
-
-  /**
    * Skip link component
    *
    * @preserve
-   * @augments GOVUKFrontendComponent<HTMLAnchorElement>
    */
   class SkipLink extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for skip link
-     * @throws {ElementError} when $root is not set or the wrong type
-     * @throws {ElementError} when $root.hash does not contain a hash
+     * @param {Element | null} $module - HTML element to use for skip link
+     * @throws {ElementError} when $module is not set or the wrong type
+     * @throws {ElementError} when $module.hash does not contain a hash
      * @throws {ElementError} when the linked element is missing or the wrong type
      */
-    constructor($root) {
-      var _this$$root$getAttrib;
-      super($root);
-      const hash = this.$root.hash;
-      const href = (_this$$root$getAttrib = this.$root.getAttribute('href')) != null ? _this$$root$getAttrib : '';
+    constructor($module) {
+      var _this$$module$getAttr;
+      super();
+      this.$module = void 0;
+      if (!($module instanceof HTMLAnchorElement)) {
+        throw new ElementError({
+          componentName: 'Skip link',
+          element: $module,
+          expectedType: 'HTMLAnchorElement',
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      this.$module = $module;
+      const hash = this.$module.hash;
+      const href = (_this$$module$getAttr = this.$module.getAttribute('href')) != null ? _this$$module$getAttr : '';
       let url;
       try {
-        url = new window.URL(this.$root.href);
+        url = new window.URL(this.$module.href);
       } catch (error) {
         throw new ElementError(`Skip link: Target link (\`href="${href}"\`) is invalid`);
       }
@@ -2092,12 +2047,12 @@
       const $linkedElement = document.getElementById(linkedElementId);
       if (!$linkedElement) {
         throw new ElementError({
-          component: SkipLink,
+          componentName: 'Skip link',
           element: $linkedElement,
           identifier: `Target content (\`id="${linkedElementId}"\`)`
         });
       }
-      this.$root.addEventListener('click', () => setFocus($linkedElement, {
+      this.$module.addEventListener('click', () => setFocus($linkedElement, {
         onBeforeFocus() {
           $linkedElement.classList.add('govuk-skip-link-focused-element');
         },
@@ -2107,7 +2062,6 @@
       }));
     }
   }
-  SkipLink.elementType = HTMLAnchorElement;
   SkipLink.moduleName = 'govuk-skip-link';
 
   /**
@@ -2117,10 +2071,11 @@
    */
   class Tabs extends GOVUKFrontendComponent {
     /**
-     * @param {Element | null} $root - HTML element to use for tabs
+     * @param {Element | null} $module - HTML element to use for tabs
      */
-    constructor($root) {
-      super($root);
+    constructor($module) {
+      super();
+      this.$module = void 0;
       this.$tabs = void 0;
       this.$tabList = void 0;
       this.$tabListItems = void 0;
@@ -2130,28 +2085,36 @@
       this.boundTabKeydown = void 0;
       this.boundOnHashChange = void 0;
       this.mql = null;
-      const $tabs = this.$root.querySelectorAll('a.govuk-tabs__tab');
+      if (!$module) {
+        throw new ElementError({
+          componentName: 'Tabs',
+          element: $module,
+          identifier: 'Root element (`$module`)'
+        });
+      }
+      const $tabs = $module.querySelectorAll('a.govuk-tabs__tab');
       if (!$tabs.length) {
         throw new ElementError({
-          component: Tabs,
+          componentName: 'Tabs',
           identifier: 'Links (`<a class="govuk-tabs__tab">`)'
         });
       }
+      this.$module = $module;
       this.$tabs = $tabs;
       this.boundTabClick = this.onTabClick.bind(this);
       this.boundTabKeydown = this.onTabKeydown.bind(this);
       this.boundOnHashChange = this.onHashChange.bind(this);
-      const $tabList = this.$root.querySelector('.govuk-tabs__list');
-      const $tabListItems = this.$root.querySelectorAll('li.govuk-tabs__list-item');
+      const $tabList = this.$module.querySelector('.govuk-tabs__list');
+      const $tabListItems = this.$module.querySelectorAll('li.govuk-tabs__list-item');
       if (!$tabList) {
         throw new ElementError({
-          component: Tabs,
+          componentName: 'Tabs',
           identifier: 'List (`<ul class="govuk-tabs__list">`)'
         });
       }
       if (!$tabListItems.length) {
         throw new ElementError({
-          component: Tabs,
+          componentName: 'Tabs',
           identifier: 'List items (`<li class="govuk-tabs__list-item">`)'
         });
       }
@@ -2163,7 +2126,7 @@
       const breakpoint = getBreakpoint('tablet');
       if (!breakpoint.value) {
         throw new ElementError({
-          component: Tabs,
+          componentName: 'Tabs',
           identifier: `CSS custom property (\`${breakpoint.property}\`) on pseudo-class \`:root\``
         });
       }
@@ -2238,7 +2201,7 @@
       this.showPanel($tab);
     }
     getTab(hash) {
-      return this.$root.querySelector(`a.govuk-tabs__tab[href="${hash}"]`);
+      return this.$module.querySelector(`a.govuk-tabs__tab[href="${hash}"]`);
     }
     setAttributes($tab) {
       const panelId = getFragmentFromUrl($tab.href);
@@ -2297,12 +2260,16 @@
     onTabKeydown(event) {
       switch (event.key) {
         case 'ArrowLeft':
+        case 'ArrowUp':
         case 'Left':
+        case 'Up':
           this.activatePreviousTab();
           event.preventDefault();
           break;
         case 'ArrowRight':
+        case 'ArrowDown':
         case 'Right':
+        case 'Down':
           this.activateNextTab();
           event.preventDefault();
           break;
@@ -2349,7 +2316,7 @@
       if (!panelId) {
         return null;
       }
-      return this.$root.querySelector(`#${panelId}`);
+      return this.$module.querySelector(`#${panelId}`);
     }
     showPanel($tab) {
       const $panel = this.getPanel($tab);
@@ -2382,7 +2349,7 @@
       $tab.setAttribute('tabindex', '0');
     }
     getCurrentTab() {
-      return this.$root.querySelector('.govuk-tabs__list-item--selected a.govuk-tabs__tab');
+      return this.$module.querySelector('.govuk-tabs__list-item--selected a.govuk-tabs__tab');
     }
   }
   Tabs.moduleName = 'govuk-tabs';
@@ -2393,93 +2360,29 @@
    * Use the `data-module` attributes to find, instantiate and init all of the
    * components provided as part of GOV.UK Frontend.
    *
-   * @param {Config & { scope?: Element, onError?: OnErrorCallback<CompatibleClass> }} [config] - Config for all components (with optional scope)
+   * @param {Config & { scope?: Element }} [config] - Config for all components (with optional scope)
    */
   function initAll(config) {
     var _config$scope;
     config = typeof config !== 'undefined' ? config : {};
     if (!isSupported()) {
-      if (config.onError) {
-        config.onError(new SupportError(), {
-          config
-        });
-      } else {
-        console.log(new SupportError());
-      }
+      console.log(new SupportError());
       return;
     }
-    const components = [[Accordion, config.accordion], [Button, config.button], [CharacterCount, config.characterCount], [Checkboxes], [ErrorSummary, config.errorSummary], [ExitThisPage, config.exitThisPage], [Header], [NotificationBanner, config.notificationBanner], [PasswordInput, config.passwordInput], [Radios], [ServiceNavigation], [SkipLink], [Tabs]];
-    const options = {
-      scope: (_config$scope = config.scope) != null ? _config$scope : document,
-      onError: config.onError
-    };
+    const components = [[Accordion, config.accordion], [Button, config.button], [CharacterCount, config.characterCount], [Checkboxes], [ErrorSummary, config.errorSummary], [ExitThisPage, config.exitThisPage], [Header], [NotificationBanner, config.notificationBanner], [PasswordInput, config.passwordInput], [Radios], [SkipLink], [Tabs]];
+    const $scope = (_config$scope = config.scope) != null ? _config$scope : document;
     components.forEach(([Component, config]) => {
-      createAll(Component, config, options);
+      const $elements = $scope.querySelectorAll(`[data-module="${Component.moduleName}"]`);
+      $elements.forEach($element => {
+        try {
+          'defaults' in Component ? new Component($element, config) : new Component($element);
+        } catch (error) {
+          console.log(error);
+        }
+      });
     });
   }
 
-  /**
-   * Create all instances of a specific component on the page
-   *
-   * Uses the `data-module` attribute to find all elements matching the specified
-   * component on the page, creating instances of the component object for each
-   * of them.
-   *
-   * Any component errors will be caught and logged to the console.
-   *
-   * @template {CompatibleClass} T
-   * @param {T} Component - class of the component to create
-   * @param {T["defaults"]} [config] - Config supplied to component
-   * @param {OnErrorCallback<T> | Element | Document | CreateAllOptions<T> } [createAllOptions] - options for createAll including scope of the document to search within and callback function if error throw by component on init
-   * @returns {Array<InstanceType<T>>} - array of instantiated components
-   */
-  function createAll(Component, config, createAllOptions) {
-    let $scope = document;
-    let onError;
-    if (typeof createAllOptions === 'object') {
-      var _createAllOptions$sco;
-      createAllOptions = createAllOptions;
-      $scope = (_createAllOptions$sco = createAllOptions.scope) != null ? _createAllOptions$sco : $scope;
-      onError = createAllOptions.onError;
-    }
-    if (typeof createAllOptions === 'function') {
-      onError = createAllOptions;
-    }
-    if (createAllOptions instanceof HTMLElement) {
-      $scope = createAllOptions;
-    }
-    const $elements = $scope.querySelectorAll(`[data-module="${Component.moduleName}"]`);
-    if (!isSupported()) {
-      if (onError) {
-        onError(new SupportError(), {
-          component: Component,
-          config
-        });
-      } else {
-        console.log(new SupportError());
-      }
-      return [];
-    }
-    return Array.from($elements).map($element => {
-      try {
-        return typeof config !== 'undefined' ? new Component($element, config) : new Component($element);
-      } catch (error) {
-        if (onError) {
-          onError(error, {
-            element: $element,
-            component: Component,
-            config
-          });
-        } else {
-          console.log(error);
-        }
-        return null;
-      }
-    }).filter(Boolean);
-  }
-  /**
-   * @typedef {{new (...args: any[]): any, defaults?: object, moduleName: string}} CompatibleClass
-   */
   /**
    * Config for all components via `initAll()`
    *
@@ -2492,6 +2395,7 @@
    * @property {NotificationBannerConfig} [notificationBanner] - Notification Banner config
    * @property {PasswordInputConfig} [passwordInput] - Password input config
    */
+
   /**
    * Config for individual components
    *
@@ -2506,48 +2410,26 @@
    * @typedef {import('./components/notification-banner/notification-banner.mjs').NotificationBannerConfig} NotificationBannerConfig
    * @typedef {import('./components/password-input/password-input.mjs').PasswordInputConfig} PasswordInputConfig
    */
+
   /**
    * Component config keys, e.g. `accordion` and `characterCount`
    *
    * @typedef {keyof Config} ConfigKey
-   */
-  /**
-   * @template {CompatibleClass} T
-   * @typedef {object} ErrorContext
-   * @property {Element} [element] - Element used for component module initialisation
-   * @property {T} [component] - Class of component
-   * @property {T["defaults"]} config - Config supplied to component
-   */
-  /**
-   * @template {CompatibleClass} T
-   * @callback OnErrorCallback
-   * @param {unknown} error - Thrown error
-   * @param {ErrorContext<T>} context - Object containing the element, component class and configuration
-   */
-  /**
-   * @template {CompatibleClass} T
-   * @typedef {object} CreateAllOptions
-   * @property {Element | Document} [scope] - scope of the document to search within
-   * @property {OnErrorCallback<T>} [onError] - callback function if error throw by component on init
    */
 
   exports.Accordion = Accordion;
   exports.Button = Button;
   exports.CharacterCount = CharacterCount;
   exports.Checkboxes = Checkboxes;
-  exports.Component = GOVUKFrontendComponent;
   exports.ErrorSummary = ErrorSummary;
   exports.ExitThisPage = ExitThisPage;
   exports.Header = Header;
   exports.NotificationBanner = NotificationBanner;
   exports.PasswordInput = PasswordInput;
   exports.Radios = Radios;
-  exports.ServiceNavigation = ServiceNavigation;
   exports.SkipLink = SkipLink;
   exports.Tabs = Tabs;
-  exports.createAll = createAll;
   exports.initAll = initAll;
-  exports.isSupported = isSupported;
   exports.version = version;
 
 }));
