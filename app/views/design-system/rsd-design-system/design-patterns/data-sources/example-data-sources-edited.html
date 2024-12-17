@@ -1,30 +1,5 @@
 {% extends "./../example-layout.html" %}
 
-{# Set up a bunch of source and updates content #}
-{% set sourceUpdatesContent %}
-
-    <p class="govuk-body">
-        <span class='govuk-!-font-weight-bold'>Trust relationship manager:</span>
-    </p>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li class="">
-        The Trust relationship manager was last updated by Joe.Bloggs@education.gov.uk on 10 December 2024.
-      </li>
-    </ul>
-
-    <p class="govuk-body">
-      <span class='govuk-!-font-weight-bold'>SFSO (Schools financial support and oversight) lead:</span>
-    </p>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li class="">
-        The SFSO lead was last updated by Joe.Bloggs@education.gov.uk on 12 December 2024.
-      </li>
-    </ul>
-
-{% endset %}
-
 {% block pageTitle %}
 Data sources | RSD component library
 {% endblock %}
@@ -113,12 +88,37 @@ Data sources | RSD component library
         </div>
       </div>
 
-    {% from "govuk/components/details/macro.njk" import govukDetails %}
-    {# Display it all in a details component #}
-    {{ govukDetails({
-      summaryText: "Where this information came from",
-      html: sourceUpdatesContent
-    }) }}
+      <details class="govuk-details">
+        
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Where this information came from
+          </span>
+        </summary>
+
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            <span class='govuk-!-font-weight-bold'>Trust relationship manager:</span>
+          </p>
+      
+          <ul class="govuk-list govuk-list--bullet">
+            <li class="">
+              The Trust relationship manager was last updated by Joe.Bloggs@education.gov.uk on 10 December 2024.
+            </li>
+          </ul>
+      
+          <p class="govuk-body">
+            <span class='govuk-!-font-weight-bold'>SFSO (Schools financial support and oversight) lead:</span>
+          </p>
+      
+          <ul class="govuk-list govuk-list--bullet">
+            <li class="">
+              The SFSO lead was last updated by Joe.Bloggs@education.gov.uk on 12 December 2024.
+            </li>
+          </ul>
+        </div>
+        
+      </details>
     
   </div>
 </div>

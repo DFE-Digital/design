@@ -1,26 +1,5 @@
 {% extends "./../example-layout.html" %}
 
-{# Set up a bunch of source and updates content #}
-{% set sourceUpdatesContent %}
-
-    <p class="govuk-body">
-        <span class='govuk-!-font-weight-bold'>Free school meals:</span>
-    </p>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li class="">
-        Pupils eligibile for free school meals was taken from Get information about schools on 31 October 2023.
-      </li>
-      <li class="">
-        Local authority average 2023/24 was taken from Explore education statistics on 6 August 2024.
-      </li>
-      <li class="">
-        National average 2023/24 was taken from Explore education statistics on 6 August 2024.
-      </li>
-    </ul>
-
-{% endset %}
-
 {% block pageTitle %}
 Data sources | RSD component library
 {% endblock %}
@@ -75,12 +54,33 @@ Data sources | RSD component library
         </tbody>
       </table>
 
-  {% from "govuk/components/details/macro.njk" import govukDetails %}
-  {# Display it all in a details component #}
-  {{ govukDetails({
-    summaryText: "Where this information came from",
-    html: sourceUpdatesContent
-  }) }}
+      <details class="govuk-details">
+        
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Where this information came from
+          </span>
+        </summary>
+
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            <span class='govuk-!-font-weight-bold'>Free school meals:</span>
+          </p>
+    
+          <ul class="govuk-list govuk-list--bullet">
+            <li class="">
+              Pupils eligibile for free school meals was taken from Get information about schools on 31 October 2023.
+            </li>
+            <li class="">
+              Local authority average 2023/24 was taken from Explore education statistics on 6 August 2024.
+            </li>
+            <li class="">
+              National average 2023/24 was taken from Explore education statistics on 6 August 2024.
+            </li>
+          </ul>
+        </div>
+
+      </details>
     
   </div>
 </div>
