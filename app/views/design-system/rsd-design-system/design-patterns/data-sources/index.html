@@ -3,7 +3,7 @@
 {% import "./code-snippets.html" as codeSnippet %}
 
 {% set pageName = "Data sources" %}
-{% set pageDescription = "Let users know when and where information has come from." %}
+{% set pageDescription = "Let users where data has come from and when it was last updated." %}
 {% set pageCaption = "Regional Services Division design pattern" %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
@@ -13,7 +13,7 @@
 
 {% set isSubNavSection = "true" %}
 {% set lastUpdated = "December 2024" %}
-{% set backlog_issue_id = "" %}
+{% set backlog_issue_id = "293" %}
 
 {% block beforeContent %}{% endblock %}
 
@@ -25,59 +25,39 @@
     <figure class="govuk-!-margin-bottom-9" style="margin: 0;">
       <img style="border: 1px solid #999999;" src="/assets/images/rsd-design-patterns/data-sources-explainer.png"
         alt="A diagram representing three different data sources, feeding into one final product. The example uses lists of schools, academies and trusts, feeding inton one box." width="100%">
-      <figcaption>A diagram representing three different data sources, feeding into one final product. The example uses lists of schools, academies and trusts, feeding inton one box.</figcaption>
+      <figcaption>A diagram representing three different data sources feeding into one product. The data sources in this example are lists of schools, academies and trusts.</figcaption>
     </figure>
-
-    <p>
-      Users frequently include information about where they have sourced their information from when producing internal documents. 
-      Sometimes, dates can often be misinterpreted when given without further context of what the information it is refering to. 
-    </p>
-
-    <p>
-      For example, confusion between when information was last updated at the <em>source</em>, 
-      versus when it was <em>imported</em> from an external system. 
-    </p>
-
-    <p>
-      It's important to display sources and dates clearly and simply, to avoid confusion as much as possible. Sometimes, dates and sources are used when the credibility of information is in question e.g. at a board meeting.
-    </p>
 
     <!-- When to use this pattern -->
     <h2 id="when-to-use">When to use this pattern</h2>
     <p>
-      This pattern should be used when:
+      This pattern should be used when data is:
     </p>
     <ul>
-      <li>information is <strong>automatically taken</strong> from an external service or product and displayed on a page</li>
-      <li>information is edited directly within a service or product by a human</li>
+      <li>automatically taken from an external source and displayed in a service</li>
+      <li>edited by someone in a service</li>
     </ul>
 
     <!-- When not to use this pattern -->
     <h2 id="when-not-to-use">When not to use this pattern</h2>
-    <p>
-      This pattern should not be used when:
-    </p>
-    <ul>
-      <li>information is automatically taken from a different page within the <strong>same</strong> service or product</li>
-    </ul>
+    <p> This pattern should not be used when information is automatically taken from another page in the <strong>same</strong> service.</p>
       
     <!-- How it works -->
     <h2 id="how-it-works">How it works</h2>
-    <p>
-      A single source and its last updated date can be displayed in the following way:
-    </p>
+
+    <p>'Data last updated' content can be misinterpreted without context. For example, when the data was last updated at the source
+      compared to when it was last imported from the source.</p>
 
     <p>
-      <strong>[Page title]:</strong>
+      To give users confidence in the data, tell them what the source is and when the data was last retrieved from it:
     </p>
-    <ul>
-      <li>[Information type] was taken from [Source name] on [Date]</li>
-    </ul>
+
+    <p>[Information type] was taken from [Source name] on [Date].</p>
 
     <!-- Basic pattern -->
-    <h3 id="basic-pattern">When information comes from the same source</h3>
+    <h3 id="basic-pattern">Multiple pieces of data from one source</h3>
     <p>
-      Each entry follows the same grouping as how it is presented on the page.
+      Each data source entry should match the way you group imported data in your service.
     </p>
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
@@ -85,9 +65,9 @@
     {{ sample.code('/design-system/rsd-design-system/design-patterns/data-sources/example-data-sources-basic.html', 'Basic data sources', 'data-sources-basic', codeSnippet.htmlCodeDataSourceBasic, codeSnippet.nunjucksCodeDataSourceBasic) }}
 
     <!-- Complex pattern -->
-    <h3 id="complex-pattern">When information comes from different sources</h3>
+    <h3 id="complex-pattern">Data from multiple sources</h3>
     <p>
-      When information has been taken from multiple different sources and displayed on the same page, entries are seperated out based on the amount of different sources used.
+      When data is imported from multiple sources and displayed on the same page, separate data source entries based on the different sources.
     </p>
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
@@ -95,35 +75,26 @@
     {{ sample.code('/design-system/rsd-design-system/design-patterns/data-sources/example-data-sources-complex.html', 'Complex data sources', 'data-sources-complex', codeSnippet.htmlCodeDataSourceComplex, codeSnippet.nunjucksCodeDataSourceComplex) }}
 
     <!-- Edited pattern -->
-    <h3 id="edited-pattern">When the source becomes a person</h3>
-    <p>
-      When information has been edited within the system by a human, their email address is used to represent them, rather than a full name.
-    </p>
+    <h3 id="edited-pattern">Someone has edited data in your service</h3>
+    <p> When you or someone else has edited data in your service, use an email address to represent the person rather than a name.</p>
+      
+    <p>This will help users identify who they need to contact if they have any questions about the data.</p>
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
     {{ sample.code('/design-system/rsd-design-system/design-patterns/data-sources/example-data-sources-edited.html', 'Edited data sources', 'data-sources-edited', codeSnippet.htmlCodeDataSourceEdited, codeSnippet.nunjucksCodeDataSourceEdited) }}
 
-    <!-- Upcoming iterations -->
-    <h2 id="upcoming-iterations">Upcoming iterations</h2>
-    <p>
-      Work to create a seperate content page to describe <em>how</em> and <em>why</em> a service or product handles data in the way that is does, is ongoing.
-    </p>
-
-    <p>
-      This pattern will be updated accordingly.
-    </p>
-
     <!-- Research on this pattern -->
     <h2>Research on this pattern</h2>
-    <p>
-      The team working on <a href="https://design-histories.education.gov.uk/find-information-about-academies-trusts">Find information about academies and trusts posts</a> 
-      have carried out research on this pattern and will soon be releasing it to the live product, to meet this need from our 
+
+    <p>The <a href="https://design-histories.education.gov.uk/find-information-about-academies-trusts">Find information about academies and trusts</a> team identified that some internal users often state where they have sourced data from when producing documents.</p> 
+      
+    <p>The team created this design pattern to support this user behaviour and meet this need from the
       <a href="https://educationgovuk.sharepoint.com/sites/ServiceDeliveryDirectorate/Lists/RSD%20crossprogramme%20user%20needs/AllItems.aspx?env=WebViewList">
-        user needs database (opens a DfE Microsoft List)</a>:
+        Regional Services Division user needs database (opens a DfE Microsoft List)</a>:
     </p>
     
-    <p><strong>User need 88:</strong> When using data from different systems, I need to feel confident in the data I am using so that I don't need to go to multiple sources to check the accuracy of the data</p>
+    <p><strong>User need 88:</strong> when using data from different systems, I need to feel confident in the data I am using so that I don't need to go to multiple sources to check the accuracy of the data.</p>
 
   </div>
 </div>
