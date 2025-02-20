@@ -1,0 +1,83 @@
+{% extends "layouts/content-full-width.html" %}
+
+{% set pageName = "Filter" %}
+{% set pageDescription = "This is how to best use the Ministry of Justice’s filter component to help users of DfE services refine their search results. " %}
+{% set selectedNav = "Design system" %}
+{% set parentSection = "Components"%}
+{% set isChildSection = "true"%}
+{% set isSubNavSection = "true" %}
+{% set lastUpdated = "" %}
+{% set backlog_issue_id = "3" %}
+
+{% block hero %}
+<section class="dfe-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l  govuk-!-margin-top-5">Design system</span>
+        <h1 class="govuk-heading-xl">{{pageName}}</h1>
+        <nav class="app-sub-navigation" aria-label="Application menu">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system">Overview</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/styles/">Styles</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="/design-system/dfe-frontend/components">Components</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="/design-system/dfe-frontend/patterns">Patterns</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "includes/_side-nav.html"%}
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+
+        {% markdown %}
+
+        This is how to best use [the Ministry of Justice’s filter component](https://design-patterns.service.justice.gov.uk/components/filter/) to help users of DfE services refine their search results. 
+
+        ## Guidance 
+
+        You should [follow the DfE Frontend installation instructions](https://design.education.gov.uk/design-system/dfe-frontend/installation) before using this component. 
+
+        ## Adding MoJ components to your prototype 
+
+        You can read the guidance on [how to use the MoJ design system in the GOV.UK prototyping kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-coded-prototypes/). 
+
+        If you’re using Figma, there is [an MoJ Figma kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-figma-prototypes/) which contains the filter for use in prototypes. 
+
+        ## Use filters on the left first 
+
+        You should place filters on the left of the screen. 
+
+        This allows the list of results to take up the middle and right-hand columns. 
+
+        This can make it easier for users to notice changes to the list of results as they select and apply filters. 
+
+        {% endmarkdown %}
+
+    
+        <h2 class="govuk-heading-l" id="improve">Help us improve this component</h2>
+
+        <p>To improve this component based on user needs and research, you can contribute on the <a
+            href="https://github.com/DFE-Digital/dfe-frontend/issues/2" class="govuk-link" target="_blank">Header -
+            Component #2</a> project issue.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
