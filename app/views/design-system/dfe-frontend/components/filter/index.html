@@ -1,7 +1,7 @@
 {% extends "layouts/content-full-width.html" %}
 
 {% set pageName = "Filter" %}
-{% set pageDescription = "This is how to best use the Ministry of Justice’s filter component to help users of DfE services refine their search results. " %}
+{% set pageDescription = "This is how to best use the Ministry of Justice's filter component to help users of DfE services refine their search results. " %}
 {% set selectedNav = "Design system" %}
 {% set parentSection = "Components"%}
 {% set isChildSection = "true"%}
@@ -49,17 +49,17 @@
 
         {% markdown %}
 
-        This is how to best use [the Ministry of Justice’s filter component](https://design-patterns.service.justice.gov.uk/components/filter/) to help users of DfE services refine their search results. 
+        This is how to best use [the Ministry of Justice's filter component](https://design-patterns.service.justice.gov.uk/components/filter/) to help users of DfE services refine their search results. 
 
         ## Guidance 
 
-        You should [follow the DfE Frontend installation instructions](https://design.education.gov.uk/design-system/dfe-frontend/installation) before using this component. 
+        You should [follow the DfE Frontend installation instructions](https://design.education.gov.uk/design-system/dfe-frontend/installation) before using this component. 
 
         ## Adding MoJ components to your prototype 
 
         You can read the guidance on [how to use the MoJ design system in the GOV.UK prototyping kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-coded-prototypes/). 
 
-        If you’re using Figma, there is [an MoJ Figma kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-figma-prototypes/) which contains the filter for use in prototypes. 
+        If you're using Figma, there is [an MoJ Figma kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-figma-prototypes/) which contains the filter for use in prototypes. 
 
         ## Use filters on the left first 
 
@@ -69,7 +69,72 @@
 
         This can make it easier for users to notice changes to the list of results as they select and apply filters. 
 
-      
+        ## When to put filters at the top of the page 
+
+        There are some cases where it is more suitable to use a filter on the top of the page. 
+        
+        For example, when you need to show data in a table across the full width of a page or if related content in the right-hand column cannot be moved. 
+        
+        Test each approach with your users and choose the one that works best for them. 
+
+        ## Things to consider when using filters 
+
+        ### Mobile design 
+
+        When using mobile devices, users have missed the “Show filters” secondary action button. 
+
+        Reasons for this include: 
+
+        - it looks inactive 
+        - the colour of the button is too similar to the background colour of the filters 
+        - the button is too far away from the results it relates to  
+
+        Think about ways you might be able to make this more visible to mobile users.  
+
+        [Leave a comment on the filter GitHub issue](https://github.com/DFE-Digital/design/issues/299) to share your findings and help improve this component. 
+
+        ### Moving the “Apply filters” button 
+
+        Adding an apply filters button at the bottom of a long set of filters is helpful for users. 
+
+        It stops them having to scroll down a long list of filters and go back up to apply them. 
+
+        Try this approach in prototypes and testing if you have a long list of filters.  
+
+        Tell us about your findings and share your insights. 
+
+        ### Categories with many filter options 
+
+        Filter categories that contain many options can become long and hard to read or navigate. 
+        
+        The MoJ design system suggests a few ways to help: 
+        
+        - show or hide filter categories in an accordion 
+        - enable users to scroll through the list of filter options in a category 
+        - reduce the amount of filter options in a category 
+        - make long filter categories searchable 
+        
+        However, there can be some issues with some of these options.  
+        
+        For example, it can be hard for a person using a mobile device to scroll through a list of filter options accurately. 
+        
+        We want to hear from you if you've been in a team that have used any of these approaches and found any usability or accessibility issues. 
+
+        ## Services using this component 
+
+        Services using versions of the MoJ filters component include: 
+        
+        - Family hubs 
+        - Find and apply for initial teacher training 
+        - Find apprenticeship training
+        - Manage free school projects 
+        - Prepare conversions and transfers 
+        - Manage school improvement 
+
+        ## Help us improve this component 
+
+        To improve this component based on user needs and research, you can [leave a comment on the GitHub issue](https://github.com/DFE-Digital/design/issues/299). 
+
 
         {% endmarkdown %}
 
