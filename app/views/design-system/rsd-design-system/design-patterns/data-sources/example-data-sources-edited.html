@@ -1,0 +1,125 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+Data sources | RSD component library
+{% endblock %}
+
+{% block sample %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Contacts
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+      <h2 class="govuk-heading-m">
+        Contacts in DfE
+      </h2>
+      
+      <!-- Trust relationship manager -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            Trust relationship manager
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> details of the Trust relationship manager</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Sally Blanket
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                sally.blanket@education.gov.uk
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- SFSO (Schools financial support and oversight) lead -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            SFSO (Schools financial support and oversight) lead
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> details of the SFSO lead</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                David Warmly
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                david.warmly@education.gov.uk
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <details class="govuk-details">
+        
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Where this information came from
+          </span>
+        </summary>
+
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            <strong>Trust relationship manager:</strong>
+          </p>
+      
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The Trust relationship manager was last updated by Joe.Bloggs@test.email.uk on 10 December 2024.
+            </li>
+          </ul>
+      
+          <p class="govuk-body">
+            <strong>SFSO (Schools financial support and oversight) lead:</strong>
+          </p>
+      
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The SFSO lead was last updated by Joe.Bloggs@test.email.uk on 12 December 2024.
+            </li>
+          </ul>
+        </div>
+        
+      </details>
+    
+  </div>
+</div>
+{% endblock %}

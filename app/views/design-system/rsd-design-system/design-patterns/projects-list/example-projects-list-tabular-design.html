@@ -1,0 +1,66 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+List of projects (tabular design) design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-1">Project title</th>
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-2">Project ID</th>
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-3">Trust</th>
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-4">Region</th>
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-7">Provisional opening date</th>
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-8">Status</th>
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-9">Last updated</th>
+      <th scope="col" class="govuk-table__header mfsp-dashboard-table__col-10">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">St George's Primary School</th>
+      <td class="govuk-table__cell">W3323</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">North West</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+      </td>
+      <td class="govuk-table__cell">29 Aug 2023</td>
+      <td class="govuk-table__cell">
+        <a href="#" class="govuk-link">View</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Bolton Spa Primary</th>
+      <td class="govuk-table__cell">W3456</td>
+      <td class="govuk-table__cell">Oak Hill Trust</td>
+      <td class="govuk-table__cell">Bolton</td>
+      <td class="govuk-table__cell">1 Sept 2023</td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+      </td>
+      <td class="govuk-table__cell">24 Jul 2023</td>
+      <td class="govuk-table__cell">
+        <a href="#" class="govuk-link">View</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">St. Wilfrid's Primary School</th>
+      <td class="govuk-table__cell">102062</td>
+      <td class="govuk-table__cell">Dynamics Trust</td>
+      <td class="govuk-table__cell">Warrington</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">Completed</strong>
+      </td>
+      <td class="govuk-table__cell">1 Jul 2023</td>
+      <td class="govuk-table__cell">
+        <a href="#" class="govuk-link">View</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

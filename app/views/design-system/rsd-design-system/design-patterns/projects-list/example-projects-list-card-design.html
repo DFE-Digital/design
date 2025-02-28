@@ -1,0 +1,121 @@
+{% extends "./../example-layout.html" %}
+
+{% block pageTitle %}
+List of projects (card design) design pattern | RSD component library
+{% endblock %}
+
+{% block sample %}
+<h2 class="govuk-heading-l" test-id="projectCount" data-cy="">2489 projects found</h2>
+
+<div class="sort-component">
+    <nav class="govuk-body sort-component__nav" aria-label="sort-by">
+        <span class="govuk-!-font-weight-bold">Sorted by:</span> Project created date
+    </nav>
+</div>
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Projects (10)</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+        <th class="govuk-table__header app-!-width-three-fifths">Application information</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row" data-cy="">
+      <td class="govuk-table__cell">
+        <div class="govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+          <strong>
+            <a id="school-name-0" class="govuk-link" aria-label="" data-cy="" href="#">St George's Primary School</a>
+          </strong>
+        </div>
+        <div class="govuk-!-margin-top-1">
+          <span id="project-id-0"><strong>Project ID:</strong> W3323</span>
+        </div>
+        <div id="trust-0" class="govuk-!-margin-top-1">
+          <strong>Trust:</strong>
+          <span></span>
+        </div>
+        <div id="region-0" class="govuk-!-margin-top-1">
+          <strong>Region:</strong>
+          <span>North West</span>
+        </div>
+        <div id="provisional-opening-date-0" class="govuk-!-margin-top-1">
+          <strong>Provisional opening date:</strong>
+          <span></span>
+        </div>
+        <div id="status-0" class="govuk-!-margin-top-1">
+          <strong>Status:</strong>
+          <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+        </div>
+        <div id="last-updated-0" class="do govuk-!-margin-top-1">
+          <strong>Last updated:</strong>
+          <span class="empty">29 August 2023</span>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row" data-cy="">
+      <td class="govuk-table__cell">
+        <div class="govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+          <strong>
+            <a id="school-name-1" class="govuk-link" aria-label="" data-cy="" href="#">Bolton Spa Primary</a>
+          </strong>
+        </div>
+        <div class="govuk-!-margin-top-1">
+          <span id="project-id-1"><strong>Project ID:</strong> W3456</span>
+        </div>
+        <div id="trust-1" class="govuk-!-margin-top-1">
+          <strong>Trust:</strong>
+          <span>Oak Hill Trust</span>
+        </div>
+        <div id="region-0" class="govuk-!-margin-top-1">
+          <strong>Region:</strong>
+          <span>Bolton</span>
+        </div>
+        <div id="provisional-opening-date-1" class="govuk-!-margin-top-1">
+          <strong>Provisional opening date:</strong>
+          <span>1 September 2023</span>
+        </div>
+        <div id="status-1" class="govuk-!-margin-top-1">
+          <strong>Status:</strong>
+          <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+        </div>
+        <div id="last-updated-1" class="do govuk-!-margin-top-1">
+          <strong>Last updated:</strong>
+          <span class="empty">24 July 2023</span>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row" data-cy="">
+      <td class="govuk-table__cell">
+        <div class="govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+          <strong>
+            <a id="school-name-2" class="govuk-link" aria-label="" data-cy="" href="#">St. Wilfrid's Primary School</a>
+          </strong>
+        </div>
+        <div class="govuk-!-margin-top-1">
+          <span id="project-id-2"><strong>Project ID:</strong> 102062</span>
+        </div>
+        <div id="trust-2" class="govuk-!-margin-top-1">
+          <strong>Trust:</strong>
+          <span>Dynamics Trust</span>
+        </div>
+        <div id="region-2" class="govuk-!-margin-top-1">
+          <strong>Region:</strong>
+          <span>Warrington	</span>
+        </div>
+        <div id="provisional-opening-date-2" class="govuk-!-margin-top-1">
+          <strong>Provisional opening date:</strong>
+          <span></span>
+        </div>
+        <div id="status-2" class="govuk-!-margin-top-1">
+          <strong>Status:</strong>
+          <strong class="govuk-tag govuk-tag--green">Completed</strong>
+        </div>
+        <div id="last-updated-2" class="do govuk-!-margin-top-1">
+          <strong>Last updated:</strong>
+          <span class="empty">1 July 2023</span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

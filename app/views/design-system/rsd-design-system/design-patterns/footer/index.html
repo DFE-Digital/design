@@ -2,7 +2,7 @@
 {% import "../code-frame.html" as sample %}
 
 {% set pageName = "Footer" %}
-{% set pageDescription = "A footer for internal-facing RSD products." %}
+{% set pageDescription = "A footer for RSD products." %}
 {% set pageCaption = "Regional Services Division design pattern" %}
 {% set selectedNav = "Design system" %}
 {% set setSelectedSideNav = "" %}
@@ -104,15 +104,9 @@
     </figure>
 
     <h2>When not to use this component</h2>
-    <p>On</p>
-    <ul>
-      <li>external-facing sites, like <a href="https://apply-convert-academy.service.gov.uk/">Apply to become
-          an academy (A2B)</a> This site is for external users and the Microsoft links in this pattern
-        won't work for them</li>
-      <li>SharePoint guidance pages, like <a
-          href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx">Prepare
-          conversions and transfers (opens on DfE intranet)</a></li>
-    </ul>
+    <p>On SharePoint guidance pages, like <a
+      href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx">Prepare
+      conversions and transfers (opens on DfE intranet)</a>.</p>
 
     <h2>Links</h2>
     <p>The RSD footer includes several links. We include (opens in a new tab) in the link text where users are likely to have the new page open alongside the system.
@@ -127,8 +121,11 @@
         href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/Prepare-Conversions-and-Transfers.aspx#guidance-for-using-prepare-conversions-and-transfers">Guidance
         for using Prepare conversions and
         transfers (opens on DfE intranet)</a>. </p>
-    <p>If you don't have SharePoint guidance that helps users learn how to use your product, you do not need to include this
-      hyperlink.</p>
+        <p>You don't need to include this hyperlink if:<p>
+          <ul>
+            <li>you don't have SharePoint guidance that helps users learn how to use your product</li>
+            <li>your users are external and so can't access DfE's SharePoint area</li>
+          </ul>
     <h3>Give feedback about a Regions Group system (opens in a new tab)</h3>
     <p>This links to a Microsoft Form where users can give feedback about the product. The same Microsoft Form
       is used across all RSD products: <a
