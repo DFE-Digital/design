@@ -66,9 +66,9 @@ app.get('/our-work/*', function (req, res) {
 
 
 const { buildSearchIndex, search } = require('./middleware/search.js');
-// ...
-// Start building index (replace with your actual sitemap URL):
-buildSearchIndex('http://localhost:3066/sitemap.xml')
+
+
+buildSearchIndex('http://design.education.gov.uk/sitemap.xml')
   .then(() => console.log('Search index ready'))
   .catch(err => console.error('Error initialising search:', err));
 
