@@ -1,0 +1,62 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/prototyping" %}
+{% set title = "Prototyping guidance" %}
+{% set description = "Learn how to set up your device, create a new prototype, manage source code and deploy to Heroku" %}
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Prototyping</span>
+
+                    {% markdown %}     
+
+                    # {{ title }}  
+                    
+                    {{ description }}
+
+                    > This guide is a basic walkthrough of setting up and deploying a prototype to GitHub and Heroku. We recommend you follow the GOV.UK service manual [prototyping tutorials and guides](https://prototype-kit.service.gov.uk/docs/tutorials-and-guides) for more detailed guidance on prototyping.
+
+
+                    This guide will help you to:
+
+                    - set up your device for prototyping using the GOV.UK Prototype kit
+                    - create a new prototype
+                    - learn about using a terminal and commands
+                    - manage source code using GitHub
+                    - deploy and secure your prototype to Heroku
+
+                    ## Using terminal commands
+
+                    We're going to use terminal commands throughout this guide to set up your device for prototyping. 
+
+                    We'll explain what the commands do and how they work. This will help you to learn about using a terminal and commands, manage source code using GitHub, and deploy and secure your prototype to Heroku.
+
+        
+
+                    ## Give feedback on this guidance
+
+                    If you find a problem with this guidance or have a question, please [contact DesignOps](/designops) or ask your question in the [#prototyping-help](https://ukgovernmentdfe.slack.com/archives/C03RS042ZB3) Slack channel.     
+
+                    {{ govukPagination({
+                    
+                    next: {
+                        labelText: "Prerequisites",
+                        href: "/design-system/prototyping/prerequisites"
+                    }
+                    }) }}
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

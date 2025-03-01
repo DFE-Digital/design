@@ -1,0 +1,79 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/prototyping" %}
+{% set title = "Working with VS Code" %}
+{% set description = "This section will enable you to understand the file structure of your prototype and make changes to the code." %}
+
+
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Prototyping</span>
+
+                    {% markdown %}
+
+                    # {{ title }}
+
+                    {{ description}}
+
+                    ## Open the folder in VS Code
+
+                    To open the prototype folder in VS Code, go to File > Open Folder and select the folder where your prototype is stored, if you're working through this guide it will be in the `prototypes` folder in your `Documents` folder.   
+
+                    In the VS Code sidebar explorer, you will see the `app` folder along with other files and folders that make up your prototype.
+
+                    These include:
+
+                    - `app` - this is where all the code for your prototype is stored
+                    - `node_modules` - this is where all the dependent packages for your prototype are stored
+                    - `package.json` - this file contains information about your prototype, such as the name, version, and packages it depends on
+
+                    Theres some other files and folders in your prototype, but we won't go into them in this guide.
+                
+                    ## The app folder
+
+                    All the code relating to pages in your prototype are stored in a folder called `app`. This is where you'll make most of your changes to your prototype.
+
+                    The `app` folder contains:
+
+                    - `assets` - this folder contains all the images, stylesheets, and JavaScript files for your prototype 
+                    - `data` - this folder is where you can store fake data to use in your prototype 
+                    - `views` - this folder contains all the HTML files for your prototype 
+                    - `config.json` - this file contains the configuration settings for your prototype such as the service name and port number
+                    - `filters.js` - this file contains filters which can be used in your prototype to manipulate content when it's displayed in the browser
+                    - `routes.js` - this file contains the routes for your prototype which determine what content is displayed when a user visits a specific URL
+
+                    At this moment in time, we're not going to make any changes to your prototype code, we just want to make sure it's working, and you can see the files and folders that make up your prototype.
+
+                    If you want to know more about the files and folders in your prototype, you can read the [GOV.UK Prototype Kit documentation](https://govuk-prototype-kit.herokuapp.com/docs).
+                    
+                    Next we'll get your code into GitHub so you can work on it with others and deploy to Heroku.
+  
+                    {% endmarkdown %}
+
+                    {{ govukPagination({
+                        previous: {
+                            labelText: "Setup your device",
+                            href: "/design-system/prototyping/setup-device"
+                        },
+                        next: {
+                            labelText: "Working with GitHub",
+                            href: "/design-system/prototyping/using-github"
+                        }
+                    }) }}
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

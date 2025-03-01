@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>{{-title-}}</title>
+        <meta name="description" content="{{-description-}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="theme-color" content="#00294a">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="canonical" href="https://design.education.gov.uk/{{path}}">
+        <link rel="stylesheet" href="/assets/css/govuk-frontend.min.css">
+        <link rel="stylesheet" href="/assets/css/dfefrontend-2.0.0.min.css">
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+        {% block head %}{% endblock %}
+    </head>
+
+    <body class="govuk-template__body">
+
+        <script>
+            document.body.className += ' js-enabled' + (
+                'noModule' in HTMLScriptElement.prototype
+                ? ' govuk-frontend-supported'
+                : '');
+        </script>
+
+        {% include 'layouts/_cookiebanner.html'%}
+        <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+        {% include 'layouts/_topnav.html' %}
+        {% include 'layouts/_services.html' %}
+        {% include 'layouts/_header.html' %}
+
+        <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation">
+            <div class="govuk-width-container">
+                <div class="govuk-service-navigation__container">
+                    <span class="govuk-service-navigation__service-name">
+                        <a href="/" class="govuk-service-navigation__link {% if serviceNav == 'Home' %}govuk-service-navigation__item--active{% endif %}">
+                        Design
+                    </a>
+                    </span>
+                    <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+                        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle"
+                        aria-controls="navigation" hidden>
+                        Menu
+                    </button>
+                        <ul class="govuk-service-navigation__list" id="navigation">
+                            <li class="govuk-service-navigation__item {% if serviceNav == 'Design system' %}govuk-service-navigation__item--active{% endif %}">
+                                <a class="govuk-service-navigation__link" href="/design-system">Design system</a>
+                            </li>
+                            <li class="govuk-service-navigation__item {% if serviceNav == 'Standards' %}govuk-service-navigation__item--active{% endif %}">
+                                <a class="govuk-service-navigation__link" href="/standards">Standards</a>
+                            </li>
+                            <li class="govuk-service-navigation__item {% if serviceNav == 'Content design' %}govuk-service-navigation__item--active{% endif %}">
+                                <a class="govuk-service-navigation__link" href="/content-design">Content design</a>
+                            </li>
+                            <li class="govuk-service-navigation__item {% if serviceNav == 'Professions' %}govuk-service-navigation__item--active{% endif %}">
+                                <a class="govuk-service-navigation__link" href="/professions">Professions</a>
+                            </li>
+                            <li class="govuk-service-navigation__item {% if serviceNav == 'DesignOps' %}govuk-service-navigation__item--active{% endif %}">
+                                <a class="govuk-service-navigation__link" href="/designops">DesignOps</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+        <main class="govuk-main-wrapper {{mainClasses}}" id="main-content">
+            {%- block content -%}{%- endblock -%}
+        </main>
+
+        {%- block pageActions -%}{%- endblock -%}
+
+        {% include 'layouts/_feedback.html' %}
+        {% include 'layouts/_footer.html' %}
+
+        <script type="module">
+            import {initAll} from '/assets/js/govuk-frontend.min.js';
+            initAll();
+        </script>
+        <script src="/assets/js/dfefrontend-2.0.0.min.js"></script>
+        <script src="/assets/js/cookies.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+        <script>
+            hljs.highlightAll();
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const copyButtons = document.querySelectorAll(".copy-btn");
+
+                copyButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        const targetId = this.getAttribute("data-copy-target");
+                        const codeElement = document.getElementById(targetId);
+                        const textToCopy = codeElement.innerText;
+
+                        navigator
+                            .clipboard
+                            .writeText(textToCopy)
+                            .then(() => {
+                                this.textContent = "Copied!";
+                                setTimeout(() => {
+                                    this.textContent = "Copy code";
+                                }, 2000);
+                            })
+                            .catch(err => {
+                                console.error("Failed to copy text: ", err);
+                            });
+                    });
+                });
+            });
+        </script>
+        {% block scripts %}{% endblock %}
+
+    </body>
+
+</html>

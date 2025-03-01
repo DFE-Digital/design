@@ -1,0 +1,121 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system" %}
+{% set title = "Design system" %}
+{% set description = "The design system provides patterns, components and styles for using in DfE services." %}
+{% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
+
+{% block content %}
+
+  <section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h1 class="govuk-heading-xl">{{title}}</h1>
+          <p class="govuk-body-l">{{description}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color:#ffffff;" class="govuk-!-padding-top-9 govuk-!-padding-bottom-7">
+    <div class="govuk-width-container">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list dfe-action-list">
+            <li>
+              <a href="https://design-system.service.gov.uk/get-started/" class="govuk-link govuk-link--no-visited-state">
+                            Always start with the GOV.UK Design System
+                            <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="/design-system/dfe-frontend" class="govuk-link govuk-link--no-visited-state">
+                            Using DfE Frontend
+                            <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="/design-system/dfe-frontend/contribute" class="govuk-link govuk-link--no-visited-state">
+                            Contribute styles, components or patterns
+                            <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <h2 class="govuk-heading-l govuk-!-margin-top-5">DfE Frontend design system</h2>
+
+          <div class="dfe-grid-container">
+            <div class="dfe-card">
+              <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                  <a href="/design-system/styles"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Styles</a>
+                </h2>
+                <p class="govuk-body">Styles for typography, colour and more.</p>
+              </div>
+            </div>
+            <div class="dfe-card">
+              <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                  <a href="/design-system/components"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Components</a>
+                </h2>
+                <p class="govuk-body">Components for building consistent user interfaces.</p>
+              </div>
+            </div>
+            <div class="dfe-card">
+              <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                  <a href="/design-system/patterns"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Patterns</a>
+                </h2>
+                <p class="govuk-body">Patterns for common design problems and user interactions.</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="govuk-heading-l govuk-!-margin-top-9">Learning</h2>
+
+          <div class="dfe-grid-container">
+            <div class="dfe-card">
+              <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                  <a href="/design-system/figma"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Figma training guides</a>
+                </h2>
+                <p class="govuk-body">Lots of resources for learning to use Figma, including the DfE Figma library.</p>
+              </div>
+            </div>
+            <div class="dfe-card">
+              <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                  <a href="/design-system/prototyping"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Prototyping, GitHub, and Heroku</a>
+                </h2>
+                <p class="govuk-body">Learn how to set up the prototype kit, use GitHub, and deploy to Heroku.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}

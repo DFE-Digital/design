@@ -1,0 +1,79 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/dfe-frontend/contribute" %}
+{% set title = "Contribute to DfE Frontend" %}
+{% set description = "Contribute to the DfE Frontend design system by adding new components, fixing bugs, and improving
+ the documentation." %}
+
+{% block content %}
+
+    <section class="govuk-!-margin-bottom-0">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Design</span>
+                    {% markdown %}
+
+                    # {{title}}
+
+                    {{ description }}
+
+                    ## How to contribute
+
+                    There are a number of ways you can contribute to the DfE Frontend design system:
+
+                    - [submit a pull request](https://github.com/DFE-Digital/dfe-frontend) in the DfE Frontend GitHub repository
+                    - join the [patterns and components](#patterns-and-components) working group
+                    - speak to [DesignOps](/designops) to discuss your contribution
+
+                    ## Patterns and components working group
+
+                    The patterns and components working group is a cross-discipline team of designers and developers that meets regularly to discuss and review new components and patterns for the design system.
+
+                    ### What we're working on
+
+                    | Name          | Type      | Description                                                       |
+                    |--------------|----------|-------------------------------------------------------------------|
+                    | [Vertical nav](https://github.com/DFE-Digital/dfe-frontend/issues/5) | Component | Component for a styled vertical navigation for sections of a service. |
+
+                    [Contact the working group](/professions/working-groups) if you want to join or present something for review.
+
+                    ## Contribution guidelines
+
+                    Before you contribute to the DfE Frontend design system, you must check that the component or pattern you are adding or updating meets the following criteria:
+
+                    ### Useful
+
+                    You can demonstrate that this component or pattern would be useful for other DfE teams or services. The need for the pattern or component has been validated through user research. Evidence could be screenshots or links to versions of it being used in different services.
+
+                    ### Unique
+
+                    It does not replicate something already in the GOV.UK or DfE Design Systems.
+
+                    ### Users
+
+                    There are other user groups completing similar tasks who would benefit from this component or pattern. 
+                  
+                    ### Check the backlog
+
+                    If your idea is not on the [DfE Frontend backlog](https://github.com/DFE-Digital/design/issues) and meets the criteria above, add an issue.
+
+                    If you cannot access the project or add an issue, [contact the DesignOps team](/designops) to discuss it.
+
+                    ### What to include
+
+                    At this stage, you just need to present your idea and evidence of the user needs. You can include screenshots or links to versions of the component or pattern in use, but avoid spending time working on a specific design or writing code.
+
+                    {% endmarkdown %}
+                </div>
+            </div>
+        </section>
+
+    {% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Content design" %}
+{% set path = "content-design/plain-language" %}
+{% set title = "Guidance to meet the Plain Language standard" %}
+{% set description = "Additional guidance for content designers to understand how to meet the DfE Plain Language standard." %}
+
+{% block content %}
+
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-quarter">
+                {% include "./_sidenav.html" %}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+
+                <span class="govuk-caption-xl">Content design</span>
+
+                {% markdown %}
+
+                # {{ title }}
+
+                Additional guidance for content designers to understand how to meet the [DfE Plain Language standard](https://standards.education.gov.uk/standard/plain-language)
+
+                ## Plain English and plain language 
+
+                [Plain English](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#plain-english) is a set of principles used to write clearly and accurately, such as using short sentences. 
+
+                Plain language modifies those techniques to suit the needs of the user and adapts to findings from user research. 
+
+                ## Use the language your users use 
+
+                Sometimes, as a government department, we need to use jargon. If there is a proven user or business need to use jargon, then it is right to use it. For example, when writing for an audience with specialist knowledge.  
+                
+                However, when we do use technical terminology or jargon, we must also provide a plain language description of what it means when we first use it.   
+
+                For example: 
+                    
+                > ‘You’ll receive training based on the early career framework (ECF) as part of your induction period. This is called ECF-based training.  
+                > 
+                > ECF-based training provides a bridge between your initial teacher training (ITT) and your teaching career. Your ITT helps you qualify as a teacher, and the ECF-based training helps you further develop your teaching practice and working habits.’   
+
+                Use the following tools to help you meet the standard: 
+
+                - depending on your audience, you may want to check the reading age grade, or score. You can do this by using a readability tool, such as  Hemingway, or the Flesch-Kincaid reading grade and reading ease (in Word) 
+                - use the '[how many people](https://accessibility.education.gov.uk/app/how-many-people)' tool to understand how many users may have accessibility needs that use your service 
+                - review Home Office guidance for [designing for people with limited English](https://design.homeoffice.gov.uk/content-style-guide/designing-for-limited-english#use-clear-language) 
+
+                {% endmarkdown %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

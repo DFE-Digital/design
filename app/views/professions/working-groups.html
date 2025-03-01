@@ -1,0 +1,56 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Professions" %}
+{% set path = "professions/working-groups" %}
+{% set title = "Working groups" %}
+{% set description = "Our communities of practice come together to share work, develop skills and capability across the
+ design profession." %}
+
+{% block content %}
+
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+
+                    <span class="govuk-caption-xl">Professions</span>
+                    {% markdown %}
+                    
+                    # {{ title }}
+
+                    {{description}}
+
+                    ## Patterns and components
+
+                    Developing consistent design components and patterns for digital services in DfE
+
+                    The working group consists of a cross-profession group of people from design, content, and development. The group meets regularly to discuss and agree on design patterns and components for the department.
+
+                    You can find out what we're working on in the [patterns](/design-system/patterns) and [components](/design-system/components) sections of the design system.
+
+                    Get in touch through the [patterns and components Slack channel (DfE staff only)](https://ukgovernmentdfe.slack.com/archives/C04JZ5YL8F7).
+
+                    ## Content style working group
+
+                    The content style working group develop and maintain the [style guide](/content-design/style-guide) for DfE
+
+                    Get in touch through the [content style group Slack channel (DfE staff only)](https://ukgovernmentdfe.slack.com/archives/C04JZ5YL8F7).
+
+                    ## Service mapping
+
+                    This is a cross-profession, cross-department project to build a living map of products and services across DfE to identify opportunities for collaboration and sharing.
+
+                    Get in touch with the [Head of Design](/designops) or contact the wider group in the [service mapping Slack channel (DfE staff only)](https://ukgovernmentdfe.slack.com/archives/C04JZ5YL8F7).
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

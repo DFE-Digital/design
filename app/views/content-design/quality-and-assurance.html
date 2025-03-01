@@ -1,0 +1,103 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Content design" %}
+{% set path = "content-design/content-strategies" %}
+{% set title = "Quality and assurance" %}
+{% set description = "How to ensure the content we create is accurate and meets DfE styles." %}
+
+
+{% block content %}
+
+
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+               <div class="govuk-grid-column-one-quarter">
+        {% include "./_sidenav.html" %}
+      </div>
+            <div class="govuk-grid-column-three-quarters">
+
+                <span class="govuk-caption-xl">Content design</span>
+
+                {% markdown %}
+
+                # {{title}}
+
+                We conduct a variety of reviews and checks ahead of publishing content.
+
+                As you draft content in various formats, such as Word, Figma, Lucid, or Whitehall content publisher, you'll need to complete regular reviews on your content and designs.
+
+                ## Reviews and content crits
+
+                You can organise a review or content critique (crit) yourself and ask people to attend through Teams or [community Slack channels](https://design.education.gov.uk/community). You can also join one of the [cross-government design Slack channels](https://ukgovernmentdigital.slack.com/archives/C062GAGLW).
+
+                To run review or crit:
+
+                *   provide the context of the content
+                *   explain the feedback you're looking for
+                *   explain how you want the feedback, for example, in comments or edits on your document
+
+                It’s useful to timebox activities (set a timer for each activity) and, if on a large call, consider using breakout rooms to encourage discussion. It can be helpful to do review or crits in person using post-its and printouts.
+
+                There is helpful advice in the [blog post on using design crits to improve collaboration](https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/).
+
+                ## Prior to the 2i check
+
+                A 2i check (meaning a second pair of eyes) should be done on the final version in context, usually in the production or test environment, or in a preview on a content management system.
+
+                Before the 2i, check you’ve done the following:
+
+                * named the service or publication following [GOV.UK naming conventions](https://www.gov.uk/service-manual/design/naming-your-service)  
+                * checked the factual accuracy with a policy or subject-matter expert
+                * have [clearance to publish (DfE intranet)](https://educationgovuk.sharepoint.com/sites/communications/SitePages/publish-gov-uk.aspx) – this will vary by project
+                * have a publication or ‘go live’ plan
+
+                If the content needs to change while preparing the final version in the content management system, you must check that it's still accurate.
+
+                The 2i check is the final check.
+
+                ## 2i checks by content type
+
+                You may need to vary the checks based on the type of content and where it's published.
+
+                For example:
+
+                *   name of content, service or page
+                *   start page
+                *   branded headers and footers
+                *   statement pages, such as privacy and accessibility
+                *   components
+                *   style
+
+                There is guidance on [how to make your service look like GOV.UK](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk). There is also guidance in this manual for how to apply the DfE branded [header](/design-system/components/header).
+
+                ### Checks for GOV.UK specific publication
+
+                For example:
+
+                *   title
+                *   template
+                *   collection and taxonomy tagging
+                *   change notes
+
+                There is GOV.UK guidance on how to [review and publish content in Whitehall publisher](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/reviewing-and-approving-content). This also includes guidance on what we, as a government department, should and should not publish.
+
+                ### Checks for manuals and guidance (including technical guides)
+
+                For example:
+
+                *   name
+                *   titles
+                *   signposting from specialist content and collections
+
+                There is a section for manuals in the [GOV.UK planning, writing and managing content guide](https://www.gov.uk/guidance/content-design/content-types).
+
+                {% endmarkdown %}
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

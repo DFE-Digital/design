@@ -1,0 +1,115 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/prototyping" %}
+{% set title = "Tips and troubleshooting" %}
+{% set description = "This section will guide you through some tips and troubleshooting common issues when using Heroku." %}
+
+
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Prototyping</span>
+
+                    {% markdown %}
+
+                    # {{ title }}
+
+                    {{ description}}
+
+                     ## Troubleshooting common issues
+
+                     ### VS Code
+
+                    If you see the following error message in the terminal:
+
+                    <pre><code class="language-bash">Error: listen EADDRINUSE: address already in use :::3000</code></pre>
+
+                    This means that another prototype is already using port 3000. Check you aren't already running a prototype in another instance of VS Code.
+
+                    Only 1 prototype can run on port 3000 at a time. 
+                    
+                    If you need to run multiple prototypes at the same time, you can change the port number by running the following command in the terminal:
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper">
+                            <p class="govuk-summary-card__title">Code</p>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action">
+                                    <button class="govuk-button copy-btn" data-copy-target="cx-port">Copy code</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <pre><code id="cx-port" class="language-bash">PORT=3001 npm run dev</code></pre>
+                        </div>
+                    </div>
+
+                    If you see the following error message in the terminal:
+
+                    <pre><code class="language-bash">'npx' is not recognized as an internal or external command, operable program or batch file.</code></pre>
+
+                    This means that Node.js is not installed on your device. You will need to install Node.js to use the GOV.UK Prototype Kit.
+
+
+                    ## Tips for using Heroku
+                   
+
+                   ### Shut down your dyno
+
+                     To shut down your dyno in Heroku, follow these steps:
+
+                        1. if you aren't signed in already, sign in to your Heroku account at [Heroku](https://heroku.com)
+                        2. search for your app in the Heroku dashboard
+                        3. from the 'Resources' tab, click on the 'edit' button next to the dyno you want to shut down
+                        4. slide the dyno slider to the left to turn it off
+                        5. click the 'Confirm' button
+
+                    You've now shut down your dyno in Heroku. This will stop your app from running and won't incur any costs.
+
+                    To restart your dyno, follow the same steps but slide the dyno slider to the right to turn it back on.
+
+                    When your dyno is stopped, users will see a message saying 'Application error' when they try to access your app.
+
+
+                    ### Delete an app in Heroku
+
+                    When you no longer need your app in Heroku, you can delete it. This will stop your app from running and you won't incur any costs and prevents Heroku spaces being filled with unused apps.
+
+                    To delete an app in Heroku, follow these steps:
+
+                        1. if you aren't signed in already, sign in to your Heroku account at [Heroku](https://heroku.com)
+                        2. search for your app in the Heroku dashboard
+                        3. click on the 'Settings' tab
+                        4. scroll down to the bottom of the page, titled 'delete app'
+                        5. click the 'Delete app' button
+                        6. you'll be asked to type the name of your app to confirm you want to delete it
+                        7. click the 'Delete app' button
+
+                        You'll then be redirected to your Heroku dashboard.
+
+                    {% endmarkdown %}
+
+
+
+
+                        {{ govukPagination({
+                        previous: {
+                           labelText: "Using Heroku",
+                            href: "/design-system/prototyping/using-heroku"
+                        }
+                    }) }}
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}

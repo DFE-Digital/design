@@ -1,0 +1,152 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/dfe-frontend" %}
+{% set title = "Install DfE Frontend" %}
+{% set description = "Step-by-step guide for installing the DfE Frontend package into your product" %}
+
+{% block head %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+  <section>
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          {% include "./_sidenav.html" %}
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+
+          <span class="govuk-caption-xl">Design system</span>
+          <h1 class="govuk-heading-xl">{{title}}</h1>
+          <p class="govuk-body">{{description}}</p>
+
+          <p class="govuk-body">This guide is currently written for people wanting to use DfE Frontend in a prototype and using VS Code. If you are looking to use it in .NET apps and unsure how to proceed, <a href="/designops">contact DesignOps</a>.</p>
+
+          <h2 class="govuk-heading-l">Prerequisites</h2>
+
+          <p class="govuk-body">You will need to have the following installed:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Node.js</li>
+            <li>VS Code</li>
+          </ul>
+
+          <p class="govuk-body">You will also need to have a prototype set up in VS Code. Follow the <a href="https://prototype-kit.service.gov.uk/docs/create-new-prototype" class="govuk-link">instructions on the GOV.UK service manual</a> to get a new prototype up and running.</p>
+
+          <h2 class="govuk-heading-l">Install the package</h2>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">1. Install</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <button class="govuk-button copy-btn" data-copy-target="install-code">Copy code</button>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">Run this command in your terminal in VS Code to install the DfE Frontend package.</p>
+              <pre><code id="install-code">npm install dfe-frontend</code></pre>
+            </div>
+          </div>
+
+          <h3 class="govuk-heading-m">CSS, JavaScript, and logo files</h3>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">2. application.scss</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <button class="govuk-button copy-btn" data-copy-target="scss-code">Copy code</button>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">Add this to the top of your application.scss file to include the DfE Frontend CSS file, after importing GOV Frontend classes.</p>
+              <pre><code id="scss-code">@import 'node_modules/dfe-frontend/packages/dfefrontend';</code></pre>
+            </div>
+          </div>
+
+          <h3 class="govuk-heading-m">JavaScript</h3>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">3. layout file</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <button class="govuk-button copy-btn" data-copy-target="layout-code">Copy code</button>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">Add this to the bottom of your layout file to include the DfE Frontend JavaScript file.</p>
+              <pre><code id="layout-code">{%raw%}{% block scripts %}
+    {{ super() }}
+    &lt;script src=&quot;/assets/js/dfefrontend.min.js&quot;&gt;&lt;/script&gt;
+{% endblock %}{%endraw%}</code></pre>
+            </div>
+          </div>
+
+          <h3 class="govuk-heading-m">Copy the logo files</h3>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">4. Copy image assets</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">Copy these files to your project's assets/images folder. You may need to create this folder if it does not exist.</p>
+              <pre><code id="image-code">/node_modules/dfe-frontend/packages/assets/dfe-logo.png
+/node_modules/dfe-frontend/packages/assets/dfe-logo-alt.png</code></pre>
+
+            </div>
+          </div>
+
+          <h3 class="govuk-heading-m">Changing the page width</h3>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">5. Set page width to 1200px</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <button class="govuk-button copy-btn" data-copy-target="width-code">Copy code</button>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">This will set the page width to 1200px. You can adjust this to suit your needs and overrides the GOV.UK smaller 960px width.</p>
+
+              <pre><code id="width-code">.govuk-width-container {
+    @include govuk-width-container;
+}</code></pre>
+
+            </div>
+          </div>
+
+          <h3 class="govuk-heading-m">Run your app</h3>
+
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">6. Run your app</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <button class="govuk-button copy-btn" data-copy-target="run-code">Copy code</button>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <p class="govuk-body">In your terminal in VS Code, run this command. It will build and start the app, and you can view it in your browser.</p>
+              <pre><code id="run-code">npm run dev</code></pre>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

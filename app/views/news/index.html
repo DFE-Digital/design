@@ -1,0 +1,71 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "News" %}
+{% set path = "news" %}
+{% set title = "News" %}
+{% set description = "News from the DesignOps team." %}
+{% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
+
+{% block content %}
+
+<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+                <h1 class="govuk-heading-xl">{{title}}</h1>
+                <p class="govuk-body-l">{{description}}</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section style="background-color:#ffffff;" class="govuk-!-padding-top-9 govuk-!-padding-bottom-7">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="dfe-grid-container">
+                                       <div class="dfe-card">
+                            <img src="/assets/images/language.png" alt="" class="dfe-card-image">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                    <a href="/news/plain-language"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Plain Language standard and guidance published</a>
+                                </h3>
+                                <p class="govuk-body">As we further develop our design standards, we've now published the plain language standard.</p>
+                                <p class="govuk-body-s govuk-!-margin-bottom-0">25 February 2025</p>
+                            </div>
+                        </div>
+                        <div class="dfe-card">
+                            <img src="/assets/images/branding.png" alt="" class="dfe-card-image">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                    <a href="/news/digital-product-branding-standard"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Digital Product Branding standard approved</a>
+                                </h3>
+                                <p class="govuk-body">Ensuring design consistency and branding across DfE's digital products.</p>
+                                <p class="govuk-body-s govuk-!-margin-bottom-0">25 February 2025</p>
+                            </div>
+                        </div>
+                        <div class="dfe-card">
+                            <img src="/assets/images/dfefrontend.png" alt="" class="dfe-card-image">
+                            <div class="dfe-card-container">
+
+                                <h3 class="govuk-heading-m">
+                                    <a href="/news/dfe-frontend-210"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">DfE Frontend 2.1.0 coming soon</a>
+                                </h3>
+                                <p class="govuk-body">We'll be releasing DfE Frontend 2.1.0 in March with new components for vertical navigation and header fixes.</p>
+                                <p class="govuk-body-s govuk-!-margin-bottom-0">24 February 2025</p>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

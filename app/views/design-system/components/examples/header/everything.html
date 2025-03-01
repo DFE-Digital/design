@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{-title-}}</title>
+    <html lang="en">
+    <meta charset="utf-8">
+    <meta name="description" content="{{-description-}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#00294a">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://design.education.gov.uk/{{path}}">
+    <link rel="stylesheet" href="/assets/css/govuk-frontend.min.css">
+    <link rel="stylesheet" href="/assets/css/dfefrontend-2.0.0.min.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+
+    {% from "header/macro.njk" import header %}
+
+    {% block header %}
+
+    {% set view = "Home" %}
+
+    {{ header({
+    "showNav": "true",
+    "showSearch": "true",
+    "showHeaderActionLinks": "true",
+    "logoPath": "assets/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "https://gov.uk",
+    "selectedNav": view,
+    "service": {
+    "name": "Service name",
+    "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+    {
+    "url" : "/",
+    "label" : "My account"
+    },
+    {
+    "url" : "/",
+    "label" : "Sign out"
+    }
+    ],
+    "primaryLinks": [
+    {
+    "url" : "#",
+    "label" : "Home"
+    }, {
+    "url" : "#",
+    "label" : "About"
+    }, {
+    "url" : "#",
+    "label" : "News"
+    }
+    ]
+    })
+    }}
+    {% endblock %}
+
+</body>
+
+</html>

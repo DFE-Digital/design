@@ -1,0 +1,83 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/components" %}
+{% set title = "Components" %}
+{% set description = "Components for building user interfaces." %}
+
+{% block content %}
+
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+                    <p class="govuk-body">Components are reusable parts of a user interface. Using pre-built, core elements allows teams to build
+          consistent services.</p>
+
+                    <table class="govuk-table">
+                        <caption class="govuk-table__caption govuk-table__caption--l">In progress</caption>
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Component</th>
+                                <th scope="col" class="govuk-table__header">Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a href="https://github.com/DFE-Digital/dfe-frontend/issues/5" class="govuk-link" target="_blank">Vertical navigation</a>
+                                </th>
+                                <td class="govuk-table__cell">Let users navigate a series of pages with navigation aside the main content.
+              </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="govuk-table">
+                        <caption class="govuk-table__caption govuk-table__caption--l">Backlog</caption>
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Component</th>
+                                <th scope="col" class="govuk-table__header">Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a href="https://github.com/DFE-Digital/dfe-frontend/issues/4"  class="govuk-link" target="_blank">Charting</a>
+                                </th>
+                                <td class="govuk-table__cell">Consistent and accessible charting in products.</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a href="https://github.com/DFE-Digital/dfe-frontend/issues/10"  class="govuk-link" target="_blank">Interruption page</a>
+                                </th>
+                                <td class="govuk-table__cell">Component for making users stop in a journey and take notice of some guidance.
+              </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a href="https://github.com/DFE-Digital/dfe-frontend/issues/6"  class="govuk-link" target="_blank">Progress bar</a>
+                                </th>
+                                <td class="govuk-table__cell">A view which shows the steps or progress in a journey.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="govuk-body">If you have a component you want to see in the design system, <a href="/design-system/dfe-frontend/contribute"  class="govuk-link" >follow the contribution guidelines</a>.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

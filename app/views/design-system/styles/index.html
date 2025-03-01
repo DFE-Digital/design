@@ -1,0 +1,79 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/styles" %}
+{% set title = "Styles" %}
+{% set description = "The Styles section of the DfE Design Manual provides essential guidance on the consistent use of
+colour and typography across all DfE digital services. " %}
+{% set mainClasses = 'govuk-!-padding-top-0 ' %}
+
+
+
+{% block content %}
+
+
+<section class=" govuk-!-margin-top-5">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-quarter">
+
+        <nav class="dfe-vertical-nav govuk-!-margin-top-2">
+
+          <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+            design system</a>
+
+          <ul class="dfe-vertical-nav__section">
+
+            <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+              <a class="dfe-vertical-nav__link" href="/design-system/styles">Styles</a>
+            </li>
+
+            <li class="dfe-vertical-nav__section-item ">
+              <a class="dfe-vertical-nav__link" href="/design-system/styles/colour">Colour</a>
+            </li>
+
+            <li class="dfe-vertical-nav__section-item ">
+              <a class="dfe-vertical-nav__link" href="/design-system/styles/typography">Typography</a>
+            </li>
+
+          </ul>
+
+
+
+        </nav>
+
+      </div>
+
+      <div class="govuk-grid-column-three-quarters">
+
+        <h1 class="govuk-heading-xl">{{title}}</h1>
+
+        <p class="govuk-body">{{description}}</p>
+
+        <p class="govuk-body">These style principles ensure accessibility, usability, and brand consistency, helping
+          teams create clear and effective user interfaces.</p>
+
+        <h2 class="govuk-heading-l">Colour</h2>
+
+        <p class="govuk-body">DfE’s colour palette is designed to create a strong, accessible, and recognisable identity
+          across all digital products.</p>
+
+        <h2 class="govuk-heading-l">Typography</h2>
+
+
+        <p class="govuk-body">DfE uses Inter as the primary typeface for digital products. This modern, highly readable
+          font ensures content is accessible across different screen sizes and devices.</p>
+
+        <p class="govuk-body">By maintaining a consistent approach to typography, DfE ensures that digital services are
+          easy to read, accessible, and aligned with GOV.UK design principles.</p>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

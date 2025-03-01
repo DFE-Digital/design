@@ -1,0 +1,65 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/dfe-frontend" %}
+{% set title = "DfE Frontend" %}
+{% set description = "DfE Frontend extends GOV.UK Frontend and includes additional styles, components, and patterns tailored for DfE services." %}
+
+{% block head %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+  <section>
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          {% include "./_sidenav.html" %}
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+
+        <span class="govuk-caption-xl">Design system</span>
+          {% markdown %}
+
+          # {{ title }}
+
+          DfE Frontend extends GOV.UK Frontend and includes:
+          
+          - [styles](/design-system/styles)
+          - [components](/design-system/components)
+          - [patterns](/design-system/patterns)
+
+          ## When to use DfE Frontend
+
+          Use DfE Frontend when designing and developing digital services for DfE. 
+          
+          It ensures:
+
+          * a consistent user experience across DfE services
+          * alignment with the [Digital Product Branding](https://standards.education.gov.uk/standard/digital-product-branding) standard
+          * faster development by reusing ready-made components and styles
+
+          DfE Frontend should be used by designers and developers working on public-facing services, internal applications, and digital tools that are part of the department’s digital ecosystem.
+
+          ## Get started
+
+          To start using DfE Frontend, follow the [install DfE Frontend](/design-system/dfe-frontend/install) instructions.
+
+          ## Contribute to DfE Frontend
+
+          Where you identify a pattern or component in a product that could be reused, consider contributing it to DfE Frontend. 
+
+          Doing this will also ensure you are working to meet Service Standard point 13, [Use and contribute to open standards, common components and patterns](https://apply-the-service-standard.education.gov.uk/service-standard/13-use-common-standards-components-patterns).
+
+          To contribute to DfE Frontend, follow the [contribute to DfE Frontend](/design-system/dfe-frontend/contribute) instructions.
+
+          {% endmarkdown %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/prototyping" %}
+{% set title = "Using GitHub" %}
+{% set description = "This section will enable you to use GitHub to store your code and work on it with others." %}
+
+
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Prototyping</span>
+
+                    {% markdown %}
+
+                    # {{ title }}
+
+                    {{ description}}
+
+                    You must have a GitHub account to work through this section. See the [pre-requisites](/design-system/prototyping/prerequisites#github-access) section for more information.
+
+
+                    ## Create a new repository
+
+                    To create a new repository in GitHub, follow these steps:
+
+                    1. If you aren't signed in already, sign in to your GitHub account at [GitHub](https://github.com)
+                    2. go to the [DfE-Digital](https://github.com/dfe-digital) organisation page
+                    3. click on the 'New' button
+                    
+                    You'll be taken to a page where you can create a new repository.
+
+                    For the purpose of this guide, use your name followed by '-prototype'. 
+                    
+                    For example, 'jane-doe-prototype'
+
+                    > Prototypes should have obvious names followed by  '-prototype.
+                    >
+                    > Always use lowercase letters and hyphens instead of spaces.
+
+                    4. in the 'Repository name' field, enter a name for your repository
+                    5. make your repository private, unless you're working on an open source project or you're happy for anyone publicly to see your code
+                    6. click the "Create repository" button
+
+                    You've now created a new repository in GitHub where you can store your prototype code.
+
+                    You should see some information about how to clone or push to your repository. Keep this page open as you'll need some information off it.
+
+                    ## Add your code to the repository
+
+                    To add your code to the repository, we're going to use the terminal in VS Code to associate your local code, with the repository you've just created.
+
+                    If your prototype is running, stop the server by pressing `Ctrl + C` in the terminal.
+
+### Copy your repository URL
+                   
+                   From the GitHub page, copy the whole line which starts with **git remote add origin** from the 'or push an existing repository from the command line' section and paste it into the terminal and press enter or return.
+
+                    This will associate your local code with the repository you've just created.
+
+                    Next we're going to add all the files into the main branch of the repository.
+
+In the terminal, run this command:
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper">
+                            <p class="govuk-summary-card__title">Code</p>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action">
+                                    <button class="govuk-button copy-btn" data-copy-target="cx-add">Copy code</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <pre><code id="cx-add" class="language-bash">git branch -M main</code></pre>
+                        </div>
+                        </div>
+
+> This command renames the default branch from `master` to `main`. This is a more inclusive term and is the default branch name for new repositories on GitHub.
+>
+> You only need to run this command once when working with a new repository.
+
+You're now ready to add your code to the repository.
+
+In the terminal, run this command:
+
+                    <div class="govuk-summary-card">
+                            <div class="govuk-summary-card__title-wrapper">
+                                <p class="govuk-summary-card__title">Code</p>
+                                <ul class="govuk-summary-card__actions">
+                                    <li class="govuk-summary-card__action">
+                                        <button class="govuk-button copy-btn" data-copy-target="cx-push">Copy code</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="govuk-summary-card__content">
+                                <pre><code id="cx-push" class="language-bash">git push -u origin main</code></pre>
+                            </div>
+                        </div>
+
+This command will push your code to the repository you've just created.
+
+You should see some information about the files being pushed to the repository.
+
+> **push** is the command to send your code to the repository
+>
+> **-u** is the command to set the upstream repository
+>
+> **origin** is a shorthand name for the remote repository on GitHub, it saves you having to type the full URL
+>
+> **main** is the name of the branch you're pushing to.
+
+when pushing changes in the future, you can just use the command `git push` to send your code to the repository.
+
+You've now added your code to the repository in GitHub. If you go back to the GitHub page and refresh it, you should see your code in the repository.
+
+Next we'll get your code deployed to Heroku.
+
+
+                        {% endmarkdown %}
+
+                        {{ govukPagination({
+                        previous: {
+                           labelText: "Working with code files",
+                            href: "/design-system/prototyping/working-with-code"
+                        },
+                        next: {
+                            labelText: "Using heroku",
+                            href: "/design-system/prototyping/using-heroku"
+                        }
+                    }) }}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}

@@ -1,0 +1,111 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "News" %}
+{% set path = "news/dfe-frontend-210" %}
+{% set title = "DfE Frontend 2.1.0 coming soon" %}
+{% set description = "" %}
+
+{% block head %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "DfE Frontend 2.1.0 coming soon",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://standards.education.gov.uk/news/dfe-frontend-210"
+  },
+  "datePublished": "2025-02-24",
+  "dateModified": "2025-02-24",
+  "author": {
+    "@type": "Person",
+    "name": "Andy Jones",
+    "jobTitle": "Head of Design",
+    "email": "mailto:andy.jones@education.gov.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department for Education (DfE)",
+    "url": "https://www.gov.uk/government/organisations/department-for-education",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://standards.education.gov.uk/assets/images/dfe-logo.png"
+    }
+  },
+  "description": "A new version of DfE Frontend (2.1.0) will be available in March, introducing a vertical navigation component and critical fixes to the header component.",
+   "url": "https://standards.education.gov.uk/news/dfe-frontend-210",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://standards.education.gov.uk/assets/images/dfefrontend.png",
+   "width": 680,
+    "height": 380
+  },
+  "keywords": [
+    "DfE Frontend",
+    "Design System",
+    "Vertical Navigation",
+    "Header Component",
+    "Accessibility",
+  ],
+  "isAccessibleForFree": true
+}
+</script>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<section style="background-color:#ffffff;" class="">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                    <a href="/news" class="govuk-back-link govuk-!-margin-top-2">Back to news</a>
+                    <span class="govuk-caption-xl govuk-!-margin-top-5">News</span>
+                <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Published</dt>
+                        <dd class="govuk-summary-list__value">24 February 2025</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Author</dt>
+                        <dd class="govuk-summary-list__value"><a href="mailto:andy.jones@education.gov.uk" class="govuk-link">Andy Jones (Head of Design)</a></dd>
+                    </div>
+                </dl>
+
+                {% markdown %}
+A new version of DfE Frontend version 2.1.0, will be made available in March. This new version will include a vertical navigation component and several important fixes to the [header](/design-system/components/header) component.
+
+## New vertical navigation component
+
+The new vertical navigation component provides a streamlined solution for creating vertical navigation menus that are both user-friendly and fully accessible. 
+
+The vertical navigation is designed to work seamlessly across DfE services, enabling teams to create clear and consistent navigation structures that improve the user experience, particularly on mobile and tablet devices.
+
+## Header component fixes
+
+In addition to the new vertical navigation, version 2.1.0 also includes important fixes to the header component. 
+
+These updates address several minor issues reported by users, enhancing the responsiveness and accessibility of the header across a variety of devices and screen sizes. 
+
+With these improvements, the DfE Frontend framework continues to evolve, ensuring that headers are consistent and functional on all platforms.
+
+## Continued focus on accessibility and consistency
+
+DfE Frontend 2.1.0 remains aligned with the department’s overarching goals of ensuring accessible and consistent user experiences across all digital services. 
+
+As with all components in the framework, the vertical navigation and header updates have been developed with a focus on meeting the highest accessibility standards, providing clear and meaningful interactions for all users.
+
+
+                {% endmarkdown %}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Get started" %}
+{% set path = "get-started" %}
+{% set title = "Get started" %}
+{% set description = "Our communities of practice come together to share work, develop skills and capability across the
+design
+profession." %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+            <nav class="dfe-vertical-nav">
+                <h2 class="govuk-heading-s">Get started</h2>
+                <ul class="dfe-vertical-nav__section">
+                    <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                        <a class="dfe-vertical-nav__link" href="/get-started">Design in DfE</a>
+                    </li>
+                    <li class="dfe-vertical-nav__section-item">
+                        <a class="dfe-vertical-nav__link" href="/get-started/working-groups">Standards</a>
+                    </li>
+
+                    <li class="dfe-vertical-nav__section-item">
+                        <a class="dfe-vertical-nav__link" href="/get-started/working-groups">Design priorities</a>
+                    </li>
+                </ul>
+                <h2 class="govuk-heading-s">Prototyping</h2>
+                <ul class="dfe-vertical-nav__section">
+                    <li class="dfe-vertical-nav__section-item">
+                        <a class="dfe-vertical-nav__link" href="/get-started">Prototype kit</a>
+                    </li>
+                    <li class="dfe-vertical-nav__section-item">
+                        <a class="dfe-vertical-nav__link" href="/get-started/working-groups">Figma</a>
+                    </li>
+                    <li class="dfe-vertical-nav__section-item">
+                        <a class="dfe-vertical-nav__link" href="/get-started/working-groups">Heroku</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+            <h1 class="govuk-heading-xl">{{title}}</h1>
+            <p class="govuk-body">{{description}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

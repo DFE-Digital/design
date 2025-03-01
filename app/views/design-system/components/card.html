@@ -1,0 +1,487 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/components/card" %}
+{% set title = "Card" %}
+{% set description = "The card component is used to group related information together. It can be used to display a summary of a piece of content, or to provide a visual cue to the user." %}
+
+{% block content %}
+
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl govuk-!-margin-top-1">Components</span>
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                    <p class="govuk-body">The card component is a versatile user interface element used to display grouped information in a visually
+          appealing and organised way.</p>
+                    <p class="govuk-body">They can enhance user interaction and content presentation across various applications and devices.</p>
+
+                    <h2 class="govuk-heading-l">Test as plain content first</h2>
+                    <p class="govuk-body">Cards can make things harder to understand if overused or used incorrectly. Before using them, test your
+          content as structured content with headers and paragraphs and grid layout.</p>
+
+                    <section class="custom-dfe-section">
+                        <h2 class="govuk-heading-l">Basic cards</h2>
+
+                        <p class="govuk-body">An example of a basic card component used in a group.</p>
+
+                        <section id="basic">
+
+                            <div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
+                                <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+                                <ul class="govuk-tabs__list">
+                                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                                        <a class="govuk-tabs__tab" href="#example2">
+                    Example
+                  </a>
+                                    </li>
+                                    <li class="govuk-tabs__list-item">
+                                        <a class="govuk-tabs__tab" href="#html2">
+                    HTML
+                  </a>
+                                    </li>
+                                    <li class="govuk-tabs__list-item">
+                                        <a class="govuk-tabs__tab" href="#nunjucks2">
+                    Nunjucks
+                  </a>
+                                    </li>
+                                </ul>
+                                <div class="govuk-tabs__panel" id="example2">
+
+                                    <div class="dfe-grid-container">
+                                        <div class="dfe-card">
+                                            <div class="dfe-card-container">
+                                                <h3 class="govuk-heading-m">
+                                                    <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Card title</a>
+                                                </h3>
+                                                <p class="govuk-body">A short description for the card.</p>
+                                            </div>
+                                        </div>
+                                        <div class="dfe-card">
+                                            <div class="dfe-card-container">
+                                                <h3 class="govuk-heading-m">
+                                                    <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Card title</a>
+                                                </h3>
+                                                <p class="govuk-body">A short description for the card.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="govuk-tabs__panel" id="html2">
+
+                                    <pre><code>&lt;div class=&quot;dfe-grid-container&quot;&gt;
+      &lt;div class=&quot;dfe-card&quot;&gt;
+          &lt;div class=&quot;dfe-card-container&quot;&gt;
+            &lt;h3 class=&quot;govuk-heading-m&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;govuk-link govuk-link--no-visited-state dfe-card-link--header&quot;&gt;Card title&lt;/a&gt;
+            &lt;/h3&gt;
+            &lt;p&gt;A short description for the card.&lt;/p&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;dfe-card&quot;&gt;
+          &lt;div class=&quot;dfe-card-container&quot;&gt;
+            &lt;h3 class=&quot;govuk-heading-m&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;govuk-link govuk-link--no-visited-state dfe-card-link--header&quot;&gt;Card title&lt;/a&gt;
+            &lt;/h3&gt;
+            &lt;p&gt;A short description for the card.&lt;/p&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks2">
+                                    {% raw %}
+                                        <pre><code>{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+  {{ card({
+      cards: [
+          {
+              "imageCard": false,
+              "imagePath": "/images/sample-image.jpg",
+              "altText": "Sample Image",
+              "headingLevel": "3",
+              "linkCard": true,
+              "link": "#",
+              "openInNewTab": false,
+              "heading": "Sample Card Title",
+              "description": "A short description for the card.",
+              "meta": ""
+          },
+          {
+            "imageCard": false,
+            "imagePath": "/images/sample-image.jpg",
+            "altText": "Sample Image",
+            "headingLevel": "3",
+            "linkCard": true,
+            "link": "#",
+            "openInNewTab": false,
+            "heading": "Sample Card Title",
+            "description": "A short description for the card.",
+            "meta": ""
+        }
+      ]
+  }) }}</code></pre>
+                                        {% endraw%}
+                                    </div>
+                                </div>
+                            </section>
+
+                        </section>
+
+                        <section class="custom-dfe-section">
+                            <h2 class="govuk-heading-l">Basic with meta information</h2>
+
+                            <p class="govuk-body">An example of a basic card component used in a group which has meta data.</p>
+
+                            <section id="all">
+
+                                <div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
+                                    <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+                                    <ul class="govuk-tabs__list">
+                                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                                            <a class="govuk-tabs__tab" href="#example">
+                    Example
+                  </a>
+                                        </li>
+                                        <li class="govuk-tabs__list-item">
+                                            <a class="govuk-tabs__tab" href="#html">
+                    HTML
+                  </a>
+                                        </li>
+                                        <li class="govuk-tabs__list-item">
+                                            <a class="govuk-tabs__tab" href="#nunjucks">
+                    Nunjucks
+                  </a>
+                                        </li>
+                                    </ul>
+                                    <div class="govuk-tabs__panel" id="example">
+
+                                        <div class="dfe-grid-container">
+                                            <div class="dfe-card">
+                                                <div class="dfe-card-container">
+                                                    <h3 class="govuk-heading-m">
+                                                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Card title</a>
+                                                    </h3>
+                                                    <p class="govuk-body">A short description for the card.</p>
+                                                    <p class="govuk-body-s">Meta information.</p>
+                                                </div>
+                                            </div>
+                                            <div class="dfe-card">
+                                                <div class="dfe-card-container">
+                                                    <h3 class="govuk-heading-m">
+                                                        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Card title</a>
+                                                    </h3>
+                                                    <p class="govuk-body">A short description for the card.</p>
+                                                    <p class="govuk-body-s">Meta information.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="govuk-tabs__panel" id="html">
+
+                                        <pre><code>&lt;div class=&quot;dfe-grid-container&quot;&gt;
+    &lt;div class=&quot;dfe-card&quot;&gt;
+        &lt;div class=&quot;dfe-card-container&quot;&gt;
+          &lt;h3 class=&quot;govuk-heading-m&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;govuk-link govuk-link--no-visited-state dfe-card-link--header&quot;&gt;Card title&lt;/a&gt;
+          &lt;/h3&gt;
+          &lt;p&gt;A short description for the card.&lt;/p&gt;
+          &lt;p class=&quot;govuk-body-s&quot;&gt;Meta information.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dfe-card&quot;&gt;
+        &lt;div class=&quot;dfe-card-container&quot;&gt;
+          &lt;h3 class=&quot;govuk-heading-m&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;govuk-link govuk-link--no-visited-state dfe-card-link--header&quot;&gt;Card title&lt;/a&gt;
+          &lt;/h3&gt;
+          &lt;p&gt;A short description for the card.&lt;/p&gt;
+          &lt;p class=&quot;govuk-body-s&quot;&gt;Meta information.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+                                    </div>
+                                    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks">
+                                        {% raw %}
+                                            <pre><code>{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+  {{ card({
+      cards: [
+          {
+              "imageCard": false,
+              "imagePath": "/images/sample-image.jpg",
+              "altText": "Sample Image",
+              "headingLevel": "3",
+              "linkCard": true,
+              "link": "#",
+              "openInNewTab": false,
+              "heading": "Sample Card Title",
+              "description": "A short description for the card.",
+              "meta": "Meta information"
+          },
+          {
+            "imageCard": false,
+            "imagePath": "/images/sample-image.jpg",
+            "altText": "Sample Image",
+            "headingLevel": "3",
+            "linkCard": true,
+            "link": "#",
+            "openInNewTab": false,
+            "heading": "Sample Card Title",
+            "description": "A short description for the card.",
+            "meta": "Meta information"
+        }
+      ]
+  }) }}</code></pre>
+                                            {% endraw%}
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </section>
+
+                            <section class="custom-dfe-section">
+                                <h2 class="govuk-heading-l">Cards with image</h2>
+
+                                <p class="govuk-body">An example of a card component used in a group which has meta data and an image.</p>
+
+                                <section id="all">
+
+                                    <div class="govuk-tabs govuk-!-margin-top-5 code-example" data-module="govuk-tabs">
+                                        <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+                                        <ul class="govuk-tabs__list">
+                                            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                                                <a class="govuk-tabs__tab" href="#example3">
+                    Example
+                  </a>
+                                            </li>
+                                            <li class="govuk-tabs__list-item">
+                                                <a class="govuk-tabs__tab" href="#html3">
+                    HTML
+                  </a>
+                                            </li>
+                                            <li class="govuk-tabs__list-item">
+                                                <a class="govuk-tabs__tab" href="#nunjucks3">
+                    Nunjucks
+                  </a>
+                                            </li>
+                                        </ul>
+                                        <div class="govuk-tabs__panel" id="example3">
+
+                                            <div class="dfe-grid-container">
+                                                <div class="dfe-card">
+                                                    <img src="/assets/images/sample.png" alt="Sample Image">
+                                                    <div class="dfe-card-container">
+                                                        <h3 class="govuk-heading-m">
+                                                            <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Sample Card
+                          Title</a>
+                                                        </h3>
+                                                        <p class="govuk-body">A short description for the card.</p>
+                                                        <p class="govuk-body-s">Meta information</p>
+                                                    </div>
+                                                </div>
+                                                <div class="dfe-card">
+                                                    <img src="/assets/images/sample.png" alt="Sample Image">
+                                                    <div class="dfe-card-container">
+                                                        <h3 class="govuk-heading-m">
+                                                            <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Sample Card
+                          Title</a>
+                                                        </h3>
+                                                        <p class="govuk-body">A short description for the card.</p>
+                                                        <p class="govuk-body-s">Meta information</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="govuk-tabs__panel" id="html3">
+
+                                            <pre><code>&lt;div class=&quot;dfe-grid-container&quot;&gt;
+    &lt;div class=&quot;dfe-card&quot;&gt;
+        &lt;img src=&quot;/assets/images/sample.png&quot; alt=&quot;Sample Image&quot;&gt;
+        &lt;div class=&quot;dfe-card-container&quot;&gt;
+          &lt;h3 class=&quot;govuk-heading-m&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;govuk-link govuk-link--no-visited-state dfe-card-link--header&quot;&gt;Sample Card Title&lt;/a&gt;
+          &lt;/h3&gt;
+          &lt;p&gt;A short description for the card.&lt;/p&gt;
+          &lt;p class=&quot;govuk-body-s&quot;&gt;Meta information&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dfe-card&quot;&gt;
+        &lt;img src=&quot;/assets/images/sample.png&quot; alt=&quot;Sample Image&quot;&gt;
+        &lt;div class=&quot;dfe-card-container&quot;&gt;
+          &lt;h3 class=&quot;govuk-heading-m&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;govuk-link govuk-link--no-visited-state dfe-card-link--header&quot;&gt;Sample Card Title&lt;/a&gt;
+          &lt;/h3&gt;
+          &lt;p&gt;A short description for the card.&lt;/p&gt;
+          &lt;p class=&quot;govuk-body-s&quot;&gt;Meta information&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+                                        </div>
+                                        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="nunjucks3">
+                                            {% raw %}
+                                                <pre><code>{% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+  {{ card({
+      cards: [
+          {
+              "imageCard": true,
+              "imagePath": "/assets/images/sample.png",
+              "altText": "Sample Image",
+              "headingLevel": "3",
+              "linkCard": true,
+              "link": "#",
+              "openInNewTab": false,
+              "heading": "Sample Card Title",
+              "description": "A short description for the card.",
+              "meta": "Meta information"
+          },
+          {
+            "imageCard": true,
+            "imagePath": "/assets/images/sample.png",
+            "altText": "Sample Image",
+            "headingLevel": "3",
+            "linkCard": true,
+            "link": "#",
+            "openInNewTab": false,
+            "heading": "Sample Card Title",
+            "description": "A short description for the card.",
+            "meta": "Meta information"
+        }
+      ]
+  }) }}</code></pre>
+                                                {% endraw%}
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                </section>
+
+                                <h2 class="govuk-heading-l">Properties</h2>
+
+                                <p class="govuk-body">Details of the properties that you can configure when using the nunjucks version of this component.</p>
+
+                                <table class="govuk-table">
+                                    <thead class="govuk-table__head">
+                                        <tr class="govuk-table__row">
+                                            <th class="govuk-table__header">Parameter Name</th>
+                                            <th class="govuk-table__header">Type</th>
+                                            <th class="govuk-table__header">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="govuk-table__body">
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">imageCard</td>
+                                            <td class="govuk-table__cell">Boolean</td>
+                                            <td class="govuk-table__cell">Sets the image section ready for an image</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">imagePath</td>
+                                            <td class="govuk-table__cell">string</td>
+                                            <td class="govuk-table__cell">Path to your image file</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">altText</td>
+                                            <td class="govuk-table__cell">string</td>
+                                            <td class="govuk-table__cell">Alternative description of the image.</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">headingLevel</td>
+                                            <td class="govuk-table__cell">number</td>
+                                            <td class="govuk-table__cell">Should be a number between 2 and 4 indicating the heading level of the hard
+                title</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">linkCard</td>
+                                            <td class="govuk-table__cell">Boolean</td>
+                                            <td class="govuk-table__cell">Sets whether the card header is a link and therefore the whole card clickable.
+              </td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">link</td>
+                                            <td class="govuk-table__cell">String</td>
+                                            <td class="govuk-table__cell">URL to link to.</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">openInNewTab</td>
+                                            <td class="govuk-table__cell">Boolean</td>
+                                            <td class="govuk-table__cell">Set to true if the link should open in a new tab. Default is false</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">heading</td>
+                                            <td class="govuk-table__cell">Object</td>
+                                            <td class="govuk-table__cell">The text for the card header.</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">description</td>
+                                            <td class="govuk-table__cell">String</td>
+                                            <td class="govuk-table__cell">The body text of the card under the header.</td>
+
+                                        </tr>
+                                        <tr class="govuk-table__row">
+                                            <td class="govuk-table__cell">meta</td>
+                                            <td class="govuk-table__cell">string</td>
+                                            <td class="govuk-table__cell">If true, sets up a small body tag for containing meta text which is smaller
+                than the card body and pushed to the bottom of the card.</td>
+                                        </tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2 class="govuk-heading-l" id="services">Services using this component</h2>
+
+                            <p class="govuk-body">The following services are using this component:</p>
+
+                            <ul class="govuk-list govuk-list--bullet">
+
+                                <li>
+                                    <a href="https://design.education.gov.uk/" class="govuk-link" target="_blank">Design manual</a>
+                                </li>
+                                <li>
+                                    <a href="https://service-assessments.education.gov.uk" class="govuk-link" target="_blank">Service assessment
+              service</a>
+                                </li>
+                                <li>
+                                    <a href="https://design-histories.education.gov.uk" class="govuk-link" target="_blank">Design histories</a>
+                                </li>
+                                <li>
+                                    <a href="https://user-research.education.gov.uk" class="govuk-link" target="_blank">User research manual</a>
+                                </li>
+                                <li>
+                                    <a href="https://standards.education.gov.uk" class="govuk-link" target="_blank">Standards manual</a>
+                                </li>
+                            </ul>
+
+                            <h2 class="govuk-heading-l" id="improve">Help us improve this component</h2>
+
+                            <p class="govuk-body">To improve this component based on user needs and research, you can contribute on the <a
+            href="https://github.com/DFE-Digital/dfe-frontend/issues/13" class="govuk-link" target="_blank">Card -
+            Component #13</a> project issue.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        {% endblock %}

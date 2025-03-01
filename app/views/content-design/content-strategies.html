@@ -1,0 +1,119 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Content design" %}
+{% set path = "content-design/content-strategies" %}
+{% set title = "Content strategies" %}
+{% set description = "" %}
+
+{% block content %}
+
+<style>
+    .dfe-list--dashed {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .dfe-list--dashed li::before {
+        content: "––";
+        margin-right: 0.5em;
+    }
+
+      .dfe-list--dashed li {
+        font-size: 1rem;
+    }
+</style>
+
+<section>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-quarter">
+                {% include "./_sidenav.html" %}
+            </div>
+            <div class="govuk-grid-column-three-quarters">
+
+                <span class="govuk-caption-xl">Content design</span>
+
+                {% markdown %}
+
+                # {{ title }}
+                
+                {{ description }}
+
+                A content strategy helps you create and maintain content that meets user needs and organisational goals. 
+
+                It ensures efficient content planning, collaboration, and the measurement of content success. The strategy should give an overview of the products or services covered, the users, and purpose.
+
+                ## Before you start  
+
+                Read the following guidance before you start your strategy:  
+
+                - [DfE GOV.UK content strategy (DfE intranet)](https://educationgovuk.sharepoint.com/sites/communications/SitePages/dfe-govuk-content-strategy.aspx?)
+                - [DfE strategy and vision (DfE intranet)](https://educationgovuk.sharepoint.com/sites/strategy-and-vision)
+
+                Work with your team to identify:  
+
+                - the goals for your users
+                - how content will help them meet those goals
+                - how you'll measure success of the product
+
+                Record how you'll meet these goals while creating, testing, and iterating content. Consider including a [stakeholder map](https://analysisfunction.civilservice.gov.uk/policy-store/stakeholder-mapping/) to track key contributors, such as subject-matter experts, policy experts, developers, and business analysts.  
+
+                ## Monitor and measure  
+
+                Monitor the success of your strategy in the following ways:  
+
+                - user testing  
+                - insights from usage data about journeys across content or through your service  
+                - feedback loops
+
+                Work with the team to define benchmarks and how you'll measure them. 
+
+                Examples include:
+
+                - % of users landing on a page from a search result
+                - number of issues reported with accuracy of information
+                - % of errors in links
+                - number of times content is updated over a period of time
+
+                Your should agree with the team how you will publish [service performance data](https://www.gov.uk/service-manual/measuring-success) alongside your key performance indicators (KPIs).  
+
+                ## Plan how you'll quality assure your content
+
+                This should include:  
+
+                - how often you'll identify, develop, and test content before publishing 
+                - how to get sign-off for content  
+                - how you'll ensure content is accurate and up-to-date
+
+                ## Agree governance and ownership
+
+                The content strategy should be written and owned by the content designer working on the product or service. It should be agreed by all relevant stakeholders.  
+
+                This should include:  
+
+                - ensuring factual accuracy of the content  
+                - how changes are agreed
+                - content maintenance
+
+                ## Review and iterate the strategy  
+
+                As you learn more about your users you should iterate your content strategy. This is especially important when moving to a new project phase, such as from discovery to alpha, or if the product or service vision changes.  
+
+                Over time, you'll gain a deeper understanding of your service and users. Your data and reporting will help you refine how you measure success, which should be reflected in the strategy.  
+
+                You should also agree on a strategy for archiving or removing content that is no longer needed.  
+
+                ## Further reading  
+
+                [Everything you need to do a content strategy - Content Design London](https://www.contentdesign.london/blog/everything-you-need-to-do-content-strategy)  
+
+                [The importance of end-to-end strategy - Content Design London](https://contentdesign.london/blog/the-importance-of-end-to-end-strategy)  
+
+                {% endmarkdown %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

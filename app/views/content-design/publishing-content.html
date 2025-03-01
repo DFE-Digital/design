@@ -1,0 +1,96 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Content design" %}
+{% set path = "content-design/publishing-content" %}
+{% set title = "Publishing content" %}
+{% set description = "" %}
+
+{% block content %}
+
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Content design</span>
+
+                    {% markdown %}
+
+                # {{ title }}
+
+                    {{ description }}
+
+                ## GOV.UK mainstream content
+
+                This is content for the public and is managed by GDS (Government Digital Service).
+
+                We work with GDS to produce content for parents and carers, covering services such as looking for childcare or a school place.
+
+                Examples of mainstream content:
+
+                *  [types of school](https://www.gov.uk/types-of-school)
+                *  [school admissions](https://www.gov.uk/schools-admissions)
+                *  [school term and holiday dates](https://www.gov.uk/school-term-holiday-dates)
+
+                ## GOV.UK specialist content
+
+                This content is managed by our digital communications team (DigiComms). You can find out more about [working with DigiComms on the DfE intranet](https://educationgovuk.sharepoint.com/sites/communications/SitePages/publish-gov-uk.aspx).
+
+                Specialist content is used to publish statutory guidance, policy papers, and detailed guides for professionals. We also publish some guidance for parents and press releases.
+
+                Example of specialist content:
+
+                *  [plan your relationships, sex and health curriculum](https://www.gov.uk/guidance/plan-your-relationships-sex-and-health-curriculum)
+                *  [schools: statutory guidance](https://www.gov.uk/government/collections/statutory-guidance-schools)
+                *  [keeping children safe in education](https://www.gov.uk/government/publications/keeping-children-safe-in-education--2)
+
+                ## Services hosted on the service.gov.uk domain
+
+                These services are for the public and must meet the [GOV.UK proposition](https://www.gov.uk/government/publications/govuk-proposition/govuk-proposition) to be provided on the service.gov.uk domain.
+
+                Example of services on service.gov.uk:
+
+                *  [Apply for teacher training](https://www.gov.uk/apply-for-teacher-training)
+                *  [Get information about schools](https://get-information-schools.service.gov.uk/)
+                *  [Compare school performance](https://www.compare-school-performance.service.gov.uk/)
+
+                ## Services hosted on the education domain
+
+                These services are for professionals and provided on the education.gov.uk domain. They may then move to GOV.UK once they are live and nationally available.
+
+                Example of a service on education.gov.uk:
+
+                *  [Help for early years providers](#)
+
+                ## Campaign sites
+
+                These sites are managed by the [Government Communications Service (GCS)](https://gcs.civilservice.gov.uk/) (some are managed by third-party providers). They are aimed at the public and are used for a specific time period and have a specific objective.
+
+                Example of a campaign site:
+
+                *  [Get into teaching](https://getintoteaching.education.gov.uk/)
+                *  [Early years careers campaign](https://earlyyearscareers.campaign.gov.uk/)
+
+                [Contact DigiComms (DfE intranet)](https://educationgovuk.sharepoint.com/sites/communications/SitePages/publish-gov-uk.aspx) if you think you need a campaign site.
+
+                ## Communication channels
+
+                We also use several communication channels to engage with different audiences and direct users to our services and guidance.
+
+                These include:
+
+                *  [GOV.UK Notify](https://www.notifications.service.gov.uk/) for emails and text messages sent from digital products
+                *  [blogs](https://dfedigital.blog.gov.uk/)
+                *  sector newsletters for professionals and stakeholders
+                *  social media
+
+                {% endmarkdown %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

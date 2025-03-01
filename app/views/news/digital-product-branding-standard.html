@@ -1,0 +1,115 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "News" %}
+{% set path = "news/plain-language" %}
+{% set title = "Digital Product Branding standard approved" %}
+{% set description = "New digital product branding standard approved requiring all DfE products to use the correct branding for online services." %}
+
+{% block head %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Digital Product Branding standard approved",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://standards.education.gov.uk/news/digital-product-branding-standard"
+  },
+  "datePublished": "2025-02-24",
+  "dateModified": "2025-02-24",
+  "author": {
+    "@type": "Person",
+    "name": "Andy Jones",
+    "jobTitle": "Head of Design",
+    "email": "mailto:andy.jones@education.gov.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department for Education (DfE)",
+    "url": "https://www.gov.uk/government/organisations/department-for-education",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://standards.education.gov.uk/assets/images/dfe-logo.png"
+    }
+  },
+  "description": "New Digital Product Branding standard approved requiring all DfE products to use the correct branding for online services.",
+   "url": "https://standards.education.gov.uk/news/digital-product-branding-standard",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://standards.education.gov.uk/assets/images/branding.png",
+   "width": 680,
+    "height": 380
+  },
+  "keywords": [
+    "Standards",
+  ],
+  "isAccessibleForFree": true
+}
+</script>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<section style="background-color:#ffffff;" class="">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                  <a href="/news" class="govuk-back-link govuk-!-margin-top-2">Back to news</a>
+                    <span class="govuk-caption-xl govuk-!-margin-top-5">News</span>
+                <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Published</dt>
+                        <dd class="govuk-summary-list__value">25 February 2025</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Author</dt>
+                        <dd class="govuk-summary-list__value"><a href="mailto:andy.jones@education.gov.uk" class="govuk-link">Andy Jones (Head of Design)</a></dd>
+                    </div>
+                </dl>
+
+                {% markdown %}
+
+                The new [Digital Product Branding standard](https://standards.education.gov.uk/standard/digital-product-branding) is now available on the
+                Find and Use Standards product. This standard provide clear guidance on the consistent use of the DfE's visual identity across all digital products.
+
+                The standard is designed to ensure that all products, both internal and externally-facing, adhere to the department's visual identity. 
+                
+                The standard includes usage of the DfE logo, typography, and other design elements that reflect the DfE's commitment to clarity, accessibility,
+                and consistency.
+
+                ## A step towards greater consistency
+
+                The publication of the standard is part of a wider initiative to strengthen design and accessibility
+                standards across the department. 
+                
+                By standardising the use of branding, we create a more
+                recognisable identity that builds trust with users and enhances the clarity of the products
+                we build.
+
+                ## Guidelines for all teams
+
+                Available now to all DfE teams and external partners, the standard provides detailed guidelines that can
+                be accessed through the [Find and use standards](https://standards.education.gov.uk) product. 
+                
+                This
+                centralised location for all DfE standards is designed to enable staff and external collaborators to
+                deliver high-quality, consistent outputs across various projects and services.
+
+                Guidance for using the DfE logo, colour palettes, typography, and other design elements can be found in
+                the [DfE design system](/design-system).
+
+
+                {% endmarkdown %}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

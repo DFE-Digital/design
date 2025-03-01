@@ -1,0 +1,139 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/styles/colour" %}
+{% set title = "Colour" %}
+{% set description = "The colour palette is a key part of the DfE brand. It creates a consistent look and design style
+ across products and websites." %}
+{% set mainClasses = 'govuk-!-padding-top-0 ' %}
+
+{% block content %}
+
+    <section class=" govuk-!-margin-top-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    <nav class="dfe-vertical-nav govuk-!-margin-top-2">
+
+                        <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+            design system</a>
+
+                        <ul class="dfe-vertical-nav__section">
+
+                            <li class="dfe-vertical-nav__section-item">
+                                <a class="dfe-vertical-nav__link" href="/design-system/styles">Styles</a>
+                            </li>
+
+                            <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                                <a class="dfe-vertical-nav__link" href="/design-system/styles/colour">Colour</a>
+                            </li>
+
+                            <li class="dfe-vertical-nav__section-item ">
+                                <a class="dfe-vertical-nav__link" href="/design-system/styles/typography">Typography</a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl govuk-!-margin-top-1">Styles</span>
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                    <p class="govuk-body">{{description}}</p>
+
+                    <p class="govuk-body">Always use the <a href="https://design-system.service.gov.uk/styles/colour/" class="govuk-link"
+            target="_blank" rel="noopener noreferrer">GOV.UK colour palette</a> first.</p>
+
+                    <h2 class="govuk-heading-l">Department brand colour</h2>
+
+                    <p class="govuk-body">The primary blue colour is the <a href="https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/settings/_colours-organisations.scss" class="govuk-link">DfE organisation colour</a> which identifies us in wider government.</p>
+
+                    <p class="govuk-body">You should not vary the shade of blue in its use for the DfE header.</p>
+
+                    <div class="color-container govuk-!-margin-top-9">
+                        <div class="color-wrapper">
+                            <div class="color-swatch" style="background-color: #003A69;"></div>
+                            <div class="color-details">
+                                <h4>Primary blue</h4>
+
+                                <dl class="govuk-summary-list">
+
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+      RGB
+    </dt>
+                                        <dd class="govuk-summary-list__value">
+      rgb(0 55 100)
+    </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+      HEX
+    </dt>
+                                        <dd class="govuk-summary-list__value">
+      #003764
+    </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+      Scss
+    </dt>
+                                        <dd class="govuk-summary-list__value">
+      $color_dfe-blue;
+    </dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+                        </div>
+                        <div class="color-wrapper">
+                            <div class="color-swatch" style="background-color: #347CA9;"></div>
+                            <div class="color-details">
+                                <h4>Secondary blue</h4>
+
+                                <dl class="govuk-summary-list">
+
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+      RGB
+    </dt>
+                                        <dd class="govuk-summary-list__value">
+      rgb(52 124 169)
+    </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+      HEX
+    </dt>
+                                        <dd class="govuk-summary-list__value">
+      #347CA9
+    </dd>
+                                    </div>
+                                    <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+      Scss
+    </dt>
+                                        <dd class="govuk-summary-list__value">
+      $color_dfe-secondary-blue;
+    </dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

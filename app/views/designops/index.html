@@ -1,0 +1,271 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "DesignOps" %}
+{% set path = "designops" %}
+{% set title = "DesignOps" %}
+{% set description = "The DesignOps team supports design teams to work effectively and efficiently, with standards,
+ guidance,
+and support." %}
+{% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
+
+{% block content %}
+
+    <section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+                    <p class="govuk-body-l">{{description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color:#ffffff;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-0">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l">Who we are</h2>
+                    <p class="govuk-body">The team is led by the head of design, and is a multidiscipline team who work on
+                    developing
+                    guidance, processes, tools and supporting design and the wider department.</p>
+                    <div class="dfe-grid-container govuk-!-margin-top-9"
+                    style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+                        <div class="dfe-card">
+                            <img src="/assets/images/andy-jones.jpeg" alt="">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                Andy Jones
+                            </h3>
+                                <p class="govuk-!-margin-bottom-0 govuk-body-s">Head of Design</p>
+                            </div>
+                        </div>
+                        <div class="dfe-card">
+                            <img src="/assets/images/kerry-lyons.jpeg" alt="">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                Kerry Lyons
+                            </h3>
+                                <p class="govuk-!-margin-bottom-0 govuk-body-s">Senior Content Designer</p>
+                            </div>
+                        </div>
+                        <div class="dfe-card">
+                            <img src="/assets/images/jake-lloyd.jpeg" alt="">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                Jake Lloyd
+                            </h3>
+                                <p class="govuk-!-margin-bottom-0 govuk-body-s">Senior Accessibility Specialist</p>
+                            </div>
+                        </div>
+                        <div class="dfe-card">
+                            <img src="/assets/images/adam-dumbell.jpeg" alt="">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                Adam Dumbell
+                            </h3>
+                                <p class="govuk-!-margin-bottom-0 govuk-body-s">User Researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color:#ffffff;" class="govuk-!-padding-top-0 govuk-!-padding-bottom-7">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                    <h2 class="govuk-heading-l govuk-!-margin-top-9">How we can help</h2>
+                    <p class="govuk-body">The DesignOps team can help you with:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>design standards and guidance</li>
+                        <li>design tools and resources</li>
+                        <li>getting started using the Design history product</li>
+                        <li>preparing for a service assessment</li>
+                        <li>accessibility guidance, support, and audit triage</li>
+                        <li>prototyping, GitHub, and Heroku</li>
+                        <li>design system and frontend framework</li>
+                    </ul>
+                    <p class="govuk-body">If you have any design or accessibility related questions, you can get in touch with the team in the following ways:</p>
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">DfE Slack</dt>
+                            <dd class="govuk-summary-list__value">
+                                <a href="" class="govuk-link govuk-link--no-visited-state">#DesignOps</a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Cross-Gov Slack</dt>
+                            <dd class="govuk-summary-list__value">
+                                <a href="" class="govuk-link govuk-link--no-visited-state">#DfE-DesignOps</a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Email</dt>
+                            <dd class="govuk-summary-list__value">
+                                <a href="mailto:design.ops@education.gov.uk" class="govuk-link govuk-link--no-visited-state">design.ops@education.gov.uk</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l  govuk-!-margin-top-9">The products we build and maintain</h2>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Product</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">GitHub Code</th>
+                                <th scope="col" class="govuk-table__header">Design History</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a
+                                    href="https://accessibility.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state">Accessibility manual</a>
+                                </th>
+                                <td class="govuk-table__cell">Guidance on creating accessible digital services.</td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://github.com/DFE-Digital/accessibility-manual"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a
+                                    href="https://design-histories.education.gov.uk/accessibility-manual"
+                                    class="govuk-link govuk-link--no-visited-state">Design history</a>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a
+                                    href="https://apply-the-service-standard.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state">Apply the Service Standard</a>
+                                </th>
+                                <td class="govuk-table__cell">Guidance on meeting the government's service standard.</td>
+                                <td class="govuk-table__cell">
+                                    <a
+                                    href="https://github.com/DFE-Digital/apply-the-service-standard-in-dfe"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a
+                                    href="https://design-histories.education.gov.uk/apply-the-service-standard-in-dfe"
+                                    class="govuk-link govuk-link--no-visited-state">Design history</a>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a
+                                    href="https://create-and-manage-standards.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state">Create and manage standards</a>
+                                </th>
+                                <td class="govuk-table__cell">Tools for creating and managing standards for DDaT.</td>
+                                <td class="govuk-table__cell">
+                                    <a
+                                    href="https://github.com/DFE-Digital/manage-standards/issues"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a
+                                    href="https://design-histories.education.gov.uk/standards-manual-and-management"
+                                    class="govuk-link govuk-link--no-visited-state">Design history</a>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a href="https://design.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state">Design manual</a>
+                                </th>
+                                <td class="govuk-table__cell">Design standards, guidance, and tools for good service delivery.
+                            </td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://github.com/DFE-Digital/design"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">-</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a
+                                    href="https://design-histories.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state">Design histories</a>
+                                </th>
+                                <td class="govuk-table__cell">Documentation of design decisions and iterations.</td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://github.com/DFE-Digital/design-history"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">-</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Design histories CMS</th>
+                                <td class="govuk-table__cell">The backend CMS that supports the design histories website. Contact DesignOps for the link.</td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://github.com/DFE-Digital/design-histories-cms-strapi"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">-</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a href="https://www.npmjs.com/package/dfe-frontend"
+                                    class="govuk-link govuk-link--no-visited-state">DfE Frontend</a>
+                                </th>
+                                <td class="govuk-table__cell">A frontend framework for building consistent and accessible
+                                services.</td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://github.com/DFE-Digital/dfe-frontend"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">-</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a
+                                    href="https://find-and-use-standards.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state">Find and use standards</a>
+                                </th>
+                                <td class="govuk-table__cell">Tools and resources for finding and applying DDaT standards.
+                            </td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://github.com/DFE-Digital/dfe-standards/issues"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a
+                                    href="https://design-histories.education.gov.uk/standards-manual-and-management"
+                                    class="govuk-link govuk-link--no-visited-state">Design history</a>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">
+                                    <a
+                                    href="https://service-assessments.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state">Service assessment service</a>
+                                </th>
+                                <td class="govuk-table__cell">Product for assessing booking, managing, and assessing
+                                services against the service standard.</td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://github.com/DFE-Digital/dops-sas"
+                                    class="govuk-link govuk-link--no-visited-state">GitHub</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a
+                                    href="https://design-histories.education.gov.uk/service-assessment"
+                                    class="govuk-link govuk-link--no-visited-state">Design history</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

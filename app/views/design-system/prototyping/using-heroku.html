@@ -1,0 +1,126 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/prototyping" %}
+{% set title = "Using Heroku" %}
+{% set description = "This section will guide you through deploying your code to Heroku." %}
+
+
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Prototyping</span>
+
+                    {% markdown %}
+
+                    # {{ title }}
+
+                    {{ description}}
+
+                    You must have a Heroku account to work through this section. See the [pre-requisites](/design-system/prototyping/prerequisites#heroku-access) section for more information.
+
+                    ## Set up an app in Heroku
+
+                    To deploy your code to Heroku, we first need to set up an app, these are also called 'dynos' in Heroku. 
+                    
+                    Each dyno is a container that runs your code and costs about £5 per month to run. You should make sure you [shut down your dyno](/design-system/prototyping/tips-troubleshooting#shut-down-your-dyno) when you're not using it to save money.
+
+                    1. if you aren't signed in already, sign in to your Heroku account at [Heroku](https://heroku.com)
+                    2. look for an option which says 'Personal', click it and select the team you have been assigned to
+                    3. click on the 'New' button and select 'Create new app'
+                    4. you'll be taken to a page where you can create a new app
+                    5. in the 'App name' field, enter a name for your app (this will be part of the URL for your app)
+                    6. select 'Europe' as the location
+                    7. click the 'Create app' button
+
+                    You've now created a new app in Heroku where you can deploy your prototype code.
+
+                    You should be directed to a page called 'Deploy" with information on how to deploy your code to Heroku.
+
+                    ## Deploy your code
+
+                    We're going to connect your app in Heroku to your GitHub repository and deploy your code.
+
+                    1. click on the 'Deploy' tab
+                    2. in the 'Deployment method' section, select 'GitHub'
+                    3. in the 'Connect to GitHub' section, click the 'Connect to GitHub' button
+                    4. you'll be asked to sign in to your GitHub account
+                    5. once you've signed in, you'll be asked to authorise Heroku to access your GitHub account
+                    6. in the 'Connect to GitHub' section, search for the repository you created earlier
+                    7. click the 'Connect' button
+
+                    You've now connected your app in Heroku to your GitHub repository.
+
+                    ## Deploy your code
+
+                    At the moment, your code isn't deployed. 
+
+                    You can choose to deploy your code automatically when you push new changes to your GitHub repository, or you can deploy it manually by signing into Heroku and clicking the 'Deploy branch' button.
+
+                    > If you're deploying your code manually, you'll need to click the 'Deploy branch' button every time you want to update your app with new changes.
+
+                    For the purpose of this guide, lets deploy your code manually.
+
+                    Click the 'Deploy branch' button. A panel will appear at the bottom of the page with information on the deployment process.
+
+                    Once the deployment process has finished, you'll see a 'View' button. Click this to view your app in the browser. You can also click the 'Open app' button at the top of the page to open your app in a new tab.
+
+                    However, the first time you view your app, you'll be shown an error message saying a password hs not been set.
+
+                    > Setting a password on your prototype is important as it stops people from accessing your prototype and accidentally thinking it's a real government service.
+
+                    ## Set a password for your prototype
+
+                    To set a password for your prototype, you need to add a config variable in Heroku.
+
+                    1. click on the 'Settings' tab in the Heroku app
+                    2. click the 'Reveal Config Vars' button
+                    3. in the 'Key' field, enter 'PASSWORD'
+                    4. in the 'Value' field, enter a password you want to use to access your prototype
+                    5. click the 'Add' button
+                    
+                    Add another config variable with the key 'NODE_ENV' and the value 'production'.
+
+                    You've now set a password for your prototype. You can now view your app in the browser and enter the password to access it.
+
+                    Your browser will remember the password for your prototype until you clear your cookies. 
+
+                    ## Thats it!
+
+                    You've now deployed your code to Heroku and set a password for your prototype. You can now share the URL with others to view your prototype.
+
+                    
+                    ## Coming soon
+
+                    We're working on more guidance for managing your prototype, user journeys, and using routes and session in your prototype.
+
+                    For now, you can follow guides in the GOV.UK service manual on [prototyping tutorials and guides](https://prototype-kit.service.gov.uk/docs/tutorials-and-guides).
+                   
+                
+
+
+                        {% endmarkdown %}
+
+                        {{ govukPagination({
+                        previous: {
+                           labelText: "Using GitHub",
+                            href: "/design-system/prototyping/using-gitHub"
+                        },
+                        next: {
+                            labelText: "Tips and troubleshooting",
+                            href: "/design-system/prototyping/tips-troubleshooting"
+                        }
+                    }) }}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}

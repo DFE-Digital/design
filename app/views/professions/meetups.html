@@ -1,0 +1,52 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Professions" %}
+{% set path = "professions/working-groups" %}
+{% set title = "Meetups and events" %}
+{% set description = "Our communities of practice meet regularly to share work, develop skills and capability across the design profession." %}
+
+
+{% block content %}
+
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+
+
+                    <span class="govuk-caption-xl">Professions</span>
+                    {% markdown %}
+                    
+                    # {{ title }}
+
+                    {{description}}
+
+                    The design community meets up every Thursday from 1:00 pm to 1:45 pm.
+
+                    Some of the things we've done in profession time:
+
+                    - Run design crits
+                    - Discussed design principles
+                    - Held workshops on design tools and processes
+                    - Run sessions on dyscalculia and designing for accessibility
+
+                    Anyone in the design community can suggest and run a session. If you have an idea, [contact the DesignOps team](/designops).
+
+                    ## Get the invite
+
+                    If you are a DfE member of staff or contractor working in DfE, [complete this Microsoft Form](https://forms.office.com/Pages/ResponsePage.aspx?id=yXfS-grGoU2187O4s0qC-RUE9wJmXYhLr0TiHQh5gIpUNlQ1MlZGNFVVU1Q5NzhKNFlQSTBPTEVGMC4u) to request the design meetup invite.
+
+                    If you are in one of the agencies or arms-length bodies of DfE, [contact the DesignOps team](/designops) for the invite.
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

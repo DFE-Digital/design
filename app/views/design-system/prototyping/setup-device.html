@@ -1,0 +1,205 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/prototyping" %}
+{% set title = "Set up your device" %}
+{% set description = "This guide will help you to set up your device for prototyping using the GOV.UK Prototype kit." %}
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Prototyping</span>
+
+                    {% markdown %}
+
+                    # {{ title }}
+
+                    You will need a dedicated folder to store all prototypes on your computer.
+
+                    ## Create a folder
+
+                    Open VS Code and from the toolbar, select Terminal > New Terminal.
+
+                    Run the following command to create a new folder:
+
+                    ### For Windows
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper">
+                            <p class="govuk-summary-card__title">Code</p>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action">
+                                    <button class="govuk-button copy-btn" data-copy-target="cx-folder-win">Copy code</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <pre><code id="cx-folder-win" class="language-bash">mkdir C:\Users\%USERNAME%\Documents\prototypes
+cd C:\Users\%USERNAME%\Documents\prototypes</code></pre>
+
+                        </div>
+                    </div>
+
+    ### For Mac
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper">
+                            <p class="govuk-summary-card__title">Code</p>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action">
+                                    <button class="govuk-button copy-btn" data-copy-target="cx-folder-mac">Copy code</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <pre><code id="cx-folder-mac" class="language-bash">mkdir ~/Documents/prototypes 
+cd ~/Documents/prototypes</code></pre>
+
+                        </div>
+                    </div>
+
+        
+
+                    > **mkdir** means 'make directory' and creates a new folder in the location you specify.
+                    >
+                    > **cd** means 'change directory' and will change the terminal to work in the new folder you have just created.
+
+                    ## Create a new prototype
+
+                    We're now going to create a new prototype called 'my-prototype'. This will create a new folder with this name, in the prototypes folder you just created.
+
+                    In the terminal, run the following command to create a new prototype:
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper">
+                            <p class="govuk-summary-card__title">Code</p>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action">
+                                    <button class="govuk-button copy-btn" data-copy-target="cx-prototype">Copy code</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <pre><code id="cx-prototype" class="language-bash">npx @govuk-frontend/prototype-kit@latest create my-prototype</code></pre>
+
+                        </div>
+                    </div>
+
+                    Node.js makes use of packages which are self-contained code that are built do perform a specific function, and can be easily shared and reused.
+
+                    Node comes with a package manager called npm (node package manager), which is used to install packages from the [npm registry](https://www.npmjs.com/).
+
+                    > **npx** is a tool that comes with npm. It is used to execute packages from the npm registry.
+                    >
+                    > **@govuk-frontend/prototype-kit@latest** is the package name for the GOV.UK Prototype Kit and the @latest tag tells npm to install the latest version of the package.
+                    >
+                    > **create my-prototype** is the command that tells the prototype kit to create a new prototype called 'my-prototype'.
+
+
+                    Next, you want to change your terminal to work with the new prototype directory. 
+                    
+                    Run the following command in the terminal:
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper">
+                            <p class="govuk-summary-card__title">Code</p>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action">
+                                    <button class="govuk-button copy-btn" data-copy-target="cx-location">Copy code</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <pre><code id="cx-location" class="language-bash">cd my-prototype</code></pre>
+
+                        </div>
+                    </div>
+
+                    Now we want to run the prototype in development mode. This will start the prototype running on your device so you can view it in the browser.
+
+                    Run the following command in the terminal:
+
+                    <div class="govuk-summary-card">
+                        <div class="govuk-summary-card__title-wrapper">
+                            <p class="govuk-summary-card__title">Code</p>
+                            <ul class="govuk-summary-card__actions">
+                                <li class="govuk-summary-card__action">
+                                    <button class="govuk-button copy-btn" data-copy-target="cx-open">Copy code</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-summary-card__content">
+                            <pre><code id="cx-open" class="language-bash">npm run dev</code></pre>
+                        </div>
+                    </div>
+
+                    You should see a message in the terminal which says:
+                
+
+                     <pre><code class="language-bash">The Prototype Kit is now running at: 
+http://localhost:3000</code></pre>
+                    
+                    You can now view your prototype in the browser by going to this address.
+
+                    > **npm run** is a command that tells npm to run a script that is defined in the package.json file in the root of your prototype folder.
+                    > 
+                    > **dev** is the name of the script that tells the prototype kit to run the prototype in development mode. 
+                    
+                    Prototypes run on ports which are used to identify different web services running on the same device.
+                    
+                    The prototype will run on port 3000 by default. This is the address you will use to view your prototype in the browser.
+                    
+                    > **localhost** is a hostname that refers to the device you are using. It is used to access the device you are working on, and is not accessible to anyone else.
+                    > 
+                    > **3000** is the port number that the prototype is running on. This is the address you will use to view your prototype in the browser.
+
+                    ## Stopping your prototype from running
+
+                    You might need to stop your prototype from running if you want to run a different prototype, or if you need to stop working on your prototype for a while.
+
+                    To stop your prototype from running, press `Ctrl + C` in the terminal. 
+                    
+                    This will stop the prototype from running and return you to the command line.
+
+                    If you need to start your prototype again, rerun the `npm run dev` command in the terminal. 
+                    
+                    > **Hint** 
+                    > 
+                    > You can also use the up and down arrows to cycle through previous commands you have run in the terminal.
+
+
+                    If you don't see the message about the prototype running, you may need to check the terminal for any error messages.
+
+                    You can check the [troubleshooting](/design-system/prototyping/tips-troubleshooting) guide for help with common issues.
+
+
+                    Next we will look at the folder structure of your prototype and how to view the code and start to add new pages and make changes.
+
+
+  
+                    {% endmarkdown %}
+
+                    {{ govukPagination({
+                        previous: {
+                            labelText: "Pre-requisites",
+                            href: "/design-system/prototyping/prerequisites"
+                        },
+                        next: {
+                            labelText: "Working with code files",
+                            href: "/design-system/prototyping/working-with-code"
+                        }
+                    }) }}
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

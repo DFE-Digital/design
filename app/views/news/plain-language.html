@@ -1,0 +1,123 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "News" %}
+{% set path = "news/plain-language" %}
+{% set title = "Plain Language standard and guidance published" %}
+{% set description = "" %}
+
+{% block head %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Plain Language standard and guidance published",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://standards.education.gov.uk/news/plain-language"
+  },
+  "datePublished": "2025-02-25",
+  "dateModified": "2025-02-25",
+  "author": {
+    "@type": "Person",
+    "name": "Kerry Lyons",
+    "jobTitle": "Senior Content Designer",
+    "email": "mailto:kerry.lyons@education.gov.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department for Education (DfE)",
+    "url": "https://www.gov.uk/government/organisations/department-for-education",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://standards.education.gov.uk/assets/images/dfe-logo.png"
+    }
+  },
+  "description": "The DfE content design community has launched the Plain Language standard, now available on the 'Find and use standards' product. This standard helps teams create clear, concise, and accessible content that is easy to understand for all users.",
+  "url": "https://standards.education.gov.uk/news/plain-language",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://standards.education.gov.uk/assets/images/language.png",
+    "width": 680,
+    "height": 380
+  },
+  "keywords": [
+    "Plain Language",
+    "DfE Standards",
+    "Content Design",
+    "Accessibility",
+  ],
+  "isAccessibleForFree": true
+}
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+    <section style="background-color:#ffffff;" class="">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+
+                      <a href="/news" class="govuk-back-link govuk-!-margin-top-2">Back to news</a>
+                    <span class="govuk-caption-xl govuk-!-margin-top-5">News</span>
+                <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Published</dt>
+                            <dd class="govuk-summary-list__value">25 February 2025</dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Author</dt>
+                            <dd class="govuk-summary-list__value">
+                                <a href="mailto:kerry.lyons@education.gov.uk" class="govuk-link">Kerry Lyons (Senior content designer)</a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    {% markdown %}
+
+               
+The DfE content design community have launched the [Plain Language standard](https://standards.education.gov.uk/standard/plain-language-standard), and is now available on the [Find and use standards](https://standards.education.gov.uk) product. This new standard is designed to help DfE teams create clear, concise, and accessible content that is easy to understand for all audiences, including those with varying levels of literacy and language skills.  
+
+## Improving communication across services  
+
+The standard is a crucial step towards improving how the DfE communicates with users, ensuring that information is presented in a way that is straightforward and user-friendly. 
+
+The standard provides comprehensive guidance on writing in plain language, with a focus on clarity, simplicity, and accessibility. It covers essential areas such as sentence structure, word choice, and formatting to ensure that content is easy to read and understand.  
+
+
+## A comprehensive guide for all  
+
+The standard offers practical guidance on how to simplify complex information without losing important details. 
+
+It includes examples of good practice, as well as tips for overcoming common writing challenges. The standard is designed to be easy to follow, with clear rules and recommendations for improving content across all DfE services and digital products.  
+
+The standard is now available on [Find and use standards](https://standards.education.gov.uk), where teams can access it alongside other DfE standards. 
+
+By following the standard and using the [guidance to meet the standard](/content-design/plain-language), teams can improve the accessibility and usability of their content, making sure that it is easily understood by all.  
+
+## Supporting accessibility and inclusivity  
+
+The standard supports the DfE’s wider efforts to promote accessibility and inclusivity in its digital and public services. 
+
+By prioritising clarity and simplicity, the department aims to create communications that are more inclusive, helping people from diverse backgrounds and abilities to engage with important information.  
+
+The standard was developed with the content design community and input from subject-matter experts across the department. 
+
+It reflects best practice in plain language writing and is aligned with the latest accessibility standards and guidelines.
+
+In addition to the DfE community, it was shared with the wider content design community across government for feedback and input. 
+
+The standard will be reviewed and updated regularly to ensure that it remains relevant and effective in supporting clear communication across DfE services.
+
+               
+                {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

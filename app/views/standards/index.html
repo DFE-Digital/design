@@ -1,0 +1,162 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Standards" %}
+{% set path = "standards" %}
+{% set title = "Standards" %}
+{% set description = "The standards are a set of principles and guidelines to ensure we design and build digital services consistently and with accessibility and the user at the centre." %}
+{% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
+
+{% block content %}
+
+    <section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                    <h1 class="govuk-heading-xl">{{ title }}</h1>
+                    <p class="govuk-body-l">{{ description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color:#ffffff;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-7">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l">Published standards</h2>
+                    <p class="govuk-body">These standards are published and must be met as part of the product delivery lifecycle.</p>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" style="width: 15%">Standard</th>
+                                <th class="govuk-table__header govuk-!-width-one-quarter">Title</th>
+                                <th class="govuk-table__header">Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-2">DDTS-301</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://standards.education.gov.uk/standard/digital-product-branding" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                                        Digital Product Branding
+                                    </a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    The Digital Product Branding standard details the requirements for how and when branding should be used.
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-2">DDTS-529</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://standards.education.gov.uk/standard/plain-language" target="_blank" class="govuk-link govuk-link--no-visited-state ">
+                                        Plain language
+                                    </a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    Ensures digital content is clear, concise, and accessible to all users, including those with lower literacy levels and cognitive impairments.
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-2">DDTS-34</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://standards.education.gov.uk/standard/accessibility-statements" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                                        Accessibility statements
+                                    </a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    The accessibility statements standard ensures products and websites meet accessibility regulations.
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-2">DDTS-463</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <a href="https://standards.education.gov.uk/standard/accessibility-conformance" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                                        Accessibility conformance
+                                    </a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    The accessibility conformance standard outlines requirements for ensuring digital services meet WCAG guidelines and other accessibility regulations.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 class="govuk-heading-l govuk-!-margin-bottom-5 govuk-!-margin-top-7">Draft standards</h2>
+                    <p class="govuk-body">We're working on these standards with our communities.</p>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header govuk-!-width-one-quarter">Title</th>
+                                <th class="govuk-table__header">Summary</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    Content management systems (CMS)
+                                </td>
+                                <td class="govuk-table__cell">
+                                    Standard for the accepted content management systems that can be used in DfE.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-7">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l">Other standards and principles we follow</h2>
+
+                    <div class="dfe-grid-container">
+                        <div class="dfe-card">
+                            <img src="/assets/images/design-principles.png" alt="" class="dfe-card-image">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                    <a href="https://www.gov.uk/guidance/government-design-principles"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Government Design Principles</a>
+                                </h3>
+                                <p class="govuk-body">The UK government's design principles and examples of how they've been used.</p>
+                            </div>
+                        </div>
+                        <div class="dfe-card">
+                            <img src="/assets/images/assidfe.png" alt="" class="dfe-card-image">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                    <a href="https://apply-the-service-standard.education.gov.uk"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Apply the Service Standard</a>
+                                </h3>
+                                <p class="govuk-body">Understand how we apply the UK government's Service Standard in DfE.</p>
+                            </div>
+                        </div>
+    <div class="dfe-card">
+                            <img src="/assets/images/service-manual.png" alt="" class="dfe-card-image">
+                            <div class="dfe-card-container">
+                                <h3 class="govuk-heading-m">
+                                    <a href="https://www.gov.uk/service-manual"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Service Manual</a>
+                                </h3>
+                                <p class="govuk-body">Helping teams to create and run great public services that meet the Service Standard.</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}

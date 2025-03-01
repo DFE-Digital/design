@@ -1,0 +1,1402 @@
+{% extends "layouts/layout.html" %}
+{% set serviceNav = "Professions" %}
+{% set path = "professions/framework" %}
+{% set title = "Design skills framework" %}
+{% set description = "The design skills framework sets out the skills and behaviours needed to work in design roles in the Department for Education." %}
+{% set mainClasses = 'govuk-!-padding-bottom-9' %}
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <a href="/professions" class="govuk-back-link govuk-!-margin-top-2">Back to professions</a>
+                                        <span class="govuk-caption-xl govuk-!-margin-top-5">Professions</span>
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+                    <p class="govuk-body">The design skills framework sets out the skills and behaviours needed to work in
+               graphic design, interaction design, and service design roles in the Department for Education.
+            </p>
+                    <p class="govuk-body">Content design has it's own <a href="https://ddat-capability-framework.service.gov.uk/role/content-designer" class="govuk-link">profession framework</a> which is currently under review.</p>
+                    <p class="govuk-body">The framework is divided into 4 capability levels, from awareness to expert. Each
+               capability level has a set of skills and behaviours that you need to demonstrate to progress to the
+               next level.
+            </p>
+                    <p class="govuk-body">DfE was part of <a
+               href="https://designnotes.blog.gov.uk/2024/12/03/updating-design-skills-in-the-government-digital-and-data-capability-framework/"
+               class="govuk-link govuk-link--no-visited-state">the working group who developed this
+               framework</a> which is also published on the <a
+                  href="https://ddat-capability-framework.service.gov.uk/"
+                  class="govuk-link govuk-link--no-visited-state">Government Digital and Data Framework</a>
+               service.
+            </p>
+                    <h2 class="govuk-heading-l">Capability skills matrix</h2>
+                    <p class="govuk-body">The matrix below shows the skills and capabilities expected at each
+               role grade.
+            </p>
+                    <p class="govuk-body">You can read a description for each capability level for each skill below.</p>
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">Grade</th>
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">
+                                    <a
+                        href="#design-communication" class="govuk-link govuk-link--no-visited-state">Design
+                        communication</a>
+                                </th>
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">
+                                    <a
+                        href="#designing-for-everyone"
+                        class="govuk-link govuk-link--no-visited-state">Designing for everyone</a>
+                                </th>
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">
+                                    <a
+                        href="#designing-strategically"
+                        class="govuk-link govuk-link--no-visited-state">Designing strategically</a>
+                                </th>
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">
+                                    <a
+                        href="#designing-together" class="govuk-link govuk-link--no-visited-state">Designing
+                        together</a>
+                                </th>
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">
+                                    <a
+                        href="#evidence-based-design"
+                        class="govuk-link govuk-link--no-visited-state">Evidenced-based design</a>
+                                </th>
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">
+                                    <a href="#iterative-design"
+                        class="govuk-link govuk-link--no-visited-state">Iterative design</a>
+                                </th>
+                                <th scope="col" class="govuk-table__header" style="width: 12.5%">
+                                    <a href="#leading-design"
+                        class="govuk-link govuk-link--no-visited-state">Leading design</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header">
+                                    <abbr title="Higher executive officer">HEO</abbr>
+                                </th>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightgreen">Awareness</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightgreen">Awareness</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightgreen">Awareness</strong>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header">
+                                    <abbr title="Senior executive officer">SEO</abbr>
+                                </th>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header">G7</th>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--lightergreen">Working</strong>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header">G6 Lead</th>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong
+                        class="govuk-tag govuk-tag--darkergreen">Practitioner</strong>
+                                </td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header">G6 Head</th>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--darkgreen">Expert</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <section style="background-color:#ffffff;" class="govuk-!-padding-top-7" id="design-communication">
+                        <div class="govuk-width-container">
+                            <div class="govuk-grid-row govuk-!-margin-top-5">
+                                <div class="govuk-grid-column-full">
+                                    <h2 class="govuk-heading-l">Design communication</h2>
+                                    <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-one-third">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #003a69;"></div>
+                                            <p class="govuk-body-l">Communication involves conveying information using the
+                                 most effective medium and language for the audience.
+                              </p>
+                                        </div>
+                                        <div class="govuk-grid-column-two-thirds">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #aecbdd;"></div>
+                                            <table class="govuk-table">
+                                                <thead class="govuk-table__head">
+                                                    <tr class="govuk-table__row">
+                                                        <th scope="col" class="govuk-table__header">Skill level</th>
+                                                        <th scope="col" class="govuk-table__header">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="govuk-table__body">
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Awareness</p>
+                                                            <span class="govuk-visually-hidden">Awareness is the first of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">explain the importance of
+                                                articulating design decisions to others
+                                             </li>
+                                                                <li class="govuk-body">describe some methods for explaining
+                                                design decisions
+                                             </li>
+                                                            </ul>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Working</p>
+                                                            <span class="govuk-visually-hidden">Working is the second of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">clearly explain problems and design
+                                                ideas to others
+                                             </li>
+                                                                <li class="govuk-body">clearly explain design decisions to
+                                                others using appropriate tools and methods
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Practitioner</p>
+                                                            <span class="govuk-visually-hidden">Practitioner is the third of
+                                          4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">clearly explain complex problems and
+                                                ideas to teams or stakeholders outside of design
+                                             </li>
+                                                                <li class="govuk-body">clearly document and communicate
+                                                design decisions, related risks and any unresolved
+                                                issues
+                                             </li>
+                                                                <li class="govuk-body">build consensus around a design
+                                                approach, for example, by asking difficult questions and
+                                                challenging assumptions
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Expert</p>
+                                                            <span class="govuk-visually-hidden">Expert is the fourth of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">gain support for design decisions and
+                                                design strategy from senior leaders 
+                                             </li>
+                                                                <li class="govuk-body">communicate design strategy across
+                                                organisational boundaries
+                                             </li>
+                                                                <li class="govuk-body">coach others in how to effectively
+                                                communicate design
+                                             </li>
+                                                                <li class="govuk-body">develop or introduce more effective
+                                                methods of communicating design and working in the open
+                                             </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+                    <section style="background-color:#ffffff;" class="govuk-!-padding-top-7" id="designing-for-everyone">
+                        <div class="govuk-width-container">
+                            <div class="govuk-grid-row govuk-!-margin-top-5">
+                                <div class="govuk-grid-column-full">
+                                    <h2 class="govuk-heading-l">Designing for everyone</h2>
+                                    <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-one-third">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #003a69;"></div>
+                                            <p class="govuk-body-l">Designing for everyone involves creating products and
+                                 services that are accessible and inclusive.
+                              </p>
+                                        </div>
+                                        <div class="govuk-grid-column-two-thirds">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #aecbdd;"></div>
+                                            <table class="govuk-table">
+                                                <thead class="govuk-table__head">
+                                                    <tr class="govuk-table__row">
+                                                        <th scope="col" class="govuk-table__header">Skill level</th>
+                                                        <th scope="col" class="govuk-table__header">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="govuk-table__body">
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Awareness</p>
+                                                            <span class="govuk-visually-hidden">Awareness is the first of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">explain the importance of making
+                                                government content and services inclusive, accessible
+                                                and environmentally sustainable
+                                             </li>
+                                                                <li class="govuk-body">explain different access needs that
+                                                users can have, and ways to meet them
+                                             </li>
+                                                                <li class="govuk-body">describe how privilege and power
+                                                influence the design and delivery of content and
+                                                services
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Working</p>
+                                                            <span class="govuk-visually-hidden">Working is the second of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">work with others to design and
+                                                deliver inclusive, accessible and environmentally
+                                                sustainable content or services that meet the needs of
+                                                all users
+                                             </li>
+                                                                <li class="govuk-body">ensure a design meets appropriate
+                                                standards, for example accessibility regulations, with
+                                                support
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Practitioner</p>
+                                                            <span class="govuk-visually-hidden">Practitioner is the third of
+                                          4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">advise teams on how to design
+                                                inclusive, accessible and environmentally sustainable
+                                                content or services
+                                             </li>
+                                                                <li class="govuk-body">design and deliver ethical content or
+                                                services that consider the personal and social context
+                                                of users
+                                             </li>
+                                                                <li class="govuk-body">ensure a design meets appropriate
+                                                standards, for example accessibility regulations
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Expert</p>
+                                                            <span class="govuk-visually-hidden">Expert is the fourth of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">measurably improve the practice of
+                                                inclusive, accessible and environmentally sustainable
+                                                design in multiple teams or across your organisation
+                                             </li>
+                                                                <li class="govuk-body">help others understand and mitigate
+                                                the influence of privilege and power on the design and
+                                                delivery of content and services
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+                    <section style="background-color:#ffffff;" class=" govuk-!-padding-top-7" id="designing-strategically">
+                        <div class="govuk-width-container">
+                            <div class="govuk-grid-row govuk-!-margin-top-5">
+                                <div class="govuk-grid-column-full">
+                                    <h2 class="govuk-heading-l">Designing strategically</h2>
+                                    <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-one-third">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #003a69;"></div>
+                                            <p class="govuk-body-l">Strategy involves creating a plan to achieve a team or
+                                 organisation's objectives.
+                              </p>
+                                        </div>
+                                        <div class="govuk-grid-column-two-thirds">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #aecbdd;"></div>
+                                            <table class="govuk-table">
+                                                <thead class="govuk-table__head">
+                                                    <tr class="govuk-table__row">
+                                                        <th scope="col" class="govuk-table__header">Skill level</th>
+                                                        <th scope="col" class="govuk-table__header">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="govuk-table__body">
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Awareness</p>
+                                                            <span class="govuk-visually-hidden">Awareness is the first of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">explain the importance of aligning to
+                                                the strategy of an organisation
+                                             </li>
+                                                                <li class="govuk-body">describe how your design work aligns
+                                                to the wider goals and vision of your team
+                                             </li>
+                                                                <li class="govuk-body">explain the value of using patterns
+                                                and components in design
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Working</p>
+                                                            <span class="govuk-visually-hidden">Working is the second of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">align your design work to both the
+                                                goals and vision of your team and the strategic
+                                                objectives of your organisation
+                                             </li>
+                                                                <li class="govuk-body">identify potential risks and use
+                                                design to mitigate them
+                                             </li>
+                                                                <li class="govuk-body">identify opportunities and use design
+                                                to take advantage of them
+                                             </li>
+                                                                <li class="govuk-body">contribute to the development of
+                                                design patterns and components
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Practitioner</p>
+                                                            <span class="govuk-visually-hidden">Practitioner is the third of
+                                          4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">help a team understand how
+                                                user-centred design helps it meet its goals
+                                             </li>
+                                                                <li class="govuk-body">help teams align their work to the
+                                                goals and vision of their organisation
+                                             </li>
+                                                                <li class="govuk-body">use risks, opportunities and
+                                                constraints in technology, systems and policy to shape
+                                                design
+                                             </li>
+                                                                <li class="govuk-body">identify and create new design
+                                                patterns and components
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Expert</p>
+                                                            <span class="govuk-visually-hidden">Expert is the fourth of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">work with others to ensure design
+                                                becomes part of the development and implementation of
+                                                your organisation’s strategy
+                                             </li>
+                                                                <li class="govuk-body">work with leaders to ensure design is
+                                                included in policy, technology and delivery processes
+                                                early enough to inform effective decision-making
+                                             </li>
+                                                                <li class="govuk-body">enable use of patterns and components
+                                                across the organisation
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+                    <section style="background-color:#ffffff;" class=" govuk-!-padding-top-7" id="designing-together">
+                        <div class="govuk-width-container">
+                            <div class="govuk-grid-row govuk-!-margin-top-5">
+                                <div class="govuk-grid-column-full">
+                                    <h2 class="govuk-heading-l">Designing together</h2>
+                                    <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-one-third">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #003a69;"></div>
+                                            <p class="govuk-body-l">Designing together involves working with others to
+                                 create better products and services.
+                              </p>
+                                        </div>
+                                        <div class="govuk-grid-column-two-thirds">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #aecbdd;"></div>
+                                            <table class="govuk-table">
+                                                <thead class="govuk-table__head">
+                                                    <tr class="govuk-table__row">
+                                                        <th scope="col" class="govuk-table__header">Skill level</th>
+                                                        <th scope="col" class="govuk-table__header">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="govuk-table__body">
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Awareness</p>
+                                                            <span class="govuk-visually-hidden">Awareness is the first of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">explain different techniques for
+                                                bringing together perspectives from multiple people to
+                                                inform a design
+                                             </li>
+                                                                <li class="govuk-body">explain the importance of
+                                                constructive feedback in the design process
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Working</p>
+                                                            <span class="govuk-visually-hidden">Working is the second of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">effectively plan and run a design
+                                                session with your team, users or stakeholders
+                                             </li>
+                                                                <li class="govuk-body">identify and engage the right people
+                                                throughout the design process
+                                             </li>
+                                                                <li class="govuk-body">give and receive constructive design
+                                                feedback
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Practitioner</p>
+                                                            <span class="govuk-visually-hidden">Practitioner is the third of
+                                          4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">advise others how to effectively plan
+                                                and run design sessions with a team, users or
+                                                stakeholders
+                                             </li>
+                                                                <li class="govuk-body">adapt a design session to ensure you
+                                                achieve a useful outcome
+                                             </li>
+                                                                <li class="govuk-body">effectively involve the right people
+                                                throughout the design process 
+                                             </li>
+                                                                <li class="govuk-body">work across team or profession
+                                                boundaries, for example with policy teams
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Expert</p>
+                                                            <span class="govuk-visually-hidden">Expert is the fourth of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">effectively plan and run design
+                                                sessions that include senior leaders or stakeholders
+                                             </li>
+                                                                <li class="govuk-body">help teams connect and work across
+                                                organisational boundaries
+                                             </li>
+                                                                <li class="govuk-body">coach other designers in how to
+                                                involve stakeholders of any level in the design process
+                                             </li>
+                                                                <li class="govuk-body">develop or introduce more effective
+                                                ways to design together
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+                    <section style="background-color:#ffffff;" class=" govuk-!-padding-top-7" id="evidence-based-design">
+                        <div class="govuk-width-container">
+                            <div class="govuk-grid-row govuk-!-margin-top-5">
+                                <div class="govuk-grid-column-full">
+                                    <h2 class="govuk-heading-l">Evidence-based design</h2>
+                                    <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-one-third">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #003a69;"></div>
+                                            <p class="govuk-body-l">Evidence-based design involves using data and research
+                                 to inform design decisions.
+                              </p>
+                                        </div>
+                                        <div class="govuk-grid-column-two-thirds">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #aecbdd;"></div>
+                                            <table class="govuk-table">
+                                                <thead class="govuk-table__head">
+                                                    <tr class="govuk-table__row">
+                                                        <th scope="col" class="govuk-table__header">Skill level</th>
+                                                        <th scope="col" class="govuk-table__header">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="govuk-table__body">
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Awareness</p>
+                                                            <span class="govuk-visually-hidden">Awareness is the first of 4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">explain how research and analytics inform user-centred design</li>
+                                                                <li class="govuk-body">frame your ideas as design hypotheses to be tested</li>
+                                                                <li class="govuk-body">identify common sources and types of data that inform user-centred design</li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Working</p>
+                                                            <span class="govuk-visually-hidden">Working is the second of 4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">analyse, synthesise and clearly explain evidence relevant to users or a service, for example, web analytics data</li>
+                                                                <li class="govuk-body">work with researchers or analysts to use evidence to inform, develop and test a design idea</li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Practitioner</p>
+                                                            <span class="govuk-visually-hidden">Practitioner is the third of 4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">analyse, synthesise and clearly explain complex evidence relevant to users or a service, for example, large data sets</li>
+                                                                <li class="govuk-body">help your team use design hypotheses effectively</li>
+                                                                <li class="govuk-body">use complex research and data to develop and test design ideas</li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Expert</p>
+                                                            <span class="govuk-visually-hidden">Expert is the fourth of 4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">embed a practice of hypothesis-driven design in a team</li>
+                                                                <li class="govuk-body">guide the organisation in how to use evidence to improve services</li>
+                                                                <li class="govuk-body">analyse, synthesise and use evidence to improve the way the organisation works</li>
+                                                                <li class="govuk-body">ensure user insights are shared with and used by the wider organisation and across government</li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+                    <section style="background-color:#ffffff;" class=" govuk-!-padding-top-7" id="iterative-design">
+                        <div class="govuk-width-container">
+                            <div class="govuk-grid-row govuk-!-margin-top-5">
+                                <div class="govuk-grid-column-full">
+                                    <h2 class="govuk-heading-l">Iterative design</h2>
+                                    <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-one-third">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #003a69;"></div>
+                                            <p class="govuk-body-l">Iterative design involves creating and improving
+                                 products and services through a process of testing and refinement.
+                              </p>
+                                        </div>
+                                        <div class="govuk-grid-column-two-thirds">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #aecbdd;"></div>
+                                            <table class="govuk-table">
+                                                <thead class="govuk-table__head">
+                                                    <tr class="govuk-table__row">
+                                                        <th scope="col" class="govuk-table__header">Skill level</th>
+                                                        <th scope="col" class="govuk-table__header">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="govuk-table__body">
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Awareness</p>
+                                                            <span class="govuk-visually-hidden">Awareness is the first of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">describe the basics of iterative
+                                                design methodologies such as agile
+                                             </li>
+                                                                <li class="govuk-body">explain how iteration supports
+                                                user-centred design, and when to use them
+                                             </li>
+                                                                <li class="govuk-body">describe some ways to prototype ideas
+                                                at different levels of realism, or ‘fidelities’, and
+                                                when to use them
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Working</p>
+                                                            <span class="govuk-visually-hidden">Working is the second of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">apply iterative design principles and
+                                                agile methodologies to your work
+                                             </li>
+                                                                <li class="govuk-body">iterate and improve a design based on
+                                                successive rounds of research
+                                             </li>
+                                                                <li class="govuk-body">prototype your ideas at different
+                                                fidelities to explore and test designs
+                                             </li>
+                                                                <li class="govuk-body">use a range of design tools and
+                                                techniques
+                                             </li>
+                                                                <li class="govuk-body">use and iterate design patterns and
+                                                components
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Practitioner</p>
+                                                            <span class="govuk-visually-hidden">Practitioner is the third of
+                                          4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">help other designers apply iterative
+                                                design principles and agile methodologies to their work
+                                             </li>
+                                                                <li class="govuk-body">iterate and improve complex designs
+                                                based on successive rounds of research
+                                             </li>
+                                                                <li class="govuk-body">independently prototype complex ideas
+                                                at an appropriate fidelity
+                                             </li>
+                                                                <li class="govuk-body">adapt designs quickly to changes in
+                                                requirements, priorities or user needs
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Expert</p>
+                                                            <span class="govuk-visually-hidden">Expert is the fourth of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">embed the practice of iterative
+                                                design and agile working in teams or wider organisation
+                                             </li>
+                                                                <li class="govuk-body">lead on prototyping complex ideas at
+                                                any fidelity
+                                             </li>
+                                                                <li class="govuk-body">help teams adapt quickly to changes
+                                                in requirements, priorities or user needs
+                                             </li>
+                                                                <li class="govuk-body">iterate delivery processes or team
+                                                structures to help teams work effectively
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+                    <section style="background-color:#ffffff;" class=" govuk-!-padding-top-7" id="leading-design">
+                        <div class="govuk-width-container">
+                            <div class="govuk-grid-row govuk-!-margin-top-5">
+                                <div class="govuk-grid-column-full">
+                                    <h2 class="govuk-heading-l">Leading design</h2>
+                                    <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-one-third">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #003a69;"></div>
+                                            <p class="govuk-body-l">Leadership and guidance involves providing effective
+                                 leadership and management through team motivation, decision-making, risk
+                                 management, mediation and professional development.
+                              </p>
+                                        </div>
+                                        <div class="govuk-grid-column-two-thirds">
+                                            <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5"
+                                 style="background-color: #aecbdd;"></div>
+                                            <table class="govuk-table">
+                                                <thead class="govuk-table__head">
+                                                    <tr class="govuk-table__row">
+                                                        <th scope="col" class="govuk-table__header">Skill level</th>
+                                                        <th scope="col" class="govuk-table__header">Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="govuk-table__body">
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Awareness</p>
+                                                            <span class="govuk-visually-hidden">Awareness is the first of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">explain the role of user-centred
+                                                design in an organisation
+                                             </li>
+                                                                <li class="govuk-body">describe typical leadership
+                                                responsibilities in design
+                                             </li>
+                                                                <li class="govuk-body">identify leaders in your organisation
+                                                that designers need to work with
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Working</p>
+                                                            <span class="govuk-visually-hidden">Working is the second of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">lead and coordinate design work in
+                                                your team, with support
+                                             </li>
+                                                                <li class="govuk-body">communicate the value of user-centred
+                                                design to your team
+                                             </li>
+                                                                <li class="govuk-body">support other designers</li>
+                                                                <li class="govuk-body">work with digital and data leaders in
+                                                your organisation, when needed
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Practitioner</p>
+                                                            <span class="govuk-visually-hidden">Practitioner is the third of
+                                          4 ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__white" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">lead and coordinate design work in a
+                                                team
+                                             </li>
+                                                                <li class="govuk-body">advocate for user-centred design with
+                                                leaders outside of digital and data
+                                             </li>
+                                                                <li class="govuk-body">create an inclusive, productive
+                                                environment for designers to work in
+                                             </li>
+                                                                <li class="govuk-body">mentor and coach other designers</li>
+                                                                <li class="govuk-body">iterate and improve design processes
+                                                within your team
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="govuk-table__row"></tr>
+                                                    <tr class="govuk-table__row">
+                                                        <td class="govuk-table__cell">
+                                                            <p class="govuk-body govuk-!-font-size-19">Expert</p>
+                                                            <span class="govuk-visually-hidden">Expert is the fourth of 4
+                                          ascending skill levels</span>
+                                                            <div class="progress-bar__container" aria-hidden="true">
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                                <div class="progress-bar__divider" aria-hidden="true"></div>
+                                                                <div class="progress-bar__grey" aria-hidden="true"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="govuk-table__cell govuk-!-width-two-thirds">
+                                                            <p class="govuk-body">You can:</p>
+                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                <li class="govuk-body">set a vision for and lead design
+                                                across multiple teams or a whole organisation
+                                             </li>
+                                                                <li class="govuk-body">work effectively with senior leaders
+                                                across your organisation or wider public sector
+                                             </li>
+                                                                <li class="govuk-body">support a culture of learning and
+                                                experimentation in your organisation
+                                             </li>
+                                                                <li class="govuk-body">iterate and measurably improve design
+                                                maturity within your organisation and its partners
+                                             </li>
+                                                            </ul>
+                                                            <p class="govuk-body"></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .govuk-table .govuk-tag {
+            display: block;
+        }
+        .govuk-tag--lightgreen {
+            background-color: #cce2d8;
+            color: #002212;
+        }
+        .govuk-tag--lightergreen {
+            background-color: #80b89e;
+            color: #002212;
+        }
+        .govuk-tag--darkergreen {
+            background-color: #00703c;
+            color: #ffffff;
+        }
+        .govuk-tag--darkgreen {
+            background-color: #004324;
+            color: #ffffff;
+        }
+    </style>
+{% endblock %}

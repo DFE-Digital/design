@@ -1,0 +1,769 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Content design" %}
+{% set path = "content-design/style-guide" %}
+{% set title = "Style guide" %}
+{% set description = "This guide includes words that differ from the GDS style guide and are used across multiple teams
+ or areas in DfE." %}
+{% set githubissue = "111" %}
+
+{% block content %}
+
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter " >
+
+                    {% include "./_sidenav.html" %}
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full " >
+                            <div style="border-top: 5px solid #003A69;" class="govuk-!-margin-top-5 govuk-!-margin-bottom-5"></div>
+                            <h2 class="govuk-heading-m">A to Z</h2>
+                            <ul class="dfe-atoz govuk-!-margin-top-3">
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#a">A</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#b">B</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#c">C</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#d">D</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#e">E</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#f">F</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#g">G</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#h">H</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#i">I</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#j">J</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#k">K</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#l">L</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#m">M</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#n">N</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#o">O</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#p">P</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#q">Q</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#r">R</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#s">S</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#t">T</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#u">U</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#v">V</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#w">W</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#x">X</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#y">Y</a>
+                                </li>
+
+                                <li>
+                                    <a class="govuk-link govuk-link--no-visited-state" href="#z">Z</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Content design</span>
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                    {% markdown %}
+
+                    Always use the <a class="govuk-link"
+                        href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK style guide</a> first.
+
+
+                    > This is a guide, not a set of rules. If your service uses niche language, or research shows your
+                    users say
+                    something else, use the words your users understand.
+
+                    If a word you use isn't here, <a class="govuk-link"
+                        href="https://ukgovernmentdfe.slack.com/archives/C6L4J5DK6">start a conversation in the DfE
+                        #contentdesign Slack channel</a>, or email <a class="govuk-link"
+                        href="mailto:design.ops@education.gov.uk">design.ops@education.gov.uk</a> and suggest it is
+                    added.
+
+                    You can also <a class="govuk-link"
+                        href="https://github.com/DFE-Digital/design/issues/111">contribute to this style guide</a> on GitHub.
+
+                    ## A
+
+                    ### academic year
+
+                    Use months rather than the academic year when communicating with the public, especially if the
+                    content
+                    is aimed at an international audience.
+
+                    For example, 'Teacher training lasts around 9 months, usually starting in September.'
+
+                    Instead of, 'Teacher training lasts one academic year.'
+
+                    If you need to write about a specific academic year, <a class="govuk-link"
+                        href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates">follow GDS guidance
+                        for
+                        dates and date ranges</a>.
+
+                    ### accredited providers
+
+                    An accredited provider is an organisation who has been given accreditation.
+
+                    An accrediting provider is an organisation who provides the accreditation.
+
+                    ### acronyms
+
+                    We follow [GOV.UK guidance for acronyms](https://www.gov.uk/guidance/style-guide/a-to-z#abbreviations-and-acronyms), however if users are familiar with the acronym, we use the acronym first. 
+
+                    For example, we would write, GDS (Government Digital Service) if writing for civil servants. 
+
+                    If designing a service, use the full name on the start page and then the acronym.  
+
+                    If designing a manual, or a group of pages, the first time you use the acronym on each page, use the full name and then the acronym. 
+
+
+                    ### adult-led
+                    Hyphenated when used to describe an adult leading something, for example, 'an adult-led activity'.
+                    Not
+                    hyphenated in other circumstances 'this activity is adult led'.
+
+                    ### apprenticeship name
+                    Use capitals for the names of specific courses, apprenticeships and their levels.
+
+                    For example, you could do the Finance Assistant Level 2 Intermediate Apprenticeship to become an
+                    accounting technician.
+
+                    Use sentence case when referring to a course or apprenticeship in general.
+
+                    For example, you could do a level 3 advanced apprenticeship in finance or accounting to become an
+                    accounting technician.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## B
+
+                    ### baby
+                    A child aged 0 to 12 months. If they are older than 12 months, use child.
+
+                    ### buy or buying
+                    Not procure or procurement.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## C
+
+                    ### capitalisation
+
+                    We follow <a class="govuk-link"
+                        href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#capitalisation">GDS
+                        guidance
+                        for capitalisation</a> and casing.
+
+                    ### child-led
+
+                    Hyphenated when used to describe a child leading something, for example, 'a child-led activity'. Not
+                    hyphenated in other circumstances, for example, 'this activity is child led'.
+
+                    ### continuing professional development (CPD)
+
+                    Lower case.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## D
+
+                    ### dates
+                    We follow <a class="govuk-link"
+                        href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates">GDS guidance on how to write
+                        dates</a>.
+
+                    ### DBS check
+
+                    Write out in full first time use name of service, follow [acronyms
+                    guidance](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#abbreviations-and-acronyms).
+
+                    There are 4 levels, ‘basic’, ‘standard’, ‘enhanced’ and ‘enhanced with barred lists’. You may
+                    need to
+                    be specific about which level you are referring to. See [DBS
+                    checks](https://www.gov.uk/government/organisations/disclosure-and-barring-service/about#dbs-checks).
+
+
+                    ### DfE Sign-in
+                    Lower case f, upper case S, and hyphen.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## E
+
+                    ### early career teacher (ECT)
+                    This term replaces 'newly qualified teacher'. Newly qualified teacher used to apply to a teacher's
+                    first
+                    year of teaching, whereas an early career teacher applies to a teacher in their first two years of
+                    teaching. Lower case.
+
+                    ### early years initial teacher training (EYITT)
+
+                    Lower case.
+
+                    ### English as an additional language
+
+                    Not English as a second or foreign language.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## F
+                    ### further education
+
+                    Lower case.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## G
+
+                    ### Get Into Teaching
+
+                    Upper case.
+
+                    Do not use GIT when communicating with users.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## H
+
+                    ### Higher Education
+
+                    Upper case.
+
+                    ### Higher Education institution (HEI)
+
+                    Avoid using in content aimed at a general audience.
+
+                    A generic term for organisations that teach at degree level or higher (’higher education’). Usually
+                    a
+                    university but some still call themselves colleges or use another term.
+
+                    ### Higher Education Statistics Agency (HESA)
+
+                    Upper case.
+
+                    ### hyphenation
+
+                    We follow the <a class="govuk-link"
+                        href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#hyphenation">GDS guidance
+                        on
+                        hyphenation</a>.
+
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+
+
+                    ## I
+
+                    ### international qualified teacher status (iQTS)
+
+                    Use lower case i.
+
+                    ### IT
+
+                    Not ICT.
+
+                    ### IT support
+
+                    Use IT support instead of IT service provider or IT support provider.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## J
+
+                    ### job titles
+
+  We follow [GDS guidance on job titles](https://www.gov.uk/guidance/style-guide/a-to-z#job-titles).
+
+We try to avoid generic job titles because they can mean different things to different people. For example, a school business manager might have different responsibilities from one school to another.
+
+Instead, use language that describes the thing a job role does. For example, ‘The person who manages your recruitment should upload the job advert,’ rather than, ‘Your HR Lead should upload the job advert’.
+
+For internal products and services, try not to use the job title as an identifier alongside a name, for example:
+
+Delivery officer: Josephine Bloggs
+
+We would write that a project is assigned to a particular person, for example:
+
+Assigned to: Josephine Bloggs
+
+Job titles can, and do change as departments and divisions reorganise and restructure. Avoiding job titles can help to reduce confusion when those titles are no longer used.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+
+                    ## K
+                    ### key stages
+
+                 Lower case.
+
+                    Where key stages are referenced in services that are used by people who may not be familiar with the
+                    key
+                    stage system, add the age range in brackets afterwards.
+
+                    For example, you will teach pupils in key stage 3 (ages 11 to 14).
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## L
+                    ### local council or local authority
+
+                    GDS guidance says use <a class="govuk-link"
+                        href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#local-council">local
+                        council</a>.
+
+                    Follow this unless you are writing for civil servants. They usually refer to a local authority
+                    instead.
+                    Use the language of your users.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## M
+                    ### multi-academy trust
+
+                    Hyphenate multi-academy. You may also shorten this to MAT. Follow [acronym guidance](#acronyms).
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+
+                    ## N
+                    ### National Careers Service
+
+                    Never shorten to NCS.
+
+                    ### national professional qualifications (NPQ)
+
+                    Lower case.
+
+                    ### numbers
+
+                    Create a consistent way of writing time periods of 12 months or more.
+
+                    Write the length of apprenticeships and courses in years and months while following the convention
+                    for
+                    numbers in GDS guidance.
+
+                    For example:
+
+                    This course takes approximately one year to complete.
+
+                    This apprenticeship takes 2 years and 6 months to complete.
+
+                   
+
+                    <p class="govuk-body">
+                        <a href="#top" class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-7">
+
+                    ## O
+
+                    ### off-the-job training
+
+                    Hyphenate.
+
+
+
+                    ### on-the-job training
+
+                    Hyphenate.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## P
+                    ### parents and carers
+
+                    Always use parents and carers for inclusivity.
+
+
+
+                    ### pupil or student
+
+                    Use 'pupil' when referring to primary or secondary school age children, and then use 'student' when
+                    referring to people in a Further or Higher Education setting.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## Q
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## R
+
+                    ### recruitment cycle
+
+                    Use 'recruitment cycle' not 'recruitment year' for content aimed at providers and civil servants.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## S
+
+                    ### service name
+
+                    Try and use the service name as part of a sentence rather than using it as a noun. For example, we
+                    would
+                    say:
+
+                    If you want to start teacher training, you can find postgraduate teacher training courses.
+
+                    Instead of:
+
+                    If you want to start teacher training, you can use Find postgraduate teacher training.
+
+                    When you use the noun form, try to put it at the start of the sentence so it doesn't look like a
+                    typo.
+
+                    For example:
+
+                    Find a postgraduate teacher training course can show you where you can train.
+
+                    If you have to refer to the service by name. This can include:
+
+                    - privacy statements
+                    - accessibility statements
+                    - cookies policies
+                    - emails from the service
+
+                    In those cases, you should capitalise the first letter of the service to make it clear that's the
+                    name
+                    of the service. Avoid using single quotes and the word 'service' at the end.
+
+                    For example:
+
+                    This accessibility statement applies to Complete conversions, transfers and changes.
+
+                    There are some exceptions where we use the word service as part of the name.
+
+                    These are:
+
+                    - Apprenticeship service
+                    - Apprentice assessment service
+                    - My apprenticeship service
+                    - National Careers Service
+
+                    ### single academy trust
+
+                   Do not hyphenate.
+
+                    ### School centred initial teacher training (SCITT)
+
+                     Do not hyphenate.
+
+                    ### special educational needs co-ordinator (SENCo)
+
+                     We follow <a class="govuk-link"
+                        href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#special-educational-needsspecial-educational-needs-and-disabilities-send">GDS guidance</a> and apply it to SENCo (special educational needs co-ordinator) 
+                    
+                    ### special educational needs and disabilities co-ordinator (SENDCo)
+
+                   
+
+                    Follow guidance for [special educational needs co-ordinator (SENCo)](#special-educational-needs-coordinator-senco).
+
+                    ### subject knowledge enhancement course (SKE)
+
+                    Use lower case. 
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## T
+
+                    ### teacher reference number (TRN)
+
+                    Lower case.
+
+                    ### teacher training adviser
+
+                    Use 'teacher training adviser', not 'Get Into Teaching advisers'.
+
+                    Do not use 'advisor'.
+
+                    Describe what a teacher training adviser does when you first mention them. 
+                    
+                    For example:
+
+                    A teacher training adviser can guide you through the application process free of charge. They'll
+                    help
+                    you with things like choosing a course and writing your application.
+
+                    ### Teaching Vacancies
+
+                    Upper case.
+
+                    A service for advertising, finding and applying for teaching jobs.
+
+                    Previously known as Teacher Vacancy Service. Avoid using this or any other acronym.
+
+                    ### trainee
+
+                    When a candidate has been 'recruited', refer to them as trainees rather than candidates. This is
+                    relevant to provider-facing content. DfE has a service called Register trainee teachers.
+
+                    ### training partner
+
+                    Use 'training partner' to describe a SCITT or lead school that works with an accredited body.
+
+                    In Publish, the accredited body that ratifies the courses for the school will see 'Training
+                    partners' in
+                    the primary navigation. See this design
+                        history about <a class="govuk-link"
+                        href="https://becoming-a-teacher.design-history.education.gov.uk/publish-teacher-training-courses/viewing-training-partners-and-their-courses-if-youre-an-accredited-body/">viewing training partners and their courses</a> if you're an accredited body.
+
+                    Avoid the term 'ratify' as providers do not always know what it means.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## U
+
+                    ### unique reference number (URN)
+
+                    Lower case. 
+                    
+                    Previously known as an Edubase ID. The format will often need to be explained.
+
+                    ### unsuccessful application
+
+                    Do not say 'you were unsuccessful'. Try to make an unsuccessful application less about the person.
+                    For
+                    example, 'Your application was unsuccessful on this occasion, but you can apply again'.
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+
+                    ## V
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## W
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## X
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## Y
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    ## Z
+
+                    <p class="govuk-body govuk-!-margin-top-9">
+                        <a href="#top"
+                            class="govuk-link govuk-link--no-visited-state">Back to top</a>
+                    </p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .dfe-atoz {
+            padding-left: 0;
+            margin-bottom: 20px;
+            margin-top: -30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            list-style: none;
+        }
+
+        .dfe-atoz > li {
+            margin-bottom: 8px;
+            padding-right: 10px;
+            margin-right: 10px;
+            /* Add spacing between the list items */
+            min-width: 44px;
+            text-align: center;
+        }
+
+        .dfe-atoz > li > a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            padding: 10px;
+            display: block;
+        }
+
+        /* Make sure it works on small screens by wrapping content */
+        @media (max-width: 600px) {
+            .dfe-atoz {
+                justify-content: center;
+            }
+            .dfe-atoz > li {
+                margin-right: 5px;
+            }
+        }
+    </style>
+
+
+
+{% endblock %}

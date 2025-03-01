@@ -1,0 +1,112 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/prototyping/prerequisites" %}
+{% set title = "Pre-requisites" %}
+{% set description = "To prototype, you'll need tools installed on your computer." %}
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Prototyping</span>
+
+                    {% markdown %}
+
+                    # {{ title }}
+                  
+                    {{ description}}
+
+
+                    ## Tools
+
+                    ### VS Code  
+                    
+                    In the Department for Education, we use Visual Studio Code, often just referred to as VS Code, as our code editor. 
+                    
+                    These are referred to as IDE's, or Integrated Development Environments. They are used to write and edit code, and to manage your project. 
+
+                    ### Node.js
+
+                    Node.js is a JavaScript runtime that allows you to run JavaScript on your device. 
+
+                    The GOV.UK Prototype Kit is built on Node.js, so you will need to have it installed on your device to build and run prototypes.
+
+                    ### GitHub
+
+                    GitHub is a platform that allows you to store your code in a repository, and work on it with others.
+
+                    ### Heroku
+
+                    Heroku is a hosting service that allows you to publish code as a working website for people to use.
+
+                   
+                    ## Installing VS Code and Node.js
+
+                    ### DfE-issued Windows devices
+
+                    If you have a Windows laptop or Surface device, and you haven't got VS Code installed, you must first request it through ServiceNow.
+
+                    Go to ServiceNow and search for "GDS Prototyping"
+
+                    Once this has been actioned by IT, you will be able to install VS Code and Node.js from the Software Centre on your device.
+
+                    ### DfE-issued Macbooks and BYOD (Bring Your Own Device) users
+
+                    If you have a Macbook, or you are using your own device, you can install VS Code and Node.js yourself. 
+                    
+                    - [download and install VS Code](https://code.visualstudio.com/)
+                    - [download and install Node.js (LTS)](https://nodejs.org/en/) 
+
+                    > LTS stands for Long Term Support, and is the version of Node.js that is most stable and reliable. You should always use the LTS version for your projects.
+
+                    ### For both Windows and Mac users
+
+                    You will need to [download and install Git](https://git-scm.com/) on your device. Follow the instructions on the website to install it as it differs based on your device.
+
+                    Once you have installed these tools, you can move on to [setting up your device](/design-system/prototyping/setup-device).   
+
+
+                    ## GitHub access
+
+                    If you are a DfE employee or contractor working for DfE, you will need to request access to the DfE GitHub organisation.
+
+                    If you do not have a GitHub account, you will need to create one. You can do this by going to [GitHub](https://github.com) and following the instructions to create an account using your DfE email address.
+
+                    Once you've done this, you can ask [DesignOps](/designops) to request access to the DfE-Digital organisation, or ask a colleague who already has access to make the request through ServiceNow.              
+    
+
+                    ## Heroku access
+
+                    If you are a DfE employee or contractor, you will need to request access to a Heroku team space.
+
+                    Speak to your team to see if they already have a space you can be added to, or ask [DesignOps](/designops) for help identifying the right team to join.
+
+                    All access to Heroku teams are managed through ServiceNow. [DesignOps](/designops)  can help you with this process.
+
+
+                    
+                    {% endmarkdown %}
+
+
+                    {{ govukPagination({
+                        previous: {
+                            labelText: "Prototyping guidance",
+                            href: "/design-system/prototyping"
+                        },
+                        next: {
+                            labelText: "Setup your device",
+                            href: "/design-system/prototyping/setup-device"
+                        }
+                    }) }}
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
