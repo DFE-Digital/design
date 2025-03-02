@@ -1,5 +1,5 @@
-sessionStorage.setItem('clarityID', 'XXXXXXXXXX');
-sessionStorage.setItem('googleID', 'G-XXXXXXXXXX');
+sessionStorage.setItem('clarityID', 'fmv3y2chel');
+sessionStorage.setItem('googleID', 'G-D2V3LRNYBJ');
 const cID = sessionStorage.getItem('clarityID');
 const gID = sessionStorage.getItem('googleID');
 
@@ -810,7 +810,7 @@ function gtag() {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-D2V3LRNYBJ');
 
 }
 
