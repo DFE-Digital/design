@@ -7,77 +7,80 @@
 
 {% block head %}
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "Plain Language standard and guidance published",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://standards.education.gov.uk/news/plain-language"
-  },
-  "datePublished": "2025-02-25",
-  "dateModified": "2025-02-25",
-  "author": {
-    "@type": "Person",
-    "name": "Kerry Lyons",
-    "jobTitle": "Senior Content Designer",
-    "email": "mailto:kerry.lyons@education.gov.uk"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Department for Education (DfE)",
-    "url": "https://www.gov.uk/government/organisations/department-for-education",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://standards.education.gov.uk/assets/images/dfe-logo.png"
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Plain Language standard and guidance published",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://standards.education.gov.uk/news/plain-language"
+      },
+      "datePublished": "2025-02-25",
+      "dateModified": "2025-02-25",
+      "author": {
+        "@type": "Person",
+        "name": "Kerry Lyons",
+        "jobTitle": "Senior Content Designer",
+        "email": "mailto:kerry.lyons@education.gov.uk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Department for Education (DfE)",
+        "url": "https://www.gov.uk/government/organisations/department-for-education",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://standards.education.gov.uk/assets/images/dfe-logo.png"
+        }
+      },
+      "description": "The DfE content design community has launched the Plain Language standard, now available on the 'Find and use standards' product. This standard helps teams create clear, concise, and accessible content that is easy to understand for all users.",
+      "url": "https://standards.education.gov.uk/news/plain-language",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://standards.education.gov.uk/assets/images/language.png",
+        "width": 680,
+        "height": 380
+      },
+      "keywords": [
+        "Plain Language", "DfE Standards", "Content Design", "Accessibility"
+      ],
+      "isAccessibleForFree": true
     }
-  },
-  "description": "The DfE content design community has launched the Plain Language standard, now available on the 'Find and use standards' product. This standard helps teams create clear, concise, and accessible content that is easy to understand for all users.",
-  "url": "https://standards.education.gov.uk/news/plain-language",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://standards.education.gov.uk/assets/images/language.png",
-    "width": 680,
-    "height": 380
-  },
-  "keywords": [
-    "Plain Language",
-    "DfE Standards",
-    "Content Design",
-    "Accessibility",
-  ],
-  "isAccessibleForFree": true
-}
-</script>
+  </script>
 
 {% endblock %}
 
 {% block content %}
 
-    <section style="background-color:#ffffff;" class="">
-        <div class="govuk-width-container">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
+  <section style="background-color:#ffffff;" class="">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
 
-                      <a href="/news" class="govuk-back-link govuk-!-margin-top-2">Back to news</a>
-                    <span class="govuk-caption-xl govuk-!-margin-top-5">News</span>
-                <h1 class="govuk-heading-xl">{{title}}</h1>
+          <a href="/news" class="govuk-back-link govuk-!-margin-top-2">Back to news</a>
+          <span class="govuk-caption-xl govuk-!-margin-top-5">News</span>
+          <h1 class="govuk-heading-xl">{{title}}</h1>
 
-                    <dl class="govuk-summary-list">
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">Published</dt>
-                            <dd class="govuk-summary-list__value">25 February 2025</dd>
-                        </div>
-                        <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__key">Author</dt>
-                            <dd class="govuk-summary-list__value">
-                                <a href="mailto:kerry.lyons@education.gov.uk" class="govuk-link">Kerry Lyons (Senior content designer)</a>
-                            </dd>
-                        </div>
-                    </dl>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Published</dt>
+              <dd class="govuk-summary-list__value">25 February 2025</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Author</dt>
+              <dd class="govuk-summary-list__value">
+                <a href="mailto:kerry.lyons@education.gov.uk" class="govuk-link">Kerry Lyons (Senior content designer)</a>
+              </dd>
+            </div>
+          </dl>
 
-                    {% markdown %}
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+          {% markdown %}
 
                
 The DfE content design community have launched the [Plain Language standard](https://standards.education.gov.uk/standard/plain-language-standard), and is now available on the [Find and use standards](https://standards.education.gov.uk) product. This new standard is designed to help DfE teams create clear, concise, and accessible content that is easy to understand for all audiences, including those with varying levels of literacy and language skills.  
@@ -116,8 +119,23 @@ The standard will be reviewed and updated regularly to ensure that it remains re
                
                 {% endmarkdown %}
 
-                </div>
-            </div>
         </div>
-    </section>
+
+        <div class="govuk-grid-column-one-quarter">
+          <h3 class="govuk-heading-m dfe-blue-border--top">Related content</h3>
+
+          <ul class="govuk-list govuk-list--spaced">
+            <li>
+              <a href="/content-design">Content design</a>
+            </li>
+            <li>
+              <a href="https://standards.education.gov.uk/">Find and use standards</a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/guidance/style-guide/a-to-z">GOV.UK Style Guide</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

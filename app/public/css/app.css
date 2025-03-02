@@ -525,3 +525,9 @@ color: #171b1f;
         width: 100%;
     }
 }
+
+
+.dfe-blue-border--top{
+    border-top: 4px solid #003a69;
+    padding-top: 15px;
+}
