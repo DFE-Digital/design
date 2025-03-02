@@ -36,6 +36,7 @@ app.use(express.json());
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/favicon.ico', express.static(path.join(__dirname, 'public/assets/images/favicon.ico')));
 
 nunjuckEnv.addFilter('date', dateFilter)
 
@@ -48,6 +49,11 @@ markdown.register(nunjuckEnv, marked.parse)
 
 // Set view engine to Nunjucks with .html extension
 app.set('view engine', 'html');
+
+// Add a route that serves the app/robots.txt file
+app.get('/robots.txt', function (req, res) {
+  res.sendFile(path.join(__dirname, 'app/robots.txt'));
+});
 
 // 301 Redirects
 
