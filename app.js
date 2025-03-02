@@ -65,6 +65,24 @@ app.get('/our-work/*', function (req, res) {
 })
 
 
+// Define specific subsystems that should be redirected
+const archivedRedirects = {
+  'rsd-design-system': 'https://webarchive.nationalarchives.gov.uk/ukgwa/20241206052023/https://design.education.gov.uk/design-system/rsd-design-system',
+  'ncs-design-system': 'https://webarchive.nationalarchives.gov.uk/ukgwa/20241206052208/https://design.education.gov.uk/design-system/ncs-design-system'
+};
+
+
+app.get('/design-system/:subsystem*', function (req, res, next) {
+  const { subsystem } = req.params;
+
+  if (archivedRedirects[subsystem]) {
+    res.redirect(301, archivedRedirects[subsystem]);
+  } else {
+    next();
+  }
+});
+
+
 const { buildSearchIndex, search } = require('./middleware/search.js');
 
 
