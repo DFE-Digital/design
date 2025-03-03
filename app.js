@@ -57,16 +57,12 @@ app.get('/robots.txt', function (req, res) {
 
 // 301 Redirects
 
-app.get('/design-ops', (req, res) => {
+app.get('/design-ops*', (req, res) => {
   res.redirect(301, '/designops');
 });
 
 
-app.get('/our-work', function (req, res) {
-  res.redirect(301, 'https://webarchive.nationalarchives.gov.uk/ukgwa/20241206051622/https://design.education.gov.uk/our-work')
-})
-
-app.get('/our-work/*', function (req, res) {
+app.get('/our-work*', function (req, res) {
   res.redirect(301, 'https://webarchive.nationalarchives.gov.uk/ukgwa/20241206051622/https://design.education.gov.uk/our-work')
 })
 
