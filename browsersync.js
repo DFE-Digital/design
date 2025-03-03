@@ -1,4 +1,5 @@
-const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync');
+
 const proxyPort = 3066;  
 
 browserSync.init({
