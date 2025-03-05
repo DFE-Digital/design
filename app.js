@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -26,6 +27,8 @@ var nunjuckEnv = nunjucks.configure([
   extension: 'html',
   noCache: false
 });
+
+app.use(compression());
 
 // Serve static files
 app.use('/govuk', express.static(path.join(__dirname, 'node_modules/govuk-frontend/govuk/assets')));
