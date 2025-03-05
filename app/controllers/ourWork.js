@@ -61,7 +61,7 @@ exports.g_project = async function (req, res) {
           return res.redirect('/our-work')
         }
   
-        return res.render('our-work/post', { post })
+        return res.render('our-work/project/index', { post })
       })
       .catch(function (error) {
         console.log(error)

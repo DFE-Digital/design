@@ -65,9 +65,6 @@ app.get('/design-ops*', (req, res) => {
 });
 
 
-app.get('/our-work*', function (req, res) {
-  res.redirect(301, 'https://webarchive.nationalarchives.gov.uk/ukgwa/20241206051622/https://design.education.gov.uk/our-work')
-})
 
 
 // Define specific subsystems that should be redirected
