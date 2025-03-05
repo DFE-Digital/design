@@ -1,0 +1,138 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "News" %}
+{% set path = "news/roadmap-for-design" %}
+{% set title = "Roadmap for design" %}
+{% set description = "" %}
+
+{% block head %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Roadmap for design",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://standards.education.gov.uk/news/roadmap-for-design"
+  },
+  "datePublished": "2025-03-05",
+  "dateModified": "2025-03-05",
+  "author": {
+    "@type": "Person",
+    "name": "Andy Jones",
+    "jobTitle": "Head of Design",
+    "email": "mailto:andy.jones@education.gov.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Department for Education (DfE)",
+    "url": "https://www.gov.uk/government/organisations/department-for-education",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://standards.education.gov.uk/assets/images/dfe-logo.png"
+    }
+  },
+  "description": "A roadmap for the future of design in DfE.",
+   "url": "https://standards.education.gov.uk/news/roadmap-for-design",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://standards.education.gov.uk/assets/images/roadmap.png",
+   "width": 680,
+    "height": 380
+  },
+  "keywords": [
+    "Design roadmap
+  ],
+  "isAccessibleForFree": true
+}
+</script>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<section style="background-color:#ffffff;" class="">
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+
+                    <a href="/news" class="govuk-back-link govuk-!-margin-top-2">Back to news</a>
+                    <span class="govuk-caption-xl govuk-!-margin-top-5">News</span>
+                <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Published</dt>
+                        <dd class="govuk-summary-list__value">5 March 2025</dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Author</dt>
+                        <dd class="govuk-summary-list__value"><a href="mailto:andy.jones@education.gov.uk" class="govuk-link">Andy Jones (Head of Design)</a></dd>
+                    </div>
+                </dl>
+
+                        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+                {% markdown %}
+                DesignOps have launched a [roadmap for design](/roadmap) to improve the consistency, accessibility, and effectiveness of digital services across the department.
+
+                This initiative aims to create a more seamless experience for users, ensuring that digital services are well-designed, efficient, and meet the needs of everyone, including those with disabilities.
+
+                The Design Roadmap will provide a structured, strategic approach to:
+
+                * Ensure design consistency by embedding shared principles, patterns, and a unified design system
+                * Improve accessibility compliance so that all services meet WCAG 2.2 AA standards
+                * Develop design capability and career progression pathways for designers across DfE
+                * Enhance user experience research and service mapping to create seamless, user-friendly digital services
+                * Introduce shared performance metrics to track design quality and usability across DfE
+
+                ## Building a Stronger Digital Future for Education
+
+                With this roadmap, we are making a commitment to delivering high-quality digital services that are easy to use, accessible to all, and designed with users in mind. 
+
+                The roadmap aligns with key DfE and GOV.UK objectives, ensuring that services are:
+
+                * User-centred – Designed around real needs, based on research and data
+                * Efficient and scalable – Reducing duplication and improving cross-service consistency
+                * Compliant and inclusive – Meeting legal accessibility requirements and usability standards
+                * Innovative and future-proof – Supporting digital transformation across government
+
+                ## What’s Next?
+
+              
+                Over the coming months, we will:
+
+                * Expand the DfE Design System, ensuring common components and styles are easily reusable
+                * Strengthen accessibility training and support for all digital teams
+                * Improve service mapping and user journey mapping
+                * Develop objectives and personal development plans for all designers
+
+                ## Get Involved
+
+                If you’re working on digital services within DfE, this roadmap is for you. 
+
+                You can learn more about the [roadmap](/roadmap).
+
+
+
+                {% endmarkdown %}
+
+            </div>
+            <div class="govuk-grid-column-one-quarter">
+              <h3 class="govuk-heading-m dfe-blue-border--top">Related content</h3>  
+
+               <ul class="govuk-list govuk-list--spaced">
+                <li><a href="/designops">DesignOps</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

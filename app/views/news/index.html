@@ -8,26 +8,36 @@
 
 {% block content %}
 
-<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
-    <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-three-quarters">
-                <h1 class="govuk-heading-xl">{{title}}</h1>
-                <p class="govuk-body-l">{{description}}</p>
+    <section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+                    <p class="govuk-body-l">{{description}}</p>
+                </div>
+
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
+    <section style="background-color:#ffffff;" class="govuk-!-padding-top-9 govuk-!-padding-bottom-7">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="dfe-grid-container">
+                        <div class="dfe-card">
+                            <img src="/assets/images/roadmap.png" alt="" class="dfe-card-image">
+                            <div class="dfe-card-container">
 
-
-<section style="background-color:#ffffff;" class="govuk-!-padding-top-9 govuk-!-padding-bottom-7">
-    <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-                <div class="dfe-grid-container">
-                                       <div class="dfe-card">
+                                <h3 class="govuk-heading-m">
+                                    <a href="/news/roadmap-for-design"
+                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Roadmap for design</a>
+                                </h3>
+                                <p class="govuk-body">Sharing our plan for design in DfE</p>
+                                <p class="govuk-body-s govuk-!-margin-bottom-0">5 March 2025</p>
+                            </div>
+                        </div>
+                        <div class="dfe-card">
                             <img src="/assets/images/language.png" alt="" class="dfe-card-image">
                             <div class="dfe-card-container">
                                 <h3 class="govuk-heading-m">
@@ -62,10 +72,10 @@
                             </div>
                         </div>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 {% endblock %}

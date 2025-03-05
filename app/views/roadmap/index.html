@@ -1,0 +1,408 @@
+
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Roadmap" %}
+{% set path = "" %}
+{% set title = "Roadmap for design" %}
+{% set description = "How the DfE Design profession roadmap aligns with the department’s strategic objectives, ensuring that design contributes directly to delivering high-quality digital services, improving data use, fostering innovation, and building capability." %}
+
+{% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
+
+{% block content %}
+
+    <style>
+        .roadmap-icon {
+            width: 80%;
+        }
+        {
+            # on mobile hide it #
+        }
+        @media (max-width: 768px) {
+            .roadmap-icon {
+                display: none;
+            }
+        }
+    </style>
+
+    <section style="
+    background: url('/assets/images/gradient-bg.png') no-repeat center center;
+    background-size: cover;
+    background-color: #ffffff;" 
+    class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+
+        <div class="govuk-width-container  govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+            <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+                <div class="govuk-grid-column-three-quarters">
+                    <h1 class="govuk-heading-xl govuk-!-font-size-80 govuk-!-margin-top-5" style="color: #003a69">
+                        {{title}}
+                    </h1>
+                    <p class="govuk-body-l">{{description}}</p>
+                </div>
+                <div class="govuk-grid-column-one-quarter">
+                    <img src="/assets/images/strategy.png" alt="" class="govuk-!-margin-top-5 roadmap-icon">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-9 govuk-!-padding-bottom-0">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l">Purpose</h2>
+                </div>
+            </div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #003a69;"></div>
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds">
+                            <p class="govuk-body-l">The DfE Design Roadmap sets out the strategic direction for design, ensuring that digital services are consistent, accessible, and user-centred.</p>
+                            <p class="govuk-body-l">It provides a clear framework for embedding design excellence across DfE, ensuring that services meet high standards, reduce friction for users, and are built efficiently using shared principles, patterns, and evidence-based decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <hr class="govuk-section-break govuk-section-break--visible">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <h2 class="govuk-heading-l">Design consistency and standards</h2>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #003a69;"></div>
+                    <p class="govuk-body-l">Design consistency ensures that services across DfE follow a unified set of design principles and patterns, enabling a joined-up experience for users.</p>
+
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #aecbdd;"></div>
+
+                    {% markdown %}
+
+                        ### Expand the DfE Design system
+
+                        - Increase use and development of common components and styles through DfE Frontend
+                        - Maintain and enhance the Figma DfE Frontend library
+                        - Developing guidelines for common service patterns and interactions across products
+
+                        ### Ensure alignment with standards
+
+                        - Support teams in aligning products with the Digital Product Branding standard
+                        - Develop and maintain a design system that meets the needs of DfE services
+                        - Contribute more to the GOV.UK Design System and GOV.UK Service Manual
+
+                        ### Establish regular review and design crit sessions
+
+                        - Implement structured design critique sessions to share work and good practices
+                        - Foster a culture of constructive feedback and iteration, ensuring high design quality across teams
+
+                        {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <hr class="govuk-section-break govuk-section-break--visible">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <h2 class="govuk-heading-l">Accessibility</h2>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #003a69;"></div>
+
+                    <p class="govuk-body-l">Accessibility is a legal requirement and a core design principle that ensures DfE digital services are usable by all users, including those with disabilities.</p>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #aecbdd;"></div>
+
+                    {% markdown %}
+
+                    ### Ensure accessibility compliance
+
+                    - Ensure DfE digital services meet accessibility standards
+                    - Embed accessibility as a core requirement in all service delivery
+                    - Continue to develop accessibility guidelines, good practice and training resources
+                    - Develop a programme of continuous improvement for accessibility
+
+                    ### Embed accessibility into DfE's culture
+
+                    - Ensure accessibility is part of all design and development discussions
+                    - Encourage co-design with users of assistive technologies to build services that work for all
+                    - Make accessibility a leadership priority, embedding it in digital strategy and governance frameworks
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <hr class="govuk-section-break govuk-section-break--visible">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-full">
+
+                    <h2 class="govuk-heading-l">Service mapping and user experience</h2>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #003a69;"></div>
+
+                    <p class="govuk-body-l">Service mapping helps DfE visualise and understand the full journey of users across digital and non-digital services, improving decision-making and service design.</p>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #aecbdd;"></div>
+
+                    {% markdown %}
+
+                    ### Create a centralised service mapping repository  
+
+                    - Establish a structured service map repository covering all DfE digital services
+                    - Ensure service maps are accessible for planning, development, and improvement  
+                    - Standardise mapping formats and tools to enable consistency across teams  
+
+                    ### Improve visibility of user journeys  
+
+                    - Map cross-service user journeys to highlight friction points and inefficiencies  
+                    - Use journey mapping to identify gaps and opportunities  
+                    - Integrate service mapping insights into digital transformation planning  
+
+                    ### Enable collaboration across teams  
+
+                    - Break down silos by ensuring cross-functional teams contribute to service mapping  
+                    - Share mapping insights to drive joined-up service delivery  
+                    - Provide training and guidance on service mapping best practices 
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <hr class="govuk-section-break govuk-section-break--visible">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <h2 class="govuk-heading-l">Metrics and performance measures</h2>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #003a69;"></div>
+                    <p class="govuk-body-l">Developing shared performance measures helps DfE track and improve digital service quality, ensuring they meet user needs.</p>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #aecbdd;"></div>
+
+                    {% markdown %}
+
+                    ### Define shared performance metrics  
+                    
+                    - Establish common metrics to measure usability, accessibility, and service effectiveness  
+                    - Align performance tracking with DfE and GOV.UK service standards  
+                    - Ensure all digital services have measurable success criteria 
+
+                    ### Standardise user satisfaction and experience measures
+
+                    - Develop a consistent approach to user satisfaction and experience measures
+                    - Ensure all services have a user feedback mechanism
+                    - Use feedback to drive service improvements
+
+                    ### Standardise reporting and transparency  
+                    
+                    - With with product to create a shared performance dashboard
+                    - Ensure everyone has access to service design insights
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <hr class="govuk-section-break govuk-section-break--visible">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <h2 class="govuk-heading-l">Design assessor capability</h2>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #003a69;"></div>
+                    <p class="govuk-body-l">Developing the talent in design assessors to be able to effectively assess products and services against standards and growing complexity.</p>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #aecbdd;"></div>
+
+                    {% markdown %}
+
+                    ### Strengthen design assessor training and expertise 
+
+                    - Provide structured training for design assessors to develop skills and knowledge  
+                    - Ensure assessors are knowledgeable across DfE and GOV.UK service standards and design principles
+                    - Ensure assessment findings lead to actionable improvements
+                    - Use survey responses to identify areas for improvement  
+
+                    ### Track and evaluate the impact of design assessments  
+
+                    - Measure how design assessments improve service quality and compliance with standards  
+                    - Monitor assessment outcomes to identify recurring issues across services  
+                    - Use insights from assessments to refine and evolve design standards
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <hr class="govuk-section-break govuk-section-break--visible">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #ffffff;"  class="govuk-!-padding-top-5 govuk-!-padding-bottom-9">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h2 class="govuk-heading-l">Training, skills, and capability</h2>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #003a69;"></div>
+                    <p class="govuk-body-l">Continuing to develop the design skills capability framework in DfE and ensuring all designers can use the framework for personal development and have access to training.</p>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                    <div class="govuk-!-padding-top-1 govuk-!-margin-bottom-5" style="background-color: #aecbdd;"></div>
+
+                    {% markdown %}
+
+                       ### Develop structured training and career progression pathways  
+                        - Create a clear learning pathway for designers at all levels, from early talent to senior roles  
+                        - Provide training on design principles, accessibility, prototyping, and user research  
+                        - Align training with DfE and GOV.UK standards to ensure consistency across services  
+                        - Establish a mentorship programme to connect junior and senior designers  
+
+                        ### Embed the design skills capability framework  
+                        - Use the design skills capability framework to assess and support designers at all levels  
+                        - Ensure all designers have role-specific objectives that align with the capability framework 
+                        - Use data from the capability assessments to identify skill gaps and prioritise training  
+
+                        {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .dfe-styled-list {
+            list-style: none;
+            padding-left: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .dfe-styled-list--icon li {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            background: #ffffff;
+            border-radius: 4px;
+            padding: 1.6rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #b1b4b6;
+
+        }
+
+        .dfe-styled-list--icon img {
+            width: 64px;
+            height: 64px;
+            flex-shrink: 0;
+            /* Prevents icon from shrinking */
+        }
+
+        .dfe-styled-list--icon span {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .dfe-styled-list--icon li {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .dfe-styled-list--icon img {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+
+{% endblock %}
