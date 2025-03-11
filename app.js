@@ -85,6 +85,16 @@ app.get('/design-system/:subsystem*', function (req, res, next) {
 });
 
 
+app.get('/learn/how-many-users', function (req, res, next) {
+  res.redirect(301, 'https://accessibility.education.gov.uk/app/how-many-people');
+});
+
+app.get('/learn/how-many-users/:count', function (req, res, next) {
+  res.redirect(301, 'https://accessibility.education.gov.uk/app/how-many-people/' + req.params.count);
+});
+
+
+
 const { buildSearchIndex, search } = require('./middleware/search.js');
 
 
