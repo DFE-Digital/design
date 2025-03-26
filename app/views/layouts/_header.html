@@ -1,52 +1,147 @@
-{% from "header/macro.njk" import header %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+<header class="gem-c-layout-super-navigation-header" data-module="super-navigation-mega-menu">
+  <div class="gem-c-layout-super-navigation-header__content">
+    <div class="gem-c-layout-super-navigation-header__header-logo">
+      <a href="/" class="gem-c-layout-super-navigation-header__logotype-crown">
+        <img src="/assets/images/dfe_horizontal.png" alt="Department for Education" class="gem-c-layout-super-navigation-header__logotype-crown-image" style="height: 30px;">
+      </a>
+    </div>
+
+    <div class="gem-c-layout-super-navigation-header__button-container">
+      <div class="gem-c-layout-super-navigation-header__navigation-item">
+        <button type="button" class="gem-c-layout-super-navigation-header__navigation-top-toggle-button" aria-controls="super-navigation-mega-menu" aria-expanded="false">
+          <span class="gem-c-layout-super-navigation-header__navigation-top-toggle-button-inner">Other services</span>
+        </button>
+      </div>
+      <div class="gem-c-layout-super-navigation-header__search-item">
+        <button type="button" class="gem-c-layout-super-navigation-header__search-toggle-button" aria-controls="search-panel" aria-expanded="false">
+          <svg class="gem-c-layout-super-navigation-header__search-toggle-button-link-icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"/>
+            <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"/>
+          </svg>
+          <span class="gem-c-layout-super-navigation-header__search-toggle-button-close-icon">×</span>
+          <span class="govuk-visually-hidden">Search</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="search-panel" class="gem-c-layout-super-navigation-header__search-container" aria-hidden="true">
+    <div class="gem-c-search--large">
+      <form class="gem-c-search__form" action="/search" method="get" role="search">
+        <div class="gem-c-search__item-wrapper">
+          <label class="gem-c-search__label" for="search-main">
+            Search this site
+          </label>
+          <div class="js-search-input-wrapper">
+            <input class="gem-c-search__input" id="search-main" name="q" type="search">
+            <div class="gem-c-search__submit-wrapper">
+              <button class="gem-c-search__submit" type="submit">
+                <svg class="gem-c-search__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"/>
+                  <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"/>
+                </svg>
+                <span class="govuk-visually-hidden">Search</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <nav class="gem-c-layout-super-navigation-header__navigation-dropdown-menu" aria-label="Top Level Navigation" aria-hidden="true">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row gem-c-layout-super-navigation-header__navigation-items">
 
 
-{% block header %}
+          <div class="govuk-grid-column-two-thirds-from-desktop gem-c-layout-super-navigation-header__column--services-and-information">
+            <h3 class="govuk-heading-m gem-c-layout-super-navigation-header__column-header">
+              Manuals and standards
+            </h3>
+            <ul class="gem-c-layout-super-navigation-header__navigation-second-items gem-c-layout-super-navigation-header__navigation-second-items--services-and-information">
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:1,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://accessibility.education.gov.uk">Accessibility manual</a>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:2,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://apply-the-service-standard.education.gov.uk">Apply the Service Standard</a>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:3,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://dfe-digital.github.io/architecture/#dfe-architecture">Architecture manual</a>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:4,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://cyber-security.education.gov.uk/">Cyber and information security</a>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:5,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://design.education.gov.uk">Design manual</a>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:6,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://standards.education.gov.uk">Find and use standards</a>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:7,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://technical-guidance.education.gov.uk">Technical manual</a>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:1,&quot;index_link&quot;:8,&quot;index_section_count&quot;:2,&quot;index_total&quot;:8,&quot;section&quot;:&quot;Manuals and standards&quot;}" href="https://user-research.education.gov.uk">User research manual</a>
+                  </li>
+            </ul>
+          </div>
 
-{{ header({
-"showNav": "false",
-"showSearch": "true",
-"showHeaderActionLinks": "false",
-"logoPath": "assets/images",
-"searchAction": "/search",
-"searchInputName": "q",
-"logoAltText": "Department for Education",
-"homeHref": "https://design.education.gov.uk",
-"selectedNav": view,
-"service": {
-"name": "",
-"serviceUrl": "/"
-},
-"headerActionLinks": [
-{
-"url" : "/designops",
-"label" : "Contact"
-}
-],
-"primaryLinks": [
-{
-"url" : "/",
-"label" : "Home"
-}, {
-"url" : "/design-system/styles",
-"label" : "Styles"
-}, {
-"url" : "/design-system/components",
-"label" : "Components"
-}, {
-"url" : "/design-system/patterns",
-"label" : "Patterns"
-}, {
-"url" : "/content",
-"label" : "Content"
-},{
-"url" : "/standards",
-"label" : "Standards"
-}, {
-"url" : "/community",
-"label" : "Community"
-}
-]
-})
-}}
-{% endblock %}
+          <div class="govuk-grid-column-one-third-from-desktop gem-c-layout-super-navigation-header__column--government-activity">
+            <h3 class="govuk-heading-m gem-c-layout-super-navigation-header__column-header">
+              Working in DfE
+            </h3>
+            <ul class="gem-c-layout-super-navigation-header__navigation-second-items gem-c-layout-super-navigation-header__navigation-second-items--government-activity">
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:2,&quot;index_link&quot;:1,&quot;index_section_count&quot;:2,&quot;index_total&quot;:2,&quot;section&quot;:&quot;Working in DfE&quot;}" href="https://design-histories.education.gov.uk">Design histories</a>
+                    <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">Track the development of digital services</p>
+                  </li>
+                  <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                    <a class="govuk-link govuk-!-font-weight-bold govuk-link--no-visited-state gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link="{&quot;event_name&quot;:&quot;navigation&quot;,&quot;type&quot;:&quot;header menu bar&quot;,&quot;index_section&quot;:2,&quot;index_link&quot;:2,&quot;index_section_count&quot;:2,&quot;index_total&quot;:2,&quot;section&quot;:&quot;Working in DfE&quot;}" href="https://job-descriptions.education.gov.uk">Job descriptions</a>
+                    <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">Find digital role descriptions and templates</p>
+                  </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+        <div class="govuk-service-navigation__container">
+            <span class="govuk-service-navigation__service-name">
+                <a href="/" class="govuk-service-navigation__link {% if serviceNav == 'Home' %}govuk-service-navigation__item--active{% endif %}">
+                Design
+            </a>
+            </span>
+            <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+                <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle"
+                aria-controls="navigation" hidden>
+                Menu
+            </button>
+                <ul class="govuk-service-navigation__list" id="navigation">
+                    <li class="govuk-service-navigation__item {% if serviceNav == 'Design system' %}govuk-service-navigation__item--active{% endif %}">
+                        <a class="govuk-service-navigation__link" href="/design-system">Design system</a>
+                    </li>
+                    <li class="govuk-service-navigation__item {% if serviceNav == 'Standards' %}govuk-service-navigation__item--active{% endif %}">
+                        <a class="govuk-service-navigation__link" href="/standards">Standards</a>
+                    </li>
+                    <li class="govuk-service-navigation__item {% if serviceNav == 'Content design' %}govuk-service-navigation__item--active{% endif %}">
+                        <a class="govuk-service-navigation__link" href="/content-design">Content design</a>
+                    </li>
+                    <li class="govuk-service-navigation__item {% if serviceNav == 'Professions' %}govuk-service-navigation__item--active{% endif %}">
+                        <a class="govuk-service-navigation__link" href="/professions">Professions</a>
+                    </li>
+                    <li class="govuk-service-navigation__item {% if serviceNav == 'Roadmap' %}govuk-service-navigation__item--active{% endif %}">
+                        <a class="govuk-service-navigation__link" href="/roadmap">Roadmap</a>
+                    </li>
+                    <li class="govuk-service-navigation__item {% if serviceNav == 'DesignOps' %}govuk-service-navigation__item--active{% endif %}">
+                        <a class="govuk-service-navigation__link" href="/designops">DesignOps</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>

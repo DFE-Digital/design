@@ -1,19 +1,18 @@
 {% extends "layouts/layout.html" %}
 {% set serviceNav = "Professions" %}
 {% set path = "professions/framework" %}
-{% set title = "Design skills framework" %}
-{% set description = "This framework outlines the skills and competencies required for service and interaction designers in the Department for Education." %}
+{% set title = "Design skills and capability framework" %}
+{% set description = "This framework outlines the skills required for service and interaction designers in the Department for Education." %}
 {% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
 
 {% block content %}
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section style="background-color:#f3f2f1;" class=" govuk-!-padding-bottom-4">
+<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
     <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-three-quarters">
-                <a href="/professions" class="govuk-back-link">Back to professions</a>
-                <h1 class="govuk-heading-xl govuk-!-padding-top-5 govuk-!-padding-bottom-0" id="main-content" tabindex="-1">{{title}}</h1>
+                <h1 class="govuk-heading-xl" id="main-content" tabindex="-1">{{title}}</h1>
                 <p class="govuk-body-l">{{description}}</p>
 
                 <p class="govuk-body">View skills and expected capabilities by your grade:</p>
@@ -382,7 +381,7 @@
                 
                                     <div class="skill-card__dfe">
                                         <h3 class="govuk-heading-s">Service designers:</h3>
-                                        <p>Senior designers establish cross-profession <abbr title="User-Centred Design">UCD</abbr> crews to collaborate on design, facilitate design workshops using structured methodologies, and create frameworks for collaborative service development.</p>
+                                        <p>Senior designers establish cross-team working groups with product managers and business analysts, facilitate design workshops using structured methodologies, and create frameworks for collaborative service development.</p>
                                         <h3 class="govuk-heading-s">Interaction designers:</h3>
                                         <p>Senior designers lead collaborative design workshops with product managers and business analysts, create processes for consistent interface development, and establish methods for sharing design patterns across services.</p>
                                     </div>
@@ -467,9 +466,9 @@
                 
                                     <div class="skill-card__dfe">
                                         <h3 class="govuk-heading-s">Service designers:</h3>
-                                        <p>Junior designers follow <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> guidelines in service design, collaborate with accessibility specialists to ensure inclusive service delivery, and document accessibility considerations in service blueprints.</p>
+                                        <p>Junior designers follow WCAG guidelines in service design, collaborate with accessibility specialists to ensure inclusive service delivery, and document accessibility considerations in service blueprints.</p>
                                         <h3 class="govuk-heading-s">Interaction designers:</h3>
-                                        <p>Junior designers conduct accessibility testing using screen readers and other assistive technologies, ensure designs meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> standards, and document accessibility features in the Design History service.</p>
+                                        <p>Junior designers conduct accessibility testing using screen readers and other assistive technologies, ensure designs meet WCAG standards, and document accessibility features in the Design History service.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1194,7 +1193,7 @@
                 url.searchParams.delete('grade');
                 document.title = "Design skills and capability framework";
             } else {
-                url.searchParams.set('grade', grade);
+                url.searchParams.set('grade', grade.toLowerCase());
                 const buttonText = document.querySelector(`[data-grade="${grade}"]`).textContent;
                 document.title = `${buttonText} - Design skills and capability framework`;
             }
@@ -1204,9 +1203,9 @@
         // Function to get grade from URL
         function getGradeFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
-            const grade = urlParams.get('grade') || 'all';
+            const grade = urlParams.get('grade')?.toLowerCase() || 'all';
             if (grade !== 'all') {
-                const buttonText = document.querySelector(`[data-grade="${grade}"]`).textContent;
+                const buttonText = document.querySelector(`[data-grade="${grade.toUpperCase()}"]`).textContent;
                 document.title = `${buttonText} - Design skills and capability framework`;
             }
             return grade;

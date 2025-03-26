@@ -1,0 +1,615 @@
+{
+    "framework": {
+        "title": "Design Skills Framework",
+        "description": "This framework outlines the skills required for effective design in the Department for Education.",
+        "grades": [
+            "HEO",
+            "SEO",
+            "G7",
+            "G6-Lead",
+            "G6-Head"
+        ],
+        "skills": [
+            {
+                "name": "Design communication",
+                "description": "Design communication involves clearly explaining design concepts and decisions to different audiences.",
+                "requirements": {
+                    "HEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "explain design ideas clearly to others",
+                            "document design decisions",
+                            "present your work to your team",
+                            "write about design for different audiences"
+                        ]
+                    },
+                    "SEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "explain design ideas clearly to others",
+                            "document design decisions",
+                            "present your work to your team",
+                            "write about design for different audiences"
+                        ]
+                    },
+                    "G7": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "help others explain design ideas clearly",
+                            "help teams document design decisions effectively",
+                            "present complex work to senior stakeholders",
+                            "coach others in design communication"
+                        ]
+                    },
+                    "G6-Lead": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "communicate design strategy to senior stakeholders",
+                            "establish processes for documenting design decisions",
+                            "coach teams in effective design communication",
+                            "represent design at an organisational level"
+                        ]
+                    },
+                    "G6-Head": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "communicate design strategy to senior stakeholders",
+                            "establish processes for documenting design decisions",
+                            "coach teams in effective design communication",
+                            "represent design at an organisational level"
+                        ]
+                    }
+                },
+                "dfe_examples": {
+                    "HEO": [
+                        "Contributing to design crits by presenting your work and giving constructive feedback to peers",
+                        "Writing clear entries in design decision logs to document your design choices",
+                        "Creating sketches and low-fidelity prototypes to communicate ideas to your team",
+                        "Participating actively in design workshops and team ceremonies",
+                        "Getting regular 2i feedback on your designs from senior designers"
+                    ],
+                    "SEO": [
+                        "Leading design crits for your team and providing structured feedback",
+                        "Creating and maintaining design histories for your service",
+                        "Running collaborative design workshops with your immediate team",
+                        "Using prototypes effectively to communicate complex ideas",
+                        "Contributing to the design community's knowledge sharing sessions"
+                    ],
+                    "G7": [
+                        "Planning and facilitating design sprints across multiple teams",
+                        "Establishing design decision logging practices within your team",
+                        "Leading cross-directorate design workshops",
+                        "Creating high-fidelity prototypes to demonstrate complex user journeys",
+                        "Mentoring junior designers in presentation and communication skills"
+                    ],
+                    "G6-Lead": [
+                        "Establishing design crit formats and best practices across teams",
+                        "Leading strategic design workshops with senior stakeholders",
+                        "Setting up processes for design histories and decision documentation",
+                        "Creating frameworks for effective design communication across the organization",
+                        "Running department-wide design knowledge sharing sessions"
+                    ],
+                    "G6-Head": [
+                        "Setting strategic vision for design communication across DfE",
+                        "Establishing department-wide design presentation standards",
+                        "Leading design initiatives that span multiple programmes",
+                        "Creating strategic frameworks for design maturity and communication",
+                        "Representing DfE design practices at cross-government level"
+                    ]
+                }
+            },
+            {
+                "name": "Designing strategically",
+                "description": "Strategy involves creating a plan to achieve a team or organisation's objectives.",
+                "requirements": {
+                    "HEO": {
+                        "level": "Awareness level",
+                        "requirements": [
+                            "explain the importance of aligning to the strategy of an organisation",
+                            "describe how your design work aligns to the wider goals and vision of your team",
+                            "explain the value of using patterns and components in design"
+                        ]
+                    },
+                    "SEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "align your design work to both the goals and vision of your team and the strategic objectives of your organisation",
+                            "identify potential risks and use design to mitigate them",
+                            "identify opportunities and use design to take advantage of them",
+                            "contribute to the development of design patterns and components"
+                        ]
+                    },
+                    "G7": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "help a team understand how user-centred design helps it meet its goals",
+                            "help teams align their work to the goals and vision of their organisation",
+                            "use risks, opportunities and constraints in technology, systems and policy to shape design",
+                            "identify and create new design patterns and components"
+                        ]
+                    },
+                    "G6-Lead": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "help a team understand how user-centred design helps it meet its goals",
+                            "help teams align their work to the goals and vision of their organisation",
+                            "use risks, opportunities and constraints in technology, systems and policy to shape design",
+                            "identify and create new design patterns and components"
+                        ]
+                    },
+                    "G6-Head": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "work with others to ensure design becomes part of the development and implementation of your organisation's strategy",
+                            "work with leaders to ensure design is included in policy, technology and delivery processes early enough to inform effective decision-making",
+                            "enable use of patterns and components across the organisation"
+                        ]
+                    }
+                },
+                "dfe_examples": {
+                    "HEO": [
+                        "Understanding how your design work fits into DfE's strategic objectives",
+                        "Using the DfE design system and GOV.UK patterns in your work",
+                        "Contributing to team discussions about design direction",
+                        "Following established design patterns in your prototypes",
+                        "Participating in design system working groups"
+                    ],
+                    "SEO": [
+                        "Identifying opportunities to improve existing design patterns",
+                        "Contributing to the DfE design system",
+                        "Aligning design decisions with policy objectives",
+                        "Participating in strategic design planning sessions",
+                        "Creating new components for common user needs"
+                    ],
+                    "G7": [
+                        "Creating new patterns for the DfE design system",
+                        "Leading strategic design planning sessions",
+                        "Working with policy teams to shape service strategy",
+                        "Identifying opportunities for design system improvements",
+                        "Running design system working groups"
+                    ],
+                    "G6-Lead": [
+                        "Leading the development of the DfE design system",
+                        "Shaping design strategy across multiple services",
+                        "Working with senior stakeholders to align design and policy",
+                        "Establishing design principles for major programmes",
+                        "Creating frameworks for strategic design decisions"
+                    ],
+                    "G6-Head": [
+                        "Setting DfE's design system strategy",
+                        "Aligning design strategy with departmental objectives",
+                        "Working with senior leadership on design vision",
+                        "Establishing cross-government design partnerships",
+                        "Leading strategic design initiatives across DfE"
+                    ]
+                }
+            },
+            {
+                "name": "Designing together",
+                "description": "Designing together involves working with others to create better products and services.",
+                "requirements": {
+                    "HEO": {
+                        "level": "Awareness level",
+                        "requirements": [
+                            "explain different techniques for bringing together perspectives from multiple people to inform a design",
+                            "explain the importance of constructive feedback in the design process"
+                        ]
+                    },
+                    "SEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "effectively plan and run a design session with your team, users or stakeholders",
+                            "identify and engage the right people throughout the design process",
+                            "give and receive constructive design feedback"
+                        ]
+                    },
+                    "G7": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "advise others how to effectively plan and run design sessions with a team, users or stakeholders",
+                            "adapt a design session to ensure you achieve a useful outcome",
+                            "effectively involve the right people throughout the design process",
+                            "work across team or profession boundaries, for example with policy teams"
+                        ]
+                    },
+                    "G6-Lead": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "effectively plan and run design sessions that include senior leaders or stakeholders",
+                            "help teams connect and work across organisational boundaries",
+                            "coach other designers in how to involve stakeholders of any level in the design process",
+                            "develop or introduce more effective ways to design together"
+                        ]
+                    },
+                    "G6-Head": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "effectively plan and run design sessions that include senior leaders or stakeholders",
+                            "help teams connect and work across organisational boundaries",
+                            "coach other designers in how to involve stakeholders of any level in the design process",
+                            "develop or introduce more effective ways to design together"
+                        ]
+                    }
+                },
+                "dfe_examples": {
+                    "HEO": [
+                        "Participating in design workshops and team ceremonies",
+                        "Contributing to design crits and providing feedback",
+                        "Working with content designers and user researchers",
+                        "Collaborating with developers to implement designs",
+                        "Engaging with subject matter experts to understand requirements"
+                    ],
+                    "SEO": [
+                        "Facilitating design workshops within your team",
+                        "Running design crits and gathering feedback",
+                        "Working closely with policy and delivery teams",
+                        "Leading collaborative sketching sessions",
+                        "Coordinating with other professions on design decisions"
+                    ],
+                    "G7": [
+                        "Leading design sprints across multiple teams",
+                        "Facilitating cross-directorate workshops",
+                        "Mentoring other designers in collaborative practices",
+                        "Building relationships with stakeholders across DfE",
+                        "Creating inclusive design environments for team collaboration"
+                    ],
+                    "G6-Lead": [
+                        "Leading strategic design workshops with senior stakeholders",
+                        "Establishing collaborative design practices across teams",
+                        "Building partnerships across government departments",
+                        "Creating frameworks for effective team collaboration",
+                        "Mentoring teams in collaborative design methods"
+                    ],
+                    "G6-Head": [
+                        "Setting vision for collaborative design across DfE",
+                        "Building strategic partnerships across government",
+                        "Leading cross-government design initiatives",
+                        "Establishing department-wide design collaboration frameworks",
+                        "Creating culture of collaborative design practice"
+                    ]
+                }
+            },
+            {
+                "name": "Designing for everyone",
+                "description": "Designing for everyone involves creating products and services that are accessible and inclusive.",
+                "requirements": {
+                    "HEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "work with others to design and deliver inclusive, accessible and environmentally sustainable content or services that meet the needs of all users",
+                            "ensure a design meets appropriate standards, for example accessibility regulations, with support"
+                        ]
+                    },
+                    "SEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "work with others to design and deliver inclusive, accessible and environmentally sustainable content or services that meet the needs of all users",
+                            "ensure a design meets appropriate standards, for example accessibility regulations, with support"
+                        ]
+                    },
+                    "G7": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "advise teams on how to design inclusive, accessible and environmentally sustainable content or services",
+                            "design and deliver ethical content or services that consider the personal and social context of users",
+                            "ensure a design meets appropriate standards, for example accessibility regulations"
+                        ]
+                    },
+                    "G6-Lead": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "measurably improve the practice of inclusive, accessible and environmentally sustainable design in multiple teams or across your organisation",
+                            "help others understand and mitigate the influence of privilege and power on the design and delivery of content and services"
+                        ]
+                    },
+                    "G6-Head": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "measurably improve the practice of inclusive, accessible and environmentally sustainable design in multiple teams or across your organisation",
+                            "help others understand and mitigate the influence of privilege and power on the design and delivery of content and services"
+                        ]
+                    }
+                },
+                "dfe_examples": {
+                    "HEO": [
+                        "Running accessibility checks on your designs using standard tools",
+                        "Following GOV.UK accessibility guidelines in your work",
+                        "Testing your designs with different browsers and devices",
+                        "Creating inclusive content with content designers",
+                        "Using the DfE design system to ensure consistency"
+                    ],
+                    "SEO": [
+                        "Conducting basic accessibility testing with users",
+                        "Identifying and fixing accessibility issues in designs",
+                        "Working with assistive technology users",
+                        "Creating accessible prototypes for user research",
+                        "Documenting accessibility considerations in design histories"
+                    ],
+                    "G7": [
+                        "Leading accessibility testing sessions",
+                        "Mentoring others in inclusive design practices",
+                        "Working with the accessibility community",
+                        "Creating accessibility guidelines for teams",
+                        "Running inclusive design workshops"
+                    ],
+                    "G6-Lead": [
+                        "Setting accessibility standards for services",
+                        "Leading inclusive design initiatives across teams",
+                        "Building relationships with accessibility experts",
+                        "Creating frameworks for inclusive design",
+                        "Advocating for accessibility at senior levels"
+                    ],
+                    "G6-Head": [
+                        "Setting DfE's inclusive design strategy",
+                        "Leading cross-government accessibility initiatives",
+                        "Creating department-wide accessibility standards",
+                        "Building strategic partnerships with accessibility organizations",
+                        "Championing inclusive design at executive level"
+                    ]
+                }
+            },
+            {
+                "name": "Evidence-based design",
+                "description": "Evidence-based design involves using data and research to inform design decisions.",
+                "requirements": {
+                    "HEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "explain the importance of evidence in design",
+                            "use evidence from research and data to inform your design work",
+                            "document design decisions and the evidence that supports them"
+                        ]
+                    },
+                    "SEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "explain the importance of evidence in design",
+                            "use evidence from research and data to inform your design work",
+                            "document design decisions and the evidence that supports them"
+                        ]
+                    },
+                    "G7": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "help teams understand and use evidence in design",
+                            "identify gaps in evidence and work with others to fill them",
+                            "use evidence to influence design direction",
+                            "help teams document design decisions and evidence effectively"
+                        ]
+                    },
+                    "G6-Lead": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "establish processes for evidence-based design",
+                            "help teams gather and use evidence effectively",
+                            "use evidence to influence strategic decisions",
+                            "create frameworks for measuring design impact"
+                        ]
+                    },
+                    "G6-Head": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "establish processes for evidence-based design",
+                            "help teams gather and use evidence effectively",
+                            "use evidence to influence strategic decisions",
+                            "create frameworks for measuring design impact"
+                        ]
+                    }
+                },
+                "dfe_examples": {
+                    "HEO": [
+                        "Using analytics data to inform design decisions",
+                        "Working with user researchers to understand user needs",
+                        "Contributing to research analysis sessions",
+                        "Documenting design decisions based on evidence",
+                        "Using existing research to inform designs"
+                    ],
+                    "SEO": [
+                        "Planning research activities with user researchers",
+                        "Creating and testing design hypotheses",
+                        "Analyzing complex user research data",
+                        "Running A/B tests on design solutions",
+                        "Contributing to service assessments"
+                    ],
+                    "G7": [
+                        "Leading hypothesis-driven design approaches",
+                        "Setting up frameworks for evidence gathering",
+                        "Mentoring others in evidence-based design",
+                        "Working with data scientists on complex analysis",
+                        "Contributing to design research strategy"
+                    ],
+                    "G6-Lead": [
+                        "Establishing evidence-based design practices",
+                        "Leading service assessments",
+                        "Creating frameworks for measuring design impact",
+                        "Building evidence-based design culture",
+                        "Sharing insights across government"
+                    ],
+                    "G6-Head": [
+                        "Setting DfE's evidence-based design strategy",
+                        "Leading cross-government research initiatives",
+                        "Establishing department-wide measurement frameworks",
+                        "Creating strategic partnerships for research",
+                        "Championing evidence-based design at executive level"
+                    ]
+                }
+            },
+            {
+                "name": "Iterative design",
+                "description": "Iterative design involves creating and improving products and services through a process of testing and refinement.",
+                "requirements": {
+                    "HEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "explain the importance of iterative design",
+                            "iterate designs based on feedback and evidence",
+                            "create different versions of a design to explore options",
+                            "use prototypes to test ideas"
+                        ]
+                    },
+                    "SEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "explain the importance of iterative design",
+                            "iterate designs based on feedback and evidence",
+                            "create different versions of a design to explore options",
+                            "use prototypes to test ideas"
+                        ]
+                    },
+                    "G7": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "help teams work in an iterative way",
+                            "identify opportunities for iteration",
+                            "use appropriate methods to test and refine designs",
+                            "coach others in iterative design practices"
+                        ]
+                    },
+                    "G6-Lead": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "establish iterative design practices",
+                            "create frameworks for testing and refinement",
+                            "lead teams in agile and iterative methods",
+                            "measure the impact of iterations"
+                        ]
+                    },
+                    "G6-Head": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "establish iterative design practices",
+                            "create frameworks for testing and refinement",
+                            "lead teams in agile and iterative methods",
+                            "measure the impact of iterations"
+                        ]
+                    }
+                },
+                "dfe_examples": {
+                    "HEO": [
+                        "Creating prototypes in the DfE prototype kit",
+                        "Iterating designs based on user research",
+                        "Participating in design sprints",
+                        "Using design patterns and components",
+                        "Contributing to design histories"
+                    ],
+                    "SEO": [
+                        "Leading design sprints for your team",
+                        "Creating and maintaining design histories",
+                        "Running prototype testing sessions",
+                        "Iterating complex user journeys",
+                        "Mentoring others in prototyping"
+                    ],
+                    "G7": [
+                        "Leading design sprints across teams",
+                        "Setting up iterative design processes",
+                        "Managing complex service iterations",
+                        "Creating new design patterns",
+                        "Establishing prototyping best practices"
+                    ],
+                    "G6-Lead": [
+                        "Leading iterative design at programme level",
+                        "Establishing agile design practices",
+                        "Creating frameworks for rapid iteration",
+                        "Mentoring teams in iterative methods",
+                        "Setting standards for design histories"
+                    ],
+                    "G6-Head": [
+                        "Setting DfE's iterative design strategy",
+                        "Leading cross-government design initiatives",
+                        "Establishing department-wide design practices",
+                        "Creating strategic frameworks for iteration",
+                        "Championing iterative design at executive level"
+                    ]
+                }
+            },
+            {
+                "name": "Leading design",
+                "description": "Leadership and guidance involves providing effective leadership and management through team motivation, decision-making, risk management, mediation and professional development.",
+                "requirements": {
+                    "HEO": {
+                        "level": "Awareness level",
+                        "requirements": [
+                            "explain the role of user-centred design in an organisation",
+                            "describe typical leadership responsibilities in design",
+                            "identify leaders in your organisation that designers need to work with"
+                        ]
+                    },
+                    "SEO": {
+                        "level": "Working level",
+                        "requirements": [
+                            "lead and coordinate design work in your team, with support",
+                            "communicate the value of user-centred design to your team",
+                            "support other designers",
+                            "work with digital and data leaders in your organisation, when needed"
+                        ]
+                    },
+                    "G7": {
+                        "level": "Working level",
+                        "requirements": [
+                            "lead and coordinate design work in your team, with support",
+                            "communicate the value of user-centred design to your team",
+                            "support other designers",
+                            "work with digital and data leaders in your organisation, when needed"
+                        ]
+                    },
+                    "G6-Lead": {
+                        "level": "Practitioner level",
+                        "requirements": [
+                            "lead and coordinate design work in a team",
+                            "advocate for user-centred design with leaders outside of digital and data",
+                            "create an inclusive, productive environment for designers to work in",
+                            "mentor and coach other designers",
+                            "iterate and improve design processes within your team"
+                        ]
+                    },
+                    "G6-Head": {
+                        "level": "Expert level",
+                        "requirements": [
+                            "set a vision for and lead design across multiple teams or a whole organisation",
+                            "work effectively with senior leaders across your organisation or wider public sector",
+                            "support a culture of learning and experimentation in your organisation",
+                            "iterate and measurably improve design maturity within your organisation and its partners"
+                        ]
+                    }
+                },
+                "dfe_examples": {
+                    "HEO": [
+                        "Understanding DfE's design leadership structure",
+                        "Participating in design community activities",
+                        "Contributing to team design discussions",
+                        "Supporting junior team members",
+                        "Taking part in design knowledge sharing"
+                    ],
+                    "SEO": [
+                        "Leading design work within your team",
+                        "Mentoring junior designers",
+                        "Running design community sessions",
+                        "Contributing to design strategy",
+                        "Representing design in team ceremonies"
+                    ],
+                    "G7": [
+                        "Leading design across multiple teams",
+                        "Managing junior designers",
+                        "Running design community initiatives",
+                        "Contributing to design recruitment",
+                        "Setting design direction for services"
+                    ],
+                    "G6-Lead": [
+                        "Leading design at programme level",
+                        "Managing design teams",
+                        "Setting design community strategy",
+                        "Leading design recruitment",
+                        "Establishing design processes"
+                    ],
+                    "G6-Head": [
+                        "Setting DfE's design vision and strategy",
+                        "Leading the design profession",
+                        "Managing design leadership team",
+                        "Representing DfE design at cross-government level",
+                        "Setting strategic direction for design"
+                    ]
+                }
+            }
+        ]
+    }
+} 

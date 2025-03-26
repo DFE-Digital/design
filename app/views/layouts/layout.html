@@ -11,7 +11,10 @@
         <link rel="canonical" href="https://design.education.gov.uk/{{path}}">
         <link rel="stylesheet" href="/assets/css/govuk-frontend.min.css">
         <link rel="stylesheet" href="/assets/css/dfefrontend-2.0.0.min.css">
+       
         <link rel="stylesheet" href="/assets/css/app.css">
+        <link rel="stylesheet" href="/assets/css/header.css">
+      
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
         <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
         {% block head %}{% endblock %}
@@ -30,50 +33,11 @@
 
         {% include 'layouts/_cookiebanner.html'%}
         <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-        {% include 'layouts/_topnav.html' %}
-        {% include 'layouts/_services.html' %}
+     
+   
         {% include 'layouts/_header.html' %}
 
-        <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation">
-            <div class="govuk-width-container">
-                <div class="govuk-service-navigation__container">
-                    <span class="govuk-service-navigation__service-name">
-                        <a href="/" class="govuk-service-navigation__link {% if serviceNav == 'Home' %}govuk-service-navigation__item--active{% endif %}">
-                        Design
-                    </a>
-                    </span>
-                    <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-                        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle"
-                        aria-controls="navigation" hidden>
-                        Menu
-                    </button>
-                        <ul class="govuk-service-navigation__list" id="navigation">
-                            <li class="govuk-service-navigation__item {% if serviceNav == 'Design system' %}govuk-service-navigation__item--active{% endif %}">
-                                <a class="govuk-service-navigation__link" href="/design-system">Design system</a>
-                            </li>
-                            <li class="govuk-service-navigation__item {% if serviceNav == 'Standards' %}govuk-service-navigation__item--active{% endif %}">
-                                <a class="govuk-service-navigation__link" href="/standards">Standards</a>
-                            </li>
-                            <li class="govuk-service-navigation__item {% if serviceNav == 'Content design' %}govuk-service-navigation__item--active{% endif %}">
-                                <a class="govuk-service-navigation__link" href="/content-design">Content design</a>
-                            </li>
-                            <li class="govuk-service-navigation__item {% if serviceNav == 'Professions' %}govuk-service-navigation__item--active{% endif %}">
-                                <a class="govuk-service-navigation__link" href="/professions">Professions</a>
-                            </li>
-                            <li class="govuk-service-navigation__item {% if serviceNav == 'OurWork' %}govuk-service-navigation__item--active{% endif %}">
-                                <a class="govuk-service-navigation__link" href="/our-work">Our work</a>
-                            </li>
-                            <li class="govuk-service-navigation__item {% if serviceNav == 'Roadmap' %}govuk-service-navigation__item--active{% endif %}">
-                                <a class="govuk-service-navigation__link" href="/roadmap">Roadmap</a>
-                            </li>
-                            <li class="govuk-service-navigation__item {% if serviceNav == 'DesignOps' %}govuk-service-navigation__item--active{% endif %}">
-                                <a class="govuk-service-navigation__link" href="/designops">DesignOps</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </section>
+       
 
         {% from "govuk/components/pagination/macro.njk" import govukPagination %}
 
@@ -95,7 +59,8 @@
         <script src="/assets/js/app.js"></script>
         <script src="/assets/js/feedback.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
+        <script src="/assets/js/header.js"></script>
+      
         <script>
             hljs.highlightAll();
         </script>
