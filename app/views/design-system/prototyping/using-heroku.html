@@ -32,29 +32,29 @@
                     
                     Each dyno is a container that runs your code and costs about £5 per month to run. You should make sure you [shut down your dyno](/design-system/prototyping/tips-troubleshooting#shut-down-your-dyno) when you're not using it to save money.
 
-                    1. if you aren't signed in already, sign in to your Heroku account at [Heroku](https://heroku.com)
-                    2. look for an option which says 'Personal', click it and select the team you have been assigned to
-                    3. click on the 'New' button and select 'Create new app'
-                    4. you'll be taken to a page where you can create a new app
-                    5. in the 'App name' field, enter a name for your app (this will be part of the URL for your app)
-                    6. select 'Europe' as the location
-                    7. click the 'Create app' button
+                    1. If you aren't signed in already, sign in to your Heroku account at [Heroku](https://heroku.com)
+                    2. Look for an option which says 'Personal', click it and select the team you have been assigned to
+                    3. Click on the 'New' button and select 'Create new app'
+                    4. You'll be taken to a page where you can create a new app
+                    5. In the 'App name' field, enter a name for your app (this will be part of the URL for your app)
+                    6. Select 'Europe' as the location
+                    7. Click the 'Create app' button
 
                     You've now created a new app in Heroku where you can deploy your prototype code.
 
-                    You should be directed to a page called 'Deploy" with information on how to deploy your code to Heroku.
+                    You should be directed to a page called 'Deploy' with information on how to deploy your code to Heroku.
 
                     ## Deploy your code
 
                     We're going to connect your app in Heroku to your GitHub repository and deploy your code.
 
-                    1. click on the 'Deploy' tab
-                    2. in the 'Deployment method' section, select 'GitHub'
-                    3. in the 'Connect to GitHub' section, click the 'Connect to GitHub' button
-                    4. you'll be asked to sign in to your GitHub account
-                    5. once you've signed in, you'll be asked to authorise Heroku to access your GitHub account
-                    6. in the 'Connect to GitHub' section, search for the repository you created earlier
-                    7. click the 'Connect' button
+                    1. Click on the 'Deploy' tab
+                    2. In the 'Deployment method' section, select 'GitHub'
+                    3. In the 'Connect to GitHub' section, click the 'Connect to GitHub' button
+                    4. You'll be asked to sign in to your GitHub account
+                    5. Once you've signed in, you'll be asked to authorise Heroku to access your GitHub account
+                    6. In the 'Connect to GitHub' section, search for the repository you created earlier
+                    7. Click the 'Connect' button
 
                     You've now connected your app in Heroku to your GitHub repository.
 
@@ -66,13 +66,13 @@
 
                     > If you're deploying your code manually, you'll need to click the 'Deploy branch' button every time you want to update your app with new changes.
 
-                    For the purpose of this guide, lets deploy your code manually.
+                    For the purpose of this guide, let's deploy your code manually.
 
                     Click the 'Deploy branch' button. A panel will appear at the bottom of the page with information on the deployment process.
 
                     Once the deployment process has finished, you'll see a 'View' button. Click this to view your app in the browser. You can also click the 'Open app' button at the top of the page to open your app in a new tab.
 
-                    However, the first time you view your app, you'll be shown an error message saying a password hs not been set.
+                    However, the first time you view your app, you'll be shown an error message saying a password has not been set.
 
                     > Setting a password on your prototype is important as it stops people from accessing your prototype and accidentally thinking it's a real government service.
 
@@ -80,11 +80,11 @@
 
                     To set a password for your prototype, you need to add a config variable in Heroku.
 
-                    1. click on the 'Settings' tab in the Heroku app
-                    2. click the 'Reveal Config Vars' button
-                    3. in the 'Key' field, enter 'PASSWORD'
-                    4. in the 'Value' field, enter a password you want to use to access your prototype
-                    5. click the 'Add' button
+                    1. Click on the 'Settings' tab in the Heroku app
+                    2. Click the 'Reveal Config Vars' button
+                    3. In the 'Key' field, enter 'PASSWORD'
+                    4. In the 'Value' field, enter a password you want to use to access your prototype
+                    5. Click the 'Add' button
                     
                     Add another config variable with the key 'NODE_ENV' and the value 'production'.
 
@@ -92,7 +92,7 @@
 
                     Your browser will remember the password for your prototype until you clear your cookies. 
 
-                    ## Thats it!
+                    ## That's it!
 
                     You've now deployed your code to Heroku and set a password for your prototype. You can now share the URL with others to view your prototype.
 
