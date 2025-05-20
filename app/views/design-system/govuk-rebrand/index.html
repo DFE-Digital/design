@@ -1,0 +1,109 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/govuk-rebrand" %}
+{% set title = "GOV.UK Rebrand and DfE Header" %}
+{% set description = "Implementing the GOV.UK rebrand and DfE header in your DfE service" %}
+{% set sidenav = "Rebrand" %}
+
+{% block content %}
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Design system</span>
+                    {% markdown %}
+
+          # {{ title }}
+
+
+          > Speak to the [DesignOps team](mailto:designops@digital.education.gov.uk) if you have any questions about the rebrand or this guidance, or you are unsure of how to implement the changes.
+
+        ## About the rebrand
+
+          From 25 June 2025, a new brand and visual identity will be introduced to GOV.UK and products and services provided by DfE.
+
+          The new brand identity is available to use in GOV.UK Frontend 5.10.0. You can [read the release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0) for more information about the changes and how to implement them.
+
+                    ### What is changing
+
+          There are 4 main changes to the brand identity from 25 June, additional changes will be introduced over time. 
+
+          The initial changes are:
+
+   <ul>
+<li><a href="https://design-system.service.gov.uk/components/header/" rel="nofollow">GOV.UK header</a></li>
+<li><a href="https://design-system.service.gov.uk/components/footer/" rel="nofollow">GOV.UK footer</a></li>
+<li><a href="https://design-system.service.gov.uk/components/service-navigation/" rel="nofollow">Service navigation</a></li>
+<li><a href="https://design-system.service.gov.uk/components/cookie-banner/" rel="nofollow">Cookie banner</a></li>
+</ul>
+       
+       ### Where it will be used
+
+        
+          This new identity will be used across all GOV.UK website pages, GOV.UK Notify, GOV.UK Pay, GOV.UK Forms, the GOV.UK App and social media.
+
+          All services being developed now, and going live after 25 June 2025, should use the new brand identity.
+
+          ## DfE Header
+
+          Any services using the existing [DfE Header (Legacy)](/design-system/components/header) will need to update to the new brand identity, following the [DfE Header (Rebrand) page](/design-system/govuk-rebrand/dfe-header-rebrand) instructions.
+
+          The existing DfE Header (Legacy), will be decomissioned on 1 January 2026 and should not be used.
+
+
+          ## What you need to do
+
+          > You have until 31 December 2025 to complete the update for all DfE services which use either the GOV.UK header or DfE Header.
+
+            ### If you service is provided on a service.gov.uk domain
+
+            You must:
+
+            * update to [GOV.UK Frontend 5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0)
+            * update to use the new GOV.UK brand identity by following the [release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0)
+
+            Your product will use the new GOV.UK logotype and GDS Transport typeface.
+
+            You must do this as soon as possible, and complete the update before 31 December 2025.
+
+            ### If your service is internal to DfE or provided on the education.gov.uk domain
+
+            You must:
+
+            * update to [GOV.UK Frontend 5.10.0](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0)
+            * update to use the new GOV.UK brand identity by following the [release notes](https://github.com/alphagov/govuk-frontend/releases/tag/v5.10.0)
+            * update the logo to the DfE logo using the instructions and assets provided on the [DfE header (Rebrand) page](/design-system/govuk-rebrand/dfe-header-rebrand)
+            * update your typeface to use the [Inter typeface](/design-system/styles/typography)
+
+            You must do this as soon as possible, and complete the update before 31 December 2025.
+
+                   > The [DfE Header (Legacy)](/design-system/components/header) will be decomissioned on 1 January 2026 and should not be used.
+
+    
+            <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    You are not permitted to use the GDS Transport typeface on education.gov.uk or internal DfE services.
+  </strong>
+</div>
+
+You should also read the guidance for services in Private Beta phase as detailed in the [Digital Product Branding](https://standards.education.gov.uk/standard/digital-product-branding) standard. 
+
+## Exemptions
+
+If you believe your product is exempt from the rebrand, you must contact the [Digital Product Branding](https://standards.education.gov.uk/standard/digital-product-branding) standard owner to discuss.
+       
+
+                    {% endmarkdown %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
