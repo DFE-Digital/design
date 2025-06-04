@@ -1,0 +1,178 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/patterns/charts" %}
+{% set title = "Charts" %}
+{% set description = "Guidance for accessibility considerations you must make if you use charts in your designs." %}
+{% set mainClasses = 'govuk-!-padding-top-0 ' %}
+
+{% block content %}
+
+    <section class=" govuk-!-margin-top-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    <nav class="dfe-vertical-nav govuk-!-margin-top-2">
+
+                        <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+            design system</a>
+
+                        <ul class="dfe-vertical-nav__section">
+
+                            <li class="dfe-vertical-nav__section-item">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns">Patterns</a>
+                            </li>
+
+                            <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns/charts">Charts</a>
+                            </li>
+
+                            <li class="dfe-vertical-nav__section-item">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns/select-a-school">Select a school</a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl govuk-!-margin-top-1">Patterns</span>
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                    <p class="govuk-body">{{description}}</p>
+
+                    <h2 class="govuk-heading-l">Visual elements</h2>
+
+                    <p class="govuk-body">Using charts can introduce difficulties for users with cognitive or visual impairments.</p>
+
+                    <p class="govuk-body">Think about whether users with different needs will understand the information your chart represents.</p>
+
+                    <h3 class="govuk-heading-m">Colour and contrast</h3>
+
+                    <p class="govuk-body">Your data must not rely on colour differences to be understood. Users with conditions like colour blindness may find this difficult.</p>
+
+                    <p class="govuk-body">Avoid using:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>patterns or textures</li>
+                        <li>shaded backgrounds</li>
+                        <li>shadows</li>
+                    </ul>
+
+                    <p class="govuk-body">
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" rel="noopener noreferrer" class="govuk-link" target="_blank">WCAG (Web Content Accessibility Guidelines)</a> describe the minimum contrast levels content must have.</p>
+
+                    <h3 class="govuk-heading-m">Item spacing</h3>
+
+                    <p class="govuk-body">Include spaces between bars and other elements of your chart to make them easier to compare.</p>
+
+                    <p class="govuk-body">Gaps between bars should be narrower than a single bar, but the correct spacing will depend on your situation.</p>
+
+                    <p class="govuk-body">You should test this with your users.</p>
+
+                    <h3 class="govuk-heading-m">Fixed images</h3>
+
+                    <p class="govuk-body">Use the SVG file format if you embed pictures that represent data. These scale when zoomed and can be easier to read.</p>
+
+                    <p class="govuk-body">You must include a text alternative for fixed images.</p>
+
+                    <h2 class="govuk-heading-l">Text alternatives</h2>
+
+                    <p class="govuk-body">Your charts must also have at least one text version of the same information. The type you choose should fit how you expect your chart to be used.</p>
+
+                    <h3 class="govuk-heading-m">If users only need the data</h3>
+
+                    <p class="govuk-body">Where users are likely to understand the context of your chart and only need to see the data it contains, use a table in an accessible format.</p>
+
+                    <h3 class="govuk-heading-m">If context is needed or if there's a message</h3>
+
+                    <p class="govuk-body">Use a text description if you need to describe what your chart is about or to summarise what it shows.</p>
+
+                    <p class="govuk-body">A text description should:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>be in the main body copy</li>
+                        <li>describe the context</li>
+                        <li>outline what the data shows</li>
+                    </ul>
+
+                    <p class="govuk-body">A text description should not:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>be place inside alt text (alternative text)</li>
+                        <li>repeat the chart title</li>
+                        <li>describe each element</li>
+                        <li>go into detail about data</li>
+                    </ul>
+
+                    <p class="govuk-body">You can use a written description and a table together.</p>
+
+                    <h2 class="govuk-heading-l">Alt text</h2>
+
+                    <p class="govuk-body">If your chart is a static image, it must also have an alt text description.</p>
+
+                    <p class="govuk-body">Alt text should:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>explain the chart type</li>
+                        <li>describe the information it contains</li>
+                        <li>be separate from the written description</li>
+                    </ul>
+
+                    <h2 class="govuk-heading-l">Titles</h2>
+
+                    <p class="govuk-body">Your chart must have at least a headline title, but it's better if it also has a statistical subtitle.</p>
+
+                    <p class="govuk-body">The titles should be within the body text and not as images of text.</p>
+
+                    <h3 class="govuk-heading-m">Headline title</h3>
+
+                    <p class="govuk-body">This should communicate the headline message of the chart.</p>
+
+                    
+
+                    <div class="govuk-inset-text">
+
+                    For example:
+
+                    'Increase in the number of people completing apprenticeships'.
+                    </div>
+
+                    <h3 class="govuk-heading-m">Statistical subtitle</h3>
+
+                    <p class="govuk-body">A statistical subtitle should say:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>what the data is</li>
+                        <li>the geography it relates to</li>
+                        <li>the time period shown</li>
+                    </ul>
+
+                    
+
+                    <div class="govuk-inset-text">
+                    For example:
+                    
+                    'Figure 1: Number of people completing an apprenticeship, England, 1994 to 2024'.
+                    </div>
+
+                    <h2 class="govuk-heading-l">Keyboard navigation</h2>
+
+                    <p class="govuk-body">Make sure that keyboard users can use the tab key to navigate into your chart and interact with it as a mouse user would be able to.</p>
+
+                    <h2 class="govuk-heading-l">Test your charts are accessible</h2>
+
+                    <p class="govuk-body">
+                        <a href="https://accessibility.education.gov.uk/knowledge-hub/tools-testing" rel="noopener noreferrer" class="govuk-link" target="_blank">Install and run accessibility testing tools</a> to help you spot problems with your visual data.</p>
+
+                    <p class="govuk-body">You can also check your finished designs against the <a href="https://analysisfunction.civilservice.gov.uk/documenttype/checklist/" rel="noopener noreferrer" class="govuk-link" target="_blank">Government Analysis Function checklist</a>.</p>
+
+                    <h2 class="govuk-heading-l">More help</h2>
+
+                    <p class="govuk-body">You can see more detailed information about accessible charts on the <a href="https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/" rel="noopener noreferrer" class="govuk-link" target="_blank">Government Analysis Function data visualisation pages</a>.</p>
+
+                </div>
+            </section>
+
+        {% endblock %}

@@ -6,90 +6,93 @@
 {% set description = "Patterns are a combination of styles and components which enable a user to complete something consistently." %}
 {% set mainClasses = 'govuk-!-padding-top-0 ' %}
 
-
-
 {% block content %}
 
+  <section class=" govuk-!-margin-top-5">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
 
-<section class=" govuk-!-margin-top-5">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
 
-      <div class="govuk-grid-column-one-quarter">
+          <nav class="dfe-vertical-nav govuk-!-margin-top-2">
 
-        <nav class="dfe-vertical-nav govuk-!-margin-top-2">
-
-          <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+            <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
             design system</a>
 
-          <ul class="dfe-vertical-nav__section">
+            <ul class="dfe-vertical-nav__section">
 
-            <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
-              <a class="dfe-vertical-nav__link" href="/design-system/patterns">Patterns</a>
-            </li>
+              <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                <a class="dfe-vertical-nav__link" href="/design-system/patterns">Patterns</a>
+              </li>
 
+              <li class="dfe-vertical-nav__section-item">
+                <a class="dfe-vertical-nav__link" href="/design-system/patterns/charts">Charts</a>
+              </li>
 
-            <li class="dfe-vertical-nav__section-item">
-              <a class="dfe-vertical-nav__link" href="/design-system/patterns/select-a-school">Select a school</a>
-            </li>
+              <li class="dfe-vertical-nav__section-item">
+                <a class="dfe-vertical-nav__link" href="/design-system/patterns/select-a-school">Select a school</a>
+              </li>
 
-          </ul>
+            </ul>
 
+          </nav>
 
+        </div>
 
-        </nav>
+        <div class="govuk-grid-column-three-quarters">
 
-      </div>
+          <h1 class="govuk-heading-xl">{{title}}</h1>
 
-      <div class="govuk-grid-column-three-quarters">
+          <p class="govuk-body">{{description}}</p>
 
-        <h1 class="govuk-heading-xl">{{title}}</h1>
-
-        <p class="govuk-body">{{description}}</p>
-
-      
-
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Backlog</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Pattern</th>
-              <th scope="col" class="govuk-table__header">Summary</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/12" class="govuk-link"
-                  target="_blank">Ask users for feedback</a></th>
-              <td class="govuk-table__cell">Allows users to give feedback about a page, feature or overall service.</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/8" class="govuk-link"
-                  target="_blank">Search</a></th>
-              <td class="govuk-table__cell">Different types of search across a list, table, page, or product.</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/13" class="govuk-link"
-                  target="_blank">Show performance data</a></th>
-              <td class="govuk-table__cell">Displaying performance data about a product or service consistently.
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Backlog</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Pattern</th>
+                <th scope="col" class="govuk-table__header">Summary</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="https://github.com/DFE-Digital/dfe-frontend/issues/12" class="govuk-link"
+                  target="_blank">Ask users for feedback</a>
+                </th>
+                <td class="govuk-table__cell">Allows users to give feedback about a page, feature or overall service.</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="https://github.com/DFE-Digital/dfe-frontend/issues/8" class="govuk-link"
+                  target="_blank">Search</a>
+                </th>
+                <td class="govuk-table__cell">Different types of search across a list, table, page, or product.</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="https://github.com/DFE-Digital/dfe-frontend/issues/13" class="govuk-link"
+                  target="_blank">Show performance data</a>
+                </th>
+                <td class="govuk-table__cell">Displaying performance data about a product or service consistently.
               </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="https://github.com/DFE-Digital/dfe-frontend/issues/9" class="govuk-link"
-                  target="_blank">Video</a></th>
-              <td class="govuk-table__cell">Presenting video along with transcripts ensuring they are accessible.</td>
-            </tr>
-          </tbody>
-        </table>
-  
-        <p class="govuk-body">If you have a pattern you want to see in the design system, <a
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="https://github.com/DFE-Digital/dfe-frontend/issues/9" class="govuk-link"
+                  target="_blank">Video</a>
+                </th>
+                <td class="govuk-table__cell">Presenting video along with transcripts ensuring they are accessible.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="govuk-body">If you have a pattern you want to see in the design system, <a
             href="/design-system/dfe-frontend/contribute" class="govuk-link">follow the contribution guidelines</a>.</p>
-  
+
+        </div>
 
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 {% endblock %}
