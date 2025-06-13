@@ -32,13 +32,13 @@
 
                     {% markdown %}
 
-This is how to best use [the Ministry of Justice’s filter component](https://design-patterns.service.justice.gov.uk/components/filter/) to help users of DfE services refine their search results.
+This is how to best use [the Ministry of Justice's filter component](https://design-patterns.service.justice.gov.uk/components/filter/) to help users of DfE services refine their search results.
 
 ## Adding MoJ components to your prototype
 
 You can read the guidance on [how to use the MoJ design system in the GOV.UK prototyping kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-coded-prototypes/).
 
-If you’re using Figma, there is [an MoJ Figma kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-figma-prototypes/) which contains the filter for use in prototypes.
+If you're using Figma, there is [an MoJ Figma kit](https://design-patterns.service.justice.gov.uk/prototyping/setting-up-figma-prototypes/) which contains the filter for use in prototypes.
 
 ## Use filters on the left first
 
@@ -59,6 +59,16 @@ For example, when you need to show data in a table across the full width of a pa
 Test each approach with your users and choose the one that works best for them.
 
 <img src="/assets/images/filter2.png" alt="Filter on the top" style="width: 50%;" class="example-img">
+
+## Put the 'Apply filters' button below the filters
+
+Place the button at the bottom of the filters. This is helpful for all users.
+
+It stops them having to navigate down to select filters, and then back up to apply them.
+
+DfE accessibility audits have highlighted this as an issue for people using assitive technology.
+
+    <img src="/assets/images/dummy-content-filter-example.png" alt="'Apply filters' button at the bottom of the list" style="width: 60%;" class="example-img">
 
 ## Things to consider when using filters
 
@@ -90,19 +100,6 @@ Reasons for this include:
 Think about ways you might be able to make this more visible to mobile users. 
 
 Test your approach and [share your findings with the DfE patterns and components group](https://ukgovernmentdfe.slack.com/archives/C04JZ5YL8F7) on DfE Slack, or [contact the MoJ design system team](https://ukgovernmentdigital.slack.com/archives/CJ6QDRDGC) on cross-gov Slack.
-
-
-### Moving the “Apply filters” button
-
-Adding an apply filters button at the bottom of a long set of filters is helpful for users.
-
-It stops them having to scroll down a long list of filters and go back up to apply them.
-
-Try this approach in prototypes and testing if you have a long list of filters. 
-
-Tell us about your findings and share your insights.
-
-    <img src="/assets/images/filter5.png" alt="Filter on the top" style="width: 60%;" class="example-img">
 
 
 ### Categories with many filter options
@@ -138,7 +135,6 @@ We want to hear from you if you’ve been in a team that have used any of these 
 
 Services using versions of the MoJ filters component include:
 
-* Family hubs
 * Find and apply for initial teacher training
 * Find apprenticeship training
 * Manage free school projects
