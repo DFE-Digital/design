@@ -2,58 +2,53 @@
 
 {% set title = "Our work" %}
 {% set description = "Find out about some of the work we do in the Department for Education through our project
-updates and design histories." %}
+ updates and design histories." %}
 {% set serviceNav = "OurWork" %}
 {% set path = "/our-work" %}
 {% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
 
 {% block content %}
-<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+  <section style="background-color:#ffffff; border-bottom: 1px solid #b1b4b6;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
     <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-three-quarters">
-                <h1 class="govuk-heading-xl">{{title}}</h1>
-                <p class="govuk-body-l">{{description}}</p>
-            </div>
-           
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h1 class="govuk-heading-xl">{{title}}</h1>
+          <p class="govuk-body-l">{{description}}</p>
         </div>
+
+      </div>
     </div>
-</section>
+  </section>
 
-
-
-<section style="background-color:#ffffff;" class="govuk-!-padding-top-7">
+  <section style="background-color:#ffffff;" class="govuk-!-padding-top-7">
 
     <div class="govuk-width-container">
 
-        <h2 class="govuk-heading-l">Current projects</h2>
+      <h2 class="govuk-heading-l">Current projects</h2>
 
-        <div class="dfe-grid-container govuk-!-margin-top-5">
+      <div class="dfe-grid-container govuk-!-margin-top-5">
 
-            {% for project in work%}
+        {% for project in work%}
 
-            <div class="dfe-card">
-               
-                    <img src="{{project.attributes.FeaturedImage.data.attributes.url}}" alt="">
-            
-                <div class="dfe-card-container">
-                    <h2 class="govuk-heading-m">
-                        <a href="/our-work/project/{{project.attributes.Slug}}"
+          <div class="dfe-card">
+
+            <img src="{{project.attributes.FeaturedImage.data.attributes.url}}" alt="">
+
+            <div class="dfe-card-container">
+              <h2 class="govuk-heading-m">
+                <a href="/our-work/project/{{project.attributes.Slug}}"
                             class="govuk-link govuk-link--no-visited-state dfe-card-link--header">{{project.attributes.Title}}</a>
-                    </h2>
-                    <p>{{project.attributes.Description}}</p>
-                    </p>
-                    <p class="govuk-body-s">{{project.attributes.Team}}</p>
-                </div>
-            </div>
-            {% endfor %}
-           
+              </h2>
+              <p>{{project.attributes.Description}}</p>
+            </p>
+            <p class="govuk-body-s">{{project.attributes.Team}}</p>
+          </div>
         </div>
+      {% endfor %}
+
     </div>
+  </div>
 
 </section>
-
-
-
 
 {% endblock %}

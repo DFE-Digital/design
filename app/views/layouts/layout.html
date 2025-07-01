@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="govuk-template govuk-template--rebranded">
 
     <head>
         <meta charset="utf-8">
@@ -9,9 +9,11 @@
         <meta name="theme-color" content="#00294a">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="canonical" href="https://design.education.gov.uk/{{path}}">
-        <link rel="stylesheet" href="/assets/css/govuk-frontend.min.css">
+        <link rel="stylesheet" href="/assets/css/govuk-frontend-5.11.0.min.css">
         <link rel="stylesheet" href="/assets/css/dfefrontend-2.0.0.min.css">
         <link rel="stylesheet" href="/assets/css/app.css">
+
+        <link rel="stylesheet" href="/assets/css/crm.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
         <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
         {% block head %}{% endblock %}
@@ -87,7 +89,7 @@
         {% include 'layouts/_footer.html' %}
 
         <script type="module">
-            import {initAll} from '/assets/js/govuk-frontend.min.js';
+            import {initAll} from '/assets/js/govuk-frontend-5.11.0.min.js';
             initAll();
         </script>
         <script src="/assets/js/dfefrontend-2.0.0.min.js"></script>

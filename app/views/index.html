@@ -1,192 +1,290 @@
-{% extends "layouts/layout.html" %}
+{% extends "layouts/layout.html" %} {% set serviceNav = "Home" %} {% set path =
+"" %} {% set title = "Design" %} {% set description = "Standards and guidance to
+help you design consistent, accessible, user-centred products and services in
+the Department for Education." %} {% set mainClasses = 'govuk-!-padding-top-0
+govuk-!-padding-bottom-0' %} {% block content %}
+<section
+  style="background-color: #ffffff"
+  class="govuk-!-padding-top-9 govuk-!-padding-bottom-7"
+>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <h1
+          class="govuk-heading-xl govuk-!-font-size-80 govuk-!-margin-top-5"
+          style="color: #003a69"
+        >
+          {{title}}
+        </h1>
+        <p class="govuk-body-l">{{description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-{% set serviceNav = "Home" %}
-{% set path = "" %}
-{% set title = "Design" %}
-{% set description = "Standards and guidance to help you design consistent, accessible, user-centred products and services in the
-Department for Education." %}
+<section
+  style="background-color: #ffffff"
+  class="govuk-!-margin-top-0 govuk-!-margin-bottom-9"
+>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">Popular</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <ul class="govuk-list dfe-action-list">
+          <li>
+            <a
+              href="/standards"
+              class="govuk-link govuk-link--no-visited-state"
+            >
+              Standards
+              <svg
+                class="chevron dfe-icon dfe-icon__chevron-right"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/design-system"
+              class="govuk-link govuk-link--no-visited-state"
+            >
+              DfE Frontend
+              <svg
+                class="chevron dfe-icon dfe-icon__chevron-right"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/professions/framework"
+              class="govuk-link govuk-link--no-visited-state"
+            >
+              Design skills and capability framework
+              <svg
+                class="chevron dfe-icon dfe-icon__chevron-right"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-{% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
-
-{% block content %}
-    <section style="background-color:#ffffff;" class="govuk-!-padding-top-9 govuk-!-padding-bottom-7">
-        <div class="govuk-width-container">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-three-quarters">
-                    <h1 class="govuk-heading-xl govuk-!-font-size-80 govuk-!-margin-top-5" style="color: #003a69">{{title}}</h1>
-                    <p class="govuk-body-l">{{description}}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section style="background-color:#ffffff;" class="govuk-!-margin-top-0 govuk-!-margin-bottom-9">
-        <div class="govuk-width-container">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h2 class="govuk-heading-l">Popular</h2>
-                </div>
-                <div class="govuk-grid-column-one-half">
-
-                    <ul class="govuk-list dfe-action-list">
-                        <li>
-                            <a href="/standards" class="govuk-link govuk-link--no-visited-state">
-                            Standards
-                            <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path
-                                    d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/design-system" class="govuk-link govuk-link--no-visited-state">
-                            DfE Frontend
-                            <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path
-                                    d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/professions/framework" class="govuk-link govuk-link--no-visited-state">
-                            Design skills and capability framework
-                            <svg class="chevron dfe-icon dfe-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path
-                                    d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section style="
+<section
+  style="
     background: url('/assets/images/gradient-bg.png') no-repeat center center;
     background-size: cover;
-    background-color: #ffffff;" 
-    class="govuk-!-padding-top-9  govuk-!-padding-bottom-9 govuk-!-margin-top-9">
+    background-color: #ffffff;
+  "
+  class="govuk-!-padding-top-9 govuk-!-padding-bottom-9 govuk-!-margin-top-9"
+>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+      <div class="govuk-grid-column-three-quarters">
+        <h2 class="govuk-heading-xl" style="color: #003a69">
+          Roadmap for design
+        </h2>
+        <p class="govuk-body-l">
+          Read the plan and actions that we're developing to continue to mature
+          the design profession in DfE.
+        </p>
 
-        <div class="govuk-width-container">
-            <div class="govuk-grid-row govuk-!-padding-top-9 govuk-!-padding-bottom-9">
-                <div class="govuk-grid-column-three-quarters">
-                    <h2 class="govuk-heading-xl" style="color: #003a69">
-                       Roadmap for design
-                    </h2>
-                    <p class="govuk-body-l">Read the plan and actions that we're developing to continue to mature the design profession in DfE.</p>
+        <p class="govuk-body-l govuk-!-font-weight-bold">
+          <a href="/roadmap" class="govuk-link">Read the roadmap</a>
+        </p>
+      </div>
+      <div class="govuk-grid-column-one-quarter">
+        <img
+          src="/assets/images/strategy.png"
+          alt=""
+          class="govuk-!-margin-top-5 roadmap-icon"
+          style="width: 70%"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <p class="govuk-body-l govuk-!-font-weight-bold">
-                        <a href="/roadmap" class="govuk-link">Read the roadmap</a>
-                    </p>
-
-                </div>
-                <div class="govuk-grid-column-one-quarter">
-                    <img src="/assets/images/strategy.png" alt="" class="govuk-!-margin-top-5 roadmap-icon" style="width: 70%">
-                </div>
-            </div>
+<section
+  style="background-color: #ffffff"
+  class="govuk-!-margin-top-9 govuk-!-padding-top-5 govuk-!-padding-bottom-7"
+>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-three-quarters">
+            <h2 class="govuk-heading-l govuk-!-margin-bottom-5">What's new</h2>
+          </div>
+          <div class="govuk-grid-column-one-quarter govuk-!-text-align-right">
+            <p class="govuk-body">
+              <a href="/news" class="govuk-link govuk-!-font-weight-bold"
+                >Read more
+                <span class="govuk-visually-hidden">news articles</span></a
+              >
+            </p>
+          </div>
         </div>
-    </section>
 
-    <section style="background-color:#ffffff;" class="govuk-!-margin-top-9 govuk-!-padding-top-5 govuk-!-padding-bottom-7">
-        <div class="govuk-width-container">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-
-                    <div class="govuk-grid-row">
-                        <div class="govuk-grid-column-three-quarters">
-                            <h2 class="govuk-heading-l govuk-!-margin-bottom-5">What's new</h2>
-                        </div>
-                        <div class="govuk-grid-column-one-quarter govuk-!-text-align-right">
-                            <p class="govuk-body">
-                                <a href="/news" class="govuk-link govuk-!-font-weight-bold">Read more <span class="govuk-visually-hidden">news articles</span></a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="dfe-grid-container">
-
-                        <div class="dfe-card">
-                            <img src="/assets/images/roadmap.png" alt="" class="dfe-card-image">
-                            <div class="dfe-card-container">
-
-                                <h3 class="govuk-heading-m">
-                                    <a href="/news/roadmap-for-design"
-                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Roadmap for design</a>
-                                </h3>
-                                <p class="govuk-body">Sharing our plan for design in DfE</p>
-                                <p class="govuk-body-s govuk-!-margin-bottom-0">5 March 2025</p>
-                            </div>
-                        </div>
-                        <div class="dfe-card">
-                            <img src="/assets/images/language.png" alt="" class="dfe-card-image">
-                            <div class="dfe-card-container">
-                                <h3 class="govuk-heading-m">
-                                    <a href="/news/plain-language"
-                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Plain Language standard and guidance published</a>
-                                </h3>
-                                <p class="govuk-body">As we further develop our design standards, we've now published the Plain Language standard.</p>
-                                <p class="govuk-body-s govuk-!-margin-bottom-0">25 February 2025</p>
-                            </div>
-                        </div>
-                        <div class="dfe-card">
-                            <img src="/assets/images/branding.png" alt="" class="dfe-card-image">
-                            <div class="dfe-card-container">
-                                <h3 class="govuk-heading-m">
-                                    <a href="/news/digital-product-branding-standard"
-                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header">New Digital Product Branding standard approved</a>
-                                </h3>
-                                <p class="govuk-body">Ensuring design consistency and branding across DfE's digital products.</p>
-                                <p class="govuk-body-s govuk-!-margin-bottom-0">25 February 2025</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="dfe-grid-container">
+          <div class="dfe-card">
+            <img
+              src="/assets/images/roadmap.png"
+              alt=""
+              class="dfe-card-image"
+            />
+            <div class="dfe-card-container">
+              <h3 class="govuk-heading-m">
+                <a
+                  href="/news/roadmap-for-design"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header"
+                  >Roadmap for design</a
+                >
+              </h3>
+              <p class="govuk-body">Sharing our plan for design in DfE</p>
+              <p class="govuk-body-s govuk-!-margin-bottom-0">5 March 2025</p>
             </div>
-        </div>
-    </section>
-
-    <section style="background-color:#f3f2f1;" class="govuk-!-margin-top-0 govuk-!-padding-top-5 govuk-!-padding-bottom-7">
-        <div class="govuk-width-container">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-
-                    <div class="govuk-grid-row govuk-!-margin-top-7">
-                        <div class="govuk-grid-column-full">
-                            <h2 class="govuk-heading-l  govuk-!-margin-bottom-5">Working in DfE</h2>
-                           
-                                <div class="dfe-grid-container">
-                                <div class="dfe-card">
-                                    <img src="/assets/images/gdd.png" alt="" class="dfe-card-image">
-                                    <div class="dfe-card-container">
-                                        <h3 class="govuk-heading-m">
-                                            <a href="/professions/framework"
-                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header"
-                                    target="_blank">Design skills framework</a>
-                                        </h3>
-                                        <p class="govuk-body">Find out what skills are needed when working in design in government.</p>
-                                    </div>
-                                </div>
-                                <div class="dfe-card">
-                                    <img src="/assets/images/design-histories.png" alt="" class="dfe-card-image">
-                                    <div class="dfe-card-container">
-                                        <h3 class="govuk-heading-m">
-                                            <a href="https://design-histories.education.gov.uk"
-                                    class="govuk-link govuk-link--no-visited-state dfe-card-link--header"
-                                    target="_blank">Design histories</a>
-                                        </h3>
-                                        <p class="govuk-body">Find out how our services change over time with design histories.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="dfe-card">
+            <img
+              src="/assets/images/language.png"
+              alt=""
+              class="dfe-card-image"
+            />
+            <div class="dfe-card-container">
+              <h3 class="govuk-heading-m">
+                <a
+                  href="/news/plain-language"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header"
+                  >Plain Language standard and guidance published</a
+                >
+              </h3>
+              <p class="govuk-body">
+                As we further develop our design standards, we've now published
+                the Plain Language standard.
+              </p>
+              <p class="govuk-body-s govuk-!-margin-bottom-0">
+                25 February 2025
+              </p>
             </div>
+          </div>
+          <div class="dfe-card">
+            <img
+              src="/assets/images/branding.png"
+              alt=""
+              class="dfe-card-image"
+            />
+            <div class="dfe-card-container">
+              <h3 class="govuk-heading-m">
+                <a
+                  href="/news/digital-product-branding-standard"
+                  class="govuk-link govuk-link--no-visited-state dfe-card-link--header"
+                  >New Digital Product Branding standard approved</a
+                >
+              </h3>
+              <p class="govuk-body">
+                Ensuring design consistency and branding across DfE's digital
+                products.
+              </p>
+              <p class="govuk-body-s govuk-!-margin-bottom-0">
+                25 February 2025
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  style="background-color: #f3f2f1; border-bottom: 1px solid #b1b4b6"
+  class="govuk-!-margin-top-0 govuk-!-padding-top-5 govuk-!-padding-bottom-7"
+>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-grid-row govuk-!-margin-top-7">
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l govuk-!-margin-bottom-5">
+              Working in DfE
+            </h2>
+
+            <div class="dfe-grid-container">
+              <div class="dfe-card">
+                <img
+                  src="/assets/images/gdd.png"
+                  alt=""
+                  class="dfe-card-image"
+                />
+                <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                    <a
+                      href="/professions/framework"
+                      class="govuk-link govuk-link--no-visited-state dfe-card-link--header"
+                      target="_blank"
+                      >Design skills framework</a
+                    >
+                  </h3>
+                  <p class="govuk-body">
+                    Find out what skills are needed when working in design in
+                    government.
+                  </p>
+                </div>
+              </div>
+              <div class="dfe-card">
+                <img
+                  src="/assets/images/design-histories.png"
+                  alt=""
+                  class="dfe-card-image"
+                />
+                <div class="dfe-card-container">
+                  <h3 class="govuk-heading-m">
+                    <a
+                      href="https://design-histories.education.gov.uk"
+                      class="govuk-link govuk-link--no-visited-state dfe-card-link--header"
+                      target="_blank"
+                      >Design histories</a
+                    >
+                  </h3>
+                  <p class="govuk-body">
+                    Find out how our services change over time with design
+                    histories.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

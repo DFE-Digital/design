@@ -4,86 +4,87 @@
 {% set path = "professions" %}
 {% set title = "Professions" %}
 {% set description = "Our professions and communities of practice come together to share work, develop skills and
-capability across
+ capability across
 design." %}
 {% set mainClasses = 'govuk-!-padding-top-0 govuk-!-padding-bottom-0' %}
 
 {% block content %}
 
-<section style="background-color:#f3f2f1;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+  <section style="background-color:#ffffff; border-bottom: 1px solid #b1b4b6;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-4">
     <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-three-quarters">
-                <h1 class="govuk-heading-xl">{{title}}</h1>
-                <p class="govuk-body-l">{{description}}</p>
-            </div>
-           
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h1 class="govuk-heading-xl">{{title}}</h1>
+          <p class="govuk-body-l">{{description}}</p>
         </div>
+
+      </div>
     </div>
-</section>
+  </section>
 
-
-
-<section style="background-color:#ffffff;" class="govuk-!-padding-top-7">
+  <section style="background-color:#ffffff;" class="govuk-!-padding-top-7">
     <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-                <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
-                    <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
-                        <div class="govuk-grid-column-one-half text-column">
-                            <h2 class="govuk-heading-l govuk-!-margin-top-3">Design skills and capability framework</h2>
-                            <p class="govuk-body">The design skills capability framework helps you understand the
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-!-margin-top-3 govuk-!-margin-bottom-5">
+            <div class="govuk-grid-row split-panel" style="background: #f3f2f1;">
+              <div class="govuk-grid-column-one-half text-column">
+                <h2 class="govuk-heading-l govuk-!-margin-top-3">Design skills and capability framework</h2>
+                <p class="govuk-body">The design skills capability framework helps you understand the
                                 skills you need across design profession and enables you to identify opportunities to
                                 develop your skills.</p>
-                            <p class="govuk-!-margin-bottom-0">
-                                <a href="/professions/framework" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">View
+                <p class="govuk-!-margin-bottom-0">
+                  <a href="/professions/framework" class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-bold">View
                                     the design framework</a>
-                            </p>
-                        </div>
-                        <div class="govuk-grid-column-one-half image-column">
-                            <div class="image-container" style="background-image: url('/assets/images/gdd.png');">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </p>
+              </div>
+              <div class="govuk-grid-column-one-half image-column">
+                <div class="image-container" style="background-image: url('/assets/images/gdd.png');"></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section style="background-color:#ffffff;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-7">
+  <section style="background-color:#ffffff;" class="govuk-!-padding-top-7 govuk-!-padding-bottom-7">
     <div class="govuk-width-container">
-    <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-l">Community of practice</h2>
-            <p class="govuk-body">Our professions and communities of practice come together to share work, develop
+          <h2 class="govuk-heading-l">Community of practice</h2>
+          <p class="govuk-body">Our professions and communities of practice come together to share work, develop
                 skills and
                 capability across the design profession.</p>
-            <div class="dfe-grid-container">
-                <div class="dfe-card">
-                    <div class="dfe-card-container">
-                        <h2 class="govuk-heading-m"><a href="/professions/working-groups"
+          <div class="dfe-grid-container">
+            <div class="dfe-card">
+              <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                  <a href="/professions/working-groups"
                                 class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Working
-                                groups</a></h2>
-                        <p class="govuk-body">Working groups are cross-disciplinary teams that work together to
+                                groups</a>
+                </h2>
+                <p class="govuk-body">Working groups are cross-disciplinary teams that work together to
                             solve problems and
                             develop better ways of doing things.</p>
-                    </div>
-                </div>
-                <div class="dfe-card">
-                    <div class="dfe-card-container">
-                        <h2 class="govuk-heading-m"><a href="/professions/meetups"
+              </div>
+            </div>
+            <div class="dfe-card">
+              <div class="dfe-card-container">
+                <h2 class="govuk-heading-m">
+                  <a href="/professions/meetups"
                                 class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Meetups and
-                                events</a></h2>
-                        <p class="govuk-body">Meetups and events are opportunities to learn, share and connect with
+                                events</a>
+                </h2>
+                <p class="govuk-body">Meetups and events are opportunities to learn, share and connect with
                             others in the
                             design profession.</p>
-                    </div>
-                </div>
-               
+              </div>
             </div>
-        </div>
-    </div>
-</section>
 
-{% endblock %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {% endblock %}

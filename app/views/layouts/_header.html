@@ -1,52 +1,18 @@
-{% from "header/macro.njk" import header %}
+ <header class="govuk-header" data-module="govuk-header">
+        <div class="govuk-header__container govuk-width-container">
+            <div class="govuk-header__logo">
+                <a href="#" class="govuk-header__link govuk-header__link--homepage">
+                    <img src="/public/images/department-for-education_white.png" alt="Department for Education" class="govuk-header__logotype" />
+                </a>
+            </div>
+            <div class="govuk-header__content">
+                <nav aria-label="Menu" class="govuk-header__navigation govuk-header__navigation--end">
+                    <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden="">
+              Menu
+            </button>
 
-
-{% block header %}
-
-{{ header({
-"showNav": "false",
-"showSearch": "true",
-"showHeaderActionLinks": "false",
-"logoPath": "assets/images",
-"searchAction": "/search",
-"searchInputName": "q",
-"logoAltText": "Department for Education",
-"homeHref": "https://design.education.gov.uk",
-"selectedNav": view,
-"service": {
-"name": "",
-"serviceUrl": "/"
-},
-"headerActionLinks": [
-{
-"url" : "/designops",
-"label" : "Contact"
-}
-],
-"primaryLinks": [
-{
-"url" : "/",
-"label" : "Home"
-}, {
-"url" : "/design-system/styles",
-"label" : "Styles"
-}, {
-"url" : "/design-system/components",
-"label" : "Components"
-}, {
-"url" : "/design-system/patterns",
-"label" : "Patterns"
-}, {
-"url" : "/content",
-"label" : "Content"
-},{
-"url" : "/standards",
-"label" : "Standards"
-}, {
-"url" : "/community",
-"label" : "Community"
-}
-]
-})
-}}
-{% endblock %}
+                  
+                </nav>
+            </div>
+        </div>
+    </header>
