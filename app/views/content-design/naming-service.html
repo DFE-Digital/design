@@ -1,0 +1,102 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Content design" %}
+{% set path = "content-design/naming-service" %}
+{% set title = "Naming your service" %}
+{% set description = "How to name your product or service to ensure it meets user needs and government standards." %}
+
+{% block content %}
+
+    <section>
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    {% include "./_sidenav.html" %}
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl">Content design</span>
+
+                    {% markdown %}
+
+                # {{title}}
+
+                The name of your product or service is important. A good name makes it easier for people to: 
+
+                *   find your service 
+                *   understand what it does 
+                *   know what outcome they can achieve by using it 
+
+                Policy and service teams should follow guidance in the GOV.UK Service Manual for [naming your service](https://www.gov.uk/service-manual/design/naming-your-service). 
+                
+                This guidance applies to both internal and external services.
+
+                ## Do not use terms like portal, hub, or other technical jargon
+
+                <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                            <span class="govuk-visually-hidden">Warning</span>
+                             Your service could be prevented from going into beta or live and even be required to be taken offline if it does not have an appropriate name. 
+                            </strong>
+                    </div>
+
+                You should avoid calling your service things like 'portal', 'hub', 'dashboard', or similar abstract terms.  
+
+                These words:
+
+                * are not plain language, most users do not use or understand them 
+
+                * do not describe what the service does, users should know what they can do just by reading the name 
+
+                * add cognitive load, especially for users with lower digital confidence or neurodivergence 
+
+                * often feel vague or corporate 
+
+                * risk excluding users or causing confusion 
+
+
+                ## You'll be asked to demonstrate how you named your service
+
+                Your service will go through either a discovery peer review or a service assessment. 
+
+                By the end of discovery, you should have proposed a working name. 
+
+                During alpha, you must test the name with users, and be confident that: 
+
+                * it accurately reflects what the service does 
+                * users understand it without explanation 
+                * it aligns with [GOV.UK naming conventions](https://www.gov.uk/guidance/choose-your-govuk-domain-name)
+
+                ## Standards you must meet
+
+                Your service name will be reviewed as part of meeting the following  standards: 
+
+                * [Digital Product Branding (DDTS-301)](https://standards.education.gov.uk/standard/digital-product-branding) 
+                * [Plain Language standard (DDTS-529)](https://standards.education.gov.uk/standard/plain-language)  
+                * [GOV.UK Service Standard](https://www.gov.uk/service-manual/service-standard)
+
+                This means your service name must: 
+
+                * use simple, clear words 
+                * be understandable to all users 
+                * avoid jargon, acronyms, and internal terms          
+ 
+                ## Resources to help you name your service
+
+                Posts and examples to provide context and evidence for naming services:
+                
+                * [How the “Teacher self-service portal” was renamed](https://design-histories.education.gov.uk/access-your-teaching-qualifications/naming-the-service), can help run a service naming workshop
+
+                * [Naming the Manage an academy transfer service](https://dfedigital.blog.gov.uk/2022/03/11/how-to-name-a-service/), is an example of naming an internal service
+                
+                * [Good services are verbs, bad services are nouns](https://designnotes.blog.gov.uk/2015/06/22/good-services-are-verbs-2/), gov guidance to name your service
+                {% endmarkdown %}
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
