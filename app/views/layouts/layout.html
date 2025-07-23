@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="/assets/css/govuk-frontend-5.11.0.min.css">
         <link rel="stylesheet" href="/assets/css/dfefrontend-2.0.0.min.css">
         <link rel="stylesheet" href="/assets/css/app.css">
-
+        <link rel="stylesheet" href="/assets/css/_header.css">
         <link rel="stylesheet" href="/assets/css/crm.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
         <meta name="google-site-verification" content="78BmMoejRsC4auIyTs5JLkClgxvWYGDAYMIikFxTNPA" />
@@ -33,8 +33,8 @@
 
         {% include 'layouts/_cookiebanner.html'%}
         <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-        {% include 'layouts/_topnav.html' %}
-        {% include 'layouts/_services.html' %}
+
+   
         {% include 'layouts/_header.html' %}
 
         <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation">
@@ -89,16 +89,16 @@
         {% include 'layouts/_feedback.html' %}
         {% include 'layouts/_footer.html' %}
 
-        <script type="module">
-            import {initAll} from '/assets/js/govuk-frontend-5.11.0.min.js';
-            initAll();
-        </script>
+        <script src="/assets/js/header.js"></script>
         <script src="/assets/js/dfefrontend-2.0.0.min.js"></script>
         <script src="/assets/js/cookies.js"></script>
         <script src="/assets/js/app.js"></script>
         <script src="/assets/js/feedback.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
+    <script type="module">
+            import {initAll} from '/assets/js/govuk-frontend-5.11.0.min.js';
+            initAll();
+        </script>
         <script>
             hljs.highlightAll();
         </script>
