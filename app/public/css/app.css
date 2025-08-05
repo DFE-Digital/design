@@ -363,6 +363,29 @@ a:focus {
     margin-bottom: 0px;
 }
 
+/* Copy button states */
+.copy-btn.govuk-button--success {
+    background-color: #00703c;
+    border-color: #00703c;
+    color: #ffffff;
+}
+
+.copy-btn.govuk-button--success:hover {
+    background-color: #005a30;
+    border-color: #005a30;
+}
+
+.copy-btn.govuk-button--warning {
+    background-color: #d4351c;
+    border-color: #d4351c;
+    color: #ffffff;
+}
+
+.copy-btn.govuk-button--warning:hover {
+    background-color: #b31b1b;
+    border-color: #b31b1b;
+}
+
 
 /* DfE Flex Navigation */
 
