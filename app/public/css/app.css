@@ -289,6 +289,27 @@
     box-shadow: none;
 }
 
+/* Action List with responsive 2 column grid layout*/
+   
+@media (min-width: 641px) {
+    .dfe-action-list-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .dfe-action-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 10px;
+}
+
+    .dfe-action-list-grid li {
+        display: grid;
+        width: calc(100% - 10px);
+    }
+}
+
 
 /* Chevron Icon */
 
