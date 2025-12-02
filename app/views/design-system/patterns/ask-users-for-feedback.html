@@ -1,0 +1,656 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/patterns/ask-users-for-feedback" %}
+{% set title = "Ask users for feedback" %}
+{% set description = "A pattern that allows users to give feedback about a page, feature or overall service." %}
+{% set mainClasses = 'govuk-!-padding-top-0 ' %}
+
+{% block content %}
+
+    <section class=" govuk-!-margin-top-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    <nav class="dfe-vertical-nav govuk-!-margin-top-2">
+
+                        <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+            design system</a>
+
+                        <ul class="dfe-vertical-nav__section">
+                            <li class="dfe-vertical-nav__section-item">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns">Patterns</a>
+                            </li>
+
+                            <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                            <a class="dfe-vertical-nav__link" href="/design-system/patterns/ask-users-for-feedback">Ask users for feedback</a>
+                            </li>
+                            <li class="dfe-vertical-nav__section-item">
+                            <a class="dfe-vertical-nav__link" href="/design-system/patterns/charts">Charts</a>
+                            </li>
+                            <li class="dfe-vertical-nav__section-item">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns/select-a-school">Select a school</a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                                  <span class="govuk-caption-xl govuk-!-margin-top-1">Patterns</span>
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                    <p class="govuk-body">{{description}}</p>
+
+<!--                    <picture>
+                        <source srcset="/assets/images/select-a-school-example.webp" type="image/webp">
+                        <img style="max-width: 100%" src="/assets/images/select-a-school-example.png"
+              alt="Screenshot showing a text field with the label 'Enter school or college name or URN'. Inside the text field, 'Five' has been entered. Below the text field, a box lists 10 schools that include the word 'Give' in their name, with the word 'Five' highlighted using bold and an underline."
+              class="dfeuk-img-bordered dfeuk-img-bordered--no-background-colour">
+
+                    </picture>
+
+-->
+                    <h2 class="govuk-heading-l">When to use this pattern</h2>
+
+                    <p class="govuk-body">Use this pattern to collect user feedback at the end of journeys and tasks.</p>
+
+                    <p class="govuk-body">You can use it in along with the <a
+              href="https://design-system.service.gov.uk/components/phase-banner/" rel="noopener noreferrer" class="govuk-link"
+              target="_blank">phase banner</a> feedback link.</p>
+
+                    <h2 class="govuk-heading-l">When not to use this pattern</h2>
+
+                    <p class="govuk-body">Do not use this pattern part way through a user's journey or task.</p>
+
+                    <h2 class="govuk-heading-l">Background</h2>
+
+                    <p class="govuk-body">Typically products and services collect user feedback through a link in the phase banner.</p>
+
+                    <p class="govuk-body">However, users rarely interact with the phase banner. This makes it hard for teams to collect feedback on their service.</p>
+
+                    <p class="govuk-body">We have gathered evidence and examples from across DfE to find ways of asking for feedback that get better response rates.</p>
+
+                    <p class="govuk-body">This pattern is the result.</p>
+                        
+                    <p class="govuk-body">Evidence shows this is an effective way to gather feedback from a user when they have finished the thing they set out to do.</p>
+
+                    <h2 class="govuk-heading-l">How it works</h2>
+
+                    <p class="govuk-body">There are 3 variants of this pattern.</p>
+
+                    <p class="govuk-body">The first 2 variants should be used to get feedback at the end of a journey or task.</p>
+
+                    <p class="govuk-body">The third should be used to get feedback on a specific page.</p>
+
+                    <h2 class="govuk-heading-l">Get feedback on a journey or task</h2>
+
+                    <p class="govuk-body">Ask users for feedback at the end of a journey or task.</p>
+
+                    <p class="govuk-body">DfE services have found this increases response rates.</p>
+
+                    <h3 class="govuk-heading-m">Integrate the feedback form in the content</h3>
+
+                    <p class="govuk-body">Integrate your feedback form into pages of the service when asking for feedback at the end of multi-page journey.</p>
+
+                    <p class="govuk-body">Make the form optional.</p>
+
+                    <p class="govuk-body">Teaching Vacancies and Early Years Training both integrated their feedback forms in their content, and saw huge increases in user feedback.</p>
+
+                    <h3 class="govuk-heading-m">Variant 1: Teaching Vacancies</h3>
+
+                    <p class="govuk-body">On Teaching Vacancies, the team got 263 responses to the form over a 10 month period before intergrating the form on their confirmation pages.</p>
+
+                    <p class="govuk-body">After integrating the form, they got 9741 responses over the same 10 month period the following year.</p>
+
+                    <p class="govuk-body">That's more than a 3000% increase in response rate.</p>
+
+                    <div class="govuk-tabs" data-module="govuk-tabs">
+                    <h2 class="govuk-tabs__title">
+                        Contents
+                    </h2>
+                    <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#example-variant-1">
+                            Example
+                        </a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#html-variant-1">
+                            HTML
+                        </a>
+                        </li>
+                    </ul>
+                    <div class="govuk-tabs__panel" id="example-variant-1">
+                        <h2 class="govuk-heading-l">Example</h2>
+                        <table class="govuk-table">
+                           <div class="govuk-width-container">
+                           <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+                              <div class="govuk-grid-row">
+                              <div class="govuk-grid-column-two-thirds">
+                                 <div class="govuk-panel govuk-panel--confirmation">
+                                 <h1 class="govuk-panel__title">
+                                    Application complete
+                                 </h1>
+                                 <div class="govuk-panel__body">
+                                    Your reference number<br><strong>HDJ2123F</strong>
+                                 </div>
+                                 </div>
+                                 <p class="govuk-body">We have sent you a confirmation email.</p>
+                                 <h2 class="govuk-heading-m">What happens next</h2>
+                                 <p class="govuk-body">
+                                 We've sent your application to Hackney Electoral Register Office.
+                                 </p>
+                                 <p class="govuk-body">
+                                 They will contact you either to confirm your registration, or to ask for more information.
+                                 </p>
+                              </div>
+                              </div>
+                           </main>
+                           </div>
+<form class="new_jobseekers_job_application_feedback_form" id="new_jobseekers_job_application_feedback_form"
+action="/jobseekers/job_applications/bd16edc8-396c-4d6e-b12e-2c904df817b1/feedback#new_jobseekers_job_application_feedback_form"
+accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token"
+   value="V8eVxyj-vvunaXhcr1zi8pfZIwotZ92g9ROw-thif_8yXQ9Azs9MI-2sqR8mhmKa-8QC4GAjtybiO3ht9GwXVw" autocomplete="off" />
+<h2 class="govuk-heading-m">Have time to share some feedback?</h2>
+<p class="govuk-body">Your feedback can help us improve the service to better support you as well as schools around
+   England.</p>
+<div class="govuk-form-group">
+   <fieldset class="govuk-fieldset">
+   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h3 class="govuk-fieldset__heading">How satisfied are you with your experience of using Teaching Vacancies?</h3>
+   </legend><input value="" autocomplete="off" type="hidden" name="jobseekers_job_application_feedback_form[rating]"
+      id="jobseekers_job_application_feedback_form_rating" />
+   <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item"><input
+         id="jobseekers-job-application-feedback-form-rating-highly-satisfied-field" class="govuk-radios__input"
+         type="radio" value="highly_satisfied" name="jobseekers_job_application_feedback_form[rating]" /><label
+         for="jobseekers-job-application-feedback-form-rating-highly-satisfied-field"
+         class="govuk-label govuk-radios__label">Highly satisfied</label></div>
+      <div class="govuk-radios__item"><input
+         id="jobseekers-job-application-feedback-form-rating-somewhat-satisfied-field" class="govuk-radios__input"
+         type="radio" value="somewhat_satisfied" name="jobseekers_job_application_feedback_form[rating]" /><label
+         for="jobseekers-job-application-feedback-form-rating-somewhat-satisfied-field"
+         class="govuk-label govuk-radios__label">Somewhat satisfied</label></div>
+      <div class="govuk-radios__item"><input id="jobseekers-job-application-feedback-form-rating-neither-field"
+         class="govuk-radios__input" type="radio" value="neither"
+         name="jobseekers_job_application_feedback_form[rating]" /><label
+         for="jobseekers-job-application-feedback-form-rating-neither-field"
+         class="govuk-label govuk-radios__label">Neither satisfied nor dissatisfied</label></div>
+      <div class="govuk-radios__item"><input
+         id="jobseekers-job-application-feedback-form-rating-somewhat-dissatisfied-field" class="govuk-radios__input"
+         type="radio" value="somewhat_dissatisfied" name="jobseekers_job_application_feedback_form[rating]" /><label
+         for="jobseekers-job-application-feedback-form-rating-somewhat-dissatisfied-field"
+         class="govuk-label govuk-radios__label">Somewhat dissatisfied</label></div>
+      <div class="govuk-radios__item"><input
+         id="jobseekers-job-application-feedback-form-rating-highly-dissatisfied-field" class="govuk-radios__input"
+         type="radio" value="highly_dissatisfied" name="jobseekers_job_application_feedback_form[rating]" /><label
+         for="jobseekers-job-application-feedback-form-rating-highly-dissatisfied-field"
+         class="govuk-label govuk-radios__label">Highly dissatisfied</label></div>
+   </div>
+   </fieldset>
+</div>
+<div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="1200"><label
+   for="jobseekers-job-application-feedback-form-comment-field" class="govuk-label govuk-label--s">Do you have any
+   suggestions on how we should improve the service? (optional<span class='govuk-visually-hidden'>
+      field</span>)</span></label><textarea id="jobseekers-job-application-feedback-form-comment-field"
+   class="govuk-textarea govuk-js-character-count" rows="10"
+   aria-describedby="jobseekers-job-application-feedback-form-comment-field-info"
+   name="jobseekers_job_application_feedback_form[comment]">
+</textarea><span id="jobseekers-job-application-feedback-form-comment-field-info"
+   class="govuk-hint govuk-character-count__message">You can enter up to 1200 characters</span></div>
+<div class="govuk-form-group">
+   <fieldset class="govuk-fieldset">
+   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h3 class="govuk-fieldset__heading">Would you like to participate in our research?</h3>
+   </legend>
+   <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item"><input
+         id="jobseekers-job-application-feedback-form-user-participation-response-interested-field"
+         class="govuk-radios__input"
+         data-aria-controls="jobseekers-job-application-feedback-form-user-participation-response-interested-conditional"
+         type="radio" value="interested"
+         name="jobseekers_job_application_feedback_form[user_participation_response]" /><label
+         for="jobseekers-job-application-feedback-form-user-participation-response-interested-field"
+         class="govuk-label govuk-radios__label">Yes</label></div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+      id="jobseekers-job-application-feedback-form-user-participation-response-interested-conditional">
+      <div class="govuk-form-group"><label for="jobseekers-job-application-feedback-form-email-field"
+         class="govuk-label">What is your email address?</label>
+         <div class="govuk-hint" id="jobseekers-job-application-feedback-form-email-hint">We&#39;ll only use this to
+         tell you about opportunities to take part in user research that helps us improve Department for Education
+         services.</div><input id="jobseekers-job-application-feedback-form-email-field" class="govuk-input"
+         aria-describedby="jobseekers-job-application-feedback-form-email-hint"
+         value="user@example.com" required="required" type="email"
+         name="jobseekers_job_application_feedback_form[email]" />
+      </div>
+      <div class="govuk-form-group"><label for="jobseekers-job-application-feedback-form-occupation-field"
+         class="govuk-label">Occupation</label>
+         <div class="govuk-hint" id="jobseekers-job-application-feedback-form-occupation-hint">We&#39;ll only use
+         this to tell you about opportunities to take part in user research that is relevant to you.</div><textarea
+         id="jobseekers-job-application-feedback-form-occupation-field" class="govuk-textarea" rows="1"
+         aria-describedby="jobseekers-job-application-feedback-form-occupation-hint" required="required"
+         name="jobseekers_job_application_feedback_form[occupation]">
+</textarea>
+      </div>
+      </div>
+      <div class="govuk-radios__item"><input
+         id="jobseekers-job-application-feedback-form-user-participation-response-uninterested-field"
+         class="govuk-radios__input" type="radio" value="uninterested"
+         name="jobseekers_job_application_feedback_form[user_participation_response]" /><label
+         for="jobseekers-job-application-feedback-form-user-participation-response-uninterested-field"
+         class="govuk-label govuk-radios__label">No</label></div>
+   </div>
+   </fieldset>
+</div><button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button"
+   data-prevent-double-click="true">Submit feedback</button>
+</form>
+                        </table>
+                    </div>
+                    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html-variant-1">
+                        <h2 class="govuk-heading-l">HTML</h2>
+                        <pre class="app-code app-code--block app-code__language--yaml" tabindex="0">
+                           <code>
+&lt;div class="govuk-width-container"&gt;
+   &lt;main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main"&gt;
+      &lt;div class="govuk-grid-row"&gt;
+            &lt;div class="govuk-grid-column-two-thirds"&gt;
+               &lt;div class="govuk-panel govuk-panel--confirmation"&gt;
+                  &lt;h1 class="govuk-panel__title"&gt;
+                        Application complete
+                  &lt;/h1&gt;
+                  &lt;div class="govuk-panel__body"&gt;
+                        Your reference number&lt;br&gt;&lt;strong&gt;HDJ2123F&lt;/strong&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+               &lt;p class="govuk-body"&gt;We have sent you a confirmation email.&lt;/p&gt;
+               &lt;h2 class="govuk-heading-m"&gt;What happens next&lt;/h2&gt;
+               &lt;p class="govuk-body"&gt;
+                  We’ve sent your application to Hackney Electoral Register Office.
+               &lt;/p&gt;
+               &lt;p class="govuk-body"&gt;
+                  They will contact you either to confirm your registration, or to ask for more information.
+               &lt;/p&gt;
+            &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/main&gt;
+&lt;/div&gt;
+
+&lt;h2 class="govuk-heading-m"&gt;Have time to share some feedback?&lt;/h2&gt;
+&lt;p class="govuk-body"&gt;Your feedback can help us improve how you can list jobs.&lt;/p&gt;
+
+&lt;form class="new_publishers_job_listing_feedback_form" id="new_publishers_job_listing_feedback_form"
+      action="/organisation/jobs/835376e4-cc12-4b0d-bf62-6a3bb5807fba/feedback" accept-charset="UTF-8" method="post"&gt;
+   &lt;input type="hidden" name="authenticity_token"
+         value="ujt-4_JJIwgsUYQlcx_5HI4eY1DACHWzeav5tB_2O4R_a8ch_-toqSrPnSoxgUg4M7yKae06B3HQ-qdn-yR3Qg"
+         autocomplete="off" /&gt;
+
+   &lt;div class="govuk-form-group"&gt;
+      &lt;fieldset class="govuk-fieldset"&gt;
+            &lt;legend class="govuk-fieldset__legend govuk-fieldset__legend--s"&gt;
+               &lt;h3 class="govuk-fieldset__heading"&gt;How satisfied are you with the job listing process on Teaching Vacancies?&lt;/h3&gt;
+            &lt;/legend&gt;
+
+            &lt;input value="" autocomplete="off" type="hidden" name="publishers_job_listing_feedback_form[rating]"
+                  id="publishers_job_listing_feedback_form_rating" /&gt;
+
+            &lt;div class="govuk-radios" data-module="govuk-radios"&gt;
+               &lt;div class="govuk-radios__item"&gt;
+                  &lt;input id="publishers-job-listing-feedback-form-rating-highly-satisfied-field"
+                           class="govuk-radios__input" type="radio" value="highly_satisfied"
+                           name="publishers_job_listing_feedback_form[rating]" /&gt;
+                  &lt;label for="publishers-job-listing-feedback-form-rating-highly-satisfied-field"
+                           class="govuk-label govuk-radios__label"&gt;Highly satisfied&lt;/label&gt;
+               &lt;/div&gt;
+
+               &lt;div class="govuk-radios__item"&gt;
+                  &lt;input id="publishers-job-listing-feedback-form-rating-somewhat-satisfied-field"
+                           class="govuk-radios__input" type="radio" value="somewhat_satisfied"
+                           name="publishers_job_listing_feedback_form[rating]" /&gt;
+                  &lt;label for="publishers-job-listing-feedback-form-rating-somewhat-satisfied-field"
+                           class="govuk-label govuk-radios__label"&gt;Somewhat satisfied&lt;/label&gt;
+               &lt;/div&gt;
+
+               &lt;div class="govuk-radios__item"&gt;
+                  &lt;input id="publishers-job-listing-feedback-form-rating-neither-field"
+                           class="govuk-radios__input" type="radio" value="neither"
+                           name="publishers_job_listing_feedback_form[rating]" /&gt;
+                  &lt;label for="publishers-job-listing-feedback-form-rating-neither-field"
+                           class="govuk-label govuk-radios__label"&gt;Neither satisfied nor dissatisfied&lt;/label&gt;
+               &lt;/div&gt;
+
+               &lt;div class="govuk-radios__item"&gt;
+                  &lt;input id="publishers-job-listing-feedback-form-rating-somewhat-dissatisfied-field"
+                           class="govuk-radios__input" type="radio" value="somewhat_dissatisfied"
+                           name="publishers_job_listing_feedback_form[rating]" /&gt;
+                  &lt;label for="publishers-job-listing-feedback-form-rating-somewhat-dissatisfied-field"
+                           class="govuk-label govuk-radios__label"&gt;Somewhat dissatisfied&lt;/label&gt;
+               &lt;/div&gt;
+
+               &lt;div class="govuk-radios__item"&gt;
+                  &lt;input id="publishers-job-listing-feedback-form-rating-highly-dissatisfied-field"
+                           class="govuk-radios__input" type="radio" value="highly_dissatisfied"
+                           name="publishers_job_listing_feedback_form[rating]" /&gt;
+                  &lt;label for="publishers-job-listing-feedback-form-rating-highly-dissatisfied-field"
+                           class="govuk-label govuk-radios__label"&gt;Highly dissatisfied&lt;/label&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+      &lt;/fieldset&gt;
+   &lt;/div&gt;
+
+   &lt;div class="govuk-form-group"&gt;
+      &lt;label for="publishers-job-listing-feedback-form-comment-field" class="govuk-label govuk-label--s"&gt;
+            Do you have any suggestions on how we should improve the service? (optional&lt;span class='govuk-visually-hidden'&gt; field&lt;/span&gt;)
+      &lt;/label&gt;
+      &lt;textarea id="publishers-job-listing-feedback-form-comment-field" class="govuk-textarea" rows="4"
+                  name="publishers_job_listing_feedback_form[comment]"&gt;&lt;/textarea&gt;
+   &lt;/div&gt;
+
+   &lt;div class="govuk-form-group"&gt;
+      &lt;fieldset class="govuk-fieldset"&gt;
+            &lt;legend class="govuk-fieldset__legend govuk-fieldset__legend--s"&gt;
+               &lt;h3 class="govuk-fieldset__heading"&gt;Would you like to participate in our research?&lt;/h3&gt;
+            &lt;/legend&gt;
+
+            &lt;div class="govuk-radios" data-module="govuk-radios"&gt;
+               &lt;div class="govuk-radios__item"&gt;
+                  &lt;input id="publishers-job-listing-feedback-form-user-participation-response-interested-field"
+                           class="govuk-radios__input"
+                           data-aria-controls="publishers-job-listing-feedback-form-user-participation-response-interested-conditional"
+                           type="radio" value="interested"
+                           name="publishers_job_listing_feedback_form[user_participation_response]" /&gt;
+                  &lt;label for="publishers-job-listing-feedback-form-user-participation-response-interested-field"
+                           class="govuk-label govuk-radios__label"&gt;Yes&lt;/label&gt;
+               &lt;/div&gt;
+
+               &lt;div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                     id="publishers-job-listing-feedback-form-user-participation-response-interested-conditional"&gt;
+                  &lt;div class="govuk-form-group"&gt;
+                        &lt;label for="publishers-job-listing-feedback-form-email-field" class="govuk-label"&gt;
+                           What is your email address?
+                        &lt;/label&gt;
+                        &lt;div class="govuk-hint" id="publishers-job-listing-feedback-form-email-hint"&gt;
+                           We'll only use this to tell you about opportunities to take part in user research that helps us improve Department for Education services.
+                        &lt;/div&gt;
+                        &lt;input id="publishers-job-listing-feedback-form-email-field" class="govuk-input"
+                              aria-describedby="publishers-job-listing-feedback-form-email-hint" value="user@example.com"
+                              required="required" type="email" name="publishers_job_listing_feedback_form[email]" /&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="govuk-form-group"&gt;
+                        &lt;label for="publishers-job-listing-feedback-form-occupation-field" class="govuk-label"&gt;
+                           Occupation
+                        &lt;/label&gt;
+                        &lt;div class="govuk-hint" id="publishers-job-listing-feedback-form-occupation-hint"&gt;
+                           We'll only use this to tell you about opportunities to take part in user research that is relevant to you.
+                        &lt;/div&gt;
+                        &lt;textarea id="publishers-job-listing-feedback-form-occupation-field" class="govuk-textarea" rows="1"
+                                 aria-describedby="publishers-job-listing-feedback-form-occupation-hint" required="required"
+                                 name="publishers_job_listing_feedback_form[occupation]"&gt;&lt;/textarea&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+
+               &lt;div class="govuk-radios__item"&gt;
+                  &lt;input id="publishers-job-listing-feedback-form-user-participation-response-uninterested-field"
+                           class="govuk-radios__input" type="radio" value="uninterested"
+                           name="publishers_job_listing_feedback_form[user_participation_response]" /&gt;
+                  &lt;label for="publishers-job-listing-feedback-form-user-participation-response-uninterested-field"
+                           class="govuk-label govuk-radios__label"&gt;No&lt;/label&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+      &lt;/fieldset&gt;
+   &lt;/div&gt;
+
+   &lt;div class="govuk-button-group"&gt;
+      &lt;button type="submit" formnovalidate="formnovalidate" class="govuk-button"
+               data-module="govuk-button" data-prevent-double-click="true"&gt;Submit feedback&lt;/button&gt;
+      &lt;a class="govuk-link govuk-link--no-visited-state" href="/organisation/jobs"&gt;Skip feedback&lt;/a&gt;
+   &lt;/div&gt;
+&lt;/form&gt;
+                           </code>
+                        </pre>
+                        </table>
+                    </div>
+                    </div>
+
+                    <h3 class="govuk-heading-m">Variant 2: Early Years Training</h3>
+
+                    <p class="govuk-body">In Early Years Training, the team got 241 feedback responses over a 3 month period before integrating the feedback form as a series of questions at the end of a training course.</p>
+
+                    <p class="govuk-body">After integration, the team got 860 responses in a three month period.</p>
+
+                    <p class="govuk-body">That's an increase of 256.85%.</p>
+
+                    <p class="govuk-body"><b>IMAGE EXAMPLE HERE</b></p>
+
+                    <h2 class="govuk-heading-l">Get feedback on a specific page</h2>
+
+                    <p class="govuk-body">There is a third variant you can use if you want to gather feedback on a specific page.</p>
+
+                    <h3 class="govuk-heading-m">Variant 3: Ask at the bottom of the page</h3>
+
+                    <p class="govuk-body">Collect feedback about a specifc page by showing the user a "Tell us what you think of this page" heading and a "Give feedback" at the bottom of that page.</p>
+
+                    <p class="govuk-body">When the button is selected, show a free text field to enter feedback.</p>
+
+                    <h3 class="govuk-heading-m">Example: DfE design manuals</h3>
+
+                    <p class="govuk-body">You can see an example of feedback forms at the bottom of all pages in the DfE design manual.</p>
+
+                                        <div class="govuk-tabs" data-module="govuk-tabs">
+                    <h2 class="govuk-tabs__title">
+                        Contents
+                    </h2>
+                    <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#example-variant-2">
+                            Example
+                        </a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#html-variant-2">
+                            HTML
+                        </a>
+                        </li>
+                    </ul>
+                    <div class="govuk-tabs__panel" id="example-variant-2">
+                        <h2 class="govuk-heading-l">Example</h2>
+                        <table class="govuk-table">
+                           <section class="dfe-feedback">
+                           <div class="govuk-width-container">
+                              <div class="govuk-grid-row">
+                                 <div class="govuk-grid-column-full">
+                                    <div class="dfe-feedback-banner">
+                                       <div class="dfe-feedback-banner--content">
+                                          <div class="dfe-feedback-banner--flex">
+                                             <h2 class="govuk-heading-s">Tell us what you think of this page</h2>
+                                             <button type="button" class="govuk-button" data-module="govuk-button" id="problemButton" data-govuk-button-init="">Give feedback</button>
+                                          </div>
+
+                                          <div class="dfe-feedback-banner--content-message" id="thanksMessage" role="status" hidden="">
+                                             Thank you for your feedback
+                                          </div>
+
+                                          <div class="dfe-feedback-panel" id="feedback-panel" style="display: none;" aria-hidden="true">
+                                             <form id="feedback-form">
+                                                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="400" data-govuk-character-count-init="">
+                                                   <div class="govuk-form-group govuk-!-margin-top-5">
+                                                      <h3 class="govuk-label-wrapper">
+                                                         <label class="govuk-label govuk-label--m" for="feedback_form_input">
+                                                            What do you want to tell us?
+                                                         </label>
+                                                      </h3>
+                                                      <textarea class="govuk-textarea govuk-js-character-count" id="feedback_form_input" name="feedback_form_input" rows="5" aria-describedby="feedback_form_input"></textarea><div id="feedback_form_input-info" class="govuk-hint govuk-character-count__message govuk-visually-hidden">
+                                                         You can enter up to 400 characters
+                                                      </div><div class="govuk-hint govuk-character-count__message govuk-character-count__status" aria-hidden="true">You have 400 characters remaining</div><div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite">You have 400 characters remaining</div>
+                                                      
+                                                   </div>
+                                                </div>
+                                                <div class="govuk-button-group">
+                                                   <button class="govuk-button" data-module="govuk-button" type="submit" data-govuk-button-init="">
+                                                      Submit
+                                                   </button>
+                                                   <button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button" id="cancelButton" data-govuk-button-init="">
+                                                      Cancel
+                                                   </button>
+                                                </div>
+                                             </form>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           </section>
+                        </table>
+                    </div>
+                    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html-variant-2">
+                        <h2 class="govuk-heading-l">HTML</h2>
+                        <pre class="app-code app-code--block app-code__language--yaml" tabindex="0">      
+                            <code>
+&lt;section class="dfe-feedback"&gt;
+    &lt;div class="govuk-width-container"&gt;
+        &lt;div class="govuk-grid-row"&gt;
+            &lt;div class="govuk-grid-column-full"&gt;
+                &lt;div class="dfe-feedback-banner"&gt;
+                    &lt;div class="dfe-feedback-banner--content"&gt;
+                        &lt;div class="dfe-feedback-banner--flex"&gt;
+                            &lt;h2 class="govuk-heading-s"&gt;Tell us what you think of this page&lt;/h2&gt;
+                            &lt;button type="button" class="govuk-button" data-module="govuk-button" id="problemButton" data-govuk-button-init=""&gt;
+                                Give feedback
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="dfe-feedback-banner--content-message" id="thanksMessage" role="status" hidden=""&gt;
+                            Thank you for your feedback
+                        &lt;/div&gt;
+
+                        &lt;div class="dfe-feedback-panel" id="feedback-panel" style="display: none;" aria-hidden="true"&gt;
+                            &lt;form id="feedback-form"&gt;
+                                &lt;div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="400" data-govuk-character-count-init=""&gt;
+                                    &lt;div class="govuk-form-group govuk-!-margin-top-5"&gt;
+                                        &lt;h3 class="govuk-label-wrapper"&gt;
+                                            &lt;label class="govuk-label govuk-label--m" for="feedback_form_input"&gt;
+                                                What do you want to tell us?
+                                            &lt;/label&gt;
+                                        &lt;/h3&gt;
+                                        &lt;textarea class="govuk-textarea govuk-js-character-count" id="feedback_form_input" name="feedback_form_input" rows="5" aria-describedby="feedback_form_input"&gt;&lt;/textarea&gt;
+                                        &lt;div id="feedback_form_input-info" class="govuk-hint govuk-character-count__message govuk-visually-hidden"&gt;
+                                            You can enter up to 400 characters
+                                        &lt;/div&gt;
+                                        &lt;div class="govuk-hint govuk-character-count__message govuk-character-count__status" aria-hidden="true"&gt;
+                                            You have 400 characters remaining
+                                        &lt;/div&gt;
+                                        &lt;div class="govuk-character-count__sr-status govuk-visually-hidden" aria-live="polite"&gt;
+                                            You have 400 characters remaining
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="govuk-button-group"&gt;
+                                    &lt;button class="govuk-button" data-module="govuk-button" type="submit" data-govuk-button-init=""&gt;
+                                        Submit
+                                    &lt;/button&gt;
+                                    &lt;button class="govuk-button govuk-button--secondary" type="button" data-module="govuk-button" id="cancelButton" data-govuk-button-init=""&gt;
+                                        Cancel
+                                    &lt;/button&gt;
+                                &lt;/div&gt;
+                            &lt;/form&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+      </code>
+    </pre>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+
+                    <h2 class="govuk-heading-l">Things to consider</h2>
+
+                    <p class="govuk-body">Keep the following things in mind when designing feedback forms.</p>
+
+                    <h3 class="govuk-heading-m">Make contact details optional</h3>
+
+                    <p class="govuk-body">Users may prefer to give feedback anonymously.</p>
+
+                    <p class="govuk-body">Make sure that users do not have to include their name or contact information to submit their feedback, whichever variant you use.</p>
+
+                    <p class="govuk-body">Explain that leaving contact details will enable to product team to ask more about the issues they raised or let them know when it is fixed. </p>
+
+                    <p class="govuk-body">Link to your product's privacy notice.</p>
+
+                    <p class="govuk-body">If you use a Microsoft Form to gather feedback from civil servants, make sure the form does not automatically submit their name and email address.</p>
+
+                    <h3 class="govuk-heading-m">Make clear the feedback form not for urgent issues</h3>
+
+                    <p class="govuk-body">Include a differnt method for users to report an immediate technical problem.</p>
+
+                    <p class="govuk-body">A link or button that says "Report a problem with this page" is a simple way to do this.</p>
+
+                    <h2 class="govuk-heading-l">Tools for storing and analysing feedback</h2>
+
+                    <p class="govuk-body">There are lots of different tools you can use to get feedback.</p>
+
+                    <p class="govuk-body">Some teams have designed and built their own. Others have used Microsoft Forms to create a bespoke journey and capture data they can analyse themselves. </p>
+
+                    <p class="govuk-body">A few teams pay for services like Qualtrics which involve an additional cost for a license or account.</p>
+
+                    <p class="govuk-body">You should choose the method that works best for your team, but consider the accessibility of whatever you use. </p>
+
+                    <p class="govuk-body">Any feedback platform you use must meet the <a href="https://apply-the-service-standard.education.gov.uk/" class="govuk-link" rel="noopener noreferrer" target="_blank">Government Service Standard</a> and legal requirements under the <a href="https://www.gov.uk/guidance/equality-act-2010-guidance" class="govuk-link" rel="noopener noreferrer" target="_blank">Equalities Act 2010</a>.</p>
+
+                    <p class="govuk-body">You must explain any accessibility issues in your accessibillity statement.</p>
+
+                    <h2 class="govuk-heading-l">Research on this pattern</h2>
+
+                    <p class="govuk-body">This pattern has been used successfully by several services, but there is more to learn.</p>
+
+                    <h3 class="govuk-heading-m">Share your findings</h3>
+
+                    <p class="govuk-body">If you can, variant test these integrated examples alongside a <a href="https://design-system.service.gov.uk/patterns/confirmation-pages/" class="govuk-link" rel="noopener noreferrer" target="_blank">the GOV.UK pattern for a confirmation page</a> where a feedback form is linked to rather than part of the page.</p>
+
+                    <p class="govuk-body">Analyse the results, see what works best for your users and share your findings with the DfE Components working group so we can iterate this guidance.</p>
+                    
+                    <h3 class="govuk-heading-m">Services using this pattern</h3>
+
+                    <p class="govuk-body">Some Department for Education services are using this pattern and its varitions, including:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                            <a href="https://teaching-vacancies.service.gov.uk/"
+                class="govuk-link" rel="noopener noreferrer" target="_blank">Teaching vacancies</a>
+                        </li>
+                        <li>
+                            <a href="https://child-development-training.education.gov.uk/" class="govuk-link" rel="noopener noreferrer"
+                target="_blank">Early years child development training</a>
+                        </li>
+                        <li>
+                            <a href="https://design.education.gov.uk/" class="govuk-link"
+                rel="noopener noreferrer" target="_blank">DfE design manuals</a>
+                        </li>
+                    </ul>
+
+                    <h2 class="govuk-heading-l">Help improve this pattern</h2>
+
+                    <p class="govuk-body">
+                        <a
+              href="https://github.com/DFE-Digital/dfe-frontend/issues/12"
+              class="govuk-link" rel="noopener noreferrer" target="_blank">Contribute to this guidance</a> to help improve
+            the pattern for others.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
