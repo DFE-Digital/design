@@ -1,0 +1,170 @@
+{% extends "layouts/layout.html" %}
+
+{% set serviceNav = "Design system" %}
+{% set path = "design-system/patterns/get-to-an-answer" %}
+{% set title = "Get to an answer" %}
+{% set description = "Ask users questions to determine what information they need. Users are guided to relevant content based on how they respond to a short series of questions.  " %}
+{% set mainClasses = 'govuk-!-padding-top-0 ' %}
+
+{% block content %}
+
+    <section class=" govuk-!-margin-top-5">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    <nav class="dfe-vertical-nav govuk-!-margin-top-2">
+
+                        <a href="/design-system" class="govuk-back-link govuk-!-margin-top-0 govuk-!-margin-bottom-9">Back to
+            design system</a>
+
+                        <ul class="dfe-vertical-nav__section">
+                            <li class="dfe-vertical-nav__section-item">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns">Patterns</a>
+                            </li>
+
+                            <li class="dfe-vertical-nav__section-item">
+                            <a class="dfe-vertical-nav__link" href="/design-system/patterns/charts">Charts</a>
+                            </li>
+                            <li class="dfe-vertical-nav__section-item">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns/select-a-school">Select a school</a>
+                            </li>
+
+                            <li class="dfe-vertical-nav__section-item dfe-vertical-nav__section-item--current">
+                                <a class="dfe-vertical-nav__link" href="/design-system/patterns/get-to-an-answer">Get to an answer</a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <div class="govuk-grid-column-three-quarters">
+
+                    <span class="govuk-caption-xl govuk-!-margin-top-1">Patterns</span>
+                    <h1 class="govuk-heading-xl">{{title}}</h1>
+
+                    <p class="govuk-body">{{description}}</p>
+
+                    <h2 class="govuk-heading-l">When to use this pattern</h2>
+
+                    <p class="govuk-body">You can create a questionnaire as part of a service or campaign website to help users understand:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>what they can get (such as support, advice or benefits)</li>
+                        <li>what actions to take, if that depends on their situation</li>
+                    </ul>
+
+                    <h2 class="govuk-heading-l">When not to use this pattern</h2>
+
+                    <p class="govuk-body">You cannot use this pattern to: </p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>work out if someone is eligible to use your service (use the pattern to <a rel="noopener noreferrer" class="govuk-link" href="https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/">check a service is suitable</a> instead)</li>
+                        <li>perform calculations 
+                        <li>combine with external data such as financial information to confirm eligibility 
+                        <li>collect information from users</li>
+                    </ul>
+
+                    <p class="govuk-body">Whilst there’s no limit on the number of questions or answers you can create, it is recommended to use no more than 10 questions. Anything more complex may meet user needs better if designed as a service.</p>
+
+                    <h2 class="govuk-heading-l">How it works</h2>
+
+                    <p class="govuk-body">With this pattern you can: </p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>create a series of questions and answers </li>
+                        <li>use single or multiple-choice answers </li>
+                        <li>apply question branching (sending users to specific questions based on their previous answers) </li>
+                    </ul>
+
+                    <p class="govuk-body">The user is asked a question and based on their answer they are then:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>asked another question 
+                        <li>shown a results page that you create 
+                        <li>linked to another page on your website or elsewhere  
+                    </ul>
+
+                    <p class="govuk-body">The user is asked a question and based on their answer they are then:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>asked another question</li>
+                        <li>shown a results page that you create</li>
+                        <li>linked to another page on your website or elsewhere</li>
+                    </ul>
+
+                    <p class="govuk-body">It uses the existing question components from the GOV.UK design system.</p>
+
+                    <p class="govuk-body">Here's an example of how this pattern works. Links on the results pages are broken to avoid any impact to the live service.</p>
+                    
+                    <div class="gtaa-wrapper" style="margin:0 auto; max-width:100%; width:100%; border: 1px solid; margin-bottom: 20px;"> 
+
+                        <iframe id="gtaaFrame" width="100%" height="100%"
+                            title="Example for DfE design manual" 
+                            src="https://www.get-to-an-answer.education.gov.uk/questionnaires/example-for-dfe-design-manual/start" 
+                            allow="autoplay" 
+                            referrerpolicy="strict-origin"w 
+                            sandbox="allow-scripts allow-top-navigation allow-forms" 
+                            style="width:100%; height:100%; border:none;">
+                        </iframe> 
+                    
+                    </div>
+
+                    <script asp-add-nonce="true" src="https://www.get-to-an-answer.education.gov.uk/js/gtaa.external.js"></script> 
+
+                    <h3 class="govuk-heading-m">How to add to your service</h3>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>as a link</li>
+                        <li>embedding an iframe</li>
+                        <li>integrating into Contentful</li>
+                    </ul>
+
+                    <p class="govuk-body">There is full guidance on ‘Get to an answer’ for how to do this. </p>
+                    
+                    <h2 class="govuk-heading-l">Visual style</h2>
+
+                    <p class="govuk-body">By default, all questionnaires use DfE styling. </p>
+
+                    <p class="govuk-body">Do not change the visual style unless there’s a clear user or business need. You may cause accessibility issues by customising styles. </p>
+
+                    <p class="govuk-body">If you need to customise the visual style, for example to match campaign branding, you can change colours and add a decorative image (generic images which do not give any additional information to the content). Any change must still <a href="https://standards.education.gov.uk/standard/accessibility-conformance#howtommeet" class="govuk-link">meet accessibility standards</a> which includes <a class="govuk-link" href="https://accessibility.education.gov.uk/tools-testing/tools/contrast-checker">testing colour contrast against WCAG levels</a>.</p>
+
+                    <h2 class="govuk-heading-l">Get started</h2>
+
+                    <p class="govuk-body">To use ‘Get to an answer’ you must: </p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>have a DfE education email address </li>
+                        <li>agree to the terms and conditions </li>
+                    </ul>
+
+                    <p class="govuk-body">To create a questionnaire, sign in to <a class="govuk-link" href="https://admin.get-to-an-answer.education.gov.uk/">‘Get to an answer’</a>.</p>
+
+                    <p class="govuk-body">For more detail on how to set up your questionnaire <a class="govuk-link" target="_blank" href="https://admin.get-to-an-answer.education.gov.uk/support">read the guidance in the ‘Support’ section</a>.</p>
+
+                    <p class="govuk-body">Before a questionnaire can be made live you will need to complete all the steps in the ‘Prepare to publish questionnaire’ section.</p>
+                   
+                    <p class="govuk-body"><a class="govuk-link" href="https://dfe-digital.github.io/get-to-an-answer/">The technical documentation for ‘Get to an answer’</a> provides further information on how the component works.</p>
+
+                    <h2 class="govuk-heading-l">Help improve this pattern </h2>
+
+                    <p class="govuk-body">If you would like to develop additional functionality to meet your service’s requirements, we encourage teams to build on this pattern. For example, you might need more complex question logic.</p>
+
+                    <p class="govuk-body">If you would like to propose a change, you can:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>join the <a class="govuk-link" href="https://design.education.gov.uk/design-system/dfe-frontend/contribute#patterns-and-components">patterns and components</a> working group </li>
+                        <li>speak to <a class="govuk-link" href="https://design.education.gov.uk/designops">DesignOps</a> to discuss your contribution</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

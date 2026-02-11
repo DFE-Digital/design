@@ -1,0 +1,14 @@
+Category,Criteria,Description,Status,Notes/Evidence
+Useful,Useful for other teams,You can demonstrate that this component or pattern would be useful for other DfE teams or services.,,
+Useful,Validated through user research,The need for the pattern or component has been validated through user research.,,
+Useful,Evidence provided,Evidence could be screenshots or links to versions of it being used in different services.,,
+Unique,Not in GOV.UK Design System,It does not replicate something already in the GOV.UK Design System.,,
+Unique,Not in DfE Design System,It does not replicate something already in the DfE Design System.,,
+Users,Multiple user groups,There are other user groups completing similar tasks who would benefit from this component or pattern.,,
+Technical Requirements,Open source,All components must be open source.,,
+Technical Requirements,Easily reusable,Components must be easily reusable without additional technical support (the guidance should be enough to implement).,,
+Technical Requirements,No proprietary dependencies,Components must be free from proprietary or closed-source dependencies.,,
+Technical Requirements,No licensing costs,Components must be free from dependencies which incur a licensing cost to use.,,
+Backlog,Checked backlog,If your idea is not on the DfE Frontend backlog and meets the criteria above add an issue.,,
+Backlog,Issue created or contacted DesignOps,If you cannot access the project or add an issue contact the DesignOps team to discuss it.,,
+
