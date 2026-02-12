@@ -24,7 +24,6 @@
     "fs": "^0.0.1-security",
     "govuk-frontend": "^5.8.0",
     "govuk-markdown": "^0.8.0",
-    "localtunnel": "^2.0.2",
     "lunr": "^2.3.9",
     "marked": "^15.0.6",
     "nunjucks": "^3.2.4",
