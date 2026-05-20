@@ -140,25 +140,24 @@
                                 <fieldset class="govuk-fieldset">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                                         <h3 class="govuk-fieldset__heading">Would you like to participate in our research?</h3>
+                                        <div class="govuk-hint" id="email-hint-example">We'll only use this to tell you about opportunities to take part in user research.</div>
                                     </legend>
 
                                     <div class="govuk-radios" data-module="govuk-radios">
                                         <div class="govuk-radios__item">
-                                            <input id="participation-yes-example" class="govuk-radios__input" data-aria-controls="participation-yes-conditional-example" type="radio" value="interested" name="feedback_form[user_participation_response]" />
+                                            <input id="participation-yes-example" aria-describedby="email-hint-example" class="govuk-radios__input" data-aria-controls="participation-yes-conditional-example" type="radio" value="interested" name="feedback_form[user_participation_response]" />
                                             <label for="participation-yes-example" class="govuk-label govuk-radios__label">Yes</label>
                                         </div>
 
                                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="participation-yes-conditional-example">
                                             <div class="govuk-form-group">
-                                                <label for="email-field-example" class="govuk-label">What is your email address?</label>
-                                                <div class="govuk-hint" id="email-hint-example">We'll only use this to tell you about opportunities to take part in user research.</div>
-                                                <input id="email-field-example" class="govuk-input" aria-describedby="email-hint-example" value="" type="email" name="feedback_form[email]" />
+                                                <label for="email-field-example" aria-describedby="email-hint-example" class="govuk-label">What is your email address?</label>
+                                                <input id="email-field-example" class="govuk-input" aria-describedby="email-hint-example" value="" type="email" name="feedback_form[email]" autocomplete="email" />
                                             </div>
 
                                             <div class="govuk-form-group">
                                                 <label for="occupation-field-example" class="govuk-label">Occupation</label>
-                                                <div class="govuk-hint" id="occupation-hint-example">We'll only use this to tell you about opportunities to take part in user research that is relevant to you.</div>
-                                                <textarea id="occupation-field-example" class="govuk-textarea" rows="1" aria-describedby="occupation-hint-example" name="feedback_form[occupation]"></textarea>
+                                                 <textarea id="occupation-field-example" class="govuk-textarea" rows="1" aria-describedby="occupation-hint-example" name="feedback_form[occupation]"></textarea>
                                             </div>
                                         </div>
 
